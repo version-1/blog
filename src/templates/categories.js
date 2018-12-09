@@ -1,0 +1,74 @@
+import React from 'react';
+import Helmet from 'react-helmet';
+import {graphql} from 'gatsby';
+import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
+import Post from '../components/Post';
+
+class CategoryTemplate extends React.PureComponent {
+  render() {
+    const posts = this.props.data.allMarkdownRemark.edges;
+    const {category} = this.props.pageContext;
+    const {title} = this.props.data.site.siteMetadata;
+
+    return (
+      <Layout>
+        <div className="row site-container">
+          <div className="col m12 l8">
+            <section className="section">
+              <Helmet title={`${category} | ${title}`} />
+              <section className="section">
+                <div className="section-container">
+                  <div className="section-content">
+                    <div className="section-title">
+                      <div className="title-border" />
+                      <span className="title">{category}</span>
+                    </div>
+                    <div className="section-list">
+                      <div className="row">
+                        <Post posts={posts} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+          </div>
+          <div className="col l4 hide-on-med-and-down">
+            <Sidebar posts={posts} />
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+}
+
+export default CategoryTemplate;
+
+export const categryPageQuery = graphql`
+  query CategoryPage($category: String) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      limit: 1000
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {frontmatter: {category: {in: [$category]}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            category
+          }
+        }
+      }
+    }
+  }
+`;

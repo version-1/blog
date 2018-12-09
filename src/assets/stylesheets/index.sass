@@ -1,0 +1,95 @@
+@import 'materialize-css/sass/materialize.scss'
+
+$co-black: #2A2D34
+
+h1, h2, h3
+  font-size: 1rem
+  margin: 0
+  color: $co-black
+
+.material-icons
+  font-family: 'Material Icons'
+
+.navigation
+  display: flex
+  z-index: 1
+  justify-content: space-between
+  height: 300px
+  @media #{$small-and-down}
+     justify-content: center
+     height: 100px
+  background-color: transparent
+  color: $co-black
+  background-size: 100%
+  background-image: url('../images/first-view-backimage.svg')
+  background-repeat: no-repeat
+  .brand-logo
+    display: flex
+    font-weight: bold
+    padding: 20px
+    font-size: 20px
+    a
+      color: white
+  .nav-links
+    .nav-link-list
+      display: flex
+      padding: 0 10px
+      a
+        display: block
+        padding: 10px
+        color: white
+        font-weight: bold
+.site-container
+  display: flex
+  max-width: 1080px
+
+.main
+  .section
+    .section-title
+      margin: 20px 0
+      font-size: 1.2rem
+      font-weight: bold
+      &:before
+        display: block
+        z-index: -1
+        content: ''
+        width: 100%
+        position: relative
+        top: 15px
+        border-bottom: 2px solid black
+      .title
+        background: white
+        padding: 10px
+        position: relative
+        left: 10%
+        @media #{$small-and-down}
+          left: 40%
+    .section-list
+      .row
+        display: flex
+        flex-wrap: wrap
+      .row .col
+        float: unset
+.sidebar
+  padding: 10px
+  margin-right: 20px
+
+  h3
+    font-weight: bold
+    background: #2A2D34
+    color: white
+    font-size: 1.2rem
+    padding: 10px
+  .self-introduction
+    padding: 10px
+    display: flex
+    .profile-image
+       padding: 5px
+       width: 100px
+       height: 100px
+       img
+         object-fit: cover
+         height: 100%
+    .introduction
+       padding: 5px
+  .card-image

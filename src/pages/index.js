@@ -1,48 +1,57 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {graphql} from 'gatsby';
+import Layout from '../components/Layout';
+import Sidebar from '../components/Sidebar';
+import Post from '../components/Post';
 
-export default class IndexPage extends React.Component {
+export default class IndexPage extends React.PureComponent {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const {data} = this.props;
+    const {edges: posts} = data.allMarkdownRemark;
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+        <div className="row site-container">
+          <div className="col m12 l8">
+            <main className="main">
+              <section className="section">
+                <div className="section-container">
+                  <div className="section-content">
+                    <div className="section-title">
+                      <span className="title">人気記事</span>
+      </div>
+                    <div className="section-list">
+                      <div className="row">
+                        <Post posts={posts} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              </section>
+              <section className="section">
+                <div className="section-container">
+                  <div className="section-content">
+                    <div className="section-title">
+                      <div className="title-border"></div>
+                      <span className="title">新着記事</span>
+                    </div>
+                    <div className="section-list">
+                      <div className="row">
+                        <Post posts={posts} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </main>
           </div>
-        </section>
+          <div className="col l4 hide-on-med-and-down">
+            <Sidebar posts={posts} />
+          </div>
+        </div>
       </Layout>
-    )
+    );
   }
 }
 
@@ -52,13 +61,13 @@ IndexPage.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};
 
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+      sort: {order: DESC, fields: [frontmatter___date]}
+      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
     ) {
       edges {
         node {
@@ -76,4 +85,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
