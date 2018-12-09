@@ -54,8 +54,8 @@ export const categryPageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 1000
-      sort: {fields: [frontmatter___date], order: DESC}
-      filter: {frontmatter: {category: {in: [$category]}}}
+      sort: {fields: [frontmatter___createdAt], order: DESC}
+      filter: {frontmatter: {categories: {in: [$category]}}}
     ) {
       totalCount
       edges {
@@ -65,7 +65,7 @@ export const categryPageQuery = graphql`
           }
           frontmatter {
             title
-            category
+            categories
           }
         }
       }

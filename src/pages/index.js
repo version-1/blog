@@ -5,11 +5,8 @@ import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
 
-export default class IndexPage extends React.PureComponent {
-  render() {
-    const {data} = this.props;
+export default class IndexPage extends React.PureComponent { render() { const {data} = this.props;
     const {edges: posts} = data.allMarkdownRemark;
-
     return (
       <Layout>
         <div className="row site-container">
@@ -20,7 +17,7 @@ export default class IndexPage extends React.PureComponent {
                   <div className="section-content">
                     <div className="section-title">
                       <span className="title">人気記事</span>
-      </div>
+                    </div>
                     <div className="section-list">
                       <div className="row">
                         <Post posts={posts} />
@@ -33,7 +30,7 @@ export default class IndexPage extends React.PureComponent {
                 <div className="section-container">
                   <div className="section-content">
                     <div className="section-title">
-                      <div className="title-border"></div>
+                      <div className="title-border" />
                       <span className="title">新着記事</span>
                     </div>
                     <div className="section-list">
@@ -66,7 +63,7 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}
+      sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
     ) {
       edges {
@@ -78,8 +75,10 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            slug
+            description
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            createdAt(formatString: "MMMM DD, YYYY")
           }
         }
       }

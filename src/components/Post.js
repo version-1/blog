@@ -6,7 +6,7 @@ const Post = ({posts}) => {
     <>
       {posts.map(({node: post}) => (
         <div className="col s12 m6" key={post.id}>
-          <Link to={post.fields.slug}>
+          <Link to={post.frontmatter.slug || post.fields.slug}>
             <div className="card hoverable">
               <div className="card-image">
                 <img

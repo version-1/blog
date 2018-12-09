@@ -1,0 +1,317 @@
+---
+templateKey: blog-post
+title: – サーバの役割について – プログラミングを始める前に知っておいて欲しいWebサイトの仕組み
+slug: 2017/11/10/web-structure-about-server
+description: &nbsp;
+
+&nbsp;
+
+今回は前回の記事に引き続き
+<a href="https://ver-1-0.net/2017/11/07/web-structure-browser/">– ブラウザの役割について – プログラミングを始める前に知っておいて欲しいWebサイトの仕組み</a>
+<h2>サーバ</h2>
+についてのお話です。
+
+<a href="https://ver-1-0.net/2017/11/10/web-structure-about-server/screen-shot-2017-11-09-at-21-32-15/" rel="attachment 
+createdAt: 2017-11-10 00:33:36
+updatedAt: 2018-08-28 08:00:17
+thumbnail: https://ver-1-0.net/wp-content/uploads/2017/11/Untitled-3.png
+categories: 
+  - engineering
+  - for-beginner
+---
+
+&nbsp;
+
+&nbsp;
+
+今回は前回の記事に引き続き
+<a href="https://ver-1-0.net/2017/11/07/web-structure-browser/">– ブラウザの役割について – プログラミングを始める前に知っておいて欲しいWebサイトの仕組み</a>
+<h2>サーバ</h2>
+についてのお話です。
+
+<a href="https://ver-1-0.net/2017/11/10/web-structure-about-server/screen-shot-2017-11-09-at-21-32-15/" rel="attachment wp-att-1202"><img class="alignnone size-full wp-image-1202" src="https://ver-1-0.net/wp-content/uploads/2017/11/Screen-Shot-2017-11-09-at-21.32.15.png" alt="サーバの意味" width="593" height="253" /></a>
+
+&nbsp;
+
+&nbsp;
+
+この画像にもあるように、
+私も最初のうちはこのサーバという
+言葉に慣れませんでした。
+（知った風な感じで使ってはいましたが）
+
+今回の記事ではサーバとはなんなのか。
+また、Webサイトの中ではどういう役割があるのか
+ということについて書いていきたいと思います。
+
+※アイキャッチ画像でいう右上部分の話です。
+
+&nbsp;
+
+[after_intro]
+
+&nbsp;
+<h2 class="chapter">サーバーとは</h2>
+サーバーというのは、
+役割の名前と考えて頂ければ良いと思います。
+（クライアントが通信をする先と考えても良いです）
+
+おおかたの内部の構造は、
+みなさんが<strong>個人でお使いのパソコンと同じ構造</strong>で、
+<strong>用途によって呼ばれ方が違う</strong>ということです。
+
+またまた、役割によってさらに細分化されりします。
+
+&nbsp;
+<h3>DBサーバ(ディービー・サーバー）</h3>
+MySQLやPostgresSQLがダウンロードされたデータベース用のサーバ
+
+&nbsp;
+<h3>WEBサーバ(ウェブ・サーバー）</h3>
+外部からのアクセスを処理するサーバ
+
+&nbsp;
+<h3>ファイルサーバ(ファイル・サーバー）</h3>
+ファイル共有の為に設置されているサーバ
+
+&nbsp;
+
+皆さんお使いのパソコンがサーバと呼ばれないのは、
+HTTP接続できるように外部に公開していたりするわけではないからで
+皆さんが自信のサイトを外部に公開してしまえば、
+それらはサーバと呼べてしまいます。
+
+&nbsp;
+
+※実際には中規模〜大規模のサービスの
+サーバは24時間365日稼働する必要があるので、
+一般的に個人のパソコンより性能が高かったり
+停電や落雷などに対応できるような作りになっています。
+
+&nbsp;
+
+&nbsp;
+<h2 class="chapter">サーバーのWebサイトでの役割</h2>
+&nbsp;
+
+サーバーは、
+Webサイトとしての役割です。
+<a href="https://ver-1-0.net/2017/11/07/web-structure-browser/">前回</a>の記事や<a href="https://ver-1-0.net/2017/11/07/web-structure/">前々回</a>の記事で説明したように、
+クライアントからリクエストを受け取って、HTMLを返却する役割があります。
+
+&nbsp;
+
+また、サーバの構造は
+下記のようになっており、
+OSの中に、
+WebサーバであるApacheやNginxがあり、
+その中にデータベースとアプリケーションがあります。
+
+<a href="https://ver-1-0.net/2017/11/10/web-structure-about-server/%e3%82%b5%e3%83%bc%e3%83%8f%e3%82%99%e3%83%bc%e3%81%ae%e6%a7%8b%e9%80%a0/" rel="attachment wp-att-1208"><img class="alignnone size-full wp-image-1208" src="https://ver-1-0.net/wp-content/uploads/2017/11/サーバーの構造.png" alt="サーバーの構造" width="661" height="603" /></a>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+これらの構造が連動して、
+レスポンス(HTML)を作ってリクエスト元に返します。
+
+流れとしては、
+
+<strong>外部のクライアント→Webサーバ→APP（PHPコード)→DB</strong>
+
+<strong>→APP(PHPコード）がデータベースのデータなどを元にHTMLを返却</strong>
+
+と言うようになります。
+※データベースは介さない場合もあります。
+
+&nbsp;
+
+また、
+ちなみにプログラミングというのは、
+ここの<strong>アプリケショーンを作り上げる、開発する作業</strong>になります。
+（javascriptなどのクライアント側のプログラミングはまた別ですが）
+
+&nbsp;
+
+図では、
+PHPで作られたアプリケーションを想定していますが、
+そのほかのRuby,Python,Java,Cなどでも
+基本的な構造は同じです。
+
+&nbsp;
+
+&nbsp;
+<h2 class="chapter">サーバーでHTMLを作成する</h2>
+&nbsp;
+
+では少しコードも載せつつ説明していきます。
+まずHTMLのコードを紹介します。
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+<strong>HTMLは</strong>
+
+<strong>タグというもので構造化されたファイル</strong>で
+
+例えば、
+<strong>titleというタグで囲まれた部分のテキスト</strong>が
+そのページのタイトルになり、
+ブラウザのタブ部分に表示されます。
+
+&nbsp;
+
+また、
+このHTMLファイルは
+<strong>「Hello World!!」という文字列を表示するもの</strong>でもあります。
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello World!!!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+&nbsp;
+
+実際に利用されているHTMLはこれより複雑ではありますが、
+サーバーは簡単に言うとこのようなファイルを生成して、
+クライアントに送信しています。
+
+しかし、これは静的なファイルと呼ばれ、
+クライアントがリクエストする前に生成されているので
+プログラムの出番はありません。
+
+実際のWebアプリケーションでは
+動的にページを生成するので
+下記のようなぺージになります。
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;p&gt;&lt;?php echo date('Y-m-d'); ?&gt;&lt;/p&gt;
+	&lt;p&gt;Hello World!!! &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+&nbsp;
+
+&nbsp;
+
+下記のような行が追加されていますが、
+<pre><code class="language-php">&lt;p&gt;&lt;?php echo date('Y-m-d'); ?&gt;&lt;/p&gt;
+</code></pre>
+&nbsp;
+
+この &lt;?php ?&gt;で囲まれた部分が
+<strong>実際のPHPのコード</strong>になり、
+この部分が実際にwebサイトにアクセスした瞬間の日付を表示してくれます。
+
+&nbsp;
+
+&nbsp;
+
+また、
+データベースと連携してページを表示する場合は、
+&lt;?php ?&gt;この間にデータベースからデータを取得する
+ような処理を書いてHTMLの中に結果を埋め込みます。
+
+&nbsp;
+
+サーバ側のエンジニアの主な仕事はこの
+データベースからのデータ取得部分や、
+取得したデータの整形・加工などをコードで実現することになります。
+
+フロント側のエンジニアと言うのも存在してそれらの
+方々は、クライアント側で動くプログラムのコーディング
+が主な仕事になります。
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+最後に、
+上にコードを貼りましたが、
+<strong>このPHP部分を書いている時に実際の処理などを</strong>
+<strong> イメージできる</strong>かどうかでプログラミングの理解度というのは
+変わってきます。
+<strong>（よりリアルにイメージできるようになるのでハラオチし易い）</strong>
+
+&nbsp;
+
+&nbsp;
+
+「こういうコードをかくとデータベースにもアクセスしてる」
+
+&nbsp;
+
+などのようにデータの流れがイメージできているというのが
+理想の状態になります。
+
+<strong>二次元エンジニア</strong>にならないよう
+コードの先をイメージしながらコーディングできるよう
+になりましょう。
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+<h2 class="chapter">まとめ</h2>
+&nbsp;
+
+最後で、
+やっとプログラミングらしいことが出てきましたが、
+プログラミングというのは
+システムの一部でしかないということは
+わかりましたでしょうか。
+（一応三部作のように記事を書いたので）
+
+&nbsp;
+
+プログラミングというのは、
+アプリケーションを作るというWebシステム全体の
+一部になり、
+エンジニアというのは
+そのほかの膨大な項目のものを意識しながら
+コーディングする必要があります。
+
+プログラミングを勉強して
+<strong>自分がイメージしたものを作ること</strong>だったり
+<strong>それを学び上達する過程や新しい技術を試してみる</strong>と言うのはとても
+楽しいものなので、
+まだあまり触ったことのない人には
+ぜひこの世界に踏み込んで頂きたいと思います。
+
+が、
+
+その道中
+<strong>「ここはどこ？」「私はだれ？」状態
+（今学んでいる内容がなんのためなのか、何に役たつのかわからない状態）</strong>
+
+に
+陥ってしまうことを避ける為にも、
+アイキャッチのようなwebアプリケーションの全体像をイメージしながら
+プログラミング学習をすると
+より楽しい学びの時間になるはずです。
+
+ぜひ、
+立体的でよりリアルなイメージを持ちながら
+プログラミングをしてみてください。
+
+では。
+
+&nbsp;

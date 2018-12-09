@@ -44,6 +44,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({data}) => {
   const {markdownRemark: post} = data;
+  debugger
 
   return (
     <Layout>
@@ -80,11 +81,13 @@ export const pageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       id
       html
+      excerpt(pruneLength: 300)
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
+        thumbnail
         description
-        tags
+        createdAt(formatString: "MMMM DD, YYYY")
+        updatedAt(formatString: "MMMM DD, YYYY")
       }
     }
   }
