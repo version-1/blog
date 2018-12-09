@@ -5,7 +5,11 @@ slug: 2017/04/10/electron-calculator-2
 createdAt: 2017-04-10 01:27:49
 updatedAt: 2018-08-26 12:10:42
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/03/スクリーンショット-2017-03-23-13.10.10.png
-categories: 
+description: >-
+  前回の記事では、Electronのインストールまでやりました。
+  今回は実際にElectronで電卓を作って行きます。今回肝となるのは、
+  IPC通信というものです。
+categories:
   - engineering
 ---
 

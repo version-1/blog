@@ -5,7 +5,11 @@ slug: 2017/04/30/advice-for-rubymine-to-atom
 createdAt: 2017-04-30 12:16:19
 updatedAt: 2018-01-30 23:21:32
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg
-categories: 
+description: >-
+  最近開発のエディタでAtomを使うようになりました。
+  仕事での開発はRubyが主で今までは、RubyMineやPHPStormなどIntelliJ製品IDEを使っていたのですが、
+  「30日で無料で使えなくなる」や、「EAPなら使える」や「しょうがない買うか！いやどうしようか。。」
+categories:
   - engineering
   - for-beginner
 ---

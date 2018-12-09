@@ -5,7 +5,10 @@ slug: 2017/03/11/migration-matome
 createdAt: 2017-03-11 23:07:13
 updatedAt: 2018-08-26 12:15:22
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/スクリーンショット-2017-01-03-15.37.16.png
-categories: 
+description: >-
+  rails ではマイグレーションコードをgitで保管して、DBの変更履歴を残していたり
+  するのですが、たまーーにmigrationコードを実行せずにSQLで直接DBを変更する輩がいます。
+categories:
   - engineering
   - rails
 ---

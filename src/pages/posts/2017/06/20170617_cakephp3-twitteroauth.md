@@ -5,7 +5,9 @@ slug: 2017/06/17/cakephp3-twitteroauth
 createdAt: 2017-06-17 11:52:07
 updatedAt: 2018-08-26 11:55:55
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/06/19cb5fd445481b1337387866670d094f_s.jpg
-categories: 
+description: >-
+  今回はtwitterでCapkePHP3からtweetする方法を紹介します。このtwitteroauthというライブラリを使います。
+categories:
   - engineering
 ---
 
@@ -118,10 +120,10 @@ tweet,create_twitter_oauthあたりのメソッドは、
 namespace App\Controller;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-class TweetController extends AppController 
-{ 
-　　function postTweet(){ 
-　　　// Hello Worldと呟く 
+class TweetController extends AppController
+{
+　　function postTweet(){
+　　　// Hello Worldと呟く
 　　　$this-&gt;tweet("Hello World!!!!!");&lt;
  　}
  　　

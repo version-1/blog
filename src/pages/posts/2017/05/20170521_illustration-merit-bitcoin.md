@@ -5,7 +5,10 @@ slug: 2017/05/21/illustration-merit-bitcoin
 createdAt: 2017-05-21 11:04:01
 updatedAt: 2018-11-26 22:02:05
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/02/6njoebtarec-lee-campbell.jpg
-categories: 
+description: >-
+  ビットコイン上がってますね(^_^)昨日まで1BTCあたり24万円ほどでしたが、
+  一時期30万円近くまで上昇し現在、27万円ほどです。
+categories:
   - cryptocurrency-blockchain
 ---
 

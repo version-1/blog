@@ -5,7 +5,11 @@ slug: 2017/07/30/vagrant-status
 createdAt: 2017-07-30 22:38:20
 updatedAt: 2018-08-26 11:47:58
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/02/6njoebtarec-lee-campbell.jpg
-categories: 
+description: >-
+  どうも、今回は久しぶりにvagrantの話題です。
+  vagrantってみなさんいちいちVagrantfileのある
+  それぞれのイメージのルートディレクトリに移動（cd)してからコマンド叩いていたりしませんか？
+categories:
   - engineering
 ---
 
@@ -55,13 +59,13 @@ vagrantの稼働状況を確認します。
 
 実行結果はこんな感じ。
 <pre><code class="language-bash">$vagrant global-status
-id       name    provider   state    directory                           
+id       name    provider   state    directory
 -------------------------------------------------------------------------
-4445c4b  default virtualbox poweroff /Users/admin/Vagrant/hoge                         
-4a947f0  default virtualbox poweroff /Users/admin/Vagrant/ubu            
+4445c4b  default virtualbox poweroff /Users/admin/Vagrant/hoge
+4a947f0  default virtualbox poweroff /Users/admin/Vagrant/ubu
 5212b05  default virtualbox poweroff /Users/admin/Vagrant/foo
 41ec701  default virtualbox running  /Users/admin/Vagrant/bar
- 
+
 The above shows information about all known Vagrant environments
 on this machine. This data is cached and may not be completely
 up-to-date. To interact with any of the machines, you can go to

@@ -5,7 +5,10 @@ slug: 2017/06/24/problem-boot-server-in-spring
 createdAt: 2017-06-24 13:21:57
 updatedAt: 2018-08-26 11:52:44
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg
-categories: 
+description: >-
+  先日休日にKotlin+SpringBootをいじっていたら
+  ある問題でストレスが溜まったのでこんなツイートをしてみました。
+categories:
   - engineering
 ---
 

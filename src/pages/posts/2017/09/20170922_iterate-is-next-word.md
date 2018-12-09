@@ -5,6 +5,9 @@ slug: 2017/09/22/iterate-is-next-word
 createdAt: 2017-09-22 11:08:53
 updatedAt: 2017-12-22 22:47:48
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/09/78456f795b3d1f38d8bb2c2d2b69124f_s.jpg
+description: >-
+  どうも今日は勝手に次にはやる横文字を予想したいと思います！！
+  ズバリ次はやる横文字は「イテレート」です。
 categories:
   - column
 ---

@@ -5,7 +5,11 @@ slug: 2017/08/13/international-laravel
 createdAt: 2017-08-13 20:49:40
 updatedAt: 2018-08-26 11:47:17
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/07/スクリーンショット-2017-07-27-0.16.06.png
-categories: 
+description: >-
+  どうも多言語化というとたいそうな話に聞きこえますが、Laravelでのロケールの話です。
+  つまり、webアプリケーションを作る時にhtmlに文字をベタ書きしてしまうと、
+  あとあと「このサイト英語にするのどれくらいかかる？」とかの無邪気な質問に対応しづらくなります。
+categories:
   - engineering
 ---
 
@@ -117,7 +121,7 @@ view ファイルで
 
 config/app.phpのlocaleになります。
 
-<pre><code class="language-php">    
+<pre><code class="language-php">
 /*
 |--------------------------------------------------------------------------
 | Application Locale Configuration

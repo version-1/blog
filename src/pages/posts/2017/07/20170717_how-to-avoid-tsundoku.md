@@ -5,6 +5,10 @@ slug: 2017/07/17/how-to-avoid-tsundoku
 createdAt: 2017-07-17 01:02:05
 updatedAt: 2017-12-22 22:51:08
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/07/6f154d9a74891eef9565aadd157b28e9_s.jpg
+description: >-
+  どーも、暑さに耐えきれず早起きをしてしまった@version1です。
+  最近では、KindleでもiBookでも電子書籍の購入がクレカさえ登録すればボタン一つで
+  簡単に購入できるようになってて、1000円程度の購入のハードルがかなり下がって来ていますね。
 categories:
   - column
 ---

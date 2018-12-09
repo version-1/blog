@@ -5,7 +5,11 @@ slug: 2017/08/09/conflict-vue-with-blade
 createdAt: 2017-08-09 23:18:54
 updatedAt: 2018-08-26 01:16:14
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg
-categories: 
+description: >-
+  どうも、トレーニング後にビールを飲んでしまう@version1です。
+  今回は、そろそろ勉強のために、JqueryでなくAngular, React, Vueらへん使って見ようかということ
+  でvue.jsをlaravelにインストールしてみました。
+categories:
   - engineering
 ---
 

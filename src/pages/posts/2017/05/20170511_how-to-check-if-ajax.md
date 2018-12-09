@@ -5,7 +5,11 @@ slug: 2017/05/11/how-to-check-if-ajax
 createdAt: 2017-05-11 00:34:36
 updatedAt: 2018-08-26 12:04:44
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg
-categories: 
+description: >-
+  Railsでajax送信でポップアップを表示する場合、
+  通常は、*.js.erb などが読み込まれるのですが、
+  ページ内のリンクやボタンではなく、URLを直打ちなどした場合に
+categories:
   - engineering
   - rails
 ---
@@ -36,10 +40,10 @@ Ajaxのリクエスト　→ 通常通り
 のようにするのが有効です。
 <pre><code class="language-ruby">class ExamplesController &lt; ApplicationController
 
-  def index 
+  def index
       unless request.xhr?
          redirect_to [ 元のページ　]
-      end 
+      end
   end
 end
 

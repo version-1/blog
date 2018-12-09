@@ -5,6 +5,10 @@ slug: 2017/07/08/salary-bank
 createdAt: 2017-07-08 18:10:24
 updatedAt: 2017-12-22 22:51:26
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/07/29f59c8806d5adb39ad0963d15f4a932_s.jpg
+description: >-
+  こんにちは、二日酔いの@version1_2017です。
+  最近私のwebサイトがあるので、それが給料BANKというサイトです。
+  結構話題になっていたりもするので、すでに知っている方もいらっしゃるかと思うのですが、
 categories:
   - column
 ---

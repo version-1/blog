@@ -5,7 +5,11 @@ slug: 2017/04/09/electron-calculator-1
 createdAt: 2017-04-09 23:01:23
 updatedAt: 2018-08-26 12:13:15
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/03/スクリーンショット-2017-03-23-13.10.10.png
-categories: 
+description: >-
+  今回はWebの技術でデスクトップアプリが作れると噂のElectron
+  に関する記事です。こんなツールないかなぁと思って、
+  探すしてダウンロードして使ってみたりするのですが、
+categories:
   - engineering
 ---
 
@@ -127,7 +131,7 @@ npm はnode.jsパッケージ管理ツールですので、
 インストールも完了したので、
 早速動かしてみましょう。
 <pre><code class="language-bash">mkdir sample
-npm init -y 
+npm init -y
 </code></pre>
 これをすると下のようなpackage.jsonファイルが出来上がります。
 デフォルトだと下記のようにindex.jsが起動時に

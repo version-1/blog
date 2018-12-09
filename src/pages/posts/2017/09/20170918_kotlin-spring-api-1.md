@@ -5,7 +5,11 @@ slug: 2017/09/18/kotlin-spring-api-1
 createdAt: 2017-09-18 23:57:53
 updatedAt: 2018-08-26 11:42:05
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/02/スクリーンショット-2017-02-05-22.49.48.png
-categories: 
+description: >-
+  こんばんは、3連休でどこも出かけなかった@version1です。
+  もう少し有意義に過ごせたのでは、という思いは募る一方ですが、
+  それは置いておいて久しぶりにKotlinに関する記事です。
+categories:
   - engineering
 ---
 

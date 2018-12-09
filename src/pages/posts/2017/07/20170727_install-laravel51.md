@@ -5,7 +5,12 @@ slug: 2017/07/27/install-laravel51
 createdAt: 2017-07-27 19:30:38
 updatedAt: 2018-08-26 11:49:15
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/07/スクリーンショット-2017-07-27-0.16.06.png
-categories: 
+description: >-
+  どうも
+  個人では、
+  CakePHPを使っていますが、
+  会社でちょっと使うかもしれなくなったのでちょっと調べて見ました。
+categories:
   - engineering
   - for-beginner
 ---

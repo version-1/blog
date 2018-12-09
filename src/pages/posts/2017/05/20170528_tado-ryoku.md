@@ -5,6 +5,9 @@ slug: 2017/05/28/tado-ryoku
 createdAt: 2017-05-28 13:44:47
 updatedAt: 2017-12-22 22:53:22
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/05/jonathan-simcoe-227321.jpg
+description: >-
+  昨日からKindleで配信された堀江貴文さんの「多動力」を読んでみました。
+  「ゼロ」から始まり、堀江さんの本は何冊か読ませて頂いていますが、
 categories:
   - column
 ---

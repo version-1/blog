@@ -5,7 +5,11 @@ slug: 2017/03/13/rails-migratoin
 createdAt: 2017-03-13 23:21:52
 updatedAt: 2018-08-26 12:14:47
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/スクリーンショット-2017-01-03-15.37.16.png
-categories: 
+description: >-
+  Rails ではマイグレーションコードを書いておけば
+  rake db:migrateとするだけで、DBの変更などをとりくむことができます。
+  今回はマイグレーションコードについてまとめてみました。
+categories:
   - engineering
   - rails
 ---

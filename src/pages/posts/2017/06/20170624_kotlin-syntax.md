@@ -5,15 +5,17 @@ slug: 2017/06/24/kotlin-syntax
 createdAt: 2017-06-24 11:32:23
 updatedAt: 2018-08-26 11:54:53
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/02/スクリーンショット-2017-02-05-22.49.48.png
-categories: 
+description: >-
+  今回は制御構文について紹介します。制御構文とは、For文などループ文をさします。
+  それではまず、For文から
+categories:
   - engineering
   - for-beginner
 ---
 
 今回は制御構文について紹介します。
 
-制御構文とはは、
-For文などループ文をさします。
+制御構文とは、For文などループ文をさします。
 
 それではまず、For文から
 

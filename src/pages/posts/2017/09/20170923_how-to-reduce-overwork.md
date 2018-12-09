@@ -5,6 +5,11 @@ slug: 2017/09/23/how-to-reduce-overwork
 createdAt: 2017-09-23 13:26:40
 updatedAt: 2018-08-25 22:20:20
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/09/828af34190a7b8a58fffa69126733e6b_s.jpg
+description >-
+  昨今働き方改革で、残業時間削減というのが
+  色々言われていますが、個人的には、やはり労働時間を伸ばして成果を
+  出すということは、職場に人を拘束して本業以外に興味のあることに関する知識を
+  身につけたり、他の生産的な活動に割ける時間を奪うという点ではあまり賛成できません。
 categories:
   - column
   - freelance

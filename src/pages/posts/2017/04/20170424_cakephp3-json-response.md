@@ -5,7 +5,10 @@ slug: 2017/04/24/cakephp3-json-response
 createdAt: 2017-04-24 01:04:53
 updatedAt: 2018-08-26 01:17:45
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/スクリーンショット-2017-01-03-18.52.23.png
-categories: 
+description: >-
+  私の運営しているサイトでAPIが必要になったので、
+  作り方を調べつつJSONレスポンスを返却するAPIを開発してみました。
+categories:
   - engineering
 ---
 

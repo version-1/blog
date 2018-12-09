@@ -5,7 +5,11 @@ slug: 2017/06/07/hajimeteno-bitcoin
 createdAt: 2017-06-07 00:03:16
 updatedAt: 2018-11-26 22:01:28
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/09/230115b20d9f13bfadeb11de457bf62d_s.jpg
-categories: 
+description: >-
+  現在話題沸騰中のビットコインですが、現在32万円弱といったところでしょうか。
+  と言いつつも、値段は刻一刻と変化しています。
+  私も時代に乗り遅れてはいかんと本を購入して少し勉強を初めて見ました。
+categories:
   - cryptocurrency-blockchain
   - engineering
 ---

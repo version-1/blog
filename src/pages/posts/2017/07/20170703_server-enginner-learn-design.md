@@ -5,6 +5,9 @@ slug: 2017/07/03/server-enginner-learn-design
 createdAt: 2017-07-03 21:47:02
 updatedAt: 2018-08-26 11:51:57
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/07/screencapture-file-Users-admin-prototype-index-html-1499079551933.png
+description: >-
+  普段仕事ではサーバーサイドエンジニアをやっていますが、
+  趣味で自分でもアプリケーションなんかを作ります。
 categories:
   - column
 ---
@@ -23,7 +26,7 @@ categories:
 
 もちろん、
 htmlやcssの最低限の知識とかはあって、
-簡単なレイアウトくらいなできます。
+簡単なレイアウトくらいならできます。
 
 が・・・
 

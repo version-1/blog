@@ -5,7 +5,12 @@ slug: 2017/07/10/flyway-migration
 createdAt: 2017-07-10 00:06:59
 updatedAt: 2018-08-26 11:51:03
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg
-categories: 
+description: >-
+  こんばんは最近目を酷使しがちな@verion1です。
+  さて、最近セコセコと自分で考えたwebサイトを開発しているのですが、
+  「開発をしているとやっぱDBの変更もヴァージョン管理できるといいよね。」
+  と思い、マイグレーションツールを導入しました。
+categories:
   - engineering
 ---
 

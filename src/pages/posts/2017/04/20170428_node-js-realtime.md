@@ -5,7 +5,12 @@ slug: 2017/04/28/node-js-realtime
 createdAt: 2017-04-28 23:16:17
 updatedAt: 2018-11-08 18:29:35
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/04/スクリーンショット-2017-04-28-23.09.33.png
-categories: 
+description: >-
+  今回は徐々に浸透しつつあるビットコインの（個人的な見解ですが）
+  価格を取得する方法を紹介します！！
+  お使いのPCにNode.jsがインストールされていれば
+  すぐにリアルタイムに価格を取得できます。
+categories:
   - cryptocurrency-blockchain
   - engineering
 ---
@@ -62,7 +67,7 @@ pubnub.subscribe({
 <pre><code class="language-bash">npm install pubnub --save-dev
 </code></pre>
 &nbsp;
-<pre><code class="language-bash">node index.js 
+<pre><code class="language-bash">node index.js
 </code></pre>
 で実行。
 
@@ -74,7 +79,7 @@ pubnub.subscribe({
 
 こう言った感じで、価格を表示し続ける
 サーバの完成です。
-<pre><code class="language-bash">$node index.js 
+<pre><code class="language-bash">$node index.js
 lightning_ticker_BTC_JPY { product_code: 'BTC_JPY',
   timestamp: '2017-04-28T14:10:50.8892719Z',
   tick_id: 77957,

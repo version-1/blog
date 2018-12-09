@@ -5,6 +5,9 @@ slug: 2017/05/25/be-faster-on-mac
 createdAt: 2017-05-25 14:19:14
 updatedAt: 2017-12-22 22:53:28
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/v7wo6xrcfve-pandu-agus-wismoyo.jpg
+description: >-
+  今回は簡単な設定で仕事の効率をUPする方法をUPします。
+  それは、Macのカーソルのスピードとマウスポインタのスピードをあげるです。
 categories:
   - column
 ---

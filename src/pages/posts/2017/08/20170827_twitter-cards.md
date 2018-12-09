@@ -5,7 +5,10 @@ slug: 2017/08/27/twitter-cards
 createdAt: 2017-08-27 16:26:42
 updatedAt: 2018-08-26 11:44:04
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/06/19cb5fd445481b1337387866670d094f_s.jpg
-categories: 
+description: >-
+  一人でも多くの人にこのサイトに訪れていただけるように
+  時々リンクをtwitterで呟くのですが、自分のtweetだけなぜかサムネイルが表示されない・・・
+categories:
   - engineering
   - for-beginner
 ---
@@ -17,7 +20,6 @@ categories:
 一人でも多くの人に
 このサイトに訪れていただけるように
 時々リンクをtwitterで呟くのですが、
-<h3></h3>
 <h3>自分のtweetだけなぜかサムネイルが表示されない・・・</h3>
 &nbsp;
 

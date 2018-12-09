@@ -5,7 +5,10 @@ slug: 2017/03/05/mac-ansible-ping
 createdAt: 2017-03-05 21:02:22
 updatedAt: 2018-08-29 08:48:45
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/AnsibleLogo_transparent_web.png
-categories: 
+description: >-
+  以前に以下のようなAnsible Install for Mac | Macのための Ansible Install
+  記事を書いていましたが、しばらく勉強が止まってしまっていました。
+categories:
   - engineering
   - rails
 ---
@@ -59,7 +62,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: Warning: Authentication failure. Retrying...
     default: Warning: Authentication failure. Retrying...
     default: Warning: Remote connection disconnect. Retrying...
-    default: 
+    default:
     default: Inserting generated public key within guest...
     default: Removing insecure key from the guest if it's present...
     default: Key inserted! Disconnecting and reconnecting using new SSH key...
@@ -71,7 +74,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: shared folder errors, please make sure the guest additions within the
     default: virtual machine match the version of VirtualBox you have installed on
     default: your host and reload your VM.
-    default: 
+    default:
     default: Guest Additions Version: 5.0.24
     default: VirtualBox Version: 5.1
 ==&gt; default: Mounting shared folders...
@@ -147,7 +150,7 @@ Host default
 <strong>/usr/bin/python</strong>が
 ないと言われているのでvagrant にSSHで接続してシンボリックリンク作成。
 <pre><code class="language-bash">vagrant ssh
-sudo ln -s /usr/bin/python3 /usr/bin/python 
+sudo ln -s /usr/bin/python3 /usr/bin/python
 </code></pre>
 &nbsp;
 

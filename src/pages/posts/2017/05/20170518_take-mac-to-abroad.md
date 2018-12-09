@@ -5,6 +5,9 @@ slug: 2017/05/18/take-mac-to-abroad
 createdAt: 2017-05-18 07:47:37
 updatedAt: 2017-12-22 22:36:44
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/IMG_2562.jpg
+description: >-
+  題名の通りですが、Macは海外で使えるのでしょうか？
+  早速回答ですが、使えます！はい、以上。
 categories:
   - column
 ---

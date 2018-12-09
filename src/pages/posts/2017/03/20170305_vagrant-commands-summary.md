@@ -5,7 +5,11 @@ slug: 2017/03/05/vagrant-commands-summary
 createdAt: 2017-03-05 14:03:12
 updatedAt: 2018-08-26 12:27:02
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/スクリーンショット-2017-01-14-21.08.33.png
-categories: 
+description: >-
+  ある日vagrantコマンドを引数なしで叩いてしまったことがありました。
+  そうするとvagrantコマンドの一覧が出てきました。コマンドではままあることなので、
+  驚きはしなかったのですが、
+categories:
   - engineering
   - rails
   - for-beginner
@@ -84,7 +88,7 @@ vagrantのバージョンを標準出力に出力。
 <pre><code class="language-bash">$vagrant version
 Installed Version: 1.9.1
 Latest Version: 1.9.2
- 
+
 To upgrade to the latest version, visit the downloads page and
 download and install the latest version of Vagrant from the URL
 below:
@@ -194,9 +198,9 @@ OSのスナップショットのようなもの。
 runningなbox2を停止させたい場合は、
 <strong>vagrant halt a8f6bbc</strong>で停止できる。
 <pre><code class="language-bash">vagrant global-status
-id       name    provider   state    directory                           
+id       name    provider   state    directory
 -------------------------------------------------------------------------
-4a9f8c4  default virtualbox poweroff /Users/version1/Vagrant/box1             
+4a9f8c4  default virtualbox poweroff /Users/version1/Vagrant/box1
 a8f6bbc  default virtualbox running  /Users/version1/Vagrant/box2
 a08e8e9  default virtualbox running  /Users/version1/Vagrant/box3
 </code></pre>

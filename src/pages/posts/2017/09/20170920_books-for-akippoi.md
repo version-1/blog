@@ -5,6 +5,12 @@ slug: 2017/09/20/books-for-akippoi
 createdAt: 2017-09-20 23:29:06
 updatedAt: 2017-12-26 20:27:33
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/09/745668dac97914c8ffb6d069679af8a4_s.jpg
+description: >-
+  どうも3連休明けの@version1です。
+  私は自分で結構飽きっぽいと自覚しているのですが、
+  皆さんはどうでしょうか？
+  エンジニアなので、一人で黙々と作業するのが苦でなく、
+  好きもあるんですが、長期的にみると色々な事に手を出していてプログラミングの勉強もしたい、投資の勉強もしたい、英語の勉強も。。
 categories:
   - column
 ---

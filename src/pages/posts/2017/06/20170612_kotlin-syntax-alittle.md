@@ -5,7 +5,10 @@ slug: 2017/06/12/kotlin-syntax-alittle
 createdAt: 2017-06-12 22:09:19
 updatedAt: 2018-08-26 11:57:42
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/02/スクリーンショット-2017-02-05-22.49.48.png
-categories: 
+description: >-
+  これまでkotlinについていくつか記事をあげてきましたが、文法について触れていなかったので、
+  今回は文法について
+categories:
   - engineering
 ---
 
