@@ -5,7 +5,9 @@ import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
 
-export default class IndexPage extends React.PureComponent { render() { const {data} = this.props;
+export default class IndexPage extends React.PureComponent {
+  render() {
+    const {data} = this.props;
     const {edges: posts} = data.allMarkdownRemark;
     return (
       <Layout>
@@ -20,7 +22,9 @@ export default class IndexPage extends React.PureComponent { render() { const {d
                     </div>
                     <div className="section-list">
                       <div className="row">
-                        <Post posts={posts} />
+                        {posts.map(({node: post}) => (
+                          <Post post={post} />
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -34,9 +38,9 @@ export default class IndexPage extends React.PureComponent { render() { const {d
                       <span className="title">新着記事</span>
                     </div>
                     <div className="section-list">
-                      <div className="row">
-                        <Post posts={posts} />
-                      </div>
+                      {posts.map(({node: post}) => (
+                        <Post post={post} />
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -76,6 +80,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
+            thumbnail
             description
             templateKey
             createdAt(formatString: "MMMM DD, YYYY")

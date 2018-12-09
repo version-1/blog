@@ -34,12 +34,12 @@ export default class Sidebar extends PureComponent {
         <section className="section">
           <h3>オススメ記事</h3>
           {posts.map(({node: post}) => (
-              <Link to={post.fields.slug}>
+              <Link to={post.frontmatter.slug}>
                 <div key={post.id} className="card small hoverable">
                   <div className="card-image">
                     <img
-                      src="https://materializecss.com/images/sample-1.jpg"
-                      alt="alt text"
+                      src={post.frontmatter.thumbnail}
+                      alt={post.frontmatter.title}
                     />
                   </div>
                   <div className="card-content">
