@@ -44,6 +44,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({data}) => {
   const {markdownRemark: post} = data;
+  const description = post.excerpt
 
   return (
     <Layout>
@@ -56,7 +57,7 @@ const BlogPost = ({data}) => {
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={description}
             />
           </Helmet>
         }
@@ -80,7 +81,7 @@ export const pageQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       id
       html
-      excerpt(pruneLength: 300)
+      excerpt(truncate: true, pruneLength: 300)
       frontmatter {
         title
         thumbnail

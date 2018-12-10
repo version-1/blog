@@ -12,8 +12,8 @@ const menus = [
 const MenuList = ({menus}) => {
   return (
     <ul className="nav-link-list">
-      {menus.map(menu => (
-        <li className="nav-link-item">
+      {menus.map((menu, idx) => (
+        <li className="nav-link-item" key={idx}>
           <Link to={menu.to}>{menu.text}</Link>
         </li>
       ))}

@@ -4,13 +4,14 @@ import {graphql} from 'gatsby';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
+import Pagination from '../components/Pagination';
 
 export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
-    const {edges: posts} = data.allMarkdownRemark;
+    const {edges: posts, totalCount} = data.allMarkdownRemark;
     // TODO: GAからとってこれるように
-    const popPosts = posts.slice(0, 6)
+    const popPosts = posts.slice(0, 6);
     return (
       <Layout>
         <div className="row site-container">
@@ -25,7 +26,7 @@ export default class IndexPage extends React.PureComponent {
                     <div className="section-list">
                       <div className="row">
                         {popPosts.map(({node: post}) => (
-                          <Post post={post} />
+                          <Post post={post} key={post.id} />
                         ))}
                       </div>
                     </div>
@@ -41,8 +42,9 @@ export default class IndexPage extends React.PureComponent {
                     </div>
                     <div className="section-list">
                       {posts.map(({node: post}) => (
-                        <Post post={post} />
+                        <Post post={post} key={post.id} />
                       ))}
+                      <Pagination count={totalCount} />
                     </div>
                   </div>
                 </div>
@@ -73,9 +75,9 @@ export const pageQuery = graphql`
       filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
       limit: 20
     ) {
+      totalCount
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
           fields {
             slug

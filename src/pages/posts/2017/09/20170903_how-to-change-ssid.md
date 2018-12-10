@@ -5,9 +5,6 @@ slug: 2017/09/03/how-to-change-ssid
 createdAt: 2017-09-03 13:53:42
 updatedAt: 2018-08-25 22:20:02
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/09/b947d5d5e70c0ece0f904cc0e05b6995_s.jpg
-description: >-
-  どうも、平日の寝不足が休日に繰り越されている@version1です。
-  眠い。。そんなどうでも良いことは置いておいて最近こんなツイートをしてみました。
 categories:
   - for-beginner
 ---

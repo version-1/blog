@@ -27,7 +27,7 @@ const createPostsIndexPage = createPage => posts => {
   const totalPages = Math.ceil(posts.length / PER_PAGE);
   Array.from({length: totalPages}).forEach((dummy, currentPageIndex) => {
     createPage({
-      path: currentPageIndex === 0 ? '/posts' : `/posts/${currentPageIndex}`,
+      path: currentPageIndex === 0 ? '/posts' : `/posts/${currentPageIndex + 1}`,
       component: path.resolve('./src/templates/posts/index.js'),
       context: {
         limit: PER_PAGE,

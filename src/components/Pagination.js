@@ -1,0 +1,69 @@
+import React, {PureComponent} from 'react';
+import {Link} from 'gatsby';
+import _ from 'lodash';
+import profile from '../assets/images/profile.png';
+
+const PER_PAGE = 20;
+
+const className = classes => {
+  return _.compact(Object.keys(classes).map(key => {
+   return classes[key] ? key: null
+  })).join(' ')
+}
+
+const PageLink = ({content, link, isDisabled, isActive}) => (
+  <li
+    className={className({
+      'wave-effect': true,
+      disabled: isDisabled,
+      active: isActive,
+    })}>
+    <a href={link}>{content}</a>
+  </li>
+);
+
+export default class Pagination extends PureComponent {
+  get perPage() {
+    return this.props.per || PER_PAGE;
+  }
+
+  get pageCount() {
+    const {count,} = this.props;
+    return Math.ceil(count / this.perPage);
+  }
+
+  get pageIndex() {
+    return this.props.index || 1
+  }
+
+  isActive(page) {
+    return page === this.pageIndex;
+  }
+
+  link(page) {
+    if (!page || page === 0) return '/posts/';
+    return `/posts/${page}`;
+  }
+
+  render() {
+    return (
+      <ul className="pagination">
+        <PageLink
+          link={this.link}
+          content={<i className="material-icons">chevron_left</i>}
+        />
+        {Array.from({length: this.pageCount}).map((dummy, index) => (
+          <PageLink
+            link={this.link(index + 1)}
+            content={index + 1}
+            isActive={this.isActive(index + 1)}
+          />
+        ))}
+        <PageLink
+          link={this.link(this.pageCount)}
+          content={<i className="material-icons">chevron_right</i>}
+        />
+      </ul>
+    );
+  }
+}
