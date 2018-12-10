@@ -80,6 +80,16 @@
         flex-wrap: wrap
       .row .col
         float: unset
+      .card
+        height: 90%
+        .card-image img
+          height: 150px
+          @media #{$small-and-down}
+            height: 200px
+    .pagination
+      text-align: center
+      li.active
+        background-color: $co-orange
 
 .sidebar
   padding: 10px
@@ -104,3 +114,20 @@
     .introduction
        padding: 5px
   .card-image
+
+.flat-card
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  &:first-child
+    margin-top: 20px
+  .card-content
+    padding: 10px
+  .card-image
+    height: 72px
+    min-width: 100px
+    max-width: 100px
+    img
+      object-fit: cover
+      height: 100%
+      width: 100%

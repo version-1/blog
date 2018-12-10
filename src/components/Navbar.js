@@ -4,9 +4,9 @@ import {Link} from 'gatsby';
 const menus = [
   {to: '/', text: 'Top'},
   {to: '/about', text: 'About'},
-  {to: '/programming', text: 'Programming'},
-  {to: '/column', text: 'Column'},
-  {to: '/contact', text: 'Contact'},
+  {to: '/category/engineering', text: 'Programming'},
+  {to: '/category/column', text: 'Column'},
+  {to: '/category/contact', text: 'Contact'},
 ];
 
 const MenuList = ({menus}) => {

@@ -41,11 +41,13 @@ export default class IndexPage extends React.PureComponent {
                       <span className="title">新着記事</span>
                     </div>
                     <div className="section-list">
-                      {posts.map(({node: post}) => (
-                        <Post post={post} key={post.id} />
-                      ))}
-                      <Pagination count={totalCount} />
+                      <div className="row">
+                        {posts.map(({node: post}) => (
+                          <Post post={post} key={post.id} />
+                        ))}
+                      </div>
                     </div>
+                    <Pagination count={totalCount} />
                   </div>
                 </div>
               </section>
@@ -73,7 +75,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-      limit: 20
+      limit: 18
     ) {
       totalCount
       edges {

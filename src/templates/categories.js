@@ -15,24 +15,28 @@ class CategoryTemplate extends React.PureComponent {
       <Layout>
         <div className="row site-container">
           <div className="col m12 l8">
-            <section className="section">
-              <Helmet title={`${category} | ${title}`} />
+            <main className="main">
               <section className="section">
-                <div className="section-container">
-                  <div className="section-content">
-                    <div className="section-title">
-                      <div className="title-border" />
-                      <span className="title">{category}</span>
-                    </div>
-                    <div className="section-list">
-                      <div className="row">
-                        <Post posts={posts} />
+                <Helmet title={`${category} | ${title}`} />
+                <section className="section">
+                  <div className="section-container">
+                    <div className="section-content">
+                      <div className="section-title">
+                        <div className="title-border" />
+                        <span className="title">{category}</span>
+                      </div>
+                      <div className="section-list">
+                        <div className="row">
+                          {posts.map(({node: post}) => (
+                            <Post key={post.id} post={post} />
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </section>
               </section>
-            </section>
+            </main>
           </div>
           <div className="col l4 hide-on-med-and-down">
             <Sidebar posts={posts} />
@@ -65,6 +69,7 @@ export const categryPageQuery = graphql`
           }
           frontmatter {
             title
+            thumbnail
             categories
           }
         }

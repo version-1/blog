@@ -1,9 +1,8 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
 import _ from 'lodash';
-import profile from '../assets/images/profile.png';
 
-const PER_PAGE = 20;
+const PER_PAGE = 18;
 
 const className = classes => {
   return _.compact(Object.keys(classes).map(key => {
@@ -18,7 +17,7 @@ const PageLink = ({content, link, isDisabled, isActive}) => (
       disabled: isDisabled,
       active: isActive,
     })}>
-    <a href={link}>{content}</a>
+    <Link to={link}>{content}</Link>
   </li>
 );
 
@@ -49,11 +48,12 @@ export default class Pagination extends PureComponent {
     return (
       <ul className="pagination">
         <PageLink
-          link={this.link}
+          link={this.link()}
           content={<i className="material-icons">chevron_left</i>}
         />
         {Array.from({length: this.pageCount}).map((dummy, index) => (
           <PageLink
+            key={index}
             link={this.link(index + 1)}
             content={index + 1}
             isActive={this.isActive(index + 1)}

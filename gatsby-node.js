@@ -4,7 +4,7 @@ const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 
 // Constants
-const PER_PAGE = 20;
+const PER_PAGE = 18;
 
 const createPostShowPage = createPage => posts => {
   posts.forEach(edge => {

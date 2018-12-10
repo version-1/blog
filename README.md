@@ -9,20 +9,25 @@ my blog
 
 ### Todo to finish until release
 
+
 #### Gatsby
 
  * [ ] description
  * [ ] ogp
  * [ ] google analytics
  * [ ] footer design
- * [ ] post page design
+ * [ ] post show page design
+ * [ ] post index page design
+ * [ ] pagination design
  * [ ] image url
- * [ ] amp
+ * [ ] AMP
  * [ ] sitempa
  * [ ] sns button
  * [ ] shortcode
  * [ ] check url
  * [ ] 404 Page
+ * [ ] common variables
+ * [ ] search
 
 #### Netlify
 
