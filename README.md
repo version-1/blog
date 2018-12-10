@@ -2,16 +2,18 @@
 
 https://ver-1-0.net/
 
-blog
+my blog
 
 
 # Todo
 
-
 ### Todo to finish until release
+
+#### Gatsby
 
  * [ ] description
  * [ ] ogp
+ * [ ] google analytics
  * [ ] footer design
  * [ ] post page design
  * [ ] image url
@@ -20,3 +22,9 @@ blog
  * [ ] sns button
  * [ ] shortcode
  * [ ] check url
+ * [ ] 404 Page
+
+#### Netlify
+
+ * [ ] redirect
+ * [ ] deploy

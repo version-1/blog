@@ -9,6 +9,8 @@ export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
     const {edges: posts} = data.allMarkdownRemark;
+    // TODO: GAからとってこれるように
+    const popPosts = posts.slice(0, 6)
     return (
       <Layout>
         <div className="row site-container">
@@ -22,7 +24,7 @@ export default class IndexPage extends React.PureComponent {
                     </div>
                     <div className="section-list">
                       <div className="row">
-                        {posts.map(({node: post}) => (
+                        {popPosts.map(({node: post}) => (
                           <Post post={post} />
                         ))}
                       </div>
@@ -69,6 +71,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+      limit: 20
     ) {
       edges {
         node {
