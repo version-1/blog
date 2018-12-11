@@ -1,0 +1,13 @@
+{
+  "hello": "こんにちは",
+  "categories": {
+    "freelance": "フリーランス",
+    "engineering": "プログラミング",
+    "design": "デザイン",
+    "for-beginner": "初心者向け",
+    "rails": "Ruby On Rails",
+    "react": "React",
+    "travel": "旅行",
+    "column": "コラム"
+  }
+}

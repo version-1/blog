@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
+import i18next from '../lib/i18next'
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
@@ -10,6 +11,7 @@ class CategoryTemplate extends React.PureComponent {
     const posts = this.props.data.allMarkdownRemark.edges;
     const {category} = this.props.pageContext;
     const {title} = this.props.data.site.siteMetadata;
+    const heading = i18next.t(`categories.${category}`)
 
     return (
       <Layout>
@@ -17,13 +19,13 @@ class CategoryTemplate extends React.PureComponent {
           <div className="col m12 l8">
             <main className="main">
               <section className="section">
-                <Helmet title={`${category} | ${title}`} />
+                <Helmet title={`${heading}| ${title}`} />
                 <section className="section">
                   <div className="section-container">
                     <div className="section-content">
                       <div className="section-title">
                         <div className="title-border" />
-                        <span className="title">{category}</span>
+                        <span className="title">{heading}</span>
                       </div>
                       <div className="section-list">
                         <div className="row">
