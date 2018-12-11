@@ -12,21 +12,23 @@ my blog
 
 #### Gatsby
 
- * [ ] description
+ * [-] description
+ * [-] post index page design
+ * [-] pagination design
+ * [ ] category page
  * [ ] ogp
  * [ ] google analytics
  * [ ] footer design
  * [ ] post show page design
- * [ ] post index page design
- * [ ] pagination design
  * [ ] image url
  * [ ] AMP
- * [ ] sitempa
+ * [ ] sitemap
  * [ ] sns button
  * [ ] shortcode
  * [ ] check url
  * [ ] 404 Page
  * [ ] common variables
+ * [ ] popular article
  * [ ] search
 
 #### Netlify
