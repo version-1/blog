@@ -40,8 +40,9 @@ export default class Pagination extends PureComponent {
   }
 
   link(page) {
-    if (!page || page === 0) return '/posts/';
-    return `/posts/${page}`;
+    const { namespace } = this.props;
+    if (!page || page === 0) return namespace  + '/';
+    return `${namespace}/${page}`;
   }
 
   render() {

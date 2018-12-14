@@ -4,11 +4,13 @@ import {graphql} from 'gatsby';
 import i18next from '../lib/i18next';
 import Layout from '../components/layouts/Default';
 import Post from '../components/Post';
+import Pagination from '../components/Pagination';
+import { categoryPath } from '../lib/routes';
 
 class CategoryTemplate extends React.PureComponent {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
-    const {category} = this.props.pageContext;
+    const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
+    const {category, index} = this.props.pageContext;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`categories.${category}`);
 
@@ -29,6 +31,11 @@ class CategoryTemplate extends React.PureComponent {
                   ))}
                 </div>
               </div>
+            <Pagination
+              index={index}
+              namespace={categoryPath(category)}
+              count={totalCount}
+            />
             </div>
           </div>
         </section>
@@ -55,6 +62,7 @@ export const categryPageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           fields {
             slug
           }
