@@ -15,11 +15,12 @@ my blog
  * [-] description
  * [-] post index page design
  * [-] pagination design
- * [ ] category page
+ * [-] category page
+ * [-] common variables
+ * [ ] post show page design
  * [ ] ogp
  * [ ] google analytics
  * [ ] footer design
- * [ ] post show page design
  * [ ] image url
  * [ ] AMP
  * [ ] sitemap
@@ -27,7 +28,6 @@ my blog
  * [ ] shortcode
  * [ ] check url
  * [ ] 404 Page
- * [ ] common variables
  * [ ] popular article
  * [ ] search
 
