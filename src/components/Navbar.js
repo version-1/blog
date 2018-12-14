@@ -1,13 +1,14 @@
 import React from 'react';
 import {Link} from 'gatsby';
+import { rootPath, categoryPath, aboutPath } from '../lib/routes'
 
 const menus = [
-  {to: '/', text: 'Top'},
-  {to: '/about', text: 'About'},
-  {to: '/category/freelance', text: 'Freelance'},
-  {to: '/category/engineering', text: 'Programming'},
-  {to: '/category/column', text: 'Column'},
-  {to: '/category/contact', text: 'Contact'},
+  {to: rootPath(), text: 'Top'},
+  {to: aboutPath(), text: 'About'},
+  {to: categoryPath('freelance'), text: 'Freelance'},
+  {to: categoryPath('engineering'), text: 'Programming'},
+  {to: categoryPath('column'), text: 'Column'},
+  {to: categoryPath('contact'), text: 'Contact'},
 ];
 
 const MenuList = ({menus}) => {

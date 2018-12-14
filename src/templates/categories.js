@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
 import i18next from '../lib/i18next';
 import Layout from '../components/layouts/Default';
-import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
 
 class CategoryTemplate extends React.PureComponent {
@@ -41,14 +40,15 @@ class CategoryTemplate extends React.PureComponent {
 export default CategoryTemplate;
 
 export const categryPageQuery = graphql`
-  query CategoryPage($category: String) {
+  query CategoryPage($category: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
-      limit: 1000
+      limit: $limit
+      skip: $skip
       sort: {fields: [frontmatter___createdAt], order: DESC}
       filter: {frontmatter: {categories: {in: [$category]}}}
     ) {

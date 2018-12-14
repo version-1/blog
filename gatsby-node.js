@@ -2,9 +2,36 @@ const _ = require('lodash');
 const path = require('path');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
+const { routes } = require('./config/constants');
 
 // Constants
 const PER_PAGE = 18;
+
+const buildPaginationPages = createPage => (limit = PER_PAGE) => (
+  namespace,
+  templates,
+  totalCounts,
+  context = {}
+) => {
+  const totalPages = Math.ceil(totalCounts / limit);
+  Array.from({length: totalPages}).forEach((dummy, currentPageIndex) => {
+    const _path =
+      currentPageIndex === 0
+        ? namespace
+        : [namespace, currentPageIndex + 1].join('/');
+    const skip = currentPageIndex * limit;
+    createPage({
+      path: _path,
+      component: path.resolve(`src/templates/${templates}.js`),
+      context: {
+        ...context,
+        limit,
+        skip,
+        index: currentPageIndex
+      },
+    });
+  });
+};
 
 const createPostShowPage = createPage => posts => {
   posts.forEach(edge => {
@@ -23,31 +50,14 @@ const createPostShowPage = createPage => posts => {
   });
 };
 
-const createPostsIndexPage = createPage => posts => {
-  const totalPages = Math.ceil(posts.length / PER_PAGE);
-  Array.from({length: totalPages}).forEach((dummy, currentPageIndex) => {
-    createPage({
-      path: currentPageIndex === 0 ? '/posts' : `/posts/${currentPageIndex + 1}`,
-      component: path.resolve('./src/templates/posts/index.js'),
-      context: {
-        limit: PER_PAGE,
-        skip: currentPageIndex * PER_PAGE,
-      },
-    });
-  });
+const createPostsIndexPage = createPage => totalCount => {
+  const _path = [routes.root, routes.post].join('/')
+  buildPaginationPages(createPage)()(_path, 'posts/index', totalCount);
 };
 
-const createCategoryIndexPage = createPage => categories => {
-  categories.forEach(category => {
-    const _path = `/category/${_.kebabCase(category)}/`;
-    createPage({
-      path: _path,
-      component: path.resolve(`src/templates/categories.js`),
-      context: {
-        category,
-      },
-    });
-  });
+const createCategoryShowPage = createPage => category => totalCount => {
+  const _path = [routes.root, routes.category, _.kebabCase(category)].join('/')
+  buildPaginationPages(createPage)()(_path, 'categories', totalCount, { category });
 };
 
 const collectCategories = posts => {
@@ -64,28 +74,46 @@ const collectCategories = posts => {
   );
 };
 
-exports.createPages = ({actions, graphql}) => {
-  const {createPage} = actions;
-
-  return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              slug
-              categories
-              templateKey
-            }
+const queryIndex = `
+  {
+    allMarkdownRemark(limit: 1000) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            slug
+            categories
+            templateKey
           }
         }
       }
     }
-  `).then(result => {
+  }
+`;
+
+const categoryQuery = `
+  query CategoryPage($category: String) {
+    allMarkdownRemark(
+      limit: 1000
+      filter: {frontmatter: {categories: {in: [$category]}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+`;
+
+exports.createPages = ({actions, graphql}) => {
+  const {createPage} = actions;
+
+  return graphql(queryIndex).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
       return Promise.reject(result.errors);
@@ -97,8 +125,13 @@ exports.createPages = ({actions, graphql}) => {
 
     // Create Pages
     createPostShowPage(createPage)(posts);
-    createPostsIndexPage(createPage)(posts);
-    createCategoryIndexPage(createPage)(categories);
+    createPostsIndexPage(createPage)(posts.length);
+    categories.map(category => {
+      graphql(categoryQuery, { category }).then(result => {
+        const posts = result.data.allMarkdownRemark.edges;
+        createCategoryShowPage(createPage)(category)(posts.length);
+      })
+    });
   });
 };
 

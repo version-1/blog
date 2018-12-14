@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "index": "/",
+    "about": "about",
+    "post": "posts",
+    "category": "categories"
+  }
+}

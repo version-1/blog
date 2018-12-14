@@ -1,10 +1,6 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import {graphql} from 'gatsby';
-import i18next from '../../lib/i18next';
 import Layout from '../../components/layouts/Index';
 import Sidebar from '../../components/Sidebar';
-import Post from '../../components/Post';
 
 class DefaultLayout extends React.PureComponent {
   render() {
