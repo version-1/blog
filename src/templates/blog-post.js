@@ -18,17 +18,10 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-          </div>
-        </div>
-      </div>
+      <article className="post">
+        <h1 className="post-title">{title}</h1>
+        <PostContent className="post-body" content={content} />
+      </article>
     </section>
   );
 };
@@ -43,7 +36,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({data}) => {
   const {markdownRemark: post} = data;
-  const description = post.excerpt
+  const description = post.excerpt;
 
   return (
     <Layout>
@@ -54,10 +47,7 @@ const BlogPost = ({data}) => {
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={description}
-            />
+            <meta name="description" content={description} />
           </Helmet>
         }
         tags={post.frontmatter.tags}

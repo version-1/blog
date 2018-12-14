@@ -42,7 +42,7 @@ categories:
 
 &nbsp;
 <h3>レバテックフリーランス</h3>
-<img class="alignnone size-full wp-image-2410" src="https://ver-1-0.net/wp-content/uploads/2018/12/levatech.jpg" alt="レバテックフリーランス" width="674" height="409" />
+<img class="image alignnone size-full wp-image-2410" src="https://ver-1-0.net/wp-content/uploads/2018/12/levatech.jpg" alt="レバテックフリーランス" width="674" height="409" />
 
 引用元: <a href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1THW9E" target="_blank" rel="nofollow noopener">レバテックフリーランス</a>
 <img src="https://www17.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1THW9E" alt="" width="1" height="1" border="0" />
@@ -59,7 +59,7 @@ categories:
 <img src="https://www19.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1TMTQA" alt="" width="1" height="1" border="0" />
 <h3>ITプロパートナーズ</h3>
 <a href="https://itpropartners.com/">
-<img class="alignnone size-full wp-image-2400" src="https://ver-1-0.net/wp-content/uploads/2018/12/itpro.jpg" alt="ITプロパートナーズ" width="677" height="404" />
+<img class="image alignnone size-full wp-image-2400" src="https://ver-1-0.net/wp-content/uploads/2018/12/itpro.jpg" alt="ITプロパートナーズ" width="677" height="404" />
 </a>
 
 （引用元: <a href="https://itpropartners.com/">https://itpropartners.com/</a> )
@@ -78,7 +78,7 @@ categories:
 
 &nbsp;
 <h3>ポテパンフリーランス</h3>
-<img class="alignnone size-full wp-image-2404" src="https://ver-1-0.net/wp-content/uploads/2018/12/potepan.jpg" alt="ポテパンフリーランス" width="678" height="270" />
+<img class="image alignnone size-full wp-image-2404" src="https://ver-1-0.net/wp-content/uploads/2018/12/potepan.jpg" alt="ポテパンフリーランス" width="678" height="270" />
 引用元:<a href="https://px.a8.net/svt/ejp?a8mat=2ZU6N8+37I6GA+3UES+BW8O2&amp;a8ejpredirect=https%3A%2F%2Ffreelance.potepan.com%2F" target="_blank" rel="nofollow noopener">https://freelance.potepan.com/</a>
 <img src="https://www12.a8.net/0.gif?a8mat=2ZU6N8+37I6GA+3UES+BW8O2" alt="" width="1" height="1" border="0" />
 
