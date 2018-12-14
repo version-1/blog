@@ -4,6 +4,7 @@ import {Link} from 'gatsby';
 const menus = [
   {to: '/', text: 'Top'},
   {to: '/about', text: 'About'},
+  {to: '/category/freelance', text: 'Freelance'},
   {to: '/category/engineering', text: 'Programming'},
   {to: '/category/column', text: 'Column'},
   {to: '/category/contact', text: 'Contact'},
