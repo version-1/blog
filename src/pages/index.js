@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import Layout from '../components/Layout';
+import Layout from '../components/layouts/default';
 import Sidebar from '../components/Sidebar';
 import Post from '../components/Post';
 import Pagination from '../components/Pagination';
@@ -14,49 +14,40 @@ export default class IndexPage extends React.PureComponent {
     const popPosts = posts.slice(0, 6);
     return (
       <Layout>
-        <div className="row site-container">
-          <div className="col m12 l8">
-            <main className="main">
-              <section className="section">
-                <div className="section-container">
-                  <div className="section-content">
-                    <div className="section-title">
-                      <span className="title">人気記事</span>
-                    </div>
-                    <div className="section-list">
-                      <div className="row">
-                        {popPosts.map(({node: post}) => (
-                          <Post post={post} key={post.id} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+        <section className="section">
+          <div className="section-container">
+            <div className="section-content">
+              <div className="section-title">
+                <span className="title">人気記事</span>
+              </div>
+              <div className="section-list">
+                <div className="row">
+                  {popPosts.map(({node: post}) => (
+                    <Post post={post} key={post.id} />
+                  ))}
                 </div>
-              </section>
-              <section className="section">
-                <div className="section-container">
-                  <div className="section-content">
-                    <div className="section-title">
-                      <div className="title-border" />
-                      <span className="title">新着記事</span>
-                    </div>
-                    <div className="section-list">
-                      <div className="row">
-                        {posts.map(({node: post}) => (
-                          <Post post={post} key={post.id} />
-                        ))}
-                      </div>
-                    </div>
-                    <Pagination count={totalCount} />
-                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section">
+          <div className="section-container">
+            <div className="section-content">
+              <div className="section-title">
+                <div className="title-border" />
+                <span className="title">新着記事</span>
+              </div>
+              <div className="section-list">
+                <div className="row">
+                  {posts.map(({node: post}) => (
+                    <Post post={post} key={post.id} />
+                  ))}
                 </div>
-              </section>
-            </main>
+              </div>
+              <Pagination count={totalCount} />
+            </div>
           </div>
-          <div className="col l4 hide-on-med-and-down">
-            <Sidebar posts={posts} />
-          </div>
-        </div>
+        </section>
       </Layout>
     );
   }

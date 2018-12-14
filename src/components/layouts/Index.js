@@ -1,13 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
-import headerImage from '../assets/images/header-image-2.svg'
-import favicon from '../assets/images/favicon.ico'
+import headerImage from '../../assets/images/header-image-2.svg'
+import favicon from '../../assets/images/favicon.ico'
 
-import Navbar from '../components/Navbar'
-import '../assets/stylesheets/index.sass'
+import Navbar from '../../components/Navbar'
+import '../../assets/stylesheets/index.sass'
 
-const TemplateWrapper = ({ children }) => (
+const IndexLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -37,4 +37,4 @@ const TemplateWrapper = ({ children }) => (
   />
 )
 
-export default TemplateWrapper
+export default IndexLayout

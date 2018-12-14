@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {graphql} from 'gatsby';
-import Layout from '../../components/Layout';
+import Layout from '../../components/layouts/Default';
 
 export default class PostsIndex extends PureComponent {
   render() {
