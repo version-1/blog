@@ -48,9 +48,10 @@ const BlogPost = ({data}) => {
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={description} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={post.frontmatter.thumbnail} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
     </Layout>

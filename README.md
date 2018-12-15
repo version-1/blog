@@ -24,6 +24,7 @@ my blog
  * [ ] ariticle info(timestamp, category etc..)
  * [ ] code hilight
  * [ ] canonical
+ * [ ] rss
  * [ ] google analytics
  * [ ] image url
  * [ ] AMP

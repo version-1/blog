@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {graphql} from 'gatsby';
+import Helmet from 'react-helmet';
 import Layout from '../../components/layouts/Default';
 import Post from '../../components/Post';
 import Pagination from '../../components/Pagination';
