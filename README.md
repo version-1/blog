@@ -17,10 +17,10 @@ my blog
  * [-] pagination design
  * [-] category page
  * [-] common variables
- * [ ] post show page design
+ * [-] post show page design
+ * [ ] footer design
  * [ ] ogp
  * [ ] google analytics
- * [ ] footer design
  * [ ] image url
  * [ ] AMP
  * [ ] sitemap
