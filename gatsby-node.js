@@ -27,7 +27,8 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
         ...context,
         limit,
         skip,
-        index: currentPageIndex + 1
+        index: currentPageIndex + 1,
+        totalPages
       },
     });
   });
