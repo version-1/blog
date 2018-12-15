@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'So Far, So Good',
-    description: 'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について有益な情報を上げていきます。',
+    title: 'So Far, So Tech',
+    description: 'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

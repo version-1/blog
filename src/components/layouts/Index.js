@@ -1,35 +1,33 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from "gatsby"
-import headerImage from '../../assets/images/header-image-2.svg'
-import footerImage from '../../assets/images/footer-image.svg'
-import favicon from '../../assets/images/favicon.ico'
+import React from 'react';
+import {StaticQuery, graphql} from 'gatsby';
+import headerImage from '../../assets/images/header-image-2.svg';
+import footerImage from '../../assets/images/footer-image.svg';
+import favicon from '../../assets/images/favicon.ico';
 
-import Navbar from '../../components/Navbar'
-import '../../assets/stylesheets/index.sass'
+import Navbar from '../../components/Navbar';
+import Head from '../../components/Head';
+import '../../assets/stylesheets/index.sass';
 
-const IndexLayout = ({ children }) => (
+const IndexLayout = ({children}) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
-          site {
-            siteMetadata {
-              title,
-              description,
-            }
+        site {
+          siteMetadata {
+            title
+            description
           }
         }
+      }
     `}
     render={data => (
       <div>
-        <Helmet>
-          <html lang="en" />
-          <title>{data.site.siteMetadata.title}</title>
-          <meta name="description" content={data.site.siteMetadata.description} />
-          <link rel="shortcut icon" href={favicon} />
-        </Helmet>
+        <Head
+          siteTitle={data.site.siteMetadata.title}
+          description={data.site.siteMetadata.description}
+        />
         <div className="header-image">
-          <img src={headerImage} alt="header image"/>
+          <img src={headerImage} alt="header image" />
         </div>
         <Navbar />
         <div>{children}</div>
@@ -39,11 +37,11 @@ const IndexLayout = ({ children }) => (
           </span>
         </div>
         <div className="footer-image">
-          <img src={footerImage} alt="footer image"/>
+          <img src={footerImage} alt="footer image" />
         </div>
       </div>
     )}
   />
-)
+);
 
-export default IndexLayout
+export default IndexLayout;

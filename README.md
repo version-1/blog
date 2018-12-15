@@ -18,8 +18,10 @@ my blog
  * [-] category page
  * [-] common variables
  * [-] post show page design
- * [ ] footer design
+ * [-] footer design
+ * [ ] ariticle info
  * [ ] ogp
+ * [ ] canonical
  * [ ] google analytics
  * [ ] image url
  * [ ] AMP
