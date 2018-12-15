@@ -19,13 +19,14 @@ my blog
  * [-] common variables
  * [-] post show page design
  * [-] footer design
- * [ ] ariticle info
- * [ ] ogp
+ * [-] ogp
+ * [-] sitemap
+ * [ ] ariticle info(timestamp, category etc..)
+ * [ ] code hilight
  * [ ] canonical
  * [ ] google analytics
  * [ ] image url
  * [ ] AMP
- * [ ] sitemap
  * [ ] sns button
  * [ ] shortcode
  * [ ] check url

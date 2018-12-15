@@ -5,10 +5,6 @@ slug: 2017/09/27/architecture-for-local-rails
 createdAt: 2017-09-27 00:14:50
 updatedAt: 2017-12-22 22:47:09
 thumbnail: http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg
-description: >-
-  普段私が開発している時によくやるローカル開発環境の構成。簡単にいうと自分のPCの内部がどのようになっているか。
-  というのを今回は共有したいと思います。
-  ちなみに先に言って起きますが、あくまでも一例としてです。こんななやり方もあるのね程度でおさめていただければ嬉しいです。
 categories:
   - engineering
   - rails

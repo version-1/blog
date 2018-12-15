@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://ver-1-0.net',
     title: 'So Far, So Tech',
-    description: 'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。',
+    description:
+      'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -38,8 +40,8 @@ module.exports = {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'static',
-            }
-          }
+            },
+          },
         ],
       },
     },
@@ -48,11 +50,30 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          'material icons',
-          'roboto:300,400,500,700',
-        ],
+        fonts: ['material icons', 'roboto:300,400,500,700'],
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`,
+      },
+    },
   ],
-}
+};
