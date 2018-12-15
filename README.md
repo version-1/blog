@@ -21,15 +21,16 @@ my blog
  * [-] footer design
  * [-] ogp
  * [-] sitemap
+ * [-] code hilight
+ * [ ] rewrite articles' dom to md
  * [ ] ariticle info(timestamp, category etc..)
- * [ ] code hilight
  * [ ] canonical
  * [ ] rss
  * [ ] google analytics
  * [ ] image url
  * [ ] AMP
  * [ ] sns button
- * [ ] shortcode
+ * [ ] shortcode (adsence)
  * [ ] check url
  * [ ] 404 Page
  * [ ] popular article

@@ -34,7 +34,8 @@ Ruby でデザインパターン今回は Strategy パターンです。
 
 &nbsp;
 
-<pre><code class="language-ruby">class Report
+```ruby
+class Report
   attr_reader :title, :text
   attr_accessor :formatter
 
@@ -51,16 +52,16 @@ end
 
 class HTMLFormatter
   def output_report(context)
-        puts('&lt;html&gt;')
-    puts('  &lt;head&gt;')
-    puts("    &lt;title&gt;#{context.title}&lt;/title&gt;")
-    puts('  &lt;/head&gt;')
-    puts('  &lt;body&gt;')
+        puts('<html>')
+    puts('  <head>')
+    puts("    <title>#{context.title}</title>")
+    puts('  </head>')
+    puts('  <body>')
     context.text.each do |line|
-      puts("    &lt;p&gt;#{line}&lt;/p&gt;")
+      puts("    <p>#{line}</p>")
     end
-    puts('  &lt;/body&gt;')
-    puts('&lt;/html&gt;')
+    puts('  </body>')
+    puts('</html>')
   end
 end
 
@@ -71,7 +72,8 @@ class TextFormatter
       puts(line)
     end
   end
-end</code></pre>
+end
+```
 
 いきなりポンと見せられてもわからないので個別に切り出して説明していきます。
 
@@ -94,7 +96,8 @@ end</code></pre>
 
 &nbsp;
 
-<pre><code class="language-ruby">class Report
+```ruby
+class Report
   attr_reader :title, :text
   attr_accessor :formatter
 
@@ -108,38 +111,42 @@ end</code></pre>
     @formatter.output_report(self)
   end
 end
-</code></pre>
+```
 
 TemplateMethod パターンではこの output_report に title を出力するメソッド、body を出力するメソッドなど必要な処理を手続き的に書いていましたが、Strategy パターンではこれらのロジックを全て formatter として与えられたインスタンスの output_report に委譲します。
 
 Strategy パターンでは、実際のロジックを全てストラテジークラスに委譲しているので動的に実行するロジックを切り替えるということも可能です。
 
-<pre><code class="language-ruby">report = Report.new(HTMLFormatter.new)
+```ruby
+report = Report.new(HTMLFormatter.new)
 report.output_report
 
 report.formatter = TextFormatter.new
-report.output_report</code></pre>
+report.output_report
+```
 
 また Strategy パターンではロジックとデータを分離していて、Report クラスの例でいうと title や text などのデータは親クラス（Context クラスといったりします）が保持し、実際のロジックを実行する部分で自分自身をデータとして渡します。
 
 対象のコードは下記の部分で
 
-<pre><code class="language-ruby">
+```ruby
  def output_report()
     @formatter.output_report(self)
  end
-</code></pre>
+```
 
 @formatter に注入されたクラスのメソッドに対して self で自分自身を引き渡しています。さらに storategy 側では受け取っとた context からデータを取得し、実際のレポート主力時に出力を行なっています。
 
-<pre><code class="language-ruby">class TextFormatter
+```ruby
+class TextFormatter
   def output_report(context)
     puts("****** #{context.title} ******")
     context.text.each do |line|
       puts(line)
     end
   end
-end</code></pre>
+end
+```
 
 &nbsp;
 
@@ -156,17 +163,19 @@ Ruby では lambda という記法を使うことでブロックをオブジェ�
 
 &nbsp;
 
-<pre><code class="language-ruby">sayHello = lambda { puts 'hoge' } sayHello.call
+```ruby
+sayHello = lambda { puts 'hoge' } sayHello.call
 hoge
- =&gt; nil
-</code></pre>
+ => nil
+```
 
 lamda を使うと Proc オブジェクトが生成され格納したブロックを実行する場合は、
 call を利用します。
 
 これを使って Strategy パターンを組む場合は、さきほどの Report クラスを以下のようにします。
 
-<pre><code class="language-ruby">class Report
+```ruby
+class Report
   def initialize(&amp;formatter)
     @title = 'Monthly Report'
     @text = ['Things are going', 'really, really well.']
@@ -176,16 +185,19 @@ call を利用します。
   def output_report
     @formatter.call(self)
   end
-end</code></pre>
+end
+```
 
 あとは次のように lamda で strategy を実装して渡してあげれば簡易 strategy パターンのできあがりです。
 
-<pre><code class="language-ruby">HTML_FORMATTER = lambd do |context|
+```ruby
+HTML_FORMATTER = lambd do |context|
   # HTMLFormatter#output_reportの処理を書く
 end
 
 report = Report.new(HTML_FORMATTER)
-report.output_report</code></pre>
+report.output_report
+```
 
 この書き方だとクラスを使わないのでかなり簡潔にかけそうですが、
 まああまり多用は避けたいですね。

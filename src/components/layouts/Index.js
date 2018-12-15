@@ -1,8 +1,8 @@
 import React from 'react';
 import {StaticQuery, graphql} from 'gatsby';
+import Prism from 'prismjs';
 import headerImage from '../../assets/images/header-image-2.svg';
 import footerImage from '../../assets/images/footer-image.svg';
-import favicon from '../../assets/images/favicon.ico';
 
 import Navbar from '../../components/Navbar';
 import Head from '../../components/Head';
