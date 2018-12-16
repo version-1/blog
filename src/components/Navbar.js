@@ -7,8 +7,7 @@ const menus = [
   {to: aboutPath(), text: 'About'},
   {to: categoryPath('freelance'), text: 'Freelance'},
   {to: categoryPath('engineering'), text: 'Programming'},
-  {to: categoryPath('column'), text: 'Column'},
-  {to: categoryPath('contact'), text: 'Contact'},
+  {to: categoryPath('column'), text: 'Column'}
 ];
 
 const MenuList = ({menus}) => {

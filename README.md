@@ -12,31 +12,31 @@ my blog
 
 #### Gatsby
 
- * [-] description
- * [-] post index page design
- * [-] pagination design
- * [-] category page
- * [-] common variables
- * [-] post show page design
- * [-] footer design
- * [-] ogp
- * [-] sitemap
- * [-] code hilight
- * [ ] rewrite articles' dom to md
- * [ ] ariticle info(timestamp, category etc..)
- * [ ] canonical
- * [ ] rss
- * [ ] google analytics
- * [ ] image url
- * [ ] AMP
- * [ ] sns button
- * [ ] shortcode (adsence)
- * [ ] check url
- * [ ] 404 Page
- * [ ] popular article
- * [ ] search
+ - [x] description
+ - [x] post index page design
+ - [x] pagination design
+ - [x] category page
+ - [x] common variables
+ - [x] post show page design
+ - [x] footer design
+ - [x] ogp
+ - [x] sitemap
+ - [x] code hilight
+ - [ ] rewrite articles' dom to md
+ - [ ] shortcode (adsence)
+ - [ ] ariticle info(timestamp, category etc..)
+ - [ ] rss
+ - [ ] google analytics
+ - [ ] image url
+ - [ ] AMP(canonical)
+ - [ ] sns button
+ - [ ] 404 Page
+ - [ ] popular article
+ - [ ] search
+ - [ ] check url
+
 
 #### Netlify
 
- * [ ] redirect
- * [ ] deploy
+ - [ ] redirect
+ - [ ] deploy
