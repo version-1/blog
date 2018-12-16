@@ -1,9 +1,10 @@
+const { meta } = require('./config/constants')
+
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://ver-1-0.net',
-    title: 'So Far, So Tech',
-    description:
-      'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。',
+    siteUrl: meta.siteUrl,
+    title: meta.title,
+    description: meta.description
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -66,7 +67,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
+        output: meta.sitemap,
         query: `
         {
           site {
@@ -88,8 +89,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-71833989-5"
+        trackingId: meta.trackingId
       },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: meta.siteUrl,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: meta.siteUrl,
+        sitemap: [meta.siteUrl, meta.sitemap].join(''),
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
   ],
 };
