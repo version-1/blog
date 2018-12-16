@@ -22,15 +22,16 @@ my blog
  - [x] ogp
  - [x] sitemap
  - [x] code hilight
+ - [x] rss
+ - [x] google analytics
+ - [ ] image url
  - [ ] rewrite articles' dom to md
  - [ ] shortcode (adsence)
  - [ ] ariticle info(timestamp, category etc..)
- - [ ] rss
- - [ ] google analytics
- - [ ] image url
  - [ ] AMP(canonical)
  - [ ] sns button
  - [ ] 404 Page
+ - [ ] About Page
  - [ ] popular article
  - [ ] search
  - [ ] check url
