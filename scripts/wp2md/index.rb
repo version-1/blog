@@ -12,6 +12,7 @@ exit unless file_path && output_path
 class FileWriter
   HEADER_DIVIDER = '---'.freeze
   attr_accessor :file
+  attr_accessor :images
   attr_accessor :headers
   attr_accessor :md
 
@@ -25,6 +26,10 @@ class FileWriter
     write_content
   end
 
+  def images
+    []
+  end
+
   def write_header
     file.puts HEADER_DIVIDER
     md.headers.each do |header|
@@ -34,8 +39,55 @@ class FileWriter
   end
 
   def write_content
-    file.puts "\n" + md.content
+    content = Content.new(md.content)
+    file.puts "\n" + content.transformed
   end
+end
+
+class Content
+  attr_accessor :content
+  attr_accessor :images
+
+  def initialize(content)
+    self.content = content
+  end
+
+  def transformed
+    lines = @content.split("\n")
+    lines = parse_image_tags(lines)
+    lines = transform_precode_tag(lines)
+    lines.join("\n")
+  end
+
+  # imageの取得
+  def parse_image_tags(lines)
+    lines.map do |line|
+      m = line.match(/<img.+src=\"(?<src>http.+ver-1-0\.net\/wp-content\/uploads.+(png|jpg|jpeg|gif))\".+>/)
+      if m.present?
+        filename = m[:src].split('/').last
+        image = './' + filename
+        "<img class=\"post-image\" src=\"#{image}\" alt=\"#{filename}\"/>"
+      else
+        line
+      end
+    end
+  end
+
+  # <pre><code></code></pre>の変換
+  def transform_precode_tag(lines)
+    lines.map do |line|
+      m = line.match(/<pre><code class=\"language-(?<lang>.+)\">/)
+      transformed_line = line
+      if m.present?
+        transformed_line = transformed_line.gsub(/<pre><code class=\"language-.+\">/, "```#{m[:lang]}\n")
+      end
+      transformed_line = transformed_line.gsub(/<pre><code>/, "```\n")
+      transformed_line = transformed_line.gsub(/<\/code><\/pre>/, "\n```")
+      transformed_line = transformed_line.gsub(/&gt;/, '>')
+      transformed_line.gsub(/&lt;/, '<')
+    end
+  end
+
 end
 
 class Markdown
@@ -48,7 +100,7 @@ class Markdown
   attr_accessor :post_content
 
   CATEGORY_SEPARATOR = '::::'.freeze
-  HEADER_KEYS = %i[template_key title slug description created_at updated_at thumbnail categories].freeze
+  HEADER_KEYS = %i[template_key title slug created_at updated_at thumbnail categories].freeze
 
   def initialize(params)
     attributes = params.to_h.symbolize_keys
@@ -113,10 +165,6 @@ class Markdown
     post_content.gsub("\r\n", "\n")
   end
 
-  def description
-    post_content[0..300]
-  end
-
   private
 
   def zero_pad(str)
@@ -135,12 +183,11 @@ end
 puts "-----------> load #{mds.length} files .."
 
 mds.each do |md|
-  dir_path = output_path + md.base_path
   new_file_path = output_path + md.path
   puts '-----------> write file ..'
   puts "-----------> #{new_file_path}"
-  FileUtils.mkdir_p(dir_path)
-  File.open(new_file_path, 'w') do |file|
+  FileUtils.mkdir_p(new_file_path)
+  File.open(new_file_path + '/index.md', 'w') do |file|
     fw = FileWriter.new(file, md)
     fw.write
   end

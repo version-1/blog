@@ -9,6 +9,10 @@
     "siteUrl": "https://ver-1-0.net",
     "title": "So Far, So Tech",
     "description": "フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。",
-    "sitemap": "/sitemap.xml"
+    "sitemap": "/sitemap.xml",
+    "trackingId": "UA-71833989-5"
+  },
+  "constants": {
+    "per": 18
   }
 }
