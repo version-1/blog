@@ -1220,37 +1220,37 @@ Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
 You are already using composer version 1.3.0 (stable channel).
 Do not run Composer as root/super user! See https://getcomposer.org/root for details
 Installing cakephp/app (3.3.5)
-  - Installing cakephp/app (3.3.5) Downloading: 100%         
+  - Installing cakephp/app (3.3.5) Downloading: 100%
 Created project in my_app_name
 Loading composer repositories with package information
 Updating dependencies (including require-dev)
 Package operations: 26 installs, 0 updates, 0 removals
-  - Installing aura/installer-default (1.0.0) Downloading: 100%         
-  - Installing cakephp/plugin-installer (0.0.15) Downloading: 100%         
-  - Installing mobiledetect/mobiledetectlib (2.8.24) Downloading: 100%         
-  - Installing psr/http-message (1.0.1) Downloading: 100%         
-  - Installing zendframework/zend-diactoros (1.3.7) Downloading: 100%         
-  - Installing aura/intl (1.1.1) Downloading: 100%         
-  - Installing cakephp/chronos (1.0.3) Downloading: 100%         
-  - Installing psr/log (1.0.2) Downloading: 100%         
-  - Installing cakephp/cakephp (3.3.11) Downloading: 100%         
-  - Installing symfony/yaml (v3.2.1) Downloading: 100%         
-  - Installing symfony/debug (v3.2.1) Downloading: 100%         
-  - Installing symfony/polyfill-mbstring (v1.3.0) Downloading: 100%         
-  - Installing symfony/console (v3.2.1) Downloading: 100%         
-  - Installing symfony/filesystem (v3.2.1) Downloading: 100%         
-  - Installing symfony/config (v3.2.1) Downloading: 100%         
-  - Installing robmorgan/phinx (v0.6.5) Downloading: 100%         
-  - Installing cakephp/migrations (1.6.6) Downloading: 100%         
-  - Installing jakub-onderka/php-console-color (0.1) Downloading: 100%         
-  - Installing jakub-onderka/php-console-highlighter (v0.3.2) Downloading: 100%         
-  - Installing dnoegel/php-xdg-base-dir (0.1) Downloading: 100%         
-  - Installing nikic/php-parser (v3.0.2) Downloading: 100%         
-  - Installing symfony/var-dumper (v3.2.1) Downloading: 100%         
-  - Installing psy/psysh (v0.8.0) Downloading: 100%         
-  - Installing jdorn/sql-formatter (v1.2.17) Downloading: 100%         
-  - Installing cakephp/debug_kit (3.5.0) Downloading: 100%         
-  - Installing cakephp/bake (1.2.10) Downloading: 100%         
+  - Installing aura/installer-default (1.0.0) Downloading: 100%
+  - Installing cakephp/plugin-installer (0.0.15) Downloading: 100%
+  - Installing mobiledetect/mobiledetectlib (2.8.24) Downloading: 100%
+  - Installing psr/http-message (1.0.1) Downloading: 100%
+  - Installing zendframework/zend-diactoros (1.3.7) Downloading: 100%
+  - Installing aura/intl (1.1.1) Downloading: 100%
+  - Installing cakephp/chronos (1.0.3) Downloading: 100%
+  - Installing psr/log (1.0.2) Downloading: 100%
+  - Installing cakephp/cakephp (3.3.11) Downloading: 100%
+  - Installing symfony/yaml (v3.2.1) Downloading: 100%
+  - Installing symfony/debug (v3.2.1) Downloading: 100%
+  - Installing symfony/polyfill-mbstring (v1.3.0) Downloading: 100%
+  - Installing symfony/console (v3.2.1) Downloading: 100%
+  - Installing symfony/filesystem (v3.2.1) Downloading: 100%
+  - Installing symfony/config (v3.2.1) Downloading: 100%
+  - Installing robmorgan/phinx (v0.6.5) Downloading: 100%
+  - Installing cakephp/migrations (1.6.6) Downloading: 100%
+  - Installing jakub-onderka/php-console-color (0.1) Downloading: 100%
+  - Installing jakub-onderka/php-console-highlighter (v0.3.2) Downloading: 100%
+  - Installing dnoegel/php-xdg-base-dir (0.1) Downloading: 100%
+  - Installing nikic/php-parser (v3.0.2) Downloading: 100%
+  - Installing symfony/var-dumper (v3.2.1) Downloading: 100%
+  - Installing psy/psysh (v0.8.0) Downloading: 100%
+  - Installing jdorn/sql-formatter (v1.2.17) Downloading: 100%
+  - Installing cakephp/debug_kit (3.5.0) Downloading: 100%
+  - Installing cakephp/bake (1.2.10) Downloading: 100%
 cakephp/app suggests installing markstory/asset_compress (An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.)
 cakephp/app suggests installing phpunit/phpunit (Allows automated tests to be run without system-wide install.)
 cakephp/app suggests installing cakephp/cakephp-codesniffer (Allows to check the code against the coding standards used in CakePHP.)
@@ -1295,7 +1295,7 @@ config/app.phpの220行あたりのデータベース接続情報を変更
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
             'host' => 'localhost',
-            /** 
+            /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
@@ -1306,7 +1306,7 @@ config/app.phpの220行あたりのデータベース接続情報を変更
             'database' => 'myapp',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
-            'flags' => [], 
+            'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
 </code></pre>
@@ -1891,10 +1891,10 @@ tweet,create_twitter_oauthあたりのメソッドは、
 namespace App\Controller;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-class TweetController extends AppController 
-{ 
-　　function postTweet(){ 
-　　　// Hello Worldと呟く 
+class TweetController extends AppController
+{
+　　function postTweet(){
+　　　// Hello Worldと呟く
 　　　$this-&gt;tweet(""Hello World!!!!!"");&lt;
  　}
  　　
@@ -3467,7 +3467,7 @@ upstream [任意のアプリ名] {
 
 server {
   listen 80;
-  server_name localhost; 
+  server_name localhost;
 
   keepalive_timeout 5;
 
@@ -3949,7 +3949,7 @@ npm はnode.jsパッケージ管理ツールですので、
 インストールも完了したので、
 早速動かしてみましょう。
 <pre><code class=""language-bash"">mkdir sample
-npm init -y 
+npm init -y
 </code></pre>
 これをすると下のようなpackage.jsonファイルが出来上がります。
 デフォルトだと下記のようにindex.jsが起動時に
@@ -6314,7 +6314,7 @@ nonce（ナンス）は妥当なハッシュを見つけるたみに使われる
 <pre><code>let nonce = 0;
 let hash;
 let input;
-while(!isValidHashDifficulty(hash)) {     
+while(!isValidHashDifficulty(hash)) {
   nonce = nonce + 1;
   input = index + previousHash + timestamp + data + nonce;
   hash = CryptoJS.SHA256(input)
@@ -6758,10 +6758,10 @@ Ajaxのリクエスト　→ 通常通り
 のようにするのが有効です。
 <pre><code class=""language-ruby"">class ExamplesController &lt; ApplicationController
 
-  def index 
+  def index
       unless request.xhr?
          redirect_to [ 元のページ　]
-      end 
+      end
   end
 end
 
@@ -6864,9 +6864,9 @@ Plugin Name: My Plugin
 一覧にもヘッダに書いた情報が表示されます。
 <pre><code class=""language-php"">&lt;?php
 /*
-Plugin Name: My Plugin 
-Plugin URI: https://ver-1-0.net/2017/11/06/wordpressプラグイン作り方。プラグイン開発の始め方/  
-Description: tutorial plugin to learn how we develop plugins. 
+Plugin Name: My Plugin
+Plugin URI: https://ver-1-0.net/2017/11/06/wordpressプラグイン作り方。プラグイン開発の始め方/
+Description: tutorial plugin to learn how we develop plugins.
 Version: 0.1
 Author: version1
 Author URI: https://ver-1-0.net
@@ -6893,9 +6893,9 @@ License: GPL2
 先ほどのファイルを
 <pre><code class=""language-php"">&lt;?php
 /*
-Plugin Name: My Plugin 
-Plugin URI: https://ver-1-0.net/2017/11/06/wordpressプラグイン作り方。プラグイン開発の始め方/  
-Description: tutorial plugin to learn how we develop plugins. 
+Plugin Name: My Plugin
+Plugin URI: https://ver-1-0.net/2017/11/06/wordpressプラグイン作り方。プラグイン開発の始め方/
+Description: tutorial plugin to learn how we develop plugins.
 Version: 0.1
 Author: version1
 Author URI: https://ver-1-0.net
@@ -6904,7 +6904,7 @@ License: GPL2
 
 function HelloWorld(){
   echo ""Hello World"";
-} 
+}
 </code></pre>
 &nbsp;
 
@@ -6974,7 +6974,7 @@ SPAなどでは問答無用でAPIで初期状態も含めてデータを取得�
 &nbsp;
 
 (例)
-<pre><code class=""language-markup"">&lt;div data-react-class=""Settings"" 
+<pre><code class=""language-markup"">&lt;div data-react-class=""Settings""
 data-react-props='{""settings"":[{""id"":72,""user_id"":1,
 ""space_id"":""space-a"",
 ""api_key"":""hogehoge""},' &gt;</code></pre>
@@ -7999,7 +7999,7 @@ view ファイルで
 
 config/app.phpのlocaleになります。
 
-<pre><code class=""language-php"">    
+<pre><code class=""language-php"">
 /*
 |--------------------------------------------------------------------------
 | Application Locale Configuration
@@ -8477,7 +8477,7 @@ gitで公開しているので、
 
 &nbsp;
 <pre><code class=""language-groovy"">version '1.0-SNAPSHOT'
- 
+
 buildscript {
     ext {
         kotlinVersion = '1.0.2'
@@ -8489,20 +8489,20 @@ buildscript {
         classpath(""org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"")
     }
 }
- 
+
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
 mainClassName = ""samples.HelloWorldKt""
 
- 
+
 repositories {
     mavenCentral()
     maven {
         url('https://dl.bintray.com/kotlin/exposed/')
     }
 }
- 
+
 dependencies {
     compile ""org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}""
     compile 'org.jetbrains.exposed:exposed:0.7.6'
@@ -8644,7 +8644,7 @@ sdkmanを使うとHelloWorldまでは、10分くらいでできてしまいま�
 できたjarの中を見てみると
 kotlin/~ というKotelinランタイムのクラスファイルが格納されている。
 <pre><code class=""language-bash"">
-jar -tvf hello.jar 
+jar -tvf hello.jar
     76 Tue Jan 03 11:06:36 JST 2017 META-INF/MANIFEST.MF
    953 Tue Jan 03 11:06:36 JST 2017 HelloKt.class
     29 Tue Jan 03 11:06:36 JST 2017 META-INF/main.kotlin_module
@@ -8657,7 +8657,7 @@ jar -tvf hello.jar
 </code></pre>
 これをjarに含めたくない場合は-include-runtimeのオプションを外してコンパイルする。
 <pre><code class=""language-bash"">kotlinc hello.kt -d hello.jar
-jar tvf hello.jar 
+jar tvf hello.jar
     76 Tue Jan 03 11:21:24 JST 2017 META-INF/MANIFEST.MF
    953 Tue Jan 03 11:21:24 JST 2017 HelloKt.class
     29 Tue Jan 03 11:21:24 JST 2017 META-INF/main.kotlin_module
@@ -10179,8 +10179,8 @@ Laravel5.4のアプリ作成
 上でアプリが作成できたら、できたファイル群をみてみると。
 以下のようになります。
 <pre><code class=""language-bash"">$cd my-app/ &amp;&amp; ls -1
-app            
-artisan        
+app
+artisan
 bootstrap
 composer.json
 composer.lock
@@ -10831,8 +10831,8 @@ APIのルーティング設定。
 routes/api.php
 <pre><code class=""language-php"">
 &lt;?php use Illuminate\Http\Request;
- use App\Models\Currency; 
-use GuzzleHttp\Client; 
+ use App\Models\Currency;
+use GuzzleHttp\Client;
 Route::group(['middleware' =&gt; 'api'], function() {
   Route::get('currencies',  function() {
     $obj = new Currency();
@@ -11306,27 +11306,27 @@ IDや要素セレクタを避け、クラスセレクタのみを利用。モジ
 また、サブクラスのモジュールを定義する際に場所による制約をスタイルするのは避ける必要があります。
 
 これはあらかじめデフォルトのボタンをスタイルした後に、サイドバーに少しスタイルの違うボタンを設置する場合に、
-<pre><code class=""language-css"">.pod { 
-    width: 100%; 
+<pre><code class=""language-css"">.pod {
+    width: 100%;
 }
-.pod input[type=text] { 
-    width: 50%; 
+.pod input[type=text] {
+    width: 50%;
 }
-#sidebar .pod input[type=text] { 
-    width: 100%; 
+#sidebar .pod input[type=text] {
+    width: 100%;
 }
 </code></pre>
 &nbsp;
 
 のようにサイドバー内のボタンとして指定するのではなく、
-<pre><code class=""language-css"">.pod { 
-    width: 100%; 
-} 
-.pod input[type=text] { 
-    width: 50%; 
+<pre><code class=""language-css"">.pod {
+    width: 100%;
 }
-.pod-constrained input[type=text] { 
-    width: 100%; 
+.pod input[type=text] {
+    width: 50%;
+}
+.pod-constrained input[type=text] {
+    width: 100%;
 }
 
 </code></pre>
@@ -11579,7 +11579,7 @@ gem install bundller
 
 
 <h2>③railsアプリケーションの作成・動作確認</h2>
-<pre><code class=""language-bash"">rails new myapp 
+<pre><code class=""language-bash"">rails new myapp
 cd myapp
 rails s
 </code></pre>
@@ -11591,9 +11591,9 @@ rails s
 <<対処法>>
 nodejsをインストールしてアプリケーションを作り直す
 <pre><code class=""language-bash"">sudo apt-get install
-rails new myapp 
+rails new myapp
 cd myapp
-rails s -b 0.0.0.0 
+rails s -b 0.0.0.0
 # rails s　だけであげるとhttp://localhost:3000でサーバが起動するため
 # ホストOSから接続できない。IPアドレスで指定する。
 </code></pre>
@@ -11656,7 +11656,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: Warning: Authentication failure. Retrying...
     default: Warning: Authentication failure. Retrying...
     default: Warning: Remote connection disconnect. Retrying...
-    default: 
+    default:
     default: Inserting generated public key within guest...
     default: Removing insecure key from the guest if it's present...
     default: Key inserted! Disconnecting and reconnecting using new SSH key...
@@ -11668,7 +11668,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: shared folder errors, please make sure the guest additions within the
     default: virtual machine match the version of VirtualBox you have installed on
     default: your host and reload your VM.
-    default: 
+    default:
     default: Guest Additions Version: 5.0.24
     default: VirtualBox Version: 5.1
 ==&gt; default: Mounting shared folders...
@@ -11744,7 +11744,7 @@ Host default
 <strong>/usr/bin/python</strong>が
 ないと言われているのでvagrant にSSHで接続してシンボリックリンク作成。
 <pre><code class=""language-bash"">vagrant ssh
-sudo ln -s /usr/bin/python3 /usr/bin/python 
+sudo ln -s /usr/bin/python3 /usr/bin/python
 </code></pre>
 &nbsp;
 
@@ -12003,13 +12003,13 @@ myGenesis.json
 作成したアカウントを確認します。
 <pre><code class=""language-go"">&gt; personal.newAccount(""password"")
 ""0x73c935b7ade47b3a3efa29769e4db1cc91aa2e88""
-&gt; 
-&gt; 
-&gt; 
+&gt;
+&gt;
+&gt;
 &gt; personal.newAccount(""drowssap"")
 ""0x0c792c39d206ae2d2a0df7b7db7d365c3067a137""
-&gt; 
-&gt; 
+&gt;
+&gt;
 &gt; eth.accounts
 [""0x73c935b7ade47b3a3efa29769e4db1cc91aa2e88"", ""0x0c792c39d206ae2d2a0df7b7db7d365c3067a137""]</code></pre>
 &nbsp;
@@ -12071,11 +12071,11 @@ true
 はじめにアカウントの残高を確認します。
 <pre><code class=""language-go"">&gt; eth.getBalance(eth.accounts[0])
 195000000000000000000
-&gt; 
-&gt; 
+&gt;
+&gt;
 &gt; eth.getBalance(eth.accounts[1])
 0
-&gt; 
+&gt;
 </code></pre>
 &nbsp;
 
@@ -12093,9 +12093,9 @@ account2には0ETHであることがわかります。
 account1からaccount2に100ETHを送ってみます。
 <pre><code class=""language-go"">&gt; eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(100,""ether"") })
 ""0xd404f7d67c0df7c8388db84efe9f1523f6134b18b5b615121ee236281e5db9d8""
-&gt; 
-&gt; 
-&gt; 
+&gt;
+&gt;
+&gt;
 &gt; eth,getTransaction(""0xd404f7d67c0df7c8388db84efe9f1523f6134b18b5b615121ee236281e5db9d8"")
 ReferenceError: 'getTransaction' is not defined
     at &lt;anonymous&gt;:1:5
@@ -12127,9 +12127,9 @@ ReferenceError: 'getTransaction' is not defined
 残高が移動していないように見えます。
 <pre><code class=""language-go"">&gt; eth.getBalance(eth.accounts[0])
 195000000000000000000
-&gt; 
-&gt; 
-&gt; 
+&gt;
+&gt;
+&gt;
 &gt; eth.accounts[1]
 ""0x0c792c39d206ae2d2a0df7b7db7d365c3067a137""
 &gt; eth.getBalance(eth.accounts[1])
@@ -12144,11 +12144,11 @@ ReferenceError: 'getTransaction' is not defined
 反映されていることが確認できます。
 <pre><code class=""language-go"">&gt; miner.start(1)
 null
-&gt; 
+&gt;
 &gt; miner.stop()
 true
-&gt; 
-&gt; 
+&gt;
+&gt;
 &gt; eth.getBalance(eth.accounts[1])
 100000000000000000000
 &gt; web3.fromWei(eth.getBalance(eth.accounts[1]),'ether')
@@ -12547,7 +12547,7 @@ pubnub.subscribe({
 <pre><code class=""language-bash"">npm install pubnub --save-dev
 </code></pre>
 &nbsp;
-<pre><code class=""language-bash"">node index.js 
+<pre><code class=""language-bash"">node index.js
 </code></pre>
 で実行。
 
@@ -12559,7 +12559,7 @@ pubnub.subscribe({
 
 こう言った感じで、価格を表示し続ける
 サーバの完成です。
-<pre><code class=""language-bash"">$node index.js 
+<pre><code class=""language-bash"">$node index.js
 lightning_ticker_BTC_JPY { product_code: 'BTC_JPY',
   timestamp: '2017-04-28T14:10:50.8892719Z',
   tick_id: 77957,
@@ -13220,10 +13220,10 @@ has_many :blog_comments, through: :comments :source =&gt; :commentable,:source_t
 &nbsp;
 
 &nbsp;
-<pre><code class=""language-ruby"">class User &lt; ActiveRecord::Base 
-  has_many :blogs 
-  has_many :posts 
-  has_many :comments 
+<pre><code class=""language-ruby"">class User &lt; ActiveRecord::Base
+  has_many :blogs
+  has_many :posts
+  has_many :comments
   has_many :post_comments, through: :comments, :source =&gt; :commentable,:source_type =&gt; 'Post'
   has_many :blog_comments, through: :comments :source =&gt; :commentable,:source_type =&gt; 'Blog'
 end
@@ -13517,7 +13517,7 @@ db/seeds.rb
     name: ""user_#{idx + 1}"",
     password: 'password',
     email: ""user_#{idx + 1}@example.com"",
-    age: 25 
+    age: 25
   )
 end
 </code></pre>
@@ -13549,7 +13549,7 @@ User.delete_all
     name: ""user_#{idx + 1}"",
     password: 'password',
     email: ""user_#{idx + 1}@example.com"",
-    age: 25 
+    age: 25
   )
 end
 </code></pre>
@@ -13952,7 +13952,7 @@ Gemfileを作成します。
 
 できたGemfileを編集して、
 railsの行を追加してあげます。
-<pre><code class=""language-bash"">$cat Gemfile 
+<pre><code class=""language-bash"">$cat Gemfile
 # frozen_string_literal: true
 
 source ""https://rubygems.org""
@@ -14350,7 +14350,7 @@ class TabBarComponent extends React.PureComponent {
 
   constructor(props) {
     super(props)
-    
+
      this.state = {
       isVisible: true
     }
@@ -14359,7 +14359,7 @@ class TabBarComponent extends React.PureComponent {
   }
 
   componentWillMount() {
-    this.keyboardEventLisetners = [ 
+    this.keyboardEventLisetners = [
     Keyboard.addListener('keyboardDidShow', this.keyboardWillShow)
  Keyboard.addListener('keyboardDidHide', this.keyboardWillHide)
  ]
@@ -14383,9 +14383,9 @@ class TabBarComponent extends React.PureComponent {
 
   render() {
     if( !this.state.isVisible ) {
-      return 
+      return
     }
-    return 
+    return
   }
 }
 
@@ -15001,10 +15001,10 @@ mapの方が短いのでmapを使いがちです。
 下の例では仮想通貨の頭文字の配列の中で、'B'という文字列が
 含まれるかを判断して返しています。
 <pre><code class=""language-ruby"">2.4.1 :003 &gt;   coins = [ 'BTC', 'ETH', 'XRP', 'NEM']
- =&gt; [""BTC"", ""ETH"", ""XRP"", ""NEM""] 
-2.4.1 :004 &gt; 
+ =&gt; [""BTC"", ""ETH"", ""XRP"", ""NEM""]
+2.4.1 :004 &gt;
 2.4.1 :004 &gt;   coins.map{ |coin| coin.include?('B')}
- =&gt; [true, false, false, false] 
+ =&gt; [true, false, false, false]
 </code></pre>
 &nbsp;
 
@@ -15015,11 +15015,11 @@ keyを取り出したり、valueを取り出すにはこうします。
 
 &nbsp;
 <pre><code class=""language-ruby"">2.4.1 :027 &gt;   coins_hash = { btc: 'Bitcoin', eth: 'Ethereum', xrp: 'Ripple', nem: 'XEM' }
- =&gt; {:btc=&gt;""Bitcoin"", :eth=&gt;""Ethereum"", :xrp=&gt;""Ripple"", :nem=&gt;""XEM""} 
+ =&gt; {:btc=&gt;""Bitcoin"", :eth=&gt;""Ethereum"", :xrp=&gt;""Ripple"", :nem=&gt;""XEM""}
 
 </code></pre>
 <pre><code class=""language-ruby"">2.4.1 :032 &gt;   coins_hash.map{ | key, value | value }
- =&gt; [""Bitcoin"", ""Ethereum"", ""Ripple"", ""XEM""] 
+ =&gt; [""Bitcoin"", ""Ethereum"", ""Ripple"", ""XEM""]
 2.4.1 :032 &gt;   coins_hash.map{ | key, value | key }
  =&gt;[:btc, :eth, :xrp, :nem]
 
@@ -15039,7 +15039,7 @@ detectというメソッドもありfindの別名になります。
 
 &nbsp;
 <pre><code class=""language-ruby"">2.4.1 :090 &gt;   coins.find{ |c| c.include?('X') }
- =&gt; ""XRP"" 
+ =&gt; ""XRP""
 </code></pre>
 &nbsp;
 
@@ -15065,7 +15065,7 @@ findメソッドは最初に一致したものを返却してくれますが、s
 
 &nbsp;
 <pre><code class=""language-ruby"">2.4.1 :095 &gt;   coins.select{ |c| c.include?('T') }
- =&gt; [""BTC"", ""ETH""] 
+ =&gt; [""BTC"", ""ETH""]
 </code></pre>
 &nbsp;
 
@@ -15073,7 +15073,7 @@ findメソッドは最初に一致したものを返却してくれますが、s
 
 &nbsp;
 <pre><code class=""language-ruby"">2.4.1 :117 &gt; coins_hash.select{ |coin| coin.to_s.include?('t') }
- =&gt; {:btc=&gt;""Bitcoin"", :eth=&gt;""Ethereum""} 
+ =&gt; {:btc=&gt;""Bitcoin"", :eth=&gt;""Ethereum""}
 </code></pre>
 &nbsp;
 
@@ -15094,7 +15094,7 @@ rejectはselectの反対で偽のものを抽出して配列にしてくれま�
 
 &nbsp;
 <pre><code class=""language-ruby"">2.4.1 :121 &gt; coins_hash.reject{ |coin| coin.to_s.include?('t') }
- =&gt; {:xrp=&gt;""Ripple"", :nem=&gt;""XEM""} 
+ =&gt; {:xrp=&gt;""Ripple"", :nem=&gt;""XEM""}
 </code></pre>"
 "82","2017-01-24 23:00:46","2018-08-26 12:41:41","【Ruby】Rubyのループ ( while, times ,for , each , step, upto などなど)","ruby-loop","http://ver-1-0.net/wp-content/uploads/2017/01/5ntkpxqt54y-sai-kiran-anagani.jpg","engineering::::for-beginner","Rubyのループって便利ですよね!!
 
@@ -15147,7 +15147,7 @@ end
  ""パ・リーグ"" =&gt; [ ""ソフトバンク"", ""ロッテ"", ""日ハム"" , ""オリックス"" , ""西武"",""楽天"" ]
  }
 h.each do | key , val |
-  p key 
+  p key
   p val
 end
 </code></pre>
@@ -15196,7 +15196,7 @@ end
 first = Time.parse(""2017/1/1 00:00:00"")
 last = Time.parse(""2017/1/1  23:59:59"")
 
-(first.to_i..last.to_i).step( 30 * 60  ) do | t | 
+(first.to_i..last.to_i).step( 30 * 60  ) do | t |
           p Time.at(t)
 end
 </code></pre>
@@ -15223,13 +15223,13 @@ Rubyでデザインパターン今回はStrategyパターンです。
 <pre><code class=""language-ruby"">class Report
   attr_reader :title, :text
   attr_accessor :formatter
-  
+
   def initialize(formatter)
     @title = 'Monthly Report'
     @text  = ['Things are going', 'really, really well.']
     @formatter = formatter
   end
-  
+
   def output_report()
     @formatter.output_report(self)
   end
@@ -15280,13 +15280,13 @@ end</code></pre>
 <pre><code class=""language-ruby"">class Report
   attr_reader :title, :text
   attr_accessor :formatter
-  
+
   def initialize(formatter)
     @title = 'Monthly Report'
     @text  = ['Things are going', 'really, really well.']
     @formatter = formatter
   end
-  
+
   def output_report()
     @formatter.output_report(self)
   end
@@ -15344,7 +15344,7 @@ callを利用します。
     @text = ['Things are going', 'really, really well.']
     @formatter = formatter
   end
-  
+
   def output_report
     @formatter.call(self)
   end
@@ -15396,8 +15396,8 @@ class Report
     @title = 'Monthly Report'
     @text = ['THings are going', 'really, really well']
   end
-  
-  def output_report 
+
+  def output_report
     output_start
     output_head
     output_body_start
@@ -15405,27 +15405,27 @@ class Report
     output_body_end
     oputput_end
   end
-  
+
   def output_body
     @text.each do |line|
       output_line(line)
     end
   end
-  
+
   def output_start
   end
-  
+
   def output_head
     output_line(@title)
   end
-  
+
   def output_line(line)
     raise  'Called abstract method: output_line'
   end
-  
+
   def output_body_end
   end
-  
+
   def output_end
   end
 end
@@ -15461,7 +15461,7 @@ end
     puts('   &lt;/body&gt;')
     puts('&lt;/html&gt;')
   end
-  
+
 end</code></pre>
 HTMLを出力するだけなので、このよな実装をしたとします。しかし、後からテキスト形式でも出してほしいといったときにこまってしまいます。
 
@@ -15471,7 +15471,7 @@ HTMLを出力するだけなので、このよな実装をしたとします。�
     @title = 'Monthly Report'
     @text = ['Things are going', 'really, really well']
   end
-    
+
   def output_report(format)
     if format == :plain
       puts('*** #{@title{} ***')
@@ -15486,7 +15486,7 @@ HTMLを出力するだけなので、このよな実装をしたとします。�
     end
 
     @text.eah do |line|
-    if format == :plain  
+    if format == :plain
         puts('    &lt;p&gt;#{line}&lt;/p&gt;')
       else
         puts('    &lt;p&gt;#{line}&lt;/p&gt;')
@@ -15509,41 +15509,41 @@ end</code></pre>
   def output_start
     puts('&lt;html&gt;')
   end
-  
+
   def output_head
     puts('  &lt;head&gt;')
     puts(""    &lt;title&gt;#{@title}&lt;/title&gt;"")
     puts('  &lt;/head&gt;')
   end
-  
+
   def output_body_start
     puts('&lt;body&gt;')
   end
-  
+
   def output_line(line)
     puts(""  &lt;p&gt;#{line}&lt;/p&gt;"")
   end
-  
+
   def output_body_end
     puts('&lt;/body&gt;')
   end
-  
+
   def output_end
     puts('&lt;/html&gt;')
   end
 end</code></pre>
 <strong>TextReport</strong>
 <pre><code class=""language-ruby"">class TextReport &lt; Report
-  
+
   def output_head
     puts(""*** #{@title} ***"")
     puts
   end
-    
+
   def output_line(line)
     puts(line)
   end
-  
+
 end
 </code></pre>
 このようにそれぞれの出力フォーマットをReportクラスのサブクラスとして切り出すことによってすっきりとしたコードになりました。
@@ -17514,7 +17514,7 @@ vagrantのバージョンを標準出力に出力。
 <pre><code class=""language-bash"">$vagrant version
 Installed Version: 1.9.1
 Latest Version: 1.9.2
- 
+
 To upgrade to the latest version, visit the downloads page and
 download and install the latest version of Vagrant from the URL
 below:
@@ -17624,9 +17624,9 @@ OSのスナップショットのようなもの。
 runningなbox2を停止させたい場合は、
 <strong>vagrant halt a8f6bbc</strong>で停止できる。
 <pre><code class=""language-bash"">vagrant global-status
-id       name    provider   state    directory                           
+id       name    provider   state    directory
 -------------------------------------------------------------------------
-4a9f8c4  default virtualbox poweroff /Users/version1/Vagrant/box1             
+4a9f8c4  default virtualbox poweroff /Users/version1/Vagrant/box1
 a8f6bbc  default virtualbox running  /Users/version1/Vagrant/box2
 a08e8e9  default virtualbox running  /Users/version1/Vagrant/box3
 </code></pre>
@@ -17733,7 +17733,7 @@ sudo apt-get install -y libreadline-dev libyaml-dev libxml2-dev libxslt-dev
 sudo apt-get install -y ruby-dev nodejs
 sudo apt-get install -y rbenv
 sudo apt-get install libsqlite3-dev
-# Railsインストール 
+# Railsインストール
 sudo gem install rails
 sudo gem install sqlite3 # SQLITE用にインストール
 sudo gem install therubyracer
@@ -17782,7 +17782,7 @@ Virtual Box とかだと、SSH serverはもともとインストールされて�
 vagrant だとサーバー起動してからsshでつなぐまで
 設定が入りません。
 
-が、 
+が、
 vagrant ssh をrootでつなぎたい別のユーザでつなぎたいなど
 あるかと思います。
 
@@ -17796,7 +17796,7 @@ config.ssh.port = """"
 config.ssh.private_key_path = """"
 </code></pre>
 
-これで 
+これで
 vagrant reload で設定ファイルを読み込んで
 vagrant ssh-config
 すると設定が変わります。
@@ -17857,13 +17857,13 @@ vagrantの稼働状況を確認します。
 
 実行結果はこんな感じ。
 <pre><code class=""language-bash"">$vagrant global-status
-id       name    provider   state    directory                           
+id       name    provider   state    directory
 -------------------------------------------------------------------------
-4445c4b  default virtualbox poweroff /Users/admin/Vagrant/hoge                         
-4a947f0  default virtualbox poweroff /Users/admin/Vagrant/ubu            
+4445c4b  default virtualbox poweroff /Users/admin/Vagrant/hoge
+4a947f0  default virtualbox poweroff /Users/admin/Vagrant/ubu
 5212b05  default virtualbox poweroff /Users/admin/Vagrant/foo
 41ec701  default virtualbox running  /Users/admin/Vagrant/bar
- 
+
 The above shows information about all known Vagrant environments
 on this machine. This data is cached and may not be completely
 up-to-date. To interact with any of the machines, you can go to
@@ -18718,7 +18718,7 @@ webpack.config.jsにも設定を記述します。
       {
         test: /\.css/,
         loaders: [
-          'style-loader', 
+          'style-loader',
           {
             loader: 'css-loader',
             options: {url: false}
@@ -19696,7 +19696,7 @@ ISBNは書籍を識別する一意のコードで「本の題名 ISBN」など�
 @media (min-width: 770px) {
     .cstmreba{display: table;}
     .cstmreba .booklink-image{
-        display: table-cell; 
+        display: table-cell;
         float: left;
         padding: 0 30px;
      }

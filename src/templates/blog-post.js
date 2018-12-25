@@ -8,7 +8,6 @@ import Content, {HTMLContent} from '../components/Content';
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
   helmet,
@@ -16,9 +15,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <article className="post">
+    <section className="section"> {helmet || ''} <article className="post">
         <h1 className="post-title">{title}</h1>
         <PostContent className="post-body" content={content} />
       </article>
@@ -43,7 +40,6 @@ const BlogPost = ({data}) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -74,8 +70,11 @@ export const pageQuery = graphql`
       excerpt(truncate: true, pruneLength: 300)
       frontmatter {
         title
-        thumbnail
-        description
+        thumbnail {
+          childImageSharp {
+            fluid { ...GatsbyImageSharpFluid }
+          }
+        }
         createdAt(formatString: "MMMM DD, YYYY")
         updatedAt(formatString: "MMMM DD, YYYY")
       }

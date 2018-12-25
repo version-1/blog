@@ -2,16 +2,35 @@ const _ = require('lodash');
 const path = require('path');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
-const { routes } = require('./config/constants');
+const {routes} = require('./config/constants');
 
 // Constants
 const PER_PAGE = 18;
+
+const CATEGORY_LIST = [
+  'column',
+  'cryptocurrency-blockchain',
+  'design',
+  'engineering',
+  'for-beginner',
+  'freelance',
+  'rails',
+  'react',
+  'travel',
+];
+
+const validateCategoryList = (node, categories) => {
+  const diff = _.difference(categories, CATEGORY_LIST).length > 0;
+  if (diff.length > 0) {
+    console.err('category not found', diff, node);
+  }
+};
 
 const buildPaginationPages = createPage => (limit = PER_PAGE) => (
   namespace,
   templates,
   totalCounts,
-  context = {}
+  context = {},
 ) => {
   const totalPages = Math.ceil(totalCounts / limit);
   Array.from({length: totalPages}).forEach((dummy, currentPageIndex) => {
@@ -28,7 +47,7 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
         limit,
         skip,
         index: currentPageIndex + 1,
-        totalPages
+        totalPages,
       },
     });
   });
@@ -37,13 +56,12 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
 const createPostShowPage = createPage => posts => {
   posts.forEach(edge => {
     const id = edge.node.id;
+    const {categories, slug, templateKey} = edge.node.frontmatter;
+    validateCategoryList(edge.node, categories);
     createPage({
-      path: edge.node.frontmatter.slug || edge.node.fields.slug,
-      categories: edge.node.frontmatter.categories,
-      component: path.resolve(
-        `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
-      ),
-      // additional data can be passed via context
+      path: slug || edge.node.fields.slug,
+      categories: categories,
+      component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
         id,
       },
@@ -52,13 +70,15 @@ const createPostShowPage = createPage => posts => {
 };
 
 const createPostsIndexPage = createPage => totalCount => {
-  const _path = [routes.root, routes.post].join('/')
+  const _path = [routes.root, routes.post].join('/');
   buildPaginationPages(createPage)()(_path, 'posts/index', totalCount);
 };
 
 const createCategoryShowPage = createPage => category => totalCount => {
-  const _path = [routes.root, routes.category, _.kebabCase(category)].join('/')
-  buildPaginationPages(createPage)()(_path, 'categories', totalCount, { category });
+  const _path = [routes.root, routes.category, _.kebabCase(category)].join('/');
+  buildPaginationPages(createPage)()(_path, 'categories', totalCount, {
+    category,
+  });
 };
 
 const collectCategories = posts => {
@@ -128,10 +148,10 @@ exports.createPages = ({actions, graphql}) => {
     createPostShowPage(createPage)(posts);
     createPostsIndexPage(createPage)(posts.length);
     categories.map(category => {
-      graphql(categoryQuery, { category }).then(result => {
+      graphql(categoryQuery, {category}).then(result => {
         const posts = result.data.allMarkdownRemark.edges;
         createCategoryShowPage(createPage)(category)(posts.length);
-      })
+      });
     });
   });
 };

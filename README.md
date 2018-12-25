@@ -24,8 +24,8 @@ my blog
  - [x] code hilight
  - [x] rss
  - [x] google analytics
+ - [x] rewrite articles' dom to md
  - [ ] image url
- - [ ] rewrite articles' dom to md
  - [ ] shortcode (adsence)
  - [ ] ariticle info(timestamp, category etc..)
  - [ ] AMP(canonical)
@@ -34,7 +34,6 @@ my blog
  - [ ] About Page
  - [ ] popular article
  - [ ] search
- - [ ] check url
 
 
 #### Netlify
