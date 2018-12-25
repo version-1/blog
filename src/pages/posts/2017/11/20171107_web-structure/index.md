@@ -63,7 +63,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">プログラミング初学者はWebサイトの概要図を把握しよう</h2>
@@ -111,7 +111,7 @@ categories:
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">プログラミング初学者は自分の居場所を見失いがち</h2>

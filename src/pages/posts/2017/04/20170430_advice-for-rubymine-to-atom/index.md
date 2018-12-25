@@ -16,7 +16,7 @@ categories:
 
 最近開発のエディタで
 Atomを使うようになりました。
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 
@@ -211,4 +211,4 @@ Atomデフォルトでそれらしき機能は見つかりませんでしので�
 以上!!
 どれもオススメのパッケージです。
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

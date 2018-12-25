@@ -19,7 +19,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2>今週の作業</h2>

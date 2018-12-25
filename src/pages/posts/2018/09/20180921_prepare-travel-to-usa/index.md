@@ -19,7 +19,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2>パスポート</h2>

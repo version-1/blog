@@ -65,7 +65,7 @@ GitPushしたあとにRepositoryで設定を行うと
 例）
 <a href="https://version-1.github.io/imagemap/">https://version-1.github.io/imagemap/</a>
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 

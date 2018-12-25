@@ -22,7 +22,7 @@ Ansible勉強のためインストールします。
 Mac OSXを前提としていますが、
 Mac はpython2系がデフォルトで入っているようなのでまず
 python3のインストールから。
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">①python3インストール</h2>

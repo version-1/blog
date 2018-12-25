@@ -54,7 +54,7 @@ categories:
 です。
 
 &nbsp;
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 &nbsp;
 <h2 class="chapter">同サーバDB内の仮想通貨の一覧を取得</h2>
 &nbsp;

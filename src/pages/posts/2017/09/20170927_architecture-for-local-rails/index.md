@@ -22,7 +22,7 @@ categories:
 
 &nbsp;
 
-[adsense]
+<div class="adsense"></div>
 
 &nbsp;
 
@@ -103,4 +103,4 @@ Vagrantイメージを作成して起動すると、
 
 以上です！！
 
-[adsense]
+<div class="adsense"></div>

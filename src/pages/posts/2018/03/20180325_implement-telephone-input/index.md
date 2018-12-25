@@ -23,7 +23,7 @@ ReactNativeで入力フォームを使う時って、TextInputを使いますよ
 
 ぜひ、コピペして使ってみてください。
 
-[after_intro]
+<div class="after-intro"></div>
 <h2>TelephoneInputを実装</h2>
 ポイントは、insertDelimiterメソッドですね。<strong>入力に対してつねに所定の位置にハイフンが挿入される</strong>ように作っています。
 

@@ -24,7 +24,7 @@ categories:
 そんな方に向けて画像付きで解説します。
 
 &nbsp;
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 &nbsp;
 <h2 class="chapter">Slackの始め方は簡単</h2>
 &nbsp;
@@ -183,4 +183,4 @@ Standard Planでは、ユーザ一人に対して月850円程度ですね。
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

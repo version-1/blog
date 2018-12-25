@@ -49,7 +49,7 @@ cssについて、
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 

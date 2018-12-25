@@ -29,7 +29,7 @@ has_many :blog_comments, through: :comments :source => :commentable,:source_type
 ```
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2>図やコードを交えて解説</h2>

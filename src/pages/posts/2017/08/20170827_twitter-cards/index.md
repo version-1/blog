@@ -28,7 +28,7 @@ categories:
 &nbsp;
 
 <img class="post-image" src="./スクリーンショット-2017-08-27-15.46.57.png" alt="スクリーンショット-2017-08-27-15.46.57.png"/>
-[after_intro]
+<div class="after-intro"></div>
 <h2 class="chapter">Twitter Cardsというのをやるとどうやら表示されるらしい</h2>
 &nbsp;
 

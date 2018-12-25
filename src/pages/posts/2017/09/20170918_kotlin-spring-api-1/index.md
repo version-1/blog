@@ -26,7 +26,7 @@ categories:
 +CRUD全てをAPIからできるようにしたかったけど
 終わらなかった。。)
 
-[after_intro]
+<div class="after-intro"></div>
 
 タイトルもその①としたように、
 今回はAPIで本のリストと、ID指定した本一件を
@@ -210,4 +210,4 @@ http://localhost:8080/api/books/1にアクセスすると
 参照だけだと結構さっくり終わりますね。
 次回は作成・更新・削除の部分を公開します。
 
-[adsense]
+<div class="adsense"></div>

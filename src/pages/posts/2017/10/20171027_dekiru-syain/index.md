@@ -38,7 +38,7 @@ categories:
 今回はこちらの書籍について
 紹介します。
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 <h2 class="chapter">「できる社員」への違和感の正体</h2>
@@ -206,4 +206,4 @@ categories:
 <div class="cstmreba"><div class="booklink-box"><div class="booklink-image"><a href="http://www.amazon.co.jp/exec/obidos/asin/4569829740/llg01-22/" target="_blank" rel="nofollow" ><img src="https://images-fe.ssl-images-amazon.com/images/I/510WwA0rhEL._SL320_.jpg" style="border: none;" /></a></div><div class="booklink-info"><div class="booklink-name"><a href="http://www.amazon.co.jp/exec/obidos/asin/4569829740/llg01-22/" target="_blank" rel="nofollow" >日本企業の組織風土改革 (PHPビジネス新書)</a><div class="booklink-powered-date">posted with <a href="https://yomereba.com" rel="nofollow" target="_blank">ヨメレバ</a></div></div><div class="booklink-detail">柴田 昌治 PHP研究所 2015-12-19    </div><div class="booklink-link2"><div class="shoplinkamazon"><a href="http://www.amazon.co.jp/exec/obidos/asin/4569829740/llg01-22/" target="_blank" rel="nofollow" >Amazonで購入</a></div><div class="shoplinkkindle"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B019OQ2HR4/llg01-22/" target="_blank" rel="nofollow" >Kindleで購入</a></div><div class="shoplinkrakuten"><a href="https://hb.afl.rakuten.co.jp/hgc/163854b7.d97e8d5b.163854b8.3c41ae34/?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F13523236%2F%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" rel="nofollow" >楽天ブックスで購入</a></div><div class="shoplinkseven"><a href="https://px.a8.net/svt/ejp?a8mat=2TXHHI+FDP7OQ+2N1Y+BW8O2&a8ejpredirect=http%3A%2F%2F7af-ent.omni7.jp%2Frelay%2Faffiliate%2FentranceProcess.do%3Furl%3Dhttp%253A%252F%252F7net.omni7.jp%252Fsearch%252F%253FsearchKeywordFlg%253D1%2526keyword%253D4-56-982974-6%252520%25257C%2525204-569-82974-6%252520%25257C%2525204-5698-2974-6%252520%25257C%2525204-56982-974-6%252520%25257C%2525204-569829-74-6%252520%25257C%2525204-5698297-4-6" target="_blank" rel="nofollow" >7netで購入</a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=2TXHHI+FDP7OQ+2N1Y+BW8O2" alt=""></div>            	  	  	  	</div></div><div class="booklink-footer"></div></div></div>
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

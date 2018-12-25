@@ -26,7 +26,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">〜クリッカブルマップ〜座標でアクションを分ける、難しそう・・・</h2>
@@ -47,7 +47,7 @@ categories:
 でも、意外とそうでもないみたいです。
 
 &nbsp;
-[mid_article]
+<div class="mid-article"></div>
 &nbsp;
 
 文章でいうと

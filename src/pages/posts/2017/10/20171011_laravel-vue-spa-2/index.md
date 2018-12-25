@@ -36,7 +36,7 @@ categories:
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 
@@ -63,7 +63,7 @@ package.jsonに依存性を追加 -> npm installです。
   }
 
 ```
-[adsense]
+<div class="adsense"></div>
 <h2 class="chapter">クライアントでのルーティングの設定</h2>
 &nbsp;
 
@@ -272,7 +272,7 @@ Vueで作成したSPAのサクサクした使用感がわかってくると
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 

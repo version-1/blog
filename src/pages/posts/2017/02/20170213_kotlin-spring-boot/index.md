@@ -30,7 +30,7 @@ a fledgling
 駆け出しが駆け出してみる
 Kotlin+SpringBootでWebアプリを作ってみる その1
 <a href="http://kissybnts.hatenablog.com/entry/2016/03/29/002331">http://kissybnts.hatenablog.com/entry/2016/03/29/002331</a>
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">構成</h2>

@@ -22,7 +22,7 @@ categories:
 <strong>normalize.css</strong>を
 読み込むというところを第一目標にして書いていきます。
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 <h2 class="chapter">早速環境準備 - WebPack,CSSLoarder,StyleLoaderをインストール</h2>
@@ -132,4 +132,4 @@ publick/index.html
 &nbsp;
 &nbsp;
 &nbsp;
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

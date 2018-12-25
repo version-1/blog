@@ -43,7 +43,7 @@ Markdownエディタを作って月15万円稼ぐまでにやったこと —�
 まだ、無料使用期間中ではありますが、
 私のお気に入りの<strong>Inkdrop</strong>の良さをまとめてみました。
 
-[after_intro]
+<div class="after-intro"></div>
 <h2 class="chapter">Coolなポイント その1 洗練されたUI</h2>
 &nbsp;
 
@@ -92,7 +92,7 @@ Mediumのポストをみる限り、
 勝手ながらついつい応援したくなってしまい、
 今後の課金は間違いないかと思います。
 
-[mid_article]
+<div class="mid-article"></div>
 <h2 class="chapter">Coolなポイント その3 端末間連携</h2>
 &nbsp;
 

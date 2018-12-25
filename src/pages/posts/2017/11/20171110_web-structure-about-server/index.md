@@ -38,7 +38,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">サーバーとは</h2>

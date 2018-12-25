@@ -39,7 +39,7 @@ Awesome!と思ったので和訳します。
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 <h2 class="chapter">海外の記事 - （訳）Sean HHow does blockchain really work? I built an app to show you.</h2>

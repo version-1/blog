@@ -31,7 +31,7 @@ WordPressプラグインは簡単に作れます。
 以下では、
 自作プラグインの入り口の部分だけ紹介していきます。
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 
@@ -106,7 +106,7 @@ License: GPL2
 ```
 <img class="post-image" src="./Screen-Shot-2017-11-06-at-10.12.29.png" alt="Screen-Shot-2017-11-06-at-10.12.29.png"/>
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 

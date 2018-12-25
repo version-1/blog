@@ -52,7 +52,7 @@ Chrome, Safari, IEの順で利用されているようですね。
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">ブラウザはHTMLを解析して、人が読みやすい形に表示するツール</h2>

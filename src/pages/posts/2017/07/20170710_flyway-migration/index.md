@@ -30,7 +30,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 
@@ -108,7 +108,7 @@ build.gradleに接続情報を持たせてしまっています。
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 

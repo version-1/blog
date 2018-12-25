@@ -21,7 +21,7 @@ categories:
 個人で利用するのもおすすめなので記事にしてみました。
 
 &nbsp;
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 &nbsp;
 <h2 class="chapter">Slackって？</h2>
 &nbsp;

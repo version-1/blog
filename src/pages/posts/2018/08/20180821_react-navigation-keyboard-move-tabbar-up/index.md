@@ -16,7 +16,7 @@ ReactNativeで開発をする際ルーティングの為にReactNavigationを使
 
 そのReactNavigationのタブバーを何も気にせず使っているとキーボードが出てきたときに（Android限定）タブバーも一緒に押し上げて残念な感じになってしまうというのがあったので、その解決方法を記しておきます。
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2>KeyBoardのイベントを検知して、TabBarを非表示にする。</h2>

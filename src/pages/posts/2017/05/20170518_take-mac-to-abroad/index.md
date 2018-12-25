@@ -22,7 +22,7 @@ Macは海外で使えるのでしょうか？
 <h1>使えます！</h1>
 はい、
 以上。
-[adsense]
+<div class="adsense"></div>
 
 &nbsp;
 
@@ -106,4 +106,4 @@ iPhoneも付属している充電器が
 
 以上、さすがMacで
 海外どこでも変圧器など利用せずに使用できるようです！
-[adsense]
+<div class="adsense"></div>

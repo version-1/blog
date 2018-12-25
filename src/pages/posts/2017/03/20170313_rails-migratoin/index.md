@@ -25,7 +25,7 @@ DBの変更などをとりくむことができます。
 
 
 &nbsp;
-[after_intro]
+<div class="after-intro"></div>
 &nbsp;
 <h2 class="chapter">Migration Codeの実行</h2>
 

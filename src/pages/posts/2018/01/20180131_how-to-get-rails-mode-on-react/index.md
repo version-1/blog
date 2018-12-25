@@ -22,7 +22,7 @@ SPAなどでは問答無用でAPIで初期状態も含めてデータを取得�
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 <h2>JavaScriptでDOMをパース</h2>
 &nbsp;
 

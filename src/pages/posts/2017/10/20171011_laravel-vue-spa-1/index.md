@@ -19,7 +19,7 @@ LaravelはVue.jsを標準でサポートしており、
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 
@@ -349,4 +349,4 @@ resources/assets/js/component/Example.vue
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

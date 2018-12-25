@@ -27,7 +27,7 @@ CapkePHP3からtweetする方法を紹介します。
 <h4>③Controllerからtweet</h4>
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 

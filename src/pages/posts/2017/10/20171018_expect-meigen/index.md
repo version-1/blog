@@ -14,7 +14,7 @@ categories:
 特に意味はないのですが、
 備忘も兼ねて自分の好きな名言集をまとめておきます。
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 
@@ -58,7 +58,7 @@ Be water, my friend.</blockquote>
 未来を完全に予測することはできないと思いますが、
 近い将来例えば1時間後とか、3時間後とか明日とか1週間後とか、1年後は
 自分の行動で変えられると信じています。
-[adsense]
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">「素晴らしい選手ほど
@@ -149,4 +149,4 @@ Someone:「これやっといてねお願い!」
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

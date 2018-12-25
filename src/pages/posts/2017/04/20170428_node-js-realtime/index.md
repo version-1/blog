@@ -36,7 +36,7 @@ APIの情報はこちらからみれます。
 <a href="https://lightning.bitflyer.jp/docs?lang=ja#realtime-api">こちら</a>にも
 記載されたコードです。
 
-[after_intro]
+<div class="after-intro"></div>
 
 これで1ティックごとに価格を取得できます。
 ```javascript

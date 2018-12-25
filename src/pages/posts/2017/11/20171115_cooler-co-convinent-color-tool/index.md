@@ -43,7 +43,7 @@ faviconを作成しているときにこの問題にぶち当たりました。
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 
@@ -75,7 +75,7 @@ faviconを作成しているときにこの問題にぶち当たりました。
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">Coolers.coの使い方</h2>

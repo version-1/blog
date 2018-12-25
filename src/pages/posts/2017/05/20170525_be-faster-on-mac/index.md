@@ -35,7 +35,7 @@ categories:
 文字数が多いと地味に待ち時間が
 発生します。
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 
@@ -78,4 +78,4 @@ Macではこのような簡単な設定をすることで、
 
 ぜひ試してみてください！！
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

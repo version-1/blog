@@ -64,7 +64,7 @@ categories:
 
 本記事では簡単な導入方法と自分が行なったカスタマイズについて紹介します。
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">ヨメレバをcssカスタマイズ(verison1の場合)</h2>
@@ -251,4 +251,4 @@ ISBNは書籍を識別する一意のコードで「本の題名 ISBN」など�
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>

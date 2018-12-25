@@ -193,6 +193,6 @@ Twitterでも、居酒屋でも「上司や経営層は全然わかっていな�
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;

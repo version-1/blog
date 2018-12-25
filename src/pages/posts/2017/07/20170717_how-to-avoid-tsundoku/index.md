@@ -15,7 +15,7 @@ categories:
 <a href="https://twitter.com/version1_2017">@version1</a>です。
 
 &nbsp;
-[adsense]
+<div class="adsense"></div>
 &nbsp;
 最近では、KindleでもiBookでも
 電子書籍の購入がクレカさえ登録すればボタン一つで
@@ -53,7 +53,7 @@ categories:
 &nbsp;
 というのがあるかと思っています。
 &nbsp;
-[adsense]
+<div class="adsense"></div>
 &nbsp;
 
 はっきり行ってできる人はできるのかもしれませんが、

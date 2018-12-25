@@ -23,7 +23,7 @@ letter openerは、開発しているアプリケーションからメールが�
 
 今回Rails + Devise + Letter Openerを使った場合に、ユーザのアカウント作成時のメールのタブがポコポコでてくるようになってしまったのでその対策を共有します。
 
-[after_intro]
+<div class="after-intro"></div>
 &nbsp;
 <h2>やろうとしたこと</h2>
 &nbsp;

@@ -22,7 +22,7 @@ WebのE2Eテストなどと目標は近いですが、E2Eテストではいち�
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2>Jestを導入</h2>

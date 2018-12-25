@@ -45,7 +45,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">Google Analytics APIを使うための設定</h2>
@@ -133,7 +133,7 @@ Google Analyticsにログインして、
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">Analytics APIを使ってページごとのPVを取得</h2>

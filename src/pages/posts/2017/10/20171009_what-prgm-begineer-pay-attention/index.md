@@ -26,7 +26,7 @@ categories:
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 <h2 class="chapter">エラーが出たらまずログを確認</h2>
@@ -238,4 +238,4 @@ Rails,CakePHPなどができれば、
 では、
 以上です。
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>

@@ -42,7 +42,7 @@ Laravelでアプリを作りはじめていて
 <a href="https://laravel.com/docs/5.4/localization">https://laravel.com/docs/5.4/localization</a>
 
 
-[after_intro]
+<div class="after-intro"></div>
 
 
 <h2 class="chapter">ロケールファイルの置き場所</h2>

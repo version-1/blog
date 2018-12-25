@@ -20,7 +20,7 @@ JSONレスポンスを返却するAPIを開発してみました。
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">DBの準備</h2>
@@ -200,4 +200,4 @@ $curl http://localhost:8765/Songs/getSongs?key=authorized_key_string
 
 以上です！！
 
-[after_article]
+<div class="after-article"></div>

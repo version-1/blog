@@ -31,7 +31,7 @@ categories:
 
 と言った感じです。
 
-[adsense]
+<div class="adsense"></div>
 
 &nbsp;
 
@@ -160,4 +160,4 @@ categories:
 
 &nbsp;
 
-[adsense]
+<div class="adsense"></div>

@@ -22,7 +22,7 @@ categories:
 引き出せるというのが大事だよ」
 というものがありました。
 
-[after_intro]
+<div class="after-intro"></div>
 
 確かに、
 その助言の通りエクセルやテキストエディタに
@@ -62,7 +62,7 @@ categories:
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">感想</h2>

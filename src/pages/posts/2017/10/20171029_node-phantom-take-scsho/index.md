@@ -45,7 +45,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">処理の流れの説明 - sitemapperとphantomjsを使う -</h2>
@@ -120,7 +120,7 @@ npm install --save sitemapper phantomjs
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 

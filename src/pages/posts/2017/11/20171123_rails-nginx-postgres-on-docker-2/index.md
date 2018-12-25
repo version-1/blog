@@ -45,7 +45,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 
@@ -208,7 +208,7 @@ drwxr-xr-x   9 admin  staff   306 Nov 23 13:06 bin
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 

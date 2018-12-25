@@ -16,7 +16,7 @@ Rails のようにCakePHPでもViewの共通化ができないか
 その結果。見つけた。
 <a href="http://improve-future.com/cakephp3-how-to-use-partial-template-like-in-rails.html">http://improve-future.com/cakephp3-how-to-use-partial-template-like-in-rails.html</a>
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2>共通テンプレートをTemplate/Elementに切り出し</h2>

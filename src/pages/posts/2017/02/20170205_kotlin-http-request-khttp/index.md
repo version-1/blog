@@ -15,7 +15,7 @@ categories:
 
 さて、前回のHelloWorldに引き続き今回は
 <strong>kotlinでHTTPリクエスト</strong>を送ってみます。
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 

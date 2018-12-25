@@ -47,7 +47,7 @@ wordpressのプラグインで自動でカウントされてしまうと
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">他同じようなプラグインあるでしょ？</h2>
@@ -94,7 +94,7 @@ Wordpress.orgにプラグインとして申請中ではありますが、
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">プラグインの特徴について</h2>
@@ -155,4 +155,4 @@ Wordpress.orgにプラグインとして申請中ではありますが、
 
 以上です！！
 
-[after_intro]
+<div class="after-intro"></div>

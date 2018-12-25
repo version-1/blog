@@ -84,7 +84,7 @@ categories:
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 
 &nbsp;
 <h2 class="chapter">残業を減らすためにはトップ層の意識改革が大事</h2>
@@ -234,5 +234,5 @@ https://iconic-intl.com/employers/pages/working-holiday</a>
 
 &nbsp;
 
-[adsense_double_rect]
+<div class="adsense-double-rect"></div>
 &nbsp;

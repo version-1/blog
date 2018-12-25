@@ -62,7 +62,7 @@ ITリテラシーがなんちゃらかんちゃらとか
 みんなプログラマーになるわけではないし、
 プログラマーだけがシステム開発に関われる仕事でもないし・・）
 
-[after_intro]
+<div class="after-intro"></div>
 
 プログラミングというと
 webサイトを作ったり、iPhone・アンドロイドのアプリを
@@ -94,7 +94,7 @@ webサイトを作ったり、iPhone・アンドロイドのアプリを
 
 &nbsp;
 
-[adsense]
+<div class="adsense"></div>
 
 &nbsp;
 
@@ -153,4 +153,4 @@ webサイトを作ったり、iPhone・アンドロイドのアプリを
 
 &nbsp;
 
-[adsense]
+<div class="adsense"></div>

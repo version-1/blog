@@ -26,7 +26,7 @@ categories:
 での作業になるので、
 実際にお金を動かしたりすることはありません。
 
-[after_intro]
+<div class="after-intro"></div>
 
 それでは、
 まずはイーサリアムって何という人へ
@@ -215,7 +215,7 @@ geth --networkid 10 --nodiscover --maxpeers 0 --datadir /your/env/path/my-first-
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 
@@ -459,4 +459,4 @@ true
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>

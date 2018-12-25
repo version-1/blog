@@ -27,7 +27,7 @@ Controllerが通常のリクエスト通り、
 MissingTemplateになってしまうといった場合があると思います。
 
 &nbsp;
-[after_intro]
+<div class="after-intro"></div>
 &nbsp;
 
 これを避けるには

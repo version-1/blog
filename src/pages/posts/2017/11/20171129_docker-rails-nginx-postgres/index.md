@@ -52,7 +52,7 @@ docker-compose up
 
 docker-compose.ymlの紹介はここまでにして、実際にdocker-composeでrails+nginx+postgress環境を作っていきましょう。
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">rails new でアプリケーション環境を構築</h2>
@@ -251,7 +251,7 @@ stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 <h2 class="chapter">docker-composeでRails+Nginx+Postgresを管理する。</h2>
 &nbsp;
 

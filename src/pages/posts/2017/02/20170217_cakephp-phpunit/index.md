@@ -20,7 +20,7 @@ categories:
 
 だったので、
 修正がてらテストコードも書いて見ました。
-[after_intro]
+<div class="after-intro"></div>
 &nbsp;
 <h2 class="chapter">CakePHP で PHPUnitを使う。</h2>
 

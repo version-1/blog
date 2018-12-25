@@ -32,7 +32,7 @@ SpringSecurityという認証管理を行う
 フレームワークがあるので、
 そういう便利なものを
 使って実装していきます。
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">構成</h2>
@@ -239,7 +239,7 @@ class AuthenticationFailureHandler : AuthenticationFailureHandler {
 ```
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">画面テンプレートの作成</h2>

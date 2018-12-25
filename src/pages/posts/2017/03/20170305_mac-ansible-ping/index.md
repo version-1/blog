@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: \[Mac\] Ansible を使ってみる
+title: (Mac)Ansible を使ってみる
 slug: /2017/03/05/mac-ansible-ping
 createdAt: 2017-03-05 21:02:22
 updatedAt: 2018-08-29 08:48:45
 thumbnail: ./thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---

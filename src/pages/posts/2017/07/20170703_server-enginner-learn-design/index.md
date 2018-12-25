@@ -33,7 +33,7 @@ htmlやcssの最低限の知識とかはあって、
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 という訳で本を買って勉強しました。
 

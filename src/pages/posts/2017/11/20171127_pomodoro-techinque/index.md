@@ -64,7 +64,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">ポモドーロテクニックとは？</h2>
@@ -89,7 +89,7 @@ categories:
 
 次に実際にその方法について書いていきます。
 
-[mid_article]
+<div class="mid-article"></div>
 <h2 class="chapter">ポモドーロテクニックのやり方</h2>
 <img class="post-image" src="./pomodoro-tech-iloveimg-compressed-1024x784.png" alt="pomodoro-tech-iloveimg-compressed-1024x784.png"/>
 

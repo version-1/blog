@@ -24,7 +24,7 @@ sudo apt-get install oracle-java8-installer
 参考URL
 <a href="http://kiy271.hatenablog.com/entry/2014/09/05/230624">http://kiy271.hatenablog.com/entry/2014/09/05/230624</a>
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 

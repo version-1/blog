@@ -42,7 +42,7 @@ css初心者レベルからぬけだしたいのであれは知っておいて�
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">SMACSSの概要</h2>
@@ -115,7 +115,7 @@ bodyタグやhtmlタグなどデフォルトでのスタイル定義。サイト
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 <h2 class="chapter">ベース</h2>
 &nbsp;
 

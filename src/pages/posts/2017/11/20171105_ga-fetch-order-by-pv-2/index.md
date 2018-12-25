@@ -18,7 +18,7 @@ PV数で人気記事の取得までできました。
 やっていきます。
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 &nbsp;
@@ -42,7 +42,7 @@ URLで判断するようにしました。)
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 &nbsp;

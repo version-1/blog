@@ -46,7 +46,7 @@ rails db:migrate
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 

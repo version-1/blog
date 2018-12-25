@@ -19,7 +19,7 @@ categories:
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">ランディングページを作ってみる</h2>
@@ -72,7 +72,7 @@ GitHubPagesで後悔しているので実際のデモがご覧いただけます
 
 &nbsp;
 
-[mid_article]
+<div class="mid-article"></div>
 
 &nbsp;
 <h2 class="chapter">SMACSSしてみて気づいたこと</h2>

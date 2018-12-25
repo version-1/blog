@@ -42,7 +42,7 @@ Udemyの一コースの単価って割と高いですよね。UdemyはCtoCの一
 
 &nbsp;
 
-[after_intro]
+<div class="after-intro"></div>
 
 &nbsp;
 <h2 class="chapter">Udemyのコースは定期的なセールで買うのが狙い目</h2>
