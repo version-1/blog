@@ -7,7 +7,7 @@ class DefaultLayout extends React.PureComponent {
     return (
       <Layout>
         <div className="row site-container">
-          <div className="col m12 l8">
+          <div className="col s12 m12 l8">
             <main className="main">{this.props.children}</main>
           </div>
           <div className="col l4 hide-on-med-and-down">

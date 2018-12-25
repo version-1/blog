@@ -26,13 +26,13 @@ my blog
  - [x] google analytics
  - [x] rewrite articles' dom to md
  - [x] image url
- - [ ] AMP(canonical)
+ - [] AMP(canonical)
  - [ ] 404 Page
- - [ ] About Page
- - [ ] shortcode (adsence)
+ - [ ] adsence
  - [ ] ariticle info(timestamp, category etc..)
  - [ ] sns button
 ---- release line ---
+ - [ ] About Page
  - [ ] popular article
  - [ ] search
 

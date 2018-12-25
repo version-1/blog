@@ -23,6 +23,7 @@ const validateCategoryList = (node, categories) => {
   const diff = _.difference(categories, CATEGORY_LIST).length > 0;
   if (diff.length > 0) {
     console.err('category not found', diff, node);
+    throw new Error()
   }
 };
 

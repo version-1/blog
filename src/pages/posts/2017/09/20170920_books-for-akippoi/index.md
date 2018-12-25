@@ -6,7 +6,7 @@ createdAt: 2017-09-20 23:29:06
 updatedAt: 2017-12-26 20:27:33
 thumbnail: ./thumbnail.jpg
 categories:
-  - colmun
+  - column
 ---
 
 &nbsp;
