@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import Img from 'gatsby-image';
+import Img from '../components/atoms/Image';
 import defaultImage from '../assets/images/default-image.jpg';
 
-const Post = ({post}) => {
+const Post = ({amp, post}) => {
   const {title, date, thumbnail} = post.frontmatter;
   if (!thumbnail.childImageSharp) {
     console.warn('thumbnail is not found', post.frontmatter);
@@ -14,9 +14,13 @@ const Post = ({post}) => {
         <div className="card hoverable">
           <div className="card-image">
             {thumbnail.childImageSharp ? (
-              <Img fluid={thumbnail.childImageSharp.fluid} alt={title} />
+              <Img
+                gatsbyImage
+                fluid={thumbnail.childImageSharp.fluid}
+                alt={title}
+              />
             ) : (
-              <img src={defaultImage} alt={title} />
+              <Img amp={amp} src={defaultImage} alt={title} />
             )}
           </div>
           <div className="card-content">

@@ -10,6 +10,7 @@ list = %w[
   adsense_double_rect
   adsense
   mid_article
+  after_article
 ]
 
 puts 'start:'

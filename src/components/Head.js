@@ -4,12 +4,13 @@ import favicon from '../assets/images/favicon.ico';
 
 export default class Meta extends PureComponent {
   render() {
-    const {siteTitle, description} = this.props;
+    const {baseUrl, siteTitle, description} = this.props;
     return (
       <Helmet>
         <html lang="en" />
         <title>{siteTitle}</title>
         <meta name="description" content={description} />
+        <link rel="canonical" href={baseUrl} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ver-1-0.net/" />

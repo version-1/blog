@@ -1,10 +1,10 @@
-const { meta } = require('./config/constants')
+const {meta} = require('./config/constants');
 
 module.exports = {
   siteMetadata: {
     siteUrl: meta.siteUrl,
     title: meta.title,
-    description: meta.description
+    description: meta.description,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,6 +14,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+        ignore: [`**/\.*`, '**/*\.png, **/*\.jpg'],
       },
     },
     'gatsby-plugin-sharp',
@@ -47,7 +48,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: 'static',
+              destinationDir: 'static'
             },
           },
         ],
@@ -86,13 +87,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: meta.trackingId
-      },
-    },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: meta.siteUrl,
+        trackingId: meta.trackingId,
       },
     },
     {
@@ -100,8 +95,8 @@ module.exports = {
       options: {
         host: meta.siteUrl,
         sitemap: [meta.siteUrl, meta.sitemap].join(''),
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{userAgent: '*', allow: '/'}],
+      },
     }
   ],
 };

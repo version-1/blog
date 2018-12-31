@@ -1,8 +1,10 @@
 const _ = require('lodash');
 const path = require('path');
+const webpack = require('webpack');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
-const {routes} = require('./config/constants');
+const {routes, meta} = require('./config/constants');
+const fs = require(`fs-extra`)
 
 // Constants
 const PER_PAGE = 18;
@@ -19,13 +21,39 @@ const CATEGORY_LIST = [
   'travel',
 ];
 
+
 const validateCategoryList = (node, categories) => {
   const diff = _.difference(categories, CATEGORY_LIST).length > 0;
   if (diff.length > 0) {
-    console.err('category not found', diff, node);
+    console.error('category not found', diff, node);
     throw new Error()
   }
 };
+
+const withAMP = (createPage) => (params) => {
+  const { path: _path, component, context = {} } = params
+  const ampPath = _path + '/amp'
+  const template = path.parse(component)
+  const ampTemplate = component.replace(template.base, [template.name, '.amp', template.ext].join(''))
+  const baseUrl = [meta.siteUrl, _path].join('/')
+  createPage({
+    ...params,
+    context: {
+      ...params.context,
+      baseUrl
+    }
+  })
+  createPage({
+    ...params,
+    path: ampPath,
+    component: ampTemplate,
+    context: {
+      ...context,
+      amp: true,
+      baseUrl
+    }
+  })
+}
 
 const buildPaginationPages = createPage => (limit = PER_PAGE) => (
   namespace,
@@ -40,6 +68,17 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
         ? namespace
         : [namespace, currentPageIndex + 1].join('/');
     const skip = currentPageIndex * limit;
+    const params = {
+      path: _path,
+      component: path.resolve(`src/templates/${templates}.js`),
+      context: {
+        ...context,
+        limit,
+        skip,
+        index: currentPageIndex + 1,
+        totalPages,
+      },
+    }
     createPage({
       path: _path,
       component: path.resolve(`src/templates/${templates}.js`),
@@ -133,9 +172,9 @@ const categoryQuery = `
 `;
 
 exports.createPages = ({actions, graphql}) => {
-  const {createPage} = actions;
 
   return graphql(queryIndex).then(result => {
+    const { createPage } = actions
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
       return Promise.reject(result.errors);
@@ -146,7 +185,7 @@ exports.createPages = ({actions, graphql}) => {
     const categories = collectCategories(posts);
 
     // Create Pages
-    createPostShowPage(createPage)(posts);
+    createPostShowPage(withAMP(createPage))(posts);
     createPostsIndexPage(createPage)(posts.length);
     categories.map(category => {
       graphql(categoryQuery, {category}).then(result => {
@@ -170,3 +209,13 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     });
   }
 };
+
+exports.onCreateWebpackConfig = ({
+ stage, getConfig, rules, loaders, actions
+}) => {
+  actions.setWebpackConfig({
+    target: 'node',
+    externals: { canvas: "commonjs canvas" }
+  });
+  const config = getConfig()
+}

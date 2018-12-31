@@ -7,7 +7,7 @@ import { postPath } from '../../lib/routes';
 
 export default class PostsIndex extends PureComponent {
   render() {
-    const {index, totalPages} = this.props.pageContext;
+    const {index, amp, totalPages} = this.props.pageContext;
     const { edges: posts, totalCount } = this.props.data.allMarkdownRemark;
     return (
       <Layout>
@@ -21,7 +21,7 @@ export default class PostsIndex extends PureComponent {
               <div className="section-list">
                 <div className="row">
                   {posts.map(({node: post}) => (
-                    <Post key={post.id} post={post} />
+                    <Post key={post.id} post={post} amp={amp}/>
                   ))}
                 </div>
               </div>

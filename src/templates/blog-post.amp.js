@@ -18,8 +18,7 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      {' '}
-      {helmet || ''}{' '}
+      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <PostContent className="post-body" content={content} />
@@ -41,13 +40,14 @@ export default class BlogPost extends React.PureComponent {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {amp, baseUrl} = this.props.pageContext;
-    const {fluid} = post.frontmatter.thumbnail.childImageSharp || {} ;
+    const html = amp ? ampify(post.html) : post.html;
+    const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
     const content = fluid && [meta.siteUrl, fluid.src].join('');
 
     return (
       <Layout amp={amp} baseUrl={baseUrl}>
         <BlogPostTemplate
-          content={post.html}
+          content={html}
           contentComponent={HTMLContent}
           helmet={
             <Helmet titleTemplate="%s | Blog">
@@ -71,7 +71,7 @@ BlogPost.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BlogPostByAMPID($id: String!) {
     markdownRemark(id: {eq: $id}) {
       id
       html
