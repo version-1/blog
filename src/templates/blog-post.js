@@ -78,13 +78,7 @@ export const pageQuery = graphql`
       excerpt(truncate: true, pruneLength: 300)
       frontmatter {
         title
-        thumbnail {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        thumbnail
         createdAt(formatString: "MMMM DD, YYYY")
         updatedAt(formatString: "MMMM DD, YYYY")
       }

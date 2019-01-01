@@ -4,7 +4,7 @@ title: 一段上のエンジニアに。Rails でテストコードを書く ( R
 slug: /2017/02/04/rails-rspec
 createdAt: 2017-02-04 22:54:26
 updatedAt: 2018-08-26 12:38:27
-thumbnail: ./thumbnail.png
+thumbnail: /2017/02/20170204_rails-rspec/thumbnail.png
 categories: 
   - engineering
   - rails
@@ -39,11 +39,11 @@ categories:
 
 まずはアプリはこんな感じです。
 
-<img class="post-image" src="./スクリーンショット-2017-02-04-22.09.55-1024x272.png" alt="スクリーンショット-2017-02-04-22.09.55-1024x272.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/スクリーンショット-2017-02-04-22.09.55-1024x272.png" alt="スクリーンショット-2017-02-04-22.09.55-1024x272.png"/>
 
 はい、簡単な足し算をするアプリです。
 viewのコードは以下です。
-<img class="post-image" src="./スクリーンショット-2017-02-04-22.48.02-1024x586.png" alt="スクリーンショット-2017-02-04-22.48.02-1024x586.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/スクリーンショット-2017-02-04-22.48.02-1024x586.png" alt="スクリーンショット-2017-02-04-22.48.02-1024x586.png"/>
 
 &nbsp;
 

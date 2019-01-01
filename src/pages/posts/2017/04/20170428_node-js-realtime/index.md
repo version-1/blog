@@ -4,7 +4,7 @@ title: \[Node.js\]ビットコインの価格をBitFlyer APIを使ってリア�
 slug: /2017/04/28/node-js-realtime
 createdAt: 2017-04-28 23:16:17
 updatedAt: 2018-11-08 18:29:35
-thumbnail: ./thumbnail.png
+thumbnail: /2017/04/20170428_node-js-realtime/thumbnail.png
 categories: 
   - cryptocurrency-blockchain
   - engineering

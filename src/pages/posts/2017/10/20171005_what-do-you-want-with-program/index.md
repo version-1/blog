@@ -4,7 +4,7 @@ title: プログラミングってなに？プログラミングを勉強する�
 slug: /2017/10/05/what-do-you-want-with-program
 createdAt: 2017-10-05 00:04:32
 updatedAt: 2017-12-22 22:46:11
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/10/20171005_what-do-you-want-with-program/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner

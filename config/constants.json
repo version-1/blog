@@ -10,7 +10,10 @@
     "title": "So Far, So Tech",
     "description": "フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。",
     "sitemap": "/sitemap.xml",
-    "trackingId": "UA-71833989-5"
+    "trackingId": "UA-71833989-5",
+    "images": {
+      "url": "http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads"
+    }
   },
   "constants": {
     "per": 18

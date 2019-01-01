@@ -4,7 +4,7 @@ title: サーバーエンジニアがデザインを勉強してみた。HTML5�
 slug: /2017/07/03/server-enginner-learn-design
 createdAt: 2017-07-03 21:47:02
 updatedAt: 2018-08-26 11:51:57
-thumbnail: ./thumbnail.png
+thumbnail: /2017/07/20170703_server-enginner-learn-design/thumbnail.png
 categories:
   - column
 ---
@@ -52,7 +52,7 @@ htmlやcssの最低限の知識とかはあって、
 
 個人的にかなり感激です。
 ここに成果を記しておきます。
-<img class="post-image" src="./screencapture-file-Users-admin-prototype-index-html-1499079551933-844x1024.png" alt="screencapture-file-Users-admin-prototype-index-html-1499079551933-844x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/07/20170703_server-enginner-learn-design/screencapture-file-Users-admin-prototype-index-html-1499079551933-844x1024.png" alt="screencapture-file-Users-admin-prototype-index-html-1499079551933-844x1024.png"/>
 
 &nbsp;
 

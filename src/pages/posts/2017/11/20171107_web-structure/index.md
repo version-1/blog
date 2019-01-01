@@ -4,7 +4,7 @@ title: プログラミングを始める前に知っておいて欲しいWebサ�
 slug: /2017/11/07/web-structure
 createdAt: 2017-11-07 00:37:09
 updatedAt: 2018-01-28 14:55:23
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/11/20171107_web-structure/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner
@@ -59,7 +59,7 @@ categories:
 
 &nbsp;
 
-<img class="post-image" src="./Untitled-3-1024x714.png" alt="Untitled-3-1024x714.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171107_web-structure/Untitled-3-1024x714.png" alt="Untitled-3-1024x714.png"/>
 
 &nbsp;
 

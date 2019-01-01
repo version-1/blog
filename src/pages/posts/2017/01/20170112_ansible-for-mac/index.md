@@ -4,7 +4,7 @@ title: Ansible Install for Mac | Macのための Ansible Install
 slug: /2017/01/12/ansible-for-mac
 createdAt: 2017-01-12 00:21:21
 updatedAt: 2018-08-26 12:48:17
-thumbnail: ./thumbnail.png
+thumbnail: /2017/01/20170112_ansible-for-mac/thumbnail.png
 categories: 
   - engineering
   - for-beginner

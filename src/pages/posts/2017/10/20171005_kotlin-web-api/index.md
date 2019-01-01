@@ -4,7 +4,7 @@ title: Kotlin + Spring Boot で Web APIを作成してみる。 ~その②~
 slug: /2017/10/05/kotlin-web-api
 createdAt: 2017-10-05 23:53:16
 updatedAt: 2018-08-26 11:39:29
-thumbnail: ./thumbnail.png
+thumbnail: /2017/10/20171005_kotlin-web-api/thumbnail.png
 categories: 
   - engineering
 ---

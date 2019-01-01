@@ -4,7 +4,7 @@ title: Kotlinでhttpリクエストを投げてみる。 (khttp)
 slug: /2017/02/05/kotlin-http-request-khttp
 createdAt: 2017-02-05 22:48:17
 updatedAt: 2018-08-26 12:35:52
-thumbnail: ./thumbnail.png
+thumbnail: /2017/02/20170205_kotlin-http-request-khttp/thumbnail.png
 categories: 
   - engineering
 ---

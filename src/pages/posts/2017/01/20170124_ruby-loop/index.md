@@ -4,7 +4,7 @@ title: \[Ruby\]Rubyのループ ( while, times ,for , each , step, upto など�
 slug: /2017/01/24/ruby-loop
 createdAt: 2017-01-24 23:00:46
 updatedAt: 2018-08-26 12:41:41
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/01/20170124_ruby-loop/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner

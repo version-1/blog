@@ -4,7 +4,7 @@ title: フルリモートエンジニアになったので、これまでの経�
 slug: /2018/10/14/full-remote-engineer
 createdAt: 2018-10-14 14:38:05
 updatedAt: 2018-10-14 14:38:05
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/10/20181014_full-remote-engineer/thumbnail.jpg
 categories: 
   - freelance
 ---

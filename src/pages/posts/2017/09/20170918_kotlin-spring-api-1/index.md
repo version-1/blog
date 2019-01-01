@@ -4,7 +4,7 @@ title: Kotlin + Spring Boot で Web APIを作成してみる。 ~その①~
 slug: /2017/09/18/kotlin-spring-api-1
 createdAt: 2017-09-18 23:57:53
 updatedAt: 2018-08-26 11:42:05
-thumbnail: ./thumbnail.png
+thumbnail: /2017/09/20170918_kotlin-spring-api-1/thumbnail.png
 categories: 
   - engineering
 ---
@@ -106,7 +106,7 @@ VALUES( 1 , '多動力' ,'堀江貴文', '9784344031159', 1 , NOW() , NOW()),
 イメージが湧きづらい人用に
 一覧ページも作成しました。
 
-<img class="post-image" src="./スクリーンショット-2017-09-18-23.29.36.png" alt="スクリーンショット-2017-09-18-23.29.36.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.29.36.png" alt="スクリーンショット-2017-09-18-23.29.36.png"/>
 
 ↑この一覧がJSON形式で取得できれば成功です。
 
@@ -128,7 +128,7 @@ VALUES( 1 , '多動力' ,'堀江貴文', '9784344031159', 1 , NOW() , NOW()),
 
 はじめに、
 ファイル構成を
-<img class="post-image" src="./スクリーンショット-2017-09-18-23.37.23.png" alt="スクリーンショット-2017-09-18-23.37.23.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.37.23.png" alt="スクリーンショット-2017-09-18-23.37.23.png"/>
 
 このように
 以前のKotlinシリーズでもおなじみの
@@ -189,7 +189,7 @@ jsonにして返却できることですかね。
 ちなみに
 springを起動して
 http://localhost:8080/api/booksにアクセスすると
-<img class="post-image" src="./スクリーンショット-2017-09-18-23.41.56.png" alt="スクリーンショット-2017-09-18-23.41.56.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.41.56.png" alt="スクリーンショット-2017-09-18-23.41.56.png"/>
 
 &nbsp;
 
@@ -199,7 +199,7 @@ http://localhost:8080/api/booksにアクセスすると
 
 http://localhost:8080/api/books/1にアクセスすると
 
-<img class="post-image" src="./スクリーンショット-2017-09-18-23.42.05.png" alt="スクリーンショット-2017-09-18-23.42.05.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.42.05.png" alt="スクリーンショット-2017-09-18-23.42.05.png"/>
 
 &nbsp;
 

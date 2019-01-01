@@ -4,7 +4,7 @@ title: SMACSSでデモサイトのコード書いてみた
 slug: /2017/12/16/write-with-smacss
 createdAt: 2017-12-16 22:00:52
 updatedAt: 2018-05-20 22:38:01
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/12/20171216_write-with-smacss/thumbnail.jpg
 categories: 
   - engineering
   - design
@@ -45,7 +45,7 @@ categories:
 
 その点踏まえて、仕上げたページはこちらになります。
 
-<img class="post-image" src="./smaccs-1024x517.png" alt="smaccs-1024x517.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/12/20171216_write-with-smacss/smaccs-1024x517.png" alt="smaccs-1024x517.png"/>
 
 おぉ・・・
 
@@ -108,7 +108,7 @@ LPをコーディングした結果以下のような構成になりました。
 
 &nbsp;
 
-<img class="post-image" src="./dir-structure-665x1024.png" alt="dir-structure-665x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/12/20171216_write-with-smacss/dir-structure-665x1024.png" alt="dir-structure-665x1024.png"/>
 
 &nbsp;
 

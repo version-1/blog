@@ -4,7 +4,7 @@ title: whyから始めよう
 slug: /2018/02/04/action-report-4
 createdAt: 2018-02-04 10:34:48
 updatedAt: 2018-10-11 23:57:44
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/02/20180204_action-report-4/thumbnail.jpg
 categories: 
   - freelance
 ---

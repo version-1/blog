@@ -4,7 +4,7 @@ title: 日本の残業代は安い？残業時間を減らす方法を考えて�
 slug: /2017/09/23/how-to-reduce-overwork
 createdAt: 2017-09-23 13:26:40
 updatedAt: 2018-08-25 22:20:20
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/09/20170923_how-to-reduce-overwork/thumbnail.jpg
 categories:
   - column
   - freelance

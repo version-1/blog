@@ -4,7 +4,7 @@ title: Rubyでデザインパターン。Strategyパターン。Design Pattern i
 slug: /2018/09/02/ruby-strategy
 createdAt: 2018-09-02 14:37:30
 updatedAt: 2018-09-02 14:37:30
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/09/20180902_ruby-strategy/thumbnail.jpg
 categories: 
   - engineering
   - rails

@@ -4,7 +4,7 @@ title: ビットコインって何？これからビットコインを勉強し�
 slug: /2017/06/07/hajimeteno-bitcoin
 createdAt: 2017-06-07 00:03:16
 updatedAt: 2018-11-26 22:01:28
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/06/20170607_hajimeteno-bitcoin/thumbnail.jpg
 categories: 
   - cryptocurrency-blockchain
   - engineering
@@ -17,7 +17,7 @@ categories:
 &nbsp;
 
 現在話題沸騰中のビットコインですが、
-<img class="post-image" src="./スクリーンショット-2017-06-06-23.20.42-1024x553.png" alt="スクリーンショット-2017-06-06-23.20.42-1024x553.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/06/20170607_hajimeteno-bitcoin/スクリーンショット-2017-06-06-23.20.42-1024x553.png" alt="スクリーンショット-2017-06-06-23.20.42-1024x553.png"/>
 kabu-ka.net
 現在32万円弱といったところでしょうか。
 

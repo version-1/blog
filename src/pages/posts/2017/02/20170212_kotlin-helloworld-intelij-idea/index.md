@@ -4,7 +4,7 @@ title: KotlinでHelloWorld　パート2 ( InteliJ IDEA編)
 slug: /2017/02/12/kotlin-helloworld-intelij-idea
 createdAt: 2017-02-12 09:26:57
 updatedAt: 2018-01-30 23:22:37
-thumbnail: ./thumbnail.png
+thumbnail: /2017/02/20170212_kotlin-helloworld-intelij-idea/thumbnail.png
 categories: 
   - engineering
   - for-beginner
@@ -44,7 +44,7 @@ HelloWorldするまでを動画に録りました。
 <strong>" Create directories for empty content roots automatically. "</strong>
 というのを選択すれば、
 動画のようにわざわざディレクトリ作る必要ないんですね。。。
-<img class="post-image" src="./スクリーンショット-2017-02-12-9.11.32-1024x512.png" alt="スクリーンショット-2017-02-12-9.11.32-1024x512.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170212_kotlin-helloworld-intelij-idea/スクリーンショット-2017-02-12-9.11.32-1024x512.png" alt="スクリーンショット-2017-02-12-9.11.32-1024x512.png"/>
 
 &nbsp;
 

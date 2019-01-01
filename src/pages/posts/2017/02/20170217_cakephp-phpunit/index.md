@@ -4,7 +4,7 @@ title: CakePHPでテスト PHPUnitを使ったテスト
 slug: /2017/02/17/cakephp-phpunit
 createdAt: 2017-02-17 22:29:21
 updatedAt: 2018-08-26 12:30:23
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/02/20170217_cakephp-phpunit/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner

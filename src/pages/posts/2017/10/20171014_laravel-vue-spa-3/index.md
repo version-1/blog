@@ -4,7 +4,7 @@ title: Laravel5.4とVue.jsでSPAを作ってみる。③ -仮想通貨の価格�
 slug: /2017/10/14/laravel-vue-spa-3
 createdAt: 2017-10-14 21:59:36
 updatedAt: 2018-08-26 11:34:20
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/10/20171014_laravel-vue-spa-3/thumbnail.jpg
 categories: 
   - engineering
 ---
@@ -221,7 +221,7 @@ export default {
 ```
 ここまででとりあえず、仮想通貨の一覧を取得はできて、
 Ajax通信も使えています。
-<img class="post-image" src="./Screen-Shot-2017-10-14-at-19.00.02.png" alt="Screen-Shot-2017-10-14-at-19.00.02.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171014_laravel-vue-spa-3/Screen-Shot-2017-10-14-at-19.00.02.png" alt="Screen-Shot-2017-10-14-at-19.00.02.png"/>
 
 が、ここまでだとリアルタイムに価格を表示していく！！
 というSPAの面白さみたいなものがないので、

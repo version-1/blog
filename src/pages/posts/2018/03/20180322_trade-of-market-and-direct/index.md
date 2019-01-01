@@ -4,7 +4,7 @@ title: フリーランスは相対取引が自由に働ける道？
 slug: /2018/03/22/trade-of-market-and-direct
 createdAt: 2018-03-22 22:59:16
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/03/20180322_trade-of-market-and-direct/thumbnail.jpg
 categories: 
   - freelance
 ---

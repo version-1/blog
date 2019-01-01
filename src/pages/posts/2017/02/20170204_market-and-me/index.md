@@ -4,7 +4,7 @@ title: 自分と市場の強みについて。- 彼を知り己を知れば百�
 slug: /2017/02/04/market-and-me
 createdAt: 2017-02-04 14:27:38
 updatedAt: 2018-08-25 22:21:01
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/02/20170204_market-and-me/thumbnail.jpg
 categories:
   - column
   - freelance
@@ -142,15 +142,15 @@ Twitterでも、居酒屋でも「上司や経営層は全然わかっていな�
 
 結果は以下のような形で確認できます。
 
-<img class="post-image" src="./グッドポイント診断-1024x473.png" alt="グッドポイント診断-1024x473.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/グッドポイント診断-1024x473.png" alt="グッドポイント診断-1024x473.png"/>
 
-<img class="post-image" src="./スクリーンショット-2017-02-02-13.20.47-1024x229.png" alt="スクリーンショット-2017-02-02-13.20.47-1024x229.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.20.47-1024x229.png" alt="スクリーンショット-2017-02-02-13.20.47-1024x229.png"/>
 
-<img class="post-image" src="./スクリーンショット-2017-02-02-13.20.56-1024x271.png" alt="スクリーンショット-2017-02-02-13.20.56-1024x271.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.20.56-1024x271.png" alt="スクリーンショット-2017-02-02-13.20.56-1024x271.png"/>
 
-<img class="post-image" src="./スクリーンショット-2017-02-02-13.21.06-1024x234.png" alt="スクリーンショット-2017-02-02-13.21.06-1024x234.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.21.06-1024x234.png" alt="スクリーンショット-2017-02-02-13.21.06-1024x234.png"/>
 
-<img class="post-image" src="./スクリーンショット-2017-02-02-13.21.10-1024x236.png" alt="スクリーンショット-2017-02-02-13.21.10-1024x236.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.21.10-1024x236.png" alt="スクリーンショット-2017-02-02-13.21.10-1024x236.png"/>
 
 &nbsp;
 

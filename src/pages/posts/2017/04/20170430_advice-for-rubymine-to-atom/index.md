@@ -4,7 +4,7 @@ title: \[Atom\]   個人的RubyMineからAtomに切り替えた人おすすめ�
 slug: /2017/04/30/advice-for-rubymine-to-atom
 createdAt: 2017-04-30 12:16:19
 updatedAt: 2018-01-30 23:21:32
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/04/20170430_advice-for-rubymine-to-atom/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner
@@ -79,7 +79,7 @@ RubyMineなどは結構好きで使ってたのですが、
 インストールの仕方は簡単 Command + ,で　設定を開いて[ Install ] を選択
 Linter で検索して、出てきたものをクリックです。
 
-<img class="post-image" src="./スクリーンショット-2017-04-29-22.59.17-1024x900.png" alt="スクリーンショット-2017-04-29-22.59.17-1024x900.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-29-22.59.17-1024x900.png" alt="スクリーンショット-2017-04-29-22.59.17-1024x900.png"/>
 
 &nbsp;
 
@@ -102,7 +102,7 @@ linter-php
 <h2 class="chapter">パッケージ管理 <a href="https://atom.io/packages/project-manager">Project-Manger</a></h2>
 &nbsp;
 
-<img class="post-image" src="./スクリーンショット-2017-04-30-12.11.34-897x1024.png" alt="スクリーンショット-2017-04-30-12.11.34-897x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-12.11.34-897x1024.png" alt="スクリーンショット-2017-04-30-12.11.34-897x1024.png"/>
 
 &nbsp;
 
@@ -125,7 +125,7 @@ project-managerというものです。
 ①プロジェクトとして管理したいディレクトリを「File」 -> 「Open...」で開く。
 ②ディレクトリを開いたら
 「Packages」 -> 「Project Manager」 -> 「Save Project」
-<img class="post-image" src="./スクリーンショット-2017-04-30-11.58.58-1024x491.png" alt="スクリーンショット-2017-04-30-11.58.58-1024x491.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-11.58.58-1024x491.png" alt="スクリーンショット-2017-04-30-11.58.58-1024x491.png"/>
 ③別のプロジェクトを開きたいときは Cmd + Ctrl + P
 でプロジェクトの一覧を表示して選択。
 
@@ -161,7 +161,7 @@ Atomでこれをやるなら
 
 &nbsp;
 <h2 class="chapter">Console <a href="https://atom.io/packages/platformio-ide-terminal">Platoform-Ide-Terminal</a></h2>
-<img class="post-image" src="./スクリーンショット-2017-04-30-12.07.08-1024x625.png" alt="スクリーンショット-2017-04-30-12.07.08-1024x625.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-12.07.08-1024x625.png" alt="スクリーンショット-2017-04-30-12.07.08-1024x625.png"/>
 
 &nbsp;
 

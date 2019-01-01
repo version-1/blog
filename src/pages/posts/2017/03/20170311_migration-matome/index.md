@@ -4,7 +4,7 @@ title: Rails  migration |  通らないmigration をスキップする | down up
 slug: /2017/03/11/migration-matome
 createdAt: 2017-03-11 23:07:13
 updatedAt: 2018-08-26 12:15:22
-thumbnail: ./thumbnail.png
+thumbnail: /2017/03/20170311_migration-matome/thumbnail.png
 categories: 
   - engineering
   - rails

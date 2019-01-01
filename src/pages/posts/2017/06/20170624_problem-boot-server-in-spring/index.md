@@ -4,7 +4,7 @@ title: Kotlin + SpringBoot のhtml、css変更後の再起動が面倒臭い。�
 slug: /2017/06/24/problem-boot-server-in-spring
 createdAt: 2017-06-24 13:21:57
 updatedAt: 2018-08-26 11:52:44
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/06/20170624_problem-boot-server-in-spring/thumbnail.jpg
 categories: 
   - engineering
 ---
@@ -23,7 +23,7 @@ Kotlin+SpringBootを
 
 &nbsp;
 
-<img class="post-image" src="./スクリーンショット-2017-06-24-11.46.54.png" alt="スクリーンショット-2017-06-24-11.46.54.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/06/20170624_problem-boot-server-in-spring/スクリーンショット-2017-06-24-11.46.54.png" alt="スクリーンショット-2017-06-24-11.46.54.png"/>
 
 &nbsp;
 

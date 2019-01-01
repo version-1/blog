@@ -4,7 +4,7 @@ title: ローカル開発環境〜Railsで普段開発している時の構成�
 slug: /2017/09/27/architecture-for-local-rails
 createdAt: 2017-09-27 00:14:50
 updatedAt: 2017-12-22 22:47:09
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/09/20170927_architecture-for-local-rails/thumbnail.jpg
 categories: 
   - engineering
   - rails
@@ -43,7 +43,7 @@ categories:
 
 &nbsp;
 
-<img class="post-image" src="./Untitled-Diagram.png" alt="Untitled-Diagram.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170927_architecture-for-local-rails/Untitled-Diagram.png" alt="Untitled-Diagram.png"/>
 
 &nbsp;
 

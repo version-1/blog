@@ -55,12 +55,7 @@ export const postsIndexQuery = graphql`
           frontmatter {
             title
             slug
-            thumbnail {
-              relativePath
-              childImageSharp {
-                fluid { ...GatsbyImageSharpFluid }
-              }
-            }
+            thumbnail
             categories
           }
         }

@@ -4,7 +4,7 @@ title: Electron の勉強がてら電卓を作ってみた~その① - インス
 slug: /2017/04/09/electron-calculator-1
 createdAt: 2017-04-09 23:01:23
 updatedAt: 2018-08-26 12:13:15
-thumbnail: ./thumbnail.png
+thumbnail: /2017/04/20170409_electron-calculator-1/thumbnail.png
 categories: 
   - engineering
 ---
@@ -43,7 +43,7 @@ Slack,AtomなどもこのElectronで作られていて、
 <a href="https://electron.atom.io/">https://electron.atom.io/</a>
 これがelectronのサイトです。
 
-<img class="post-image" src="./スクリーンショット-2017-03-23-13.17.07-1024x401.png" alt="スクリーンショット-2017-03-23-13.17.07-1024x401.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170409_electron-calculator-1/スクリーンショット-2017-03-23-13.17.07-1024x401.png" alt="スクリーンショット-2017-03-23-13.17.07-1024x401.png"/>
 引用元:https://electron.atom.io/
 
 はい、英語です。
@@ -226,7 +226,7 @@ app.on('activate', () => {
 それでは、起動
 <pre><code class="bash">electron . 
 ```
-<img class="post-image" src="./スクリーンショット-2017-04-09-22.56.09-300x225.png" alt="スクリーンショット-2017-04-09-22.56.09-300x225.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170409_electron-calculator-1/スクリーンショット-2017-04-09-22.56.09-300x225.png" alt="スクリーンショット-2017-04-09-22.56.09-300x225.png"/>
 <h3>無事起動できました！！</h3>
 無事インストール＆動作確認済んだので次は
 実際に電卓を作ります。

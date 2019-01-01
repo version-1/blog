@@ -4,7 +4,7 @@ title: 新卒から2年半でインドネシアへの海外赴任を実現させ
 slug: /2017/01/28/indonesia-for-two-years
 createdAt: 2017-01-28 11:26:21
 updatedAt: 2017-12-22 22:33:48
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/01/20170128_indonesia-for-two-years/thumbnail.jpg
 categories:
   - column
 ---
@@ -56,7 +56,7 @@ categories:
 
 <hr />
 
-<img class="post-image" src="./IMG_2562-300x225.jpg" alt="IMG_2562-300x225.jpg"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170128_indonesia-for-two-years/IMG_2562-300x225.jpg" alt="IMG_2562-300x225.jpg"/>
 
 海外赴任より前に、先に現地に行きました。そう自費で
 
@@ -103,7 +103,7 @@ categories:
 
 <hr />
 
-<img class="post-image" src="./IMG_2087-300x300.jpg" alt="IMG_2087-300x300.jpg"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170128_indonesia-for-two-years/IMG_2087-300x300.jpg" alt="IMG_2087-300x300.jpg"/>
 
 資格は知識習得のためではなく、
 継続的な努力の証として取得のための勉強をしました。

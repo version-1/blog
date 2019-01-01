@@ -4,7 +4,7 @@ title: せっかく買った本を読みきれない・途中飽きてしまう�
 slug: /2017/07/17/how-to-avoid-tsundoku
 createdAt: 2017-07-17 01:02:05
 updatedAt: 2017-12-22 22:51:08
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/07/20170717_how-to-avoid-tsundoku/thumbnail.jpg
 categories:
   - column
 ---

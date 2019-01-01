@@ -4,7 +4,7 @@ title: Kotlin + Spring boot で DBからデータ取得して画面に表示
 slug: /2017/02/13/kotlin-spring-boot
 createdAt: 2017-02-13 07:35:24
 updatedAt: 2018-08-26 12:20:03
-thumbnail: ./thumbnail.png
+thumbnail: /2017/02/20170213_kotlin-spring-boot/thumbnail.png
 categories: 
   - engineering
 ---
@@ -113,7 +113,7 @@ kotlinx.htmlやexposedあたりを使おうかと
 &nbsp;
 
 ディレクトリ構成は以下のようにしてみました。
-<img class="post-image" src="./スクリーンショット-2017-02-12-23.20.04.png" alt="スクリーンショット-2017-02-12-23.20.04.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170213_kotlin-spring-boot/スクリーンショット-2017-02-12-23.20.04.png" alt="スクリーンショット-2017-02-12-23.20.04.png"/>
 
 各ソースはgitHubにあげたのでよかったらどうぞ
 <a href="https://github.com/version-1/kotlin-web-app-sample">https://github.com/version-1/kotlin-web-app-sample</a>
@@ -146,7 +146,7 @@ VALUES( 1 , 'John' , 26 , 1),
 http://localhost
 に接続すると以下のような画面が見れます。
 
-<img class="post-image" src="./スクリーンショット-2017-02-12-23.58.30.png" alt="スクリーンショット-2017-02-12-23.58.30.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170213_kotlin-spring-boot/スクリーンショット-2017-02-12-23.58.30.png" alt="スクリーンショット-2017-02-12-23.58.30.png"/>
 
 
 &nbsp;

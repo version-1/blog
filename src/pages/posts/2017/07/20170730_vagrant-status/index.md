@@ -4,7 +4,7 @@ title: vagrantローカルPCのインスタンスの起動状態を知りたい�
 slug: /2017/07/30/vagrant-status
 createdAt: 2017-07-30 22:38:20
 updatedAt: 2018-08-26 11:47:58
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/07/20170730_vagrant-status/thumbnail.jpg
 categories: 
   - engineering
 ---

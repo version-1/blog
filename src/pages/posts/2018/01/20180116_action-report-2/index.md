@@ -4,7 +4,7 @@ title: やりたくないことリスト
 slug: /2018/01/16/action-report-2
 createdAt: 2018-01-16 09:19:56
 updatedAt: 2018-10-14 14:40:20
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/01/20180116_action-report-2/thumbnail.jpg
 categories:
   - column
 ---

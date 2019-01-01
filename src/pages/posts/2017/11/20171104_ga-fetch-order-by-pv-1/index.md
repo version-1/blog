@@ -4,7 +4,7 @@ title: Google AnalyticsからPV順に記事を取得するその①
 slug: /2017/11/04/ga-fetch-order-by-pv-1
 createdAt: 2017-11-04 22:26:09
 updatedAt: 2018-08-26 11:28:49
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/11/20171104_ga-fetch-order-by-pv-1/thumbnail.jpg
 categories: 
   - engineering
   - rails
@@ -78,7 +78,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 
 &nbsp;
 
-<img class="post-image" src="./Screen-Shot-2017-11-04-at-21.32.52.png" alt="Screen-Shot-2017-11-04-at-21.32.52.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.32.52.png" alt="Screen-Shot-2017-11-04-at-21.32.52.png"/>
 
 &nbsp;
 
@@ -90,14 +90,14 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 画面ではすでにAPIが有効になっていたようです。
 そのまま認証情報に進みます。
 
-<img class="post-image" src="./Screen-Shot-2017-11-04-at-21.33.02.png" alt="Screen-Shot-2017-11-04-at-21.33.02.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.02.png" alt="Screen-Shot-2017-11-04-at-21.33.02.png"/>
 
 &nbsp;
 
 &nbsp;
 
 次の画面で認証情報を追加しますが、
-<img class="post-image" src="./Screen-Shot-2017-11-04-at-21.33.27.png" alt="Screen-Shot-2017-11-04-at-21.33.27.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.27.png" alt="Screen-Shot-2017-11-04-at-21.33.27.png"/>
 
 &nbsp;
 
@@ -106,7 +106,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 
 &nbsp;
 
-<img class="post-image" src="./Screen-Shot-2017-11-04-at-21.33.50-1024x649.png" alt="Screen-Shot-2017-11-04-at-21.33.50-1024x649.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.50-1024x649.png" alt="Screen-Shot-2017-11-04-at-21.33.50-1024x649.png"/>
 
 この画面で「サービスアカウントID」は後の手順で使用するので保管しておきます。
 次へをクリックすると
@@ -129,7 +129,7 @@ Google Analyticsにログインして、
 で先の「サービスアカウントID」（メールアドレスのようなやつ）を使ってユーザを作成します。
 権限は最低限表示と分析だけは付加してあげましょう。
 
-<img class="post-image" src="./google-analytics-add-user-1024x443.png" alt="google-analytics-add-user-1024x443.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/google-analytics-add-user-1024x443.png" alt="google-analytics-add-user-1024x443.png"/>
 
 &nbsp;
 

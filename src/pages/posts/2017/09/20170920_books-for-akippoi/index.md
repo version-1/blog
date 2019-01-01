@@ -4,7 +4,7 @@ title: 飽きっぽい人にお勧めする良書3選
 slug: /2017/09/20/books-for-akippoi
 createdAt: 2017-09-20 23:29:06
 updatedAt: 2017-12-26 20:27:33
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/09/20170920_books-for-akippoi/thumbnail.jpg
 categories:
   - column
 ---

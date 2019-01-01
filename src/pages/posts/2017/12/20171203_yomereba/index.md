@@ -4,7 +4,7 @@ title: Amazon,楽天,7netで本を紹介できるヨメレバをcssカスタマ�
 slug: /2017/12/03/yomereba
 createdAt: 2017-12-03 22:40:16
 updatedAt: 2018-08-26 01:02:16
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/12/20171203_yomereba/thumbnail.jpg
 categories:
   - engineering
   - design
@@ -83,7 +83,7 @@ ISBNは書籍を識別する一意のコードで「本の題名 ISBN」など�
 
 &nbsp;
 
-<img class="post-image" src="./yomereba.png" alt="yomereba.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/12/20171203_yomereba/yomereba.png" alt="yomereba.png"/>
 
 &nbsp;
 

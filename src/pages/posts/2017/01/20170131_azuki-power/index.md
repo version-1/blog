@@ -4,7 +4,7 @@ title: エンジニアの味方 - あずきのチカラ - 長時間のPCで疲�
 slug: /2017/01/31/azuki-power
 createdAt: 2017-01-31 22:48:25
 updatedAt: 2017-12-22 20:26:54
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/01/20170131_azuki-power/thumbnail.jpg
 categories:
   - column
 ---

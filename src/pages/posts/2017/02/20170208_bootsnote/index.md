@@ -4,7 +4,7 @@ title: エンジニアを助けるノート(メモ帳)アプリ Boostnote が快
 slug: /2017/02/08/bootsnote
 createdAt: 2017-02-08 23:04:35
 updatedAt: 2018-01-30 23:22:43
-thumbnail: ./thumbnail.png
+thumbnail: /2017/02/20170208_bootsnote/thumbnail.png
 categories: 
   - engineering
   - for-beginner
@@ -52,7 +52,7 @@ categories:
 その待望のツールとはこちら、
 <h2><del datetime="2017-11-15T02:22:20+00:00">bootsnote</del>　boostnote　（すみません、スペルミスしてました。。）</h2>
 です。
-<img class="post-image" src="./スクリーンショット-2017-02-08-22.47.51-1024x482.png" alt="スクリーンショット-2017-02-08-22.47.51-1024x482.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170208_bootsnote/スクリーンショット-2017-02-08-22.47.51-1024x482.png" alt="スクリーンショット-2017-02-08-22.47.51-1024x482.png"/>
 
 なにやらgoogle先生にお伺いを立ててみると
 <strong>100種類のプログラミング言語に対応</strong>
@@ -80,7 +80,7 @@ SQLや簡単なコード、コマンドなどをスニペットとして
 というときにショートカットキーで呼び出して
 目当てのコマンドやプログラムをコピーできます。
 
-<img class="post-image" src="./スクリーンショット-2017-02-08-22.57.43-1024x657.png" alt="スクリーンショット-2017-02-08-22.57.43-1024x657.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170208_bootsnote/スクリーンショット-2017-02-08-22.57.43-1024x657.png" alt="スクリーンショット-2017-02-08-22.57.43-1024x657.png"/>
 
 こういう形で左上のメニューボタンを押すと
 設定ができるので、

@@ -4,7 +4,7 @@ title: Laravel5.4とVue.jsでSPAを作ってみる。① -環境構築-
 slug: /2017/10/11/laravel-vue-spa-1
 createdAt: 2017-10-11 00:05:25
 updatedAt: 2018-08-26 11:25:34
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/10/20171011_laravel-vue-spa-1/thumbnail.jpg
 categories: 
   - engineering
 ---
@@ -309,7 +309,7 @@ npm run dev
 でresources配下のjsファイルなどをビルドして、
 artisanでサーバを起動すると
 
-<img class="post-image" src="./Screen-Shot-2017-10-11-at-0.02.03-1024x739.png" alt="Screen-Shot-2017-10-11-at-0.02.03-1024x739.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171011_laravel-vue-spa-1/Screen-Shot-2017-10-11-at-0.02.03-1024x739.png" alt="Screen-Shot-2017-10-11-at-0.02.03-1024x739.png"/>
 
 これで、
 resources/assets/js/component/Example.vue

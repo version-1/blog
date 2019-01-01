@@ -4,7 +4,7 @@ title: Rubyでデザインパターン。Template Methodパターン。Design Pa
 slug: /2018/08/31/ruby-template-method
 createdAt: 2018-08-31 12:29:41
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/08/20180831_ruby-template-method/thumbnail.jpg
 categories: 
   - engineering
   - rails

@@ -4,7 +4,7 @@ title: Kotlinの基本文法について少しだけ（パッケージ・関数�
 slug: /2017/06/12/kotlin-syntax-alittle
 createdAt: 2017-06-12 22:09:19
 updatedAt: 2018-08-26 11:57:42
-thumbnail: ./thumbnail.png
+thumbnail: /2017/06/20170612_kotlin-syntax-alittle/thumbnail.png
 categories: 
   - engineering
 ---

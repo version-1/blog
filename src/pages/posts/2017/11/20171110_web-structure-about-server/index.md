@@ -4,7 +4,7 @@ title: – サーバの役割について – プログラミングを始める�
 slug: /2017/11/10/web-structure-about-server
 createdAt: 2017-11-10 00:33:36
 updatedAt: 2018-08-28 08:00:17
-thumbnail: ./thumbnail.png
+thumbnail: /2017/11/20171110_web-structure-about-server/thumbnail.png
 categories: 
   - engineering
   - for-beginner
@@ -19,7 +19,7 @@ categories:
 <h2>サーバ</h2>
 についてのお話です。
 
-<img class="post-image" src="./Screen-Shot-2017-11-09-at-21.32.15.png" alt="Screen-Shot-2017-11-09-at-21.32.15.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171110_web-structure-about-server/Screen-Shot-2017-11-09-at-21.32.15.png" alt="Screen-Shot-2017-11-09-at-21.32.15.png"/>
 
 &nbsp;
 
@@ -97,7 +97,7 @@ OSの中に、
 WebサーバであるApacheやNginxがあり、
 その中にデータベースとアプリケーションがあります。
 
-<img class="post-image" src="./サーバーの構造.png" alt="サーバーの構造.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171110_web-structure-about-server/サーバーの構造.png" alt="サーバーの構造.png"/>
 
 &nbsp;
 

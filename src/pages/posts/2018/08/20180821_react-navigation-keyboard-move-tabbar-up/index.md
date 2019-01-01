@@ -4,7 +4,7 @@ title: Android React Nativationでキーボードと一緒にタブバーも上�
 slug: /2018/08/21/react-navigation-keyboard-move-tabbar-up
 createdAt: 2018-08-21 09:16:12
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.png
+thumbnail: /2018/08/20180821_react-navigation-keyboard-move-tabbar-up/thumbnail.png
 categories:
   - engineering
   - react

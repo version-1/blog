@@ -69,11 +69,7 @@ export const categryPageQuery = graphql`
           frontmatter {
             title
             slug
-            thumbnail {
-              childImageSharp {
-                fluid { ...GatsbyImageSharpFluid }
-              }
-            }
+            thumbnail
             categories
           }
         }

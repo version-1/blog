@@ -4,7 +4,7 @@ title: CakePHP3 でJSONレスンポンスを返すAPIを作成
 slug: /2017/04/24/cakephp3-json-response
 createdAt: 2017-04-24 01:04:53
 updatedAt: 2018-08-26 01:17:45
-thumbnail: ./thumbnail.png
+thumbnail: /2017/04/20170424_cakephp3-json-response/thumbnail.png
 categories: 
   - engineering
 ---
@@ -61,7 +61,7 @@ JSONレスポンスを返却するAPIを開発してみました。
 
 まずは楽曲の一覧を通常通り画面で表示させますと
 以下の通りになります。
-<img class="post-image" src="./スクリーンショット-2017-04-24-0.02.48-1024x450.png" alt="スクリーンショット-2017-04-24-0.02.48-1024x450.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170424_cakephp3-json-response/スクリーンショット-2017-04-24-0.02.48-1024x450.png" alt="スクリーンショット-2017-04-24-0.02.48-1024x450.png"/>
 
 &nbsp;
 

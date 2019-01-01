@@ -4,7 +4,7 @@ title: Vagrant  コマンドまとめ（前半戦) | vagrant command line interf
 slug: /2017/03/05/vagrant-commands-summary
 createdAt: 2017-03-05 14:03:12
 updatedAt: 2018-08-26 12:27:02
-thumbnail: ./thumbnail.png
+thumbnail: /2017/03/20170305_vagrant-commands-summary/thumbnail.png
 categories: 
   - engineering
   - rails

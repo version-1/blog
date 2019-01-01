@@ -4,7 +4,7 @@ title: GitHub Pagesが便利。簡単にwebアプリのデモを公開するな�
 slug: /2017/10/02/github-pages
 createdAt: 2017-10-02 19:44:09
 updatedAt: 2018-10-19 23:42:49
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/10/20171002_github-pages/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner
@@ -78,14 +78,14 @@ GitPushしたあとにRepositoryで設定を行うと
 1.適当なwebページ用のリポジトリを作成
 (もちろんPush )
 
-<img class="post-image" src="./Screen-Shot-2017-10-02-at-19.46.02-1024x465.png" alt="Screen-Shot-2017-10-02-at-19.46.02-1024x465.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171002_github-pages/Screen-Shot-2017-10-02-at-19.46.02-1024x465.png" alt="Screen-Shot-2017-10-02-at-19.46.02-1024x465.png"/>
 
 &nbsp;
 
 2.リポジトリの「Settings」のページに
 行き、Sourceのところでmaster branchを選択する。
 
-<img class="post-image" src="./Screen-Shot-2017-10-02-at-19.46.29-1024x567.png" alt="Screen-Shot-2017-10-02-at-19.46.29-1024x567.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171002_github-pages/Screen-Shot-2017-10-02-at-19.46.29-1024x567.png" alt="Screen-Shot-2017-10-02-at-19.46.29-1024x567.png"/>
 
 &nbsp;
 
@@ -93,7 +93,7 @@ GitPushしたあとにRepositoryで設定を行うと
 「 Your site is published at {url}」
 のように表示されたらOK。
 
-<img class="post-image" src="./Screen-Shot-2017-10-02-at-19.46.42-1024x711.png" alt="Screen-Shot-2017-10-02-at-19.46.42-1024x711.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171002_github-pages/Screen-Shot-2017-10-02-at-19.46.42-1024x711.png" alt="Screen-Shot-2017-10-02-at-19.46.42-1024x711.png"/>
 
 &nbsp;
 

@@ -4,7 +4,7 @@ title: Railsの便利メソッドをlodashでやると
 slug: /2018/06/11/lodash-instead-of-rails
 createdAt: 2018-06-11 23:29:59
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.png
+thumbnail: /2018/06/20180611_lodash-instead-of-rails/thumbnail.png
 categories: 
   - rails
 ---

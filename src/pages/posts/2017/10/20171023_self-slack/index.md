@@ -4,7 +4,7 @@ title: フリーランスの方や在宅作業の方におすすめ。一人Slac
 slug: /2017/10/23/self-slack
 createdAt: 2017-10-23 20:12:45
 updatedAt: 2018-11-08 18:29:42
-thumbnail: ./thumbnail.png
+thumbnail: /2017/10/20171023_self-slack/thumbnail.png
 categories: 
   - freelance
 ---
@@ -28,7 +28,7 @@ categories:
 
 &nbsp;
 
-<img class="post-image" src="./Screen-Shot-2017-10-23-at-17.35.48-1024x570.png" alt="Screen-Shot-2017-10-23-at-17.35.48-1024x570.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-17.35.48-1024x570.png" alt="Screen-Shot-2017-10-23-at-17.35.48-1024x570.png"/>
 
 &nbsp;
 
@@ -113,7 +113,7 @@ Slackには自分が考えていることや詰まっていること、リマイ
 
 slackではチャンネルと言って、
 自分で好きなチャットルームの部屋を作ることができます。
-<img class="post-image" src="./Screen-Shot-2017-10-23-at-18.51.31.png" alt="Screen-Shot-2017-10-23-at-18.51.31.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-18.51.31.png" alt="Screen-Shot-2017-10-23-at-18.51.31.png"/>
 
 &nbsp;
 
@@ -157,16 +157,16 @@ To Doって続かないですよね。
 忘れずにやらないと行けないことをガンガンつぶやいていきます。
 （下記は例です。こんなことTo Doに書く人いないと思いますけど・・・）
 
-<img class="post-image" src="./Screen-Shot-2017-10-23-at-19.14.36.png" alt="Screen-Shot-2017-10-23-at-19.14.36.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-19.14.36.png" alt="Screen-Shot-2017-10-23-at-19.14.36.png"/>
 
 &nbsp;
 
 また、slackではスニペットという機能を
 使って文字を装飾できるので、
 タスクが終わったら取り消し線を入れることができます。
-<img class="post-image" src="./Screen-Shot-2017-10-23-at-19.16.36-1024x248.png" alt="Screen-Shot-2017-10-23-at-19.16.36-1024x248.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-19.16.36-1024x248.png" alt="Screen-Shot-2017-10-23-at-19.16.36-1024x248.png"/>
 
-<img class="post-image" src="./Screen-Shot-2017-10-23-at-19.18.24-1024x229.png" alt="Screen-Shot-2017-10-23-at-19.18.24-1024x229.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-19.18.24-1024x229.png" alt="Screen-Shot-2017-10-23-at-19.18.24-1024x229.png"/>
 
 （ "~"で文字を囲むとその間を取り消し線で表示できます。)
 朝を起きるになってる。。

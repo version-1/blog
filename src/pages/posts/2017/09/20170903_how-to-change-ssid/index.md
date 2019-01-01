@@ -4,7 +4,7 @@ title: 自分の名前を晒すのやめましょう。。 iPhoneのSSIDの変�
 slug: /2017/09/03/how-to-change-ssid
 createdAt: 2017-09-03 13:53:42
 updatedAt: 2018-08-25 22:20:02
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/09/20170903_how-to-change-ssid/thumbnail.jpg
 categories: 
   - for-beginner
 ---
@@ -19,7 +19,7 @@ categories:
 置いておいて
 最近こんなツイートをしてみました。
 
-<img class="post-image" src="./スクリーンショット-2017-09-03-12.11.09.png" alt="スクリーンショット-2017-09-03-12.11.09.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170903_how-to-change-ssid/スクリーンショット-2017-09-03-12.11.09.png" alt="スクリーンショット-2017-09-03-12.11.09.png"/>
 
 &nbsp;
 <h2 class="chapter">iPhoneのSSIDに名前が含まれる人は変更しましょう</h2>
@@ -86,16 +86,16 @@ WI-FIのアクセスポイントを識別するためのID
 
 &nbsp;
 <h3>②リストより「一般」を選択
-<img class="post-image" src="./IMG_3109-577x1024.png" alt="IMG_3109-577x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170903_how-to-change-ssid/IMG_3109-577x1024.png" alt="IMG_3109-577x1024.png"/>
 <h3></h3>
 <h3>③「情報」をタップ
-<img class="post-image" src="./IMG_3110-577x1024.png" alt="IMG_3110-577x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170903_how-to-change-ssid/IMG_3110-577x1024.png" alt="IMG_3110-577x1024.png"/>
 &nbsp;
 <h3>④「名前」をタップ
-<img class="post-image" src="./IMG_3111-577x1024.png" alt="IMG_3111-577x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170903_how-to-change-ssid/IMG_3111-577x1024.png" alt="IMG_3111-577x1024.png"/>
 &nbsp;
 <h3>⑤端末の名前が表示されるのでここで自分の好きな名前に変更
-<img class="post-image" src="./IMG_3112-577x1024.png" alt="IMG_3112-577x1024.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170903_how-to-change-ssid/IMG_3112-577x1024.png" alt="IMG_3112-577x1024.png"/>
 以上、
 1分かからずにできる手順です。
 

@@ -4,7 +4,7 @@ title: Laravel5.4の多言語化
 slug: /2017/08/13/international-laravel
 createdAt: 2017-08-13 20:49:40
 updatedAt: 2018-08-26 11:47:17
-thumbnail: ./thumbnail.png
+thumbnail: /2017/08/20170813_international-laravel/thumbnail.png
 categories: 
   - engineering
 ---

@@ -4,7 +4,7 @@ title: Google AnalyticsからPV順に記事を取得するその② - サイド�
 slug: /2017/11/05/ga-fetch-order-by-pv-2
 createdAt: 2017-11-05 23:16:05
 updatedAt: 2018-08-26 11:27:17
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/11/20171105_ga-fetch-order-by-pv-2/thumbnail.jpg
 categories: 
   - engineering
   - rails
@@ -34,7 +34,7 @@ URLで判断するようにしました。)
 
 完成イメージはこのような感じです。
 
-<img class="post-image" src="./ScreenShot-1.png" alt="ScreenShot-1.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/ScreenShot-1.png" alt="ScreenShot-1.png"/>
 
 この記事が終わるころには、
 自分のブログで人気記事ランキングを表示できるようになっている
@@ -61,7 +61,7 @@ Wordpressの投稿は、
 
 &nbsp;
 
-<img class="post-image" src="./Screen-Shot-2017-11-05-at-22.07.43.png" alt="Screen-Shot-2017-11-05-at-22.07.43.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/Screen-Shot-2017-11-05-at-22.07.43.png" alt="Screen-Shot-2017-11-05-at-22.07.43.png"/>
 
 前回の記事とはだいぶファイルの感じが変わりますが、
 <ul>

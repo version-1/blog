@@ -4,7 +4,7 @@ title: 私がフリーランスになった理由
 slug: /2018/02/23/why-i-become-engineer
 createdAt: 2018-02-23 22:44:23
 updatedAt: 2018-10-08 08:39:07
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/02/20180223_why-i-become-engineer/thumbnail.jpg
 categories: 
   - freelance
 ---

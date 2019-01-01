@@ -4,7 +4,7 @@ title: Udemy でデザインのコースを受けてみた感想。Udemyで勉�
 slug: /2017/11/12/e-learning-udemy
 createdAt: 2017-11-12 15:49:19
 updatedAt: 2018-01-01 11:30:10
-thumbnail: ./thumbnail.png
+thumbnail: /2017/11/20171112_e-learning-udemy/thumbnail.png
 categories:
   - column
 ---
@@ -27,7 +27,7 @@ categories:
 
 &nbsp;
 <h2 class="chapter">オンライン学習サービスUdemyとは</h2>
-<img class="post-image" src="./Udemy-Top.png" alt="Udemy-Top.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171112_e-learning-udemy/Udemy-Top.png" alt="Udemy-Top.png"/>
 
 &nbsp;
 

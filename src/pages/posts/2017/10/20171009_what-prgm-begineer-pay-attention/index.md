@@ -4,7 +4,7 @@ title: プログラミング初心者の人が身につける習慣
 slug: /2017/10/09/what-prgm-begineer-pay-attention
 createdAt: 2017-10-09 09:38:45
 updatedAt: 2018-08-25 22:19:45
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/10/20171009_what-prgm-begineer-pay-attention/thumbnail.jpg
 categories: 
   - engineering
   - for-beginner

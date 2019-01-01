@@ -4,7 +4,7 @@ title: CakePHPをインストール
 slug: /2017/01/03/cakephp-install
 createdAt: 2017-01-03 21:09:23
 updatedAt: 2018-08-26 12:52:07
-thumbnail: ./thumbnail.png
+thumbnail: /2017/01/20170103_cakephp-install/thumbnail.png
 categories:
   - engineering
   - for-beginner
@@ -177,4 +177,4 @@ $bin/cake server -H 0.0.0.0
 ```
 
 ブラウザから接続下記画面で
-<img class="post-image" src="./スクリーンショット-2017-01-03-18.52.23-300x274.png" alt="スクリーンショット-2017-01-03-18.52.23-300x274.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170103_cakephp-install/スクリーンショット-2017-01-03-18.52.23-300x274.png" alt="スクリーンショット-2017-01-03-18.52.23-300x274.png"/>

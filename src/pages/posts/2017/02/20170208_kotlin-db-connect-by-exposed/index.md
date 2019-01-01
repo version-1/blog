@@ -4,7 +4,7 @@ title: kotlin SQL Framework Exposed を使ってDB接続してみた
 slug: /2017/02/08/kotlin-db-connect-by-exposed
 createdAt: 2017-02-08 00:22:56
 updatedAt: 2018-11-08 18:33:11
-thumbnail: ./thumbnail.png
+thumbnail: /2017/02/20170208_kotlin-db-connect-by-exposed/thumbnail.png
 categories: 
   - engineering
 ---

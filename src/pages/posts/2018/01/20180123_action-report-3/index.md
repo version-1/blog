@@ -4,7 +4,7 @@ title: 学ぶことを学ぶ
 slug: /2018/01/23/action-report-3
 createdAt: 2018-01-23 09:23:51
 updatedAt: 2018-10-11 23:58:05
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/01/20180123_action-report-3/thumbnail.jpg
 categories: 
   - freelance
 ---
@@ -51,7 +51,7 @@ React面白いですね。ちょっと今更感もあるかもしれないので
 
 &nbsp;
 <h2>今週読んだ本 | SOFT SKILLS ソフトウェア開発者の人生マニュアル</h2>
-<img class="post-image" src="./soft-skill.jpg" alt="soft-skill.jpg"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/01/20180123_action-report-3/soft-skill.jpg" alt="soft-skill.jpg"/>
 
 &nbsp;
 

@@ -4,7 +4,7 @@ title: OmniAuthで認証後のコールバックにパラメータを渡す方�
 slug: /2018/07/01/omniauth-callback-pass-params
 createdAt: 2018-07-01 16:24:45
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.png
+thumbnail: /2018/07/20180701_omniauth-callback-pass-params/thumbnail.png
 categories:
   - engineering
   - rails

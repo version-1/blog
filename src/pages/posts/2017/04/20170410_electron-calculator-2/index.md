@@ -4,7 +4,7 @@ title: Electron の勉強がてら電卓を作ってみた~その② - 実装編
 slug: /2017/04/10/electron-calculator-2
 createdAt: 2017-04-10 01:27:49
 updatedAt: 2018-08-26 12:10:42
-thumbnail: ./thumbnail.png
+thumbnail: /2017/04/20170410_electron-calculator-2/thumbnail.png
 categories: 
   - engineering
 ---
@@ -44,7 +44,7 @@ ElectronはこのIPC通信というものでデータのやりとりを
 
 
 画面はこんな感じ
-<img class="post-image" src="./スクリーンショット-2017-04-10-1.26.51-257x300.png" alt="スクリーンショット-2017-04-10-1.26.51-257x300.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170410_electron-calculator-2/スクリーンショット-2017-04-10-1.26.51-257x300.png" alt="スクリーンショット-2017-04-10-1.26.51-257x300.png"/>
 
 &nbsp;
 
@@ -53,7 +53,7 @@ ElectronはこのIPC通信というものでデータのやりとりを
 <h2 class="chapter">それでは実装</h2>
 
 今回のディレクトリ構成は以下の通り
-<img class="post-image" src="./スクリーンショット-2017-04-10-0.24.25-298x300.png" alt="スクリーンショット-2017-04-10-0.24.25-298x300.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170410_electron-calculator-2/スクリーンショット-2017-04-10-0.24.25-298x300.png" alt="スクリーンショット-2017-04-10-0.24.25-298x300.png"/>
 ※今回はjqueryも使用しています。
 
 &nbsp;

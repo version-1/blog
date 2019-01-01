@@ -4,7 +4,7 @@ title: \[Mac\] たったの10分!! Vagrantで Ruby on Rails 5 を自動構築
 slug: /2017/01/14/vagrant-rails-5min
 createdAt: 2017-01-14 22:10:04
 updatedAt: 2018-08-26 12:46:33
-thumbnail: ./thumbnail.png
+thumbnail: /2017/01/20170114_vagrant-rails-5min/thumbnail.png
 categories: 
   - engineering
   - rails
@@ -33,9 +33,9 @@ Rails5環境を構築できるかと思います。
 インストールはこちらから
 <a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer">https://www.vagrantup.com/</a>
 <h4>Downloadをクリック</h4>
-<img class="post-image" src="./スクリーンショット-2017-01-14-21.08.33-300x192.png" alt="スクリーンショット-2017-01-14-21.08.33-300x192.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170114_vagrant-rails-5min/スクリーンショット-2017-01-14-21.08.33-300x192.png" alt="スクリーンショット-2017-01-14-21.08.33-300x192.png"/>
 <h4 style="padding-left: 30px;">Macのリンクを選択</h4>
-<img class="post-image" src="./スクリーンショット-2017-01-14-21.08.56-300x213.png" alt="スクリーンショット-2017-01-14-21.08.56-300x213.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170114_vagrant-rails-5min/スクリーンショット-2017-01-14-21.08.56-300x213.png" alt="スクリーンショット-2017-01-14-21.08.56-300x213.png"/>
 <h4 style="padding-left: 30px;">ターミナルでインストールされたか確認</h4>
 ```
  vagrant --version

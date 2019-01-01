@@ -4,7 +4,7 @@ title: \[React\] Component, PureComponent, SFCComponentのレンダリングの�
 slug: /2018/08/23/diffrence-between-react-components
 createdAt: 2018-08-23 09:28:55
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.png
+thumbnail: /2018/08/20180823_diffrence-between-react-components/thumbnail.png
 categories: 
   - engineering
   - react
@@ -82,7 +82,7 @@ SFCはステートレスの名前の通り、内部に状態を持ちません�
 
 <a href="https://version-1.github.io/react-rendering-sample/">デモ</a>
 
-<img class="post-image" src="./Screen-Shot-2018-08-23-at-7.58.42.png" alt="Screen-Shot-2018-08-23-at-7.58.42.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/08/20180823_diffrence-between-react-components/Screen-Shot-2018-08-23-at-7.58.42.png" alt="Screen-Shot-2018-08-23-at-7.58.42.png"/>
 
 &nbsp;
 

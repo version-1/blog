@@ -4,7 +4,7 @@ title: Rails5.1すでに存在するカラムをmigrationでnot nullにする
 slug: /2018/03/01/rails-migration-not-null
 createdAt: 2018-03-01 22:03:57
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.png
+thumbnail: /2018/03/20180301_rails-migration-not-null/thumbnail.png
 categories: 
   - engineering
   - rails

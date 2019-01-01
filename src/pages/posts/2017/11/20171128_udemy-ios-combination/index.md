@@ -4,7 +4,7 @@ title: UdemyでiOSアプリからログインしたら、コースが連携さ�
 slug: /2017/11/28/udemy-ios-combination
 createdAt: 2017-11-28 16:11:14
 updatedAt: 2017-11-28 16:11:14
-thumbnail: ./thumbnail.png
+thumbnail: /2017/11/20171128_udemy-ios-combination/thumbnail.png
 categories:
   - column
 ---
@@ -37,7 +37,7 @@ Udemyを登録した当初ダウンロードして移動中の電車の中など
 
 &nbsp;
 <h3 class="section">コースがアーカイブ済み</h3>
-<img class="post-image" src="./Screen-Shot-2017-11-28-at-15.25.58-1024x268.png" alt="Screen-Shot-2017-11-28-at-15.25.58-1024x268.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171128_udemy-ios-combination/Screen-Shot-2017-11-28-at-15.25.58-1024x268.png" alt="Screen-Shot-2017-11-28-at-15.25.58-1024x268.png"/>
 
 &nbsp;
 

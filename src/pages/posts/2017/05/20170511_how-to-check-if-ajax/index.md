@@ -4,7 +4,7 @@ title: Rails で Ajaxかどうかを見分ける方法 ( Ajaxで .html.erbが読
 slug: /2017/05/11/how-to-check-if-ajax
 createdAt: 2017-05-11 00:34:36
 updatedAt: 2018-08-26 12:04:44
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/05/20170511_how-to-check-if-ajax/thumbnail.jpg
 categories: 
   - engineering
   - rails

@@ -4,7 +4,7 @@ title: Rails migratoinコマンドまとめ
 slug: /2017/03/13/rails-migratoin
 createdAt: 2017-03-13 23:21:52
 updatedAt: 2018-08-26 12:14:47
-thumbnail: ./thumbnail.png
+thumbnail: /2017/03/20170313_rails-migratoin/thumbnail.png
 categories: 
   - engineering
   - rails

@@ -78,11 +78,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
-            thumbnail {
-              childImageSharp {
-                fluid { ...GatsbyImageSharpFluid }
-              }
-            }
+            thumbnail
             templateKey
             createdAt(formatString: "MMMM DD, YYYY")
           }

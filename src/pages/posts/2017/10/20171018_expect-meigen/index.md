@@ -4,7 +4,7 @@ title: 私的お気に入り名言集をあげてみたら未来予測系が多�
 slug: /2017/10/18/expect-meigen
 createdAt: 2017-10-18 23:58:07
 updatedAt: 2017-12-22 22:44:11
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/10/20171018_expect-meigen/thumbnail.jpg
 categories:
   - column
 ---

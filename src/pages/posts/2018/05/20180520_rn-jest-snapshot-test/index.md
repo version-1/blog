@@ -4,7 +4,7 @@ title: ReactNative+Jestでスナップショットテスト
 slug: /2018/05/20/rn-jest-snapshot-test
 createdAt: 2018-05-20 22:27:28
 updatedAt: 2018-11-08 18:34:01
-thumbnail: ./thumbnail.png
+thumbnail: /2018/05/20180520_rn-jest-snapshot-test/thumbnail.png
 categories: 
   - engineering
   - react
@@ -132,7 +132,7 @@ Ran all test suites.
 
 &nbsp;
 
-<img class="post-image" src="./ReactNativeButton.gif" alt="ReactNativeButton.gif"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/05/20180520_rn-jest-snapshot-test/ReactNativeButton.gif" alt="ReactNativeButton.gif"/>
 
 &nbsp;
 

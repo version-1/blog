@@ -4,7 +4,7 @@ title: TDDとかBDDとかあるけど、個人的に感じているテストコ�
 slug: /2018/07/16/why-test-code
 createdAt: 2018-07-16 10:38:15
 updatedAt: 2018-09-02 13:09:21
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/07/20180716_why-test-code/thumbnail.jpg
 categories:
   - column
   - engineering

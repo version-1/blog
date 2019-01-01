@@ -4,7 +4,7 @@ title: Mac の簡単設定で作業を高速化。カーソルとポインタの
 slug: /2017/05/25/be-faster-on-mac
 createdAt: 2017-05-25 14:19:14
 updatedAt: 2017-12-22 22:53:28
-thumbnail: ./thumbnail.jpg
+thumbnail: /2017/05/20170525_be-faster-on-mac/thumbnail.jpg
 categories:
   - column
 ---
@@ -62,7 +62,7 @@ categories:
 
 写真のように軌跡の速さをMAXにします。
 
-<img class="post-image" src="./スクリーンショット-2017-05-25-10.53.04-1024x791.png" alt="スクリーンショット-2017-05-25-10.53.04-1024x791.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/05/20170525_be-faster-on-mac/スクリーンショット-2017-05-25-10.53.04-1024x791.png" alt="スクリーンショット-2017-05-25-10.53.04-1024x791.png"/>
 
 スピードを最大にすると、
 マウスポインタが軽くなった感じになります。

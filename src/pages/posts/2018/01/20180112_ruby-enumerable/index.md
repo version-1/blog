@@ -4,7 +4,7 @@ title: \[ruby\]rubyのEnumerableクラスの抽出メソッドまとめ、map、
 slug: /2018/01/12/ruby-enumerable
 createdAt: 2018-01-12 15:35:22
 updatedAt: 2018-08-26 00:57:02
-thumbnail: ./thumbnail.jpg
+thumbnail: /2018/01/20180112_ruby-enumerable/thumbnail.jpg
 categories: 
   - engineering
   - rails

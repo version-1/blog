@@ -4,7 +4,7 @@ title: Udemyでクーポンを利用して、気になるコースをお得に�
 slug: /2018/01/01/udemy-coupon
 createdAt: 2018-01-01 13:11:24
 updatedAt: 2018-11-08 18:28:41
-thumbnail: ./thumbnail.png
+thumbnail: /2018/01/20180101_udemy-coupon/thumbnail.png
 categories:
   - column
 ---
@@ -45,7 +45,7 @@ URLで提供される場合は、その提供されたURLをクリックして�
 
 逆にクーポンコードの場合は、
 
-<img class="post-image" src="./coupon-code.png" alt="coupon-code.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/01/20180101_udemy-coupon/coupon-code.png" alt="coupon-code.png"/>
 
 このようにコースの購入の下に「クーポンをお持ちですか？」という表示があるのでそこをクリックして入力という手続きになるようです。
 
