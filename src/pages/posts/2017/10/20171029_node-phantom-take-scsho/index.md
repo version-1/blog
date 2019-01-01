@@ -314,4 +314,4 @@ phantomjsを子プロセスで動かすというのが
 とりあえず、目的は達成されたのでよしとします。
 以上です！
 
-[after_article]
+<div class="after-article"></div>

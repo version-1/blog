@@ -158,4 +158,4 @@ iPhoneでも楽しく使わせていただいてます。
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

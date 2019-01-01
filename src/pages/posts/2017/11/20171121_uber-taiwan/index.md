@@ -259,4 +259,4 @@ Uberの便利さと簡単な台湾旅行記をお伝えしました。
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

@@ -106,4 +106,4 @@ a {
 文字幅でなく、画面の横幅全体に下線が
 広がってしまうので注意してください。
 
-[after_article]
+<div class="after-article"></div>

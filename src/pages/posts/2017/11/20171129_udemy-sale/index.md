@@ -82,4 +82,4 @@ Udemyの一コースの単価って割と高いですよね。UdemyはCtoCの一
 
 <a class="btn btn-large" href="https://px.a8.net/svt/ejp?a8mat=2TVGOQ+BH6WX6+3L4M+BW8O2&amp;a8ejpredirect=https%3A%2F%2Fwww.udemy.com%2F" target="_blank" rel="nofollow noopener">Udemyでコースを探す</a>
 <img src="https://www14.a8.net/0.gif?a8mat=2TVGOQ+BH6WX6+3L4M+BW8O2" alt="" width="1" height="1" border="0" />
-[after_article]
+<div class="after-article"></div>

@@ -284,4 +284,4 @@ PHP入門やJava入門のような技術書から学び、
 
 では
 
-[after_article]
+<div class="after-article"></div>

@@ -93,4 +93,4 @@ URLで提供される場合は、その提供されたURLをクリックして�
 <a href="https://ver-1-0.net/2017/11/12/e-learning-udemy/">=> Udemy でデザインのコースを受けてみた感想。Udemyで勉強するメリットまとめ</a>
 <img src="https://www17.a8.net/0.gif?a8mat=2TVGOQ+BH6WX6+3L4M+5YRHE" alt="" width="1" height="1" border="0" />
 
-[after_article]
+<div class="after-article"></div>

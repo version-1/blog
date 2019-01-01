@@ -121,4 +121,4 @@ TED Talkでのプレゼンテーションが話題となったマーケティン
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

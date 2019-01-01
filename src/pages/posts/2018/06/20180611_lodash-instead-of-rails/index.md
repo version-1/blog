@@ -133,4 +133,4 @@ _.omitBy(fruit, _.isNull)
 
 では、今回は一旦ここまでで
 
-[after_article]
+<div class="after-article"></div>

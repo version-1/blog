@@ -112,4 +112,4 @@ InteliJ形のIDEだとこれをオートインデントで使っているので
 
 以上です!!
 
-[after_article]
+<div class="after-article"></div>

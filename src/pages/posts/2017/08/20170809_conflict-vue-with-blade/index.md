@@ -157,4 +157,4 @@ Vueのテキスト表示がPHPに解釈されエラーとなってしまいま�
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

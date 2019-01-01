@@ -385,4 +385,4 @@ class="btn btn-constrained"
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

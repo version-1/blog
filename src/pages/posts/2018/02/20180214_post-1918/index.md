@@ -92,4 +92,4 @@ polymophicなテーブルを経由して、has_many thourghする場合は、<st
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

@@ -208,7 +208,7 @@ gitで公開しているので、
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>
 
 &nbsp;
 

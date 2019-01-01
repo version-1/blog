@@ -255,4 +255,4 @@ Facebookのポストやtweetや友人からのLINEでのメッセージなどな
 
 以上です！！
 
-[after_article]
+<div class="after-article"></div>

@@ -342,4 +342,4 @@ docker-comoposeは一度触っただけではなかなか理解しづらい部�
 
 では。
 
-[after_article]
+<div class="after-article"></div>

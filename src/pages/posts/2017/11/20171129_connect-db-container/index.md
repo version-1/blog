@@ -24,7 +24,7 @@ vagrantなどだと完全に別OSのサーバになるので、IPアドレスを
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>
 
 &nbsp;
 <h2 class="chapter">ホストOSでもデータベースをインストールしている場合</h2>
@@ -99,4 +99,4 @@ dockerでのRails + Nginx + Postgres 環境について解説しています。
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

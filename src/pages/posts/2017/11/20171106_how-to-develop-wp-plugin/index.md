@@ -185,4 +185,4 @@ if( function_exists('HelloWorld'){ HelloWorld();}
 
 では、以上です。
 
-[after_article]
+<div class="after-article"></div>

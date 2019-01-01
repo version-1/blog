@@ -130,4 +130,4 @@ BUILD SUCCESSFUL
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

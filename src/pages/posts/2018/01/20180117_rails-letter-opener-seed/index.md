@@ -90,4 +90,4 @@ end
 ```
 
 
-[after_article]
+<div class="after-article"></div>

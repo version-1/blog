@@ -365,6 +365,6 @@ DimensionでMetricsをそれぞれ日付ごとにまとめるのか？ページ�
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>
 
 &nbsp;

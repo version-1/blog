@@ -378,6 +378,6 @@ WordPressのプラグインには悩まされた苦い思い出が
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>
 
 &nbsp;

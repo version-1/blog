@@ -191,4 +191,4 @@ Webサイトをシステム全体でとらえた場合に
 HTTPなどの説明はまた別途しますので、
 とりえあえこの記事はここまでとします。
 
-[after_article]
+<div class="after-article"></div>

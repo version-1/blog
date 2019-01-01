@@ -358,4 +358,4 @@ rails + nginx + postgres環境を構築したいと思います。
 
 &nbsp;
 
-[after_article]
+<div class="after-article"></div>

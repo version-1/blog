@@ -154,4 +154,4 @@ faviconを作成しているときにこの問題にぶち当たりました。
 
 では！
 
-[after_article]
+<div class="after-article"></div>

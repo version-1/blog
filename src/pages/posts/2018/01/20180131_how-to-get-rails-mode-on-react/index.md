@@ -59,4 +59,4 @@ function getSettings(selector: string){
 
 RailsとJavaScriptを確実に分けて開発したい！asset pipelineは使わないという主義の人はこうやって見ると良いかもしれません。
 
-[after_article]
+<div class="after-article"></div>

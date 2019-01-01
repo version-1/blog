@@ -33,7 +33,7 @@ phpのバージョンの関係で5.1を
 終わった。
 だいぶあっさり
 
-[after_article]
+<div class="after-article"></div>
 
 &nbsp;
 <h2 class="chapter">Databaseの設定</h2>
@@ -67,7 +67,7 @@ http://localhost:8000に繋いで見ると
 
 以上です！
 
-[after_article]
+<div class="after-article"></div>
 
 &nbsp;
 

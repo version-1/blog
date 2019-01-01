@@ -262,4 +262,4 @@ SMACSSは意識しつつもOOCSSも意識して構造と見た目は分離した
 
 では
 
-[after_article]
+<div class="after-article"></div>

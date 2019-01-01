@@ -245,4 +245,4 @@ images, run , pull , ps あたりは基本のコマンドなので
 また別の機会に
 続きを書いていきます。
 
-[after_article]
+<div class="after-article"></div>
