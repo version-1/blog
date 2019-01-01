@@ -5,7 +5,7 @@ slug: /2017/02/12/kotlin-helloworld-intelij-idea
 createdAt: 2017-02-12 09:26:57
 updatedAt: 2018-01-30 23:22:37
 thumbnail: /2017/02/20170212_kotlin-helloworld-intelij-idea/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -14,7 +14,7 @@ categories:
 
 以前に
 
-<strong><a href="http://ver-1-0.net/2017/01/02/kotlin-hello-world/">KotlinでHello world!!!</a></strong>
+<strong><a href="/2017/01/02/kotlin-hello-world/">KotlinでHello world!!!</a></strong>
 
 として
 記事を書きましたが、
@@ -26,7 +26,9 @@ JetBrains社製の<strong>InteliJ IDEA</strong>というIDE(統合開発環境)�
 &nbsp;
 
 ダウンロード先
-<a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a>
+<a href="https://www.jetbrains.com/idea/">
+https://www.jetbrains.com/idea/</a>
+
 Community Editionであれば無料でお試しできます。
 
 &nbsp;
@@ -34,7 +36,8 @@ Community Editionであれば無料でお試しできます。
 IDEAでKotlinプロジェクト作ってから
 HelloWorldするまでを動画に録りました。
 
-[video width="960" height="540" mp4="http://ver-1-0.net/wp-content/uploads/2017/02/Kotlin_HelloWorld_IDEA.mp4"][/video]
+http://ver-1-0.net/wp-content/uploads/2017/02/Kotlin_HelloWorld_IDEA.mp4
+
 <strong>※無音ですので、安心してご利用ください。</strong>
 
 &nbsp;
@@ -44,11 +47,7 @@ HelloWorldするまでを動画に録りました。
 <strong>" Create directories for empty content roots automatically. "</strong>
 というのを選択すれば、
 動画のようにわざわざディレクトリ作る必要ないんですね。。。
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170212_kotlin-helloworld-intelij-idea/スクリーンショット-2017-02-12-9.11.32-1024x512.png" alt="スクリーンショット-2017-02-12-9.11.32-1024x512.png"/>
-
-&nbsp;
-
-&nbsp;
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170212_kotlin-helloworld-intelij-idea/ide.png" alt="ide.png"/>
 
 &nbsp;
 

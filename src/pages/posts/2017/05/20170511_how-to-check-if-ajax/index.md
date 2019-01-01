@@ -5,7 +5,7 @@ slug: /2017/05/11/how-to-check-if-ajax
 createdAt: 2017-05-11 00:34:36
 updatedAt: 2018-08-26 12:04:44
 thumbnail: /2017/05/20170511_how-to-check-if-ajax/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -14,15 +14,10 @@ categories:
 
 Railsでajax送信でポップアップを表示する場合、
 
-&nbsp;
 
 通常は、*.js.erb などが読み込まれるのですが、
 ページ内のリンクやボタンではなく、
-URLを直打ちなどした場合に
-
-&nbsp;
-
-Controllerが通常のリクエスト通り、
+URLを直打ちなどした場合にControllerが通常のリクエスト通り、
 *.html.rbファイルを読み込んでしまい
 MissingTemplateになってしまうといった場合があると思います。
 
@@ -34,6 +29,7 @@ MissingTemplateになってしまうといった場合があると思います�
 Ajaxのリクエスト　→ 通常通り
 それ以外 → 元のページにリダイレクト
 のようにするのが有効です。
+
 ```ruby
 class ExamplesController < ApplicationController
 

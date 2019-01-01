@@ -5,7 +5,7 @@ slug: /2017/01/12/ansible-for-mac
 createdAt: 2017-01-12 00:21:21
 updatedAt: 2018-08-26 12:48:17
 thumbnail: /2017/01/20170112_ansible-for-mac/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -35,10 +35,13 @@ pythonのバージョンの管理ができるpyenvをインストール
 brew install pyenv
 ```
 ~/.bashrcにpyenvの環境変数等を設定
-<pre>export PYENV_ROOT="$HOME/.pyenv"
+
+```bash
+export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-</pre>
+```
+
 python3をインストール
 ```bash
 pyenv install 3.5.0
@@ -54,6 +57,7 @@ Python 3.5.0 # OK !!!
 &nbsp;
 <h2 class="chapter">③パッケージ管理ツールpipをインストール</h2>
 &nbsp;
+
 ```bash
 easy_install pip
 
@@ -61,14 +65,17 @@ easy_install pip
 &nbsp;
 <h2 class="chapter">④Ansible をインストール</h2>
 &nbsp;
+
 ```bash
 sudo pip install ansible
 ```
 正常にインストールされたことを確認
+
 ```bash
 $ansible --version
 ansible 2.2.0.0
 ```
+
 次以降は、
 AnsibleとVagantを組み合わせて
 CakePHP( or Rails)の環境を作れるように

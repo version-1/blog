@@ -1,16 +1,14 @@
 ---
 templateKey: blog-post
-title: \[Node.js\]ビットコインの価格をBitFlyer APIを使ってリアルタイムにDBに保存する。
+title: Node.js ビットコインの価格をBitFlyer APIを使ってリアルタイムにDBに保存する。
 slug: /2017/04/28/node-js-realtime
 createdAt: 2017-04-28 23:16:17
 updatedAt: 2018-11-08 18:29:35
 thumbnail: /2017/04/20170428_node-js-realtime/thumbnail.png
-categories: 
+categories:
   - cryptocurrency-blockchain
   - engineering
 ---
-
-&nbsp;
 
 &nbsp;
 
@@ -127,21 +125,24 @@ lightning_ticker_BTC_JPY { product_code: 'BTC_JPY',
 ・
 
 ```
+
 以上です！
 
 <strong>ビットコインってどうやって買えるの？</strong>
 という方はこちらの記事
+
 まだ知らない？仮想通貨の買い方　ビットコイン、イーサリアム、ネム、リップルetc…
 
 &nbsp;
 
 <strong>ビットコインを使うとどうなるの？</strong>
 という方はこちらの記事
-<a href="https://ver-1-0.net/2017/05/21/illustration-merit-bitcoin/">ビットコイン急騰中!! ビットコインのメリットまとめてみた</a>
 
-<strong>ブロックチェーンの仕組みに興味がある</strong>方は
-こちらの記事
-<a href="https://ver-1-0.net/2017/10/18/how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/">マイニングとは？ブロックチェーンの仕組みを解説する記事”How does blockchain really work? I built an app to show you.”を訳してみた</a>
+<a href="/2017/05/21/illustration-merit-bitcoin/">ビットコイン急騰中!! ビットコインのメリットまとめてみた</a>
+
+<strong>ブロックチェーンの仕組みに興味がある</strong>方はこちらの記事
+
+<a href="/10/18/how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/">マイニングとは？ブロックチェーンの仕組みを解説する記事”How does blockchain really work? I built an app to show you.”を訳してみた</a>
 
 が参考になるかと思います。
 よろしければ覗いて見てください！！

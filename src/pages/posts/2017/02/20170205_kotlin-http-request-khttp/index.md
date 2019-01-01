@@ -5,7 +5,7 @@ slug: /2017/02/05/kotlin-http-request-khttp
 createdAt: 2017-02-05 22:48:17
 updatedAt: 2018-08-26 12:35:52
 thumbnail: /2017/02/20170205_kotlin-http-request-khttp/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -13,8 +13,8 @@ categories:
 
 &nbsp;
 
-さて、前回のHelloWorldに引き続き今回は
-<strong>kotlinでHTTPリクエスト</strong>を送ってみます。
+さて、今回は<strong>kotlinでHTTPリクエスト</strong>を送ってみます。
+
 <div class="after-intro"></div>
 
 &nbsp;
@@ -32,6 +32,7 @@ categories:
 使い方は<strong>khttp</strong>の上記リンク先に書いています。
 
 ひとまず build.gradle.ktsは
+
 ```groovy
 buildscript {
 
@@ -65,9 +66,11 @@ dependencies {
     compile(kotlinModule("stdlib"))
     "compile"("khttp:khttp:0.1.0")
 }
-</pre></code>
+```
+
 こんな感じで
 メインの処理は以下です。
+
 ```kotlin
 package samples
 
@@ -80,15 +83,14 @@ fun main(args: Array) {
 }
 
 ```
+
 リクエストの送信先はなんでもいいのですが
 今回は私の最近気になる、
 <strong>bitFlyer</strong>さんの<strong>API</strong>を利用して、
 <strong>ビットコイン</strong>の現在価格を取得してきます。
-<a href="https://px.a8.net/svt/ejp?a8mat=2TAGV9+1IRYQY+3JJ4+631SX" target="_blank">
-<img src="https://www21.a8.net/svt/bgt?aid=170129637092&amp;wid=004&amp;eno=01&amp;mid=s00000016528001022000&amp;mc=1" alt="" width="468" height="60" border="0" /></a>
-<img src="https://www15.a8.net/0.gif?a8mat=2TAGV9+1IRYQY+3JJ4+631SX" alt="" width="1" height="1" border="0" />
 
 ちなみにjson はこんな形でレスポンスを返します。
+
 ```json
 {"mid_price":116884.0,
 "bids":[{"price":116867.0,"size":2.346},
@@ -102,10 +104,8 @@ fun main(args: Array) {
 
 ```
 
-&nbsp;
-
-
 では、実際に動かしてみます。
+
 ```bash
 $ ./gradlew run
 :compileKotlin
@@ -119,14 +119,13 @@ w: The '-d' option with a directory destination is ignored because '-module' is 
 BUILD SUCCESSFUL
 
 ```
+
 ちなみに余計な出力を消すときは
 <strong>-q オプション</strong>
 をつけてあげてください。
 
 見事 1BTCあたりの日本円価格の取得に成功しています。
 以上です!!
-
-&nbsp;
 
 &nbsp;
 

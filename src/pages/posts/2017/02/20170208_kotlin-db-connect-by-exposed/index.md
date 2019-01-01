@@ -5,7 +5,7 @@ slug: /2017/02/08/kotlin-db-connect-by-exposed
 createdAt: 2017-02-08 00:22:56
 updatedAt: 2018-11-08 18:33:11
 thumbnail: /2017/02/20170208_kotlin-db-connect-by-exposed/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -148,13 +148,15 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 CRUDとかDAOとかもっともっとできることはあるんだろうけど、
 今回はとりあえずここまで。
 
-参考URL
+#### 参考URL
 
-<ul>
- 	<li>Javaビーム研究所 Exposedの使い方 http://blog.orekyuu.net/?p=484</li>
- 	<li>算譜王におれはなる!!!! KotlinでDBアクセスしてみた(原始的な方法、標準ライブラリ、3rdパーティライブラリ)</li>
- 	<li><a href="http://taro.hatenablog.jp/entry/2013/08/06/214702">http://taro.hatenablog.jp/entry/2013/08/06/214702</a></li>
- 	<li>https://github.com/JetBrains/Exposed/blob/master/src/main/kotlin/org/jetbrains/exposed/sql/Database.kt</li>
-</ul>
+Javaビーム研究所 Exposedの使い方
+
+http://blog.orekyuu.net/?p=484
+
+算譜王におれはなる!!!! KotlinでDBアクセスしてみた(原始的な方法、標準ライブラリ、3rdパーティライブラリ)
+http://taro.hatenablog.jp/entry/2013/08/06/214702
+
+https://github.com/JetBrains/Exposed/blob/master/src/main/kotlin/org/jetbrains/exposed/sql/Database.kt
 
 &nbsp;

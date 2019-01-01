@@ -5,7 +5,7 @@ slug: /2017/01/03/lubuntu-rails5
 createdAt: 2017-01-03 15:47:17
 updatedAt: 2018-08-26 12:57:01
 thumbnail: /2017/01/20170103_lubuntu-rails5/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -93,7 +93,9 @@ rails s -b 0.0.0.0
 
 
 ブラウザでアクセスすると
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170103_lubuntu-rails5/スクリーンショット-2017-01-03-15.37.16-300x244.png" alt="スクリーンショット-2017-01-03-15.37.16-300x244.png"/>
+
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170103_lubuntu-rails5/rails-helloworld.png" alt="スクリーンショット-2017-01-03-15.37.16-300x244.png"/>
+
 成功
 
 

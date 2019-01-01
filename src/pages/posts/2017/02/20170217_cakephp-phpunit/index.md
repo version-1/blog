@@ -5,13 +5,10 @@ slug: /2017/02/17/cakephp-phpunit
 createdAt: 2017-02-17 22:29:21
 updatedAt: 2018-08-26 12:30:23
 thumbnail: /2017/02/20170217_cakephp-phpunit/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
-
-&nbsp;
-
 &nbsp;
 
 さて今回は PHPUnitを使ったテストです。
@@ -86,13 +83,12 @@ tests/TestCase の下のテストコードたちが
 &nbsp;
 
 細かい規約は以下 CakePHPの<a href="https://book.cakephp.org/3.0/ja/development/testing.html">CookBook</a>から引用
-<ul>
- 	<li>テストを含むPHPファイルは、 tests/TestCase/[Type] ディレクトリに置きます。</li>
- 	<li>ファイル名の最後は必ずただ .php とだけ書くのではなく Test.php とします。</li>
- 	<li>テストを含むクラスは Cake\TestSuite\TestCase 、 Cake\TestSuite\IntegrationTestCase または \PHPUnit_Framework_TestCase を継承する必要があります。</li>
- 	<li>他のクラス名と同様に、テストケースのクラス名はファイル名と一致する必要があります。 RouterTest.php は、 class RouterTest extends TestCase が含まれている 必要があります。</li>
- 	<li>テストを含むメソッド (つまり、アサーションを含むメソッド) の名前は testPublished() のように test で始める必要があります。 @test というアノテーションをメソッドに マークすることでテストメソッドとすることもできます。</li>
-</ul>
+
+- テストを含むPHPファイルは、 tests/TestCase/[Type] ディレクトリに置きます。
+- ファイル名の最後は必ずただ .php とだけ書くのではなく Test.php とします。
+- テストを含むクラスは `Cake\TestSuite\TestCase` 、 `Cake\TestSuite\IntegrationTestCase` または `\PHPUnit_Framework_TestCase` を継承する必要があります。
+- 他のクラス名と同様に、テストケースのクラス名はファイル名と一致する必要があります。 RouterTest.php は、 class RouterTest extends TestCase が含まれている 必要があります。
+- テストを含むメソッド (つまり、アサーションを含むメソッド) の名前は testPublished() のように test で始める必要があります。 @test というアノテーションをメソッドに マークすることでテストメソッドとすることもできます。
 &nbsp;
 
 これだけではなにもわからないので、
@@ -222,20 +218,14 @@ Fixtures直下のものを読み込むことができます。
 Fixturesをグループ化するということも大切です。
 
 &nbsp;
-&nbsp;
 
 以上、自分のサイトのソースを使い、
 CakePHPで
 テストコードを書いてみました。
 
 実際のサイトにはここで書いた以上のテストを書く必要がありそうです。。
+
 <a href="http://kabu-ka.net">http://kabu-ka.net</a>
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 

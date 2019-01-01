@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: \[Mac\] たったの10分!! Vagrantで Ruby on Rails 5 を自動構築
+title: Mac たったの10分!! Vagrantで Ruby on Rails 5 を自動構築
 slug: /2017/01/14/vagrant-rails-5min
 createdAt: 2017-01-14 22:10:04
 updatedAt: 2018-08-26 12:46:33
 thumbnail: /2017/01/20170114_vagrant-rails-5min/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
   - for-beginner
@@ -26,27 +26,41 @@ Rails5環境を構築できるかと思います。
 <div class="after-intro"></div>
 <h2 class="chapter">1.Virtual Boxインストール</h2>
 ここからMac用のものをダウンロード
+
 <a href="http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html?ssSourceSiteId=otnjp" target="_blank" rel="noopener noreferrer">http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html?ssSourceSiteId=otnjp</a>
 
 &nbsp;
 <h2 class="chapter">2.Vagrantインストール</h2>
-インストールはこちらから
-<a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer">https://www.vagrantup.com/</a>
-<h4>Downloadをクリック</h4>
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170114_vagrant-rails-5min/スクリーンショット-2017-01-14-21.08.33-300x192.png" alt="スクリーンショット-2017-01-14-21.08.33-300x192.png"/>
-<h4 style="padding-left: 30px;">Macのリンクを選択</h4>
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170114_vagrant-rails-5min/スクリーンショット-2017-01-14-21.08.56-300x213.png" alt="スクリーンショット-2017-01-14-21.08.56-300x213.png"/>
-<h4 style="padding-left: 30px;">ターミナルでインストールされたか確認</h4>
-```
- vagrant --version
 
+インストールはこちらから
+
+<a href="https://www.vagrantup.com/" target="_blank" rel="noopener noreferrer">https://www.vagrantup.com/</a>
+
+
+<h4>Downloadをクリック</h4>
+
+&nbsp;
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170114_vagrant-rails-5min/vagrant-top.png" alt="vagrant-top"/>
+
+<h4>Macのリンクを選択</h4>
+
+&nbsp;
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170114_vagrant-rails-5min/download-vagrant.png" alt="download-vagrant.png"/>
+
+<h4>ターミナルでインストールされたか確認</h4>
+
+```bash
+vagrant --version
 ```
 エラーが出なければOK
 
 &nbsp;
 <h2 class="chapter">3.Vagrant Box作成</h2>
 適当なフォルダにVagrantフォルダを作成
-<code>mkdir ~/Vagrant </code>
+
+```bash
+mkdir ~/Vagrant
+```
 
 Vagrant 初期化
 ```bash
@@ -58,32 +72,40 @@ vagrant init ubuntu/xenial64
 vagrant init の後に<strong>Vagrantfile</strong>というのがあるので
 それを編集
 編集箇所は3箇所
-<h4 style="padding-left: 30px;">プライベートアドレス設定</h4>
+<h4>プライベートアドレス設定</h4>
+
 <strong>27行目あたり</strong>
 config.vm.networkのコメントアウトを外す
+
 ```bash
 # Create a private network, which allows host-only access to the machine
- # using a specific IP.
+# using a specific IP.
  config.vm.network "private_network", ip: "192.168.33.10"
 
 ```
-<h4 style="padding-left: 30px;">メモリの割り当て設定</h4>
+
+<h4>メモリの割り当て設定</h4>
 4GB程度に設定(お好みで)
 あまり低いとインストールに時間がかかるかも
+
 ```bash
    config.vm.provider "virtualbox" do |vb|
      # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+     #   vb.gui = true
      # Customize the amount of memory on the VM:
     vb.memory = "4096"
    end
 
 ```
+
 <h4 style="padding-left: 30px;">Rails インストールシェルの設定</h4>
+
 ここにRailsをインストールするためのコマンドを書き込む
 最後の方の
-<strong>"config.vm.provision "shell", inline: <<-SHELL"</strong>から
-<strong>"SHELL"</strong>の間に以下を書き込む
+
+`config.vm.provision "shell", inline: <<-SHELL`から
+`SHELL`の間に以下を書き込む
+
 ```bash
 # 必要なパッケージをインストール
 sudo apt-get update
@@ -104,6 +126,7 @@ sudo chmwon -R ubuntu:ubuntu /vagrant/myapp
 ```
 
 <h2 class="chapter">5.Vagrant起動</h2>
+
 ```bash
 vagrant up
 ```
@@ -112,17 +135,22 @@ vagrant up
 &nbsp;
 <h2 class="chapter">できたか確認</h2>
 仮想環境にログイン
+
 ```bash
 vagrant ssh
 ```
+
 Rails アプリをWebRickで動かす
+
 ```bash
 cd /vagrant/myapp
 rails s -b 0.0.0.0
 
 ```
+
 エラーなく起動したら http://192.168.33.10:3000
 に接続してみる。
+
 <h2 class="chapter">6.振り返り</h2>
 ここまでスムーズに行けば10分程度でRailsが動くサーバを作成できる。
 環境構築は意外と時間がかかるので、

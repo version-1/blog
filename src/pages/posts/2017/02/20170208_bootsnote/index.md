@@ -5,7 +5,7 @@ slug: /2017/02/08/bootsnote
 createdAt: 2017-02-08 23:04:35
 updatedAt: 2018-01-30 23:22:43
 thumbnail: /2017/02/20170208_bootsnote/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -44,12 +44,10 @@ categories:
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 ついに見つけました。
 その待望のツールとはこちら、
+&nbsp;
+
 <h2><del datetime="2017-11-15T02:22:20+00:00">bootsnote</del>　boostnote　（すみません、スペルミスしてました。。）</h2>
 です。
 <img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170208_bootsnote/スクリーンショット-2017-02-08-22.47.51-1024x482.png" alt="スクリーンショット-2017-02-08-22.47.51-1024x482.png"/>
@@ -93,8 +91,6 @@ InteliJ形のIDEだとこれをオートインデントで使っているので
 私の場合は Cmd + P でウィンドウが表示されるように設定しています。
 
 これでメモもコピペも簡単です。
-
-&nbsp;
 
 &nbsp;
 

@@ -6,25 +6,16 @@ createdAt: 2017-05-18 07:47:37
 updatedAt: 2017-12-22 22:36:44
 thumbnail: /2017/05/20170518_take-mac-to-abroad/thumbnail.jpg
 categories:
-  - column
+  - travel
 ---
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
 題名の通りですが、
 Macは海外で使えるのでしょうか？
 
-早速回答ですが、
-<h1>使えます！</h1>
-はい、
-以上。
+早速回答ですが、**使えます！**はい、以上。
 <div class="adsense"></div>
-
-&nbsp;
 
 &nbsp;
 
@@ -34,9 +25,7 @@ Macは海外で使えるのでしょうか？
 海外の旅行先、出張先で大破みたいな
 のは避けたいですよね。
 
-大破までいかなくとも、
-充電できず、
-ただの荷物になるというのも避けたいですよね。
+大破までいかなくとも、充電できず、ただの荷物になるというのも避けたいですよね。
 
 &nbsp;
 
@@ -49,16 +38,17 @@ Macは海外で使えるのでしょうか？
 
 &nbsp;
 
-&nbsp;
-
 また、経験談だけでは信用できないと思うのでちょっと調べてみると
 
 こちらAppleのサイトより
+
 https://www.apple.com/jp/macbook-pro/specs/
 
 &nbsp;
-<h3><span style="text-decoration: underline;">MacBookPro</span></h3>
-<blockquote>電力条件と動作環境
+<h3>MacBookPro</h3>
+
+```
+電力条件と動作環境
 電源電圧：100V～240V AC
 電源周波数：50Hz〜60Hz
 動作時温度：10°〜35°C
@@ -66,34 +56,43 @@ https://www.apple.com/jp/macbook-pro/specs/
 相対湿度：0%〜90%（結露しないこと）
 動作高度：3,048 mまでテスト済み
 最高保管高度：4,572 m
-最高輸送高度：10,668 m</blockquote>
+最高輸送高度：10,668 m
+```
+
 &nbsp;
-<h3><span style="text-decoration: underline;">MacBookAir</span></h3>
-<blockquote>電源電圧：100〜240V AC
+<h3>MacBookAir</h3>
+
+```
+電源電圧：100〜240V AC
 電源周波数：50Hz〜60Hz
 動作時温度：10°〜35°C
 保管時温度：-25°〜45°C
 相対湿度：0%〜90%（結露しないこと）
 動作高度：3,048 mまでテスト済み
 最高保管高度：4,572 m
-最高輸送高度：10,668 m</blockquote>
+最高輸送高度：10,668 m
+```
+
 &nbsp;
-<h3><span style="text-decoration: underline;">MackBook</span></h3>
-<blockquote>電源電圧：100V〜240V AC
+<h3>MackBook<</h3>
+
+```
+電源電圧：100V〜240V AC
 電源周波数：50Hz〜60Hz
 動作時温度：10°〜35°C
 保管時温度：-25°〜45°C
 相対湿度：0%〜90%（結露しないこと）
 動作高度：3,048 mまでテスト済み
 最高保管高度：4,572 m
-最高輸送高度：10,668 m</blockquote>
+最高輸送高度：10,668 m
+```
 MacBook,MacBook Air, MakBookどれも同じですね。
 
 &nbsp;
 
 &nbsp;
-<h4>ポイントは電源電圧で、
-どのモデルも<strong>100 ~ 240V</strong> となっていることです。</h4>
+ポイントは電源電圧で、
+どのモデルも<strong>100 ~ 240V</strong> となっていることです。
 世界の国のほとんどが
 この範囲内におさまるためだいたい
 どこの国でも使用可となるようです。
@@ -104,6 +103,6 @@ iPhoneも付属している充電器が
 海外でもコンセントの差込口が合えば、
 問題なく使えるようです。
 
-以上、さすがMacで
+以上、さすがMac。
 海外どこでも変圧器など利用せずに使用できるようです！
 <div class="adsense"></div>

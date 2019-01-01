@@ -95,7 +95,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
 こちらにホストの定義を行うと良いかと思います。</pre>
 ```bash
 cd
-mkdir Ansible &amp;&amp; touch inventory/host
+mkdir Ansible && touch inventory/host
 
 ```
 このhostファイルに接続設定を書き込みます。

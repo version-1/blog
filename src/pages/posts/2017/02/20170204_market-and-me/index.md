@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 自分と市場の強みについて。- 彼を知り己を知れば百戦殆うからず -  己は「オレ」で彼はダレ？
+title: 自分と市場の強みについて知ろう。
 slug: /2017/02/04/market-and-me
 createdAt: 2017-02-04 14:27:38
 updatedAt: 2018-08-25 22:21:01
@@ -11,9 +11,6 @@ categories:
 ---
 
 &nbsp;
-
-&nbsp;
-<h2>彼を知り己を知れば百戦殆うからず</h2>
 <blockquote>【意味】彼を知り己を知れば百戦殆うからずとは、敵についても味方についても情勢をしっかり把握していれば、幾度戦っても敗れることはないということ。</blockquote>
 引用元:<a href="http://kotowaza-allguide.com/ka/karewoshiri.html" target="_blank" rel="noopener noreferrer">http://kotowaza-allguide.com/ka/karewoshiri.html</a>
 
@@ -21,30 +18,22 @@ categories:
 
 &nbsp;
 
-&nbsp;
+いきなり重めのワードを放り込んでしまいましたが、
 
-<strong>いきなり重めのワード</strong>を紹介して驚かれたかもしれませんが、
-
-孫氏の名言から引用させて頂きました。
+こちらの強めの名言は孫氏さんから引用させて頂きました。
 この名言を現代に当てはめるとすると、
 ここでの己とは言わずもがな、自分のやってきたこと、
 自分の好きなことや、嫌いなこと、得意なことや苦手なことでしょう。
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 では、<strong>彼というのは誰でしょうか？あの憎っくき上司の事でしょうか？</strong>
 <strong> 同期のライバルの事でしょうか？それともこだまでしょうか？</strong>
 
-&nbsp;
+いえ、市場です。
 
 &nbsp;
-
-&nbsp;
-<h2>いえ、市場です</h2>
+<h2>マーケット感覚を身に着ける</h2>
 <div class="cstmreba">
 <div class="booklink-box">
 <div class="booklink-image"><a href="http://www.amazon.co.jp/exec/obidos/asin/4478064784/llg01-22/" target="_blank" rel="nofollow noopener"><img style="border: none;" src="https://images-fe.ssl-images-amazon.com/images/I/51GLVSqdPLL._SL320_.jpg" /></a></div>
@@ -65,30 +54,23 @@ categories:
 <div class="booklink-footer"></div>
 </div>
 </div>
+
 <blockquote>すばらしい学歴や職歴に加え 、難関資格から専門知識まで持ちながら、
 不安から逃れられない人がいる一方 、ずっと少ないものしかもっていないのに 、
 「なんとかなる 」 「なんとでもなる 」という自信とともに、世の中をわたっていける人もいます 。
-この両者の違いがまさに 「売れるものに気がつく能力 」であり、「価値を認識する能力 」の差です 。</blockquote>
+この両者の違いがまさに 「売れるものに気がつく能力 」であり、「価値を認識する能力 」の差です 。
+</blockquote>
 &nbsp;
 
-&nbsp;
-
-ちきりんさんの
-マーケット感覚を身につけようから引用させて頂きました。
-引用ばかりで恐縮ですが。。
+こちらはちきりんさんの「マーケット感覚を身につけよう」から引用させて頂きました。
 Twitterでも、居酒屋でも「上司や経営層は全然わかっていない」「最近の新人は指示待ちで
 全然使えない」「長時間働かせといて、残業代も出ないし、給料も安い」などなど、
 世間は悪口や愚痴で満ちています。
 
-&nbsp;
-
-&nbsp;
 
 「会社にもっと待遇をよくしろ」とか、「上司・同僚・部下にもっとちゃんと仕事しろ」
-などなどありますが、
-全然そんなことしている場合じゃないです！！
+などなどありますが、全然そんなことしている場合じゃないですね。
 
-&nbsp;
 
 待遇をよくしろと言っても会社もそんなに万能ではなく、
 売り上げにや人件費にも限りがあるので
@@ -108,13 +90,7 @@ Twitterでも、居酒屋でも「上司や経営層は全然わかっていな�
 （私も上のことが実践できているか自問自答しながら日々を過ごしています。）
 
 &nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">ひとまずは己を知ってみる</h2>
-&nbsp;
-
 &nbsp;
 
 ひとまずは<strong>ちきりんさんの書籍</strong>を読んでみるというのも良いかと思うのですが、
@@ -142,15 +118,15 @@ Twitterでも、居酒屋でも「上司や経営層は全然わかっていな�
 
 結果は以下のような形で確認できます。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/グッドポイント診断-1024x473.png" alt="グッドポイント診断-1024x473.png"/>
+<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/goodpoint.png" alt="Good Point"/>
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.20.47-1024x229.png" alt="スクリーンショット-2017-02-02-13.20.47-1024x229.png"/>
+<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/goodpoint1.png" alt="Good Point"/>
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.20.56-1024x271.png" alt="スクリーンショット-2017-02-02-13.20.56-1024x271.png"/>
+<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/goodpoint2.png" alt="Good Point"/>
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.21.06-1024x234.png" alt="スクリーンショット-2017-02-02-13.21.06-1024x234.png"/>
+<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/goodpoint3.png" alt="Good Point"/>
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/スクリーンショット-2017-02-02-13.21.10-1024x236.png" alt="スクリーンショット-2017-02-02-13.21.10-1024x236.png"/>
+<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_market-and-me/goodpoint4.png" alt="Good Point"/>
 
 &nbsp;
 
@@ -158,13 +134,7 @@ Twitterでも、居酒屋でも「上司や経営層は全然わかっていな�
 しっかりと結果が返ってきます。
 （上の画像は、私の結果です）
 
-&nbsp;
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">まとめ - 「市場」と「己」を知る。-</h2>
 &nbsp;
 

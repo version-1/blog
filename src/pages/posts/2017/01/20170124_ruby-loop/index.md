@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: \[Ruby\]Rubyのループ ( while, times ,for , each , step, upto などなど)
+title: Rubyのループ ( while, times ,for , each , step, upto などなど)
 slug: /2017/01/24/ruby-loop
 createdAt: 2017-01-24 23:00:46
 updatedAt: 2018-08-26 12:41:41
 thumbnail: /2017/01/20170124_ruby-loop/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -22,6 +22,7 @@ timesとか簡単に回数指定してかけるし、
 while文。
 条件式がTrueである限りループし続けます。
 ある一定の条件で抜けたい場合は、breakを挿入します。
+
 ```ruby
 idx = 0
 while idx < 2 do
@@ -34,18 +35,21 @@ end
 Times文。
 指定した回数だけ処理を繰り返す事ができます。
 下に紹介した例ではidxは 0,1,2,3・・・・108となります。
+
 ```ruby
 108.times do |idx|
 pp "ボーン"
 end
 
 ```
+
 &nbsp;
 <h3>for 文</h3>
 for文。
 指定した回数だけ処理を繰り返す事ができます。
 下に紹介した例ではidxは a,b,c~zとなります。
 う〜ん便利。これでアルファベットを覚えずにすみますね。
+
 ```ruby
 for alphabet in 'a'..'z' do
   printf "#{alphabet}\n"
@@ -54,7 +58,9 @@ end
 ```
 &nbsp;
 <h3>each 文</h3>
+
 いわゆるforeach文ですね。
+
 ```ruby
 array = [ "I", "Have" , "A" , "Pen!!!" ]
 array.each do | val |
@@ -64,6 +70,7 @@ end
 ```
 ハッシュについて使ってあげると
 添え字も取得できます。
+
 ```ruby
 h = {
  "セ・リーグ" => [ "巨人", "阪神", "中日" , "ヤクルト" , "広島","横浜" ],
@@ -76,6 +83,7 @@ end
 
 ```
 &nbsp;
+
 ```ruby
 $ruby test.rb
 "セ・リーグ"
@@ -89,12 +97,13 @@ $ruby test.rb
 &nbsp;
 <h3>step , upto , downto</h3>
 upto は以下のように書くと20~30まで実行というようになります。
+
 ```ruby
 20.upto(30) do |idx|
    p idx
 end
-
 ```
+
 downto というのもある
 ```ruby
 20.upto(30) do |idx|
@@ -104,7 +113,8 @@ end
 ```
 さらに極め付けはstepです。
 1から100までは2つずつカウントしてくれます。
-```
+
+```ruby
 1.step(100, 2) do |odd|
    p odd
 end

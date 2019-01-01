@@ -5,7 +5,7 @@ slug: /2017/02/04/rails-rspec
 createdAt: 2017-02-04 22:54:26
 updatedAt: 2018-08-26 12:38:27
 thumbnail: /2017/02/20170204_rails-rspec/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
   - for-beginner
@@ -39,15 +39,14 @@ categories:
 
 まずはアプリはこんな感じです。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/スクリーンショット-2017-02-04-22.09.55-1024x272.png" alt="スクリーンショット-2017-02-04-22.09.55-1024x272.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/calculator.png" alt="calculator.png"/>
 
 はい、簡単な足し算をするアプリです。
 viewのコードは以下です。
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/スクリーンショット-2017-02-04-22.48.02-1024x586.png" alt="スクリーンショット-2017-02-04-22.48.02-1024x586.png"/>
+<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/viewcode.png" alt="viewcode.png"/>
 
 &nbsp;
 
-&nbsp;
 
 <a href="http://getbootstrap.com/">bootstarap</a>
 で多少装飾していますが、
@@ -60,13 +59,16 @@ viewのコードは以下です。
 ということで
 ```ruby
 gem 'rspec-rails', '~> 3.5'
-```を追記してから
-bundle installします。
+```
+
+を追記してからbundle installします。
 
 インストールできたら初期化
+
 ```bash
 rails generate rspec:install
 ```
+
 テストの実行方法は以下です。
 ```bash
 # モジュール単位
@@ -144,4 +146,5 @@ Finished in 0.02032 seconds (files took 4.38 seconds to load)
 試したらまたこのブログで紹介します。
 
 rspecは他にもcontrollerやmodel,routingもテストできます。
+
 はい!今回はここまで。

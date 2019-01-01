@@ -16,6 +16,7 @@ OSはLubuntu 16.0.4
 
 <h2 class="chapter">PHPの7.0インストール</h2>
 まずはPHPをインストール
+
 ```
 sudo apt-get install php7.0-cli
 
@@ -41,17 +42,20 @@ Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
 <h2>CakePHPインストール</h2>
 
 <h4>CakePHP に必要なライブラリをインストール</h4>
+
 ```bash
 sudo apt-get install php-mbstring php-intl php-mysqli
 
 ```
 
+&nbsp;
 
 <h4>composer のインストール</h4>
 
 ここからダウンロード
 <a href="https://getcomposer.org/download/">https://getcomposer.org/download/</a>
 ダウンロードしたcomposerにパスが通るように移動
+
 ```bash
 mv composer.phar /usr/local/bin/composer
 ```
@@ -60,8 +64,6 @@ mv composer.phar /usr/local/bin/composer
 ```bash
 composer self-update && composer create-project --prefer-dist cakephp/app my_app_name
 ```
-
-
 
 
 
@@ -177,4 +179,5 @@ $bin/cake server -H 0.0.0.0
 ```
 
 ブラウザから接続下記画面で
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170103_cakephp-install/スクリーンショット-2017-01-03-18.52.23-300x274.png" alt="スクリーンショット-2017-01-03-18.52.23-300x274.png"/>
+
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170103_cakephp-install/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-01-03-18.52.23-300x274.png"/>

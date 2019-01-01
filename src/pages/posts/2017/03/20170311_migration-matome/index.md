@@ -5,7 +5,7 @@ slug: /2017/03/11/migration-matome
 createdAt: 2017-03-11 23:07:13
 updatedAt: 2018-08-26 12:15:22
 thumbnail: /2017/03/20170311_migration-matome/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -41,19 +41,20 @@ rails db:migrate
 
 そんな時に、実際は実行してないけど
 スキップする方法を探していたのですが。。。
-<h3>ありました</h3>
-方法は簡単です。
-
-&nbsp;
+**ありました**方法は簡単です。
 
 <div class="after-intro"></div>
 
 &nbsp;
-
-&nbsp;
 <h2>スキップしたいバージョン番号のレコード
 をschema_migrationテーブルに追加する</h2>
+
 です。
+
+&nbsp;
+
+
+
 これで、<strong>migrateがupの状態</strong>になり、
 次から実行されることはありません。
 

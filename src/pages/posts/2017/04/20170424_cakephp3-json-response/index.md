@@ -5,11 +5,9 @@ slug: /2017/04/24/cakephp3-json-response
 createdAt: 2017-04-24 01:04:53
 updatedAt: 2018-08-26 01:17:45
 thumbnail: /2017/04/20170424_cakephp3-json-response/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
-
-&nbsp;
 
 &nbsp;
 
@@ -25,6 +23,9 @@ JSONレスポンスを返却するAPIを開発してみました。
 &nbsp;
 <h2 class="chapter">DBの準備</h2>
 下のものは、説明用のアプリです。DBは以下のようなものを用意しました。
+
+&nbsp;
+
 <table>
 <thead>
 <tr>
@@ -65,10 +66,6 @@ JSONレスポンスを返却するAPIを開発してみました。
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 これらの楽曲をJSON形式で取得するAPIを作成します。
 
 JSON形式のレスポンスを返す際のコードのポイントは3つで
@@ -96,9 +93,6 @@ JSON形式のレスポンスを返す際のコードのポイントは3つで
 define('BAD_REQUEST_CODE',400);
 define('NORMAL_REQUEST_CODE',200);
 define('AUTHORIZED_API_TOKEN','authorized_key_string');
-
-
-
 
 class SongsController extends AppController
 {

@@ -5,7 +5,7 @@ slug: /2017/04/09/electron-calculator-1
 createdAt: 2017-04-09 23:01:23
 updatedAt: 2018-08-26 12:13:15
 thumbnail: /2017/04/20170409_electron-calculator-1/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -31,6 +31,7 @@ categories:
 
 
 開発元:ソースコード管理サービスでおなじみ<a href="https://github.com/">gitHub</a>
+
 Runtime:Node.js , Chronium
 
 これが基本情報。
@@ -41,10 +42,11 @@ Slack,AtomなどもこのElectronで作られていて、
 &nbsp;
 
 <a href="https://electron.atom.io/">https://electron.atom.io/</a>
+
 これがelectronのサイトです。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170409_electron-calculator-1/スクリーンショット-2017-03-23-13.17.07-1024x401.png" alt="スクリーンショット-2017-03-23-13.17.07-1024x401.png"/>
-引用元:https://electron.atom.io/
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170409_electron-calculator-1/electron-site.png" alt="electron-site.png"/>
+引用元: https://electron.atom.io/
 
 はい、英語です。
 
@@ -89,29 +91,35 @@ nodeのバージョンを変更できるように、
 nvmもインスートールします。
 
 &nbsp;
-<h5>①nvmインストール</h5>
+#### ①nvmインストール
 インストール
+
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 
 ```
+
 インストールできたらバージョン確認
+
 ```bash
 $nvm --version
 0.33.1
 
 ```
 &nbsp;
-<h5>①Node.jsインストール</h5>
+#### ①Node.jsインストール
+
 先ほどインストールしたnvmでnodeをインストール
 <a href="https://nodejs.org/ja/">https://nodejs.org/ja/</a>
 このサイトによると、現在の推奨バージョンが6.10.2だそうなので、
 それをインストール
+
 ```bash
 nvm install 6.10.2
 ```
 &nbsp;
-<h5>②Electronインストール</h5>
+#### ②Electronインストール
+
 ```bash
 npm -g install electron-prebuilt
 ```
@@ -133,17 +141,20 @@ npm -g install electron-packager
 &nbsp;
 
 &nbsp;
-<h5>③HelloWorld!!</h5>
+#### ③HelloWorld!!
 インストールも完了したので、
 早速動かしてみましょう。
+
 ```bash
 mkdir sample
 npm init -y
 
 ```
+
 これをすると下のようなpackage.jsonファイルが出来上がります。
 デフォルトだと下記のようにindex.jsが起動時に
 実行されるファイルになります。
+
 ```json
 {
   "name": "sample",
@@ -159,11 +170,13 @@ npm init -y
 }
 
 ```
+
 まだ、index.jsがないので
 作成しましょう。
 
 index.jsはコチラを参考に作成
 https://electron.atom.io/docs/tutorial/quick-start/
+
 ```javascript
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
@@ -224,9 +237,14 @@ app.on('activate', () => {
 
 ```
 それでは、起動
-<pre><code class="bash">electron . 
+```bash
+electron .
 ```
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170409_electron-calculator-1/スクリーンショット-2017-04-09-22.56.09-300x225.png" alt="スクリーンショット-2017-04-09-22.56.09-300x225.png"/>
-<h3>無事起動できました！！</h3>
+&nbsp;
+
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170409_electron-calculator-1/electron-helloworld.png" alt="electron hello world"/>
+
+**無事起動できました！！**
+
 無事インストール＆動作確認済んだので次は
 実際に電卓を作ります。

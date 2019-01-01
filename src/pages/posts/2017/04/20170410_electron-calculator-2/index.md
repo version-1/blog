@@ -5,7 +5,7 @@ slug: /2017/04/10/electron-calculator-2
 createdAt: 2017-04-10 01:27:49
 updatedAt: 2018-08-26 12:10:42
 thumbnail: /2017/04/20170410_electron-calculator-2/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -44,7 +44,8 @@ ElectronはこのIPC通信というものでデータのやりとりを
 
 
 画面はこんな感じ
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170410_electron-calculator-2/スクリーンショット-2017-04-10-1.26.51-257x300.png" alt="スクリーンショット-2017-04-10-1.26.51-257x300.png"/>
+
+<img class="post-image half-width" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170410_electron-calculator-2/calculator.png" alt="calculator"/>
 
 &nbsp;
 
@@ -53,17 +54,15 @@ ElectronはこのIPC通信というものでデータのやりとりを
 <h2 class="chapter">それでは実装</h2>
 
 今回のディレクトリ構成は以下の通り
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170410_electron-calculator-2/スクリーンショット-2017-04-10-0.24.25-298x300.png" alt="スクリーンショット-2017-04-10-0.24.25-298x300.png"/>
-※今回はjqueryも使用しています。
 
-&nbsp;
+<img class="post-image half-width" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/04/20170410_electron-calculator-2/dir-structure.png" alt="directory structure"/>
+
+※今回はjqueryも使用しています。
 
 &nbsp;
 
 起動ポイントであるmain.jsがメインプロセス、
 app以下のファイルがそれぞれレンダラプロセスや画面表示の変更を行います。
-
-&nbsp;
 
 &nbsp;
 
@@ -146,6 +145,7 @@ ipcMain.on('push-num-button', (event, arg) => {
 
 そして、こちらがメインプロセスにリクエストを送る
 function.js
+
 ```javascript
 'use strict';
 var $ = require('jquery');
@@ -192,15 +192,16 @@ function.jsに
 そのリクエストに対してレスポンスを返すというような構造になっています。
 
 処理の順番としては、
-<pre>画面でボタンが押される(<strong>index.html</strong>)
--> function.jsに書かれたclickイベントが発火しメインプロセスにリクエストを送る。
--> main.jsに書かれたプログラムが<strong>'push-num-button'</strong>イベントをキャッチし、
-そのリクエストに対してレスポンスを返す。</pre>
+
+1. 画面でボタンが押される(**index.html**)
+2. function.jsに書かれたclickイベントが発火しメインプロセスにリクエストを送る。
+3. main.jsに書かれたプログラムが<strong>'push-num-button'</strong>イベントをキャッチし、そのリクエストに対してレスポンスを返す。
+
 もっと具体的にすると。
-<pre>1のボタンが押される
--> 1という数字が押されたことをメインプロセスに送信
--> メインプロセスに保持されたデータに1を加え、電卓に表示すべき数字を返す。
-</pre>
+
+1. 1のボタンが押される
+2. 1という数字が押されたことをメインプロセスに送信
+3. メインプロセスに保持されたデータに1を加え、電卓に表示すべき数字を返す。
 というような流れになります。
 
 この基本的な流れを抑えたらあとは、
@@ -209,12 +210,15 @@ function.jsに
 
 ソースはここに置いたので、
 もしよければ試してみてください。
+
 <a href="https://github.com/version-1/calculator">https://github.com/version-1/calculator</a>
 
 cloneしてきて、
+
 ```bash
 cd calculator
 electron src
 
 ```
+
 で起動できます。

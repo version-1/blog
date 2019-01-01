@@ -5,7 +5,7 @@ slug: /2017/03/05/vagrant-commands-summary
 createdAt: 2017-03-05 14:03:12
 updatedAt: 2018-08-26 12:27:02
 thumbnail: /2017/03/20170305_vagrant-commands-summary/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
   - for-beginner
@@ -103,11 +103,7 @@ CHANGELOG below:
 &nbsp;
 
 &nbsp;
-
-&nbsp;
 <h2>5. vagrant status</h2>
-
-
 
 vagrantイメージの状態（起動/停止)を表示。
 
@@ -125,6 +121,7 @@ vagrantイメージの状態（起動/停止)を表示。
 vagrant の初期化。
 vagrant init で初期化ファイルを作成してくれる。
 ubuntu 16を使いたい時は、
+
 ```bash
 vagrant init ubuntu/xenial64
 ```
@@ -145,19 +142,16 @@ $ vagrant init my-company-box https://boxes.company.com/my-company.box
 
 ```
 のようにする。
-<h2></h2>
-<h2>8. vagrant ssh</h2>
 
-<hr />
+<h2>8. vagrant ssh</h2>
 
 ゲストOSにssh接続。
 -cオプションをつけると,ssh接続してコマンドを投げられる。
-<h2></h2>
+
 <h2>9. vagrant ssh-config</h2>
 
-<hr />
-
 vagrant sshする時のsshの設定を出力。
+
 ```bash
 $vagrant ssh-config
 Host default
@@ -174,14 +168,10 @@ Host default
 
 <h2>10. vagrant suspend</h2>
 
-
-
 イメージの一時停止。
 
 &nbsp;
 <h2>11. vagrant resume</h2>
-
-
 
 一時停止されたイメージの再起動。
 
@@ -235,10 +225,6 @@ provider supports automatic port collision detection and resolution.
 
 powershellを起動できる模様。
 macでやって見たけど、普通にwindowsじゃないとねと言われる。
-
-
-
-&nbsp;
 
 &nbsp;
 

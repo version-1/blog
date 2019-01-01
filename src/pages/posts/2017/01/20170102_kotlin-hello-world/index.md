@@ -5,7 +5,7 @@ slug: /2017/01/02/kotlin-hello-world
 createdAt: 2017-01-02 11:01:49
 updatedAt: 2018-08-26 12:59:34
 thumbnail: /2017/01/20170102_kotlin-hello-world/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -71,6 +71,7 @@ sdkmanを使うとHelloWorldまでは、10分くらいでできてしまいま�
 <h2>kotelin HelloWorld 補足1</h2>
 できたjarの中を見てみると
 kotlin/~ というKotelinランタイムのクラスファイルが格納されている。
+
 ```bash
 jar -tvf hello.jar
     76 Tue Jan 03 11:06:36 JST 2017 META-INF/MANIFEST.MF

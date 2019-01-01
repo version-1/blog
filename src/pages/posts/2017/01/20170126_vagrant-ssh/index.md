@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: \[Vagrant\] Vagrant ssh の設定の変更
+title: Vagrant ssh の設定の変更
 slug: /2017/01/26/vagrant-ssh
 createdAt: 2017-01-26 23:19:36
 updatedAt: 2018-08-26 12:40:31
 thumbnail: /2017/01/20170126_vagrant-ssh/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -45,7 +45,7 @@ vagrant ssh-config
 
 
 また、
-<strong>vagrant ssh-config >> .ssh/config</strong>
+`vagrant ssh-config >> .ssh/config`
 として
 ssh のconfigを設定してあげることもできます。
 

@@ -39,10 +39,10 @@ categories:
 という目標のために私は
 <ul>
  	<li>
-<h3>海外赴任より先に現地に行く</h3>
+海外赴任より先に現地に行く
 </li>
  	<li>
-<h3>継続的努力をアピールするために資格取得!</h3>
+継続的努力をアピールするために資格取得!
 </li>
 </ul>
 ということをしました。
@@ -52,11 +52,10 @@ categories:
 &nbsp;
 
 &nbsp;
-<h3>海外赴任より先に現地に行く</h3>
+<h2>海外赴任より先に現地に行く</h2>
 
-<hr />
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170128_indonesia-for-two-years/IMG_2562-300x225.jpg" alt="IMG_2562-300x225.jpg"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170128_indonesia-for-two-years/indonesia-downtown.jpg" alt="indonesia-downtown"/>
 
 海外赴任より前に、先に現地に行きました。そう自費で
 
@@ -99,11 +98,9 @@ categories:
 &nbsp;
 
 &nbsp;
-<h3>継続的努力をアピールするために資格取得!!</h3>
+<h2>継続的努力をアピールするために資格取得!!</h2>
 
-<hr />
-
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170128_indonesia-for-two-years/IMG_2087-300x300.jpg" alt="IMG_2087-300x300.jpg"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/01/20170128_indonesia-for-two-years/indonesia-street.jpg" alt="indonesia-street"/>
 
 資格は知識習得のためではなく、
 継続的な努力の証として取得のための勉強をしました。
@@ -121,9 +118,7 @@ categories:
 知識習得は二次目的でした。
 
 &nbsp;
-<h3>まとめ</h3>
-
-<hr />
+<h2>まとめ</h2>
 
 以上二つのことを実践した結果入社から三年で、
 社員として初めてインドネシアへの海外赴任を達成しそうに？なりました。
@@ -134,4 +129,3 @@ categories:
 努力していけば必ずや時間がかかっても実現できるものだと信じています。
 
 最後まで読んで頂きありがとうございました。
-Sampai jumpa,lagi!!

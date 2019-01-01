@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: \[CakePHP3\]テンプレートを共通化。CakePHP部分テンプレート
+title: CakePHP3 テンプレートを共通化。CakePHP部分テンプレート
 slug: /2017/01/04/cakephp3-partial
 createdAt: 2017-01-04 23:47:57
 updatedAt: 2018-08-26 12:49:31
 thumbnail: /2017/01/20170104_cakephp3-partial/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -14,6 +14,7 @@ Rails のようにCakePHPでもViewの共通化ができないか
 調べた。
 
 その結果。見つけた。
+
 <a href="http://improve-future.com/cakephp3-how-to-use-partial-template-like-in-rails.html">http://improve-future.com/cakephp3-how-to-use-partial-template-like-in-rails.html</a>
 
 <div class="after-intro"></div>

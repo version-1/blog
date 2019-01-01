@@ -5,7 +5,7 @@ slug: /2017/05/21/illustration-merit-bitcoin
 createdAt: 2017-05-21 11:04:01
 updatedAt: 2018-11-26 22:02:05
 thumbnail: /2017/05/20170521_illustration-merit-bitcoin/thumbnail.jpg
-categories: 
+categories:
   - cryptocurrency-blockchain
 ---
 
@@ -22,8 +22,6 @@ categories:
 昨日まで1BTCあたり24万円ほどでしたが、
 一時期30万円近くまで上昇し現在、
 27万円ほどです。
-http://kabu-ka.net/bit-coin-price
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/05/20170521_illustration-merit-bitcoin/スクリーンショット-2017-05-21-9.29.03-1024x576.png" alt="スクリーンショット-2017-05-21-9.29.03-1024x576.png"/>
 
 &nbsp;
 

@@ -5,7 +5,7 @@ slug: /2017/03/13/rails-migratoin
 createdAt: 2017-03-13 23:21:52
 updatedAt: 2018-08-26 12:14:47
 thumbnail: /2017/03/20170313_rails-migratoin/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -20,9 +20,6 @@ DBの変更などをとりくむことができます。
 
 今回はマイグレーションコード
 についてまとめてみました。
-
-
-
 
 &nbsp;
 <div class="after-intro"></div>

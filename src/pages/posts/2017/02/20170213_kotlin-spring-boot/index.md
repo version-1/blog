@@ -5,7 +5,7 @@ slug: /2017/02/13/kotlin-spring-boot
 createdAt: 2017-02-13 07:35:24
 updatedAt: 2018-08-26 12:20:03
 thumbnail: /2017/02/20170213_kotlin-spring-boot/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -51,7 +51,8 @@ DB : MySQL
 &nbsp;
 
 では、まずは build.gradle から
-<h2>build.gradle</h2>
+#### build.gradle
+
 ```groovy
 buildscript {
     ext {
@@ -113,9 +114,10 @@ kotlinx.htmlやexposedあたりを使おうかと
 &nbsp;
 
 ディレクトリ構成は以下のようにしてみました。
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170213_kotlin-spring-boot/スクリーンショット-2017-02-12-23.20.04.png" alt="スクリーンショット-2017-02-12-23.20.04.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170213_kotlin-spring-boot/dir-structure.png" alt="dirstructure.png"/>
 
 各ソースはgitHubにあげたのでよかったらどうぞ
+
 <a href="https://github.com/version-1/kotlin-web-app-sample">https://github.com/version-1/kotlin-web-app-sample</a>
 
 &nbsp;
@@ -146,17 +148,14 @@ VALUES( 1 , 'John' , 26 , 1),
 http://localhost
 に接続すると以下のような画面が見れます。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170213_kotlin-spring-boot/スクリーンショット-2017-02-12-23.58.30.png" alt="スクリーンショット-2017-02-12-23.58.30.png"/>
+<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170213_kotlin-spring-boot/user-list.png" alt="user-list"/>
 
-
-&nbsp;
 
 MVCあたりのソースも載せておきます。
 
 &nbsp;
 <h2>UserController.kt</h2>
 
-<hr />
 
 ```kotlin
 package samples.controller
@@ -185,9 +184,9 @@ class UserController @Autowired constructor(private val userService: UserService
 
 
 ```
+
 <h2>User.kt</h2>
 
-<hr />
 
 ```kotlin
 package samples.model
@@ -218,9 +217,8 @@ data class User(@Id @GeneratedValue var id: Int? = 0,
 }
 
 ```
-<h2>UserRepository</h2>
 
-<hr />
+<h2>UserRepository</h2>
 
 ```kotlin
 package samples.repository
@@ -242,9 +240,8 @@ interface UserRepository : JpaRepository<User, Long> {
 }
 
 ```
-<h2>UserService</h2>
 
-<hr />
+<h2>UserService</h2>
 
 ```kotlin
 package samples.service
@@ -296,5 +293,5 @@ Kotlinと合わせて知識を深めていく必要がありそうですね。
 他にもKoltinの記事追加しました。
 ご興味あればどうぞ^^
 
-・<a href="https://ver-1-0.net/2017/09/18/kotlin-spring-api-1/">Kotlin + Spring Boot で Web APIを作成してみる。 ~その①~</a>
-・<a href="https://ver-1-0.net/2017/06/05/kotlin-spring-boot-authentication/">Kotlin + Spring Boot でログイン認証を実装</a>
+・<a href="/2017/09/18/kotlin-spring-api-1/">Kotlin + Spring Boot で Web APIを作成してみる。 ~その①~</a>
+・<a href="/2017/06/05/kotlin-spring-boot-authentication/">Kotlin + Spring Boot でログイン認証を実装</a>
