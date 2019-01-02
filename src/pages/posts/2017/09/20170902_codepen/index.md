@@ -5,7 +5,7 @@ slug: /2017/09/02/codepen
 createdAt: 2017-09-02 12:10:11
 updatedAt: 2018-01-30 23:20:00
 thumbnail: /2017/09/20170902_codepen/thumbnail.png
-categories: 
+categories:
   - engineering
   - design
 ---
@@ -32,7 +32,7 @@ categories:
 イケてるデザインレイアウトやコンポーネントなどがアップされています。
 <a href="https://codepen.io/">https://codepen.io/</a>
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.07.04-1024x770.png" alt="スクリーンショット-2017-09-02-12.07.04-1024x770.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.07.04-1024x770.png" alt="スクリーンショット-2017-09-02-12.07.04-1024x770.png"/>
 
 &nbsp;
 <h2 class="chapter"> 気に入ったデザインを探して参考にしてみる</h2>
@@ -54,7 +54,7 @@ categories:
 ズラってイケてるデザインが
 出てきます。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.00.58-1024x766.png" alt="スクリーンショット-2017-09-02-12.00.58-1024x766.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.00.58-1024x766.png" alt="スクリーンショット-2017-09-02-12.00.58-1024x766.png"/>
 
 &nbsp;
 
@@ -68,7 +68,7 @@ categories:
 
 &nbsp;
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.04.54-1024x768.png" alt="スクリーンショット-2017-09-02-12.04.54-1024x768.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.04.54-1024x768.png" alt="スクリーンショット-2017-09-02-12.04.54-1024x768.png"/>
 
 &nbsp;
 

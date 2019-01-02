@@ -5,7 +5,7 @@ slug: /2017/11/17/google-analytics-pop-posts
 createdAt: 2017-11-17 19:08:16
 updatedAt: 2017-12-22 20:32:22
 thumbnail: /2017/11/20171117_google-analytics-pop-posts/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -112,7 +112,7 @@ Wordpress.orgにプラグインとして申請中ではありますが、
 を設定してウィジェットに追加するだけです。
 
 当ブログでも利用しています。
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171117_google-analytics-pop-posts/人気記事.jpg" alt="人気記事.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171117_google-analytics-pop-posts/人気記事.jpg" alt="人気記事.jpg"/>
 
 &nbsp;
 

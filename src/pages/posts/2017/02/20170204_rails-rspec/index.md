@@ -39,11 +39,11 @@ categories:
 
 まずはアプリはこんな感じです。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/calculator.png" alt="calculator.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_rails-rspec/calculator.png" alt="calculator.png"/>
 
 はい、簡単な足し算をするアプリです。
 viewのコードは以下です。
-<img class="post-image" width="100%" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/02/20170204_rails-rspec/viewcode.png" alt="viewcode.png"/>
+<img class="post-image" width="100%" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_rails-rspec/viewcode.png" alt="viewcode.png"/>
 
 &nbsp;
 

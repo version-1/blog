@@ -5,7 +5,7 @@ slug: /2017/11/23/rails-nginx-postgres-on-docker-2
 createdAt: 2017-11-23 14:34:17
 updatedAt: 2018-08-26 01:09:02
 thumbnail: /2017/11/20171123_rails-nginx-postgres-on-docker-2/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -269,7 +269,7 @@ c7a0a8cfabe5        version1/sample     "rails server -b 0..."   8 seconds ago  
 
 &nbsp;
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-13.24.29.png" alt="Screen-Shot-2017-11-23-at-13.24.29.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-13.24.29.png" alt="Screen-Shot-2017-11-23-at-13.24.29.png"/>
 
 &nbsp;
 <h2 class="chapter">少し開発してみる</h2>
@@ -332,7 +332,7 @@ http://localhostに接続すれば。
 
 ユーザ管理画面が表示されます。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-14.07.19.png" alt="Screen-Shot-2017-11-23-at-14.07.19.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-14.07.19.png" alt="Screen-Shot-2017-11-23-at-14.07.19.png"/>
 
 構築は以上です。
 

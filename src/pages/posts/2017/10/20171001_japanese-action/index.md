@@ -5,7 +5,7 @@ slug: /2017/10/01/japanese-action
 createdAt: 2017-10-01 21:37:31
 updatedAt: 2018-08-26 01:14:37
 thumbnail: /2017/10/20171001_japanese-action/thumbnail.png
-categories: 
+categories:
   - engineering
   - design
 ---
@@ -196,7 +196,7 @@ gitで公開しているので、
 
 &nbsp;
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171001_japanese-action/Screen-Shot-2017-10-01-at-21.33.03-1024x562.png" alt="Screen-Shot-2017-10-01-at-21.33.03-1024x562.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171001_japanese-action/Screen-Shot-2017-10-01-at-21.33.03-1024x562.png" alt="Screen-Shot-2017-10-01-at-21.33.03-1024x562.png"/>
 
 &nbsp;
 

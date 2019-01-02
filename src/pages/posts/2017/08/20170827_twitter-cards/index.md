@@ -5,7 +5,7 @@ slug: /2017/08/27/twitter-cards
 createdAt: 2017-08-27 16:26:42
 updatedAt: 2018-08-26 11:44:04
 thumbnail: /2017/08/20170827_twitter-cards/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -27,7 +27,7 @@ categories:
 
 &nbsp;
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/08/20170827_twitter-cards/スクリーンショット-2017-08-27-15.46.57.png" alt="スクリーンショット-2017-08-27-15.46.57.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/スクリーンショット-2017-08-27-15.46.57.png" alt="スクリーンショット-2017-08-27-15.46.57.png"/>
 <div class="after-intro"></div>
 <h2 class="chapter">Twitter Cardsというのをやるとどうやら表示されるらしい</h2>
 &nbsp;
@@ -90,4 +90,4 @@ get_the_excerpt()を$post->$post_contentに変えました。
 
 エラーが出ていなければOKです。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/08/20170827_twitter-cards/スクリーンショット-2017-08-27-16.19.49-1024x553.png" alt="スクリーンショット-2017-08-27-16.19.49-1024x553.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/スクリーンショット-2017-08-27-16.19.49-1024x553.png" alt="スクリーンショット-2017-08-27-16.19.49-1024x553.png"/>

@@ -5,7 +5,7 @@ slug: /2017/11/17/cool-markdown-editor-inkdrop
 createdAt: 2017-11-17 00:20:44
 updatedAt: 2018-01-30 23:17:20
 thumbnail: /2017/11/20171117_cool-markdown-editor-inkdrop/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -53,7 +53,7 @@ Markdownエディタを作って月15万円稼ぐまでにやったこと —�
 他のアプリとは<strong>少し違ったフォルムで独特な</strong>
 <strong> 配色のアイコン</strong>もまた良いです。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171117_cool-markdown-editor-inkdrop/Screen-Shot-2017-11-16-at-22.50.51-1024x688.png" alt="Screen-Shot-2017-11-16-at-22.50.51-1024x688.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171117_cool-markdown-editor-inkdrop/Screen-Shot-2017-11-16-at-22.50.51-1024x688.png" alt="Screen-Shot-2017-11-16-at-22.50.51-1024x688.png"/>
 
 UIの好みも人それぞれですが、
 こっちのダークなUIも渋くていいですよね。

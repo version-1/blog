@@ -5,7 +5,7 @@ slug: /2018/02/14/post-1918
 createdAt: 2018-02-14 00:57:08
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/02/20180214_post-1918/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -39,7 +39,7 @@ has_many :blog_comments, through: :comments :source => :commentable,:source_type
 
 以下のモデルは、複数のユーザがブログを作り、各々ポストを投げていくという世界を想定したモデル群です。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/02/20180214_post-1918/polymophic-through-1024x767.png" alt="polymophic-through-1024x767.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/02/20180214_post-1918/polymophic-through-1024x767.png" alt="polymophic-through-1024x767.png"/>
 
 &nbsp;
 

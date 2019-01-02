@@ -5,7 +5,7 @@ slug: /2017/10/18/how-does-blockchain-really-work-i-built-an-app-to-show-you-tra
 createdAt: 2017-10-18 08:08:08
 updatedAt: 2018-01-30 23:18:13
 thumbnail: /2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -18,7 +18,7 @@ categories:
 チュートリアル用のようなunderstandableなアプリも
 一緒に公開しており、
 Awesome!と思ったので和訳します。
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/Screen-Shot-2017-10-18-at-7.49.58-1024x887.png" alt="Screen-Shot-2017-10-18-at-7.49.58-1024x887.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/Screen-Shot-2017-10-18-at-7.49.58-1024x887.png" alt="Screen-Shot-2017-10-18-at-7.49.58-1024x887.png"/>
 
 原文はコチラ
 <a href="https://medium.freecodecamp.org/how-does-blockchain-really-work-i-built-an-app-to-show-you-6b70cd4caf7d">How does blockchain really work? I built an app to show you.</a>
@@ -59,7 +59,7 @@ Awesome!と思ったので和訳します。
 
 私が作ったブラウザで使えるバージョンはここです。
 <a href="http://blockchaindemo.io/">browser-based version of this here.</a>
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/Screen-Shot-2017-10-17-at-23.03.09.png" alt="Screen-Shot-2017-10-17-at-23.03.09.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/Screen-Shot-2017-10-17-at-23.03.09.png" alt="Screen-Shot-2017-10-17-at-23.03.09.png"/>
 
 
 <h3 class="section">コマンドラインインターフェースバージョンをインストールする</h3>
@@ -98,7 +98,7 @@ bc
 打ち込みます。
 下のように見えるはずです。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/Screen-Shot-2017-10-17-at-23.02.02.png" alt="Screen-Shot-2017-10-17-at-23.02.02.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/Screen-Shot-2017-10-17-at-23.02.02.png" alt="Screen-Shot-2017-10-17-at-23.02.02.png"/>
 <ul>
  	<li>Index (Block#) : それがどのブロックか（ジェネシスブロックのindexは0)</li>
  	<li>Hash : そのブロックが妥当か？</li>

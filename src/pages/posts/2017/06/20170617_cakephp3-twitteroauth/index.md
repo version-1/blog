@@ -5,7 +5,7 @@ slug: /2017/06/17/cakephp3-twitteroauth
 createdAt: 2017-06-17 11:52:07
 updatedAt: 2018-08-26 11:55:55
 thumbnail: /2017/06/20170617_cakephp3-twitteroauth/thumbnail.jpg
-categories: 
+categories:
   - engineering
 ---
 
@@ -54,7 +54,7 @@ twitter Appを作成すると、
 &nbsp;
 
 <span style="text-decoration: underline;"><strong>1.Create Newをクリック</strong></span>
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-11.10.29-1024x691.png" alt="スクリーンショット-2017-06-17-11.10.29-1024x691.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-11.10.29-1024x691.png" alt="スクリーンショット-2017-06-17-11.10.29-1024x691.png"/>
 
 &nbsp;
 
@@ -63,7 +63,7 @@ twitter Appを作成すると、
 <span style="text-decoration: underline;"><strong>2.必要な情報を入力</strong></span>
 
 &nbsp;
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-11.10.59.png" alt="スクリーンショット-2017-06-17-11.10.59.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-11.10.59.png" alt="スクリーンショット-2017-06-17-11.10.59.png"/>
 
 &nbsp;
 
@@ -82,7 +82,7 @@ Keys and access Tokenタブを選択し、
 </ul>
 が表示されていることを確認します。
 （アクセストークンがない場合は、Token Actionsあたりにあるボタンを押して作成する。)
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-12.01.29.png" alt="スクリーンショット-2017-06-17-12.01.29.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-12.01.29.png" alt="スクリーンショット-2017-06-17-12.01.29.png"/>
 
 &nbsp;
 

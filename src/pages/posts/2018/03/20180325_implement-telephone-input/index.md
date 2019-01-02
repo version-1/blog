@@ -5,13 +5,13 @@ slug: /2018/03/25/implement-telephone-input
 createdAt: 2018-03-25 10:00:13
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/03/20180325_implement-telephone-input/thumbnail.png
-categories: 
+categories:
   - engineering
   - react
 ---
 
 <h2>電話番号形式で入力する際のフォームを実装</h2>
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/03/20180325_implement-telephone-input/ReactNativeTelephoneInput.gif" alt="ReactNativeTelephoneInput.gif"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/ReactNativeTelephoneInput.gif" alt="ReactNativeTelephoneInput.gif"/>
 
 &nbsp;
 
@@ -148,7 +148,7 @@ TelephoneInputコンポーネントを定義したことで、ハイフンを挿
 
 &nbsp;
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2018/03/20180325_implement-telephone-input/Screen-Shot-2018-03-24-at-23.00.48.png" alt="Screen-Shot-2018-03-24-at-23.00.48.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/Screen-Shot-2018-03-24-at-23.00.48.png" alt="Screen-Shot-2018-03-24-at-23.00.48.png"/>
 
 &nbsp;
 

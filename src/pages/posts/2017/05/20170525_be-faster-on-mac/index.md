@@ -53,7 +53,7 @@ https://ver-1-0.net/wp-content/uploads/2017/05/カーソルスピード最
 
 写真のように軌跡の速さをMAXにします。
 
-<img class="post-image almost-width" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/05/20170525_be-faster-on-mac/スクリーンショット-2017-05-25-10.53.04-1024x791.png" alt="スクリーンショット-2017-05-25-10.53.04-1024x791.png"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/スクリーンショット-2017-05-25-10.53.04-1024x791.png" alt="スクリーンショット-2017-05-25-10.53.04-1024x791.png"/>
 
 スピードを最大にすると、マウスポインタが軽くなった感じになります。
 （最初慣れないと行き過ぎてしまうのですが。。）

@@ -5,7 +5,7 @@ slug: /2017/08/09/conflict-vue-with-blade
 createdAt: 2017-08-09 23:18:54
 updatedAt: 2018-08-26 01:16:14
 thumbnail: /2017/08/20170809_conflict-vue-with-blade/thumbnail.jpg
-categories: 
+categories:
   - engineering
 ---
 
@@ -41,7 +41,7 @@ JqueryでなくAngular, React, Vueらへん
 以下、Googleトレンドで他ライブラリとの
 検索の割合調べてみた画像。
 
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/08/20170809_conflict-vue-with-blade/Compare-Javasctipt-Library-1024x567.png" alt="Compare-Javasctipt-Library-1024x567.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170809_conflict-vue-with-blade/Compare-Javasctipt-Library-1024x567.png" alt="Compare-Javasctipt-Library-1024x567.png"/>
 
 &nbsp;
 

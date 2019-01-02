@@ -5,7 +5,7 @@ slug: /2017/07/27/install-laravel51
 createdAt: 2017-07-27 19:30:38
 updatedAt: 2018-08-26 11:49:15
 thumbnail: /2017/07/20170727_install-laravel51/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---
@@ -60,7 +60,7 @@ cd sample
 php artisan serve
 
 ```
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/07/20170727_install-laravel51/スクリーンショット-2017-07-27-0.16.06-1024x574.png" alt="スクリーンショット-2017-07-27-0.16.06-1024x574.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/07/20170727_install-laravel51/スクリーンショット-2017-07-27-0.16.06-1024x574.png" alt="スクリーンショット-2017-07-27-0.16.06-1024x574.png"/>
 そして、
 http://localhost:8000に繋いで見ると
 ものすごくシンプルな画面が出てきました。

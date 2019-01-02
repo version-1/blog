@@ -5,7 +5,7 @@ slug: /2017/11/27/pomodoro-techinque
 createdAt: 2017-11-27 17:59:34
 updatedAt: 2018-08-25 22:18:33
 thumbnail: /2017/11/20171127_pomodoro-techinque/thumbnail.jpg
-categories: 
+categories:
   - freelance
 ---
 
@@ -91,7 +91,7 @@ categories:
 
 <div class="mid-article"></div>
 <h2 class="chapter">ポモドーロテクニックのやり方</h2>
-<img class="post-image" src="http://ver-1-0.net.s3-website-ap-northeast-1.amazonaws.com/uploads/2017/11/20171127_pomodoro-techinque/pomodoro-tech-iloveimg-compressed-1024x784.png" alt="pomodoro-tech-iloveimg-compressed-1024x784.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171127_pomodoro-techinque/pomodoro-tech-iloveimg-compressed-1024x784.png" alt="pomodoro-tech-iloveimg-compressed-1024x784.png"/>
 
 &nbsp;
 
