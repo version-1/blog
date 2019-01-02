@@ -12,10 +12,6 @@ categories:
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 現在話題沸騰中のビットコインですが、
 現在32万円弱といったところでしょうか。
 
@@ -32,13 +28,16 @@ categories:
 ばん。
 
 <a href="http://amzn.to/2szR7k7">はじめてのビットコイン ビットコイン研究所 (著), 佐々木健二 (監修)</a>
+
 <a href="https://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3-%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%E7%A0%94%E7%A9%B6%E6%89%80/dp/4906784216/ref=as_li_ss_il?ie=UTF8&amp;qid=1496759005&amp;sr=8-1&amp;keywords=%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3&amp;linkCode=li2&amp;tag=llg01-22&amp;linkId=48ec3b04c652151132f08fd355386afa" target="_blank" rel="noopener noreferrer"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4906784216&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=llg01-22" border="0" /></a><img style="border: none !important; margin: 0px !important;" src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&amp;l=li2&amp;o=9&amp;a=4906784216" alt="" width="1" height="1" border="0" />
+
 
 一時ビットコイン市場に影を落とした
 マウントゴックスの破綻について触れつつも、
 ビットコインに対する誤解を取り除きつつ、
 ビットコインが何であるか、どういったメリットがあるか
 解説しています。
+
 
 &nbsp;
 

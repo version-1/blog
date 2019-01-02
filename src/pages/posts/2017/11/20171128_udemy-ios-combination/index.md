@@ -37,7 +37,7 @@ Udemyを登録した当初ダウンロードして移動中の電車の中など
 
 &nbsp;
 <h3 class="section">コースがアーカイブ済み</h3>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171128_udemy-ios-combination/Screen-Shot-2017-11-28-at-15.25.58-1024x268.png" alt="Screen-Shot-2017-11-28-at-15.25.58-1024x268.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171128_udemy-ios-combination/Screen-Shot-2017-11-28-at-15.25.58-1024x268.png" alt="Screen-Shot-2017-11-28-at-15.25.58-1024x268.png"/>
 
 &nbsp;
 

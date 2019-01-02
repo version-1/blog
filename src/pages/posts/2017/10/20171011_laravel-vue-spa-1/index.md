@@ -17,11 +17,7 @@ LaravelはVue.jsを標準でサポートしており、
 だいたい二回くらいで簡単なSPAのサンプルアプリを作る計画で、
 今回はまず環境構築をしてきます。
 
-&nbsp;
-
 <div class="adsense-double-rect"></div>
-
-&nbsp;
 
 <h2 class="chapter">そもそもSPAって何？！</h2>
 SPAとはSingle Page Applicationの略で、
@@ -30,10 +26,6 @@ SPAとはSingle Page Applicationの略で、
 <strong>クライアント-サーバ型</strong>のアプリケーションとは別に、
 仮想DOMを用いて、<strong>差分</strong>だけ変更し、
 ページ遷移を伴いwebアプリケーションのことです。
-
-&nbsp;
-
-&nbsp;
 
 SPAでサイトを構築すると、
 いちいち画面全体の描画を行わない（ページをリロードしたりしない）ので、
@@ -48,18 +40,12 @@ SPAでサイトを構築すると、
 なども読み込む必要があるので、
 <strong>初期読み込みに時間がかかる</strong>ということがあるようです。
 <h2 class="chapter">環境構築　Laravelアプリ作成・Vue.jsインストール</h2>
-&nbsp;
-
-&nbsp;
 
 Laravel5.4のアプリ作成
 （Laravelはすでに導入済みの体です。）
 ```bash
 composer create-project --prefer-dist laravel/laravel  my-app "5.4.*"
 ```
-&nbsp;
-
-&nbsp;
 
 上でアプリが作成できたら、できたファイル群をみてみると。
 以下のようになります。
@@ -87,10 +73,6 @@ webpack.mix.js
 ```
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 今回はVueもインストールしないといけないので、
 上の中にある。package.jsonをみてみると
 ```json
@@ -105,9 +87,6 @@ webpack.mix.js
   }
 
 ```
-&nbsp;
-
-&nbsp;
 
 このような風に、最初からvueが
 依存関係に記述されていることがわかります。
@@ -119,14 +98,7 @@ npm install
 npmはNode.jsのパッケージを管理するツールです。
 ちなみに、Nodeもすでにインストールされている前提です。
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-<h2 class="chapter">環境構築　DB設定-salite3-</h2>
-&nbsp;
-
+<h2 class="chapter">環境構築　DB設定-sqlite3-</h2>
 &nbsp;
 
 今回のDBはsqlite3を使用します。
@@ -140,7 +112,6 @@ sqlite> .open database/development.sqlite3
 sqlite> .q
 
 ```
-&nbsp;
 
 sqliteのデータベースを作成したので、
 作成したものをデータベースに指定します。
@@ -181,6 +152,7 @@ PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
 
 ```
+
 ここまでで、
 ```bash
 php artisan serve
@@ -188,17 +160,7 @@ php artisan serve
 として、http://127.0.0.1:8000
 にアクセスすればLaravelのトップページは確認可能です。
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">環境構築　トップページだけVueで描画してみる</h2>
-&nbsp;
-
-&nbsp;
 
 作り込みは次回に回しますが、
 とりあえず、npm installされた後にできるExampleページだけでも
@@ -309,7 +271,7 @@ npm run dev
 でresources配下のjsファイルなどをビルドして、
 artisanでサーバを起動すると
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-1/Screen-Shot-2017-10-11-at-0.02.03-1024x739.png" alt="Screen-Shot-2017-10-11-at-0.02.03-1024x739.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-1/demo.png" alt="demo"/>
 
 これで、
 resources/assets/js/component/Example.vue

@@ -5,13 +5,9 @@ slug: /2017/08/13/international-laravel
 createdAt: 2017-08-13 20:49:40
 updatedAt: 2018-08-26 11:47:17
 thumbnail: /2017/08/20170813_international-laravel/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
-
-&nbsp;
-&nbsp;
-
 
 どうも
 多言語化というと
@@ -40,7 +36,6 @@ Laravelでアプリを作りはじめていて
 ちなみにLaravelのバージョンは5.4です。
 この記事はここを参考にしました。
 <a href="https://laravel.com/docs/5.4/localization">https://laravel.com/docs/5.4/localization</a>
-
 
 <div class="after-intro"></div>
 
@@ -93,6 +88,7 @@ message.descriptionなどを
 
 上の設定が住んで入れば、
 view ファイルで
+
 ```php
 __('message.description')'
 ```

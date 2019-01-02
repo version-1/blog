@@ -23,7 +23,7 @@ Kotlin+SpringBootを
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170624_problem-boot-server-in-spring/スクリーンショット-2017-06-24-11.46.54.png" alt="スクリーンショット-2017-06-24-11.46.54.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170624_problem-boot-server-in-spring/springboot.png" alt="springboot-tweet"/>
 
 &nbsp;
 
@@ -56,15 +56,14 @@ compile("org.springframework.boot:spring-boot-devtools")
 だったようで、
 さらに調べたら
 以下のようなページを見つけました。
+
 <a href="https://dzone.com/articles/continuous-auto-restart-with-spring-boot-devtools">https://dzone.com/articles/continuous-auto-restart-with-spring-boot-devtools</a>
 
 &nbsp;
 
 方法としては、
-<h3>①あるウィンドウでgradle build --continuous
-で継続的にビルド</h3>
-<h3>②別のウィンドウでgradle bootRunして
-アプリケーションを動かす。</h3>
+1. あるウィンドウでgradle build --continuousで継続的にビルド
+2. 別のウィンドウでgradle bootRunしてアプリケーションを動かす。
 になります。
 
 &nbsp;
@@ -74,8 +73,6 @@ compile("org.springframework.boot:spring-boot-devtools")
 ②で起動したアプリケーションの再起動が
 自動で行われるので、
 いちいちウィンドウを切り替えて手動でSpringを再起動させる手間が省けます。
-
-&nbsp;
 
 &nbsp;
 

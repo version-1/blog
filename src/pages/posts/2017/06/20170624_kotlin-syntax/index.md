@@ -5,7 +5,7 @@ slug: /2017/06/24/kotlin-syntax
 createdAt: 2017-06-24 11:32:23
 updatedAt: 2018-08-26 11:54:53
 thumbnail: /2017/06/20170624_kotlin-syntax/thumbnail.png
-categories: 
+categories:
   - engineering
   - for-beginner
 ---

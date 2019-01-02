@@ -5,18 +5,12 @@ slug: /2017/07/30/vagrant-status
 createdAt: 2017-07-30 22:38:20
 updatedAt: 2018-08-26 11:47:58
 thumbnail: /2017/07/20170730_vagrant-status/thumbnail.jpg
-categories: 
+categories:
   - engineering
 ---
 
-&nbsp;
-
-&nbsp;
-
 どうも、
 今回は久しぶりにvagrantの話題です。
-
-&nbsp;
 
 vagrantって
 みなさんいちいちVagrantfileのある
@@ -24,13 +18,11 @@ vagrantって
 ルートディレクトリに移動（cd)してから
 コマンド叩いていたりしませんか？
 
-&nbsp;
 
 <strong>「え、そんなことない」</strong>
 
 と言う方もいるかもしれませんが、
 
-&nbsp;
 
 上記に当てはまる方に朗報です。
 
@@ -38,9 +30,6 @@ vagrantでは、
 ローカルPCに散らばるイメージの稼働状況を
 みるコマンドが存在します。
 
-&nbsp;
-
-&nbsp;
 
 それは
 ```bash
@@ -48,9 +37,6 @@ vagrant global-status
 ```
 です。
 
-&nbsp;
-
-&nbsp;
 
 これでどのディレクトリにいても、
 vagrantの稼働状況を確認します。
@@ -106,9 +92,8 @@ vagrant halt 41ec701
 共有まで！！
 
 &nbsp;
-
-&nbsp;
 <a href="http://amzn.to/2eY82uA">Vagrant入門ガイド</a>
+
 <a href="https://www.amazon.co.jp/Vagrant%E5%85%A5%E9%96%80%E3%82%AC%E3%82%A4%E3%83%89-%E6%96%B0%E5%8E%9F%E9%9B%85%E5%8F%B8-ebook/dp/B00F418SQ8/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=llg01-22&linkId=113f390bb992a0fab201daecb538973c" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00F418SQ8&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=llg01-22" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&l=li2&o=9&a=B00F418SQ8" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 &nbsp;

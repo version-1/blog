@@ -37,7 +37,7 @@ categories:
 
 &nbsp;
 <h3>レバテックフリーランス</h3>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/levatech.jpg" alt="levatech.jpg"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/levatech.jpg" alt="levatech.jpg"/>
 
 引用元: <a href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1THW9E" target="_blank" rel="nofollow noopener">レバテックフリーランス</a>
 <img src="https://www17.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1THW9E" alt="" width="1" height="1" border="0" />
@@ -54,7 +54,7 @@ categories:
 <img src="https://www19.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1TMTQA" alt="" width="1" height="1" border="0" />
 <h3>ITプロパートナーズ</h3>
 <a href="https://itpropartners.com/">
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/itpro.jpg" alt="itpro.jpg"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/itpro.jpg" alt="itpro.jpg"/>
 </a>
 
 （引用元: <a href="https://itpropartners.com/">https://itpropartners.com/</a> )
@@ -73,7 +73,7 @@ categories:
 
 &nbsp;
 <h3>ポテパンフリーランス</h3>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/potepan.jpg" alt="potepan.jpg"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/potepan.jpg" alt="potepan.jpg"/>
 引用元:<a href="https://px.a8.net/svt/ejp?a8mat=2ZU6N8+37I6GA+3UES+BW8O2&amp;a8ejpredirect=https%3A%2F%2Ffreelance.potepan.com%2F" target="_blank" rel="nofollow noopener">https://freelance.potepan.com/</a>
 <img src="https://www12.a8.net/0.gif?a8mat=2ZU6N8+37I6GA+3UES+BW8O2" alt="" width="1" height="1" border="0" />
 

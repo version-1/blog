@@ -27,6 +27,7 @@ CakePHPを使っていますが、
 5.2を使いたかったが、
 phpのバージョンの関係で5.1を
 インストール。
+
 ```bash
  composer create-project "laravel/laravel=5.1.*" sample
 ```
@@ -55,14 +56,18 @@ DB_PASSWORD=
 データベースの設定も終わったので
 とりあえず下記のコマンドでビルトインサーバを
 起動できるよう。
+
 ```bash
 cd sample
 php artisan serve
 
 ```
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/07/20170727_install-laravel51/スクリーンショット-2017-07-27-0.16.06-1024x574.png" alt="スクリーンショット-2017-07-27-0.16.06-1024x574.png"/>
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/07/20170727_install-laravel51/laravel.png" alt="laravel top"/>
+
 そして、
-http://localhost:8000に繋いで見ると
+http://localhost:8000
+に繋いで見ると
 ものすごくシンプルな画面が出てきました。
 
 以上です！

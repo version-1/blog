@@ -5,7 +5,7 @@ slug: /2017/06/12/kotlin-syntax-alittle
 createdAt: 2017-06-12 22:09:19
 updatedAt: 2018-08-26 11:57:42
 thumbnail: /2017/06/20170612_kotlin-syntax-alittle/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -21,8 +21,8 @@ categories:
 
 <h2 class="chapter">パッケージの定義</h2>
 まずはパッケージの定義について
-ここはあまりjavaと変わりないですね。
-「;」がなくなったことくらい
+ここはあまりjavaと変わりないですね。 「;」がなくなったことくらい
+
 ```kotlin
 package my.demo
 
@@ -35,6 +35,7 @@ import java.util.*
 &nbsp;
 &nbsp;
 <h2 class="chapter">functionの定義</h2>
+
 ```kotlin
 fun sum(a: Int, b: Int): Int {
     return a + b
@@ -60,6 +61,7 @@ java で言う所のvoidのように返り値を返さない場合は、
 
 &nbsp;
 <h2 class="chapter">変数の定義</h2>
+
 ```kotlin
 val a: Int = 1 // 読み取り専用の変数。定数。
 

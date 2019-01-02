@@ -82,7 +82,7 @@ SFCはステートレスの名前の通り、内部に状態を持ちません�
 
 <a href="https://version-1.github.io/react-rendering-sample/">デモ</a>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/08/20180823_diffrence-between-react-components/Screen-Shot-2018-08-23-at-7.58.42.png" alt="Screen-Shot-2018-08-23-at-7.58.42.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/08/20180823_diffrence-between-react-components/Screen-Shot-2018-08-23-at-7.58.42.png" alt="Screen-Shot-2018-08-23-at-7.58.42.png"/>
 
 &nbsp;
 

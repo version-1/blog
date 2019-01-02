@@ -5,45 +5,29 @@ slug: /2017/07/10/flyway-migration
 createdAt: 2017-07-10 00:06:59
 updatedAt: 2018-08-26 11:51:03
 thumbnail: /2017/07/20170710_flyway-migration/thumbnail.jpg
-categories: 
+categories:
   - engineering
 ---
-
-&nbsp;
-
-&nbsp;
 
 こんばんは
 最近目を酷使しがちな<a href="https://twitter.com/version1_2017?lang=ja">@verion1</a>です。
 
-&nbsp;
-
-&nbsp;
 
 さて、
 最近セコセコと
 自分で考えたwebサイトを
 開発しているのですが、
-<h3>「開発をしているとやっぱDBの変更もヴァージョン管理できるといいよね。」</h3>
-と思い、
-マイグレーションツールを導入しました。
-
-&nbsp;
+**「開発をしているとやっぱDBの変更もヴァージョン管理できるといいよね。」**
+と思い、マイグレーションツールを導入しました。
 
 <div class="after-intro"></div>
-
-&nbsp;
 
 その名も<strong>Flyway</strong>です。
 使っている人も多いのか少ないのか
 よくわからないのですが、
 kotlinで開発していてjava系のマイグレーションツールを
-探していたので、
-使ってみることにしました。
+探していたので、使ってみることにしました。
 
-&nbsp;
-
-&nbsp;
 
 サイトをみると
 コマンドラインのツールもあるみたいなのですが、
@@ -54,9 +38,9 @@ gradleで全部やってしまいます。
 &nbsp;
 
 gradleなら
-①依存性にFlywayを追加
-②build.gradleごとgitにコミット
-③サーバにデプロイしたら、 gradlewを使ってFlywayタスクを実行。
+1. 依存性にFlywayを追加
+2. build.gradleごとgitにコミット
+3. サーバにデプロイしたら、 gradlewを使ってFlywayタスクを実行。
 
 のような感じでスムーズにできるので
 
@@ -103,14 +87,11 @@ dependencies {
 
 
 ```
+
 ここでは、
 build.gradleに接続情報を持たせてしまっています。
 
-&nbsp;
-
 <div class="mid-article"></div>
-
-&nbsp;
 
 サイトをみると
 コマンドラインで引数に渡す方法もあるみたいです。
@@ -130,34 +111,34 @@ build.gradleに接続情報を持たせてしまっています。
 &nbsp;
 
 マイグレーションファイルはクラスパス上に
-<h4>db/migration</h4>
+**db/migration**
 と言うディレクトリを切って、
 ファイルを配置します。
 
 ファイルの命名規則は
-<h3>V[バージョン番号]__[任意のファイル名].sql</h3>
+**V[バージョン番号]__[任意のファイル名].sql**
 です。
 
 &nbsp;
 
 例えば、
+```
 V1__create_hoge_table.sql
 V1.1__add_column_to_hoge_table.sql
 V1.2__alter_column_to_hoge_table.sql
 V2__create_foo_table.sql
 ・
 ・
+```
 のような形です。
-
-&nbsp;
 
 &nbsp;
 
 バージョン番号は以下のようなコマンドで確認できます。
 State が実行のステータスを表し
-「Pending」　・・・実行前
-「Success」・・・成功
-「Failed」・・・失敗
+* 「Pending」　・・・実行前
+* 「Success」・・・成功
+* 「Failed」・・・失敗
 
 &nbsp;
 ```bash
@@ -192,19 +173,12 @@ BUILD SUCCESSFUL
 
 次は実際に実行していきます。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">Flywayを使ってみる　| マイグレーション実行</h2>
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 いよいよ実行です。
 コマンドはこちら
-<pre><code class="bash">gradle flywayMigrate
+```bash
+gradle flywayMigrate
 ```
 このコマンドで、
 db/migrate配下にあるSQLファイルがバージョン
@@ -226,8 +200,10 @@ gradle flywayMigrationをしても
 
 Flywayの流儀として、
 一度マイグレーションが失敗をしたら
-<pre><code class="bash">gradle flywayRepair
+```bash
+gradle flywayRepair
 ```
+
 でマイグレーションの実行状態を
 リペアしてあげないといけません。
 
@@ -236,18 +212,12 @@ Flywayの流儀として、
 このコマンドは忘れないように実行するようにしてください。
 
 &nbsp;
-
-&nbsp;
 <h2 class="chapter">Flywayを使ってみる　| まとめ</h2>
-&nbsp;
-
 &nbsp;
 
 そもそもFlywayの導入は、
 DBの状態もヴァージョン管理できるといいよね。
 と言う目的で始めました。
-
-&nbsp;
 
 &nbsp;
 
@@ -258,16 +228,11 @@ DBの状態もヴァージョン管理できるといいよね。
 
 &nbsp;
 
-&nbsp;
-
 マイグレーションファイルは作成して、
 問題ないことが確認できたら忘れずにコミットするように
 習慣づけておきましょう。
 
-もっと興味がある方は他のコマンドなども
-調べてみると良いかと思います。
-
-&nbsp;
+もっと興味がある方は他のコマンドなども調べてみると良いかと思います。
 
 &nbsp;
 
@@ -275,8 +240,7 @@ DBの状態もヴァージョン管理できるといいよね。
 gradle flywayCleanくらいですかね。
 
 これをするとdatabaseの全テーブルが綺麗になるので
-利用には注意が必要ですが
-アプリケーション開発の初期段階では、
+利用には注意が必要ですがアプリケーション開発の初期段階では、
 頻繁にdbの構造を帰るのでまあまこれをやります。
 
 今回は

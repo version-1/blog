@@ -12,7 +12,7 @@
     "sitemap": "/sitemap.xml",
     "trackingId": "UA-71833989-5",
     "images": {
-      "url": "https://statics.ver-1-0.net/uploads"
+      "url": "https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads"
     }
   },
   "constants": {

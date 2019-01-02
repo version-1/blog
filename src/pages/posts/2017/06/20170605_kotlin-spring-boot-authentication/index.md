@@ -5,11 +5,9 @@ slug: /2017/06/05/kotlin-spring-boot-authentication
 createdAt: 2017-06-05 09:51:21
 updatedAt: 2018-08-26 12:02:45
 thumbnail: /2017/06/20170605_kotlin-spring-boot-authentication/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
-
-&nbsp;
 
 &nbsp;
 
@@ -25,7 +23,7 @@ webアプリには、
 ソースはgithubにあげているので、
 cloneしていただければ試運転できます。
 
-[video width="1920" height="1080" mp4="http://ver-1-0.net/wp-content/uploads/2017/06/kotlin-auth.mp4"][/video]
+http://ver-1-0.net/wp-content/uploads/2017/06/kotlin-auth.mp4
 
 Springには、
 SpringSecurityという認証管理を行う
@@ -54,7 +52,8 @@ DB: Mysql
 まずは、spring-securityの依存性を追加します。
 
 <a href="https://github.com/version-1/kotlin-auth-sample/blob/master/build.gradle">build.gradle</a>
-<pre><code class="language-groovy" >
+
+```groovy
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
@@ -86,6 +85,7 @@ compile('org.springframework.boot:spring-boot-starter-security')
 DBは以下のように、schema.sqlに書いて用意します。
 今回はpasswordを平文で保存してますが、
 実運用する際は、変換して保存するなどが必要です。
+
 ```sql
 drop table users;
 create table if not exists users (
@@ -295,7 +295,8 @@ login/success.html
 &nbsp;
 &nbsp;
 <h2 class="chapter">コントローラの作成</h2>
-```markup
+
+```kotlin
 package kintai.controller
 
 /**
@@ -332,7 +333,8 @@ class LoginController @Autowired constructor(private val userService: UserServic
 認証するユーザの取得する部分を書いています。
 
 <a href="https://github.com/version-1/kotlin-auth-sample/blob/master/src/main/kotlin/auth/service/UserDetailsServiceImpl.kt">UserDetailsServiceImpl</a>
-```markup
+
+```kotlin
 package kintai.service
 
 /**
@@ -386,7 +388,7 @@ open class UserDetailsServiceImpl :UserDetailsService {
 返却するLoginUserクラスはこれ
 &nbsp;
 &nbsp;
-```markup
+```kotlin
 package auth.model
 
 /**
@@ -418,7 +420,8 @@ class LoginUser (user: User): org.springframework.security.core.userdetails.User
 ユーザをemailで引っ張ってくるのはこれ
 
 <a href="https://github.com/version-1/kotlin-auth-sample/blob/master/src/main/kotlin/auth/service/UserService.kt">UserService</a>
-```markup
+
+```kotlin
 package auth.service
 
 /**
@@ -446,11 +449,9 @@ open class UserService @Autowired constructor(private val userRepository: UserRe
 
 ```
 &nbsp;
-&nbsp;
 こんな感じです。
 解説少ないですが、
 コードが語ってくれるかと思います。（丸投げ笑）
 
 <a href="https://github.com/version-1/kotlin-auth-sample">https://github.com/version-1/kotlin-auth-sample</a>
-&nbsp;
 &nbsp;

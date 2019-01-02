@@ -9,28 +9,18 @@ categories:
   - engineering
 ---
 
-&nbsp;
-
-&nbsp;
-
 前回、前々回と
 環境の構築、
 クライアント側でのルーティング設定を
 行いました。
 
-<a href="https://ver-1-0.net/2017/10/11/laravel-vue-spa-1/">Laravel5.4とVue.jsでSPAを作ってみる。① -環境構築-</a>
+<a href="/2017/10/11/laravel-vue-spa-1/">Laravel5.4とVue.jsでSPAを作ってみる。① -環境構築-</a>
 
-<a href="https://ver-1-0.net/2017/10/11/laravel-vue-spa-2/">Laravel5.4とVue.jsでSPAを作ってみる。② -クライアントルーティング-</a>
-
-&nbsp;
+<a href="/2017/10/11/laravel-vue-spa-2/">Laravel5.4とVue.jsでSPAを作ってみる。② -クライアントルーティング-</a>
 
 今回は、
 実際にAjax通信を使ったより実践的で、
 現実に即した内容をお届けできればと思います。
-
-&nbsp;
-
-&nbsp;
 
 さて、
 作成する内容ですが、
@@ -39,32 +29,23 @@ categories:
 
 出来上がったものはこちらです。
 
-[video width="860" height="924" mp4="http://ver-1-0.net/wp-content/uploads/2017/10/spa-sample-step2.mp4"][/video]
-
-&nbsp;
-
-&nbsp;
+https://ver-1-0.net/wp-content/uploads/2017/10/spa-sample-step2.mp4
 
 コインチェックのAPIを利用して、
 実に14種類の仮想通貨のレートを確認できるようにしています。
 
 内部でやっていることは
-①同サーバDB内の仮想通貨の一覧を取得
-②①のそれぞれの仮想通貨に関して価格を取得
+1. 同サーバDB内の仮想通貨の一覧を取得
+2. 1.のそれぞれの仮想通貨に関して価格を取得
 です。
 
-&nbsp;
 <div class="adsense-double-rect"></div>
-&nbsp;
 <h2 class="chapter">同サーバDB内の仮想通貨の一覧を取得</h2>
-&nbsp;
-
-&nbsp;
 
 マイグレーションを書いてDB
 に仮想通貨の情報を登録します。
+
 ```php
-<php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -119,9 +100,6 @@ class CreateCurrencies extends Migration
 }
 
 ```
-&nbsp;
-
-&nbsp;
 
 マイグレーション実行
 ```bash
@@ -129,14 +107,6 @@ php aritsan migrate
 ```
 これでDatabaseの準備はできたので、
 これをAjaxでとってきて表示させるまでやりましょう。
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 APIのルーティング設定。
 
@@ -154,18 +124,12 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 ```
-&nbsp;
-
-&nbsp;
 
 これで /api/currenciesにアクセスすると、
 json形式の仮想通貨の情報を取得できるようになります。
 （ルーティングファイルに処理を書くという。。まあチュートリアルでもやってたし。。）
 お次は表示するVueコンポーネントです。
 
-&nbsp;
-
-&nbsp;
 ```markup
 <template>
   <div class="container">
@@ -219,25 +183,17 @@ export default {
 </script>
 
 ```
+
 ここまででとりあえず、仮想通貨の一覧を取得はできて、
 Ajax通信も使えています。
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/Screen-Shot-2017-10-14-at-19.00.02.png" alt="Screen-Shot-2017-10-14-at-19.00.02.png"/>
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/demo.png" alt="demo"/>
 
 が、ここまでだとリアルタイムに価格を表示していく！！
 というSPAの面白さみたいなものがないので、
 さらにそれぞれの価格を取得するように修正していきます。
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">APIで仮想通貨の価格を取得する</h2>
-&nbsp;
-
-&nbsp;
 
 APIはこちらのコインチェックのAPIを使用します。
 <a href="https://coincheck.com/ja/documents/exchange/api">https://coincheck.com/ja/documents/exchange/api</a>
@@ -245,7 +201,6 @@ APIはこちらのコインチェックのAPIを使用します。
 価格設定の部分のAPIのルーティングを設定します。
 routes/api.phpに以下のルーティングを設定します。
 
-&nbsp;
 ```php
 Route::get('rate/{currency}',  function($currency) {
         $res = [ 'currency' => $currency ,'btc' => 0 , 'jpy' => 0 ];
@@ -300,6 +255,7 @@ Route::get('rate/{currency}',  function($currency) {
 
 ```
 javascipt部分を以下のようにします。
+
 ```javascript
 <script>
 export default {
@@ -358,15 +314,10 @@ export default {
 上の動画のような感じになります。
 
 コードはここに置いておきます。
-<a href="https://github.com/version-1/spa-sample">https://github.com/version-1/spa-sample</a>
 
-&nbsp;
+https://github.com/version-1/spa-sample
 
-&nbsp;
 <h2 class="chapter">まとめ</h2>
-&nbsp;
-
-&nbsp;
 
 以上、ここまでで
 クライアント側でレンダリングして、
@@ -388,7 +339,7 @@ export default {
 なっています。
 恐ろしや。。
 
-<a href="https://ver-1-0.net/2017/04/28/node-js-realtime/">[Node.js]ビットコインの価格をリアルタイムにDBに保存する。</a>
+<a href="/2017/04/28/node-js-realtime/">[Node.js]ビットコインの価格をリアルタイムにDBに保存する。</a>
 
 以上です！！
 

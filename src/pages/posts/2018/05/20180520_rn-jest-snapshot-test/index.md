@@ -132,7 +132,7 @@ Ran all test suites.
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/05/20180520_rn-jest-snapshot-test/ReactNativeButton.gif" alt="ReactNativeButton.gif"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/05/20180520_rn-jest-snapshot-test/ReactNativeButton.gif" alt="ReactNativeButton.gif"/>
 
 &nbsp;
 

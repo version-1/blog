@@ -55,7 +55,7 @@ categories:
 <h2>海外赴任より先に現地に行く</h2>
 
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/01/20170128_indonesia-for-two-years/indonesia-downtown.jpg" alt="indonesia-downtown"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/01/20170128_indonesia-for-two-years/indonesia-downtown.jpg" alt="indonesia-downtown"/>
 
 海外赴任より前に、先に現地に行きました。そう自費で
 
@@ -100,7 +100,7 @@ categories:
 &nbsp;
 <h2>継続的努力をアピールするために資格取得!!</h2>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/01/20170128_indonesia-for-two-years/indonesia-street.jpg" alt="indonesia-street"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/01/20170128_indonesia-for-two-years/indonesia-street.jpg" alt="indonesia-street"/>
 
 資格は知識習得のためではなく、
 継続的な努力の証として取得のための勉強をしました。

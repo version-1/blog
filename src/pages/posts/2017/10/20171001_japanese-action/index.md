@@ -10,45 +10,21 @@ categories:
   - design
 ---
 
-&nbsp;
+どうも、運転が苦手な@version1です。
 
-どうも、
-
-運転が苦手な@version1です。
-
-
-
-&nbsp;
-
-今回は
-仕事で地図の中でクリックされた座標を元にアクションを分けるという機能を実装する必要が
+今回は仕事で地図の中でクリックされた座標を元にアクションを分けるという機能を実装する必要が
 あったので、それの方法を調べてみました。
-
-&nbsp;
 
 <div class="after-intro"></div>
 
-&nbsp;
 <h2 class="chapter">〜クリッカブルマップ〜座標でアクションを分ける、難しそう・・・</h2>
-&nbsp;
-
-&nbsp;
 
 どうやらクリッカブルマップというのを使うと地図の中でアクションを分けることが実現できるようです。
 
-&nbsp;
-
-&nbsp;
-
-が、、、
-&nbsp;
-<strong>「え、難しそう」</strong>
-これが第一印象でした。
+が、、、<strong>「え、難しそう」</strong>これが第一印象でした。
 でも、意外とそうでもないみたいです。
 
-&nbsp;
 <div class="mid-article"></div>
-&nbsp;
 
 文章でいうと
 <ol>
@@ -62,10 +38,8 @@ categories:
 imgタグにusemap属性とmapタグのname属性に対応する名前をつける。
 </li>
 </ol>
-&nbsp;
 
-で
-2で指定した座標の画像ごとにアクションを分けることができます。
+で2で指定した座標の画像ごとにアクションを分けることができます。
 
 あれ、でも
 
@@ -74,10 +48,7 @@ imgタグにusemap属性とmapタグのname属性に対応する名前をつけ�
 というツッコミが入ると思うので
 コードを貼り付けます。
 
-&nbsp;
-
-&nbsp;
-<pre><code  class="language-markup"><div class="map_japan">
+```markup
   <img src="img/color_ken_nashi.gif" usemap="#ImageMap" alt="" />
   <map name="ImageMap">
     <area shape="poly" coords="695,20,779,96,816,82,806,104,811,117,831,118,783,140,741,143,716,168,661,132,633,142,611,127,625,144,638,161,620,159,593,171,590,162,598,145,589,133,592,119,614,114,623,111,619,100,626,96,636,104,656,106,663,85,676,82,673,83" alt="hokkaido" />
@@ -92,9 +63,7 @@ imgタグにusemap属性とmapタグのname属性に対応する名前をつけ�
 </div>
 
 ```
-&nbsp;
 
-&nbsp;
 <strong>「え。。。正気？なんか数字が一杯並んでいるけど」</strong>
 &nbsp;
 
@@ -143,7 +112,6 @@ Webページのものについては、
 <a href="https://github.com/stowball/jQuery-rwdImageMaps">jQuery-rwdImageMaps</a>
 というライブラリを使えば解決できます。
 
-&nbsp;
 
 使い方としては、
 ```javascript
@@ -152,7 +120,6 @@ $(document).ready(function(e) {
     });
 
 ```
-&nbsp;
 
 のような感じで、
 簡単に画像要素を指定するだけです。
@@ -161,55 +128,27 @@ $(document).ready(function(e) {
 画面の大きさを変えても
 このライブラリが座標を良い感じに変更してくれます。
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">成果物</h2>
-&nbsp;
-
-&nbsp;
 
 という事で、
 今回この技術を使って、
 簡単なデモを作りました。
 
-&nbsp;
-
-&nbsp;
 
 日本地図をクリックするとクリックされた
 地方の県名の一覧が表示されるという
 簡単なものです。
 
-&nbsp;
-
-&nbsp;
 
 gitで公開しているので、
 よかったら見てみてください。
 <a href="https://version-1.github.io/imagemap/">https://version-1.github.io/imagemap/</a>
 (今は簡単なものであればgit上で簡単なページで作れるんですね。）
 
-&nbsp;
 
-&nbsp;
-
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171001_japanese-action/Screen-Shot-2017-10-01-at-21.33.03-1024x562.png" alt="Screen-Shot-2017-10-01-at-21.33.03-1024x562.png"/>
-
-&nbsp;
-
-&nbsp;
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171001_japanese-action/japan-map.png" alt="Japan Map"/>
 
 以上です！！
 
-&nbsp;
-
-&nbsp;
-
 <div class="after-article"></div>
 
-&nbsp;
-
-&nbsp;

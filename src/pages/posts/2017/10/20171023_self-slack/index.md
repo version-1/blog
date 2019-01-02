@@ -9,7 +9,6 @@ categories:
   - freelance
 ---
 
-&nbsp;
 
 どうも、
 みなさんSlackってご存知でしょうか？
@@ -20,27 +19,15 @@ categories:
 会社内で使うだけでも相当便利なツールなのですが
 個人で利用するのもおすすめなので記事にしてみました。
 
-&nbsp;
 <div class="adsense-double-rect"></div>
-&nbsp;
+
 <h2 class="chapter">Slackって？</h2>
-&nbsp;
 
-&nbsp;
-
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-17.35.48-1024x570.png" alt="Screen-Shot-2017-10-23-at-17.35.48-1024x570.png"/>
-
-&nbsp;
-
-&nbsp;
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image1.png" alt="slack"/>
 
 エンジニア界隈やスタートアップなどで
 よく使われているチャットツールです。
 <a href="https://slack.com/">https://slack.com/</a>
-
-&nbsp;
-
-&nbsp;
 
 日本ですとチャットワークなどのチャットツールもありますが、
 それと同じような用途でチームのコミュニケーションや
@@ -48,21 +35,11 @@ categories:
 PCやスマートフォンからも利用でき、
 移動先などでも使えるツールです。
 
-&nbsp;
-
-&nbsp;
-
 ファイルの転送やリンクの共有。
 はたまた、マークダウン形式のような記法がサポートされていたりして
 かなり便利です。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">チームで使うSlackを一人で利用？</h2>
-&nbsp;
-
-&nbsp;
 
 Slackではもちろん、
 他のチームメンバーとのコミュニケーションのためのツールで、
@@ -101,21 +78,11 @@ Slackには自分が考えていることや詰まっていること、リマイ
 ひとまずこの記事では標準の機能としての活用方法を紹介してみます。
 （別アプリとの連携は別記事で。。機会あれば）
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">使い方その1 Twitterの代わりとして使ってみる</h2>
-&nbsp;
-
-&nbsp;
 
 slackではチャンネルと言って、
 自分で好きなチャットルームの部屋を作ることができます。
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-18.51.31.png" alt="Screen-Shot-2017-10-23-at-18.51.31.png"/>
-
-&nbsp;
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image2.png" alt="slack"/>
 
 ここで、
 自分の呟く用の部屋を作って
@@ -141,9 +108,7 @@ slackではチャンネルと言って、
 仕事中にモヤモヤすることがあれば、
 Slackに一度吐き出してみてはいかがでしょうか。
 
-&nbsp;
 <h2 class="chapter">使い方その2 To Do リストにしてみる</h2>
-&nbsp;
 
 To Doって続かないですよね。
 （あれって無限に増えていくじゃないですか。。作業中に増えていったりもするし）
@@ -157,21 +122,17 @@ To Doって続かないですよね。
 忘れずにやらないと行けないことをガンガンつぶやいていきます。
 （下記は例です。こんなことTo Doに書く人いないと思いますけど・・・）
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-19.14.36.png" alt="Screen-Shot-2017-10-23-at-19.14.36.png"/>
-
-&nbsp;
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image3.png" alt="slack"/>
 
 また、slackではスニペットという機能を
 使って文字を装飾できるので、
 タスクが終わったら取り消し線を入れることができます。
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-19.16.36-1024x248.png" alt="Screen-Shot-2017-10-23-at-19.16.36-1024x248.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image4.png" alt="slack"/>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/Screen-Shot-2017-10-23-at-19.18.24-1024x229.png" alt="Screen-Shot-2017-10-23-at-19.18.24-1024x229.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image5.png" alt="slack"/>
 
 （ "~"で文字を囲むとその間を取り消し線で表示できます。)
 朝を起きるになってる。。
-
-&nbsp;
 
 また、
 投稿した文章は後からでも編集可能なので、
@@ -186,9 +147,7 @@ Slackとして他に必要な機能とまとめて、
 To DOをまとめたり、自分の自由なフォーマットで
 作業をリスト化できるので気に入っています。
 
-&nbsp;
 <h2 class="chapter">まとめ</h2>
-&nbsp;
 
 ここでは、
 Slackの標準の機能でできることしか紹介しませんでしたが、
@@ -196,8 +155,6 @@ Slackの標準の機能でできることしか紹介しませんでしたが、
 天気予報を表示したり、サーバーの容量を表示したり、
 Google アナリティクスの内容を表示したりより自分好みのスペース
 にカスタマイズできるみたいです。
-
-&nbsp;
 
 併せて、
 参考になりそうなURLも貼っておきます。

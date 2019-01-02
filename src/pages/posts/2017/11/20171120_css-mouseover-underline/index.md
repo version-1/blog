@@ -4,8 +4,8 @@ title: CSSでマウスオーバーした時にうにょーんって下線が伸�
 slug: /2017/11/20/css-mouseover-underline
 createdAt: 2017-11-20 12:58:23
 updatedAt: 2018-08-26 01:10:28
-thumbnail: ./thumbnail.gif
-categories: 
+thumbnail: /2017/11/20171120_css-mouseover-underline/thumbnail.png
+categories:
   - engineering
   - design
 ---

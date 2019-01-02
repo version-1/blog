@@ -20,26 +20,24 @@ CapkePHP3からtweetする方法を紹介します。
 <a href="https://github.com/abraham/twitteroauth">https://github.com/abraham/twitteroauth</a>
 
 流れは以下のようになります。
-<h4></h4>
-<h4></h4>
-<h4>①Twitter Appを作成し、アクセストークンを取得</h4>
-<h4>②twitteroauthをcomposerでインストール</h4>
-<h4>③Controllerからtweet</h4>
+
+1. witter Appを作成し、アクセストークンを取得
+2. twitteroauthをcomposerでインストール
+3. Controllerからtweet
 &nbsp;
 
 <div class="after-intro"></div>
 
 &nbsp;
 
-&nbsp;
 <h2 class="chapter">Twitter Appを作成し、アクセストークンを取得</h2>
-&nbsp;
 
 &nbsp;
 
 このリンクから
 <a href="https://apps.twitter.com/">https://apps.twitter.com/</a>
 twitter Appを作成すると、
+
 <ul>
  	<li>Consumer Key</li>
  	<li>Consumer Secret</li>
@@ -54,7 +52,8 @@ twitter Appを作成すると、
 &nbsp;
 
 <span style="text-decoration: underline;"><strong>1.Create Newをクリック</strong></span>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-11.10.29-1024x691.png" alt="スクリーンショット-2017-06-17-11.10.29-1024x691.png"/>
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter1.png" alt="twitter"/>
 
 &nbsp;
 
@@ -63,7 +62,7 @@ twitter Appを作成すると、
 <span style="text-decoration: underline;"><strong>2.必要な情報を入力</strong></span>
 
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-11.10.59.png" alt="スクリーンショット-2017-06-17-11.10.59.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter2.png" alt="twitter"/>
 
 &nbsp;
 
@@ -82,7 +81,8 @@ Keys and access Tokenタブを選択し、
 </ul>
 が表示されていることを確認します。
 （アクセストークンがない場合は、Token Actionsあたりにあるボタンを押して作成する。)
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/スクリーンショット-2017-06-17-12.01.29.png" alt="スクリーンショット-2017-06-17-12.01.29.png"/>
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter3.png" alt="twitter"/>
 
 &nbsp;
 
@@ -94,9 +94,10 @@ Keys and access Tokenタブを選択し、
 
 compserを使って、
 twitteroauthをダウンロードします。
-<pre><code class="bash">composer require abraham/twitteroauth
-
+```bash
+composer require abraham/twitteroauth
 ```
+
 &nbsp;
 <h2 class="chapter">Controllerからtweet</h2>
 &nbsp;

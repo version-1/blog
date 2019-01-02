@@ -34,7 +34,7 @@ URLで判断するようにしました。)
 
 完成イメージはこのような感じです。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/ScreenShot-1.png" alt="ScreenShot-1.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/ScreenShot-1.png" alt="ScreenShot-1.png"/>
 
 この記事が終わるころには、
 自分のブログで人気記事ランキングを表示できるようになっている
@@ -61,7 +61,7 @@ Wordpressの投稿は、
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/Screen-Shot-2017-11-05-at-22.07.43.png" alt="Screen-Shot-2017-11-05-at-22.07.43.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/Screen-Shot-2017-11-05-at-22.07.43.png" alt="Screen-Shot-2017-11-05-at-22.07.43.png"/>
 
 前回の記事とはだいぶファイルの感じが変わりますが、
 <ul>

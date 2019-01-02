@@ -52,7 +52,8 @@ htmlやcssの最低限の知識とかはあって、
 
 個人的にかなり感激です。
 ここに成果を記しておきます。
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/07/20170703_server-enginner-learn-design/screencapture-file-Users-admin-prototype-index-html-1499079551933-844x1024.png" alt="screencapture-file-Users-admin-prototype-index-html-1499079551933-844x1024.png"/>
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/07/20170703_server-enginner-learn-design/site-design.png" alt="site-design.png"/>
 
 &nbsp;
 
@@ -219,8 +220,6 @@ html {
 とか言う人の最初のきっかけにはとても良い本だと思います。
 
 オススメです。
-
-&nbsp;
 
 &nbsp;
 

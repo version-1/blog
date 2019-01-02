@@ -83,7 +83,7 @@ ISBNは書籍を識別する一意のコードで「本の題名 ISBN」など�
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/12/20171203_yomereba/yomereba.png" alt="yomereba.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/12/20171203_yomereba/yomereba.png" alt="yomereba.png"/>
 
 &nbsp;
 

@@ -10,7 +10,6 @@ categories:
   - design
 ---
 
-&nbsp;
 
 どうも<a href="https://twitter.com/version1_2017">@version1</a>です。
 
@@ -22,21 +21,16 @@ categories:
 それをするのに<strong>おすすめのサイト</strong>が
 あったので紹介します。
 
-&nbsp;
-
-&nbsp;
-
 それは、
 <a href="https://codepen.io/">CodePen</a>というサイトで
 ここには、数々の
 イケてるデザインレイアウトやコンポーネントなどがアップされています。
+
 <a href="https://codepen.io/">https://codepen.io/</a>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.07.04-1024x770.png" alt="スクリーンショット-2017-09-02-12.07.04-1024x770.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170902_codepen/codepen.png" alt="codepen"/>
 
-&nbsp;
 <h2 class="chapter"> 気に入ったデザインを探して参考にしてみる</h2>
-&nbsp;
 
 例えばですが、
 自分のサイトのログインフォームを
@@ -54,7 +48,7 @@ categories:
 ズラってイケてるデザインが
 出てきます。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.00.58-1024x766.png" alt="スクリーンショット-2017-09-02-12.00.58-1024x766.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170902_codepen/codepen-search-result.png" alt="CodePen Search Result"/>
 
 &nbsp;
 
@@ -66,11 +60,7 @@ categories:
 気になるデザインのhtml,css,javascriptの
 コードが見れます。
 
-&nbsp;
-
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.04.54-1024x768.png" alt="スクリーンショット-2017-09-02-12.04.54-1024x768.png"/>
-
-&nbsp;
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170902_codepen/スクリーンショット-2017-09-02-12.04.54-1024x768.png" alt="スクリーンショット-2017-09-02-12.04.54-1024x768.png"/>
 
 コードを見たり、
 どうやって書いているんだろうというのを
@@ -94,7 +84,7 @@ categories:
 自分でも作成したものをアップロードしてみました。
 
 &nbsp;
-<iframe height='500' scrolling='no' title='Simple Login Form' src='//codepen.io/version1/embed/QMVzJd/?height=265&theme-id=0&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/version1/pen/QMVzJd/'>Simple Login Form</a> by version1 (<a href='https://codepen.io/version1'>@version1</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='yes' title='Simple Login Form' src='//codepen.io/version1/embed/QMVzJd/?height=265&theme-id=0&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/version1/pen/QMVzJd/'>Simple Login Form</a> by version1 (<a href='https://codepen.io/version1'>@version1</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 &nbsp;

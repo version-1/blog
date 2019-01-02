@@ -6,7 +6,7 @@ createdAt: 2017-09-03 13:53:42
 updatedAt: 2018-08-25 22:20:02
 thumbnail: /2017/09/20170903_how-to-change-ssid/thumbnail.jpg
 categories:
-  - for-beginner
+  - column
 ---
 
 &nbsp;
@@ -19,7 +19,7 @@ categories:
 置いておいて
 最近こんなツイートをしてみました。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/スクリーンショット-2017-09-03-12.11.09.png" alt="スクリーンショット-2017-09-03-12.11.09.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/ssid-tweet.png" alt="ssid tweet"/>
 
 &nbsp;
 <h2 class="chapter">iPhoneのSSIDに名前が含まれる人は変更しましょう</h2>
@@ -35,7 +35,7 @@ categories:
 &nbsp;
 
 そこで最近気づくのですが、
-<h3>「〇〇（人の名前）のiPhone」</h3>
+**「〇〇（人の名前）のiPhone」**
 みたいな
 SSIDの人がちょこちょこいます。
 
@@ -43,16 +43,12 @@ SSIDの人がちょこちょこいます。
 iPhoneを買った後の
 初期設定のままなのでしょう。。。
 
-&nbsp;
-
 それだけでは、
 個人は特定は難しいのですが、
 例えば、
 車内に女性が一人で「〇〇（人の名前）のiPhone」というのが
 女性の名前だったら簡単に
 その人の個人名がバレてしまいます。
-
-&nbsp;
 
 そこまで警戒しなくても。。。
 というのは
@@ -85,23 +81,24 @@ WI-FIのアクセスポイントを識別するためのID
 &nbsp;
 
 &nbsp;
-<h3>②リストより「一般」を選択
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/IMG_3109-577x1024.png" alt="IMG_3109-577x1024.png"/>
-<h3></h3>
-<h3>③「情報」をタップ
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/IMG_3110-577x1024.png" alt="IMG_3110-577x1024.png"/>
-&nbsp;
-<h3>④「名前」をタップ
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/IMG_3111-577x1024.png" alt="IMG_3111-577x1024.png"/>
-&nbsp;
-<h3>⑤端末の名前が表示されるのでここで自分の好きな名前に変更
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/IMG_3112-577x1024.png" alt="IMG_3112-577x1024.png"/>
+### ②リストより「一般」を選択
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-1.png" alt="How To Change SSID"/>
+
+### ③「情報」をタップ
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-2.png" alt="How To Change SSID"/>
+
+### ④「名前」をタップ
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-3.png" alt="How To Change SSID"/>
+
+### ⑤端末の名前が表示されるのでここで自分の好きな名前に変更
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-4.png" alt="How To Change SSID"/>
+
 以上、
 1分かからずにできる手順です。
-
-&nbsp;
-
-&nbsp;
 
 繰り返しになりますが、
 本当に簡単に変えられるので

@@ -45,7 +45,9 @@ jsonで返却するAPIまでです。
 
 &nbsp;
 <h2 class="chapter">前提条件</h2>
+
 使用する構成はいつもの通りです。
+
 <table>
 <tbody>
 <tr>
@@ -99,47 +101,33 @@ VALUES( 1 , '多動力' ,'堀江貴文', '9784344031159', 1 , NOW() , NOW()),
 ( 3 , '深夜特急〈1〉香港・マカオ (新潮文庫)' ,'沢木耕太郎', '9784101235059', 3 , NOW() , NOW());
 
 ```
-&nbsp;
-
-&nbsp;
 
 イメージが湧きづらい人用に
 一覧ページも作成しました。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.29.36.png" alt="スクリーンショット-2017-09-18-23.29.36.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/books.png" alt="books"/>
 
 ↑この一覧がJSON形式で取得できれば成功です。
 
-&nbsp;
-
-&nbsp;
-
 ちなみにgitレポジトリも用意したので
 どうぞ。
+
 <a href="https://github.com/version-1/kotlin-api-sample-">https://github.com/version-1/kotlin-api-sample-</a>
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">早速Kotlin+SpringBoot APIの説明</h2>
-&nbsp;
 
-&nbsp;
+はじめに、ファイル構成を
 
-はじめに、
-ファイル構成を
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.37.23.png" alt="スクリーンショット-2017-09-18-23.37.23.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/dir-structure.png" alt="Directory Structure"/>
 
 このように
 以前のKotlinシリーズでもおなじみの
 構成となっております。
 
 わからない方はこちらが参考になるかと思います。
+
 <a href="http://ver-1-0.net/2017/02/13/kotlin-spring-boot/">Kotlin + Spring boot で DBからデータ取得して画面に表示</a>
 
-&nbsp;
-
-&nbsp;
 
 はい、
 では下が実際のコードです。
@@ -164,11 +152,8 @@ class BookController @Autowired constructor(private val bookService: BookService
 }
 
 ```
-&nbsp;
 
 それぞれなんてことはないコードですね。
-
-&nbsp;
 
 個人的な今回の学びは、
 URLから値をとってくるのに
@@ -182,32 +167,24 @@ URLから値をとってくるのに
 ResponseEntityクラスを使うとクラスをそのまま
 jsonにして返却できることですかね。
 
-&nbsp;
-
-&nbsp;
-
 ちなみに
 springを起動して
-http://localhost:8080/api/booksにアクセスすると
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.41.56.png" alt="スクリーンショット-2017-09-18-23.41.56.png"/>
 
-&nbsp;
+http://localhost:8080/api/books
 
-&nbsp;
+にアクセスすると
+
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/browser1.png" alt="browser1"/>
 
 本の一覧が
 
 http://localhost:8080/api/books/1にアクセスすると
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/スクリーンショット-2017-09-18-23.42.05.png" alt="スクリーンショット-2017-09-18-23.42.05.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/browser2.png" alt="browser2"/>
 
 &nbsp;
 
-指定したIDの本一件を
-取得することができます。
-
-以上、
-参照だけだと結構さっくり終わりますね。
+指定したIDの本一件を取得することができます。以上、参照だけだと結構さっくり終わりますね。
 次回は作成・更新・削除の部分を公開します。
 
 <div class="adsense"></div>

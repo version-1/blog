@@ -51,7 +51,7 @@ React面白いですね。ちょっと今更感もあるかもしれないので
 
 &nbsp;
 <h2>今週読んだ本 | SOFT SKILLS ソフトウェア開発者の人生マニュアル</h2>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/01/20180123_action-report-3/soft-skill.jpg" alt="soft-skill.jpg"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/01/20180123_action-report-3/soft-skill.jpg" alt="soft-skill.jpg"/>
 
 &nbsp;
 

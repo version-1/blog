@@ -9,28 +9,32 @@ categories:
   - column
 ---
 
-&nbsp;
 
 特に意味はないのですが、
 備忘も兼ねて自分の好きな名言集をまとめておきます。
 
 <div class="adsense-double-rect"></div>
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">「Be Water, My Friend!」- ブルースリー</h2>
-&nbsp;
 
 水のように生きよ！という意味ですが、
 <strong>Be Water, My Friend!</strong>という言葉自体は下のようなインタビューの
 中の一部のようです。
-<blockquote>Empty your mind, be formless, shapeless - like water.
+
+<blockquote>
+Empty your mind, be formless, shapeless - like water.
+
 Now you put water into a cup, it becomes the cup,
+
 you put water into a bottle, it becomes the bottle,
+
 you put it in a teapot, it becomes the teapot.
+
 Now water can flow or it can crash.
-Be water, my friend.</blockquote>
+
+Be water, my friend.
+</blockquote>
+
 要約すると、
 <strong>水は形がなく、カップやボトルのように器に合わせて変化することができる。</strong>
 <strong> さらに、水は流れることも砕くこともできる。</strong>
@@ -41,13 +45,7 @@ Be water, my friend.</blockquote>
 世間に流されない力強さを持ちつつ、
 変化にも対応していける柔軟な人でいたいななんて思う今日この頃です。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">未来を予測する最善の方法は、自らそれを創りだすことである-アラン・ケイ</h2>
-&nbsp;
-
-&nbsp;
 
 アラン・ケイは<strong>「パソコンの父」</strong>と称されるアメリカの計算機科学者です。
 個人の活動を支援する<strong>「パーソナルコンピュータ」</strong>という概念を提唱した人物で、
@@ -60,46 +58,32 @@ Be water, my friend.</blockquote>
 自分の行動で変えられると信じています。
 <div class="adsense"></div>
 
-&nbsp;
 <h2 class="chapter">「素晴らしい選手ほど
 パックがこれからどこにいくかに
 焦点を合わせているものなんだ」- ウェイン・グレツキー</h2>
-&nbsp;
-
-&nbsp;
 
 ウェイン・グレツキーは、
 カナダ・オンタリオ州出身の元プロアイスホッケー選手です。
 「アイスホッケーの神様」などと呼ばれて多くのホッケーファンに愛された
 プレイヤーのです。
-<blockquote>普通の選手は
-パックが今ある場所に、
+<blockquote>
+普通の選手はパックが今ある場所に、
 意識を集中している。
 
 だけど、素晴らしい選手ほど
 パックがこれからどこにいくかに
-焦点を合わせているものなんだ。</blockquote>
-&nbsp;
+焦点を合わせているものなんだ。
+</blockquote>
 
 次はどこにパックが行くんでしょうかね？
 この言葉を胸に次のチャンスがどこに転がっているか探し続けたいですね。
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">明日はなんとかなると思うのは馬鹿者だ。今日でさえ遅すぎる。
 賢者は昨日のうちに済ませてしまっている。- クーリー</h2>
-&nbsp;
-
-&nbsp;
 
 おー怖。こんな上司いたらほんと会社行きたくなくなりそう笑。
 すごい厳しいお言葉ですが、
 ど正論で返す言葉もないです。
-
-&nbsp;
 
 チャールズ・クーリーはアメリカの社会心理学者。
 アメリカ社会学協会創立メンバーの一人と。
@@ -121,14 +105,9 @@ Someone:「これやっといてねお願い!」
 自分のやりたいこと・やるべきことは先送りにせずガンガン
 やって行きたいと改めて思います。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">まとめ</h2>
-&nbsp;
 
-好きな名言をまとめたら、
-未来予測系が多いですね。
+好きな名言をまとめたら、未来予測系が多いですね。
 ブルース・リーの名言以外は全部未来予測に関するものですね。
 
 未来に囚われすぎるのも今をないがしろにしてしまう
@@ -137,8 +116,6 @@ Someone:「これやっといてねお願い!」
 仕事する上では欠かせない要素ですよね。
 あとは単純に未来を夢想するのが好きなのかもしれません。
 
-&nbsp;
-
 なんとなくまとめてみたら新鮮な気づきが得られました。
 みなさんも好きな名言を書き出してみたら何か
 良い発見があるかもしれませんね。
@@ -146,7 +123,5 @@ Someone:「これやっといてねお願い!」
 では。
 
 以上です。
-
-&nbsp;
 
 <div class="adsense-double-rect"></div>

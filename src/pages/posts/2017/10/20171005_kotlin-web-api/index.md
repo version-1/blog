@@ -5,7 +5,7 @@ slug: /2017/10/05/kotlin-web-api
 createdAt: 2017-10-05 23:53:16
 updatedAt: 2018-08-26 11:39:29
 thumbnail: /2017/10/20171005_kotlin-web-api/thumbnail.png
-categories: 
+categories:
   - engineering
 ---
 
@@ -33,6 +33,7 @@ CRUDでいう所のRの部分しかAPIとして
 
 &nbsp;
 <h2 class="chapter">RESTFulなAPIにブラッシュアップ</h2>
+
 ```kotlin
 @Controller
 class BookController @Autowired constructor(private val bookService: BookService) {

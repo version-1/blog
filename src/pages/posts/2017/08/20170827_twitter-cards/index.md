@@ -10,27 +10,19 @@ categories:
   - for-beginner
 ---
 
-&nbsp;
-
-&nbsp;
-
 一人でも多くの人に
 このサイトに訪れていただけるように
 時々リンクをtwitterで呟くのですが、
-<h3></h3>
-<h3>自分のtweetだけなぜかサムネイルが表示されない・・・</h3>
-&nbsp;
 
-ということで少し調べて、
-サムネイルが表示されるようにしました。
+**自分のtweetだけなぜかサムネイルが表示されない・・・**
+
+ということで少し調べて、サムネイルが表示されるようにしました。
 (早速いいねいただけました！！）
 
-&nbsp;
+<img class="post-image almost-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card.png" alt="twitter-card"/>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/スクリーンショット-2017-08-27-15.46.57.png" alt="スクリーンショット-2017-08-27-15.46.57.png"/>
 <div class="after-intro"></div>
 <h2 class="chapter">Twitter Cardsというのをやるとどうやら表示されるらしい</h2>
-&nbsp;
 
 &nbsp;
 
@@ -62,11 +54,13 @@ headタグの中に書いて保存してあげればOkです。
 
 ちなみに、
 こういう記載がありますが今回は関係ないので消しました。
-<pre><code class="languaga-markup"><meta property='fb:admins' content='【上で取得したfb:adminsの15桁ID】'>
+```markup
+<meta property='fb:admins' content='【上で取得したfb:adminsの15桁ID】'>
 <meta property='article:publisher' content='【FacebookページがあればそのURL】' />
 ```
 あと、descriptionのところで
-<pre><code class="languaga-markup"><meta property='og:description' content='<?php echo mb_substr(get_the_excerpt(), 0, 100) ?>'>
+```markup
+<meta property='og:description' content='<?php echo mb_substr(get_the_excerpt(), 0, 100) ?>'>
 ```
 こういうのがあったのですが
 私のサイトですと関連記事の部分が
@@ -90,4 +84,4 @@ get_the_excerpt()を$post->$post_contentに変えました。
 
 エラーが出ていなければOKです。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/スクリーンショット-2017-08-27-16.19.49-1024x553.png" alt="スクリーンショット-2017-08-27-16.19.49-1024x553.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card-validator.png" alt="Card Validator"/>

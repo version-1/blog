@@ -127,6 +127,7 @@ class Markdown
   attr_accessor :post_thumbnail
   attr_accessor :category_list
   attr_accessor :post_content
+  attr_accessor :content
 
   CATEGORY_SEPARATOR = '::::'.freeze
   HEADER_KEYS = %i[template_key title slug created_at updated_at thumbnail categories].freeze
@@ -191,7 +192,7 @@ class Markdown
   end
 
   def content
-    Content.new(post_content)
+    content ||= Content.new(post_content)
   end
 
   def thumbnail

@@ -112,7 +112,7 @@ Wordpress.orgにプラグインとして申請中ではありますが、
 を設定してウィジェットに追加するだけです。
 
 当ブログでも利用しています。
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171117_google-analytics-pop-posts/人気記事.jpg" alt="人気記事.jpg"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171117_google-analytics-pop-posts/人気記事.jpg" alt="人気記事.jpg"/>
 
 &nbsp;
 

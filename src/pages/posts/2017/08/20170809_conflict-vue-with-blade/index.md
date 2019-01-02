@@ -41,7 +41,7 @@ JqueryでなくAngular, React, Vueらへん
 以下、Googleトレンドで他ライブラリとの
 検索の割合調べてみた画像。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170809_conflict-vue-with-blade/Compare-Javasctipt-Library-1024x567.png" alt="Compare-Javasctipt-Library-1024x567.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/08/20170809_conflict-vue-with-blade/javascript-library.png" alt="javascript-library.png"/>
 
 &nbsp;
 
@@ -58,9 +58,9 @@ JqueryでなくAngular, React, Vueらへん
 最初に触ってみる程度であれば
 CDNでの読み込みが一番早いので、
 htmlのヘッダ部に下記を追加してしまうのが早いです。
-```
-<script src="https://unpkg.com/vue"></script>
 
+```markup
+<script src="https://unpkg.com/vue"></script>
 ```
 &nbsp;
 
@@ -78,6 +78,7 @@ htmlのヘッダ部に下記を追加してしまうのが早いです。
 両方ダウンロードしてpublic/jsに
 
 public/js/vue.js (開発版）
+
 public/js/vue.min.js (本番版）
 
 を配置します。
@@ -95,16 +96,13 @@ public/js/vue.min.js (本番版）
 @endif
 
 ```
-&nbsp;
+
 <h2 class="chapter">Hello Worldしてみる　〜 Bladeとのコンフリクト解消方も ~</h2>
-&nbsp;
 
 上のような設定が終わっていれば
 下記のようにすれば<strong>Hello Vue! </strong>
 という文字が表示されるので
 導入完了です！
-
-&nbsp;
 
 ※注意※
 
@@ -152,7 +150,8 @@ Vueのテキスト表示がPHPに解釈されエラーとなってしまいま�
 
 以上です。
 
-↓ここでは<strong>Vue.js</strong>でできたアプリを試していますので是非
+↓ここでは<strong>Vue.js</strong>でできたアプリを試せますので是非
+
 <a href="https://jp.vuejs.org/v2/examples/">https://jp.vuejs.org/v2/examples/</a>
 
 &nbsp;

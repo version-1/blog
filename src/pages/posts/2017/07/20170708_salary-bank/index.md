@@ -27,11 +27,10 @@ categories:
 
 &nbsp;
 
-&nbsp;
-
 <a href="https://kyuryobank.com/">https://kyuryobank.com/</a>
 
 <a href="http://amzn.to/2uVbcSk">日本の給料&amp;職業図鑑 </a>
+
 <a href="https://www.amazon.co.jp/%E6%97%A5%E6%9C%AC%E3%81%AE%E7%B5%A6%E6%96%99-%E8%81%B7%E6%A5%AD%E5%9B%B3%E9%91%91-%E7%B5%A6%E6%96%99BANK/dp/4800250005/ref=as_li_ss_il?ie=UTF8&amp;linkCode=li3&amp;tag=llg01-22&amp;linkId=1a5888c416267bd1e1f163e9f66e9be6" target="_blank" rel="noopener noreferrer"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4800250005&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=llg01-22" border="0" /></a><img style="border: none !important; margin: 0px !important;" src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&amp;l=li3&amp;o=9&amp;a=4800250005" alt="" width="1" height="1" border="0" />
 
 欲しい。。
@@ -60,7 +59,8 @@ categories:
 
 ぜひ、
 自分の職業を調べてみるのがオススメなのですが、
-<h4>「ちょっw 私の仕事こんなかっこよくて良いのかな・・・」</h4>
+
+**「ちょっw 私の仕事こんなかっこよくて良いのかな・・・」**
 という感じになります。笑
 
 &nbsp;
@@ -76,12 +76,15 @@ categories:
 など最近の仕事なども網羅さえれています。
 
 プロブロガー
+
 <a href="https://kyuryobank.com/geino/problogger.html">https://kyuryobank.com/geino/problogger.html</a>
 
 Youtuber
+
 <a href="https://kyuryobank.com/geino/youtuber.html">https://kyuryobank.com/geino/youtuber.html</a>
 
 専業アフィリエーター
+
 <a href="https://kyuryobank.com/geino/youtuber.html">https://kyuryobank.com/geino/youtuber.html</a>
 
 もちろん、
@@ -103,9 +106,9 @@ Youtuber
 各職業の決めゼリフが書かれているのですが、
 私の仕事であるエンジニアは
 webプログラマー
-<h3>「プログラミングはシンフォニーを作曲するようなものです。」</h3>
+**「プログラミングはシンフォニーを作曲するようなものです。」**
 システムエンジニア
-<h3>「全ての開発は私の仕様書にかかっているのだ」</h3>
+**「全ての開発は私の仕様書にかかっているのだ」**
 こんなこと考えたことない笑
 そもそもシンフォニーが何かわからないし。
 シンフォニーわかってないとwebプログラマーにはなれないのか。
@@ -138,12 +141,14 @@ webプログラマー
 &nbsp;
 <div class="cstmreba"><div class="booklink-box"><div class="booklink-image"><a href="http://www.amazon.co.jp/exec/obidos/asin/4800250005/llg01-22/" target="_blank" rel="nofollow" ><img src="https://images-fe.ssl-images-amazon.com/images/I/61osTfSmnOL._SL320_.jpg" style="border: none;" /></a></div><div class="booklink-info"><div class="booklink-name"><a href="http://www.amazon.co.jp/exec/obidos/asin/4800250005/llg01-22/" target="_blank" rel="nofollow" >日本の給料&職業図鑑</a><div class="booklink-powered-date">posted with <a href="https://yomereba.com" rel="nofollow" target="_blank">ヨメレバ</a></div></div><div class="booklink-detail">給料BANK 宝島社 2016-01-09    </div><div class="booklink-link2"><div class="shoplinkamazon"><a href="http://www.amazon.co.jp/exec/obidos/asin/4800250005/llg01-22/" target="_blank" rel="nofollow" >Amazonで購入</a></div><div class="shoplinkkindle"><a href="http://www.amazon.co.jp/gp/search?keywords=%93%FA%96%7B%82%CC%8B%8B%97%BF%26%90E%8B%C6%90%7D%8A%D3&__mk_ja_JP=%83J%83%5E%83J%83i&url=node%3D2275256051&tag=llg01-22" target="_blank" rel="nofollow" >Kindleで購入</a></div><div class="shoplinkrakuten"><a href="https://hb.afl.rakuten.co.jp/hgc/163854b7.d97e8d5b.163854b8.3c41ae34/?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F13521619%2F%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" rel="nofollow" >楽天ブックスで購入</a></div><div class="shoplinkseven"><a href="https://px.a8.net/svt/ejp?a8mat=2TXHHI+FDP7OQ+2N1Y+BW8O2&a8ejpredirect=http%3A%2F%2F7af-ent.omni7.jp%2Frelay%2Faffiliate%2FentranceProcess.do%3Furl%3Dhttp%253A%252F%252F7net.omni7.jp%252Fsearch%252F%253FsearchKeywordFlg%253D1%2526keyword%253D4-80-025000-1%252520%25257C%2525204-800-25000-1%252520%25257C%2525204-8002-5000-1%252520%25257C%2525204-80025-000-1%252520%25257C%2525204-800250-00-1%252520%25257C%2525204-8002500-0-1" target="_blank" rel="nofollow" >7netで購入</a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=2TXHHI+FDP7OQ+2N1Y+BW8O2" alt=""></div>            	  	  	  	</div></div><div class="booklink-footer"></div></div></div>
 
+&nbsp;
 
 <div class="cstmreba"><div class="booklink-box"><div class="booklink-image"><a href="http://www.amazon.co.jp/exec/obidos/asin/4800264375/llg01-22/" target="_blank" rel="nofollow" ><img src="https://images-fe.ssl-images-amazon.com/images/I/61v8pwIK4oL._SL320_.jpg" style="border: none;" /></a></div><div class="booklink-info"><div class="booklink-name"><a href="http://www.amazon.co.jp/exec/obidos/asin/4800264375/llg01-22/" target="_blank" rel="nofollow" >女子の給料&職業図鑑</a><div class="booklink-powered-date">posted with <a href="https://yomereba.com" rel="nofollow" target="_blank">ヨメレバ</a></div></div><div class="booklink-detail">給料BANK 宝島社 2017-02-17    </div><div class="booklink-link2"><div class="shoplinkamazon"><a href="http://www.amazon.co.jp/exec/obidos/asin/4800264375/llg01-22/" target="_blank" rel="nofollow" >Amazonで購入</a></div><div class="shoplinkkindle"><a href="http://www.amazon.co.jp/gp/search?keywords=%8F%97%8Eq%82%CC%8B%8B%97%BF%26%90E%8B%C6%90%7D%8A%D3&__mk_ja_JP=%83J%83%5E%83J%83i&url=node%3D2275256051&tag=llg01-22" target="_blank" rel="nofollow" >Kindleで購入</a></div><div class="shoplinkrakuten"><a href="https://hb.afl.rakuten.co.jp/hgc/163854b7.d97e8d5b.163854b8.3c41ae34/?pc=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F14666233%2F%3Fscid%3Daf_ich_link_urltxt%26m%3Dhttp%3A%2F%2Fm.rakuten.co.jp%2Fev%2Fbook%2F" target="_blank" rel="nofollow" >楽天ブックスで購入</a></div><div class="shoplinkseven"><a href="https://px.a8.net/svt/ejp?a8mat=2TXHHI+FDP7OQ+2N1Y+BW8O2&a8ejpredirect=http%3A%2F%2F7af-ent.omni7.jp%2Frelay%2Faffiliate%2FentranceProcess.do%3Furl%3Dhttp%253A%252F%252F7net.omni7.jp%252Fsearch%252F%253FsearchKeywordFlg%253D1%2526keyword%253D4-80-026437-4%252520%25257C%2525204-800-26437-4%252520%25257C%2525204-8002-6437-4%252520%25257C%2525204-80026-437-4%252520%25257C%2525204-800264-37-4%252520%25257C%2525204-8002643-7-4" target="_blank" rel="nofollow" >7netで購入</a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=2TXHHI+FDP7OQ+2N1Y+BW8O2" alt=""></div>            	  	  	  	</div></div><div class="booklink-footer"></div></div></div>
 
 &nbsp;
 
 <h2 class="chapter">給料BANKのかっこいい所 その1 優れた網羅性　付録: 職種一覧</h2>
+
 ```
 アイドル【地下アイドル】
 アイリスト

@@ -16,7 +16,7 @@ export default class PostsIndex extends PureComponent {
             <div className="section-content">
               <div className="section-title">
                 <div className="title-border" />
-                <span className="title">新着記事 { index } / { totalPages }</span>
+                <span className="title">記事一覧 { index } / { totalPages }</span>
               </div>
               <div className="section-list">
                 <div className="row">

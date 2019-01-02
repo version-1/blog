@@ -26,7 +26,7 @@ categories:
 このような記事を見つけました。
 <a href="http://shuchi.php.co.jp/the21/detail/2881">「優等生社員のワナ」第１回　なぜ「できる人」が会社を滅ぼすのか</a>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171027_dekiru-syain/Screen-Shot-2017-10-27-at-12.33.43.png" alt="Screen-Shot-2017-10-27-at-12.33.43.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171027_dekiru-syain/Screen-Shot-2017-10-27-at-12.33.43.png" alt="Screen-Shot-2017-10-27-at-12.33.43.png"/>
 <blockquote>「決断が速い」「処理能力が高い」「気が利く」「調整能力がある」……誰もが「できるビジネスマンの条件」として思い浮かべるこれらの能力。だが、それだけに頼っていると、むしろ組織を弱体化させるリスクとなる。こう話すのは、組織の風土改革の第一人者として知られる柴田昌治氏だ。従来型の「できる人」から脱却し、自分と組織を強くするにはどうすればいいのか。</blockquote>
 &nbsp;
 
