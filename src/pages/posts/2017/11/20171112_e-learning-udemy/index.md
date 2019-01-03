@@ -19,6 +19,7 @@ categories:
 
 <strong>シリコンバレー発のオンライン学習サービスUdemy</strong>
 <a href="https://px.a8.net/svt/ejp?a8mat=2TVGOQ+BH6WX6+3L4M+68MF5" target="_blank" rel="nofollow noopener">
+
 <img src="https://www29.a8.net/svt/bgt?aid=171109178694&amp;wid=004&amp;eno=01&amp;mid=s00000016735001048000&amp;mc=1" alt="" width="300" height="250" border="0" /></a>
 
 &nbsp;
@@ -102,11 +103,9 @@ Udemyとは、<strong>シリコンバレー発のオンライン学習プラッ�
 どうやらUdemyでは<strong>定期的にセール</strong>をやっているらしく、定価が2万円以上の割と高価なコースもありますが、こちらのコースのように<strong>時期によって、</strong><strong>数千円で購入できてしまったり</strong>もできるようです。
 
 セールについてはこちらにもう少し詳しく説明を載せています。
+
 <a href="https://ver-1-0.net/2017/11/29/udemy-sale/">=> Udemyの料金は高くない。勉強したいコースを購入するならセールで買うのが狙い目！！</a>
 
-&nbsp;
-
-&nbsp;
 <h3 class="section">プロの操作や実際の作業の様子が見れる</h3>
 &nbsp;
 
@@ -219,6 +218,7 @@ Udemyでは、モバイルのアプリもあり、PCのアカウントとコー�
 &nbsp;
 
 「未経験からプロのWebデザイナーになる！ 400レッスン以上の完全マスターコース」がきになる方はこちらから
+
 <a href="https://px.a8.net/svt/ejp?a8mat=2TVGOQ+BH6WX6+3L4M+BW8O2&a8ejpredirect=https%3A%2F%2Fwww.udemy.com%2Fweb-design-master%2F" target="_blank" rel="nofollow">未経験からプロのWebデザイナーになる！ 400レッスン以上の完全マスターコース</a>
 <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=2TVGOQ+BH6WX6+3L4M+BW8O2" alt="">
 

@@ -5,15 +5,12 @@ slug: /2017/11/29/docker-rails-nginx-postgres
 createdAt: 2017-11-29 02:41:35
 updatedAt: 2018-08-26 01:06:08
 thumbnail: /2017/11/20171129_docker-rails-nginx-postgres/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - rails
 ---
 
-&nbsp;
 <h2 class="chapter">Docker Composeを利用する</h2>
-&nbsp;
-
 
 <ol>
  	<li><a href="https://ver-1-0.net/2017/11/19/rails-nginx-postgres-on-docker-1/">DockerでRails + Nginx + Postgresの環境を構築する。その①</a></li>
@@ -302,7 +299,7 @@ services:
 
 下記はあくまでも例ですが、お使いの環境に合わせてconfig/database.ymlを変更しましょう。
 ```yaml
-default: &amp;default
+default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -317,9 +314,10 @@ databaseのパスワードはdocker-composeで記した環境変数の値にな�
 &nbsp;
 
 ここまでで一通り準備ができたのでビルドしていきます。
-<pre><code class="console">docker-compose up
+```bash
+docker-compose up
 ```
-エラーが出力されず、問題なさそうでなければhttp://localhostに接続してrailsのトップ画面が出力されることを確認します。
+エラーが出力されず、問題なさそうでなければ http://localhost に接続してrailsのトップ画面が出力されることを確認します。
 
 &nbsp;
 

@@ -2,14 +2,14 @@ const defaults = {
   image: {
     width: 640,
     height: 475,
-    layout: "responsive"
-  }
-}
+    layout: 'responsive',
+  },
+};
 
-const inheritAttribute = (image, ampImage) => {
-  return Object.keys(image.attributes).map(key => {
-    const attribute = image.attributes[key];
-    ampImage.setAttribute(attribute.name, attribute.value);
+const inheritAttribute = (ele, newEle) => {
+  return Object.keys(ele.attributes).map(key => {
+    const attribute = ele.attributes[key];
+    newEle.setAttribute(attribute.name, attribute.value);
     return attribute.name;
   });
 };
@@ -19,8 +19,8 @@ const applyInlineSize = (ampImage, inheritedAttributes) => {
     if (inheritedAttributes.indexOf(key) === -1) {
       ampImage.setAttribute(key, defaults.image[key]);
     }
-  })
-}
+  });
+};
 
 export const ampify = html => {
   const parser = new DOMParser();
@@ -33,6 +33,13 @@ export const ampify = html => {
     const inheritedAttributes = inheritAttribute(image, ampImage);
     applyInlineSize(ampImage, inheritedAttributes);
     image.parentNode.replaceChild(ampImage, image);
+  });
+
+  const iframes = [].slice.call(dom.getElementsByTagName('iframe'));
+  iframes.forEach(iframe => {
+    const ampIframe = dom.createElement('amp-iframe');
+    const inheritedAttributes = inheritAttribute(iframe, ampIframe);
+    iframe.parentNode.replaceChild(ampIframe, iframe);
   });
   return dom.body.innerHTML;
 };

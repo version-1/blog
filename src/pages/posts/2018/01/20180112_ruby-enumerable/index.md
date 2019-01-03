@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
-title: \[ruby\]rubyのEnumerableクラスの抽出メソッドまとめ、map、find、reject、select
+title: rubyのEnumerableクラスの抽出メソッドまとめ、map、find、reject、select
 slug: /2018/01/12/ruby-enumerable
 createdAt: 2018-01-12 15:35:22
 updatedAt: 2018-08-26 00:57:02
 thumbnail: /2018/01/20180112_ruby-enumerable/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - rails
   - for-beginner

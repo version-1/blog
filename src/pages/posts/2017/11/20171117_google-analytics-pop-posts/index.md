@@ -65,6 +65,7 @@ wordpressのプラグインで自動でカウントされてしまうと
 私もいくつか調べて、
 
 こちらや
+
 <a href="https://www.tam-tam.co.jp/tipsnote/cms/post11104.html">【WordPress】サーバ負荷が軽い「Simple GA Ranking」プラグインで人気記事ランキングを表示する方法</a>
 
 こちらを
@@ -82,6 +83,7 @@ wordpressのプラグインで自動でカウントされてしまうと
 
 インストール方法はこちらに書いたいので、
 よければ使ってみてください。
+
 <a href="https://ver-1-0.net/how-to-install-google-analytics-pop-posts/">[ WordPress プラグイン ] Google Analytics POP Postsのインストール手順</a>
 
 <strong>
@@ -112,6 +114,7 @@ Wordpress.orgにプラグインとして申請中ではありますが、
 を設定してウィジェットに追加するだけです。
 
 当ブログでも利用しています。
+
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171117_google-analytics-pop-posts/人気記事.jpg" alt="人気記事.jpg"/>
 
 &nbsp;

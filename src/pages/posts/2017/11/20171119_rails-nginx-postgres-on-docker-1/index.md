@@ -97,6 +97,7 @@ Dockerの仕組みやメリットについての説明は
 MacでのDockerのインストールの仕方だけ説明します。
 
 インストールはこちらからできます。
+
 <a href="https://store.docker.com/editions/community/docker-ce-desktop-mac">https://store.docker.com/editions/community/docker-ce-desktop-mac</a>
 
 インストールの方法は簡単で、
@@ -104,15 +105,12 @@ MacでのDockerのインストールの仕方だけ説明します。
 
 特段コマンドを打ったりする必要はありません。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">Dockerを触ってみる。基本コマンドの説明</h2>
-&nbsp;
 
 まずは簡単に触ってみてDockerのイメージを
 掴んでいきます。
 コンソールから以下コマンドを叩いてみましょう。
+
 ```bash
 docker pull hello-world
 ```

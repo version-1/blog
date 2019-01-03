@@ -6,11 +6,10 @@ createdAt: 2017-11-21 16:28:57
 updatedAt: 2017-12-02 15:23:56
 thumbnail: /2017/11/20171121_uber-taiwan/thumbnail.jpg
 categories:
-  - column
+  - travel
 ---
 
 <h2 class="chapter">台湾（台北）に行ってきました</h2>
-&nbsp;
 
 家にいるとついついPC触ってネットの世界に浸ってしまうので、
 気分を転換も兼ねて10月の終わり頃に台湾にふらっと

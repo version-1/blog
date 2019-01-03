@@ -11,7 +11,6 @@ categories:
 ---
 
 <h2 class="chapter">Dockerでrails5.1.4環境を構築する</h2>
-&nbsp;
 
 前回の記事ではDockerをMacにインストールして、
 少しDockerコンテナを起動させたり、
@@ -25,9 +24,6 @@ categories:
 
 今回はそのDockerでrails環境を構築して行きます。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">環境構築の流れ</h2>
 &nbsp;
 
@@ -41,43 +37,33 @@ categories:
 手順はこちらの記事を参考にしました。
 <a href="https://qiita.com/togana/items/30b22fc39fe6f7a188ec">RailsアプリをDockerで開発するための手順</a>
 
-&nbsp;
-
-&nbsp;
-
 <div class="after-intro"></div>
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">早速構築</h2>
-&nbsp;
+
 <h3 class="section">ruby2.4.2のイメージを取得</h3>
-&nbsp;
 
 まずはruby2.4.2がインストールされた、
 イメージを取得してきます。
+
 ```bash
 docker pull ruby:2.4.2
 ```
+
 ※前回の記事ですでにruby:2.4.2の取得が済んでいる人は、
 ここはスキップしても大丈夫です。
 
-&nbsp;
-
-&nbsp;
 <h3 class="section">rubyのコンテナでbundle init</h3>
-&nbsp;
 
 取得したコンテナ内でbundle initして、
 Gemfileを作成します。
 ```bash
 docker run --rm -v "$PWD":/usr/src/sample -w /usr/src/sample ruby:2.4.2 bundle init
 ```
-&nbsp;
 
 できたGemfileを編集して、
 railsの行を追加してあげます。
+
 ```bash
 $cat Gemfile
 # frozen_string_literal: true
@@ -89,14 +75,12 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
  gem "rails", '5.1.4'
 
 ```
-&nbsp;
 
-&nbsp;
 <h3 class="section">Dockerfileを基にrailsアプリ用イメージの作成</h3>
-&nbsp;
 
 次にDockerfileを用いてrailsアプリ用のイメージをビルドして行きます。
 今回は下記のようなDockerfileを作成します。
+
 ```docker
 FROM ruby:2.4.2
 
@@ -123,7 +107,6 @@ RUN \
   rm -rf ~/.gem
 
 ```
-&nbsp;
 
 Dokcerfileとははapacheの設定ファイルのような形式で記述されたファイルになります。
 ここに、
@@ -135,24 +118,16 @@ Dokcerfileとははapacheの設定ファイルのような形式で記述され�
 今回はrailsに必要なモジュールがインストールされた
 イメージを作成するためのDockerfileになっています。
 
-&nbsp;
-
-&nbsp;
-
 Gemfile.lockがないので作成。
 ```bash
  :> Gemfile.lock
 ```
-&nbsp;
 
 ビルドのコマンドは次のように、
 ビルドの基になるイメージと基底ディレクトリを指定します。
 ```bash
 $ docker build -t version1/sample .
 ```
-&nbsp;
-
-&nbsp;
 
 docker images(イメージの一覧取得)を叩くと確かに新しいイメージが作成されています。
 ```bash
@@ -160,9 +135,6 @@ $docker images | grep version1
 version1/sample         latest              f31106e13371        40 seconds ago      762MB
 
 ```
-&nbsp;
-
-&nbsp;
 
 先ほどの手順までで、
 railsに必要なモジュールがインストールできたので、
@@ -170,9 +142,6 @@ railsに必要なモジュールがインストールできたので、
 ```bash
 $docker run --rm -it -v "$PWD":/usr/src/sample version1/sample rails new .
 ```
-&nbsp;
-
-&nbsp;
 
 このコマンドは、
 カレントディレクトリをversion1/sampleイメージの/usr/src/sampleに
@@ -204,17 +173,10 @@ drwxr-xr-x   9 admin  staff   306 Nov 23 13:06 bin
 -rw-r--r--   1 admin  staff  4772 Nov 23 13:06 Gemfile.lock
 
 ```
-&nbsp;
-
-&nbsp;
 
 <div class="mid-article"></div>
 
-&nbsp;
-
-&nbsp;
 <h3 class="section">コンテナを起動した際に、Railsが立ち上がるように設定</h3>
-&nbsp;
 
 ここまででrailsが動く環境は作れましたが、
 コンテナ起動と同時にRailsも立ち上がるようにしたいので、
@@ -226,20 +188,15 @@ EXPOSE  3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
 
 ```
-&nbsp;
-
-&nbsp;
 
 記述を追記したら再度ビルドします。
 追記した部分では、
 ローカルのソースをコンテナ内の $APP_ROOTにコピーして、
 3000番ポートを開けて、railsを起動しています。
+
 ```bash
 docker build -t version1/sample .
 ```
-&nbsp;
-
-&nbsp;
 
 これで構築は
 完了なので、コンテナを起動させてみましょう。
@@ -250,10 +207,6 @@ docker run -d -p 3000:3000 -v "${PWD}:/usr/src/sample" version1/sample
 -vコマンドでローカルのディレクトリをマウントして置くのがみそです。
 これしないとローカルのソースとコンテナ内のソースが同期できないので
 
-&nbsp;
-
-&nbsp;
-
 無事起動しました。
 ```bash
 $docker ps
@@ -261,9 +214,6 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 c7a0a8cfabe5        version1/sample     "rails server -b 0..."   8 seconds ago       Up 7 seconds        0.0.0.0:3000->3000/tcp   admiring_hugle
 
 ```
-&nbsp;
-
-&nbsp;
 
 ブラウザから繋いでもみれます。
 
@@ -292,17 +242,11 @@ docker exec c7a0a8cfabe5 rails scaffold User name email age
 ```
 とすればワンコマンドでscaffoldできます。
 
-&nbsp;
-
-&nbsp;
-
 マイグレーションも
 ```bash
 docker exec c7a0a8cfabe5 rake db:migrate
 ```
 でいけます。
-
-&nbsp;
 
 config/routes.rbも少し変更して、
 ユーザ管理画面がトップに来るようにします。
@@ -314,18 +258,12 @@ Rails.application.routes.draw do
 end
 
 ```
-&nbsp;
-
-&nbsp;
 
 config/配下を修正したので、
 コンテナを再起動させます。
 ```bash
 docker restart c7a0a8cfabe5
 ```
-&nbsp;
-
-&nbsp;
 
 これで、
 http://localhostに接続すれば。
@@ -336,13 +274,7 @@ http://localhostに接続すれば。
 
 構築は以上です。
 
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">まとめ</h2>
-&nbsp;
-
-&nbsp;
 
 ここまで、railsの環境構築をしましたが、
 Dockerには一プロセス一コンテナという原則みたいなものがあるので、
@@ -355,7 +287,5 @@ Dockerには一プロセス一コンテナという原則みたいなものが�
 docker-composeというものがあるので、
 次はそれを使いながら、
 rails + nginx + postgres環境を構築したいと思います。
-
-&nbsp;
 
 <div class="after-article"></div>

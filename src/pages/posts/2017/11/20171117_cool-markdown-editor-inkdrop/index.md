@@ -16,6 +16,7 @@ categories:
 知り合いのエンジニアさんからこのような記事を
 教えてもらったのがきっかけで、
 このアプリに出会いました。
+
 <a href="https://blog.craftz.dog/how-i-built-a-markdown-editor-earning-1300-mo-profit-inkdrop-c6691eca7091">
 Markdownエディタを作って月15万円稼ぐまでにやったこと — Inkdrop</a>
 
@@ -64,7 +65,6 @@ UIの好みも人それぞれですが、
 普段使いのツールなので、
 <strong>ユーザーをワクワクさせるアプリ</strong>というのは強いですね。
 
-&nbsp;
 <h2 class="chapter">Coolなポイント その2 開発体制</h2>
 &nbsp;
 

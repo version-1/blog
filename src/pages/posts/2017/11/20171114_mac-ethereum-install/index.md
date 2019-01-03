@@ -5,7 +5,7 @@ slug: /2017/11/14/mac-ethereum-install
 createdAt: 2017-11-14 08:00:21
 updatedAt: 2018-08-26 11:20:41
 thumbnail: /2017/11/20171114_mac-ethereum-install/thumbnail.png
-categories: 
+categories:
   - cryptocurrency-blockchain
   - engineering
 ---
@@ -62,18 +62,6 @@ categories:
 <strong>音楽業界の著作権管理と印税の支払いを自動化するプラットフォームである</strong>
 <a href="https://ujomusic.com/">Ujomusic</a>
 などのプロジェクトが紹介されています。
-
-&nbsp;
-
-&nbsp;
-
-イーサリアム自体に興味が湧いて、
-今のうちに買っておきたいと言う方には、
-こちらの記事を紹介しておきます。
-https://ver-1-0.net/2017/09/03/%e3%81%be%e3%81%a0%e7%9f%a5%e3%82%89%e3%81%aa%e3%81%84%ef%bc%9f%e4%bb%ae%e6%83%b3%e9%80%9a%e8%b2%a8%e3%81%ae%e8%b2%b7%e3%81%84%e6%96%b9%e3%80%80%e3%83%93%e3%83%83%e3%83%88%e3%82%b3%e3%82%a4%e3%83%b3/
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -186,7 +174,7 @@ geth --datadir /your/env/path/my-first-eth init /your/env/path/myGenesis.json
 <h3>Gethの起動</h3>
 起動のコマンドはこちらになります。
 ```bash
-geth --networkid 10 --nodiscover --maxpeers 0 --datadir /your/env/path/my-first-eth console 2>> geth.log 
+geth --networkid 10 --nodiscover --maxpeers 0 --datadir /your/env/path/my-first-eth console 2>> geth.log
 ```
 &nbsp;
 
@@ -211,21 +199,10 @@ geth --networkid 10 --nodiscover --maxpeers 0 --datadir /your/env/path/my-first-
 
 ここまででgethの起動は完了です。
 
-&nbsp;
-
-&nbsp;
 
 <div class="mid-article"></div>
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">アカウントの作成</h2>
-&nbsp;
-
-&nbsp;
 
 イーサリアムを送金する必要があるので、
 アカウントを作成する必要があり、
@@ -246,9 +223,6 @@ personal.newAccount("password")
 ```go
 personal.newAccount("drowssap")
 ```
-&nbsp;
-
-&nbsp;
 
 アカウントを作成した際に表示された文字列は、
 作成したアカウントのアドレスになります。
@@ -268,7 +242,6 @@ personal.newAccount("drowssap")
 > eth.accounts
 ["0x73c935b7ade47b3a3efa29769e4db1cc91aa2e88", "0x0c792c39d206ae2d2a0df7b7db7d365c3067a137"]
 ```
-&nbsp;
 
 &nbsp;
 <h2 class="chapter">残高の確認・マイニング</h2>
@@ -297,7 +270,6 @@ personal.newAccount("drowssap")
 null
 
 ```
-&nbsp;
 
 しばらくするとブロックが生成されてきます。
 ```go
@@ -305,7 +277,6 @@ null
 true
 
 ```
-&nbsp;
 
 そして残高を確認してみると
 ```go
@@ -323,16 +294,7 @@ true
 ここまで準備ができたので最後は送金を行います。
 
 &nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 <h2 class="chapter">送金</h2>
-&nbsp;
-
-&nbsp;
 
 はじめにアカウントの残高を確認します。
 ```go
@@ -345,7 +307,6 @@ true
 >
 
 ```
-&nbsp;
 
 残高を確認すると、
 account1には195ETH、
@@ -357,7 +318,6 @@ account2には0ETHであることがわかります。
 ```go
 personal.unlockAccount(eth.accoutns[0],'password',0)
 ```
-&nbsp;
 
 それでは、
 account1からaccount2に100ETHを送ってみます。
@@ -388,7 +348,7 @@ ReferenceError: 'getTransaction' is not defined
   v: "0x1b",
   value: 100000000000000000000
 }
-> 
+>
 ```
 &nbsp;
 
@@ -407,7 +367,7 @@ ReferenceError: 'getTransaction' is not defined
 "0x0c792c39d206ae2d2a0df7b7db7d365c3067a137"
 > eth.getBalance(eth.accounts[1])
 0
-> 
+>
 ```
 &nbsp;
 
@@ -428,7 +388,7 @@ true
 100000000000000000000
 > web3.fromWei(eth.getBalance(eth.accounts[1]),'ether')
 100
-> 
+>
 ```
 &nbsp;
 
@@ -455,8 +415,5 @@ true
 <div class="booklink-footer"></div>
 </div>
 </div>
-&nbsp;
-
-&nbsp;
 
 <div class="after-intro"></div>

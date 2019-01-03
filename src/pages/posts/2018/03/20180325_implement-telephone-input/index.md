@@ -11,9 +11,9 @@ categories:
 ---
 
 <h2>電話番号形式で入力する際のフォームを実装</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/ReactNativeTelephoneInput.gif" alt="ReactNativeTelephoneInput.gif"/>
 
-&nbsp;
+<img class="post-image half-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/ReactNativeTelephoneInput.gif" alt="ReactNativeTelephoneInput.gif"/>
+
 
 ReactNativeで入力フォームを使う時って、TextInputを使いますよね。ただこのTextInputさんは、汎用的につくられているので<strong>電話番号の入力フォームとしては少し使いづらい印象があります。</strong>
 
@@ -28,7 +28,8 @@ ReactNativeで入力フォームを使う時って、TextInputを使いますよ
 ポイントは、insertDelimiterメソッドですね。<strong>入力に対してつねに所定の位置にハイフンが挿入される</strong>ように作っています。
 
 あとはそれぞれ電話番号の桁数やスタイル、キーボードの種類などをpropsに定義しています。
-<h5>TelephoneInput.js</h5>
+<h4>TelephoneInput.js</h4>
+
 ```jsx
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, TextInput } from 'react-native';
@@ -80,7 +81,8 @@ export class TelephoneInput extends Component {
 上での説明は最小限度にとどめましたが、コンポーネントを定義するところで得られるメリットは上の実装を意識せずにつかえることです。
 
 実際に使ってみて、それを確かめてみましょう。
-<h5>App.js</h5>
+<h4>App.js</h4>
+
 ```jsx
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';

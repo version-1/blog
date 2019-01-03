@@ -10,14 +10,12 @@ categories:
   - for-beginner
 ---
 
-&nbsp;
-
 OSはLubuntu 16.0.4
 
 <h2 class="chapter">PHPの7.0インストール</h2>
 まずはPHPをインストール
 
-```
+```bash
 sudo apt-get install php7.0-cli
 
 ```
