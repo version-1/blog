@@ -1,13 +1,63 @@
-import React from 'react'
-import Layout from '../components/layouts/Index.js'
+import React from 'react';
+import Layout from '../components/layouts/Default.js';
+import Post from '../components/Post';
+import {graphql} from 'gatsby';
 
-const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
-)
+const NotFoundPage = ({data}) => {
+  const {edges: posts} = data.allMarkdownRemark;
+  return (
+    <Layout>
+      <div className="not-found">
+        <h1>404 NOT FOUND</h1>
+        <p>お探しのページが見つかりません。</p>
+      </div>
+      <section className="section">
+        <div className="section-container">
+          <div className="section-content">
+            <div className="section-title">
+              <span className="title">人気記事</span>
+            </div>
+            <div className="section-list">
+              <div className="row">
+                {posts.map(({node: post}) => (
+                  <Post post={post} key={post.id} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
+
+export const pageQuery = graphql`
+  query NotFoundQuery {
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___createdAt]}
+      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+      limit: 6
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            slug
+            thumbnail
+            templateKey
+            categories
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`;
