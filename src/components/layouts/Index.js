@@ -3,6 +3,7 @@ import {StaticQuery, graphql} from 'gatsby';
 import Prism from 'prismjs';
 import Helmet from 'react-helmet';
 import headerImage from '../../assets/images/header-image-2.svg';
+import headerImageSmall from '../../assets/images/header-image-small.svg';
 import footerImage from '../../assets/images/footer-image.svg';
 
 import Img from '../../components/atoms/Image';
@@ -62,13 +63,23 @@ export default class IndexLayout extends React.PureComponent {
               description={data.site.siteMetadata.description}
             />
             {this.renderAMPHeader()}
-            <div className="header-image">
+            <div className="header-image hide-on-med-and-down">
               <Img
                 amp={amp}
                 width={4000}
                 height={300}
                 layout="fixed"
                 src={headerImage}
+                alt="header image"
+              />
+            </div>
+            <div className="header-image-small hide-on-large-only">
+              <Img
+                amp={amp}
+                width={2000}
+                height={150}
+                layout="fixed"
+                src={headerImageSmall}
                 alt="header image"
               />
             </div>

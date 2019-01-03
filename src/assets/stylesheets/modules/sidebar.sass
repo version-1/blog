@@ -1,0 +1,51 @@
+.sidebar
+  padding: 10px
+  h3
+    background: $co-black
+    color: white
+    font-size: 20px
+    font-weight: bold
+    padding: 10px
+    border-radius: 6px
+    &:before
+      display: inline-block
+      content: ''
+      height: 15px
+      width: 15px
+      background: white
+      border-radius: 4px
+      margin-right: 10px
+  .self-introduction
+    padding: 10px 0px
+    display: flex
+    .profile-image
+       padding: 5px
+       width: 100px
+       height: 100px
+       img
+         border-radius: 4px
+         object-fit: cover
+         height: 100%
+    .introduction
+       padding: 5px
+  .card-image
+    img
+      border-radius: 4px
+
+.flat-card
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  &:first-child
+    margin-top: 20px
+  .card-content
+    padding: 10px
+  .card-image
+    height: 72px
+    min-width: 100px
+    max-width: 100px
+    img
+      object-fit: cover
+      height: 100%
+      width: 100%
+

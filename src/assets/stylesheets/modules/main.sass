@@ -1,0 +1,86 @@
+.main
+  .section
+    .section-title
+      .title
+        font-size: 20px
+        font-weight: 500
+        color: $co-orange
+        position: relative
+        padding: 0.5em 0
+        margin-left: 30px
+        &:after
+          content: ''
+          display: block
+          height: 6px
+          border-radius: 6px
+          background: -moz-linear-gradient(to right, #e87e3f, #ffff98)
+          background: -webkit-linear-gradient(to right, #e87e3f, #ffff98)
+          background: linear-gradient(to right, #e87e3f, #ffff98)
+    .section-list
+      .row
+        display: flex
+        flex-wrap: wrap
+      .row .col
+        float: unset
+      .card
+        height: 95%
+        border-radius: 6px
+        .card-image img
+          height: 180px
+          border-radius: 6px 6px 0px 0px
+          @media #{$small-and-down}
+            height: 200px
+    .pagination
+      text-align: center
+      li.active
+        background-color: $co-orange
+        border-radius: 6px
+  .card-content
+    padding: 0
+    padding-top: 10px
+    .post-detail-header
+      padding: 5px 10px
+      color: $co-black
+      text-align: right
+      .created-at, .updated-at
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        color: grey
+      .categories
+        padding-top: 5px
+        color: grey
+        font-weight: 500
+        font-size: 12px
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        a:hover
+          color: $co-black
+          font-weight: 700
+        i
+          display: block
+          margin-right: 5px
+    .post-detail-footer
+      font-size: 12px
+      padding: 5px 10px
+      .author
+        display: flex
+        align-items: center
+        color: grey
+        position: absolute
+        bottom: 5px
+    .post-title
+      padding: 0 10px
+      font-weight: 700
+      font-size: 16px
+      margin-bottom: 10px
+      a
+        color: $co-black
+        &:hover
+          opacity: .6
+    .timestamp
+      font-size: 10px
+    .post-meta-header
+      display: flex
+

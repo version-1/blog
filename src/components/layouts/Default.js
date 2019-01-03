@@ -8,20 +8,20 @@ class DefaultLayout extends React.PureComponent {
     return (
       <Layout amp={amp} baseUrl={baseUrl}>
         <div className="row site-container">
-          <div className="col s12 m12 l8">
-            <main className="main">{this.props.children}</main>
-          </div>
-          {amp ? null : (
-            <div className="col l4 hide-on-med-and-down">
+          <div className="row flex">
+            <div className="col s12 m12 l8">
+              <main className="main">{this.props.children}</main>
+            </div>
+            <div className="col s12 m12 l4 hide-on-med-and-down">
               <Sidebar amp={amp} />
             </div>
-          )}
-        </div>
-        {amp ? (
-          <div className="row">
-            <Sidebar amp={amp} />
           </div>
-        ) : null}
+          <div className="row flex">
+            <div className="col s12 m12 hide-on-large-only">
+              <Sidebar amp={amp} />
+            </div>
+          </div>
+        </div>
       </Layout>
     );
   }

@@ -27,14 +27,14 @@ my blog
  - [x] rewrite articles' dom to md
  - [x] image url
  - [x] move images to external site
- - [x] AMP
- - [ ] AMP canonical
+ - [ ] AMP(canonical, iframe, gif, error)
+ - [ ] embed video
  - [ ] 404 Page
  - [ ] adsence
  - [ ] ariticle info(timestamp, category etc..)
  - [ ] sns button
+ - [ ] redesign
 ---- release line ---
- - [ ] embed video
  - [ ] About Page
  - [ ] popular article
  - [ ] search

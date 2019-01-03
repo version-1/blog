@@ -80,7 +80,9 @@ export const pageQuery = graphql`
             slug
             thumbnail
             templateKey
-            createdAt(formatString: "MMMM DD, YYYY")
+            categories
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
           }
         }
       }

@@ -57,6 +57,8 @@ export const postsIndexQuery = graphql`
             slug
             thumbnail
             categories
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
           }
         }
       }

@@ -33,7 +33,7 @@ const Navbar = class extends React.Component {
           <div className="brand-logo">
             <Link to="/">So Far, So Good</Link>
           </div>
-          <div className="nav-links">
+          <div className="nav-links hide-on-med-and-down">
             <MenuList menus={menus} />
           </div>
         </div>

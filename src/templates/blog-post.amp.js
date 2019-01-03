@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Img from '../components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from '../../config/constants';
 import {ampify} from '../lib/ampify';
@@ -12,15 +13,26 @@ export const BlogPostTemplate = ({
   contentComponent,
   tags,
   title,
+  thumbnail,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
+  const thumbnailUrl = meta.images.url + thumbnail
 
   return (
     <section className="section">
       {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
+        <div className="thumbnail">
+          <Img amp src={thumbnailUrl} alt={title} />
+        </div>
+        <div className="post-meta">
+          <div className="author"></div>
+          <div className="created-at"></div>
+          <div className="updated-at"></div>
+          <div className="categories"></div>
+        </div>
         <PostContent className="post-body" content={content} />
       </article>
     </section>
@@ -58,6 +70,7 @@ export default class BlogPost extends React.PureComponent {
             </Helmet>
           }
           title={post.frontmatter.title}
+          thumbnail={post.frontmatter.thumbnail}
         />
       </Layout>
     );

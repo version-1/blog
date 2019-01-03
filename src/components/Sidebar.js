@@ -44,16 +44,6 @@ export default class Sidebar extends PureComponent {
           </div>
         </section>
         <section className="section">
-          <h3>検索</h3>
-          <div className="search">
-            <div className="input-field">
-              <i className="material-icons prefix">search</i>
-              <input id="icon_telephone" type="tel" />
-              <label htmlFor="icon_telephone">Search</label>
-            </div>
-          </div>
-        </section>
-        <section className="section">
           <h3>オススメ記事</h3>
           {posts.map((post, index) => (
             <Link key={index} to={post.to}>

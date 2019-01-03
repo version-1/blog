@@ -1,0 +1,104 @@
+.post
+  padding: 10px 20px
+  font-size: 16px
+
+  .post-meta-header
+    .timestamp
+      margin-top: 20px
+      display: flex
+      justify-content: flex-end
+      font-size: 12px
+      font-weight: bold
+      color: grey
+      .created-at, .updated-at
+        margin-right: 10px
+        display: flex
+        align-items: center
+  .post-meta-footer
+    color: grey
+    font-size: 12px
+    .author
+    .categories
+      display: flex
+      align-items: center
+      margin: 10px 0
+    .category
+      margin-left: 10px
+      color: grey
+      border: 2px solid grey
+      border-radius: 6px
+      &:hover
+        color: white
+        background: grey
+  h1
+    font-size: 2rem
+    padding: 30px 0
+    border-bottom: 5px double lightgrey
+    /* border-top: 3px solid lightgrey */
+    margin-bottom: 10px
+  h2
+    margin: 20px 0
+    padding: 20px 0
+    font-size: 1.8rem
+    border-bottom: 3px solid $co-pink
+    font-family: 'Hiragino Maru Gothic Pro'
+    color: #f4b89e
+    &:before
+      color: $co-pink
+      font-weight: bold
+      padding: 10px
+      content: '##'
+    &:after
+      display: block
+      width: 100%
+      background: $co-pink
+      border-radius: 6px
+      height: 3px
+  h3
+    color: #b3b2b2
+    margin: 20px 0
+    padding: 20px 0
+    font-size: 1.5rem
+    border-bottom: 3px solid lightgrey
+    &:before
+      color: lightgrey
+      font-weight: bold
+      padding: 10px
+      content: '###'
+  h4
+    display: inline-block
+    font-size: 1rem
+    font-weight: bold
+    padding: 15px 0px
+    border-bottom: 3px dotted $co-black
+    &:before
+      color: $co-black
+      font-weight: bold
+      padding-right: 10px
+      content: '####'
+  h5
+    font-size: 0.6rem
+  img.post-image
+    width: 75%
+  img.almost-width
+    width: 75%
+  img.half-width
+    width: 50%
+  ul
+    margin-left: 20px
+    li
+      list-style-type: square
+      padding: 5px 0px
+  strong
+    font-weight: bold
+  code
+    font-size: 12px
+  .image
+    object-fit: cover
+    height: 100%
+    width: 100%
+  .thumbnail
+    width: 100%
+    img
+      width: 100%
+
