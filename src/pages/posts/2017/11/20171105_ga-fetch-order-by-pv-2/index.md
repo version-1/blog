@@ -20,9 +20,6 @@ PV数で人気記事の取得までできました。
 
 <div class="after-intro"></div>
 
-&nbsp;
-&nbsp;
-
 <h2 class="chapter">記事のタイトルを取得する - 導入 -</h2>
 前回は、
 記事のURLしか取得できていなかったので、
@@ -44,9 +41,6 @@ URLで判断するようにしました。)
 
 <div class="mid-article"></div>
 
-&nbsp;
-&nbsp;
-
 <h2 class="chapter">記事のタイトルを取得する - 実装 -</h2>
 Wordpressの投稿は、
 <strong>wp_posts</strong>というテーブルに格納されていて、
@@ -55,11 +49,6 @@ Wordpressの投稿は、
 <strong>この情報とGoogle Analyticsから取ってきたURLをぶつけて
 記事情報を表示します。</strong>
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171105_ga-fetch-order-by-pv-2/Screen-Shot-2017-11-05-at-22.07.43.png" alt="Screen-Shot-2017-11-05-at-22.07.43.png"/>
 
@@ -70,10 +59,6 @@ Wordpressの投稿は、
  	<li>ga-popular-rankings.php ・・・ ページの表示を行ったりするメインの部分</li>
 </ul>
 という感じになります。
-
-&nbsp;
-
-&nbsp;
 
 GoogleAnalyticsService.phpは前回で、
 GoogleAnalyticsからPageViewなどの情報を取得してきた部分になりますが、今回はクラスとして分割して配置しています。
@@ -167,17 +152,12 @@ Class GoogleAnalyticsService{
 }
 
 ```
-&nbsp;
 
 変更点はメソッド名が代わり、
 printResultsメソッドがfetch_result_as_arrayのように
 配列を返す関数に変わったという部分になります。
 
 参考:<a href="https://ver-1-0.net/2017/11/04/ga-fetch-order-by-pv-1/">Google AnalyticsからPV順に記事を取得するその①</a>
-
-&nbsp;
-
-&nbsp;
 
 また、
 メインのファイルであるga-popular-rankings.php
@@ -331,13 +311,7 @@ add_shortcode( 'ga_popular_rankings', 'ga_popular_rankings' );
 
 ```
 
-&nbsp;
-&nbsp;
-
 <h2 class="chapter">まとめ</h2>
-&nbsp;
-
-&nbsp;
 
 今回ここまでで、
 一応自分のサイトに人気記事のランキンがまでは表示できます。
@@ -370,14 +344,8 @@ WordPressのプラグインには悩まされた苦い思い出が
 
 <a href="https://github.com/version-1/ga-popular-rankings">https://github.com/version-1/ga-popular-rankings</a>
 
-&nbsp;
-
 長くなりましたが、
 この記事はここまでにします。
 では。
 
-&nbsp;
-
 <div class="after-article"></div>
-
-&nbsp;

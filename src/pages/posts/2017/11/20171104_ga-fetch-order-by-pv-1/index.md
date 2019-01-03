@@ -10,10 +10,6 @@ categories:
   - rails
 ---
 
-&nbsp;
-
-&nbsp;
-
 唐突ですが、
 だいたいどのブログにも人気記事やよく読まれている記事
 ってウィジェットなどにしてまとめて載っけてありますよね。
@@ -34,7 +30,7 @@ categories:
 その結果から人気記事を取得してきているようでした。
 
 え正直、
-<h3>「これ、自分からのアクセスとかも含まれるのでは・・・」</h3>
+**「これ、自分からのアクセスとかも含まれるのでは・・・」**
 という感想を持ちましたし、
 そもそもいちいちDatabaseにアクセスしていて重そうとも
 思いました。
@@ -43,15 +39,10 @@ Google AnalyticsのPVを取得してきて人気記事を調べたいなと思�
 Google AnalyticsのAPIを使ってPV順に記事を取得できる
 方法を調べて見ました。
 
-&nbsp;
 
 <div class="after-intro"></div>
 
-&nbsp;
 <h2 class="chapter">Google Analytics APIを使うための設定</h2>
-&nbsp;
-
-&nbsp;
 
 では、早速APIからデータを取って来よう！！
 という前にいくつか設定が必要なようです。
@@ -61,13 +52,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 
 必要な手順を解説していきます。
 
-&nbsp;
-
-&nbsp;
 <h3>サービスアカウントの作成</h3>
-&nbsp;
-
-&nbsp;
 
 まず、
 サービスアカウントを作成していきます。
@@ -76,15 +61,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 最初の画面はそのまま続行としておきましょう。
 そのままプロジェクトを作成してしまいます。
 
-&nbsp;
-
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.32.52.png" alt="Screen-Shot-2017-11-04-at-21.32.52.png"/>
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 次の画面でAPIを有効化します。
 画面ではすでにAPIが有効になっていたようです。
@@ -92,19 +69,13 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.02.png" alt="Screen-Shot-2017-11-04-at-21.33.02.png"/>
 
-&nbsp;
-
-&nbsp;
-
 次の画面で認証情報を追加しますが、
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.27.png" alt="Screen-Shot-2017-11-04-at-21.33.27.png"/>
 
-&nbsp;
 
 サービスアカウント名は任意なので、
 好きな名前を使いましょう。
 
-&nbsp;
 
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.50-1024x649.png" alt="Screen-Shot-2017-11-04-at-21.33.50-1024x649.png"/>
 
@@ -113,13 +84,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 サービスアカウントの鍵が生成されてダウンロードされます。
 大事な鍵なので大切に保管しておきましょう。
 
-&nbsp;
-
-&nbsp;
 <h3>Google Analyticsヘのユーザ追加</h3>
-&nbsp;
-
-&nbsp;
 
 これを忘れるとAPIでアクセスした場合に、
 権限がないですと怒られるので確実に行いましょう。
@@ -131,15 +96,10 @@ Google Analyticsにログインして、
 
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/google-analytics-add-user-1024x443.png" alt="google-analytics-add-user-1024x443.png"/>
 
-&nbsp;
 
 <div class="mid-article"></div>
 
-&nbsp;
 <h2 class="chapter">Analytics APIを使ってページごとのPVを取得</h2>
-&nbsp;
-
-&nbsp;
 
 まずは、
 composerを使ってGoogle Client APIライブラリを取得します。
@@ -152,13 +112,11 @@ composer require google/apiclient:^2.0
 まず気をつけるのは、
 自分のブログのView IDで
 
-&nbsp;
 ```php
 $VIEW_ID = "< REPLACE YOUR VIEW ID>";
 ```
 の部分を書き換えることです。
 
-&nbsp;
 
 自分のView IDは下記ツールで調べるか、
 <a href="https://ga-dev-tools.appspot.com/account-explorer/?hl=ja">Account Exploer</a>
@@ -320,23 +278,17 @@ Metric type: INTEGER
 pv: 73
 
 ```
-&nbsp;
-
-&nbsp;
 
 PV上位10位以内の記事とそのPVが取得できています。
 (今回の実行結果には引数で10を指定しているため10件取得が期待値)
 
 &nbsp;
 <h2 class="chapter">まとめ</h2>
-&nbsp;
 
 ここまでで、
 無事PVランキングは取得できました。
 引数の数を大きくすれば大きくするほど取得できるランキングの件数を
 取得できるようにサンプルコードを作成しています。
-
-&nbsp;
 
 実際にやってみた感想としては、
 コードを書くまでの最初の設定部分のところで
@@ -345,8 +297,6 @@ PV上位10位以内の記事とそのPVが取得できています。
 作成する部分に気づかず、
 何度APIにリクエストを送っても権限がないと怒られてしまっていました。
 意外と気づかないの注意されると良いと思います。
-
-&nbsp;
 
 プログラムの流れとしては、
 Metrics（SQLでいうカラムのようなイメージ）
@@ -363,7 +313,6 @@ DimensionでMetricsをそれぞれ日付ごとにまとめるのか？ページ�
 
 とりあえず今回はここまでで。
 
-&nbsp;
 
 <div class="after-article"></div>
 
