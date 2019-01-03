@@ -5,7 +5,7 @@ slug: /2018/06/27/react-snake-game-3
 createdAt: 2018-06-27 09:08:48
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/06/20180627_react-snake-game-3/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - react
 ---
@@ -28,7 +28,7 @@ https://m.youtube.com/watch?v=AaGK-fj-BAM
 
 とまあ、話を元に戻しますが、自分でスネークゲームを作ってみるのも面白いかもしれないと思い実際にスネークゲームを作ってみました。
 
-[video width="300" height="407" mp4="https://ver-1-0.net/wp-content/uploads/2018/06/Snake.mp4"][/video]
+https://ver-1-0.net/wp-content/uploads/2018/06/Snake.mp4
 
 実装に要したのは20時間くらいですかね？あるいはもうちょっとかかったかもしれませんが、ゲームとして動くには10時間くらいで、スマホでも使えるようにレスポンシブにしたり、デバッグしたりでプラス10時間くらいで作りました。
 

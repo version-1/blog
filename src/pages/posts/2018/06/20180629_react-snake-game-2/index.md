@@ -5,7 +5,7 @@ slug: /2018/06/29/react-snake-game-2
 createdAt: 2018-06-29 08:00:12
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/06/20180629_react-snake-game-2/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - react
 ---
@@ -38,13 +38,15 @@ Reactでスネークゲームを作ってみた-解説編
 
 reactの環境構築は手間を省いて、create react appで1コマンドで仕上げます。
 (cliをグローバルにインストールする必要があるので2コマンドかも)
-<h5>コマンドのインストール</h5>
-```
+<h4>コマンドのインストール</h4>
+
+```bash
 npm install -g create-react-app
 ```
 
 
-<h5>アプリの雛形作成</h5>
+<h4>アプリの雛形作成</h4>
+
 ```bash
 create-react-app snake-game
 ```
@@ -61,11 +63,13 @@ yarn add lodash
 
 ディレクトリ構成
 
+```
 |--public
 |  |--assets
 |--src
 |  |--components
 |  |--styles
+```
 
 cssはsassで書いています。最近ピュアcssに耐えられない体になってきているのでさらっと入れちゃっています。
 

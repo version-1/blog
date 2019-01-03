@@ -82,6 +82,7 @@ ESTAというなんかアルファベットで難しそうな雰囲気をかも�
 &nbsp;
 <h2>Uberのインストール・登録</h2>
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/Uber_Logo.png" alt="Uber_Logo.png"/>
+
 Uberはアメリカで広く利用されている配車サービスです。Uberのアプリに搭載された地図上で目的地を指定して、自分がいまいる現在地に車を呼んで目的地まで運んでもらうことができます。
 
 これは最初のアメリカ渡航の時に後悔したのですが、<strong>Uberのインストールは日本国内にいるうちにやっておきたいです。</strong>
@@ -97,6 +98,7 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 &nbsp;
 <h2>Skypeクレジットの準備</h2>
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/skype-2048156_640.png" alt="skype-2048156_640.png"/>
+
 海外でのデータ通信はモバイルWifiで問題なしですが、現地で現地の番号に電話かけないといけないということもままあります。
 
 そんなときは<strong>Skypeクレジット</strong>がおすすめです。Skypeのアプリを携帯にインストールしてクレジットカードを登録しておけばアプリ上にチャージ可能です。
@@ -108,6 +110,7 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 &nbsp;
 <h2>充電器・コンセント（アダプタの形は変わらないので心配無用）</h2>
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/power-plug-2802656_640.jpg" alt="power-plug-2802656_640.jpg"/>
+
 海外旅行の際に心配な電源の確保ですが、<strong>アメリカのコンセントは日本のコンセントと変わらない形状</strong>なので<strong>変換用のアダプタなどを改めて購入する必要はありません。</strong>
 
 少し注意が必要なのが<strong>電圧で日本が100Vなのに対して、アメリカは120Vあるいは200Vです。</strong>最近の家電では100-240Vなど幅広い電圧に対応しているので問題になることは少ない（MacBookやiPhoneなども幅広い電圧に対応している）のですが、念のため日本から持って行く家電の対応電圧は確認しておきましょう。
@@ -115,6 +118,7 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 &nbsp;
 <h2>現地通貨（ドル）・クレジットカード</h2>
 <img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/bank-note-941246_640.jpg" alt="bank-note-941246_640.jpg"/>
+
 現地通貨はドルですが、アメリカではほとんどの場合でクレジットカードで決済できてしまうので現金としてのドルは少額で問題ありません。滞在期間などによりますが一週間の滞在でも<strong>200ドルほど</strong>あればだいたい事足りるのではないでしょうか？
 
 アメリカには多額の現金を持ち込む必要はありませんが、<strong>クレジットカードを持って行くのは忘れないようにしましょう。</strong>
@@ -129,7 +133,9 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 
 &nbsp;
 <h2> (番外編）地球の歩き方</h2>
+
 <a href="https://www.amazon.co.jp/B04-%E5%9C%B0%E7%90%83%E3%81%AE%E6%AD%A9%E3%81%8D%E6%96%B9-%E3%82%B5%E3%83%B3%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%82%B9%E3%82%B3%E3%81%A8%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%83%90%E3%83%AC%E3%83%BC-2018-2019-%E5%9C%B0%E7%90%83%E3%81%AE%E6%AD%A9%E3%81%8D%E6%96%B9%E7%B7%A8%E9%9B%86%E5%AE%A4/dp/4478821011/ref=as_li_ss_il?ie=UTF8&amp;qid=1537534267&amp;sr=8-1&amp;keywords=%E5%9C%B0%E7%90%83%E3%81%AE%E6%AD%A9%E3%81%8D%E6%96%B9+%E3%82%B5%E3%83%B3%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%82%B9%E3%82%B3&amp;linkCode=li2&amp;tag=llg01-22&amp;linkId=c3587687f35bd8fc8d81de974097e60a&amp;language=ja_JP" target="_blank" rel="noopener"><img src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4478821011&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=llg01-22&amp;language=ja_JP" border="0" /></a><img style="border: none !important; margin: 0px !important;" src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&amp;language=ja_JP&amp;l=li2&amp;o=9&amp;a=4478821011" alt="" width="1" height="1" border="0" />
+
 これは番外編ですが、<strong>地球の歩き方</strong>もおすすめです。空港の本屋さんなどでも購入できるので旅のおともに一冊用意しておくとよいでしょう。観光スポットなどの紹介はもちろん旅行に際しての準備や現地の文化、治安など幅広い情報を網羅しています。年ごとの情報も充実していて、ラスベガスの地球の歩き方ではカジノを観光スポットとして紹介するだけではなく、実際の遊び方・ルールなども載っていて道中の移動やホテルなどでさっとよんでおくだけでも非常にためになります。
 
 &nbsp;

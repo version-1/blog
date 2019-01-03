@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: \[React\] Component, PureComponent, SFCComponentのレンダリングの挙動の違いをまとめてみる。
+title: ReactのComponent, PureComponent, SFCComponentのレンダリングの挙動の違いをまとめてみる。
 slug: /2018/08/23/diffrence-between-react-components
 createdAt: 2018-08-23 09:28:55
 updatedAt: 2018-09-02 13:09:21
@@ -29,7 +29,8 @@ Reactで開発している方はもちろん、「propsやstateが変更され�
 &nbsp;
 <h3>Component</h3>
 &nbsp;
-```
+
+```jsx
 class HelloComopnent extends Component {
   render() {
    return <div><h1>Hello World</h1></div>
@@ -46,12 +47,14 @@ Component classにはライフサイクルメソッドなるものが実装さ�
 &nbsp;
 <h3>PureComponent</h3>
 &nbsp;
-```
+
+```jsx
 class HelloComopnent extends PureComponent {
   render() {
    return <div><h1>Hello World</h1></div>
 }
 ```
+
 Reactのv15.3から追加されたコンポーネントで基本的な部分はComponentと変わらずライフサイクルメソッドが使えます。
 
 Componentとの大きな違いは、デフォルトでshouldComponentUpdateが実装されている所です。
@@ -63,11 +66,13 @@ shouldComponentUpdateはライフサイクルメソッドの一つでReactコン
 &nbsp;
 <h3>SFC(Stateless Functional Component)</h3>
 &nbsp;
-```
+
+```jsx
 const HelloComopnent = (props) => {
    return <div><h1>Hello World</h1></div>
 }
 ```
+
 SFCはステートレスの名前の通り、内部に状態を持ちません。
 
 関数としてのコンポーネントなので、同じpropsからはつねに同じdomがレンダーされることが保証されています。
@@ -82,7 +87,7 @@ SFCはステートレスの名前の通り、内部に状態を持ちません�
 
 <a href="https://version-1.github.io/react-rendering-sample/">デモ</a>
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/08/20180823_diffrence-between-react-components/Screen-Shot-2018-08-23-at-7.58.42.png" alt="Screen-Shot-2018-08-23-at-7.58.42.png"/>
+<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/08/20180823_diffrence-between-react-components/Screen-Shot-2018-08-23-at-7.58.42.png" alt="react component demo"/>
 
 &nbsp;
 
