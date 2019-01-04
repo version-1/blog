@@ -29,7 +29,7 @@ categories:
 
 出来上がったものはこちらです。
 
-https://ver-1-0.net/wp-content/uploads/2017/10/spa-sample-step2.mp4
+<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.mp4" controls/>
 
 コインチェックのAPIを利用して、
 実に14種類の仮想通貨のレートを確認できるようにしています。

@@ -28,7 +28,7 @@ https://m.youtube.com/watch?v=AaGK-fj-BAM
 
 とまあ、話を元に戻しますが、自分でスネークゲームを作ってみるのも面白いかもしれないと思い実際にスネークゲームを作ってみました。
 
-https://ver-1-0.net/wp-content/uploads/2018/06/Snake.mp4
+<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
 
 実装に要したのは20時間くらいですかね？あるいはもうちょっとかかったかもしれませんが、ゲームとして動くには10時間くらいで、スマホでも使えるようにレスポンシブにしたり、デバッグしたりでプラス10時間くらいで作りました。
 

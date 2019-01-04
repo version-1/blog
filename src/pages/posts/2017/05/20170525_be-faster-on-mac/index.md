@@ -40,9 +40,10 @@ categories:
 **「Appleマーク」→「システム環境設定」→「キーボード」**
 
 実際の手順は下記動画をご覧ください。
+
 ※音は出ませんので安心してご視聴ください。
 
-https://ver-1-0.net/wp-content/uploads/2017/05/カーソルスピード最大化.mp4
+<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.mp4" controls></video>
 
 &nbsp;
 

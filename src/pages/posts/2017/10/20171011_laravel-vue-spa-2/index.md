@@ -10,17 +10,18 @@ categories:
 ---
 
 前回はこの記事でLaravel5.4とVue.jsの環境構築を行いました。
+
 <a href="https://ver-1-0.net/2017/10/11/laravel-vue-spa-1/">Laravel5.4とVue.jsでSPAを作ってみる。① -環境構築-</a>
 
-今回は、
-クライアント側でのルーティングを行なう形で
+今回は、クライアント側でのルーティングを行なう形で
 もう少し実践的な内容で進めていきます。
 
 
 記事の終わりにはこのようなページができます。
+
 ※無音なので、安心してご視聴ください。
 
-https://ver-1-0.net/wp-content/uploads/2017/10/spa-sample.mp4
+<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-2/spa-sample.mp4" controls></video>
 
 動画をみるとわかりますが、
 ページを切り替えているのに全体を読み込まず、
@@ -167,30 +168,30 @@ app.blade.php
 
 ```markup
 <!DOCTYPE html>
-<html lang=&quot;{{ config(&#039;app.locale&#039;) }}&quot;>
+<html lang="{{ config('app.locale') }}">
 <head>
-    <meta charset=&quot;utf-8&quot;>
-    <meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;>
-    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>spa-samples</title>
 
-    <link rel=&quot;stylesheet&quot; href=&quot;{{ mix(&#039;css/app.css&#039;) }}&quot;></script>
-    <meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot;>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>
     window.Laravel = {
-        csrfToken: &quot;{{ csrf_token() }}&quot;
+        csrfToken: "{{ csrf_token() }}"
     };
     </script>
 </head>
 <body>
-    <div id=&quot;app&quot; class=&quot;container&quot;>
+    <div id="app" class="container">
         <router-view></router-view>
         <nav-footer></nav-footer>
     </div>
 
 </body>
-<script src=&quot;{{ mix(&#039;js/app.js&#039;) }}&quot;></script>
+<script src="{{ mix('js/app.js') }}"></script>
 </html>
 ```
 

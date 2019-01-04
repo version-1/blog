@@ -51,6 +51,15 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 800,
+              height: 400, // Optional: Overrides optional.ratio
+              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+              noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
+            },
+          },
         ],
       },
     },
@@ -117,7 +126,8 @@ module.exports = {
           {
             serialize: ({query: {site, allMarkdownRemark}}) => {
               return allMarkdownRemark.edges.map(edge => {
-                const url = site.siteMetadata.siteUrl + edge.node.frontmatter.slug
+                const url =
+                  site.siteMetadata.siteUrl + edge.node.frontmatter.slug;
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.createdAt,

@@ -23,7 +23,7 @@ webアプリには、
 ソースはgithubにあげているので、
 cloneしていただければ試運転できます。
 
-http://ver-1-0.net/wp-content/uploads/2017/06/kotlin-auth.mp4
+<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170605_kotlin-spring-boot-authentication/kotlin-auth.mp4" controls></video>
 
 Springには、
 SpringSecurityという認証管理を行う

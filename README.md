@@ -32,7 +32,7 @@ my blog
  - [x] 404 Page
  - [x] About Page
  - [x] sns button
- - [ ] rss
+ - [x] rss
  - [ ] embed video
  - [ ] adsence
  - [ ] AMP(canonical, iframe, gif, error)
