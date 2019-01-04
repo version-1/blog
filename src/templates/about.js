@@ -10,19 +10,8 @@ import Content, {HTMLContent} from '../components/Content';
 import i18next from '../lib/i18next';
 import {categoryPath} from '../lib/routes';
 
-const CategoryList = ({list}) => {
-  return list.map((category, index) => {
-    const name = i18next.t(`categories.${category}`);
-    return (
-      <a key={category} href={categoryPath(category)} className="category btn-flat">
-        {name}
-        {index === list.length - 1 ? '' : ',  '}
-      </a>
-    );
-  });
-};
 
-export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
+export const AboutTemplate = ({post, contentComponent, helmet}) => {
   const content = post.html;
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const PostContent = contentComponent || Content;
@@ -32,9 +21,6 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
       {helmet || ''}{' '}
       <article className="post">
         <h1 className="post-title">{title}</h1>
-        <div className="thumbnail">
-          <Img src={thumbnailUrl} alt={title} />
-        </div>
         <div className="post-meta-header">
           <div className="timestamp">
             <div className="created-at">
@@ -49,10 +35,6 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
         </div>
         <PostContent className="post-body" content={content} />
         <div className="post-meta-footer">
-          <div className="categories">
-            Category :
-            <CategoryList list={categories} />
-          </div>
           <div className="author">
             Written By : <a href="#">{meta.author}</a>
           </div>
@@ -63,14 +45,14 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
   );
 };
 
-BlogPostTemplate.propTypes = {
+AboutTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object
 };
 
-export default class BlogPost extends React.PureComponent {
+export default class AboutPost extends React.PureComponent {
   render() {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
@@ -80,7 +62,7 @@ export default class BlogPost extends React.PureComponent {
 
     return (
       <Layout amp={amp} baseUrl={baseUrl}>
-        <BlogPostTemplate
+        <AboutTemplate
           post={post}
           contentComponent={HTMLContent}
           helmet={
@@ -97,14 +79,14 @@ export default class BlogPost extends React.PureComponent {
   }
 }
 
-BlogPost.propTypes = {
+AboutPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 };
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query AboutPostByID($id: String!) {
     markdownRemark(id: {eq: $id}) {
       id
       html
@@ -112,7 +94,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         thumbnail
-        categories
         createdAt(formatString: "MMM DD, YYYY")
         updatedAt(formatString: "MMM DD, YYYY")
       }

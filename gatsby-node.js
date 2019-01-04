@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta} = require('./config/constants');
-const fs = require(`fs-extra`)
+const fs = require(`fs-extra`);
 
 // Constants
 const PER_PAGE = 18;
@@ -21,28 +21,32 @@ const CATEGORY_LIST = [
   'travel',
 ];
 
+const STATIC_PAGE_LIST = ['about'];
 
 const validateCategoryList = (node, categories) => {
   const diff = _.difference(categories, CATEGORY_LIST).length > 0;
   if (diff.length > 0) {
     console.error('category not found', diff, node);
-    throw new Error()
+    throw new Error();
   }
 };
 
-const withAMP = (createPage) => (params) => {
-  const { path: _path, component, context = {} } = params
-  const ampPath = _path + '/amp'
-  const template = path.parse(component)
-  const ampTemplate = component.replace(template.base, [template.name, '.amp', template.ext].join(''))
-  const baseUrl = [meta.siteUrl, _path].join('/')
+const withAMP = createPage => params => {
+  const {path: _path, component, context = {}} = params;
+  const ampPath = _path + '/amp';
+  const template = path.parse(component);
+  const ampTemplate = component.replace(
+    template.base,
+    [template.name, '.amp', template.ext].join(''),
+  );
+  const baseUrl = [meta.siteUrl, _path].join('/');
   createPage({
     ...params,
     context: {
       ...params.context,
-      baseUrl
-    }
-  })
+      baseUrl,
+    },
+  });
   createPage({
     ...params,
     path: ampPath,
@@ -50,10 +54,10 @@ const withAMP = (createPage) => (params) => {
     context: {
       ...context,
       amp: true,
-      baseUrl
-    }
-  })
-}
+      baseUrl,
+    },
+  });
+};
 
 const buildPaginationPages = createPage => (limit = PER_PAGE) => (
   namespace,
@@ -78,7 +82,7 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
         index: currentPageIndex + 1,
         totalPages,
       },
-    }
+    };
     createPage({
       path: _path,
       component: path.resolve(`src/templates/${templates}.js`),
@@ -121,6 +125,18 @@ const createCategoryShowPage = createPage => category => totalCount => {
   });
 };
 
+const createStaticPage = createPage => page => {
+  const {id} = page.node;
+  const {templateKey} = page.node.frontmatter;
+  createPage({
+    path: '/' + templateKey,
+    component: path.resolve(`src/templates/${String(templateKey)}.js`),
+    context: {
+      id
+    },
+  });
+};
+
 const collectCategories = posts => {
   return _.uniq(
     _.compact(
@@ -137,7 +153,12 @@ const collectCategories = posts => {
 
 const queryIndex = `
   {
-    allMarkdownRemark(limit: 1000) {
+    allMarkdownRemark(
+      limit: 1000,
+      filter: {
+        frontmatter: { templateKey: { eq: "blog-post" }}
+      }
+    ) {
       edges {
         node {
           id
@@ -147,6 +168,29 @@ const queryIndex = `
           frontmatter {
             slug
             categories
+            templateKey
+          }
+        }
+      }
+    }
+  }
+`;
+
+const staticPageQuery = `
+ query StaticPageQuery($templateKey: String) {
+    allMarkdownRemark(
+      limit: 1,
+      filter: {
+        frontmatter: { templateKey: { eq: $templateKey }}
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
             templateKey
           }
         }
@@ -172,9 +216,8 @@ const categoryQuery = `
 `;
 
 exports.createPages = ({actions, graphql}) => {
-
   return graphql(queryIndex).then(result => {
-    const { createPage } = actions
+    const {createPage} = actions;
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
       return Promise.reject(result.errors);
@@ -185,6 +228,12 @@ exports.createPages = ({actions, graphql}) => {
     const categories = collectCategories(posts);
 
     // Create Pages
+    STATIC_PAGE_LIST.map(page => {
+      graphql(staticPageQuery, {templateKey: page}).then(result => {
+        const [post] = result.data.allMarkdownRemark.edges;
+        createStaticPage(withAMP(createPage))(post);
+      });
+    });
     createPostShowPage(withAMP(createPage))(posts);
     createPostsIndexPage(createPage)(posts.length);
     categories.map(category => {
@@ -210,12 +259,3 @@ exports.onCreateNode = ({node, actions, getNode}) => {
   }
 };
 
-exports.onCreateWebpackConfig = ({
- stage, getConfig, rules, loaders, actions
-}) => {
-  actions.setWebpackConfig({
-    target: 'node',
-    externals: { canvas: "commonjs canvas" }
-  });
-  const config = getConfig()
-}
