@@ -7,6 +7,7 @@ import {meta} from '../../config/constants';
 import {ampify} from '../lib/ampify';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
+import SNSButtons from '../components/organisms/SNSButtons';
 import i18next from '../lib/i18next';
 import {categoryPath} from '../lib/routes';
 
@@ -21,6 +22,8 @@ const CategoryList = ({list}) => {
     );
   });
 };
+
+
 
 export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
   const content = post.html;
@@ -46,6 +49,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
               {updatedAt}
             </div>
           </div>
+          <SNSButtons type="post-header" url={window.location.href} title={title}/>
         </div>
         <PostContent className="post-body" content={content} />
         <div className="post-meta-footer">
@@ -55,6 +59,10 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
           </div>
           <div className="author">
             Written By : <a href="#">{meta.author}</a>
+          </div>
+          <div className="sns-share-footer">
+            <p>この記事が役に立ちましたらシェアをお願いします。</p>
+            <SNSButtons type="post-footer" url={window.location.href} title={title}/>
           </div>
         </div>
         <div className="related-posts" />

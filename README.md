@@ -30,14 +30,15 @@ my blog
  - [x] redesign
  - [x] ariticle info(timestamp, category etc..)
  - [x] 404 Page
- - [ ] About Page
+ - [x] About Page
+ - [ ] sns button
  - [ ] adsence
  - [ ] AMP(canonical, iframe, gif, error)
- - [ ] sns button
  - [ ] rss
  - [ ] embed video
 ---- release line ---
  - [ ] popular article
+ - [ ] contact form
  - [ ] search
 
 

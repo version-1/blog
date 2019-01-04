@@ -1,0 +1,23 @@
+.sns-buttons
+  display: flex
+  &.post-header
+    width: 50%
+    margin: 20px auto
+    justify-content: space-evenly
+  &.post-footer
+    width: 50%
+    justify-content: space-evenly
+    @media #{$small-and-down}
+      margin: 0px auto
+  .SocialMediaShareButton, .share-btn
+    cursor: pointer
+    transition: .3s
+    &:hover
+      transform: scale(1.4)
+    &:focus
+     outline: none
+.sns-share-footer
+  p
+    font-size: 1.2rem
+    color: $co-black
+
