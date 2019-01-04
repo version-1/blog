@@ -10,7 +10,7 @@ const CategoryList = ({list}) => {
   return list.map((category, index) => {
     const name = i18next.t(`categories.${category}`);
     return (
-      <a href={categoryPath(category)} className="categories">
+      <a key={category} href={categoryPath(category)} className="categories">
         {name}
         { index === (list.length - 1) ? '' : ',  ' }
       </a>

@@ -83,7 +83,7 @@ export default class IndexLayout extends React.PureComponent {
                 alt="header image"
               />
             </div>
-            <Navbar />
+            <Navbar amp={amp}/>
             <div>{children}</div>
             <div className="footer">
               <span className="copyright">

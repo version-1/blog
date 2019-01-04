@@ -10,14 +10,20 @@
     justify-content: flex-start
     flex-direction: column
     height: 150px
+  .menu
+    position: absolute
+    left: 18px
+    top: 18px
   .menu-icon
     color: white
     font-weight: bold
   .brand-logo
     display: flex
     font-weight: bold
-    padding: 20px
+    padding: 30px
     font-size: 20px
+    @media #{$medium-and-down}
+      padding: 20px
     a
       color: white
   .nav-links
@@ -39,5 +45,11 @@
       a:hover
         color: $co-bague
         font-weight: bold
-
+.sidenav
+  .sidenav-title
+    color: white
+    font-size: 3rem
+    font-weight: bold
+    padding: 50px 10px
+    padding-top: 40px
 
