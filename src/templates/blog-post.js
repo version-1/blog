@@ -14,7 +14,7 @@ const CategoryList = ({list}) => {
   return list.map((category, index) => {
     const name = i18next.t(`categories.${category}`);
     return (
-      <a href={categoryPath(category)} className="category btn-flat">
+      <a key={category} href={categoryPath(category)} className="category btn-flat">
         {name}
         {index === list.length - 1 ? '' : ',  '}
       </a>
@@ -57,14 +57,13 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
             Written By : <a href="#">{meta.author}</a>
           </div>
         </div>
-        <div classNmae="related-posts" />
+        <div className="related-posts" />
       </article>
     </section>
   );
 };
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,

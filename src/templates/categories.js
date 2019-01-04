@@ -29,8 +29,7 @@ class CategoryTemplate extends React.PureComponent {
                   {posts.map(({node: post}) => (
                     <Post key={post.id} post={post} />
                   ))}
-                </div>
-              </div>
+                </div> </div>
             <Pagination
               index={index}
               namespace={categoryPath(category)}
@@ -71,6 +70,8 @@ export const categryPageQuery = graphql`
             slug
             thumbnail
             categories
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
           }
         }
       }
