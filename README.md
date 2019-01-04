@@ -31,13 +31,14 @@ my blog
  - [x] ariticle info(timestamp, category etc..)
  - [x] 404 Page
  - [x] About Page
- - [ ] sns button
- - [ ] adsence
- - [ ] AMP(canonical, iframe, gif, error)
+ - [x] sns button
  - [ ] rss
  - [ ] embed video
----- release line ---
+ - [ ] adsence
+ - [ ] AMP(canonical, iframe, gif, error)
  - [ ] popular article
+ - [ ] Cloudflare
+---- release line ---
  - [ ] contact form
  - [ ] search
 
@@ -45,4 +46,5 @@ my blog
 #### Netlify
 
  - [ ] redirect
+ - [ ] develop test
  - [ ] deploy

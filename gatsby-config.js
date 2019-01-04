@@ -14,7 +14,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
-        ignore: [`**/\.*`, '**/*\.png, **/*\.jpg'],
+        ignore: [`**/\.*`, '**/*.png, **/*.jpg'],
       },
     },
     'gatsby-plugin-sharp',
@@ -48,7 +48,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: 'static'
+              destinationDir: 'static',
             },
           },
         ],
@@ -97,6 +97,62 @@ module.exports = {
         sitemap: [meta.siteUrl, meta.sitemap].join(''),
         policy: [{userAgent: '*', allow: '/'}],
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({query: {site, allMarkdownRemark}}) => {
+              return allMarkdownRemark.edges.map(edge => {
+                const url = site.siteMetadata.siteUrl + edge.node.frontmatter.slug
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.createdAt,
+                  url,
+                  guid: url,
+                  custom_elements: [{'content:encoded': edge.node.html}],
+                });
+              });
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] },
+                filter: {frontmatter: { draft: { ne: true } }}
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      slug
+                      createdAt(formatString: "MMM DD, YYYY")
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: '/rss.xml',
+          },
+        ],
+      },
+    },
   ],
 };
