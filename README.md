@@ -33,7 +33,7 @@ my blog
  - [x] About Page
  - [x] sns button
  - [x] rss
- - [ ] embed video
+ - [x] embed video
  - [ ] adsence
  - [ ] AMP(canonical, iframe, gif, error)
  - [ ] popular article

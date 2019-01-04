@@ -13,7 +13,7 @@ const menus = [
   {to: categoryPath('column'), text: 'Column'},
 ];
 
-const SideNav = ({amp}) => {
+const SideNav = ({amp, onClick}) => {
   return (
     <ul id="side-out" className="sidenav">
       <li>
@@ -25,7 +25,7 @@ const SideNav = ({amp}) => {
         </div>
       </li>
       {menus.map((menu, idx) => (
-        <li className="nav-link-item" key={idx}>
+        <li className="nav-link-item" key={idx} onClick={onClick}>
           <Link to={menu.to}>{menu.text}</Link>
         </li>
       ))}
@@ -48,11 +48,15 @@ const MenuList = ({menus}) => {
 const Navbar = class extends React.PureComponent {
   componentDidMount() {
     const elems = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elems, {});
+    this.sidenav = M.Sidenav.init(elems, {})[0];
   }
 
+  onClick = () => {
+    this.sidenav.close();
+  };
+
   render() {
-    const { amp } = this.props;
+    const {amp} = this.props;
     return (
       <div>
         <div
@@ -73,7 +77,7 @@ const Navbar = class extends React.PureComponent {
             <MenuList menus={menus} />
           </div>
         </div>
-        <SideNav amp={amp} />
+        <SideNav amp={amp} onClick={this.onClick} />
       </div>
     );
   }
