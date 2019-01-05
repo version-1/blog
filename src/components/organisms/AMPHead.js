@@ -16,7 +16,6 @@ export const AMPHead = ({amp, baseUrl}) => {
       />
       <style amp-boilerplate>{boilerPlate}</style>
       <noscript dangerouslySetInnerHTML={{__html: boilerPlateNoScript}} />
-      <script async src="https://cdn.ampproject.org/v0.js" />
     </Helmet>
   );
 };
