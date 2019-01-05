@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import Helmet from 'react-helmet';
 import favicon from '../assets/images/favicon.ico';
-import { isProduction } from '../lib/env'
+import { isStrictProduction } from '../lib/env'
 
 export default class Meta extends PureComponent {
   render() {
@@ -29,7 +29,7 @@ export default class Meta extends PureComponent {
         <meta name="twitter:creator" content="@version1_2017" />
         <meta name="twitter:site" content="@version1_2017" />
         <link rel="shortcut icon" href={favicon} />
-        { isProduction && <script
+        { isStrictProduction && <script
           async
           src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         /> }

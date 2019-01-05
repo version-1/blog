@@ -8,6 +8,7 @@
   "meta": {
     "author": "version1",
     "siteUrl": "https://ver-1-0.net",
+    "hostname": "ver-1-0.net",
     "title": "So Far, So Tech",
     "description": "フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。",
     "sitemap": "/sitemap.xml",

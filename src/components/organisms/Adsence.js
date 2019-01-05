@@ -1,5 +1,5 @@
 import React from 'react';
-import { isProduction } from '../../lib/env'
+import { isStrictProduction } from '../../lib/env'
 
 class Adsence extends React.Component {
   componentDidMount() {
@@ -38,14 +38,14 @@ const RectMock = () => <div className="ad-rect-mock" />;
 const InArticleMock = () => <div className="ad-in-article-mock" />;
 
 const AdRect = () =>
-  isProduction ? (
+  isStrictProduction ? (
     <Adsence component={<Rect />} />
   ) : (
     <Adsence component={<RectMock />} />
   );
 
 export const AdInArticle = () =>
-  isProduction ? (
+  isStrictProduction ? (
     <Adsence component={<InArticle />} />
   ) : (
     <Adsence component={<InArticleMock />} />

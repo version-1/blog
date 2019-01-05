@@ -1,4 +1,4 @@
-import { isProduction } from '../lib/env'
+import { isStrictProduction } from '../lib/env'
 const rect = `
 <!-- ads-rect-300 -->
 <ins class="adsbygoogle"
@@ -50,5 +50,5 @@ const insertAdsence = ad => html => {
   return dom.body.innerHTML;
 };
 
-export const insertInArticle = isProduction ? insertAdsence(inArticle) : insertAdsence(inArticleMock)
-export const insertDoubleRect = isProduction ? insertAdsence(doubleRect) : insertAdsence(doubleRectMock)
+export const insertInArticle = isStrictProduction ? insertAdsence(inArticle) : insertAdsence(inArticleMock)
+export const insertDoubleRect = isStrictProduction ? insertAdsence(doubleRect) : insertAdsence(doubleRectMock)
