@@ -13,10 +13,12 @@ export default class Image extends React.PureComponent {
     if (this.props.amp) {
       return (
         <amp-img
-          width={defaults.image.width}
-          height={defaults.image.height}
-          layout={defaults.image.layout}
-          {...this.props}
+          width={this.props.width || defaults.image.width}
+          height={this.props.height || defaults.image.height}
+          layout={this.props.layout || defaults.image.layout}
+          src={this.props.src}
+          alt={this.props.alt}
+          className={this.props.className}
         />
       );
     }

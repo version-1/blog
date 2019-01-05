@@ -78,6 +78,7 @@ export default class BlogPost extends React.PureComponent {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {amp, baseUrl} = this.props.pageContext;
+    console.log('amp?', amp)
     const html = amp ? ampify(post.html) : post.html;
     const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
     const content = fluid && [meta.siteUrl, fluid.src].join('');

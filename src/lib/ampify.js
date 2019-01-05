@@ -40,7 +40,11 @@ const applyInlineSize = (layout = {} ) => (ele, attributes) => {
 
 const parser = typeof DOMParser !== 'undefined' && new DOMParser()
 export const ampify = html => {
-  if(!parser) return html
+  if(!parser) {
+    console.warn('DOMParser missing')
+    console.log('DOMParser missing')
+    return html
+  }
   const dom = parser.parseFromString(html, 'text/html');
 
   convert(dom, 'image', null, (image) => {
