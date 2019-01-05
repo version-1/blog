@@ -1,28 +1,8 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
 import profile from '../assets/images/profile.png';
+import { constants } from '../../config/constants';
 import Img from '../components/atoms/Image';
-
-const posts = [
-  {
-    title:
-      'フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。',
-    to: '/2018/12/03/freelance-agent-select',
-    thumbnail:
-      'https://ver-1-0.net/wp-content/uploads/2018/12/freelance-begineer.jpg',
-  },
-  {
-    title: 'Udemyでクーポンを利用して、気になるコースをお得に利用する方法',
-    to: '2018/01/01/udemy-coupon',
-    thumbnail: 'https://ver-1-0.net/wp-content/uploads/2017/11/Udemy-Top.png',
-  },
-  {
-    title: 'フリーランスは相対取引が自由に働ける道？',
-    to: '2018/03/22/trade-of-market-and-direct',
-    thumbnail:
-      'https://ver-1-0.net/wp-content/uploads/2018/03/concept-1868728_1280.jpg',
-  },
-];
 
 export default class Sidebar extends PureComponent {
   render() {
@@ -45,7 +25,7 @@ export default class Sidebar extends PureComponent {
         </section>
         <section className="section">
           <h3>オススメ記事</h3>
-          {posts.map((post, index) => (
+          {constants.recomended.map((post, index) => (
             <Link key={index} to={post.to}>
               <div className="flat-card">
                 <div className="card-image">

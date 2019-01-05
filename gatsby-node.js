@@ -3,25 +3,13 @@ const path = require('path');
 const webpack = require('webpack');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
-const {routes, meta} = require('./config/constants');
+const {routes, meta, constants } = require('./config/constants');
 const fs = require(`fs-extra`);
 
 // Constants
-const PER_PAGE = 18;
-
-const CATEGORY_LIST = [
-  'column',
-  'cryptocurrency-blockchain',
-  'design',
-  'engineering',
-  'for-beginner',
-  'freelance',
-  'rails',
-  'react',
-  'travel',
-];
-
-const STATIC_PAGE_LIST = ['about'];
+const PER_PAGE = constants.per;
+const CATEGORY_LIST = constants.categories;
+const STATIC_PAGE_LIST = constants.pages;
 
 const validateCategoryList = (node, categories) => {
   const diff = _.difference(categories, CATEGORY_LIST).length > 0;
