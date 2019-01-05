@@ -7,6 +7,7 @@ import {meta} from '../../config/constants';
 import {ampify} from '../lib/ampify';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
+import { AdDoubleRect } from '../components/organisms/Adsence';
 import SNSButtons from '../components/organisms/SNSButtons';
 import i18next from '../lib/i18next';
 import {categoryPath} from '../lib/routes';
@@ -52,6 +53,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
           <SNSButtons type="post-header" url={window.location.href} title={title}/>
         </div>
         <PostContent className="post-body" content={content} />
+        <AdDoubleRect/>
         <div className="post-meta-footer">
           <div className="categories">
             Category :

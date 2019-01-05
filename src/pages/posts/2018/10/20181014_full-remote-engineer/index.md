@@ -5,7 +5,7 @@ slug: /2018/10/14/full-remote-engineer
 createdAt: 2018-10-14 14:38:05
 updatedAt: 2018-10-14 14:38:05
 thumbnail: /2018/10/20181014_full-remote-engineer/thumbnail.jpg
-categories: 
+categories:
   - freelance
 ---
 
@@ -20,6 +20,7 @@ categories:
 「フルリモート」という働き方が自分の中で現状そこまで優先順位が高くなかった（単価などの方が気になっていました。。）のですが、移動せずに仕事ができるのであればそれが理想の環境でもあるので少し嬉しくラッキーという感じです。
 
 これやれば絶対リモート案件とれる！みたいなのではないですが僕が実際に行ったことでフルリモートになるに当たってプラスに働いことをあげてみます。
+<div class="adsense"></div>
 
 &nbsp;
 <h3>ブログを書く</h3>

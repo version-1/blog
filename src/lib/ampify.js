@@ -38,7 +38,7 @@ export const ampify = html => {
   const iframes = [].slice.call(dom.getElementsByTagName('iframe'));
   iframes.forEach(iframe => {
     const ampIframe = dom.createElement('amp-iframe');
-    const inheritedAttributes = inheritAttribute(iframe, ampIframe);
+    inheritAttribute(iframe, ampIframe);
     iframe.parentNode.replaceChild(ampIframe, iframe);
   });
   return dom.body.innerHTML;
