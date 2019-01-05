@@ -35,7 +35,7 @@ my blog
  - [x] rss
  - [x] embed video
  - [x] adsence
- - [ ] AMP(canonical, iframe, gif, error)
+ - [x] AMP(canonical, iframe, gif, error)
  - [ ] popular article
  - [ ] Cloudflare
 ---- release line ---

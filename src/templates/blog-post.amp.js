@@ -5,20 +5,17 @@ import Img from '../components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from '../../config/constants';
 import {ampify} from '../lib/ampify';
+import {AdDoubleRect} from '../components/organisms/Adsence';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
+import CategoryList from '../components/molecules/CategoryList';
+import SNSButtons from '../components/organisms/SNSButtons';
+import {categoryPath} from '../lib/routes';
 
-export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  tags,
-  title,
-  thumbnail,
-  helmet,
-}) => {
+export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
   const PostContent = contentComponent || Content;
-  const thumbnailUrl = meta.images.url + thumbnail
-
+  const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
+  const thumbnailUrl = meta.images.url + thumbnail;
   return (
     <section className="section">
       {helmet || ''}
@@ -27,13 +24,41 @@ export const BlogPostTemplate = ({
         <div className="thumbnail">
           <Img amp src={thumbnailUrl} alt={title} />
         </div>
-        <div className="post-meta">
-          <div className="author"></div>
-          <div className="created-at"></div>
-          <div className="updated-at"></div>
-          <div className="categories"></div>
+        <div className="post-meta-header">
+          <div className="timestamp">
+            <div className="created-at">
+              <i className="tiny material-icons">create</i>
+              {createdAt}
+            </div>
+            <div className="updated-at">
+              <i className="tiny material-icons">autorenew</i>
+              {updatedAt}
+            </div>
+          </div>
+          <SNSButtons
+            type="post-header"
+            url={window.location.href}
+            title={title}
+          />
         </div>
-        <PostContent className="post-body" content={content} />
+        <PostContent className="post-body" content={content} /> <AdDoubleRect />
+        <div className="post-meta-footer">
+          <div className="categories">
+            Category :
+            <CategoryList list={categories} />
+          </div>
+          <div className="author">
+            Written By : <a href="#">{meta.author}</a>
+          </div>
+          <div className="sns-share-footer">
+            <p>この記事が役に立ちましたらシェアをお願いします。</p>
+            <SNSButtons
+              type="post-footer"
+              url={window.location.href}
+              title={title}
+            />
+          </div>
+        </div>
       </article>
     </section>
   );
@@ -59,6 +84,7 @@ export default class BlogPost extends React.PureComponent {
     return (
       <Layout amp={amp} baseUrl={baseUrl}>
         <BlogPostTemplate
+          post={post}
           content={html}
           contentComponent={HTMLContent}
           helmet={
@@ -92,6 +118,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         thumbnail
+        categories
         createdAt(formatString: "MMMM DD, YYYY")
         updatedAt(formatString: "MMMM DD, YYYY")
       }
