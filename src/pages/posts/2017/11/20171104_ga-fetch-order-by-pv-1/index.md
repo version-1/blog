@@ -40,7 +40,7 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 方法を調べて見ました。
 
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">Google Analytics APIを使うための設定</h2>
 

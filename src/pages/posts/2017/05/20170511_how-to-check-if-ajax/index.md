@@ -22,7 +22,7 @@ URLを直打ちなどした場合にControllerが通常のリクエスト通り�
 MissingTemplateになってしまうといった場合があると思います。
 
 &nbsp;
-<div class="after-intro"></div>
+<div class="adsense"></div>
 &nbsp;
 
 これを避けるには

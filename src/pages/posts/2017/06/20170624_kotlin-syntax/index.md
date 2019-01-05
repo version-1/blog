@@ -17,7 +17,7 @@ For文などループ文をさします。
 
 それではまず、For文から
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 <h2 class="chapter">繰り返し繰り返し - For文</h2>
 &nbsp;
 

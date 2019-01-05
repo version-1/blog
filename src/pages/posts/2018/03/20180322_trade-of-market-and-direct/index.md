@@ -5,7 +5,7 @@ slug: /2018/03/22/trade-of-market-and-direct
 createdAt: 2018-03-22 22:59:16
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/03/20180322_trade-of-market-and-direct/thumbnail.jpg
-categories: 
+categories:
   - freelance
 ---
 
@@ -15,7 +15,7 @@ categories:
 
 今まで活動報告として週1くらいで更新していましたが、活動報告を書いていても所感の部分の方が書いていて楽しいし、自分の思考の結果のアウトプットにもなるのでコラムとして投稿していくことにしました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2>相対取引と市場取引について</h2>

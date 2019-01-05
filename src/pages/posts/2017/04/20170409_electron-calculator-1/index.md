@@ -25,7 +25,7 @@ categories:
 せっかく紹介するので、少しElectronについて調べてみました。
 
 &nbsp;
-<div class="after-intro"></div>
+<div class="adsense"></div>
 &nbsp;
 <h2 class="chapter">Electronについて</h2>
 

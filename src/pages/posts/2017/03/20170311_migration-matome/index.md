@@ -43,7 +43,7 @@ rails db:migrate
 スキップする方法を探していたのですが。。。
 **ありました**方法は簡単です。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2>スキップしたいバージョン番号のレコード

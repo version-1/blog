@@ -18,7 +18,7 @@ jsもES6以降で便利なメソッドも増えたみたいですが、仕事で
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 <h2>slice</h2>
 &nbsp;
 

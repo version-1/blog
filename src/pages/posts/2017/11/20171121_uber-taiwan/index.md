@@ -81,7 +81,7 @@ categories:
 
 楽しかったです。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 と、これで終わってはただ台湾満喫しただけなので、
 今回の台湾旅行で得た教訓をシェアしたいと思います。
 

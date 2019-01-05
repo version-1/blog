@@ -15,7 +15,7 @@ categories:
 
 さて、今回は<strong>kotlinでHTTPリクエスト</strong>を送ってみます。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 

@@ -32,7 +32,7 @@ css初心者レベルからぬけだしたいのであれは知っておいて�
 何はともあれ、しっかりと理解したい方は一度読んでみてみると良いと思います。
 
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">SMACSSの概要</h2>
 

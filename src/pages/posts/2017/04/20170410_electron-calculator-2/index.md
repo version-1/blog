@@ -37,7 +37,7 @@ ElectronはこのIPC通信というものでデータのやりとりを
 言っている気がするのですが、
 百聞は一件にしかずで
 実際にコードをみてみましょう。
-<div class="after-intro"></div>
+<div class="adsense"></div>
 &nbsp;
 &nbsp;
 <h2 class="chapter">計算機の完成系</h2>

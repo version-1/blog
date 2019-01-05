@@ -26,7 +26,7 @@ categories:
 での作業になるので、
 実際にお金を動かしたりすることはありません。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 それでは、
 まずはイーサリアムって何という人へ
@@ -416,4 +416,4 @@ true
 </div>
 </div>
 
-<div class="after-intro"></div>
+<div class="adsense"></div>

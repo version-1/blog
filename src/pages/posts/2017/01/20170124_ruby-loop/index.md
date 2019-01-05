@@ -17,6 +17,7 @@ timesとか簡単に回数指定してかけるし、
 
 というわけでRubyのループの構文に絞って紹介していきます。
 
+<div class="adsense"></div>
 &nbsp;
 <h3>While 文</h3>
 while文。

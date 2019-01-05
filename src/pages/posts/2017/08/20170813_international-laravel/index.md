@@ -37,7 +37,7 @@ Laravelでアプリを作りはじめていて
 この記事はここを参考にしました。
 <a href="https://laravel.com/docs/5.4/localization">https://laravel.com/docs/5.4/localization</a>
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 
 <h2 class="chapter">ロケールファイルの置き場所</h2>

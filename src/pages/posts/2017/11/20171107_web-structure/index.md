@@ -63,7 +63,7 @@ categories:
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">プログラミング初学者はWebサイトの概要図を把握しよう</h2>

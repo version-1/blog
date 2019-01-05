@@ -26,7 +26,7 @@ CapkePHP3からtweetする方法を紹介します。
 3. Controllerからtweet
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 

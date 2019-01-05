@@ -5,7 +5,7 @@ slug: /2018/02/23/why-i-become-engineer
 createdAt: 2018-02-23 22:44:23
 updatedAt: 2018-10-08 08:39:07
 thumbnail: /2018/02/20180223_why-i-become-engineer/thumbnail.jpg
-categories: 
+categories:
   - freelance
 ---
 
@@ -15,7 +15,7 @@ categories:
 
 徐々に慣れてきている部分もありますが、だんだんと独立当初の時と変わっている部分もあるので、ここらへんでなんでフリーランスになったのかというのをまとめて置ければなと思い書いてみました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2>自由な働き方がしたかった</h2>

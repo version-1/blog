@@ -49,7 +49,7 @@ docker-compose up
 
 docker-compose.ymlの紹介はここまでにして、実際にdocker-composeでrails+nginx+postgress環境を作っていきましょう。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">rails new でアプリケーション環境を構築</h2>

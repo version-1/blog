@@ -5,7 +5,7 @@ slug: /2018/01/17/rails-letter-opener-seed
 createdAt: 2018-01-17 08:46:26
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/01/20180117_rails-letter-opener-seed/thumbnail.jpg
-categories: 
+categories:
   - engineering
   - rails
   - for-beginner
@@ -23,7 +23,7 @@ letter openerは、開発しているアプリケーションからメールが�
 
 今回Rails + Devise + Letter Openerを使った場合に、ユーザのアカウント作成時のメールのタブがポコポコでてくるようになってしまったのでその対策を共有します。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 &nbsp;
 <h2>やろうとしたこと</h2>
 &nbsp;

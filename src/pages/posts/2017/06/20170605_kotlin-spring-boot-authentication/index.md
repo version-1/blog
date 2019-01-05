@@ -30,7 +30,7 @@ SpringSecurityという認証管理を行う
 フレームワークがあるので、
 そういう便利なものを
 使って実装していきます。
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">構成</h2>

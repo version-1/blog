@@ -48,9 +48,7 @@ categories:
 ということをしました。
 
 &nbsp;
-
-&nbsp;
-
+<div class="adsense"></div>
 &nbsp;
 <h2>海外赴任より先に現地に行く</h2>
 

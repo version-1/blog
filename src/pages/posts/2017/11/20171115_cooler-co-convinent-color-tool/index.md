@@ -43,7 +43,7 @@ faviconを作成しているときにこの問題にぶち当たりました。
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 

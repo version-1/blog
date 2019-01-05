@@ -26,6 +26,8 @@ categories:
 それをAnsibleで操作するための接続設定・接続確認
 というのをやりたいと思います。
 
+<div class="adsense"></div>
+
 まずは、操作するサーバ(Vagrantの構築から)
 ```bash
 vagrant init ubuntu/xenial64

@@ -5,7 +5,7 @@ slug: /2018/01/31/how-to-get-rails-mode-on-react
 createdAt: 2018-01-31 08:00:38
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/01/20180131_how-to-get-rails-mode-on-react/thumbnail.png
-categories: 
+categories:
   - engineering
   - rails
 ---
@@ -22,7 +22,7 @@ SPAなどでは問答無用でAPIで初期状態も含めてデータを取得�
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 <h2>JavaScriptでDOMをパース</h2>
 &nbsp;
 

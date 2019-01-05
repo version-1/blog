@@ -26,7 +26,7 @@ categories:
 +CRUD全てをAPIからできるようにしたかったけど
 終わらなかった。。)
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 タイトルもその①としたように、
 今回はAPIで本のリストと、ID指定した本一件を

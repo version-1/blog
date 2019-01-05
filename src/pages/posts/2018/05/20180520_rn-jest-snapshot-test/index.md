@@ -22,7 +22,7 @@ WebのE2Eテストなどと目標は近いですが、E2Eテストではいち�
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2>Jestを導入</h2>

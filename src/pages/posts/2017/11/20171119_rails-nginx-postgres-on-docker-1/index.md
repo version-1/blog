@@ -33,7 +33,7 @@ Dockerは、
 PC上にコンテナという仮想のサーバを作成して、
 その上にRailsやPostgres,Nginxなどの環境を構築するものです。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 <h2 class="chapter">Dockerの基本的な仕組み -Virtual Machineとの違い-</h2>
 下に図を貼りつけましたが、
 

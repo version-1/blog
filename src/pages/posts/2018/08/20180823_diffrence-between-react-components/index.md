@@ -22,7 +22,7 @@ Reactで開発している方はもちろん、「propsやstateが変更され�
 
 みたいなところにちゃんと答えられる自信がなかったのでそれぞれのコンポーネントの違いをまとめてみました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2>各コンポーネントの違い</h2>

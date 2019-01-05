@@ -59,6 +59,8 @@ version         prints current and latest Vagrant version
 ```
 全部で25個です。
 
+<div class="adsense"></div>
+
 &nbsp;
 <h2>1. vagrant up</h2>
 

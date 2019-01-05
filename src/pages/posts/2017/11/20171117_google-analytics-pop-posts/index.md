@@ -47,7 +47,7 @@ wordpressのプラグインで自動でカウントされてしまうと
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">他同じようなプラグインあるでしょ？</h2>
@@ -158,4 +158,4 @@ Wordpress.orgにプラグインとして申請中ではありますが、
 
 以上です！！
 
-<div class="after-intro"></div>
+<div class="adsense"></div>

@@ -24,11 +24,8 @@ sudo apt-get install oracle-java8-installer
 参考URL
 <a href="http://kiy271.hatenablog.com/entry/2014/09/05/230624">http://kiy271.hatenablog.com/entry/2014/09/05/230624</a>
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
-&nbsp;
-
-&nbsp;
 
 ②コンパイラをインストール
 <a href="https://kotlinlang.org/docs/tutorials/command-line.html">https://kotlinlang.org/docs/tutorials/command-line.html</a>
@@ -66,6 +63,8 @@ Hello, World!
 ```
 sdkmanを使うとHelloWorldまでは、10分くらいでできてしまいますね。
 この後はここのチュートリアルなどをして慣れる感じですかね。
+
+<div class="adsense"></div>
 
 &nbsp;
 <h2>kotelin HelloWorld 補足1</h2>

@@ -15,7 +15,7 @@ categories:
 今回は仕事で地図の中でクリックされた座標を元にアクションを分けるという機能を実装する必要が
 あったので、それの方法を調べてみました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">〜クリッカブルマップ〜座標でアクションを分ける、難しそう・・・</h2>
 

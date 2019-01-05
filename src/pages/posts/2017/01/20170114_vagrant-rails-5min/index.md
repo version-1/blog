@@ -23,7 +23,7 @@ Rails5環境を構築できるかと思います。
 ちなみに構築した際のホストPCのスペックは
 <strong>ホストOS: Mac OS X 10.12.2（メモリ8GB)</strong>です。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 <h2 class="chapter">1.Virtual Boxインストール</h2>
 ここからMac用のものをダウンロード
 

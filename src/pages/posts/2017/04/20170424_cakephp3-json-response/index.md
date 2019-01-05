@@ -18,7 +18,7 @@ JSONレスポンスを返却するAPIを開発してみました。
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">DBの準備</h2>
@@ -194,4 +194,3 @@ $curl http://localhost:8765/Songs/getSongs?key=authorized_key_string
 
 以上です！！
 
-<div class="after-article"></div>

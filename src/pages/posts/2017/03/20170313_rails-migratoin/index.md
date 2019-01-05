@@ -22,7 +22,7 @@ DBの変更などをとりくむことができます。
 についてまとめてみました。
 
 &nbsp;
-<div class="after-intro"></div>
+<div class="adsense"></div>
 &nbsp;
 <h2 class="chapter">Migration Codeの実行</h2>
 

@@ -19,7 +19,7 @@ categories:
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2 class="chapter">ランディングページを作ってみる</h2>

@@ -33,7 +33,7 @@ htmlやcssの最低限の知識とかはあって、
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 という訳で本を買って勉強しました。
 

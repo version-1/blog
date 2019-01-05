@@ -31,7 +31,7 @@ WordPressプラグインは簡単に作れます。
 以下では、
 自作プラグインの入り口の部分だけ紹介していきます。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 

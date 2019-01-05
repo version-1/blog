@@ -20,7 +20,7 @@ categories:
 **「開発をしているとやっぱDBの変更もヴァージョン管理できるといいよね。」**
 と思い、マイグレーションツールを導入しました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 その名も<strong>Flyway</strong>です。
 使っている人も多いのか少ないのか

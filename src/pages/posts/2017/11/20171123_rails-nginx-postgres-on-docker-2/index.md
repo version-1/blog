@@ -37,7 +37,7 @@ categories:
 手順はこちらの記事を参考にしました。
 <a href="https://qiita.com/togana/items/30b22fc39fe6f7a188ec">RailsアプリをDockerで開発するための手順</a>
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">早速構築</h2>
 

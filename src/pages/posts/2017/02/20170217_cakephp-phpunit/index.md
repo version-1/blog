@@ -17,7 +17,7 @@ categories:
 
 だったので、
 修正がてらテストコードも書いて見ました。
-<div class="after-intro"></div>
+<div class="adsense"></div>
 &nbsp;
 <h2 class="chapter">CakePHP で PHPUnitを使う。</h2>
 

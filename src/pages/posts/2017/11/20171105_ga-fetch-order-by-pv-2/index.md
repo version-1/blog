@@ -18,7 +18,7 @@ PV数で人気記事の取得までできました。
 やっていきます。
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">記事のタイトルを取得する - 導入 -</h2>
 前回は、

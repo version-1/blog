@@ -56,7 +56,7 @@ categories:
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">ポモドーロテクニックとは？</h2>
 

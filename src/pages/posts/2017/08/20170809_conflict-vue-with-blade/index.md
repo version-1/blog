@@ -25,7 +25,7 @@ JqueryでなくAngular, React, Vueらへん
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 

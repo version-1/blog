@@ -27,7 +27,7 @@ CRUDでいう所のRの部分しかAPIとして
 今回はCRUDの全てのメソッドを備えたRESTfulなAPI
 を目指して前回のリポジトリをブラッシュアップしました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 

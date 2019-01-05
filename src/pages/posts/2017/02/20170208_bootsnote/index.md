@@ -22,7 +22,7 @@ categories:
 引き出せるというのが大事だよ」
 というものがありました。
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 確かに、
 その助言の通りエクセルやテキストエディタに
@@ -60,9 +60,6 @@ categories:
 
 &nbsp;
 
-<div class="mid-article"></div>
-
-&nbsp;
 <h2 class="chapter">感想</h2>
 &nbsp;
 
@@ -107,5 +104,3 @@ InteliJ形のIDEだとこれをオートインデントで使っているので
 思っています!!
 
 以上です!!
-
-<div class="after-article"></div>

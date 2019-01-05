@@ -21,7 +21,7 @@ categories:
 
 <img class="post-image almost-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card.png" alt="twitter-card"/>
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 <h2 class="chapter">Twitter Cardsというのをやるとどうやら表示されるらしい</h2>
 
 &nbsp;

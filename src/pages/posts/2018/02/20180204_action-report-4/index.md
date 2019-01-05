@@ -5,7 +5,7 @@ slug: /2018/02/04/action-report-4
 createdAt: 2018-02-04 10:34:48
 updatedAt: 2018-10-11 23:57:44
 thumbnail: /2018/02/20180204_action-report-4/thumbnail.jpg
-categories: 
+categories:
   - freelance
 ---
 
@@ -19,7 +19,7 @@ categories:
 
 &nbsp;
 
-<div class="after-intro"></div>
+<div class="adsense"></div>
 
 &nbsp;
 <h2>今週の作業</h2>
