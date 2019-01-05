@@ -34,7 +34,7 @@ my blog
  - [x] sns button
  - [x] rss
  - [x] embed video
- - [ ] adsence
+ - [x] adsence
  - [ ] AMP(canonical, iframe, gif, error)
  - [ ] popular article
  - [ ] Cloudflare

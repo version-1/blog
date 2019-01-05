@@ -42,6 +42,7 @@ export const postsIndexQuery = graphql`
   query postsIndexQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___createdAt], order: DESC}
+      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
       limit: $limit
       skip: $skip
     ) {

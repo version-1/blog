@@ -10,7 +10,6 @@ export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
-    // TODO: GAからとってこれるように
     const popPosts = posts.slice(0, 6);
     return (
       <Layout>
