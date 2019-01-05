@@ -17,9 +17,6 @@ export const AMPHead = ({amp, baseUrl}) => {
       <style amp-boilerplate>{boilerPlate}</style>
       <noscript dangerouslySetInnerHTML={{__html: boilerPlateNoScript}} />
       <script async src="https://cdn.ampproject.org/v0.js" />
-      <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-      <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     </Helmet>
   );
 };

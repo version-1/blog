@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
 import profile from '../assets/images/profile.png';
-import { constants } from '../../config/constants';
+import {constants} from '../../config/constants';
 import Img from '../components/atoms/Image';
 
 export default class Sidebar extends PureComponent {
@@ -13,7 +13,14 @@ export default class Sidebar extends PureComponent {
           <h3>プロフィール</h3>
           <div className="self-introduction">
             <div className="profile-image">
-              <Img amp={amp} src={profile} alt="profile" />
+              <Img
+                amp={amp}
+                width="100"
+                height="100"
+                layout="fixed"
+                src={profile}
+                alt="profile"
+              />
             </div>
             <p className="introduction">
               フリーランスのRails&Reactエンジニア
