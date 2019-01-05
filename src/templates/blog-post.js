@@ -7,7 +7,7 @@ import {meta} from '../../config/constants';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
 import { AdDoubleRect } from '../components/organisms/Adsence';
-import { AMPHtmlLink } from '../components/organisms/AmpHead';
+import { AMPHtmlLink } from '../components/organisms/AMPHead';
 import SNSButtons from '../components/organisms/SNSButtons';
 import CategoryList from '../components/molecules/CategoryList';
 
@@ -16,6 +16,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const PostContent = contentComponent || Content;
   const thumbnailUrl = meta.images.url + thumbnail;
+  const url = typeof window !== 'undefined' && window.location.href
   return (
     <section className="section">
       {helmet || ''}{' '}
@@ -35,7 +36,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
               {updatedAt}
             </div>
           </div>
-          <SNSButtons type="post-header" url={window.location.href} title={title}/>
+          <SNSButtons type="post-header" url={url} title={title}/>
         </div>
         <PostContent className="post-body" content={content} />
         <AdDoubleRect/>
@@ -49,7 +50,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
           </div>
           <div className="sns-share-footer">
             <p>この記事が役に立ちましたらシェアをお願いします。</p>
-            <SNSButtons type="post-footer" url={window.location.href} title={title}/>
+            <SNSButtons type="post-footer" url={url} title={title}/>
           </div>
         </div>
         <div className="related-posts" />

@@ -37,8 +37,10 @@ const applyInlineSize = (layout = {} ) => (ele, attributes) => {
     }
   });
 };
+
+const parser = typeof DOMParser !== 'undefined' && new DOMParser()
 export const ampify = html => {
-  const parser = new DOMParser();
+  if(!parser) return html
   const dom = parser.parseFromString(html, 'text/html');
 
   convert(dom, 'image', null, (image) => {

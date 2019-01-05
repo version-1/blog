@@ -16,6 +16,7 @@ export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
   const PostContent = contentComponent || Content;
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail;
+  const url = typeof window !== 'undefined' && window.location.href
   return (
     <section className="section">
       {helmet || ''}
@@ -37,7 +38,7 @@ export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
           </div>
           <SNSButtons
             type="post-header"
-            url={window.location.href}
+            url={url}
             title={title}
           />
         </div>
@@ -54,7 +55,7 @@ export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
             <p>この記事が役に立ちましたらシェアをお願いします。</p>
             <SNSButtons
               type="post-footer"
-              url={window.location.href}
+              url={url}
               title={title}
             />
           </div>

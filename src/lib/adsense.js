@@ -38,9 +38,10 @@ const doubleRectMock = `
 
 const inArticleMock = `<div class="ad-in-article-mock"></div>`
 
-const parser = new DOMParser
+const parser = typeof DOMParser !== 'undefined' && new DOMParser()
 
 const insertAdsence = ad => html => {
+  if (!parser) return html
   const dom = parser.parseFromString(html, 'text/html');
   const eles = [].slice.call(dom.querySelectorAll('.adsense'));
   if (eles) {
