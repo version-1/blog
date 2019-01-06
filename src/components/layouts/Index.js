@@ -1,6 +1,5 @@
 import React from 'react';
 import {StaticQuery, graphql} from 'gatsby';
-import Prism from 'prismjs';
 import headerImage from '../../assets/images/header-image-2.svg';
 import headerImageSmall from '../../assets/images/header-image-small.svg';
 import footerImage from '../../assets/images/footer-image.svg';
