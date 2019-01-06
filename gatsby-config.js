@@ -14,7 +14,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
-        ignore: [`**/\.*`, '**/*\.png, **/*\.jpg'],
+        ignore: [`**/\.*`, '**/*.png, **/*.jpg'],
       },
     },
     'gatsby-plugin-sharp',
@@ -48,7 +48,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: 'static'
+              destinationDir: 'static',
             },
           },
         ],
@@ -97,6 +97,31 @@ module.exports = {
         sitemap: [meta.siteUrl, meta.sitemap].join(''),
         policy: [{userAgent: '*', allow: '/'}],
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-amp`,
+      options: {
+        analytics: {
+          type: 'gtag',
+          dataCredentials: 'include',
+          config: {
+            vars: {
+              gtag_id: meta.trackingId,
+              config: {
+                [meta.tackingId]: {
+                  page_location: '{{pathname}}',
+                },
+              },
+            },
+          },
+        },
+        canonicalBaseUrl: meta.siteUrl,
+        components: ['amp-form'],
+        excludedPaths: ['/404*', '/'],
+        pathIdentifier: '/amp/',
+        relAmpHtmlPattern: '{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}',
+        useAmpClientIdApi: true,
+      },
+    },
   ],
 };

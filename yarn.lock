@@ -2434,6 +2434,14 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864, can
   version "1.0.30000912"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000912.tgz#08e650d4090a9c0ab06bfd2b46b7d3ad6dcaea28"
 
+canvas-prebuilt@^2.0.0-alpha.14:
+  version "2.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/canvas-prebuilt/-/canvas-prebuilt-2.0.0-alpha.14.tgz#e0fc16afd508c1df5f36dcfe286c7edfe715af00"
+  dependencies:
+    detect-libc "^1.0.3"
+    nan "^2.9.2"
+    node-pre-gyp "^0.10.0"
+
 capture-stack-trace@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
