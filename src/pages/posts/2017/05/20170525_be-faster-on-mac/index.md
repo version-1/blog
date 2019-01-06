@@ -43,7 +43,7 @@ categories:
 
 ※音は出ませんので安心してご視聴ください。
 
-<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.mp4" controls></video>
+<video poster="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.png" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.mp4" controls></video>
 
 &nbsp;
 

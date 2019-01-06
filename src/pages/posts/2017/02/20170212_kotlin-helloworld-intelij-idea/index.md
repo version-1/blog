@@ -36,7 +36,7 @@ Community Editionであれば無料でお試しできます。
 IDEAでKotlinプロジェクト作ってから
 HelloWorldするまでを動画に録りました。
 
-<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170212_kotlin-helloworld-intelij-idea/kotlin-ide-helloworld.mp4" controls></video>
+<video poster="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170212_kotlin-helloworld-intelij-idea/kotlin-ide-helloworld.png" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170212_kotlin-helloworld-intelij-idea/kotlin-ide-helloworld.mp4" controls></video>
 
 <strong>※無音ですので、安心してご利用ください。</strong>
 
