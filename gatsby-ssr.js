@@ -29,6 +29,11 @@ export const onPreRenderHTML = params => {
   }, '');
   replaceHeadComponents([
     <script async src="https://cdn.ampproject.org/v0.js" />,
+    <script
+      async
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />,
     <style
       amp-boilerplate=""
       dangerouslySetInnerHTML={{__html: ampBoilerplate}}
@@ -39,10 +44,7 @@ export const onPreRenderHTML = params => {
         dangerouslySetInnerHTML={{__html: ampNoscriptBoilerplate}}
       />
     </noscript>,
-    <style
-      amp-custom=""
-      dangerouslySetInnerHTML={{__html: styles}}
-    />,
+    <style amp-custom="" dangerouslySetInnerHTML={{__html: styles}} />,
     ...heads.filter(x => x.type !== 'style' && x.type !== 'script'),
   ]);
   const body = getPostBodyComponents();
@@ -71,7 +73,7 @@ export const replaceRenderer = params => {
   const dom = parse(bodyHTML);
   console.log('===========>replaceRenderHTML', pathname);
   const _dom = ampify(dom);
-  const html = serialize(_dom)
-  const _html = html.replace(/xmlns=\".*xhtml\"/, '')
+  const html = serialize(_dom);
+  const _html = html.replace(/xmlns=\".*xhtml\"/, '');
   replaceBodyHTMLString(_html);
 };
