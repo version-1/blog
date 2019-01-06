@@ -10,7 +10,9 @@ import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
 import CategoryList from '../components/molecules/CategoryList';
 import SNSButtons from '../components/organisms/SNSButtons';
+import {parse, serialize} from '../lib/domParser';
 import {categoryPath} from '../lib/routes';
+
 
 export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
   const PostContent = contentComponent || Content;
@@ -74,33 +76,20 @@ BlogPostTemplate.propTypes = {
 };
 
 export default class BlogPost extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = {
-       html: null
-    }
-  }
-
-  componentDidMount() {
-    const {markdownRemark: post} = this.props.data;
-    const {amp} = this.props.pageContext;
-    const dom = new DOMParser().parseFromString(post.html, 'text/html')
-    const html = ampify(dom).body.innerHTML;
-    this.setState({ html })
-  }
-
   render() {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl} = this.props.pageContext;
     const content = [meta.siteUrl, post.frontmatter.thumbnail].join('');
-    const { html } = this.state;
+    // NOTE clientでは一旦ampifyしない
+    // const dom = parse(post.html)
+    // const html = serialize(ampify(dom));
 
     return (
       <Layout amp baseUrl={baseUrl}>
         <BlogPostTemplate
           post={post}
-          content={html}
+          content={post.html}
           contentComponent={HTMLContent}
           helmet={
             <Helmet titleTemplate="%s | Blog">

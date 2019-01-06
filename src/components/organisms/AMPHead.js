@@ -10,10 +10,6 @@ export const AMPHead = ({amp, baseUrl}) => {
   if (!amp) return <noscript />;
   return (
     <Helmet htmlAttributes={{amp: undefined}}>
-      <meta
-        name="viewport"
-        content="width=device-width,minimum-scale=1,initial-scale=1"
-      />
       <style amp-boilerplate={undefined}>{boilerPlate}</style>
       <noscript dangerouslySetInnerHTML={{__html: boilerPlateNoScript}} />
     </Helmet>

@@ -9,7 +9,6 @@ const HatenaButton = ({amp, url, title, size = defaultSize}) => {
       <a
         href={`http://b.hatena.ne.jp/entry/${url}`}
         className="hatena-bookmark-button share-btn"
-        hatena-bookmark-title={title}
         data-hatena-bookmark-layout="touch-counter"
         data-hatena-bookmark-width={size}
         data-hatena-bookmark-height={size}
@@ -23,12 +22,6 @@ const HatenaButton = ({amp, url, title, size = defaultSize}) => {
           style={{ border: 'none' }}
         />
       </a>
-      <script
-        type="text/javascript"
-        src="https://b.st-hatena.com/js/bookmark_button.js"
-        charSet="utf-8"
-        async="async"
-      />
     </>
   );
 };

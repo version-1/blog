@@ -63,13 +63,15 @@ const Navbar = class extends React.PureComponent {
           className="navigation"
           role="navigation"
           aria-label="main-navigation">
-          <div
-            className="menu hide-on-large-only sidenav-trigger"
-            data-target="side-out">
-            <a href="#!">
-              <i className="material-icons menu-icon">menu</i>
-            </a>
-          </div>
+          {!amp && (
+            <div
+              className="menu hide-on-large-only sidenav-trigger"
+              data-target="side-out">
+              <a href="#!">
+                <i className="material-icons menu-icon">menu</i>
+              </a>
+            </div>
+          )}
           <div className="brand-logo">
             <Link to="/">So Far, So Good</Link>
           </div>

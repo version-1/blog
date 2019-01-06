@@ -27,7 +27,7 @@ const withAMP = createPage => params => {
     template.base,
     [template.name, '.amp', template.ext].join(''),
   );
-  const baseUrl = [meta.siteUrl, _path].join('/');
+  const baseUrl = [meta.siteUrl, _path].join('');
   createPage({
     ...params,
     context: {

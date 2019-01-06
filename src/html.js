@@ -7,11 +7,10 @@ export default class HTML extends React.Component {
       <html {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
-          <script async src="https://cdn.ampproject.org/v0.js" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no"
           />
           {this.props.headComponents}
         </head>

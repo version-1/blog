@@ -8,7 +8,6 @@ import footerImage from '../../assets/images/footer-image.svg';
 import Img from '../../components/atoms/Image';
 import Navbar from '../../components/Navbar';
 import Head from '../../components/Head';
-import {AMPHead} from '../../components/organisms/AMPHead';
 import '../../assets/stylesheets/index.sass';
 
 export default class IndexLayout extends React.PureComponent {
@@ -34,7 +33,6 @@ export default class IndexLayout extends React.PureComponent {
               siteTitle={data.site.siteMetadata.title}
               description={data.site.siteMetadata.description}
             />
-            <AMPHead amp={amp} baseUrl={baseUrl} />
             <div className="header-image hide-on-med-and-down">
               <Img
                 amp={amp}
