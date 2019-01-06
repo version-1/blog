@@ -38,15 +38,7 @@ const applyInlineSize = (layout = {} ) => (ele, attributes) => {
   });
 };
 
-const parser = typeof DOMParser !== 'undefined' && new DOMParser()
-export const ampify = html => {
-  if(!parser) {
-    console.warn('DOMParser missing')
-    console.log('DOMParser missing')
-    return html
-  }
-  const dom = parser.parseFromString(html, 'text/html');
-
+export const ampify = dom => {
   convert(dom, 'image', null, (image) => {
     const isGif = image.src.indexOf('.gif') > -1;
     const ampTag = isGif ? 'amp-anim' : 'amp-img';
@@ -63,5 +55,5 @@ export const ampify = html => {
     return ampVideo;
   });
 
-  return dom.body.innerHTML;
+  return dom;
 };

@@ -74,17 +74,30 @@ BlogPostTemplate.propTypes = {
 };
 
 export default class BlogPost extends React.PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+       html: null
+    }
+  }
+
+  componentDidMount() {
+    const {markdownRemark: post} = this.props.data;
+    const {amp} = this.props.pageContext;
+    const dom = new DOMParser().parseFromString(post.html, 'text/html')
+    const html = ampify(dom).body.innerHTML;
+    this.setState({ html })
+  }
+
   render() {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {amp, baseUrl} = this.props.pageContext;
-    console.log('amp?', amp)
-    const html = amp ? ampify(post.html) : post.html;
-    const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
-    const content = fluid && [meta.siteUrl, fluid.src].join('');
+    const {baseUrl} = this.props.pageContext;
+    const content = [meta.siteUrl, post.frontmatter.thumbnail].join('');
+    const { html } = this.state;
 
     return (
-      <Layout amp={amp} baseUrl={baseUrl}>
+      <Layout amp baseUrl={baseUrl}>
         <BlogPostTemplate
           post={post}
           content={html}

@@ -70,11 +70,11 @@ export default class BlogPost extends React.PureComponent {
   render() {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {amp, baseUrl} = this.props.pageContext;
+    const {baseUrl} = this.props.pageContext;
     const content = [meta.siteUrl, post.frontmatter.thumbnail].join('');
 
     return (
-      <Layout amp={amp} baseUrl={baseUrl}>
+      <Layout baseUrl={baseUrl}>
         <AMPHtmlLink url={baseUrl}/>
         <BlogPostTemplate
           post={post}
