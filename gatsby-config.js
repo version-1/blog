@@ -36,16 +36,6 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
-          {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'static',
@@ -60,6 +50,7 @@ module.exports = {
               noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
             },
           },
+          'gatsby-remark-prismjs'
         ],
       },
     },
