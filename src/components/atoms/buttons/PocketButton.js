@@ -6,8 +6,8 @@ const defaultSize = 40;
 const PocketButton = ({amp, url, title, size = defaultSize}) => {
   const shareLink = `http://getpocket.com/edit?url=${url}&title=${title}`;
   return (
-    <a className="share-btn" href={shareLink} rel="nofollow" rel="nofollow" target="_blank">
-      <Img amp={amp} src={pocketIcon} width={40}/>
+    <a className="share-btn pocket-btn" href={shareLink} rel="nofollow" rel="nofollow" target="_blank">
+      <Img amp={amp} src={pocketIcon} width={45} height={45}/>
     </a>
   );
 };
