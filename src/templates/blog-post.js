@@ -7,12 +7,12 @@ import {meta} from '../../config/constants';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
 import { AdDoubleRect } from '../components/organisms/Adsence';
-import { AMPHtmlLink } from '../components/organisms/AMPHead';
 import SNSButtons from '../components/organisms/SNSButtons';
 import CategoryList from '../components/molecules/CategoryList';
+import { insertInArticle } from '../lib/adsense'
 
 export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
-  const content = post.html;
+  const content = insertInArticle(false)(post.html);
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const PostContent = contentComponent || Content;
   const thumbnailUrl = meta.images.url + thumbnail;
@@ -39,7 +39,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
           <SNSButtons type="post-header" url={url} title={title}/>
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect/>
+        <AdDoubleRect amp={false}/>
         <div className="post-meta-footer">
           <div className="categories">
             Category :
@@ -71,11 +71,10 @@ export default class BlogPost extends React.PureComponent {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl} = this.props.pageContext;
-    const content = [meta.siteUrl, post.frontmatter.thumbnail].join('');
+    const imageUrl = [meta.siteUrl, post.frontmatter.thumbnail].join('');
 
     return (
       <Layout baseUrl={baseUrl}>
-        <AMPHtmlLink url={baseUrl}/>
         <BlogPostTemplate
           post={post}
           contentComponent={HTMLContent}
@@ -84,7 +83,7 @@ export default class BlogPost extends React.PureComponent {
               <title>{`${post.frontmatter.title}`}</title>
               <meta name="description" content={description} />
               <meta property="og:description" content={description} />
-              <meta property="og:image" content={content} />
+              <meta property="og:image" content={imageUrl} />
             </Helmet>
           }
         />

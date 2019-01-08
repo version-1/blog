@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { insertInArticle } from '../lib/adsense'
 
 export const HTMLContent = ({content, className}) => {
-  const __html = insertInArticle(content)
-  return <div className={className} dangerouslySetInnerHTML={{__html}} />;
+  return <div className={className} dangerouslySetInnerHTML={{__html: content}} />;
 };
 
 const Content = ({content, className}) => (

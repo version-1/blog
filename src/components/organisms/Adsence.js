@@ -1,7 +1,7 @@
 import React from 'react';
-import { isStrictProduction } from '../../lib/env'
+import {isStrictProduction} from '../../lib/env';
 
-class Adsence extends React.Component {
+class Adsense extends React.Component {
   componentDidMount() {
     if (window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
@@ -9,6 +9,19 @@ class Adsence extends React.Component {
     return <div>{this.props.component}</div>;
   }
 }
+
+const ampResponsive = `
+  <amp-ad
+      width="100vw"
+  height=320
+  type="adsense"
+  data-ad-client="ca-pub-6597797627874207"
+    data-ad-slot="6422152371"
+      data-auto-format="rspv"
+        data-full-width>
+          <div overflow></div> </amp-ad> `;
+
+const AmpAd = () => <div dangerouslySetInnerHTML={{__html: ampResponsive}} />;
 
 const Rect = () => {
   return (
@@ -35,23 +48,39 @@ const InArticle = () => {
 };
 
 const RectMock = () => <div className="ad-rect-mock" />;
+const RectAMPMock = () => (
+  <div className="adsense">
+    <div className="ad-rect-mock ampad" />
+  </div>
+);
 const InArticleMock = () => <div className="ad-in-article-mock" />;
+const InArticleAMPMock = () => <div className="ad-in-article-mock ampad" />;
 
 const AdRect = () =>
   isStrictProduction ? (
-    <Adsence component={<Rect />} />
+    <Adsense component={<Rect />} />
   ) : (
-    <Adsence component={<RectMock />} />
+    <Adsense component={<RectMock />} />
   );
 
-export const AdInArticle = () =>
-  isStrictProduction ? (
-    <Adsence component={<InArticle />} />
-  ) : (
-    <Adsence component={<InArticleMock />} />
-  );
+export const AdInArticle = ({amp}) => {
+  if (!isStrictProduction) {
+    return <Adsense component={<InArticleMock />} />;
+  }
+  if (amp) {
+    return isStrictProduction ? (
+      <AmpAd />
+    ) : (
+      <Adsense comopnent={<InArticleAMPMock />} />
+    );
+  }
+  return <Adsense component={<InArticle />} />;
+};
 
-export const AdDoubleRect = () => {
+export const AdDoubleRect = ({amp}) => {
+  if (amp) {
+    return isStrictProduction ? <AmpAd /> : <RectAMPMock />;
+  }
   return (
     <div className="adsense adsence-double-rect" style={{display: 'flex'}}>
       <div>

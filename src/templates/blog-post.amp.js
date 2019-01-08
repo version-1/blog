@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import Img from '../components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from '../../config/constants';
-import {ampify} from '../lib/ampify';
 import {AdDoubleRect} from '../components/organisms/Adsence';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
@@ -12,13 +11,14 @@ import CategoryList from '../components/molecules/CategoryList';
 import SNSButtons from '../components/organisms/SNSButtons';
 import {parse, serialize} from '../lib/domParser';
 import {categoryPath} from '../lib/routes';
+import {insertInArticle} from '../lib/adsense';
 
-
-export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
+export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
   const PostContent = contentComponent || Content;
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail;
-  const url = typeof window !== 'undefined' && window.location.href
+  const url = typeof window !== 'undefined' && window.location.href;
+  const content = insertInArticle(true)(post.html);
   return (
     <section className="section">
       {helmet || ''}
@@ -38,13 +38,10 @@ export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
               {updatedAt}
             </div>
           </div>
-          <SNSButtons
-            type="post-header"
-            url={url}
-            title={title}
-          />
+          <SNSButtons type="post-header" url={url} title={title} />
         </div>
-        <PostContent className="post-body" content={content} /> <AdDoubleRect />
+        <PostContent className="post-body" content={content} />
+        <AdDoubleRect amp/>
         <div className="post-meta-footer">
           <div className="categories">
             Category :
@@ -55,11 +52,7 @@ export const BlogPostTemplate = ({post, content, contentComponent, helmet}) => {
           </div>
           <div className="sns-share-footer">
             <p>この記事が役に立ちましたらシェアをお願いします。</p>
-            <SNSButtons
-              type="post-footer"
-              url={url}
-              title={title}
-            />
+            <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
       </article>
@@ -80,11 +73,7 @@ export default class BlogPost extends React.PureComponent {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl} = this.props.pageContext;
-    const content = [meta.siteUrl, post.frontmatter.thumbnail].join('');
-    // NOTE clientでは一旦ampifyしない
-    // const dom = parse(post.html)
-    // const html = serialize(ampify(dom));
-
+    const imageUrl = [meta.siteUrl, post.frontmatter.thumbnail].join('');
     return (
       <Layout amp baseUrl={baseUrl}>
         <BlogPostTemplate
@@ -92,11 +81,11 @@ export default class BlogPost extends React.PureComponent {
           content={post.html}
           contentComponent={HTMLContent}
           helmet={
-            <Helmet titleTemplate="%s | Blog">
-              <title>{`${post.frontmatter.title}`}</title>
+            <Helmet titleTemplate={`%s | ${meta.title}`}>
+              <title>{post.frontmatter.title}</title>
               <meta name="description" content={description} />
               <meta property="og:description" content={description} />
-              <meta property="og:image" content={content} />
+              <meta property="og:image" content={imageUrl} />
             </Helmet>
           }
           title={post.frontmatter.title}
