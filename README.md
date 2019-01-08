@@ -38,9 +38,9 @@ my blog
  - [x] AMP(canonical, iframe, gif, error)
 
 ##### After Release
+ - [x] Cloudflare
  - [ ] related posts
  - [ ] popular article
- - [ ] Cloudflare
  - [ ] amp-ad, amp-iframe
  - [ ] embeded youtube
  - [ ] breadcrumbs
