@@ -19,7 +19,7 @@ categories:
 置いておいて
 最近こんなツイートをしてみました。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/ssid-tweet.png" alt="ssid tweet"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/ssid-tweet.png" alt="ssid tweet"/>
 
 &nbsp;
 <h2 class="chapter">iPhoneのSSIDに名前が含まれる人は変更しましょう</h2>
@@ -83,19 +83,19 @@ WI-FIのアクセスポイントを識別するためのID
 &nbsp;
 ### ②リストより「一般」を選択
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-1.png" alt="How To Change SSID"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-1.png" alt="How To Change SSID"/>
 
 ### ③「情報」をタップ
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-2.png" alt="How To Change SSID"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-2.png" alt="How To Change SSID"/>
 
 ### ④「名前」をタップ
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-3.png" alt="How To Change SSID"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-3.png" alt="How To Change SSID"/>
 
 ### ⑤端末の名前が表示されるのでここで自分の好きな名前に変更
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-4.png" alt="How To Change SSID"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170903_how-to-change-ssid/change-ssid-4.png" alt="How To Change SSID"/>
 
 以上、
 1分かからずにできる手順です。

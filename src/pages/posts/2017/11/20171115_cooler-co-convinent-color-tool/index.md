@@ -26,7 +26,7 @@ faviconを作成しているときにこの問題にぶち当たりました。
 
 ※faviconとは、下の画像のようなタイトルの横にある画像の
 ことです。
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171115_cooler-co-convinent-color-tool/Screen-Shot-2017-11-14-at-23.52.18.png" alt="Screen-Shot-2017-11-14-at-23.52.18.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171115_cooler-co-convinent-color-tool/Screen-Shot-2017-11-14-at-23.52.18.png" alt="Screen-Shot-2017-11-14-at-23.52.18.png"/>
 
 &nbsp;
 
@@ -86,7 +86,7 @@ faviconを作成しているときにこの問題にぶち当たりました。
 まず、
 トップページはこのような形になります。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171115_cooler-co-convinent-color-tool/Screen-Shot-2017-11-15-at-0.04.49-e1510673350509.png" alt="Screen-Shot-2017-11-15-at-0.04.49-e1510673350509.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171115_cooler-co-convinent-color-tool/Screen-Shot-2017-11-15-at-0.04.49-e1510673350509.png" alt="Screen-Shot-2017-11-15-at-0.04.49-e1510673350509.png"/>
 
 配色を保存して置きたいなどの要望があれば、
 アカウントを作成して置きましょう。
@@ -104,7 +104,7 @@ faviconを作成しているときにこの問題にぶち当たりました。
 
 &nbsp;
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171115_cooler-co-convinent-color-tool/coolors-explanation-1024x926.png" alt="coolors-explanation-1024x926.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171115_cooler-co-convinent-color-tool/coolors-explanation-1024x926.png" alt="coolors-explanation-1024x926.png"/>
 
 &nbsp;
 

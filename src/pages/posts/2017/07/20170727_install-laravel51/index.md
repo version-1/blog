@@ -63,7 +63,7 @@ php artisan serve
 
 ```
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/07/20170727_install-laravel51/laravel.png" alt="laravel top"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/07/20170727_install-laravel51/laravel.png" alt="laravel top"/>
 
 そして、
 http://localhost:8000

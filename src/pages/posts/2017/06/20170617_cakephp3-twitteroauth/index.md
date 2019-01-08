@@ -53,7 +53,7 @@ twitter Appを作成すると、
 
 <span style="text-decoration: underline;"><strong>1.Create Newをクリック</strong></span>
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter1.png" alt="twitter"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter1.png" alt="twitter"/>
 
 &nbsp;
 
@@ -62,7 +62,7 @@ twitter Appを作成すると、
 <span style="text-decoration: underline;"><strong>2.必要な情報を入力</strong></span>
 
 &nbsp;
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter2.png" alt="twitter"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter2.png" alt="twitter"/>
 
 &nbsp;
 
@@ -82,7 +82,7 @@ Keys and access Tokenタブを選択し、
 が表示されていることを確認します。
 （アクセストークンがない場合は、Token Actionsあたりにあるボタンを押して作成する。)
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter3.png" alt="twitter"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170617_cakephp3-twitteroauth/twitter3.png" alt="twitter"/>
 
 &nbsp;
 

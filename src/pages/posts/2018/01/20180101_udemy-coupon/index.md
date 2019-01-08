@@ -45,7 +45,7 @@ URLで提供される場合は、その提供されたURLをクリックして�
 
 逆にクーポンコードの場合は、
 
-<img class="post-image half-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/01/20180101_udemy-coupon/coupon-code.png" alt="coupon-code.png"/>
+<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2018/01/20180101_udemy-coupon/coupon-code.png" alt="coupon-code.png"/>
 
 このようにコースの購入の下に「クーポンをお持ちですか？」という表示があるのでそこをクリックして入力という手続きになるようです。
 

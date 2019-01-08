@@ -81,7 +81,7 @@ Plugin Name: My Plugin
  */
 
 ```
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171106_how-to-develop-wp-plugin/Screen-Shot-2017-11-06-at-10.04.11.png" alt="Screen-Shot-2017-11-06-at-10.04.11.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171106_how-to-develop-wp-plugin/Screen-Shot-2017-11-06-at-10.04.11.png" alt="Screen-Shot-2017-11-06-at-10.04.11.png"/>
 
 ↑My Pluginというプラグインが表示されているのがわかります。
 
@@ -104,7 +104,7 @@ License: GPL2
 */
 
 ```
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171106_how-to-develop-wp-plugin/Screen-Shot-2017-11-06-at-10.12.29.png" alt="Screen-Shot-2017-11-06-at-10.12.29.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171106_how-to-develop-wp-plugin/Screen-Shot-2017-11-06-at-10.12.29.png" alt="Screen-Shot-2017-11-06-at-10.12.29.png"/>
 
 <div class="mid-article"></div>
 

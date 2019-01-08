@@ -146,7 +146,7 @@ gitで公開しているので、
 (今は簡単なものであればgit上で簡単なページで作れるんですね。）
 
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171001_japanese-action/japan-map.png" alt="Japan Map"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171001_japanese-action/japan-map.png" alt="Japan Map"/>
 
 以上です！！
 

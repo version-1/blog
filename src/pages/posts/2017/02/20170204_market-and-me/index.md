@@ -118,15 +118,15 @@ Twitterでも、居酒屋でも「上司や経営層は全然わかっていな�
 
 結果は以下のような形で確認できます。
 
-<img class="post-image" width="100%" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint.png" alt="Good Point"/>
+<img class="post-image" width="100%" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint.png" alt="Good Point"/>
 
-<img class="post-image" width="100%" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint1.png" alt="Good Point"/>
+<img class="post-image" width="100%" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint1.png" alt="Good Point"/>
 
-<img class="post-image" width="100%" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint2.png" alt="Good Point"/>
+<img class="post-image" width="100%" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint2.png" alt="Good Point"/>
 
-<img class="post-image" width="100%" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint3.png" alt="Good Point"/>
+<img class="post-image" width="100%" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint3.png" alt="Good Point"/>
 
-<img class="post-image" width="100%" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint4.png" alt="Good Point"/>
+<img class="post-image" width="100%" src="https://statics.ver-1-0.net/uploads/2017/02/20170204_market-and-me/goodpoint4.png" alt="Good Point"/>
 
 &nbsp;
 
