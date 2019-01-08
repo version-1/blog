@@ -1,0 +1,4 @@
+/category/colum /categories/column 301
+/category/本棚 /categories/column 301
+/category/:category /categories/:category 301
+/profile /about 301
