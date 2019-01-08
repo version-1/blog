@@ -45,7 +45,7 @@ categories:
 
 その点踏まえて、仕上げたページはこちらになります。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/12/20171216_write-with-smacss/smaccs-1024x517.png" alt="smaccs-1024x517.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/12/20171216_write-with-smacss/smaccs-1024x517.png" alt="smaccs-1024x517.png"/>
 
 おぉ・・・
 
@@ -108,7 +108,7 @@ LPをコーディングした結果以下のような構成になりました。
 
 &nbsp;
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/12/20171216_write-with-smacss/dir-structure-665x1024.png" alt="dir-structure-665x1024.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/12/20171216_write-with-smacss/dir-structure-665x1024.png" alt="dir-structure-665x1024.png"/>
 
 &nbsp;
 

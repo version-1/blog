@@ -23,7 +23,7 @@ categories:
 
 <h2 class="chapter">Slackって？</h2>
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image1.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image1.png" alt="slack"/>
 
 エンジニア界隈やスタートアップなどで
 よく使われているチャットツールです。
@@ -82,7 +82,7 @@ Slackには自分が考えていることや詰まっていること、リマイ
 
 slackではチャンネルと言って、
 自分で好きなチャットルームの部屋を作ることができます。
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image2.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image2.png" alt="slack"/>
 
 ここで、
 自分の呟く用の部屋を作って
@@ -122,14 +122,14 @@ To Doって続かないですよね。
 忘れずにやらないと行けないことをガンガンつぶやいていきます。
 （下記は例です。こんなことTo Doに書く人いないと思いますけど・・・）
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image3.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image3.png" alt="slack"/>
 
 また、slackではスニペットという機能を
 使って文字を装飾できるので、
 タスクが終わったら取り消し線を入れることができます。
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image4.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image4.png" alt="slack"/>
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image5.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171023_self-slack/image5.png" alt="slack"/>
 
 （ "~"で文字を囲むとその間を取り消し線で表示できます。)
 朝を起きるになってる。。

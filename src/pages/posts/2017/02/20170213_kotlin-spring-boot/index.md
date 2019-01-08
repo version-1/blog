@@ -115,7 +115,7 @@ kotlinx.htmlやexposedあたりを使おうかと
 &nbsp;
 
 ディレクトリ構成は以下のようにしてみました。
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170213_kotlin-spring-boot/dir-structure.png" alt="dirstructure.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/02/20170213_kotlin-spring-boot/dir-structure.png" alt="dirstructure.png"/>
 
 各ソースはgitHubにあげたのでよかったらどうぞ
 
@@ -149,7 +149,7 @@ VALUES( 1 , 'John' , 26 , 1),
 http://localhost
 に接続すると以下のような画面が見れます。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170213_kotlin-spring-boot/user-list.png" alt="user-list"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/02/20170213_kotlin-spring-boot/user-list.png" alt="user-list"/>
 
 
 MVCあたりのソースも載せておきます。

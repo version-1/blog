@@ -23,7 +23,7 @@ categories:
 
 &nbsp;
 <h2>パスポート</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/passport-315266_640.jpg" alt="passport-315266_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/passport-315266_640.jpg" alt="passport-315266_640.jpg"/>
 
 &nbsp;
 
@@ -38,7 +38,7 @@ categories:
 
 &nbsp;
 <h2>航空券</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/airport-690556_640.jpg" alt="airport-690556_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/airport-690556_640.jpg" alt="airport-690556_640.jpg"/>
 
 &nbsp;
 
@@ -50,7 +50,7 @@ JAL,ANAは日本の会社ということもあり機内食もおいしく、サ�
 
 &nbsp;
 <h2>ESTA申請</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/new-york-668616_640.jpg" alt="new-york-668616_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/new-york-668616_640.jpg" alt="new-york-668616_640.jpg"/>
 
 &nbsp;
 
@@ -71,7 +71,7 @@ ESTAというなんかアルファベットで難しそうな雰囲気をかも�
 
 &nbsp;
 <h2>モバイルWiFiなど現地通信機器</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/wifi-1371030_640.jpg" alt="wifi-1371030_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/wifi-1371030_640.jpg" alt="wifi-1371030_640.jpg"/>
 
 &nbsp;
 
@@ -81,7 +81,7 @@ ESTAというなんかアルファベットで難しそうな雰囲気をかも�
 
 &nbsp;
 <h2>Uberのインストール・登録</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/Uber_Logo.png" alt="Uber_Logo.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/Uber_Logo.png" alt="Uber_Logo.png"/>
 
 Uberはアメリカで広く利用されている配車サービスです。Uberのアプリに搭載された地図上で目的地を指定して、自分がいまいる現在地に車を呼んで目的地まで運んでもらうことができます。
 
@@ -97,7 +97,7 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 
 &nbsp;
 <h2>Skypeクレジットの準備</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/skype-2048156_640.png" alt="skype-2048156_640.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/skype-2048156_640.png" alt="skype-2048156_640.png"/>
 
 海外でのデータ通信はモバイルWifiで問題なしですが、現地で現地の番号に電話かけないといけないということもままあります。
 
@@ -109,7 +109,7 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 
 &nbsp;
 <h2>充電器・コンセント（アダプタの形は変わらないので心配無用）</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/power-plug-2802656_640.jpg" alt="power-plug-2802656_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/power-plug-2802656_640.jpg" alt="power-plug-2802656_640.jpg"/>
 
 海外旅行の際に心配な電源の確保ですが、<strong>アメリカのコンセントは日本のコンセントと変わらない形状</strong>なので<strong>変換用のアダプタなどを改めて購入する必要はありません。</strong>
 
@@ -117,7 +117,7 @@ Uberでは、先に目的地を地図（グーグルマップのような地図�
 
 &nbsp;
 <h2>現地通貨（ドル）・クレジットカード</h2>
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/bank-note-941246_640.jpg" alt="bank-note-941246_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/09/20180921_prepare-travel-to-usa/bank-note-941246_640.jpg" alt="bank-note-941246_640.jpg"/>
 
 現地通貨はドルですが、アメリカではほとんどの場合でクレジットカードで決済できてしまうので現金としてのドルは少額で問題ありません。滞在期間などによりますが一週間の滞在でも<strong>200ドルほど</strong>あればだいたい事足りるのではないでしょうか？
 

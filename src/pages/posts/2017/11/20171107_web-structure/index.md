@@ -59,7 +59,7 @@ categories:
 
 &nbsp;
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171107_web-structure/Untitled-3-1024x714.png" alt="Untitled-3-1024x714.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171107_web-structure/Untitled-3-1024x714.png" alt="Untitled-3-1024x714.png"/>
 
 &nbsp;
 

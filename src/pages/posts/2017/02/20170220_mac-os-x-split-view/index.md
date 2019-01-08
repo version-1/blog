@@ -32,7 +32,7 @@ Macが仮想デスクトップというものを持っていて、
 ということで早速
 やり方の動画です。
 
-<video poster="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170220_mac-os-x-split-view/split-view.png" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/02/20170220_mac-os-x-split-view/split-view.mp4" controls></video>
+<video poster="https://statics.ver-1-0.net/uploads/2017/02/20170220_mac-os-x-split-view/split-view.png" src="https://statics.ver-1-0.net/uploads/2017/02/20170220_mac-os-x-split-view/split-view.mp4" controls></video>
 
 &nbsp;
 

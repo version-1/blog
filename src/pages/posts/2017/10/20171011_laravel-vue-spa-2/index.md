@@ -21,7 +21,7 @@ categories:
 
 ※無音なので、安心してご視聴ください。
 
-<video src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-2/spa-sample.mp4" poster="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-2/spa-sample.png" poster="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.png" controls></video>
+<video src="https://statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-2/spa-sample.mp4" poster="https://statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-2/spa-sample.png" poster="https://statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.png" controls></video>
 
 動画をみるとわかりますが、
 ページを切り替えているのに全体を読み込まず、
