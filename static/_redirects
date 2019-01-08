@@ -2,3 +2,6 @@
 /category/本棚 /categories/column 301
 /category/:category /categories/:category 301
 /profile /about 301
+
+# Redirect default Netlify subdomain to primary domain
+https://vigilant-hoover-3bb740.netlify.com/* https://ver-1-0.net/:splat 301!
