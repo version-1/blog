@@ -1,5 +1,7 @@
 import { meta } from '../../config/constants'
 export const isProductionHost = function() {
+  // FIXME 一時的に全てtrue
+  return true
   const hostname = typeof window !== 'undefined' && window.location.host
   return meta.hostname === hostname
 }()
