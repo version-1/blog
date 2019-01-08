@@ -5,3 +5,4 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://vigilant-hoover-3bb740.netlify.com/* https://ver-1-0.net/:splat 301!
+https://www.ver-1-0.net/* https://ver-1-0.net/:splat 301!
