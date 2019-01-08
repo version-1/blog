@@ -68,10 +68,11 @@ BlogPostTemplate.propTypes = {
 
 export default class BlogPost extends React.PureComponent {
   render() {
+    const { location } = this.props
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl} = this.props.pageContext;
-    const imageUrl = [meta.siteUrl, post.frontmatter.thumbnail].join('');
+    const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
 
     return (
       <Layout baseUrl={baseUrl}>
@@ -82,6 +83,8 @@ export default class BlogPost extends React.PureComponent {
             <Helmet titleTemplate={`%s | ${meta.title}`}>
               <title>{`${post.frontmatter.title}`}</title>
               <meta name="description" content={description} />
+              <meta property="og:title" content={post.frontmatter.title} />
+              <meta property="og:url" content={location.href} />
               <meta property="og:description" content={description} />
               <meta property="og:image" content={imageUrl} />
             </Helmet>
