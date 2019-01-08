@@ -19,7 +19,7 @@ vagrantなどだと完全に別OSのサーバになるので、IPアドレスを
 psql -U [任意のuser] -h 127.0.0.1 database
 ```
 
-<div class="after-article"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">ホストOSでもデータベースをインストールしている場合</h2>
 
