@@ -20,11 +20,16 @@
       .row
         display: flex
         flex-wrap: wrap
+        @media #{$medium-and-down}
+          margin-left: unset
+          margin-right: unset
       .row .col
         float: unset
       .card
         height: 95%
         border-radius: 6px
+        @media #{$medium-and-down}
+          margin: 10px
         .card-image img
           height: 180px
           border-radius: 6px 6px 0px 0px
