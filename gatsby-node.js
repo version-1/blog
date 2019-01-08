@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
-const {routes, meta, constants } = require('./config/constants');
+const {routes, meta, constants} = require('./config/constants');
 const fs = require(`fs-extra`);
 
 // Constants
@@ -120,7 +120,7 @@ const createStaticPage = createPage => page => {
     path: '/' + templateKey,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
     context: {
-      id
+      id,
     },
   });
 };
@@ -163,6 +163,34 @@ const queryIndex = `
     }
   }
 `;
+
+const popularPostQuery = `query popularPostQuery($populars: [String]) {
+allMarkdownRemark(
+      filter: {
+        frontmatter: {slug: {in: $populars}}
+      }
+      limit: 6
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            slug
+            thumbnail
+            templateKey
+            categories
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
+          }
+        }
+      }
+    }
+   }`;
 
 const staticPageQuery = `
  query StaticPageQuery($templateKey: String) {
@@ -215,6 +243,26 @@ exports.createPages = ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
     const categories = collectCategories(posts);
 
+    graphql(popularPostQuery, {populars: constants.populars}).then(result => {
+      debugger
+      // Create RootPage
+      createPage({
+        path: '/',
+        component: path.resolve(`src/templates/index.js`),
+        context: {
+          popPosts: result,
+        },
+      });
+      // Create 404 Page
+      createPage({
+        path: '/404.html',
+        component: path.resolve(`src/templates/404.js`),
+        context: {
+          popPosts: result,
+        },
+      });
+    });
+
     // Create Pages
     STATIC_PAGE_LIST.map(page => {
       graphql(staticPageQuery, {templateKey: page}).then(result => {
@@ -246,4 +294,3 @@ exports.onCreateNode = ({node, actions, getNode}) => {
     });
   }
 };
-

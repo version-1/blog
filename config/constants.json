@@ -38,14 +38,22 @@
       },
       {
         "title": "Udemyでクーポンを利用して、気になるコースをお得に利用する方法",
-        "to": "2018/01/01/udemy-coupon",
+        "to": "/2018/01/01/udemy-coupon",
         "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/01/20180101_udemy-coupon/thumbnail.png"
       },
       {
         "title": "フリーランスは相対取引が自由に働ける道？",
-        "to": "2018/03/22/trade-of-market-and-direct",
+        "to": "/2018/03/22/trade-of-market-and-direct",
         "thumbnail": "https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/03/20180322_trade-of-market-and-direct/thumbnail.jpg"
       }
+    ],
+    "populars": [
+      "/2017/04/24/cakephp3-json-response",
+      "/2017/08/09/conflict-vue-with-blade",
+      "/2017/11/29/connect-db-container",
+      "/2018/03/01/rails-migration-not-null",
+      "/2017/10/01/japanese-action",
+      "/2017/02/13/kotlin-spring-boot"
     ],
     "pages": ["about"]
   }

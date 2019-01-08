@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import { postPath } from '../lib/routes';
+import {constants} from '../../config/constants';
+import {postPath} from '../lib/routes';
 import Layout from '../components/layouts/Default';
 import Post from '../components/Post';
 import Pagination from '../components/Pagination';
@@ -10,7 +11,8 @@ export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
-    const popPosts = posts.slice(0, 6);
+    console.log(this.props.pageContext.popPosts)
+    const {edges: popPosts} = this.props.pageContext.popPosts.data.allMarkdownRemark;
     return (
       <Layout>
         <section className="section">

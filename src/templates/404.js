@@ -3,8 +3,8 @@ import Layout from '../components/layouts/Default.js';
 import Post from '../components/Post';
 import {graphql} from 'gatsby';
 
-const NotFoundPage = ({data}) => {
-  const {edges: posts} = data.allMarkdownRemark;
+const NotFoundPage = (props) => {
+  const {edges: posts} = props.pageContext.popPosts.data.allMarkdownRemark;
   return (
     <Layout>
       <div className="not-found">
@@ -32,32 +32,3 @@ const NotFoundPage = ({data}) => {
 };
 
 export default NotFoundPage;
-
-export const pageQuery = graphql`
-  query NotFoundQuery {
-    allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___createdAt]}
-      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
-      limit: 6
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            templateKey
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`;

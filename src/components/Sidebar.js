@@ -22,12 +22,17 @@ export default class Sidebar extends PureComponent {
                 alt="profile"
               />
             </div>
-            <p className="introduction">
-              フリーランスのRails&Reactエンジニア
-              10月からフルリモートになりました。
-              プログラミング、旅行、フリーランスの働き方などに
-              ついてぼちぼち更新していきます。
-            </p>
+            <div className="introduction">
+              <p>
+                フリーランスのRails&Reactエンジニア
+                10月からフルリモートになりました。
+                プログラミング、旅行、フリーランスの働き方などに
+                ついてぼちぼち更新していきます。
+              </p>
+              <p>
+                プロフィールは<Link to="/about">こちら</Link>です。
+              </p>
+            </div>
           </div>
         </section>
         <section className="section">
