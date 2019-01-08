@@ -54,7 +54,7 @@ Markdownエディタを作って月15万円稼ぐまでにやったこと —�
 他のアプリとは<strong>少し違ったフォルムで独特な</strong>
 <strong> 配色のアイコン</strong>もまた良いです。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171117_cool-markdown-editor-inkdrop/Screen-Shot-2017-11-16-at-22.50.51-1024x688.png" alt="Screen-Shot-2017-11-16-at-22.50.51-1024x688.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171117_cool-markdown-editor-inkdrop/Screen-Shot-2017-11-16-at-22.50.51-1024x688.png" alt="Screen-Shot-2017-11-16-at-22.50.51-1024x688.png"/>
 
 UIの好みも人それぞれですが、
 こっちのダークなUIも渋くていいですよね。

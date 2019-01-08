@@ -24,7 +24,7 @@ categories:
 ちなみに先に言って起きますが、**あくまでも一例として**
 です。こんななやり方もあるのね程度でおさめていただければ嬉しいです。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/09/20170927_architecture-for-local-rails/diagram.png" alt="Diagram"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170927_architecture-for-local-rails/diagram.png" alt="Diagram"/>
 
 
 先に図を載せましたが、

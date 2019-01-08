@@ -95,7 +95,7 @@ rails s -b 0.0.0.0
 ブラウザでアクセスすると
 
 
-<img class="post-image half-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/01/20170103_lubuntu-rails5/rails-helloworld.png" alt="スクリーンショット-2017-01-03-15.37.16-300x244.png"/>
+<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2017/01/20170103_lubuntu-rails5/rails-helloworld.png" alt="スクリーンショット-2017-01-03-15.37.16-300x244.png"/>
 
 成功
 

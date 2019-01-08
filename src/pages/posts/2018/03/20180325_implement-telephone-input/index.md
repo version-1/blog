@@ -12,7 +12,7 @@ categories:
 
 <h2>電話番号形式で入力する際のフォームを実装</h2>
 
-<img class="post-image half-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/ReactNativeTelephoneInput.gif" alt="ReactNativeTelephoneInput.gif"/>
+<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/ReactNativeTelephoneInput.gif" alt="ReactNativeTelephoneInput.gif"/>
 
 
 ReactNativeで入力フォームを使う時って、TextInputを使いますよね。ただこのTextInputさんは、汎用的につくられているので<strong>電話番号の入力フォームとしては少し使いづらい印象があります。</strong>
@@ -150,7 +150,7 @@ TelephoneInputコンポーネントを定義したことで、ハイフンを挿
 
 &nbsp;
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/Screen-Shot-2018-03-24-at-23.00.48.png" alt="Screen-Shot-2018-03-24-at-23.00.48.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/03/20180325_implement-telephone-input/Screen-Shot-2018-03-24-at-23.00.48.png" alt="Screen-Shot-2018-03-24-at-23.00.48.png"/>
 
 &nbsp;
 

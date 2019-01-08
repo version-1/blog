@@ -19,7 +19,7 @@ categories:
 ということで少し調べて、サムネイルが表示されるようにしました。
 (早速いいねいただけました！！）
 
-<img class="post-image almost-width" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card.png" alt="twitter-card"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card.png" alt="twitter-card"/>
 
 <div class="adsense"></div>
 <h2 class="chapter">Twitter Cardsというのをやるとどうやら表示されるらしい</h2>
@@ -84,4 +84,4 @@ get_the_excerpt()を$post->$post_contentに変えました。
 
 エラーが出ていなければOKです。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card-validator.png" alt="Card Validator"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170827_twitter-cards/twitter-card-validator.png" alt="Card Validator"/>

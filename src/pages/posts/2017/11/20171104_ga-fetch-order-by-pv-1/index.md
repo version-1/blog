@@ -61,23 +61,23 @@ Google AnalyticsのAPIを使ってPV順に記事を取得できる
 最初の画面はそのまま続行としておきましょう。
 そのままプロジェクトを作成してしまいます。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.32.52.png" alt="Screen-Shot-2017-11-04-at-21.32.52.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.32.52.png" alt="Screen-Shot-2017-11-04-at-21.32.52.png"/>
 
 次の画面でAPIを有効化します。
 画面ではすでにAPIが有効になっていたようです。
 そのまま認証情報に進みます。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.02.png" alt="Screen-Shot-2017-11-04-at-21.33.02.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.02.png" alt="Screen-Shot-2017-11-04-at-21.33.02.png"/>
 
 次の画面で認証情報を追加しますが、
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.27.png" alt="Screen-Shot-2017-11-04-at-21.33.27.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.27.png" alt="Screen-Shot-2017-11-04-at-21.33.27.png"/>
 
 
 サービスアカウント名は任意なので、
 好きな名前を使いましょう。
 
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.50-1024x649.png" alt="Screen-Shot-2017-11-04-at-21.33.50-1024x649.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/Screen-Shot-2017-11-04-at-21.33.50-1024x649.png" alt="Screen-Shot-2017-11-04-at-21.33.50-1024x649.png"/>
 
 この画面で「サービスアカウントID」は後の手順で使用するので保管しておきます。
 次へをクリックすると
@@ -94,7 +94,7 @@ Google Analyticsにログインして、
 で先の「サービスアカウントID」（メールアドレスのようなやつ）を使ってユーザを作成します。
 権限は最低限表示と分析だけは付加してあげましょう。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/google-analytics-add-user-1024x443.png" alt="google-analytics-add-user-1024x443.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171104_ga-fetch-order-by-pv-1/google-analytics-add-user-1024x443.png" alt="google-analytics-add-user-1024x443.png"/>
 
 
 <div class="mid-article"></div>

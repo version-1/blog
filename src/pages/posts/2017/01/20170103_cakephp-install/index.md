@@ -178,4 +178,4 @@ $bin/cake server -H 0.0.0.0
 
 ブラウザから接続下記画面で
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/01/20170103_cakephp-install/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-01-03-18.52.23-300x274.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/01/20170103_cakephp-install/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-01-03-18.52.23-300x274.png"/>

@@ -271,7 +271,7 @@ npm run dev
 でresources配下のjsファイルなどをビルドして、
 artisanでサーバを起動すると
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-1/demo.png" alt="demo"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171011_laravel-vue-spa-1/demo.png" alt="demo"/>
 
 これで、
 resources/assets/js/component/Example.vue

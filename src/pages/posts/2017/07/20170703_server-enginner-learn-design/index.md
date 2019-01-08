@@ -53,7 +53,7 @@ htmlやcssの最低限の知識とかはあって、
 個人的にかなり感激です。
 ここに成果を記しておきます。
 
-<img class="post-image" src="https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads/2017/07/20170703_server-enginner-learn-design/site-design.png" alt="site-design.png"/>
+<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/07/20170703_server-enginner-learn-design/site-design.png" alt="site-design.png"/>
 
 &nbsp;
 
