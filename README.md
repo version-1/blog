@@ -36,9 +36,14 @@ my blog
  - [x] embed video
  - [x] adsence
  - [x] AMP(canonical, iframe, gif, error)
+
+##### After Release
+ - [ ] related posts
  - [ ] popular article
  - [ ] Cloudflare
----- release line ---
+ - [ ] amp-ad, amp-iframe
+ - [ ] embeded youtube
+ - [ ] breadcrumbs
  - [ ] contact form
  - [ ] top scroll button
  - [ ] search
@@ -46,6 +51,6 @@ my blog
 
 #### Netlify
 
- - [ ] redirect
- - [ ] develop test
- - [ ] deploy
+ - [x] redirect
+ - [x] develop test
+ - [x] deploy
