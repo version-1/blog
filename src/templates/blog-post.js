@@ -11,12 +11,12 @@ import SNSButtons from '../components/organisms/SNSButtons';
 import CategoryList from '../components/molecules/CategoryList';
 import { insertInArticle } from '../lib/adsense'
 
-export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
+export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => {
   const content = insertInArticle(false)(post.html);
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const PostContent = contentComponent || Content;
   const thumbnailUrl = meta.images.url + thumbnail;
-  const url = typeof window !== 'undefined' && window.location.href
+  const url = location.href
   return (
     <section className="section">
       {helmet || ''}{' '}
@@ -46,7 +46,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
             <CategoryList list={categories} />
           </div>
           <div className="author">
-            Written By : <a href="#">{meta.author}</a>
+            Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
             <p>この記事が役に立ちましたらシェアをお願いします。</p>
@@ -78,6 +78,7 @@ export default class BlogPost extends React.PureComponent {
       <Layout baseUrl={baseUrl}>
         <BlogPostTemplate
           post={post}
+          location={location}
           contentComponent={HTMLContent}
           helmet={
             <Helmet titleTemplate={`%s | ${meta.title}`}>

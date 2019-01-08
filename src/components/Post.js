@@ -19,7 +19,7 @@ const CategoryList = ({list = []}) => {
 };
 
 const Post = ({amp, post}) => {
-  const {title, date, thumbnail} = post.frontmatter;
+  const {title, thumbnail} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail || defaultImage;
   return (
     <div className="col s12 m4" key={post.id}>

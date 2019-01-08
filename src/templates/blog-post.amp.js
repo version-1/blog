@@ -9,15 +9,13 @@ import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
 import CategoryList from '../components/molecules/CategoryList';
 import SNSButtons from '../components/organisms/SNSButtons';
-import {parse, serialize} from '../lib/domParser';
-import {categoryPath} from '../lib/routes';
 import {insertInArticle} from '../lib/adsense';
 
-export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
+export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => {
   const PostContent = contentComponent || Content;
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail;
-  const url = typeof window !== 'undefined' && window.location.href;
+  const url = location.href;
   const content = insertInArticle(true)(post.html);
   return (
     <section className="section">
@@ -48,7 +46,7 @@ export const BlogPostTemplate = ({post, contentComponent, helmet}) => {
             <CategoryList list={categories} />
           </div>
           <div className="author">
-            Written By : <a href="#">{meta.author}</a>
+            Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
             <p>この記事が役に立ちましたらシェアをお願いします。</p>
@@ -79,6 +77,7 @@ export default class BlogPost extends React.PureComponent {
       <Layout amp baseUrl={baseUrl}>
         <BlogPostTemplate
           post={post}
+          location={location}
           content={post.html}
           contentComponent={HTMLContent}
           helmet={

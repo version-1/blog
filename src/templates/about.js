@@ -1,21 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Img from '../components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from '../../config/constants';
-import {ampify} from '../lib/ampify';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
-import i18next from '../lib/i18next';
-import {categoryPath} from '../lib/routes';
 
 
 export const AboutTemplate = ({post, contentComponent, helmet}) => {
   const content = post.html;
-  const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
+  const {createdAt, updatedAt, title} = post.frontmatter;
   const PostContent = contentComponent || Content;
-  const thumbnailUrl = meta.images.url + thumbnail;
   return (
     <section className="section">
       {helmet || ''}{' '}
@@ -36,7 +31,7 @@ export const AboutTemplate = ({post, contentComponent, helmet}) => {
         <PostContent className="post-body" content={content} />
         <div className="post-meta-footer">
           <div className="author">
-            Written By : <a href="#">{meta.author}</a>
+            Written By : <a href="#!">{meta.author}</a>
           </div>
         </div>
         <div className="related-posts" />

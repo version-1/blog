@@ -9,7 +9,7 @@ class DefaultLayout extends React.PureComponent {
       <Layout amp={amp} baseUrl={baseUrl}>
         <div className="row site-container">
           <div className="row flex">
-            <div className="col s12 m12 l8">
+            <div className="col s12 m12 l8" style={{padding: "unset"}}>
               <main className="main">{this.props.children}</main>
             </div>
             <div className="col s12 m12 l4 hide-on-med-and-down">

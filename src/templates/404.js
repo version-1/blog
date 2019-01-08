@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layouts/Default.js';
 import Post from '../components/Post';
-import {graphql} from 'gatsby';
 
 const NotFoundPage = (props) => {
   const {edges: posts} = props.pageContext.popPosts.data.allMarkdownRemark;

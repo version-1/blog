@@ -26,6 +26,6 @@ export default class Image extends React.PureComponent {
     if (this.props.gatsbyImage) {
       return <Img fluid={this.props.fluid} alt={this.props.title} />;
     }
-    return <img {...this.props} />;
+    return <img alt={this.props.alt} {...this.props} />;
   }
 }
