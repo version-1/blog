@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import Helmet from 'react-helmet';
 import favicon from '../assets/images/favicon.ico';
+import { meta } from '../../config/constants';
 import { isStrictProduction } from '../lib/env'
 
 export default class Meta extends PureComponent {
@@ -14,12 +15,12 @@ export default class Meta extends PureComponent {
         <link rel="canonical" href={baseUrl} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ver-1-0.net/" />
+        <meta property="og:url" content={meta.siteUrl} />
         <meta property="og:title" content={siteTitle} />
         <meta property="og:site_name" content={siteTitle} />
         <meta
           property="og:image"
-          content="https://ver-1-0.net/wp-content/uploads/2017/11/cropped-ver-1-0-logo.jpg"
+          content={meta.logo}
         />
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
