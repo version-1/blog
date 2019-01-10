@@ -120,7 +120,7 @@ sudo gem install sqlite3 # SQLITE用にインストール
 sudo gem install therubyracer
 
 # Railsアプリケーション作成
-cd /vagrant  &amp;&amp; rails new myapp
+cd /vagrant  && rails new myapp
 sudo chmwon -R ubuntu:ubuntu /vagrant/myapp
 
 ```
