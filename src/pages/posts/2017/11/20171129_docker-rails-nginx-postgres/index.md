@@ -63,7 +63,7 @@ docker-compose.ymlの紹介はここまでにして、実際にdocker-composeで
 
 コマンドを実行する前に適当なGemfileをカレントにコピっといてください。Gemfileがないと当然怒られます。
 ```bash
-mkdir rnp-sample &amp; cd rnp-sample
+mkdir rnp-sample && cd rnp-sample
 cp -pr [手頃なGemfile] ./.
 docker run --rm -it -v "$PWD":/usr/src/sample version1/sample bundle install
 docker run --rm -it -v "$PWD":/usr/src/sample version1/sample rails new . -d postgresql
@@ -80,7 +80,7 @@ FROM ruby:2.4.2
 
 # 必要なモジュールをインストール
 # ここでpostgresのクライアントを入れておく
-RUN apt-get update -qq &amp;&amp; \
+RUN apt-get update -qq && \
     apt-get install -y build-essential libpq-dev nodejs postgresql-client
 
 ENV APP_DIR /rnp

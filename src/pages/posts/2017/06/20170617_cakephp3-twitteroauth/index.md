@@ -128,7 +128,7 @@ class TweetController extends AppController
  　}
  　　
 　　function tweet($text){
-     if ( $text != null &amp;&amp; count($text) > 0 ){
+     if ( $text != null && count($text) > 0 ){
          $oauth = $this->create_twitter_oauth();
          $result = $oauth->post('statuses/update', array("status"=> $text ));
      }

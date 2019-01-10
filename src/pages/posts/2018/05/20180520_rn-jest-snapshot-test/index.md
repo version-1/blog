@@ -167,7 +167,7 @@ export default class extends Component {
             })
           }}
           >
-          <View style={[button.btn, !pushed &amp;&amp; button.texture, disabled &amp;&amp; button.disabled]}>
+          <View style={[button.btn, !pushed && button.texture, disabled && button.disabled]}>
             <Text
               style={button.label}
               disabled={false}
