@@ -16,7 +16,8 @@
     "trackingId": "UA-71833989-5",
     "images": {
       "url": "https://s3-ap-northeast-1.amazonaws.com/statics.ver-1-0.net/uploads"
-    }
+    },
+    "postRoot": "/Users/admin/React/ver-1-0.net-static/src/pages/posts"
   },
   "constants": {
     "per": 18,
