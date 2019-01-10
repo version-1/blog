@@ -10,24 +10,6 @@ output_path = ARGV[1]
 
 exit unless file_path && output_path
 
-class Downloader
-  attr_accessor :input
-  attr_accessor :output
-
-  class << self
-    def save(url, output)
-      path = [File.dirname(output), '/thumbnail', File.extname(output)].join('')
-      File.open(path, 'wb') do |file|
-        puts url
-        URI.parse(URI.encode(url))
-        open(URI.encode(url)) do |data|
-          file.write(data.read)
-        end
-      end
-    end
-  end
-end
-
 class FileWriter
   HEADER_DIVIDER = '---'.freeze
   attr_accessor :file
@@ -45,7 +27,6 @@ class FileWriter
   def write
     write_header
     write_content
-    write_images
   end
 
   def write_header
@@ -63,43 +44,18 @@ class FileWriter
     end
   end
 
-  def write_images
-    images = content.images || []
-    (images + [thumbnail]).each do |url|
-      output = File.dirname(file) + '/' + File.basename(url)
-      Downloader.save(url, output)
-    end
-  end
 end
 
 class Content
   attr_accessor :content
-  attr_accessor :images
 
   def initialize(content)
     self.content = content
-    self.images = []
   end
 
   def transformed
     lines = content.split("\n")
-    lines = parse_image_tags(lines)
     transform_precode_tag(lines)
-  end
-
-  # imageの取得
-  def parse_image_tags(lines)
-    lines.map do |line|
-      m = line.match(/<img.+src=\"(?<src>http.+ver-1-0\.net\/wp-content\/uploads.+(png|jpg|jpeg|gif))\".+>/)
-      if m.present?
-        self.images << m[:src] # parseしたイメージを保存
-        filename = m[:src].split('/').last
-        image = './' + filename
-        "<img class=\"post-image\" src=\"#{image}\" alt=\"#{filename}\"/>"
-      else
-        line
-      end
-    end
   end
 
   # <pre><code></code></pre>の変換

@@ -63,11 +63,12 @@ categoryList.forEach(category => {
 
 const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
 const time4path = moment(timestamp).format('YYYY/MM');
+const time4slug = moment(timestamp).format('YYYY/MM/DD');
 const time4filename = moment(timestamp).format('YYYYMMDD');
 const postName = time4filename + '_' + slug;
 const postPath = [postRoot, time4path, postName, 'index.md'].join('/');
 const thumbnail = [time4path, postName, 'thumbnail.png'].join('/');
-const slugPath = ['', time4path, slug].join('/');
+const slugPath = ['', time4slug, slug].join('/');
 
 console.log('');
 console.log('');
