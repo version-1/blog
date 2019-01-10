@@ -176,7 +176,7 @@ call を利用します。
 
 ```ruby
 class Report
-  def initialize(&amp;formatter)
+  def initialize(&formatter)
     @title = 'Monthly Report'
     @text = ['Things are going', 'really, really well.']
     @formatter = formatter

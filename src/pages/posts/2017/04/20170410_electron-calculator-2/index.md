@@ -119,8 +119,8 @@ ipcMain.on('push-num-button', (event, arg) => {
             // 数字以外が押された場合
             // (AllClear や +/- 以外)
             if ( Number(calc.sum) != 0
-                 &amp;&amp; Number(calc.reserve) != 0
-                 &amp;&amp; calc.operand != 'reverse'  ){
+                 && Number(calc.reserve) != 0
+                 && calc.operand != 'reverse'  ){
                 //計算を実行
                 calc[calc.operand](calc.sum);
             }

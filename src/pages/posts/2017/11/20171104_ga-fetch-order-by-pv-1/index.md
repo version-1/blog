@@ -215,11 +215,11 @@ function printResults($reports , $count) {
 
         for ( $rowIndex = 0; $rowIndex < $count; $rowIndex++) { $row = $rows[ $rowIndex ]; $dimensions = $row->getDimensions();
             $metrics = $row->getMetrics();
-            for ($i = 0; $i < count($dimensionHeaders) &amp;&amp; $i < count($dimensions); $i++) {
+            for ($i = 0; $i < count($dimensionHeaders) && $i < count($dimensions); $i++) {
                 print($dimensionHeaders[$i] . ": " . $dimensions[$i] . "\n");
             }
 
-            for ($j = 0; $j < count( $metricHeaders ) &amp;&amp; $j < count( $metrics ); $j++) { $entry = $metricHeaders[$j]; $values = $metrics[$j]; print("Metric type: " . $entry->getType() . "\n" );
+            for ($j = 0; $j < count( $metricHeaders ) && $j < count( $metrics ); $j++) { $entry = $metricHeaders[$j]; $values = $metrics[$j]; print("Metric type: " . $entry->getType() . "\n" );
                 for ( $valueIndex = 0; $valueIndex < count( $values->getValues() ); $valueIndex++ ) {
                     $value = $values->getValues()[ $valueIndex ];
                     print($entry->getName() . ": " . $value . "\n");

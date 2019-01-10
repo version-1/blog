@@ -17,7 +17,7 @@ LaravelはVue.jsを標準でサポートしており、
 だいたい二回くらいで簡単なSPAのサンプルアプリを作る計画で、
 今回はまず環境構築をしてきます。
 
-<div class="adsense-double-rect"></div>
+<div class="adsense"></div>
 
 <h2 class="chapter">そもそもSPAって何？！</h2>
 SPAとはSingle Page Applicationの略で、
@@ -50,7 +50,7 @@ composer create-project --prefer-dist laravel/laravel  my-app "5.4.*"
 上でアプリが作成できたら、できたファイル群をみてみると。
 以下のようになります。
 ```bash
-$cd my-app/ &amp;&amp; ls -1
+$cd my-app/ && ls -1
 app
 artisan
 bootstrap
