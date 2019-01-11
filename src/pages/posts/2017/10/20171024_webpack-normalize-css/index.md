@@ -4,7 +4,7 @@ title: webpackでnormalize.cssを読み込む方法
 slug: /2017/10/24/webpack-normalize-css
 createdAt: 2017-10-24 12:08:38
 updatedAt: 2018-01-30 23:18:05
-thumbnail: /2017/10/20171024_webpack-normalize-css/thumbnail.jpg
+thumbnail: /2017/10/20171024_webpack-normalize-css/thumbnail.png
 categories:
   - engineering
   - design
