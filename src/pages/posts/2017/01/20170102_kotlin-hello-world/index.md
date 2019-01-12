@@ -4,7 +4,7 @@ title: KotlinでHello world!!
 slug: /2017/01/02/kotlin-hello-world
 createdAt: 2017-01-02 11:01:49
 updatedAt: 2018-08-26 12:59:34
-thumbnail: /2017/01/20170102_kotlin-hello-world/thumbnail.jpg
+thumbnail: /2017/01/20170102_kotlin-hello-world/thumbnail.png
 categories:
   - engineering
   - for-beginner
