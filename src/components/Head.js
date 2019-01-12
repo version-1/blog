@@ -6,7 +6,7 @@ import { isStrictProduction } from '../lib/env'
 
 export default class Meta extends PureComponent {
   render() {
-    const {baseUrl, siteTitle, description} = this.props;
+    const {amp, baseUrl, siteTitle, description} = this.props;
     return (
       <Helmet>
         <html lang="en" />
@@ -30,7 +30,7 @@ export default class Meta extends PureComponent {
         <meta name="twitter:creator" content="@version1_2017" />
         <meta name="twitter:site" content="@version1_2017" />
         <link rel="shortcut icon" href={favicon} />
-        { isStrictProduction && <script
+        { (isStrictProduction && !amp) && <script
           async
           src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         /> }
