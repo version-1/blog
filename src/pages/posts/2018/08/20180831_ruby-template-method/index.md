@@ -17,7 +17,9 @@ categories:
 
 が有名で大変ためになる本ですが、これらのデザインパターンを ruby で書こうとするとどうなるのかというのでこちら購入して読んでみました。
 
-<iframe height="240" width="120" layout="fixed" style="width: 120px; height: 240px;" src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=llg01-22&amp;language=ja_JP&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=as_ss_li_til&amp;asins=B004YW6M6G&amp;linkId=ec52d6ae172022e5fe853f63f31bce31" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe>
+[Design Patterns in Ruby (Addison-Wesley Professional Ruby Series) (英語)](https://amzn.to/2TJL3Cu)
+
+<a href="https://www.amazon.co.jp/Design-Patterns-Ruby-Addison-Wesley-Professional/dp/0321490452/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=llg01-22&linkId=6af42eb4b01edaa8a7b67184be235a39&language=ja_JP" target="_blank"><img width="121" height="160" layout="fixed" border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321490452&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=llg01-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&language=ja_JP&l=li2&o=9&a=0321490452" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 はい、英語です。日本語版もあるのですが、6000 円ほどで結構高かったり英語の技術書を読破するという今年の目標もあったので、こちらを選びました。
 
