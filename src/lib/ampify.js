@@ -8,6 +8,11 @@ const defaults = {
     height: 475,
     layout: 'fixed-height',
   },
+  iframe: {
+    width: 640,
+    height: 475,
+    layout: 'responsive'
+  }
 };
 
 const convert = (dom, beforeTagName, afterTagName, callback) => {
@@ -24,6 +29,7 @@ const convert = (dom, beforeTagName, afterTagName, callback) => {
 
 const allowAttributes = {
   img: ['height', 'src', 'alt', 'width', 'layout', 'attribution', 'srcset'],
+  iframe: ['height', 'src', 'alt', 'width', 'layout', 'attribution', 'srcset', 'scrolling'],
 };
 
 const inheritAttribute = (ele, newEle) => {
@@ -61,7 +67,12 @@ export const ampify = dom => {
     applyInlineSize(defaults.image)(ampImage, inheritedAttributes);
     return ampImage;
   });
-  convert(dom, 'iframe', 'amp-iframe');
+  convert(dom, 'iframe', 'amp-iframe', iframe => {
+    const ampIframe = dom.createElement('amp-iframe');
+    const inheritedAttributes = inheritAttribute(iframe, ampIframe);
+    applyInlineSize(defaults.iframe)(ampIframe, inheritedAttributes);
+    return ampIframe;
+  });
   convert(dom, 'video', 'amp-video', video => {
     const ampVideo = dom.createElement('amp-video');
     const inheritedAttributes = inheritAttribute(video, ampVideo);
