@@ -28,6 +28,7 @@ export default class IndexLayout extends React.PureComponent {
         render={data => (
           <div>
             <Head
+              amp={amp}
               baseUrl={baseUrl}
               siteTitle={data.site.siteMetadata.title}
               description={data.site.siteMetadata.description}
