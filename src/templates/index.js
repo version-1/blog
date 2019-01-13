@@ -10,7 +10,6 @@ export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
-    console.log(this.props.pageContext.popPosts)
     const {edges: popPosts} = this.props.pageContext.popPosts.data.allMarkdownRemark;
     return (
       <Layout>

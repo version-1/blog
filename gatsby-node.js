@@ -244,7 +244,6 @@ exports.createPages = ({actions, graphql}) => {
     const categories = collectCategories(posts);
 
     graphql(popularPostQuery, {populars: constants.populars}).then(result => {
-      debugger
       // Create RootPage
       createPage({
         path: '/',

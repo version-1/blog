@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => 
   const url = location.href
   return (
     <section className="section">
-      {helmet || ''}{' '}
+      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
