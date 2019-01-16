@@ -90,11 +90,6 @@
     font-weight: bold
     padding: 15px 0px
     border-bottom: 3px dotted $co-black
-    &:before
-      color: $co-black
-      font-weight: bold
-      padding-right: 10px
-      content: '####'
   h5
     font-size: 0.6rem
   img.post-image
@@ -127,4 +122,24 @@
     max-height: 500px
     @media #{$medium-and-down}
       width: 100%
+  .related-post
+    position: relative
+    margin: 36px 0 16px
+    padding: 16px 10px
+    border: 2px solid #ee7917
+    background-color: #fffbf5
+  .related-post p:last-child
+    margin-bottom: 0
+  .related-post::before
+    position: absolute
+    top: -12px
+    left: 10px
+    padding: 0 10px 0 10px
+    content: "check"
+    background-color: #ee7917
+    border-radius: 10px
+    color: #fff
+    font-size: 14px
+    font-weight: bold
+    line-height: 20px
 
