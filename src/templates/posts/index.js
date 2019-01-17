@@ -7,10 +7,10 @@ import { postPath } from '../../lib/routes';
 
 export default class PostsIndex extends PureComponent {
   render() {
-    const {index, amp, totalPages} = this.props.pageContext;
+    const {index, amp, totalPages, archiveByMonth} = this.props.pageContext;
     const { edges: posts, totalCount } = this.props.data.allMarkdownRemark;
     return (
-      <Layout>
+      <Layout archiveByMonth={archiveByMonth}>
         <section className="section">
           <div className="section-container">
             <div className="section-content">

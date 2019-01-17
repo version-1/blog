@@ -3,10 +3,11 @@ import {Link} from 'gatsby';
 import profile from '../assets/images/profile.png';
 import {constants} from '../../config/constants';
 import Img from '../components/atoms/Image';
+import ArchiveByMonth from '../components/organisms/ArchiveByMonth';
 
 export default class Sidebar extends PureComponent {
   render() {
-    const {amp} = this.props;
+    const {amp, archiveByMonth} = this.props;
     return (
       <div className="sidebar">
         <section className="section">
@@ -49,6 +50,9 @@ export default class Sidebar extends PureComponent {
               </div>
             </Link>
           ))}
+        </section>
+        <section className="section">
+          <ArchiveByMonth items={archiveByMonth} />
         </section>
       </div>
     );

@@ -51,12 +51,12 @@ export default class AboutPost extends React.PureComponent {
   render() {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {amp, baseUrl} = this.props.pageContext;
+    const {amp, baseUrl, archiveByMonth} = this.props.pageContext;
     const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
     const content = fluid && [meta.siteUrl, fluid.src].join('');
 
     return (
-      <Layout amp={amp} baseUrl={baseUrl}>
+      <Layout amp={amp} baseUrl={baseUrl} archiveByMonth={archiveByMonth}>
         <AboutTemplate
           post={post}
           contentComponent={HTMLContent}

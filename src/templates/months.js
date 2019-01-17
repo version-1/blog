@@ -1,38 +1,32 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React, {PureComponent} from 'react';
 import {graphql} from 'gatsby';
-import i18next from '../lib/i18next';
 import Layout from '../components/layouts/Default';
 import Post from '../components/Post';
 import Pagination from '../components/Pagination';
-import { categoryPath } from '../lib/routes';
 
-class CategoryTemplate extends React.PureComponent {
+export default class MonthsIndex extends PureComponent {
   render() {
-    const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {category, index, archiveByMonth} = this.props.pageContext;
-    const {title} = this.props.data.site.siteMetadata;
-    const heading = i18next.t(`categories.${category}`);
-
+    const {index, month, amp, totalPages, archiveByMonth} = this.props.pageContext;
+    const { edges: posts, totalCount } = this.props.data.allMarkdownRemark;
     return (
       <Layout archiveByMonth={archiveByMonth}>
-        <Helmet title={`${heading}| ${title}`} />
         <section className="section">
           <div className="section-container">
             <div className="section-content">
               <div className="section-title">
                 <div className="title-border" />
-                <span className="title">{heading}</span>
+                <span className="title">記事一覧 { index } / { totalPages }</span>
               </div>
               <div className="section-list">
                 <div className="row">
                   {posts.map(({node: post}) => (
-                    <Post key={post.id} post={post} />
+                    <Post key={post.id} post={post} amp={amp}/>
                   ))}
-                </div> </div>
+                </div>
+              </div>
             <Pagination
               index={index}
-              namespace={categoryPath(category)}
+              namespace={month}
               count={totalCount}
             />
             </div>
@@ -43,20 +37,15 @@ class CategoryTemplate extends React.PureComponent {
   }
 }
 
-export default CategoryTemplate;
-
-export const categryPageQuery = graphql`
-  query CategoryPage($category: String, $skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+export const monthsIndexQuery = graphql`
+  query monthsIndexQuery($ids: [String], $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
+      sort: {fields: [frontmatter___createdAt], order: DESC}
+      filter: {
+        id: {in: $ids}
+      }
       limit: $limit
       skip: $skip
-      sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {categories: {in: [$category]}}}
     ) {
       totalCount
       edges {
