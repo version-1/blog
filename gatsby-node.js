@@ -5,6 +5,7 @@ const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta, constants} = require('./config/constants');
 const fs = require(`fs-extra`);
+const moment = require('moment');
 
 // Constants
 const PER_PAGE = constants.per;
@@ -85,7 +86,7 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
   });
 };
 
-const createPostShowPage = createPage => posts => {
+const createPostShowPage = createPage => posts => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {categories, slug, templateKey} = edge.node.frontmatter;
@@ -96,24 +97,38 @@ const createPostShowPage = createPage => posts => {
       component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
         id,
+        ...context
       },
     });
   });
 };
 
-const createPostsIndexPage = createPage => totalCount => {
+const createPostsIndexPage = createPage => totalCount => context => {
   const _path = [routes.root, routes.post].join('/');
-  buildPaginationPages(createPage)()(_path, 'posts/index', totalCount);
+  buildPaginationPages(createPage)()(_path, 'posts/index', totalCount, context);
 };
 
-const createCategoryShowPage = createPage => category => totalCount => {
+const createCategoryShowPage = createPage => category => totalCount => context => {
   const _path = [routes.root, routes.category, _.kebabCase(category)].join('/');
   buildPaginationPages(createPage)()(_path, 'categories', totalCount, {
     category,
+    ...context
   });
 };
 
-const createStaticPage = createPage => page => {
+const createMonthArchivePage = createPage => archives => context => {
+  Object.keys(archives).forEach(key => {
+    const _path = [routes.root, key].join('/');
+    const totalCount = archives[key].length
+    buildPaginationPages(createPage)()(_path, 'months', totalCount, {
+      month: key,
+      ids: archives[key],
+      ...context
+    });
+  })
+};
+
+const createStaticPage = createPage => page => context => {
   const {id} = page.node;
   const {templateKey} = page.node.frontmatter;
   createPage({
@@ -121,6 +136,7 @@ const createStaticPage = createPage => page => {
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
     context: {
       id,
+      ...context
     },
   });
 };
@@ -157,6 +173,7 @@ const queryIndex = `
             slug
             categories
             templateKey
+            createdAt
           }
         }
       }
@@ -242,6 +259,10 @@ exports.createPages = ({actions, graphql}) => {
     // Collect Data
     const posts = result.data.allMarkdownRemark.edges;
     const categories = collectCategories(posts);
+    const archiveByMonth = posts.reduce((acc, item) => {
+      const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM')
+      return { ...acc, [key]: [...(acc[key] || []), item.node.id]}
+    }, {});
 
     graphql(popularPostQuery, {populars: constants.populars}).then(result => {
       // Create RootPage
@@ -250,6 +271,7 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/index.js`),
         context: {
           popPosts: result,
+          archiveByMonth
         },
       });
       // Create 404 Page
@@ -258,23 +280,27 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/404.js`),
         context: {
           popPosts: result,
+          archiveByMonth
         },
       });
     });
+
+    const context = { archiveByMonth }
 
     // Create Pages
     STATIC_PAGE_LIST.map(page => {
       graphql(staticPageQuery, {templateKey: page}).then(result => {
         const [post] = result.data.allMarkdownRemark.edges;
-        createStaticPage(withAMP(createPage))(post);
+        createStaticPage(withAMP(createPage))(post)(context);
       });
     });
-    createPostShowPage(withAMP(createPage))(posts);
-    createPostsIndexPage(createPage)(posts.length);
+    createMonthArchivePage(createPage)(archiveByMonth)(context);
+    createPostShowPage(withAMP(createPage))(posts)(context);
+    createPostsIndexPage(createPage)(posts.length)(context);
     categories.map(category => {
       graphql(categoryQuery, {category}).then(result => {
         const posts = result.data.allMarkdownRemark.edges;
-        createCategoryShowPage(createPage)(category)(posts.length);
+        createCategoryShowPage(createPage)(category)(posts.length)(context);
       });
     });
   });
