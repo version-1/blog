@@ -71,11 +71,11 @@ export default class BlogPost extends React.PureComponent {
     const { location } = this.props
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {baseUrl} = this.props.pageContext;
+    const {baseUrl, layout} = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
 
     return (
-      <Layout baseUrl={baseUrl}>
+      <Layout baseUrl={baseUrl} layout={layout}>
         <BlogPostTemplate
           post={post}
           location={location}

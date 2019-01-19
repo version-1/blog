@@ -1,13 +1,12 @@
 import React, {PureComponent} from 'react';
 import {graphql} from 'gatsby';
-import Layout from '../../components/layouts/Default';
-import Post from '../../components/Post';
-import Pagination from '../../components/Pagination';
-import { postPath } from '../../lib/routes';
+import Layout from '../components/layouts/Default';
+import Post from '../components/Post';
+import Pagination from '../components/Pagination';
 
-export default class PostsIndex extends PureComponent {
+export default class MonthsIndex extends PureComponent {
   render() {
-    const {index, amp, totalPages, layout} = this.props.pageContext;
+    const {index, month, amp, totalPages, layout} = this.props.pageContext;
     const { edges: posts, totalCount } = this.props.data.allMarkdownRemark;
     return (
       <Layout layout={layout}>
@@ -27,7 +26,7 @@ export default class PostsIndex extends PureComponent {
               </div>
             <Pagination
               index={index}
-              namespace={postPath()}
+              namespace={month}
               count={totalCount}
             />
             </div>
@@ -38,11 +37,13 @@ export default class PostsIndex extends PureComponent {
   }
 }
 
-export const postsIndexQuery = graphql`
-  query postsIndexQuery($skip: Int!, $limit: Int!) {
+export const monthsIndexQuery = graphql`
+  query monthsIndexQuery($ids: [String], $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+      filter: {
+        id: {in: $ids}
+      }
       limit: $limit
       skip: $skip
     ) {
