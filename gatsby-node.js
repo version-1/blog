@@ -264,6 +264,10 @@ exports.createPages = ({actions, graphql}) => {
       return { ...acc, [key]: [...(acc[key] || []), item.node.id]}
     }, {});
 
+    const context = {
+      layout: { archiveByMonth }
+    }
+
     graphql(popularPostQuery, {populars: constants.populars}).then(result => {
       // Create RootPage
       createPage({
@@ -271,7 +275,7 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/index.js`),
         context: {
           popPosts: result,
-          archiveByMonth
+          ...context
         },
       });
       // Create 404 Page
@@ -280,12 +284,10 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/404.js`),
         context: {
           popPosts: result,
-          archiveByMonth
+          ...context
         },
       });
     });
-
-    const context = { archiveByMonth }
 
     // Create Pages
     STATIC_PAGE_LIST.map(page => {
