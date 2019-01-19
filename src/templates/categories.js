@@ -10,12 +10,12 @@ import { categoryPath } from '../lib/routes';
 class CategoryTemplate extends React.PureComponent {
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {category, index} = this.props.pageContext;
+    const {category, index, layout} = this.props.pageContext;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`categories.${category}`);
 
     return (
-      <Layout>
+      <Layout layout={layout}>
         <Helmet title={`${heading}| ${title}`} />
         <section className="section">
           <div className="section-container">

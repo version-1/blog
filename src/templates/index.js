@@ -9,10 +9,11 @@ import Pagination from '../components/Pagination';
 export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
+    const {layout} = this.props.pageContext;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
     const {edges: popPosts} = this.props.pageContext.popPosts.data.allMarkdownRemark;
     return (
-      <Layout>
+      <Layout layout={layout}>
         <section className="section">
           <div className="section-container">
             <div className="section-content">
