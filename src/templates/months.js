@@ -6,10 +6,10 @@ import Pagination from '../components/Pagination';
 
 export default class MonthsIndex extends PureComponent {
   render() {
-    const {index, month, amp, totalPages, archiveByMonth} = this.props.pageContext;
+    const {index, month, amp, totalPages, layout} = this.props.pageContext;
     const { edges: posts, totalCount } = this.props.data.allMarkdownRemark;
     return (
-      <Layout archiveByMonth={archiveByMonth}>
+      <Layout layout={layout}>
         <section className="section">
           <div className="section-container">
             <div className="section-content">
