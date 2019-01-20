@@ -152,6 +152,7 @@ createStackNavigatorは第二引数でStackNavigatorのオプションを渡す�
 stateがバインドされるので、それを使って画面遷移を行なっていきます。
 
 先ほどの例のDetailsに遷移したい場合の構文は以下です。
+&nbsp;
 
 ```javascript
 this.props.navigation.navigate('Details')
@@ -188,6 +189,7 @@ React Navigationで特に考えずに画面を遷移するとデフォルトで�
 ```
 this.props.navigation.goBack()
 ```
+&nbsp;
 
 goBackには引数を渡さずに実行すると今のルートを消して前の画面にもどるのですが、
 引数としてRouteを渡すと特定のRouteの一個前の画面に戻れるようで、
@@ -213,6 +215,7 @@ https://reactnavigation.org/docs/en/navigation-prop.html
 
 Webのルーティングではurlに乗せて、リソースのIDなどを画面間で受け渡しできますがReact Navigationではparamsを通して受け渡しを行います。
 遷移時のパラメータはnavigateメソッドの第二引数で定義ができ、
+&nbsp;
 
 ```javascript
 this.props.navigation.navigate('Details', { id: 1234 })
@@ -262,6 +265,8 @@ https://reactnavigation.org/docs/en/stack-navigator.html#navigationoptions-for-s
 
 タブバーを使う場合はcreateBottomTabNavigatorを使用して以下のように書くことができます。
 
+&nbsp;
+
 
 ```javascript
 const HomeStack = createStackNavigator(
@@ -297,6 +302,8 @@ const postLoginNavigator = createBottomTabNavigator({
 });
 ```
 
+&nbsp;
+
 createBottomTabNavigatorを使用しているのはコードの一番下部分なのですが、
 あらかじめStackNavigatorでそれぞれのTabでのルーティングを定義しておいてそれぞれを
 createBottomTabNavigatorに渡してタブを実現しています。
@@ -307,6 +314,8 @@ createBottomTabNavigatorに渡してタブを実現しています。
 
 さらに例のGifでは、ログイン前と後でタブを出しわけしているのでログイン画面のルーティングを
 付け足したStackNavigatorを追加しています。
+
+&nbsp;
 
 ```javascript
 
@@ -325,6 +334,8 @@ const postLoginNavigator = createBottomTabNavigator({
 + })
 ```
 
+&nbsp;
+
 ここではheaderModeやmodeオプションを付与していますが、headerModeをnoneにしないと
 ログインした後の画面でヘッダーが二つになって（StackNavigatorがネストしているので）しまうので
 ヘッダは出さないようにしています。またログイン時にしたから浮き出るようなアニメーションになっているのも
@@ -332,6 +343,7 @@ modeがmodal指定になっているからでStackNavigatorではこれらの制
 
 以下App.jsの部分だけですが、Gifに使ったコードを載せておきます。
 
+&nbsp;
 
 ```javascript
 import React from 'react';
