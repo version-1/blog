@@ -6,7 +6,7 @@ createdAt: 2019-01-19 12:56:39
 updatedAt: 2019-01-19 12:56:39
 thumbnail: /2019/01/20190119_summary-of-react-navigation/thumbnail.png
 categories:
- - freelance
+ - engineering
  - react
 ---
 
