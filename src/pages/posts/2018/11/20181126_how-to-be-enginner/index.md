@@ -57,9 +57,13 @@ categories:
 
 知り合いつてでフリーランスを始めるのも良いのですが、自分の知り合いで成長段階の企業である程度社員もいて体制が整っている、最新の技術をキャッチアップしているという人と知り合いであることは少ないので、そういった会社とのコネクションを持っているエージェントに頼るというのは全くおかしいことではありません。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" target="_blank" rel="nofollow noopener">
-<img src="https://www24.a8.net/svt/bgt?aid=180228793939&amp;wid=004&amp;eno=01&amp;mid=s00000011866011005000&amp;mc=1" alt="" width="350" height="240" border="0" /></a>
-<img src="https://www18.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" alt="" width="1" height="1" border="0" />
+<div class="related-post">
+ <a href="/2018/12/03/freelance-agent-select">フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。</a>
+</div>
+
+&nbsp;
+
+
 <h2>参画案件の成長性って関係あるの？</h2>
 <img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/11/20181126_how-to-be-enginner/question-mark-2123967_640.jpg" alt="question-mark-2123967_640.jpg"/>
 
@@ -92,6 +96,10 @@ categories:
 ここでは、リモート案件獲得についてしかいていないですが他にもエンジニア以外の仕事をやりたい！などなど色々な方向性はあるのである程度フリーランスに慣れてきた所でつぎのアクションをとり徐々に目標に近づけていくという戦略をとってみるのをオススメします。
 
 &nbsp;
+<div class="related-post">
+ <a href="/2018/10/14/full-remote-engineer">フルリモートエンジニアになったので、これまでの経緯をまとめてみた。</a>
+</div>
+
 
 &nbsp;
 <h2>まとめ</h2>
@@ -112,5 +120,10 @@ categories:
 とはいえ、一年という短い期間ですがここまで大きなストレスやブラック化することなく続けられている一定の成果が期待される方法ですので一つのモデルケースとして記憶にとどめておいて頂ければと思います。
 
 &nbsp;
+
+<a href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" target="_blank" rel="nofollow noopener">
+<img src="https://www24.a8.net/svt/bgt?aid=180228793939&amp;wid=004&amp;eno=01&amp;mid=s00000011866011005000&amp;mc=1" alt="" width="350" height="240" border="0" /></a>
+<img src="https://www18.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" alt="" width="1" height="1" border="0" />
+
 
 &nbsp;
