@@ -1,12 +1,24 @@
-import {routes} from '../../config/constants';
+const {routes} = require('../../config/constants');
 
 const buildPath = paths =>
   [routes.index, ...paths].join('/').replace('//', '/');
 
-export const rootPath = () => routes.index;
-export const aboutPath = () => buildPath(['about']);
-export const postPath = () => buildPath([routes.post]);
-export const categoryPath = category => {
+const rootPath = () => routes.index;
+const aboutPath = () => buildPath(['about']);
+const postPath = () => buildPath([routes.post]);
+const categoryPath = category => {
   if (!category) return buildPath([routes.category]);
   return buildPath([routes.category, category]);
 };
+const monthArchivePath = month => {
+  return buildPath(month.split('/'));
+};
+
+module.exports = {
+  aboutPath,
+  rootPath,
+  buildPath,
+  postPath,
+  categoryPath,
+  monthArchivePath
+}

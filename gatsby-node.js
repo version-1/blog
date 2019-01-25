@@ -7,18 +7,12 @@ const {routes, meta, constants} = require('./config/constants');
 const fs = require(`fs-extra`);
 const moment = require('moment');
 
+const {validateCategoryList} = require('./node/validation');
+const {breadcrumbs} = require('./node/breadcrumbs');
+
 // Constants
 const PER_PAGE = constants.per;
-const CATEGORY_LIST = constants.categories;
 const STATIC_PAGE_LIST = constants.pages;
-
-const validateCategoryList = (node, categories) => {
-  const diff = _.difference(categories, CATEGORY_LIST).length > 0;
-  if (diff.length > 0) {
-    console.error('category not found', diff, node);
-    throw new Error();
-  }
-};
 
 const withAMP = createPage => params => {
   const {path: _path, component, context = {}} = params;
@@ -90,6 +84,7 @@ const createPostShowPage = createPage => posts => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {categories, slug, templateKey} = edge.node.frontmatter;
+    const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs.categories(categories[0])]
     validateCategoryList(edge.node, categories);
     createPage({
       path: slug || edge.node.fields.slug,
@@ -97,7 +92,11 @@ const createPostShowPage = createPage => posts => context => {
       component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
         id,
-        ...context
+        ...context,
+        layout: {
+          ...context.layout,
+          breadcrumbs: _breadcrumbs
+        }
       },
     });
   });
@@ -110,33 +109,48 @@ const createPostsIndexPage = createPage => totalCount => context => {
 
 const createCategoryShowPage = createPage => category => totalCount => context => {
   const _path = [routes.root, routes.category, _.kebabCase(category)].join('/');
+  const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs.categories(category)]
   buildPaginationPages(createPage)()(_path, 'categories', totalCount, {
     category,
-    ...context
+    ...context,
+    layout: {
+      ...context.layout,
+      breadcrumbs: _breadcrumbs
+    }
   });
 };
 
 const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
     const _path = [routes.root, key].join('/');
-    const totalCount = archives[key].length
+    const totalCount = archives[key].length;
+    const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs.monthArchive(key)]
     buildPaginationPages(createPage)()(_path, 'months', totalCount, {
       month: key,
       ids: archives[key],
-      ...context
+      ...context,
+      layout: {
+        ...context.layout,
+        breadcrumbs: _breadcrumbs
+      }
     });
-  })
+  });
 };
 
 const createStaticPage = createPage => page => context => {
   const {id} = page.node;
   const {templateKey} = page.node.frontmatter;
+  const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs[templateKey]]
   createPage({
     path: '/' + templateKey,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
     context: {
       id,
-      ...context
+      ...context,
+      layout: {
+        ...context.layout,
+        breadcrumbs: _breadcrumbs
+      }
     },
   });
 };
@@ -260,13 +274,13 @@ exports.createPages = ({actions, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
     const categories = collectCategories(posts);
     const archiveByMonth = posts.reduce((acc, item) => {
-      const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM')
-      return { ...acc, [key]: [...(acc[key] || []), item.node.id]}
+      const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
+      return {...acc, [key]: [...(acc[key] || []), item.node.id]};
     }, {});
 
     const context = {
-      layout: { archiveByMonth }
-    }
+      layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
+    };
 
     graphql(popularPostQuery, {populars: constants.populars}).then(result => {
       // Create RootPage
@@ -275,7 +289,7 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/index.js`),
         context: {
           popPosts: result,
-          ...context
+          ...context,
         },
       });
       // Create 404 Page
@@ -284,7 +298,7 @@ exports.createPages = ({actions, graphql}) => {
         component: path.resolve(`src/templates/404.js`),
         context: {
           popPosts: result,
-          ...context
+          ...context,
         },
       });
     });
