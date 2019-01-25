@@ -1,11 +1,10 @@
-import i18next from 'i18next';
-import enLocales from '../locales/en/index';
-import jaLocales from '../locales/ja/index';
+const i18next = require('i18next');
+const enLocales = require('../locales/en/index');
+const jaLocales = require('../locales/ja/index');
 
 i18next
   .init({
     fallbackLng: 'ja',
-    debug: true,
     resources: {
       en: {
         translation: enLocales
@@ -16,4 +15,4 @@ i18next
     }
   });
 
-export default i18next
+module.exports = i18next
