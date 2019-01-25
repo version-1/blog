@@ -37,7 +37,7 @@ export default class Sidebar extends PureComponent {
           </div>
         </section>
         <section className="section">
-          <h3>オススメ記事</h3>
+          <h3>フリーランスに関する記事</h3>
           {constants.recomended.map((post, index) => (
             <Link key={index} to={post.to}>
               <div className="flat-card">
