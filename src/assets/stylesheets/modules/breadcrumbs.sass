@@ -1,0 +1,19 @@
+.breadcrumbs
+  display: flex
+  margin: 5px
+  margin-left: 20px
+  .breadcrumbs-item
+    &:first-child
+      a:before
+        padding: 0 10px
+        position: relative
+        top: 2px
+        font-family: 'Material Icons'
+        content: 'home'
+        color: $co-black
+    a
+      color: grey
+    a:after
+      padding: 0 10px
+      content: '/'
+      color: lightgrey
