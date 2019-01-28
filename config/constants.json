@@ -49,14 +49,6 @@
         "thumbnail": "https://statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/thumbnail.jpg"
       }
     ],
-    "populars": [
-      "/2017/04/24/cakephp3-json-response",
-      "/2017/08/09/conflict-vue-with-blade",
-      "/2017/11/29/connect-db-container",
-      "/2018/03/01/rails-migration-not-null",
-      "/2017/10/01/japanese-action",
-      "/2017/02/13/kotlin-spring-boot"
-    ],
     "pages": ["about"]
   }
 }
