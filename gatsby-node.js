@@ -9,6 +9,7 @@ const moment = require('moment');
 
 const {validateCategoryList} = require('./node/validation');
 const {breadcrumbs} = require('./node/breadcrumbs');
+const {fetchPv} = require('./node/pageview');
 
 // Constants
 const PER_PAGE = constants.per;
@@ -26,7 +27,7 @@ const withAMP = createPage => params => {
   createPage({
     ...params,
     context: {
-      ...params.context,
+      ...context,
       baseUrl,
     },
   });
@@ -84,7 +85,10 @@ const createPostShowPage = createPage => posts => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {categories, slug, templateKey} = edge.node.frontmatter;
-    const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs.categories(categories[0])]
+    const _breadcrumbs = [
+      ...context.layout.breadcrumbs,
+      breadcrumbs.categories(categories[0]),
+    ];
     validateCategoryList(edge.node, categories);
     createPage({
       path: slug || edge.node.fields.slug,
@@ -95,8 +99,8 @@ const createPostShowPage = createPage => posts => context => {
         ...context,
         layout: {
           ...context.layout,
-          breadcrumbs: _breadcrumbs
-        }
+          breadcrumbs: _breadcrumbs,
+        },
       },
     });
   });
@@ -109,14 +113,17 @@ const createPostsIndexPage = createPage => totalCount => context => {
 
 const createCategoryShowPage = createPage => category => totalCount => context => {
   const _path = [routes.root, routes.category, _.kebabCase(category)].join('/');
-  const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs.categories(category)]
+  const _breadcrumbs = [
+    ...context.layout.breadcrumbs,
+    breadcrumbs.categories(category),
+  ];
   buildPaginationPages(createPage)()(_path, 'categories', totalCount, {
     category,
     ...context,
     layout: {
       ...context.layout,
-      breadcrumbs: _breadcrumbs
-    }
+      breadcrumbs: _breadcrumbs,
+    },
   });
 };
 
@@ -124,15 +131,18 @@ const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
     const _path = [routes.root, key].join('/');
     const totalCount = archives[key].length;
-    const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs.monthArchive(key)]
+    const _breadcrumbs = [
+      ...context.layout.breadcrumbs,
+      breadcrumbs.monthArchive(key),
+    ];
     buildPaginationPages(createPage)()(_path, 'months', totalCount, {
       month: key,
       ids: archives[key],
       ...context,
       layout: {
         ...context.layout,
-        breadcrumbs: _breadcrumbs
-      }
+        breadcrumbs: _breadcrumbs,
+      },
     });
   });
 };
@@ -140,7 +150,10 @@ const createMonthArchivePage = createPage => archives => context => {
 const createStaticPage = createPage => page => context => {
   const {id} = page.node;
   const {templateKey} = page.node.frontmatter;
-  const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs[templateKey]]
+  const _breadcrumbs = [
+    ...context.layout.breadcrumbs,
+    breadcrumbs[templateKey],
+  ];
   createPage({
     path: '/' + templateKey,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
@@ -149,8 +162,8 @@ const createStaticPage = createPage => page => context => {
       ...context,
       layout: {
         ...context.layout,
-        breadcrumbs: _breadcrumbs
-      }
+        breadcrumbs: _breadcrumbs,
+      },
     },
   });
 };
@@ -186,6 +199,7 @@ const queryIndex = `
           frontmatter {
             slug
             categories
+            thumbnail
             templateKey
             createdAt
           }
@@ -263,63 +277,69 @@ const categoryQuery = `
 `;
 
 exports.createPages = ({actions, graphql}) => {
-  return graphql(queryIndex).then(result => {
-    const {createPage} = actions;
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()));
-      return Promise.reject(result.errors);
-    }
+  return graphql(queryIndex)
+    .then(result => {
+      if (result.errors) {
+        result.errors.forEach(e => console.error(e.toString()));
+        return Promise.reject(result.errors);
+      }
+      return result;
+    })
+    .then(result => {
+      // Collect Data
+      const posts = result.data.allMarkdownRemark.edges;
+      const categories = collectCategories(posts);
+      const archiveByMonth = posts.reduce((acc, item) => {
+        const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
+        return {...acc, [key]: [...(acc[key] || []), item.node.id]};
+      }, {});
 
-    // Collect Data
-    const posts = result.data.allMarkdownRemark.edges;
-    const categories = collectCategories(posts);
-    const archiveByMonth = posts.reduce((acc, item) => {
-      const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
-      return {...acc, [key]: [...(acc[key] || []), item.node.id]};
-    }, {});
-
-    const context = {
-      layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
-    };
-
-    graphql(popularPostQuery, {populars: constants.populars}).then(result => {
-      // Create RootPage
-      createPage({
-        path: '/',
-        component: path.resolve(`src/templates/index.js`),
-        context: {
-          popPosts: result,
-          ...context,
-        },
+      const context = {
+        layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
+      };
+      return { posts, categories, context }
+    })
+    .then(async ({ posts, categories, context }) => {
+      const {createPage} = actions;
+      const pv = await fetchPv();
+      const {rows} = pv.reports[0].data;
+      const populars = rows.map(row => row.dimensions[0]);
+      graphql(popularPostQuery, {populars}).then(res => {
+        createPage({
+          path: '/',
+          component: path.resolve(`src/templates/index.js`),
+          context: {
+            popPosts: res,
+            ...context,
+          },
+        });
+        // Create 404 Page
+        createPage({
+          path: '/404.html',
+          component: path.resolve(`src/templates/404.js`),
+          context: {
+            popPosts: res,
+            ...context,
+          },
+        });
       });
-      // Create 404 Page
-      createPage({
-        path: '/404.html',
-        component: path.resolve(`src/templates/404.js`),
-        context: {
-          popPosts: result,
-          ...context,
-        },
+      // Create Pages
+      STATIC_PAGE_LIST.map(page => {
+        graphql(staticPageQuery, {templateKey: page}).then(result => {
+          const [post] = result.data.allMarkdownRemark.edges;
+          createStaticPage(withAMP(createPage))(post)(context);
+        });
+      });
+      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context);
+      createPostShowPage(withAMP(createPage))(posts)(context);
+      createPostsIndexPage(createPage)(posts.length)(context);
+      categories.map(category => {
+        graphql(categoryQuery, {category}).then(result => {
+          const posts = result.data.allMarkdownRemark.edges;
+          createCategoryShowPage(createPage)(category)(posts.length)(context);
+        });
       });
     });
-
-    // Create Pages
-    STATIC_PAGE_LIST.map(page => {
-      graphql(staticPageQuery, {templateKey: page}).then(result => {
-        const [post] = result.data.allMarkdownRemark.edges;
-        createStaticPage(withAMP(createPage))(post)(context);
-      });
-    });
-    createMonthArchivePage(createPage)(archiveByMonth)(context);
-    createPostShowPage(withAMP(createPage))(posts)(context);
-    createPostsIndexPage(createPage)(posts.length)(context);
-    categories.map(category => {
-      graphql(categoryQuery, {category}).then(result => {
-        const posts = result.data.allMarkdownRemark.edges;
-        createCategoryShowPage(createPage)(category)(posts.length)(context);
-      });
-    });
-  });
 };
 
 exports.onCreateNode = ({node, actions, getNode}) => {

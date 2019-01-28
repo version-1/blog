@@ -1,4 +1,5 @@
 import AboutPost from './about';
+import {graphql} from 'gatsby';
 export const pageQuery = graphql`
   query AboutAMPPostByID($id: String!) {
     markdownRemark(id: {eq: $id}) {
