@@ -9,6 +9,8 @@ categories:
   - travel
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 &nbsp;

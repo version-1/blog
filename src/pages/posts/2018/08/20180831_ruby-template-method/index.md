@@ -10,6 +10,8 @@ categories:
   - rails
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2>Rubyでのデザインパターン</h2>

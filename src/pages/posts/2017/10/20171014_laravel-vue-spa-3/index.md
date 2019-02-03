@@ -9,6 +9,8 @@ categories:
   - engineering
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 前回、前々回と

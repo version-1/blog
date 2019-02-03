@@ -10,6 +10,8 @@ categories:
   - react
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 最近、当サイトをGatsby+Netlifyでリプレースしたのですが、

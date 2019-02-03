@@ -10,6 +10,8 @@ categories:
   - react
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 当サイトではアドセンスを設置していたのですが、
