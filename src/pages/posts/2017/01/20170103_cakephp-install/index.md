@@ -9,7 +9,9 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - build-env
+  - php
+  - cakephp
 related:
   - dummy
 ---

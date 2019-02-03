@@ -8,7 +8,8 @@ thumbnail: /2017/07/20170717_how-to-avoid-tsundoku/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - book
+  - lifehack
 related:
   - dummy
 ---

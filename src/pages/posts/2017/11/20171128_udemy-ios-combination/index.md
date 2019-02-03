@@ -8,7 +8,8 @@ thumbnail: /2017/11/20171128_udemy-ios-combination/thumbnail.png
 categories:
   - column
 tags:
-  - dummy
+  - udemy
+  - review
 related:
   - dummy
 ---

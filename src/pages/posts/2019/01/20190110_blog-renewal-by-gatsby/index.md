@@ -9,7 +9,12 @@ categories:
   - engineering
   - react
 tags:
-  - dummy
+  - wordpress
+  - gatsby
+  - netlify
+  - react
+  - javascript
+  - frontend
 related:
   - dummy
 ---

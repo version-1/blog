@@ -8,7 +8,9 @@ thumbnail: /2018/04/20180430_docker-build-tmp-mysql/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - docker
+  - mysql
+  - serverside
 related:
   - dummy
 ---

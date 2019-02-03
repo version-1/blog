@@ -9,7 +9,10 @@ categories:
   - cryptocurrency-blockchain
   - engineering
 tags:
-  - dummy
+  - nodejs
+  - bitcoin
+  - cryptocurrency
+  - serverside
 related:
   - dummy
 ---

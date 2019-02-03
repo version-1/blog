@@ -8,7 +8,10 @@ thumbnail: /2017/10/20171023_self-slack/thumbnail.png
 categories:
   - freelance
 tags:
-  - dummy
+  - slack
+  - freelance
+  - gadget
+  - lifehack
 related:
   - dummy
 ---

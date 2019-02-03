@@ -8,7 +8,7 @@ thumbnail: /2017/06/20170617_cakephp3-twitteroauth/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - cakephp
 related:
   - dummy
 ---

@@ -10,7 +10,8 @@ categories:
   - rails
   - for-beginner
 tags:
-  - dummy
+  - rails
+  - ruby
 related:
   - dummy
 ---

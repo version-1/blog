@@ -8,7 +8,8 @@ thumbnail: /2017/07/20170710_flyway-migration/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - flyway
 related:
   - dummy
 ---

@@ -8,7 +8,8 @@ thumbnail: /2018/01/20180101_udemy-coupon/thumbnail.png
 categories:
   - column
 tags:
-  - dummy
+  - udemy
+  - lifehack
 related:
   - dummy
 ---

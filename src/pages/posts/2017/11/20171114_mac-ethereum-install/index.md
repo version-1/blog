@@ -9,7 +9,9 @@ categories:
   - cryptocurrency-blockchain
   - engineering
 tags:
-  - dummy
+  - mac
+  - ethrereum
+  - blockchain
 related:
   - dummy
 ---

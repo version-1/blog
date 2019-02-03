@@ -8,7 +8,8 @@ thumbnail: /2017/05/20170518_take-mac-to-abroad/thumbnail.jpg
 categories:
   - travel
 tags:
-  - dummy
+  - travel
+  - mac
 related:
   - dummy
 ---

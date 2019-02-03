@@ -9,7 +9,10 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - ga
+  - wordpress
+  - php
+  - plugin
 related:
   - dummy
 ---

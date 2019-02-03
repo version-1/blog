@@ -9,7 +9,8 @@ categories:
   - column
   - freelance
 tags:
-  - dummy
+  - career
+  - marketing
 related:
   - dummy
 ---

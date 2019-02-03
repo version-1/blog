@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Vagrant  コマンドまとめ（前半戦) | vagrant command line interface
+title: Vagrant コマンドまとめ（前半戦) | vagrant command line interface
 slug: /2017/03/05/vagrant-commands-summary
 createdAt: 2017-03-05 14:03:12
 updatedAt: 2018-08-26 12:27:02
@@ -10,7 +10,8 @@ categories:
   - rails
   - for-beginner
 tags:
-  - dummy
+  - vagrant
+  - serverside
 related:
   - dummy
 ---

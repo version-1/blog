@@ -9,7 +9,10 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - rails
+  - ruby
+  - activerecord
+  - serverside
 related:
   - dummy
 ---

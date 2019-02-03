@@ -9,7 +9,10 @@ categories:
   - engineering
   - design
 tags:
-  - dummy
+  - css
+  - design
+  - smaccs
+  - frontend
 related:
   - dummy
 ---

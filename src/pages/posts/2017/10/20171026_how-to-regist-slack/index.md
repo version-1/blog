@@ -8,7 +8,9 @@ thumbnail: /2017/10/20171026_how-to-regist-slack/thumbnail.png
 categories:
   - freelance
 tags:
-  - dummy
+  - slack
+  - lifehack
+  - gadget
 related:
   - dummy
 ---

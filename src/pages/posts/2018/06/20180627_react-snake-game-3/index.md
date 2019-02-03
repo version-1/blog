@@ -9,7 +9,11 @@ categories:
   - engineering
   - react
 tags:
-  - dummy
+  - react
+  - snakegame
+  - product
+  - frontend
+
 related:
   - dummy
 ---

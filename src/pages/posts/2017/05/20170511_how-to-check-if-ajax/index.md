@@ -9,7 +9,9 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - ruby
+  - rails
+  - gadget
 related:
   - dummy
 ---

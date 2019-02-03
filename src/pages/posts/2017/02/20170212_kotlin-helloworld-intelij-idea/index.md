@@ -9,7 +9,8 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - kotlin
+  - build-env
 related:
   - dummy
 ---
