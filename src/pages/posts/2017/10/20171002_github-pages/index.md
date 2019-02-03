@@ -10,6 +10,8 @@ categories:
   - for-beginner
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 どうも、近所に中華屋さんしかなくて栄養が偏りがちな

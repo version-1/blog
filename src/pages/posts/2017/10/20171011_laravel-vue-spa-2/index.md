@@ -9,6 +9,8 @@ categories:
   - engineering
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 前回はこの記事でLaravel5.4とVue.jsの環境構築を行いました。

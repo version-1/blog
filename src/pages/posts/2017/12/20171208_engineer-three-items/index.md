@@ -9,6 +9,8 @@ categories:
   - column
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">エンジニアを悩ます疲れ目・肩こり</h2>

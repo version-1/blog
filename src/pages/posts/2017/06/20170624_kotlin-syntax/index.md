@@ -10,6 +10,8 @@ categories:
   - for-beginner
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 今回は制御構文について紹介します。

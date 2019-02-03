@@ -9,6 +9,8 @@ categories:
   - travel
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">台湾（台北）に行ってきました</h2>

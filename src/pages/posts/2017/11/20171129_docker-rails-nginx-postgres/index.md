@@ -10,6 +10,8 @@ categories:
   - rails
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">Docker Composeを利用する</h2>
