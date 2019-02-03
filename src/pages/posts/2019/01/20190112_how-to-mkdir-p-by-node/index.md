@@ -9,6 +9,8 @@ categories:
   - engineering
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 Node.jsでmkdir -pをしたかったのですが、Node10系からでないとmkdir, mkdirSyncなどの

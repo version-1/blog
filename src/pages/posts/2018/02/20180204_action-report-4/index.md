@@ -9,6 +9,8 @@ categories:
   - freelance
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 id="toc_id_1">振り返りの目的</h2>

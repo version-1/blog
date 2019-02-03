@@ -10,6 +10,8 @@ categories:
   - design
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">ヨメレバとは？</h2>

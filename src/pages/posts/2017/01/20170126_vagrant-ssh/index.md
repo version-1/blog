@@ -9,6 +9,8 @@ categories:
   - engineering
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 今回はVagrant sshの話です。

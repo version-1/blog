@@ -9,6 +9,8 @@ categories:
   - column
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 今回はUdemyで気になるコースをお得に利用する方法を紹介します。

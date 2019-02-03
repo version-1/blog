@@ -10,6 +10,8 @@ categories:
   - for-beginner
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">Coolなメモアプリ Inkdrop を見つけたきっかけ</h2>

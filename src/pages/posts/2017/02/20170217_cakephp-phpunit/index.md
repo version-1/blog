@@ -10,6 +10,8 @@ categories:
   - for-beginner
 tags:
   - dummy
+related:
+  - dummy
 ---
 &nbsp;
 

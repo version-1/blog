@@ -10,6 +10,8 @@ categories:
   - design
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 どうも、運転が苦手な@version1です。

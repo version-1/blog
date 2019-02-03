@@ -9,6 +9,8 @@ categories:
   - column
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">UdemyのiOSアプリに購入したはずのコースがない!!</h2>

@@ -9,6 +9,8 @@ categories:
   - column
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 どうも3連休明けの

@@ -10,6 +10,8 @@ categories:
   - for-beginner
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 一人でも多くの人に

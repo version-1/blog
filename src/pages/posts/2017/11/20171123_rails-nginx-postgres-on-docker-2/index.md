@@ -10,6 +10,8 @@ categories:
   - rails
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">Dockerでrails5.1.4環境を構築する</h2>

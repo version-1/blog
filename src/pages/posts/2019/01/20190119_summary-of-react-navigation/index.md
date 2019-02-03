@@ -10,6 +10,8 @@ categories:
   - react
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 これまで仕事でReact Navigationを使う機会はあったのですが、

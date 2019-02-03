@@ -10,6 +10,8 @@ categories:
   - react
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2>電話番号形式で入力する際のフォームを実装</h2>

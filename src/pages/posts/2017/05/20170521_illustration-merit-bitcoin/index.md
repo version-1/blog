@@ -9,6 +9,8 @@ categories:
   - cryptocurrency-blockchain
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 &nbsp;

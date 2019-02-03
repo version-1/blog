@@ -9,6 +9,8 @@ categories:
   - rails
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 日常的にRailsでサーバ側を書いていても、ふとした時にjs書かないといけない時ってありますよね。
