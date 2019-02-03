@@ -8,6 +8,8 @@ thumbnail: /2017/10/20171024_webpack-normalize-css/thumbnail.png
 categories:
   - engineering
   - design
+tags:
+  - dummy
 ---
 
 &nbsp;

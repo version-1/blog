@@ -8,6 +8,8 @@ thumbnail: /2017/09/20170923_how-to-reduce-overwork/thumbnail.jpg
 categories:
   - column
   - freelance
+tags:
+  - dummy
 ---
 
 

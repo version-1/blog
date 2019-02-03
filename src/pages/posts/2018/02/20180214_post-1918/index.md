@@ -8,6 +8,8 @@ thumbnail: /2018/02/20180214_post-1918/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

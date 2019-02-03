@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 12:40:31
 thumbnail: /2017/01/20170126_vagrant-ssh/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 今回はVagrant sshの話です。

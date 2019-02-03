@@ -8,6 +8,8 @@ thumbnail: /2018/06/20180629_react-snake-game-2/thumbnail.jpg
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 &nbsp;

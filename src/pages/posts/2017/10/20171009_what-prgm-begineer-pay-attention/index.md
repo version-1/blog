@@ -8,6 +8,8 @@ thumbnail: /2017/10/20171009_what-prgm-begineer-pay-attention/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 

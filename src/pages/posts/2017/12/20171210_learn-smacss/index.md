@@ -8,6 +8,8 @@ thumbnail: /2017/12/20171210_learn-smacss/thumbnail.jpg
 categories:
   - engineering
   - design
+tags:
+  - dummy
 ---
 
 SMACSSって知ってますか？

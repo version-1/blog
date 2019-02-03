@@ -8,6 +8,8 @@ thumbnail: /2017/01/20170112_ansible-for-mac/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

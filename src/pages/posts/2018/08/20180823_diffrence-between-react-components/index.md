@@ -8,6 +8,8 @@ thumbnail: /2018/08/20180823_diffrence-between-react-components/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 「Componentはどういう時に再レンダリングされるんですか？」

@@ -7,6 +7,8 @@ updatedAt: 2018-09-21 22:16:49
 thumbnail: /2018/09/20180921_prepare-travel-to-usa/thumbnail.jpg
 categories:
   - travel
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:36:44
 thumbnail: /2017/05/20170518_take-mac-to-abroad/thumbnail.jpg
 categories:
   - travel
+tags:
+  - dummy
 ---
 
 &nbsp;

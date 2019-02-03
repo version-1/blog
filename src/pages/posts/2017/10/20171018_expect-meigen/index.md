@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:44:11
 thumbnail: /2017/10/20171018_expect-meigen/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 

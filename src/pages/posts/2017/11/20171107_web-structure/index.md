@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171107_web-structure/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

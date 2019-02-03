@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:53:28
 thumbnail: /2017/05/20170525_be-faster-on-mac/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

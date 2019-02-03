@@ -8,6 +8,8 @@ thumbnail: /2017/05/20170511_how-to-check-if-ajax/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

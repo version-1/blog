@@ -104,7 +104,7 @@ const data = [
   ...Object.keys(postMeta).reduce((acc, key) => {
     const value = postMeta[key];
     if (value instanceof Array) {
-      const list = value.map(item => ` - ${item}`);
+      const list = value.map(item => `  - ${item}`);
       return [...acc, `${key}:`, ...list];
     }
     return [...acc, `${key}: ${value}`];

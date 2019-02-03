@@ -8,6 +8,8 @@ thumbnail: /2017/08/20170827_twitter-cards/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 一人でも多くの人に

@@ -7,6 +7,8 @@ updatedAt: 2018-10-08 08:39:07
 thumbnail: /2018/02/20180223_why-i-become-engineer/thumbnail.jpg
 categories:
   - freelance
+tags:
+  - dummy
 ---
 
 &nbsp;

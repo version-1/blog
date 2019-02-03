@@ -8,6 +8,8 @@ thumbnail: /2017/03/20170305_mac-ansible-ping/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

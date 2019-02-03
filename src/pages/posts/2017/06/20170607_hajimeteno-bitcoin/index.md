@@ -8,6 +8,8 @@ thumbnail: /2017/06/20170607_hajimeteno-bitcoin/thumbnail.jpg
 categories:
   - cryptocurrency-blockchain
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

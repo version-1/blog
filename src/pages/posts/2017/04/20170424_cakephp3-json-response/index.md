@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 01:17:45
 thumbnail: /2017/04/20170424_cakephp3-json-response/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;
