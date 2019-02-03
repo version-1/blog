@@ -7,7 +7,7 @@ const {routes, meta, constants} = require('./config/constants');
 const fs = require(`fs-extra`);
 const moment = require('moment');
 
-const {validateCategoryList} = require('./node/validation');
+const {validateCategoryList, validateTagList} = require('./node/validation');
 const {breadcrumbs} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
 
@@ -84,12 +84,13 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
 const createPostShowPage = createPage => posts => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
-    const {categories, slug, templateKey} = edge.node.frontmatter;
+    const {tags, categories, slug, templateKey} = edge.node.frontmatter;
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.categories(categories[0]),
     ];
     validateCategoryList(edge.node, categories);
+    validateCategoryList(edge.node, tags);
     createPage({
       path: slug || edge.node.fields.slug,
       categories: categories,
@@ -326,6 +327,11 @@ exports.createPages = ({actions, graphql}) => {
       const context = {
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
+      console.log('posts :', posts.length)
+      console.log('categories :', categories.length)
+      console.log(categories)
+      console.log('tags :', tags.length)
+      console.log(tags)
       return { posts, tags, categories, context }
     })
     .then(async ({ posts, tags, categories, context }) => {
