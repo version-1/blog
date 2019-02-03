@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 01:16:14
 thumbnail: /2017/08/20170809_conflict-vue-with-blade/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -5,8 +5,10 @@ slug: /2017/12/25/report
 createdAt: 2017-12-25 20:51:02
 updatedAt: 2018-10-11 23:59:17
 thumbnail: /2017/12/20171225_report/thumbnail.jpg
-categories: 
+categories:
   - freelance
+tags:
+  - dummy
 ---
 
 ブログ100記事を達成してから達成感で更新が滞りガチなのですが、

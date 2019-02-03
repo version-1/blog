@@ -7,6 +7,8 @@ updatedAt: 2018-10-11 23:57:44
 thumbnail: /2018/02/20180204_action-report-4/thumbnail.jpg
 categories:
   - freelance
+tags:
+  - dummy
 ---
 
 <h2 id="toc_id_1">振り返りの目的</h2>

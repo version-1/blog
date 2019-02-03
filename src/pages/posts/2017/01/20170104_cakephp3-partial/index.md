@@ -8,6 +8,8 @@ thumbnail: /2017/01/20170104_cakephp3-partial/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 Rails のようにCakePHPでもViewの共通化ができないか

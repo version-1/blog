@@ -9,6 +9,8 @@ categories:
   - engineering
   - rails
   - for-beginner
+tags:
+  - dummy
 ---
 
 

@@ -8,6 +8,8 @@ thumbnail: /2017/03/20170311_migration-matome/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

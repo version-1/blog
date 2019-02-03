@@ -8,6 +8,8 @@ thumbnail: /2018/01/20180131_how-to-get-rails-mode-on-react/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

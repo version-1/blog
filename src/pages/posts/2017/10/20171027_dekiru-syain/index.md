@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:42:36
 thumbnail: /2017/10/20171027_dekiru-syain/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

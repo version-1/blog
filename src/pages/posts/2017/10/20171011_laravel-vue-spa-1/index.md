@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:25:34
 thumbnail: /2017/10/20171011_laravel-vue-spa-1/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

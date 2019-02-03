@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:51:03
 thumbnail: /2017/07/20170710_flyway-migration/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 こんばんは

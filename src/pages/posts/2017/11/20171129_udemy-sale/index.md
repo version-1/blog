@@ -7,6 +7,8 @@ updatedAt: 2018-05-20 22:45:57
 thumbnail: /2017/11/20171129_udemy-sale/thumbnail.png
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

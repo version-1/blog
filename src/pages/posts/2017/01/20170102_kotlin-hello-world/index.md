@@ -8,6 +8,8 @@ thumbnail: /2017/01/20170102_kotlin-hello-world/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 KotlinでHello Worldしてみる。

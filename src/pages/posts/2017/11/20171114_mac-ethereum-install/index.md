@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171114_mac-ethereum-install/thumbnail.png
 categories:
   - cryptocurrency-blockchain
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

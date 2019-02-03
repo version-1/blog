@@ -7,6 +7,8 @@ updatedAt: 2018-08-25 22:20:02
 thumbnail: /2017/09/20170903_how-to-change-ssid/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

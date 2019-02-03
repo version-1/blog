@@ -6,7 +6,9 @@ createdAt: 2019-01-16 13:51:29
 updatedAt: 2019-01-16 13:51:29
 thumbnail: /2019/01/20190116_look-back-2018/thumbnail.jpg
 categories:
- - freelance
+  - freelance
+tags:
+  - dummy
 ---
 
 

@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:47:48
 thumbnail: /2017/09/20170922_iterate-is-next-word/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 どうも

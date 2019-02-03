@@ -7,6 +7,8 @@ updatedAt: 2017-12-26 20:27:33
 thumbnail: /2017/09/20170920_books-for-akippoi/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 どうも3連休明けの

@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 20:24:19
 thumbnail: /2017/02/20170220_mac-os-x-split-view/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

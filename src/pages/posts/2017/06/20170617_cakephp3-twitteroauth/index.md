@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:55:55
 thumbnail: /2017/06/20170617_cakephp3-twitteroauth/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

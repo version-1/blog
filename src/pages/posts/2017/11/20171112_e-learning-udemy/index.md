@@ -7,6 +7,8 @@ updatedAt: 2018-01-01 11:30:10
 thumbnail: /2017/11/20171112_e-learning-udemy/thumbnail.png
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

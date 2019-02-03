@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171117_cool-markdown-editor-inkdrop/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">Coolなメモアプリ Inkdrop を見つけたきっかけ</h2>
