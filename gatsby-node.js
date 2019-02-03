@@ -111,14 +111,14 @@ const createPostsIndexPage = createPage => totalCount => context => {
   buildPaginationPages(createPage)()(_path, 'posts/index', totalCount, context);
 };
 
-const createCategoryShowPage = createPage => category => totalCount => context => {
-  const _path = [routes.root, routes.category, _.kebabCase(category)].join('/');
+const createCollectionShowPage = createPage => (key, singuralizeKey, collection) => totalCount => context => {
+  const _path = [routes.root, routes[singuralizeKey], _.kebabCase(collection)].join('/');
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
-    breadcrumbs.categories(category),
+    breadcrumbs[key](collection),
   ];
-  buildPaginationPages(createPage)()(_path, 'categories', totalCount, {
-    category,
+  buildPaginationPages(createPage)()(_path, key, totalCount, {
+    [singuralizeKey]: collection,
     ...context,
     layout: {
       ...context.layout,
@@ -126,6 +126,14 @@ const createCategoryShowPage = createPage => category => totalCount => context =
     },
   });
 };
+
+const createCategoryShowPage = createPage => category => totalCount => context => {
+  return createCollectionShowPage(createPage)('categories', 'category', category)(totalCount)(context)
+}
+
+const createTagShowPage = createPage => tag => totalCount => context => {
+  return createCollectionShowPage(createPage)('tags', 'tag', tag)(totalCount)(context)
+}
 
 const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
@@ -168,19 +176,22 @@ const createStaticPage = createPage => page => context => {
   });
 };
 
-const collectCategories = posts => {
+const collectCollection = posts => key => {
   return _.uniq(
     _.compact(
       _.flatten(
         posts.map(edge => {
-          if (_.get(edge, `node.frontmatter.categories`)) {
-            return edge.node.frontmatter.categories;
+          if (_.get(edge, `node.frontmatter.${key}`)) {
+            return edge.node.frontmatter[key];
           }
         }),
       ),
     ),
   );
 };
+
+const collectTags = posts => collectCollection(posts)('tags');
+const collectCategories = posts => collectCollection(posts)('categories');
 
 const queryIndex = `
   {
@@ -199,6 +210,7 @@ const queryIndex = `
           frontmatter {
             slug
             categories
+            tags
             thumbnail
             templateKey
             createdAt
@@ -276,6 +288,22 @@ const categoryQuery = `
   }
 `;
 
+const tagQuery = `
+  query TagPage($tag: String) {
+    allMarkdownRemark(
+      limit: 1000
+      filter: {frontmatter: {tags: {in: [$tag]}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+`;
+
 exports.createPages = ({actions, graphql}) => {
   return graphql(queryIndex)
     .then(result => {
@@ -289,6 +317,7 @@ exports.createPages = ({actions, graphql}) => {
       // Collect Data
       const posts = result.data.allMarkdownRemark.edges;
       const categories = collectCategories(posts);
+      const tags = collectTags(posts).filter(tag => tag !== 'dummy');
       const archiveByMonth = posts.reduce((acc, item) => {
         const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
         return {...acc, [key]: [...(acc[key] || []), item.node.id]};
@@ -297,9 +326,9 @@ exports.createPages = ({actions, graphql}) => {
       const context = {
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
-      return { posts, categories, context }
+      return { posts, tags, categories, context }
     })
-    .then(async ({ posts, categories, context }) => {
+    .then(async ({ posts, tags, categories, context }) => {
       const {createPage} = actions;
       const pv = await fetchPv();
       const {rows} = pv.reports[0].data;
@@ -337,6 +366,12 @@ exports.createPages = ({actions, graphql}) => {
         graphql(categoryQuery, {category}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
           createCategoryShowPage(createPage)(category)(posts.length)(context);
+        });
+      });
+      tags.map(tag => {
+        graphql(tagQuery, {tag}).then(result => {
+          const posts = result.data.allMarkdownRemark.edges;
+          createTagShowPage(createPage)(tag)(posts.length)(context);
         });
       });
     });

@@ -114,6 +114,7 @@ export const pageQuery = graphql`
         title
         thumbnail
         categories
+        tags
         createdAt(formatString: "MMMM DD, YYYY")
         updatedAt(formatString: "MMMM DD, YYYY")
       }

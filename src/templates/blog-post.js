@@ -6,17 +6,30 @@ import {graphql} from 'gatsby';
 import {meta} from '../../config/constants';
 import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
-import { AdDoubleRect } from '../components/organisms/Adsence';
+import {AdDoubleRect} from '../components/organisms/Adsence';
 import SNSButtons from '../components/organisms/SNSButtons';
 import CategoryList from '../components/molecules/CategoryList';
-import { insertInArticle } from '../lib/adsense'
+import TagList from '../components/molecules/TagList';
+import {insertInArticle} from '../lib/adsense';
 
-export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => {
+export const BlogPostTemplate = ({
+  location,
+  post,
+  contentComponent,
+  helmet,
+}) => {
   const content = insertInArticle(false)(post.html);
-  const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
+  const {
+    createdAt,
+    updatedAt,
+    title,
+    thumbnail,
+    categories,
+    tags,
+  } = post.frontmatter;
   const PostContent = contentComponent || Content;
   const thumbnailUrl = meta.images.url + thumbnail;
-  const url = location.href
+  const url = location.href;
   return (
     <section className="section">
       {helmet || ''}
@@ -36,21 +49,25 @@ export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => 
               {updatedAt}
             </div>
           </div>
-          <SNSButtons type="post-header" url={url} title={title}/>
+          <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp={false}/>
+        <AdDoubleRect amp={false} />
         <div className="post-meta-footer">
           <div className="categories">
             Category :
             <CategoryList list={categories} />
+          </div>
+          <div className="tags">
+            Tag :
+            <TagList list={tags} />
           </div>
           <div className="author">
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
             <p>この記事が役に立ちましたらシェアをお願いします。</p>
-            <SNSButtons type="post-footer" url={url} title={title}/>
+            <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
         <div className="related-posts" />
@@ -63,12 +80,12 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
+  helmet: PropTypes.object,
 };
 
 export default class BlogPost extends React.PureComponent {
   render() {
-    const { location } = this.props
+    const {location} = this.props;
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl, layout} = this.props.pageContext;
@@ -112,6 +129,7 @@ export const pageQuery = graphql`
         title
         thumbnail
         categories
+        tags
         createdAt(formatString: "MMM DD, YYYY")
         updatedAt(formatString: "MMM DD, YYYY")
       }
