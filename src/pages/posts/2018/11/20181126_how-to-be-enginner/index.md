@@ -7,6 +7,8 @@ updatedAt: 2018-11-26 10:25:07
 thumbnail: /2018/11/20181126_how-to-be-enginner/thumbnail.jpg
 categories:
   - freelance
+tags:
+  - dummy
 ---
 
 &nbsp;

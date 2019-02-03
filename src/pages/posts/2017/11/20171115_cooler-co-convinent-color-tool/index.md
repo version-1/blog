@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171115_cooler-co-convinent-color-tool/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

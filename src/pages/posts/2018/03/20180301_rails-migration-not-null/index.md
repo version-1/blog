@@ -8,6 +8,8 @@ thumbnail: /2018/03/20180301_rails-migration-not-null/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 <h2>change_column_nullを使う</h2>

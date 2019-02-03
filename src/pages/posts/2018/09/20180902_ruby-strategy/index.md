@@ -8,6 +8,8 @@ thumbnail: /2018/09/20180902_ruby-strategy/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

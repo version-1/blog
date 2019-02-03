@@ -7,6 +7,8 @@ updatedAt: 2019-01-12 11:18:26
 thumbnail: /2019/01/20190112_how-to-mkdir-p-by-node/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 Node.jsでmkdir -pをしたかったのですが、Node10系からでないとmkdir, mkdirSyncなどの

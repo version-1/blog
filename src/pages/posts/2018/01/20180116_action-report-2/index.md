@@ -7,6 +7,8 @@ updatedAt: 2018-10-14 14:40:20
 thumbnail: /2018/01/20180116_action-report-2/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

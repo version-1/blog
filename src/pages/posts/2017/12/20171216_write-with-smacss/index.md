@@ -8,6 +8,8 @@ thumbnail: /2017/12/20171216_write-with-smacss/thumbnail.jpg
 categories:
   - engineering
   - design
+tags:
+  - dummy
 ---
 
 &nbsp;

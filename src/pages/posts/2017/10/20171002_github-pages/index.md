@@ -8,6 +8,8 @@ thumbnail: /2017/10/20171002_github-pages/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 どうも、近所に中華屋さんしかなくて栄養が偏りがちな

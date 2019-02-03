@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:34:20
 thumbnail: /2017/10/20171014_laravel-vue-spa-3/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 前回、前々回と

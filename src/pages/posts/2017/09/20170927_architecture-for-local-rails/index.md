@@ -8,6 +8,8 @@ thumbnail: /2017/09/20170927_architecture-for-local-rails/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 どうも、

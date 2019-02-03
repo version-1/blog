@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 12:13:15
 thumbnail: /2017/04/20170409_electron-calculator-1/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

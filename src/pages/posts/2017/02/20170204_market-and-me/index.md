@@ -8,6 +8,8 @@ thumbnail: /2017/02/20170204_market-and-me/thumbnail.jpg
 categories:
   - column
   - freelance
+tags:
+  - dummy
 ---
 
 &nbsp;

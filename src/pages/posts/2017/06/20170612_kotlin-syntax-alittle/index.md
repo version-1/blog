@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:57:42
 thumbnail: /2017/06/20170612_kotlin-syntax-alittle/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -5,8 +5,10 @@ slug: /2018/04/30/docker-build-tmp-mysql
 createdAt: 2018-04-30 10:30:54
 updatedAt: 2018-09-02 13:09:21
 thumbnail: /2018/04/20180430_docker-build-tmp-mysql/thumbnail.jpg
-categories: 
+categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

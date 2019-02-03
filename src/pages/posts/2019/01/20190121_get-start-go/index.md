@@ -7,6 +7,8 @@ updatedAt: 2019-01-21 09:43:39
 thumbnail: /2019/01/20190121_get-start-go/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 

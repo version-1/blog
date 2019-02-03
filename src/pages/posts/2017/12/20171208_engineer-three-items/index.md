@@ -7,6 +7,8 @@ updatedAt: 2018-08-25 22:18:16
 thumbnail: /2017/12/20171208_engineer-three-items/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">エンジニアを悩ます疲れ目・肩こり</h2>
