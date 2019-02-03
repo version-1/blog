@@ -10,7 +10,10 @@ categories:
   - rails
   - for-beginner
 tags:
-  - dummy
+  - ruby
+  - rails
+  - rspec
+  - serverside
 related:
   - dummy
 ---

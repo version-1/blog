@@ -8,7 +8,9 @@ thumbnail: /2017/02/20170205_kotlin-http-request-khttp/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - khttp
+  - serverside
 related:
   - dummy
 ---

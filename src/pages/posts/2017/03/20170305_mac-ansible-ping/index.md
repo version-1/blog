@@ -9,7 +9,8 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - mac
+  - ansible
 related:
   - dummy
 ---

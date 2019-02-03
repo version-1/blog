@@ -9,7 +9,9 @@ categories:
   - engineering
   - react
 tags:
-  - dummy
+  - react
+  - javacript
+  - frontend
 related:
   - dummy
 ---

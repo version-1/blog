@@ -9,7 +9,11 @@ categories:
   - engineering
   - react
 tags:
-  - dummy
+  - react-native
+  - javascript
+  - react
+  - native
+  - jest
 related:
   - dummy
 ---

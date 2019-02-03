@@ -8,7 +8,7 @@ thumbnail: /2018/12/20181203_freelance-agent-select/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
 related:
   - dummy
 ---

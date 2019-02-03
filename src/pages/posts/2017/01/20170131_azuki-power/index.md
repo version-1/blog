@@ -8,7 +8,8 @@ thumbnail: /2017/01/20170131_azuki-power/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - gadget
+  - lifehack
 related:
   - dummy
 ---

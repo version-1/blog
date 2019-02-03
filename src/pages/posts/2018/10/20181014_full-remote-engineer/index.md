@@ -8,7 +8,8 @@ thumbnail: /2018/10/20181014_full-remote-engineer/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
+  - career
 related:
   - dummy
 ---

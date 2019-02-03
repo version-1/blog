@@ -8,7 +8,8 @@ thumbnail: /2017/11/20171127_pomodoro-techinque/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - pomodoro
+  - lifehack
 related:
   - dummy
 ---

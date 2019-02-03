@@ -8,7 +8,10 @@ thumbnail: /2018/03/20180322_trade-of-market-and-direct/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
+  - career
+  - work
+  - marketing
 related:
   - dummy
 ---

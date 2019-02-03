@@ -8,7 +8,8 @@ thumbnail: /2019/01/20190121_get-start-go/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - go
+  - learning
 related:
   - dummy
 ---

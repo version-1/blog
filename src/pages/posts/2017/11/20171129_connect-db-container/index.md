@@ -8,7 +8,9 @@ thumbnail: /2017/11/20171129_connect-db-container/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - docker
+  - mysql
+  - vagrant
 related:
   - dummy
 ---

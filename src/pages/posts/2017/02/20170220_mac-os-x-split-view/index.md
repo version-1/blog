@@ -8,7 +8,8 @@ thumbnail: /2017/02/20170220_mac-os-x-split-view/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - mac
+  - lifehack
 related:
   - dummy
 ---

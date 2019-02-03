@@ -9,7 +9,9 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - ga
+  - marketing
+  - php
 related:
   - dummy
 ---

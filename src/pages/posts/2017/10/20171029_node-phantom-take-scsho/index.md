@@ -8,7 +8,10 @@ thumbnail: /2017/10/20171029_node-phantom-take-scsho/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - nodejs
+  - javascript
+  - phantomjs
+  - serverside
 related:
   - dummy
 ---

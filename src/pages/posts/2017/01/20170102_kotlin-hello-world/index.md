@@ -9,7 +9,8 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - kotlin
+  - hello-world
 related:
   - dummy
 ---

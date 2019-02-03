@@ -8,7 +8,8 @@ thumbnail: /2017/01/20170128_indonesia-for-two-years/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - travel
+  - career
 related:
   - dummy
 ---

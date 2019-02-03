@@ -7,9 +7,8 @@ updatedAt: 2018-08-25 22:20:20
 thumbnail: /2017/09/20170923_how-to-reduce-overwork/thumbnail.jpg
 categories:
   - column
-  - freelance
 tags:
-  - dummy
+  - opinion
 related:
   - dummy
 ---

@@ -8,7 +8,7 @@ thumbnail: /2017/09/20170903_how-to-change-ssid/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - lifehack
 related:
   - dummy
 ---

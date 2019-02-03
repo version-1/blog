@@ -8,7 +8,9 @@ thumbnail: /2017/09/20170918_kotlin-spring-api-1/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - springboot
+  - serverside
 related:
   - dummy
 ---

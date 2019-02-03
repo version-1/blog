@@ -9,7 +9,9 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - lubuntu
+  - rails
+  - build-env
 related:
   - dummy
 ---

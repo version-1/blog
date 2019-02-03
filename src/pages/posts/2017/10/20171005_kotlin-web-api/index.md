@@ -8,7 +8,9 @@ thumbnail: /2017/10/20171005_kotlin-web-api/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - springboot
+  - serverside
 related:
   - dummy
 ---

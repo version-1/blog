@@ -9,7 +9,9 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - editor
+  - ruby
+  - gadget
 related:
   - dummy
 ---

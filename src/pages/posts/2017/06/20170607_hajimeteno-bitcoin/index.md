@@ -9,7 +9,8 @@ categories:
   - cryptocurrency-blockchain
   - engineering
 tags:
-  - dummy
+  - book
+  - bitcoin
 related:
   - dummy
 ---

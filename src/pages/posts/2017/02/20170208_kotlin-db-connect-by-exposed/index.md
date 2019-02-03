@@ -8,7 +8,9 @@ thumbnail: /2017/02/20170208_kotlin-db-connect-by-exposed/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - exposed
+  - serverside
 related:
   - dummy
 ---

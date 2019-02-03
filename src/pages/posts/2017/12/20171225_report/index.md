@@ -8,7 +8,8 @@ thumbnail: /2017/12/20171225_report/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
+  - career
 related:
   - dummy
 ---

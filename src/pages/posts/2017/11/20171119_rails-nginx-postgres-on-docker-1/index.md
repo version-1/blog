@@ -9,7 +9,11 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - docker
+  - rails
+  - nginx
+  - postgress
+  - serverside
 related:
   - dummy
 ---

@@ -9,7 +9,9 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - mac
+  - ansible
+  - serverside
 related:
   - dummy
 ---
