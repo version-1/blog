@@ -3,7 +3,8 @@
     "index": "/",
     "about": "about",
     "post": "posts",
-    "category": "categories"
+    "category": "categories",
+    "tag": "tags"
   },
   "meta": {
     "author": "version1",

@@ -10,6 +10,10 @@ const categoryPath = category => {
   if (!category) return buildPath([routes.category]);
   return buildPath([routes.category, category]);
 };
+const tagPath = tag => {
+  if (!tag) return buildPath([routes.tag]);
+  return buildPath([routes.tag, tag]);
+};
 const monthArchivePath = month => {
   return buildPath(month.split('/'));
 };
@@ -20,5 +24,6 @@ module.exports = {
   buildPath,
   postPath,
   categoryPath,
+  tagPath,
   monthArchivePath
 }
