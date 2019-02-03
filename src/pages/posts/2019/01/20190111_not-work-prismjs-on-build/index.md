@@ -8,6 +8,8 @@ thumbnail: /2019/01/20190111_not-work-prismjs-on-build/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 最近、当サイトをGatsby+Netlifyでリプレースしたのですが、

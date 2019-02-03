@@ -8,6 +8,8 @@ thumbnail: /2017/04/20170428_node-js-realtime/thumbnail.png
 categories:
   - cryptocurrency-blockchain
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

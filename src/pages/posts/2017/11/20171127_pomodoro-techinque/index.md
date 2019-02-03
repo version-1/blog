@@ -7,6 +7,8 @@ updatedAt: 2018-08-25 22:18:33
 thumbnail: /2017/11/20171127_pomodoro-techinque/thumbnail.jpg
 categories:
   - freelance
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">一人でも怠けない。生産性向上。ポモドーロテクニック</h2>

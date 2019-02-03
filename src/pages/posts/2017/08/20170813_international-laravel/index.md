@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:47:17
 thumbnail: /2017/08/20170813_international-laravel/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 どうも

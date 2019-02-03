@@ -8,6 +8,8 @@ thumbnail: /2018/08/20180831_ruby-template-method/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 <h2>Rubyでのデザインパターン</h2>

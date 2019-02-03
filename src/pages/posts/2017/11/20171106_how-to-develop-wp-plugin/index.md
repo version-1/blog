@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 10:55:00
 thumbnail: /2017/11/20171106_how-to-develop-wp-plugin/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

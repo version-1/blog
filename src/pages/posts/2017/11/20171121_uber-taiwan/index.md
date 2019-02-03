@@ -7,6 +7,8 @@ updatedAt: 2017-12-02 15:23:56
 thumbnail: /2017/11/20171121_uber-taiwan/thumbnail.jpg
 categories:
   - travel
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">台湾（台北）に行ってきました</h2>

@@ -8,6 +8,8 @@ thumbnail: /2017/10/20171001_japanese-action/thumbnail.png
 categories:
   - engineering
   - design
+tags:
+  - dummy
 ---
 
 どうも、運転が苦手な@version1です。

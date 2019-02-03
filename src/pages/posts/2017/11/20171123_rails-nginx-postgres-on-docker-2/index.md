@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171123_rails-nginx-postgres-on-docker-2/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">Dockerでrails5.1.4環境を構築する</h2>

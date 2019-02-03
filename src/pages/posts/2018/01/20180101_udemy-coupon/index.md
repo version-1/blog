@@ -7,6 +7,8 @@ updatedAt: 2018-11-08 18:28:41
 thumbnail: /2018/01/20180101_udemy-coupon/thumbnail.png
 categories:
   - column
+tags:
+  - dummy
 ---
 
 今回はUdemyで気になるコースをお得に利用する方法を紹介します。

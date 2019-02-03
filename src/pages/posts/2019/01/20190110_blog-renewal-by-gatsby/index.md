@@ -8,6 +8,8 @@ thumbnail: /2019/01/20190110_blog-renewal-by-gatsby/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 久しぶりの投稿ですが、新年始めての投稿になります。

@@ -8,6 +8,8 @@ thumbnail: /2017/04/20170430_advice-for-rubymine-to-atom/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

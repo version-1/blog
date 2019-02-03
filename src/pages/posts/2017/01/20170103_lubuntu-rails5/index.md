@@ -8,6 +8,8 @@ thumbnail: /2017/01/20170103_lubuntu-rails5/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 <h2>①パッケージインストール</h2>

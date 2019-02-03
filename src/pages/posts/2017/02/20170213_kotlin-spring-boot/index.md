@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 12:20:03
 thumbnail: /2017/02/20170213_kotlin-spring-boot/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:51:26
 thumbnail: /2017/07/20170708_salary-bank/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

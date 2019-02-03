@@ -8,6 +8,8 @@ thumbnail: /2017/02/20170208_bootsnote/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

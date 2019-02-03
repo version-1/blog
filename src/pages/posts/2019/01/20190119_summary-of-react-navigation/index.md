@@ -8,6 +8,8 @@ thumbnail: /2019/01/20190119_summary-of-react-navigation/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 これまで仕事でReact Navigationを使う機会はあったのですが、

@@ -8,6 +8,8 @@ thumbnail: /2019/01/20190114_get-current-position-by-rn/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 
