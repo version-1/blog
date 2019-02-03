@@ -7,6 +7,8 @@ updatedAt: 2018-08-28 08:07:09
 thumbnail: /2017/10/20171026_how-to-regist-slack/thumbnail.png
 categories:
   - freelance
+tags:
+  - dummy
 ---
 
 &nbsp;

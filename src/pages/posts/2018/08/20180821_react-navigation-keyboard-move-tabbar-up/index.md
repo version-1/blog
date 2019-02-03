@@ -8,6 +8,8 @@ thumbnail: /2018/08/20180821_react-navigation-keyboard-move-tabbar-up/thumbnail.
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 &nbsp;

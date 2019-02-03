@@ -8,6 +8,8 @@ thumbnail: /2018/03/20180325_implement-telephone-input/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 <h2>電話番号形式で入力する際のフォームを実装</h2>

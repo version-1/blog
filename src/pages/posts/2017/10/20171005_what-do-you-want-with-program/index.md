@@ -8,6 +8,8 @@ thumbnail: /2017/10/20171005_what-do-you-want-with-program/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171104_ga-fetch-order-by-pv-1/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 唐突ですが、

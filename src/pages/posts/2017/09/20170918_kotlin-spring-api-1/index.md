@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:42:05
 thumbnail: /2017/09/20170918_kotlin-spring-api-1/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:33:48
 thumbnail: /2017/01/20170128_indonesia-for-two-years/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

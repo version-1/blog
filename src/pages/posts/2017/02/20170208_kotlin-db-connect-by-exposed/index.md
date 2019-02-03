@@ -7,6 +7,8 @@ updatedAt: 2018-11-08 18:33:11
 thumbnail: /2017/02/20170208_kotlin-db-connect-by-exposed/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

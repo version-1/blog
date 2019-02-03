@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 12:35:52
 thumbnail: /2017/02/20170205_kotlin-http-request-khttp/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

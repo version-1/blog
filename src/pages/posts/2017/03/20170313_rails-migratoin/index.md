@@ -8,6 +8,8 @@ thumbnail: /2017/03/20170313_rails-migratoin/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 Rails では

@@ -8,6 +8,8 @@ thumbnail: /2017/07/20170727_install-laravel51/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:36:41
 thumbnail: /2017/10/20171011_laravel-vue-spa-2/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 前回はこの記事でLaravel5.4とVue.jsの環境構築を行いました。

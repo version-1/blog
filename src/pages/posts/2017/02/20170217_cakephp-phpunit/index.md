@@ -8,6 +8,8 @@ thumbnail: /2017/02/20170217_cakephp-phpunit/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 &nbsp;
 

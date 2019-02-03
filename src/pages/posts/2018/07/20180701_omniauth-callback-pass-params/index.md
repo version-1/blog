@@ -8,6 +8,8 @@ thumbnail: /2018/07/20180701_omniauth-callback-pass-params/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;

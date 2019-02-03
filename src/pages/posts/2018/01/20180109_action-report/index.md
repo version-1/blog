@@ -5,8 +5,10 @@ slug: /2018/01/09/action-report
 createdAt: 2018-01-09 01:15:11
 updatedAt: 2018-10-11 23:58:59
 thumbnail: /2018/01/20180109_action-report/thumbnail.jpg
-categories: 
+categories:
   - freelance
+tags:
+  - dummy
 ---
 
 &nbsp;

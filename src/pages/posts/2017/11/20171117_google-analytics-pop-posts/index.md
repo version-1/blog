@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171117_google-analytics-pop-posts/thumbnail.png
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">他のWordPressプラグインだと自分のアクセスも含まれてしまう気がした</h2>

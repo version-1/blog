@@ -7,6 +7,8 @@ updatedAt: 2018-11-08 18:29:42
 thumbnail: /2017/10/20171023_self-slack/thumbnail.png
 categories:
   - freelance
+tags:
+  - dummy
 ---
 
 

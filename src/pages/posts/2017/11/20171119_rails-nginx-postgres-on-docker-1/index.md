@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171119_rails-nginx-postgres-on-docker-1/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 &nbsp;
