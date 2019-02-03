@@ -9,7 +9,7 @@ categories:
   - engineering
 tags:
   - kotlin
-  - spirngboot
+  - springboot
   - serverside
 related:
   - dummy
