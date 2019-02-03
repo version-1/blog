@@ -8,7 +8,8 @@ thumbnail: /2018/01/20180123_action-report-3/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
+  - learning
 related:
   - dummy
 ---

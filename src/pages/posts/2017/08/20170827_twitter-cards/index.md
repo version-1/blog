@@ -9,7 +9,8 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - wordpress
+  - ogp
 related:
   - dummy
 ---

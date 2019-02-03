@@ -9,7 +9,11 @@ categories:
   - engineering
   - react
 tags:
-  - dummy
+  - gatsby
+  - prismjs
+  - react
+  - javascript
+  - frontend
 related:
   - dummy
 ---
@@ -68,7 +72,7 @@ gatsby-configでprintRejected、printAllをtrueにすると取り除かれたcss
 ##### gatsby-config.js
 
 ```javascript
-{ 
+{
   resolve: `gatsby-plugin-purgecss`,
   options: {
     printRejected: true,
@@ -88,7 +92,7 @@ cssフレームワークとしてmaterializeを入れているのでそこらへ
 ignoreオプションが用意されているのでそこにprismjsを加えて完了です。
 
 ```diff
-{ 
+{
   resolve: `gatsby-plugin-purgecss`,
   options: {
     printRejected: true,
@@ -107,7 +111,7 @@ whitelistにセレクタのパターンを書いてこちらも取り除かれ�
 
 
 ```diff
-{ 
+{
   resolve: `gatsby-plugin-purgecss`,
   options: {
     printRejected: true,

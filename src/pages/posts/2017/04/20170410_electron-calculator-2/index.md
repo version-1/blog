@@ -8,7 +8,9 @@ thumbnail: /2017/04/20170410_electron-calculator-2/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - electron
+  - nodejs
+  - javascript
 related:
   - dummy
 ---

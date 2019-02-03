@@ -7,9 +7,10 @@ updatedAt: 2018-08-26 11:27:17
 thumbnail: /2017/11/20171105_ga-fetch-order-by-pv-2/thumbnail.jpg
 categories:
   - engineering
-  - rails
 tags:
-  - dummy
+  - ga
+  - marketing
+  - php
 related:
   - dummy
 ---

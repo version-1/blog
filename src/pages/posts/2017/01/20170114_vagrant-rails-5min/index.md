@@ -10,7 +10,9 @@ categories:
   - rails
   - for-beginner
 tags:
-  - dummy
+  - mac
+  - vagrant
+  - rails
 related:
   - dummy
 ---

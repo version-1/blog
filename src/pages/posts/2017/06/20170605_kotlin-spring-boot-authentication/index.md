@@ -8,7 +8,9 @@ thumbnail: /2017/06/20170605_kotlin-spring-boot-authentication/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - springboot
+  - serverside
 related:
   - dummy
 ---

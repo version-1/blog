@@ -8,7 +8,8 @@ thumbnail: /2019/01/20190112_how-to-mkdir-p-by-node/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - nodejs
+  - javascript
 related:
   - dummy
 ---

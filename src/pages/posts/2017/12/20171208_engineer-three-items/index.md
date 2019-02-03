@@ -8,7 +8,8 @@ thumbnail: /2017/12/20171208_engineer-three-items/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - gadget
+  - lifehack
 related:
   - dummy
 ---

@@ -8,7 +8,11 @@ thumbnail: /2017/08/20170809_conflict-vue-with-blade/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - laravel
+  - php
+  - vue
+  - blade
+  - serverside
 related:
   - dummy
 ---

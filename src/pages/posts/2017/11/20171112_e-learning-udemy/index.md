@@ -8,7 +8,9 @@ thumbnail: /2017/11/20171112_e-learning-udemy/thumbnail.png
 categories:
   - column
 tags:
-  - dummy
+  - udemy
+  - design
+  - review
 related:
   - dummy
 ---

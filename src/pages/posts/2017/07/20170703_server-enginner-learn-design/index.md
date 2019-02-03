@@ -8,7 +8,8 @@ thumbnail: /2017/07/20170703_server-enginner-learn-design/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - design
+  - css
 related:
   - dummy
 ---

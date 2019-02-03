@@ -9,7 +9,8 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - commentary
+  - web-structure
 related:
   - dummy
 ---

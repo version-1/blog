@@ -8,7 +8,7 @@ thumbnail: /2017/06/20170612_kotlin-syntax-alittle/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
 related:
   - dummy
 ---

@@ -2,6 +2,7 @@ const {
   aboutPath,
   rootPath,
   categoryPath,
+  tagPath,
   monthArchivePath,
 } = require('../src/lib/routes');
 const i18next = require('../src/lib/i18next');
@@ -14,6 +15,12 @@ const breadcrumbs = {
     return {
       path: categoryPath(category),
       label: i18next.t(`categories.${category}`),
+    };
+  },
+  tags: tag => {
+    return {
+      path: tagPath(tag),
+      label: i18next.t(`tags.${tag}`),
     };
   },
   about: {

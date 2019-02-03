@@ -8,7 +8,8 @@ thumbnail: /2017/06/20170624_problem-boot-server-in-spring/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - kotlin
+  - springboot
 related:
   - dummy
 ---

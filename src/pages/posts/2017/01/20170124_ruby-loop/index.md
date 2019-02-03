@@ -9,7 +9,7 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - ruby
 related:
   - dummy
 ---

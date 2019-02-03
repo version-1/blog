@@ -8,7 +8,8 @@ thumbnail: /2017/09/20170920_books-for-akippoi/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - book
+  - lifehack
 related:
   - dummy
 ---

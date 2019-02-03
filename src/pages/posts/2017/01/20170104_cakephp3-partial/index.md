@@ -9,7 +9,9 @@ categories:
   - engineering
   - rails
 tags:
-  - dummy
+  - cakephp
+  - php
+  - serverside
 related:
   - dummy
 ---
