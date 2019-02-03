@@ -6,8 +6,8 @@ createdAt: 2019-01-11 11:12:15
 updatedAt: 2019-01-11 11:12:15
 thumbnail: /2019/01/20190111_not-work-prismjs-on-build/thumbnail.png
 categories:
- - engineering
- - react
+  - engineering
+  - react
 ---
 
 最近、当サイトをGatsby+Netlifyでリプレースしたのですが、

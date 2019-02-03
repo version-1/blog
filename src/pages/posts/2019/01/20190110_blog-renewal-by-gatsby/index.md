@@ -6,8 +6,8 @@ createdAt: 2019-01-10 12:26:52
 updatedAt: 2019-01-10 12:26:52
 thumbnail: /2019/01/20190110_blog-renewal-by-gatsby/thumbnail.png
 categories:
- - engineering
- - react
+  - engineering
+  - react
 ---
 
 久しぶりの投稿ですが、新年始めての投稿になります。

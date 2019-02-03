@@ -6,8 +6,8 @@ createdAt: 2019-01-13 11:30:35
 updatedAt: 2019-01-13 11:30:35
 thumbnail: /2019/01/20190113_how-to-display-adsense-on-gatsby/thumbnail.png
 categories:
- - engineering
- - react
+  - engineering
+  - react
 ---
 
 当サイトではアドセンスを設置していたのですが、
