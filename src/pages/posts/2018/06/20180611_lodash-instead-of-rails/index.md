@@ -8,7 +8,10 @@ thumbnail: /2018/06/20180611_lodash-instead-of-rails/thumbnail.png
 categories:
   - rails
 tags:
-  - dummy
+  - rails
+  - ruby
+  - javascript
+  - lodash
 related:
   - dummy
 ---

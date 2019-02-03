@@ -8,7 +8,8 @@ thumbnail: /2017/11/20171129_udemy-sale/thumbnail.png
 categories:
   - column
 tags:
-  - dummy
+  - udemy
+  - review
 related:
   - dummy
 ---

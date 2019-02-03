@@ -8,7 +8,7 @@ thumbnail: /2017/01/20170126_vagrant-ssh/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - vagrant
 related:
   - dummy
 ---

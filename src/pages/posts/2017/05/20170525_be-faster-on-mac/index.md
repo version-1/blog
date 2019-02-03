@@ -8,7 +8,8 @@ thumbnail: /2017/05/20170525_be-faster-on-mac/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - mac
+  - lifehack
 related:
   - dummy
 ---

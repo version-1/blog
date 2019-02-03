@@ -8,7 +8,7 @@ thumbnail: /2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-s
 categories:
   - engineering
 tags:
-  - dummy
+  - blockchain
 related:
   - dummy
 ---

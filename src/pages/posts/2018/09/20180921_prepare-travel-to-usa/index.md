@@ -8,7 +8,8 @@ thumbnail: /2018/09/20180921_prepare-travel-to-usa/thumbnail.jpg
 categories:
   - travel
 tags:
-  - dummy
+  - travel
+  - lifehack
 related:
   - dummy
 ---

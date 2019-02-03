@@ -8,7 +8,9 @@ thumbnail: /2017/10/20171027_dekiru-syain/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - book
+  - career
+  - work
 related:
   - dummy
 ---

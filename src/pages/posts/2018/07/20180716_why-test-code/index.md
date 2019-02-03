@@ -9,7 +9,7 @@ categories:
   - column
   - engineering
 tags:
-  - dummy
+  - opinion
 related:
   - dummy
 ---

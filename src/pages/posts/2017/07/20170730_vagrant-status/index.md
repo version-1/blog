@@ -8,7 +8,7 @@ thumbnail: /2017/07/20170730_vagrant-status/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - vagrant
 related:
   - dummy
 ---

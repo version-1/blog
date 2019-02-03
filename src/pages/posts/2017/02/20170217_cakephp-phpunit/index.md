@@ -9,7 +9,10 @@ categories:
   - engineering
   - for-beginner
 tags:
-  - dummy
+  - cakephp
+  - php
+  - phpunit
+  - serverside
 related:
   - dummy
 ---

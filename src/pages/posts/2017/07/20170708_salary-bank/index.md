@@ -8,7 +8,8 @@ thumbnail: /2017/07/20170708_salary-bank/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - career
+  - book
 related:
   - dummy
 ---

@@ -8,7 +8,9 @@ thumbnail: /2017/08/20170813_international-laravel/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - laravel
+  - php
+  - serverside
 related:
   - dummy
 ---

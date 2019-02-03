@@ -8,7 +8,9 @@ thumbnail: /2017/04/20170424_cakephp3-json-response/thumbnail.png
 categories:
   - engineering
 tags:
-  - dummy
+  - cakephp
+  - php
+  - serverside
 related:
   - dummy
 ---

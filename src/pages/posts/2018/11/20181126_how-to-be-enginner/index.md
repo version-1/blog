@@ -8,7 +8,8 @@ thumbnail: /2018/11/20181126_how-to-be-enginner/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
+  - career
 related:
   - dummy
 ---

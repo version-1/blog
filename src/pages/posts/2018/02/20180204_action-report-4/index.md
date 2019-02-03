@@ -8,7 +8,8 @@ thumbnail: /2018/02/20180204_action-report-4/thumbnail.jpg
 categories:
   - freelance
 tags:
-  - dummy
+  - freelance
+  - book
 related:
   - dummy
 ---

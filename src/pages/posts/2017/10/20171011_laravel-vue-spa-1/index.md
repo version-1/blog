@@ -8,7 +8,12 @@ thumbnail: /2017/10/20171011_laravel-vue-spa-1/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - laravel
+  - vue
+  - spa
+  - build-env
+  - serverside
+  - frontend
 related:
   - dummy
 ---

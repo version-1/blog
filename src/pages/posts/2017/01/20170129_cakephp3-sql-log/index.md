@@ -8,7 +8,9 @@ thumbnail: /2017/01/20170129_cakephp3-sql-log/thumbnail.jpg
 categories:
   - engineering
 tags:
-  - dummy
+  - cakephp
+  - php
+  - serverside
 related:
   - dummy
 ---

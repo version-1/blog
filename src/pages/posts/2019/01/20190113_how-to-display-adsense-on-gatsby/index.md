@@ -9,7 +9,10 @@ categories:
   - engineering
   - react
 tags:
-  - dummy
+  - marketing
+  - gatsby
+  - react
+  - frontend
 related:
   - dummy
 ---

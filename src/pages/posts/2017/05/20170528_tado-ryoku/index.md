@@ -8,7 +8,8 @@ thumbnail: /2017/05/20170528_tado-ryoku/thumbnail.jpg
 categories:
   - column
 tags:
-  - dummy
+  - book
+  - career
 related:
   - dummy
 ---
