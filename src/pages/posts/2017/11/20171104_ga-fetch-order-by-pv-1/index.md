@@ -10,6 +10,8 @@ categories:
   - rails
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 唐突ですが、

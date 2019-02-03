@@ -10,6 +10,8 @@ categories:
   - react
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 久しぶりの投稿ですが、新年始めての投稿になります。

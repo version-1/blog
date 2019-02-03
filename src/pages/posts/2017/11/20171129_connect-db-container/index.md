@@ -9,6 +9,8 @@ categories:
   - engineering
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">PostgresのコンテナのDBの中身をみたい</h2>

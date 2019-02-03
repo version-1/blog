@@ -10,6 +10,8 @@ categories:
   - rails
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 <h2 class="chapter">他のWordPressプラグインだと自分のアクセスも含まれてしまう気がした</h2>

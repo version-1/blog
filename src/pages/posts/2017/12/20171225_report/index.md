@@ -9,6 +9,8 @@ categories:
   - freelance
 tags:
   - dummy
+related:
+  - dummy
 ---
 
 ブログ100記事を達成してから達成感で更新が滞りガチなのですが、
