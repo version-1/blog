@@ -7,6 +7,8 @@ updatedAt: 2018-01-30 23:18:13
 thumbnail: /2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/thumbnail.png
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:51:57
 thumbnail: /2017/07/20170703_server-enginner-learn-design/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

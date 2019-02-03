@@ -8,6 +8,8 @@ thumbnail: /2018/07/20180716_why-test-code/thumbnail.jpg
 categories:
   - column
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

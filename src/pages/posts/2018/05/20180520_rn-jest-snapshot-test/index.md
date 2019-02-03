@@ -8,6 +8,8 @@ thumbnail: /2018/05/20180520_rn-jest-snapshot-test/thumbnail.png
 categories:
   - engineering
   - react
+tags:
+  - dummy
 ---
 
 &nbsp;

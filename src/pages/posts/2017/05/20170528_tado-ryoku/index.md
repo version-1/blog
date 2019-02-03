@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 22:53:22
 thumbnail: /2017/05/20170528_tado-ryoku/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 &nbsp;

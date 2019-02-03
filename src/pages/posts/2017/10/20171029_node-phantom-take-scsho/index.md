@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:31:29
 thumbnail: /2017/10/20171029_node-phantom-take-scsho/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 <strong>2017年10月29日追記</strong>

@@ -7,6 +7,8 @@ updatedAt: 2018-08-26 11:52:44
 thumbnail: /2017/06/20170624_problem-boot-server-in-spring/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 &nbsp;

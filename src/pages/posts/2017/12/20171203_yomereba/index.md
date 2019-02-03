@@ -8,6 +8,8 @@ thumbnail: /2017/12/20171203_yomereba/thumbnail.jpg
 categories:
   - engineering
   - design
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">ヨメレバとは？</h2>

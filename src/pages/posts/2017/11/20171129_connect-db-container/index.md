@@ -7,6 +7,8 @@ updatedAt: 2018-01-30 23:16:43
 thumbnail: /2017/11/20171129_connect-db-container/thumbnail.jpg
 categories:
   - engineering
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">PostgresのコンテナのDBの中身をみたい</h2>

@@ -8,6 +8,8 @@ thumbnail: /2017/11/20171129_docker-rails-nginx-postgres/thumbnail.jpg
 categories:
   - engineering
   - rails
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">Docker Composeを利用する</h2>

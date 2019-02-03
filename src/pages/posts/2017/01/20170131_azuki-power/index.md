@@ -7,6 +7,8 @@ updatedAt: 2017-12-22 20:26:54
 thumbnail: /2017/01/20170131_azuki-power/thumbnail.jpg
 categories:
   - column
+tags:
+  - dummy
 ---
 
 

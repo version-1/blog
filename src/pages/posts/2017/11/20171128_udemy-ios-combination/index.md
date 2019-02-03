@@ -7,6 +7,8 @@ updatedAt: 2017-11-28 16:11:14
 thumbnail: /2017/11/20171128_udemy-ios-combination/thumbnail.png
 categories:
   - column
+tags:
+  - dummy
 ---
 
 <h2 class="chapter">UdemyのiOSアプリに購入したはずのコースがない!!</h2>

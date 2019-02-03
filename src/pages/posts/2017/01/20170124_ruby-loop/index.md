@@ -8,6 +8,8 @@ thumbnail: /2017/01/20170124_ruby-loop/thumbnail.jpg
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 Rubyのループって便利ですよね!!

@@ -8,6 +8,8 @@ thumbnail: /2017/01/20170103_cakephp-install/thumbnail.png
 categories:
   - engineering
   - for-beginner
+tags:
+  - dummy
 ---
 
 OSはLubuntu 16.0.4

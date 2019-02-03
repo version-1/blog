@@ -7,6 +7,8 @@ updatedAt: 2018-11-26 22:02:05
 thumbnail: /2017/05/20170521_illustration-merit-bitcoin/thumbnail.jpg
 categories:
   - cryptocurrency-blockchain
+tags:
+  - dummy
 ---
 
 &nbsp;
