@@ -10,6 +10,7 @@ const moment = require('moment');
 const {validateCategoryList, validateTagList} = require('./node/validation');
 const {breadcrumbs} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
+const {rating} = require('./node/related-post');
 
 // Constants
 const PER_PAGE = constants.per;
@@ -81,7 +82,7 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
   });
 };
 
-const createPostShowPage = createPage => posts => context => {
+const createPostShowPage = createPage => (posts, pageviews) => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {tags, categories, slug, templateKey} = edge.node.frontmatter;
@@ -91,6 +92,7 @@ const createPostShowPage = createPage => posts => context => {
     ];
     validateCategoryList(edge.node, categories);
     validateCategoryList(edge.node, tags);
+    const relatedRatings = rating(posts, edge, pageviews)
     createPage({
       path: slug || edge.node.fields.slug,
       categories: categories,
@@ -98,6 +100,7 @@ const createPostShowPage = createPage => posts => context => {
       context: {
         id,
         ...context,
+        related: relatedRatings.slice(0, 6).map(r => r.slug),
         layout: {
           ...context.layout,
           breadcrumbs: _breadcrumbs,
@@ -338,7 +341,7 @@ exports.createPages = ({actions, graphql}) => {
       const {createPage} = actions;
       const pv = await fetchPv();
       const {rows} = pv.reports[0].data;
-      const populars = rows.map(row => row.dimensions[0]);
+      const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
       graphql(popularPostQuery, {populars}).then(res => {
         createPage({
           path: '/',
@@ -366,7 +369,7 @@ exports.createPages = ({actions, graphql}) => {
         });
       });
       createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context);
-      createPostShowPage(withAMP(createPage))(posts)(context);
+      createPostShowPage(withAMP(createPage))(posts, rows)(context);
       createPostsIndexPage(createPage)(posts.length)(context);
       categories.map(category => {
         graphql(categoryQuery, {category}).then(result => {

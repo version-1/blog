@@ -10,11 +10,13 @@ import {AdDoubleRect} from '../components/organisms/Adsence';
 import SNSButtons from '../components/organisms/SNSButtons';
 import CategoryList from '../components/molecules/CategoryList';
 import TagList from '../components/molecules/TagList';
+import RelatedPost from '../components/organisms/RelatedPost';
 import {insertInArticle} from '../lib/adsense';
 
 export const BlogPostTemplate = ({
   location,
   post,
+  related,
   contentComponent,
   helmet,
 }) => {
@@ -70,8 +72,8 @@ export const BlogPostTemplate = ({
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
-        <div className="related-posts" />
       </article>
+      <RelatedPost related={related} />
     </section>
   );
 };
@@ -86,7 +88,7 @@ BlogPostTemplate.propTypes = {
 export default class BlogPost extends React.PureComponent {
   render() {
     const {location} = this.props;
-    const {markdownRemark: post} = this.props.data;
+    const {allMarkdownRemark: related, markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl, layout} = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
@@ -95,6 +97,7 @@ export default class BlogPost extends React.PureComponent {
       <Layout baseUrl={baseUrl} layout={layout}>
         <BlogPostTemplate
           post={post}
+          related={related}
           location={location}
           contentComponent={HTMLContent}
           helmet={
@@ -120,7 +123,7 @@ BlogPost.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BlogPostByID($id: String!, $related: [String]) {
     markdownRemark(id: {eq: $id}) {
       id
       html
@@ -132,6 +135,30 @@ export const pageQuery = graphql`
         tags
         createdAt(formatString: "MMM DD, YYYY")
         updatedAt(formatString: "MMM DD, YYYY")
+      }
+    }
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___createdAt]}
+      filter: {frontmatter: {slug: {in: $related}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            slug
+            thumbnail
+            templateKey
+            categories
+            tags
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
+          }
+        }
       }
     }
   }
