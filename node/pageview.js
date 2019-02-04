@@ -75,8 +75,7 @@ const req = {
       metrics,
       dimensions,
       dimensionFilterClauses,
-      orderBys,
-      pageSize: 6,
+      orderBys
     },
   ],
 };
