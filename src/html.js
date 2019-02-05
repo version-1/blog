@@ -15,6 +15,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
+          <meta name="google-site-verification" content="mN3TrsL3SnQcbq7drmA9PzgYHNMPPBFLgsaW4_nvwg4" />
           {this.props.preBodyComponents}
           <div
             key={`body`}
