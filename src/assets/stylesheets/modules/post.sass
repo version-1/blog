@@ -58,39 +58,39 @@
     border-bottom: 5px double lightgrey
     margin-bottom: 10px
   h2
-    margin: 40px 0
-    padding: 20px 0
+    margin: 0
+    margin-top: 50px
+    margin-bottom: 10px
+    padding: 5px 15px
+    padding-bottom: 0.7em
     font-size: 1.8rem
-    color: $co-pink
-    border-bottom: 3px solid $co-pink
-    color: #f4b89e
-    &:before
-      font-weight: bold
-      padding: 10px
-      content: '##'
-    &:after
-      display: block
-      width: 100%
-      background: $co-pink
-      border-radius: 6px
-      height: 3px
+    font-weight: 600
+    border-bottom: 1px solid #ececec
   h3
-    color: #b3b2b2
-    margin: 40px 0
-    padding: 20px 0
-    font-size: 1.5rem
-    border-bottom: 3px solid lightgrey
+    margin: 0
+    margin-top: 50px
+    margin-bottom: 10px
+    padding: 10px 0
+    font-weight: 600
+    font-size: 1.4rem
     &:before
-      color: lightgrey
-      font-weight: bold
-      padding: 10px
-      content: '###'
+      content: '#'
+      margin-right: 10px
+      color: #22D050
+      font-weight: 100
+
   h4
-    display: inline-block
+    margin: 0
+    margin-top: 50px
+    margin-bottom: 10px
     font-size: 1rem
     font-weight: bold
     padding: 15px 0px
-    border-bottom: 3px dotted $co-black
+    &:before
+      content: '#'
+      margin-right: 10px
+      color: $co-orange
+      font-weight: 100
   h5
     font-size: 0.6rem
   img.post-image
@@ -123,6 +123,8 @@
     max-height: 500px
     @media #{$medium-and-down}
       width: 100%
+  p
+    font-weight: 100
   .related-post
     position: relative
     margin: 36px 0 16px
