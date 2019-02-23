@@ -11,7 +11,7 @@ const RelatedPost = ({related}) => {
           const {slug, title, thumbnail} = post.node.frontmatter;
           const url = meta.images.url + thumbnail;
           return (
-            <div className="col s12 m4">
+            <div key={slug} className="col s12 m4">
               <a href={slug}>
                 <div className="card related-post">
                   <div className="card-image related-img">

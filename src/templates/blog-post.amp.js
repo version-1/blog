@@ -9,9 +9,16 @@ import Layout from '../components/layouts/Default';
 import Content, {HTMLContent} from '../components/Content';
 import CategoryList from '../components/molecules/CategoryList';
 import SNSButtons from '../components/organisms/SNSButtons';
+import RelatedPost from '../components/organisms/RelatedPost';
 import {insertInArticle} from '../lib/adsense';
 
-export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => {
+export const BlogPostTemplate = ({
+  location,
+  post,
+  related,
+  contentComponent,
+  helmet,
+}) => {
   const PostContent = contentComponent || Content;
   const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail;
@@ -39,7 +46,7 @@ export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => 
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp/>
+        <AdDoubleRect amp />
         <div className="post-meta-footer">
           <div className="categories">
             Category :
@@ -54,6 +61,7 @@ export const BlogPostTemplate = ({location, post, contentComponent, helmet}) => 
           </div>
         </div>
       </article>
+      <RelatedPost related={related} />
     </section>
   );
 };
@@ -68,8 +76,8 @@ BlogPostTemplate.propTypes = {
 
 export default class BlogPost extends React.PureComponent {
   render() {
-    const { location } = this.props
-    const {markdownRemark: post} = this.props.data;
+    const {location} = this.props;
+    const {allMarkdownRemark: related, markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const {baseUrl, layout} = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
@@ -77,6 +85,7 @@ export default class BlogPost extends React.PureComponent {
       <Layout amp baseUrl={baseUrl} layout={layout}>
         <BlogPostTemplate
           post={post}
+          related={related}
           location={location}
           content={post.html}
           contentComponent={HTMLContent}
@@ -105,7 +114,7 @@ BlogPost.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByAMPID($id: String!) {
+  query BlogPostAMPByID($id: String!, $related: [String]) {
     markdownRemark(id: {eq: $id}) {
       id
       html
@@ -115,8 +124,32 @@ export const pageQuery = graphql`
         thumbnail
         categories
         tags
-        createdAt(formatString: "MMMM DD, YYYY")
-        updatedAt(formatString: "MMMM DD, YYYY")
+        createdAt(formatString: "MMM DD, YYYY")
+        updatedAt(formatString: "MMM DD, YYYY")
+      }
+    }
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___createdAt]}
+      filter: {frontmatter: {slug: {in: $related}}}
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            slug
+            thumbnail
+            templateKey
+            categories
+            tags
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
+          }
+        }
       }
     }
   }
