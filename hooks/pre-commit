@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PATTERN=index.md
-DIFF=$(git diff --name-only --cached)
+DIFF=$(git diff --name-only --cached | grep $PATTERN )
 UPDATE_TIMESTAMP="node ./scripts/updatedAt/index.js $DIFF"
 
 $UPDATE_TIMESTAMP

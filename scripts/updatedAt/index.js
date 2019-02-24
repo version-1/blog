@@ -1,10 +1,6 @@
-const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 const moment = require('moment');
-const config = require('../../config/constants');
-
-const divider = '---'
 
 const alertForRequired = (key, value) => {
   if (!value || value.length === 0) {
