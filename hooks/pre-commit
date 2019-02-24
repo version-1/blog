@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PATTERN=index.md
+DIFF=$(git diff --name-only --cached)
+UPDATE_TIMESTAMP="node ./scripts/updatedAt/index.js $DIFF"
+
+$UPDATE_TIMESTAMP
+if [[ $? -eq 0 ]]
+then
+  git add $DIFF
+fi
