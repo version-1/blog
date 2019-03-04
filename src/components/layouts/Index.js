@@ -17,6 +17,12 @@ const selectors = [
   '.js-ga-click-it-propartners',
   '.js-ga-click-potepan-freelance',
   '.js-ga-click-book-marketing-sence',
+  '.js-ga-click-sns-twitter',
+  '.js-ga-click-sns-facebook',
+  '.js-ga-click-sns-google-plus',
+  '.js-ga-click-sns-reddit',
+  '.js-ga-click-sns-pocket',
+  '.js-ga-click-sns-hatebu',
 ];
 const notifier = slack(constants.slackWebhookUrl);
 
