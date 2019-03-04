@@ -3,7 +3,7 @@ templateKey: blog-post
 title: フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。
 slug: /2018/12/03/freelance-agent-select
 createdAt: 2018-12-03 10:20:03
-updatedAt: 2018-12-03 10:20:03
+updatedAt: 2019-03-04 19:09:05
 thumbnail: /2018/12/20181203_freelance-agent-select/thumbnail.jpg
 categories:
   - freelance
@@ -35,7 +35,9 @@ related:
 
 はじめて会った人などにフリーランスです。と自己紹介をすると「どうやって仕事みつけてるんですか？」と聞かれることが多いのですが、答えはまあ色々です。フリーランスなりたての頃はエージェントを使って常駐の案件紹介してもらいましたし、他にも知り合い、Twitter、ブログなどさまざまです。
 
+<div class="related-post">
 <a href="https://ver-1-0.net/2018/11/26/how-to-be-enginner/" data-blogcard="1">フリーランスエンジニアなるには？ソフトランディング戦略でいってみよう</a>
+</div>
 
 さらに「結局どうやって仕事見つけるのがいいんですかね？」という質問がありますがフリーランスなりたての人にはエージェントを使って案件獲得するのをオススメしています。理由は後ほど紹介しますが、私のオススメエージェントはこちらです。
 
@@ -54,7 +56,7 @@ related:
 
 レバテックフリーランスのサイトから案件や参画時の単価などを見ることもできるので、一度ご覧になってみると良いと思います。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1TMTQA" target="_blank" rel="nofollow noopener">フリーエンジニアの案件探しは、レバテックフリーランス</a>
+<a class="js-ga-click-levatech-freelance" id="levatech-1" href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1TMTQA" target="_blank" rel="nofollow noopener">フリーエンジニアの案件探しは、レバテックフリーランス</a>
 <img src="https://www19.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1TMTQA" alt="" width="1" height="1" border="0" />
 <h3>ITプロパートナーズ</h3>
 <a href="https://itpropartners.com/">
@@ -71,7 +73,7 @@ related:
 
 &nbsp;
 
-<a href="https://itpropartners.com/">こちら</a>から無料登録できて、飛び先にどういった思いで事業を立ち上げたかなどの記事もあるのでご覧になると良いと思います。
+<a class="js-ga-click-it-propartners" id="it-propartners-1" href="https://itpropartners.com/">こちら</a>から無料登録できて、飛び先にどういった思いで事業を立ち上げたかなどの記事もあるのでご覧になると良いと思います。
 
 &nbsp;
 
@@ -86,7 +88,7 @@ related:
 
 少しサイトを見てみると<strong>案件獲得までには早ければ1〜3日、平均的に2週間以内には複数案件から選べる状況になっています。</strong>というようなことなので気になる方はぜひ登録してみると良いかと思います。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=2ZU6N8+37I6GA+3UES+5YRHE" target="_blank" rel="nofollow noopener">高単価案件が最短二日で決まる！【ポテパンフリーランス】</a>
+<a class="js-ga-click-potepan-freelance" id="potepan-1" href="https://px.a8.net/svt/ejp?a8mat=2ZU6N8+37I6GA+3UES+5YRHE" target="_blank" rel="nofollow noopener">高単価案件が最短二日で決まる！【ポテパンフリーランス】</a>
 <img src="https://www16.a8.net/0.gif?a8mat=2ZU6N8+37I6GA+3UES+5YRHE" alt="" width="1" height="1" border="0" />
 <h2> エージェントを利用するメリット・デメリット</h2>
 &nbsp;
