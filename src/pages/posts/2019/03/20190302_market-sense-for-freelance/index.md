@@ -3,7 +3,7 @@ templateKey: blog-post
 title: フリーランスには「マーケット感覚」が必要だと思う
 slug: /2019/03/02/market-sense-for-freelance
 createdAt: 2019-03-02 21:20:17
-updatedAt: 2019-03-02 21:20:17
+updatedAt: 2019-03-04 19:09:05
 thumbnail: /2019/03/20190302_market-sense-for-freelance/thumbnail.jpg
 categories:
   - engineering
@@ -17,9 +17,9 @@ related:
 ---
 
 
-[マーケット感覚を身につけよう---「これから何が売れるのか?」わかる人になる5つの方法](https://amzn.to/2EsMyie)
+<a id="marketing-sence-text" class="js-ga-click-book-marketing-sence" href="https://amzn.to/2EsMyie">マーケット感覚を身につけよう---「これから何が売れるのか?」わかる人になる5つの方法</a>
 
-<a href="https://www.amazon.co.jp/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E6%84%9F%E8%A6%9A%E3%82%92%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%91%E3%82%88%E3%81%86-%E3%80%8C%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E4%BD%95%E3%81%8C%E5%A3%B2%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B-%E3%80%8D%E3%82%8F%E3%81%8B%E3%82%8B%E4%BA%BA%E3%81%AB%E3%81%AA%E3%82%8B5%E3%81%A4%E3%81%AE%E6%96%B9%E6%B3%95-%E3%81%A1%E3%81%8D%E3%82%8A%E3%82%93/dp/4478064784/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=llg01-22&linkId=d215a817b086dd6a55955c06acd8534f&language=ja_JP" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4478064784&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=llg01-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&language=ja_JP&l=li2&o=9&a=4478064784" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a id="marketing-sence-image" class="js-ga-click-book-marketing-sence" href="https://www.amazon.co.jp/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E6%84%9F%E8%A6%9A%E3%82%92%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%91%E3%82%88%E3%81%86-%E3%80%8C%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E4%BD%95%E3%81%8C%E5%A3%B2%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B-%E3%80%8D%E3%82%8F%E3%81%8B%E3%82%8B%E4%BA%BA%E3%81%AB%E3%81%AA%E3%82%8B5%E3%81%A4%E3%81%AE%E6%96%B9%E6%B3%95-%E3%81%A1%E3%81%8D%E3%82%8A%E3%82%93/dp/4478064784/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=llg01-22&linkId=d215a817b086dd6a55955c06acd8534f&language=ja_JP" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4478064784&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=llg01-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=llg01-22&language=ja_JP&l=li2&o=9&a=4478064784" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 
 こちらはちきりんさん著の**「マーケット感覚を身につけよう」**です。これからの自分のキャリアを考える時の基本の考え方にを
@@ -73,7 +73,7 @@ related:
 </blockquote>
 
 <div class="small-text">
-引用: <a href="https://amzn.to/2EsMyie">マーケット感覚を身につけよう---「これから何が売れるのか?」わかる人になる5つの方法</a>
+引用: <a id="marketing-sence-image" class="js-ga-click-book-marketing-sence" href="https://amzn.to/2EsMyie">マーケット感覚を身につけよう---「これから何が売れるのか?」わかる人になる5つの方法</a>
 <br/>第3章マーケット感覚で変わる世の中の見え方 成功の鍵は市場の選択
 </div>
 

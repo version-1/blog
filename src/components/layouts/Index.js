@@ -1,5 +1,7 @@
 import React from 'react';
 import {StaticQuery, graphql} from 'gatsby';
+import slack from 'slack-notify';
+import {batchEventRegister} from 'ga-event-tracker-on-site';
 import headerImage from '../../assets/images/header-image-2.svg';
 import headerImageSmall from '../../assets/images/header-image-small.svg';
 import footerImage from '../../assets/images/footer-image.svg';
@@ -8,8 +10,32 @@ import Img from '../../components/atoms/Image';
 import Navbar from '../../components/Navbar';
 import Head from '../../components/Head';
 import '../../assets/stylesheets/index.sass';
+import {constants} from '../../../config/constants';
+
+const selectors = [
+  '.js-ga-click-levatech-freelance',
+  '.js-ga-click-it-propartners',
+  '.js-ga-click-potepan-freelance',
+  '.js-ga-click-book-marketing-sence',
+];
+const notifier = slack(constants.slackWebhookUrl);
 
 export default class IndexLayout extends React.PureComponent {
+  componentDidMount() {
+    if (process.env.NODE_ENV === 'development') return;
+    batchEventRegister(window, selectors, 'click', {
+      afterCallback: (ga, ele, params) => {
+        const { eventCategory, eventAction, eventLabel } = params
+        notifier.send({
+          channel: '#event',
+          icon_emoji: ':ghost:',
+          text: 'event fire',
+          fields: params,
+        });
+      },
+    });
+  }
+
   render() {
     const {amp, baseUrl} = this.props;
     const {children} = this.props;
@@ -53,7 +79,7 @@ export default class IndexLayout extends React.PureComponent {
                 alt="header image"
               />
             </div>
-            <Navbar amp={amp}/>
+            <Navbar amp={amp} />
             <div>{children}</div>
             <div className="footer">
               <span className="copyright">
