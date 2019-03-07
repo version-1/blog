@@ -420,6 +420,9 @@ exports.onCreateWebpackConfig = ({stage, rules, loaders, plugins, actions}) => {
   actions.setWebpackConfig({
     node: {
       fs: 'empty',
+      console: true,
+      net: 'empty',
+      tls: 'empty'
     },
     resolve: {
       alias: {
