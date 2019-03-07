@@ -1,5 +1,5 @@
 import React from 'react';
-import {isStrictProduction} from '../../lib/env';
+import {isStrictProduction} from 'lib/env';
 
 class Adsense extends React.Component {
   componentDidMount() {

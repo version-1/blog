@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
-import {postPath} from '../lib/routes';
-import Layout from '../components/layouts/Default';
-import Post from '../components/Post';
-import Pagination from '../components/Pagination';
+import {postPath} from 'lib/routes';
+import Layout from 'components/layouts/Default';
+import Post from 'components/Post';
+import Pagination from 'components/Pagination';
 
 export default class IndexPage extends React.PureComponent {
   render() {

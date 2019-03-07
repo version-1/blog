@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import Img from '../components/atoms/Image';
-import defaultImage from '../assets/images/default-image.jpg';
-import {meta} from '../../config/constants';
-import i18next from '../lib/i18next';
-import {categoryPath} from '../lib/routes';
+import Img from 'components/atoms/Image';
+import defaultImage from 'assets/images/default-image.jpg';
+import {meta} from 'config/constants';
+import i18next from 'lib/i18next';
+import {categoryPath} from 'lib/routes';
 
 const CategoryList = ({list = []}) => {
   return (list || []).map((category, index) => {

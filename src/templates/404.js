@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../components/layouts/Default.js';
-import Post from '../components/Post';
+import Layout from 'components/layouts/Default.js';
+import Post from 'components/Post';
 
 const NotFoundPage = (props) => {
   const {layout} = props.pageContext;

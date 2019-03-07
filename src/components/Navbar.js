@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'gatsby';
-import M from '../lib/materialize';
-import {rootPath, categoryPath, aboutPath} from '../lib/routes';
-import sidenavImage from '../assets/images/sidenav-image.jpg';
-import Img from '../components/atoms/Image';
+import M from 'lib/materialize';
+import {rootPath, categoryPath, aboutPath} from 'lib/routes';
+import sidenavImage from 'assets/images/sidenav-image.jpg';
+import Img from 'components/atoms/Image';
 
 const menus = [
   {to: rootPath(), text: 'Top'},

@@ -1,11 +1,11 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
-import i18next from '../lib/i18next';
-import Layout from '../components/layouts/Default';
-import Post from '../components/Post';
-import Pagination from '../components/Pagination';
-import { categoryPath } from '../lib/routes';
+import i18next from 'lib/i18next';
+import Layout from 'components/layouts/Default';
+import Post from 'components/Post';
+import Pagination from 'components/Pagination';
+import { categoryPath } from 'lib/routes';
 
 class CategoryTemplate extends React.PureComponent {
   render() {

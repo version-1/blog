@@ -2,15 +2,15 @@ import React from 'react';
 import {StaticQuery, graphql} from 'gatsby';
 import slack from 'slack-notify';
 import {batchEventRegister} from 'ga-event-tracker-on-site';
-import headerImage from '../../assets/images/header-image-2.svg';
-import headerImageSmall from '../../assets/images/header-image-small.svg';
-import footerImage from '../../assets/images/footer-image.svg';
+import headerImage from 'assets/images/header-image-2.svg';
+import headerImageSmall from 'assets/images/header-image-small.svg';
+import footerImage from 'assets/images/footer-image.svg';
 
-import Img from '../../components/atoms/Image';
-import Navbar from '../../components/Navbar';
-import Head from '../../components/Head';
-import '../../assets/stylesheets/index.sass';
-import {constants} from '../../../config/constants';
+import Img from 'components/atoms/Image';
+import Navbar from 'components/Navbar';
+import Head from 'components/Head';
+import 'assets/stylesheets/index.sass';
+import {constants} from 'config/constants';
 
 const selectors = [
   '.js-ga-click-levatech-freelance',

@@ -1,5 +1,5 @@
 import React from 'react';
-import {meta} from '../../../config/constants';
+import {meta} from 'config/constants';
 
 const RelatedPost = ({related}) => {
   const {edges: posts} = related;
