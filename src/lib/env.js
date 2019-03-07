@@ -1,4 +1,4 @@
-import { meta } from '../../config/constants'
+import { meta } from 'config/constants'
 export const isProductionHost = function() {
   // FIXME 一時的に全てtrue
   return true

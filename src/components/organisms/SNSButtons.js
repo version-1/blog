@@ -9,8 +9,8 @@ import {
   TwitterIcon,
   RedditIcon,
 } from 'react-share';
-import HatenaButton from '../../components/atoms/buttons/HatenaButton';
-import PocketButton from '../../components/atoms/buttons/PocketButton';
+import HatenaButton from 'components/atoms/buttons/HatenaButton';
+import PocketButton from 'components/atoms/buttons/PocketButton';
 
 const SnsButtons = ({type, amp, url, title}) => {
   return (

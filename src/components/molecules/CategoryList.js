@@ -1,6 +1,6 @@
 import React from 'react'
-import i18next from '../../lib/i18next';
-import {categoryPath} from '../../lib/routes';
+import i18next from 'lib/i18next';
+import {categoryPath} from 'lib/routes';
 const CategoryList = ({list, delimiter}) => {
   return list.map((category, index) => {
     const name = i18next.t(`categories.${category}`);

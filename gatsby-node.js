@@ -92,7 +92,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     ];
     validateCategoryList(edge.node, categories);
     validateCategoryList(edge.node, tags);
-    const relatedRatings = rating(posts, edge, pageviews)
+    const relatedRatings = rating(posts, edge, pageviews);
     createPage({
       path: slug || edge.node.fields.slug,
       categories: categories,
@@ -115,8 +115,16 @@ const createPostsIndexPage = createPage => totalCount => context => {
   buildPaginationPages(createPage)()(_path, 'posts/index', totalCount, context);
 };
 
-const createCollectionShowPage = createPage => (key, singuralizeKey, collection) => totalCount => context => {
-  const _path = [routes.root, routes[singuralizeKey], _.kebabCase(collection)].join('/');
+const createCollectionShowPage = createPage => (
+  key,
+  singuralizeKey,
+  collection,
+) => totalCount => context => {
+  const _path = [
+    routes.root,
+    routes[singuralizeKey],
+    _.kebabCase(collection),
+  ].join('/');
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[key](collection),
@@ -132,12 +140,18 @@ const createCollectionShowPage = createPage => (key, singuralizeKey, collection)
 };
 
 const createCategoryShowPage = createPage => category => totalCount => context => {
-  return createCollectionShowPage(createPage)('categories', 'category', category)(totalCount)(context)
-}
+  return createCollectionShowPage(createPage)(
+    'categories',
+    'category',
+    category,
+  )(totalCount)(context);
+};
 
 const createTagShowPage = createPage => tag => totalCount => context => {
-  return createCollectionShowPage(createPage)('tags', 'tag', tag)(totalCount)(context)
-}
+  return createCollectionShowPage(createPage)('tags', 'tag', tag)(totalCount)(
+    context,
+  );
+};
 
 const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
@@ -330,14 +344,14 @@ exports.createPages = ({actions, graphql}) => {
       const context = {
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
-      console.log('posts :', posts.length)
-      console.log('categories :', categories.length)
-      console.log(categories)
-      console.log('tags :', tags.length)
-      console.log(tags)
-      return { posts, tags, categories, context }
+      console.log('posts :', posts.length);
+      console.log('categories :', categories.length);
+      console.log(categories);
+      console.log('tags :', tags.length);
+      console.log(tags);
+      return {posts, tags, categories, context};
     })
-    .then(async ({ posts, tags, categories, context }) => {
+    .then(async ({posts, tags, categories, context}) => {
       const {createPage} = actions;
       const pv = await fetchPv();
       const {rows} = pv.reports[0].data;
@@ -368,7 +382,9 @@ exports.createPages = ({actions, graphql}) => {
           createStaticPage(withAMP(createPage))(post)(context);
         });
       });
-      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context);
+      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(
+        context,
+      );
       createPostShowPage(withAMP(createPage))(posts, rows)(context);
       createPostsIndexPage(createPage)(posts.length)(context);
       categories.map(category => {
@@ -400,16 +416,21 @@ exports.onCreateNode = ({node, actions, getNode}) => {
   }
 };
 
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
+exports.onCreateWebpackConfig = ({stage, rules, loaders, plugins, actions}) => {
   actions.setWebpackConfig({
     node: {
-      fs: 'empty'
-    }
-  })
-}
+      fs: 'empty',
+    },
+    resolve: {
+      alias: {
+        config: path.resolve(__dirname, 'config'),
+        assets: path.resolve(__dirname, 'src/assets'),
+        components: path.resolve(__dirname, 'src/components'),
+        lib: path.resolve(__dirname, 'src/lib'),
+        pages: path.resolve(__dirname, 'src/pages'),
+        templates: path.resolve(__dirname, 'src/templates'),
+        locales: path.resolve(__dirname, 'src/locales'),
+      },
+    },
+  });
+};

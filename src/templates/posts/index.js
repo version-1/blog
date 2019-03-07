@@ -1,9 +1,9 @@
 import React, {PureComponent} from 'react';
 import {graphql} from 'gatsby';
-import Layout from '../../components/layouts/Default';
-import Post from '../../components/Post';
-import Pagination from '../../components/Pagination';
-import { postPath } from '../../lib/routes';
+import Layout from 'components/layouts/Default';
+import Post from 'components/Post';
+import Pagination from 'components/Pagination';
+import { postPath } from 'lib/routes';
 
 export default class PostsIndex extends PureComponent {
   render() {

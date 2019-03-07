@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../../components/layouts/Index';
-import Sidebar from '../../components/Sidebar';
+import Layout from 'components/layouts/Index';
+import Sidebar from 'components/Sidebar';
 
 const Breadcrumbs = ({context}) => {
   return (

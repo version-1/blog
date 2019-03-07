@@ -1,9 +1,9 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
-import profile from '../assets/images/profile.png';
-import {constants} from '../../config/constants';
-import Img from '../components/atoms/Image';
-import ArchiveByMonth from '../components/organisms/ArchiveByMonth';
+import profile from 'assets/images/profile.png';
+import {constants} from 'config/constants';
+import Img from 'components/atoms/Image';
+import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
 
 export default class Sidebar extends PureComponent {
   render() {

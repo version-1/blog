@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../../../components/atoms/Image';
+import Img from 'components/atoms/Image';
 
 const defaultSize = 40;
 const HatenaButton = ({amp, url, title, size = defaultSize}) => {
