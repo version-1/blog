@@ -23,6 +23,10 @@ const selectors = [
   '.js-ga-click-sns-reddit',
   '.js-ga-click-sns-pocket',
   '.js-ga-click-sns-hatebu',
+  '.js-ga-click-amazon',
+  '.js-ga-click-airtori',
+  '.js-ga-click-global-wifi',
+  '.adesense',
 ];
 const notifier = slack(constants.slackWebhookUrl);
 
