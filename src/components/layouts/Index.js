@@ -26,7 +26,7 @@ const selectors = [
   '.js-ga-click-amazon',
   '.js-ga-click-airtori',
   '.js-ga-click-global-wifi',
-  '.adesense',
+  '.adsense',
 ];
 const notifier = slack(constants.slackWebhookUrl);
 
