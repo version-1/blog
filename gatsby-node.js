@@ -11,6 +11,7 @@ const {validateCategoryList, validateTagList} = require('./node/validation');
 const {breadcrumbs} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
 const {rating} = require('./node/related-post');
+const queries = require('./node/queries.js');
 
 // Constants
 const PER_PAGE = constants.per;
@@ -211,119 +212,8 @@ const collectCollection = posts => key => {
 const collectTags = posts => collectCollection(posts)('tags');
 const collectCategories = posts => collectCollection(posts)('categories');
 
-const queryIndex = `
-  {
-    allMarkdownRemark(
-      limit: 1000,
-      filter: {
-        frontmatter: { templateKey: { eq: "blog-post" }}
-      }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            categories
-            tags
-            thumbnail
-            templateKey
-            createdAt
-          }
-        }
-      }
-    }
-  }
-`;
-
-const popularPostQuery = `query popularPostQuery($populars: [String]) {
-allMarkdownRemark(
-      filter: {
-        frontmatter: {slug: {in: $populars}}
-      }
-      limit: 6
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            templateKey
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
-          }
-        }
-      }
-    }
-   }`;
-
-const staticPageQuery = `
- query StaticPageQuery($templateKey: String) {
-    allMarkdownRemark(
-      limit: 1,
-      filter: {
-        frontmatter: { templateKey: { eq: $templateKey }}
-      }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            templateKey
-          }
-        }
-      }
-    }
-  }
-`;
-
-const categoryQuery = `
-  query CategoryPage($category: String) {
-    allMarkdownRemark(
-      limit: 1000
-      filter: {frontmatter: {categories: {in: [$category]}}}
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-        }
-      }
-    }
-  }
-`;
-
-const tagQuery = `
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      limit: 1000
-      filter: {frontmatter: {tags: {in: [$tag]}}}
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-        }
-      }
-    }
-  }
-`;
-
 exports.createPages = ({actions, graphql}) => {
-  return graphql(queryIndex)
+  return graphql(queries.queryIndex)
     .then(result => {
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()));
@@ -356,7 +246,7 @@ exports.createPages = ({actions, graphql}) => {
       const pv = await fetchPv();
       const {rows} = pv.reports[0].data;
       const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
-      graphql(popularPostQuery, {populars}).then(res => {
+      graphql(queries.popularPostQuery, {populars}).then(res => {
         createPage({
           path: '/',
           component: path.resolve(`src/templates/index.js`),
@@ -377,7 +267,7 @@ exports.createPages = ({actions, graphql}) => {
       });
       // Create Pages
       STATIC_PAGE_LIST.map(page => {
-        graphql(staticPageQuery, {templateKey: page}).then(result => {
+        graphql(queries.staticPageQuery, {templateKey: page}).then(result => {
           const [post] = result.data.allMarkdownRemark.edges;
           createStaticPage(withAMP(createPage))(post)(context);
         });
@@ -388,13 +278,13 @@ exports.createPages = ({actions, graphql}) => {
       createPostShowPage(withAMP(createPage))(posts, rows)(context);
       createPostsIndexPage(createPage)(posts.length)(context);
       categories.map(category => {
-        graphql(categoryQuery, {category}).then(result => {
+        graphql(queries.categoryQuery, {category}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
           createCategoryShowPage(createPage)(category)(posts.length)(context);
         });
       });
       tags.map(tag => {
-        graphql(tagQuery, {tag}).then(result => {
+        graphql(queries.tagQuery, {tag}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
           createTagShowPage(createPage)(tag)(posts.length)(context);
         });
