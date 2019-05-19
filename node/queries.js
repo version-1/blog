@@ -1,9 +1,43 @@
-const queryIndex = `
+const enIndexQuery = `
   {
     allMarkdownRemark(
       limit: 1000,
       filter: {
-        frontmatter: { templateKey: { eq: "blog-post" }}
+        frontmatter: {
+          templateKey: { eq: "blog-post" },
+          language: { eq: "en" }
+        }
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            slug
+            categories
+            tags
+            thumbnail
+            templateKey
+            createdAt
+          }
+        }
+      }
+    }
+  }
+`;
+
+const jaIndexQuery = `
+  {
+    allMarkdownRemark(
+      limit: 1000,
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "blog-post" },
+          language: { eq: "ja" }
+        }
       }
     ) {
       edges {
@@ -111,7 +145,8 @@ const tagQuery = `
 
 
 module.exports = {
-  queryIndex,
+  jaIndexQuery,
+  enIndexQuery,
   popularPostQuery,
   staticPageQuery,
   categoryQuery,

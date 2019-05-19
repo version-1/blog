@@ -212,8 +212,13 @@ const collectCollection = posts => key => {
 const collectTags = posts => collectCollection(posts)('tags');
 const collectCategories = posts => collectCollection(posts)('categories');
 
-exports.createPages = ({actions, graphql}) => {
-  return graphql(queries.queryIndex)
+/* CreatePages
+ *
+ *
+ */
+
+exports.createPages = async ({actions, graphql}) => {
+  graphql(queries.jaIndexQuery)
     .then(result => {
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()));
@@ -232,6 +237,7 @@ exports.createPages = ({actions, graphql}) => {
       }, {});
 
       const context = {
+        language: 'ja',
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
       console.log('posts :', posts.length);
@@ -290,6 +296,29 @@ exports.createPages = ({actions, graphql}) => {
         });
       });
     });
+  const result = await graphql(queries.enIndexQuery);
+  if (result.errors) {
+    result.errors.forEach(e => console.error(e.toString()));
+  }
+  const posts = result.data.allMarkdownRemark.edges;
+  const categories = collectCategories(posts);
+  const tags = collectTags(posts).filter(tag => tag !== 'dummy');
+  const archiveByMonth = posts.reduce((acc, item) => {
+    const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
+    return {...acc, [key]: [...(acc[key] || []), item.node.id]};
+  }, {});
+
+  const context = {
+    language: 'en',
+    layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
+  };
+  const {createPage} = actions;
+  createPage({
+    path: '/en',
+    component: path.resolve(`src/templates/index.js`),
+    context,
+  });
+  result;
 };
 
 exports.onCreateNode = ({node, actions, getNode}) => {
@@ -312,7 +341,7 @@ exports.onCreateWebpackConfig = ({stage, rules, loaders, plugins, actions}) => {
       fs: 'empty',
       console: true,
       net: 'empty',
-      tls: 'empty'
+      tls: 'empty',
     },
     resolve: {
       alias: {
