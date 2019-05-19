@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 個人的RubyMineからAtomに切り替えた人おすすめパッケージ
 slug: /2017/04/30/advice-for-rubymine-to-atom
 createdAt: 2017-04-30 12:16:19

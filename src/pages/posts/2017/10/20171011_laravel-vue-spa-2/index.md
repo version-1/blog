@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Laravel5.4とVue.jsでSPAを作ってみる。② -クライアントルーティング-
 slug: /2017/10/11/laravel-vue-spa-2
 createdAt: 2017-10-11 08:09:50

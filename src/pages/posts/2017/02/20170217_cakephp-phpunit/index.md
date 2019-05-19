@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CakePHPでテスト PHPUnitを使ったテスト
 slug: /2017/02/17/cakephp-phpunit
 createdAt: 2017-02-17 22:29:21

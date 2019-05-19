@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: WordPressの記事をTwitter投稿するときにサムネイルが表示さるようにした。| Twitter Cards
 slug: /2017/08/27/twitter-cards
 createdAt: 2017-08-27 16:26:42

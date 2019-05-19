@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Kotlin + Spring Boot で Web APIを作成してみる。 ~その②~
 slug: /2017/10/05/kotlin-web-api
 createdAt: 2017-10-05 23:53:16

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Rubyでデザインパターン。Strategyパターン。Design Pattern in Ruby
 slug: /2018/09/02/ruby-strategy
 createdAt: 2018-09-02 14:37:30

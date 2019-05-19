@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: KotlinでHelloWorld　パート2 ( InteliJ IDEA編)
 slug: /2017/02/12/kotlin-helloworld-intelij-idea
 createdAt: 2017-02-12 09:26:57

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CSSでマウスオーバーした時にうにょーんって下線が伸びるようにする
 slug: /2017/11/20/css-mouseover-underline
 createdAt: 2017-11-20 12:58:23

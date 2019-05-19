@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: GitHub Pagesが便利。簡単にwebアプリのデモを公開するならオススメ
 slug: /2017/10/02/github-pages
 createdAt: 2017-10-02 19:44:09

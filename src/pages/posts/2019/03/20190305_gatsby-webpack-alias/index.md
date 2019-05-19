@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Gatsbyでエイリアスを切って相対パス地獄から抜け出す方法
 slug: /2019/03/05/gatsby-webpack-alias
 createdAt: 2019-03-07 10:43:44

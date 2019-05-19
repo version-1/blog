@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: プログラミングってなに？プログラミングを勉強する前にプログラミングで何をするか考えよう。
 slug: /2017/10/05/what-do-you-want-with-program
 createdAt: 2017-10-05 00:04:32

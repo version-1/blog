@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: AssetPipelineなしでRailsのモデルのデータをReactで取得する方法
 slug: /2018/01/31/how-to-get-rails-mode-on-react
 createdAt: 2018-01-31 08:00:38

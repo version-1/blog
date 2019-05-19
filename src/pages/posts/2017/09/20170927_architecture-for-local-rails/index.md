@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: ローカル開発環境〜Railsで普段開発している時の構成について〜
 slug: /2017/09/27/architecture-for-local-rails
 createdAt: 2017-09-27 00:14:50

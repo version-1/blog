@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Go言語の文法を勉強して印象にのこったところまとめ。その4。
 slug: /2019/02/26/get-start-go-4
 createdAt: 2019-02-26 11:21:32

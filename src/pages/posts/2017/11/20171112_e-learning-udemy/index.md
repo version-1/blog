@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Udemy でデザインのコースを受けてみた感想。Udemyで勉強するメリットまとめ
 slug: /2017/11/12/e-learning-udemy
 createdAt: 2017-11-12 15:49:19

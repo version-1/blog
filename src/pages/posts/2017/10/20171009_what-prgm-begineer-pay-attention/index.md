@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: プログラミング初心者の人が身につける習慣
 slug: /2017/10/09/what-prgm-begineer-pay-attention
 createdAt: 2017-10-09 09:38:45

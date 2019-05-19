@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランス確定申告で手間取らないためのコツ
 slug: /2019/02/21/points-of-tax-season
 createdAt: 2019-02-21 11:54:09

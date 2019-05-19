@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Rails migratoinコマンドまとめ
 slug: /2017/03/13/rails-migratoin
 createdAt: 2017-03-13 23:21:52

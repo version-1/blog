@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Reactでスネークゲーム作ってみた。
 slug: /2018/06/27/react-snake-game-3
 createdAt: 2018-06-27 09:08:48

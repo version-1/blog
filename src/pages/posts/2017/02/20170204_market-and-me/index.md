@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 自分と市場の強みについて知ろう。
 slug: /2017/02/04/market-and-me
 createdAt: 2017-02-04 14:27:38

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 新卒から2年半でインドネシアへの海外赴任を実現させそうになった話
 slug: /2017/01/28/indonesia-for-two-years
 createdAt: 2017-01-28 11:26:21

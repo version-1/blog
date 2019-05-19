@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CodePen - webサービスのデザインを考えるときにおすすめの海外サイト
 slug: /2017/09/02/codepen
 createdAt: 2017-09-02 12:10:11

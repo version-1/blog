@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: ビットコイン急騰中!! ビットコインのメリットまとめてみた
 slug: /2017/05/21/illustration-merit-bitcoin
 createdAt: 2017-05-21 11:04:01
