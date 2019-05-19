@@ -7,29 +7,40 @@ import Post from 'components/Post';
 import Pagination from 'components/Pagination';
 
 export default class IndexPage extends React.PureComponent {
+  get popPosts() {
+    if (!this.props.pageContext.popPosts) {
+      return [];
+    }
+    const {
+      edges: popPosts,
+    } = this.props.pageContext.popPosts.data.allMarkdownRemark;
+    return popPosts;
+  }
+
   render() {
     const {data} = this.props;
     const {layout} = this.props.pageContext;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
-    const {edges: popPosts} = this.props.pageContext.popPosts.data.allMarkdownRemark;
     return (
       <Layout layout={layout}>
-        <section className="section">
-          <div className="section-container">
-            <div className="section-content">
-              <div className="section-title">
-                <span className="title">人気記事</span>
-              </div>
-              <div className="section-list">
-                <div className="row">
-                  {popPosts.map(({node: post}) => (
-                    <Post post={post} key={post.id} />
-                  ))}
+        {this.popPosts.length > 0 && (
+          <section className="section">
+            <div className="section-container">
+              <div className="section-content">
+                <div className="section-title">
+                  <span className="title">人気記事</span>
+                </div>
+                <div className="section-list">
+                  <div className="row">
+                    {this.popPosts.map(({node: post}) => (
+                      <Post post={post} key={post.id} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
         <section className="section">
           <div className="section-container">
             <div className="section-content">
@@ -62,10 +73,15 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexQuery($language: String!) {
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
-      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+      filter: {
+        frontmatter: {
+          templateKey: {eq: "blog-post"},
+          language: { eq: $language }
+        }
+      }
       limit: 18
     ) {
       totalCount
