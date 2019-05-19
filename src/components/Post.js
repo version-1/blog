@@ -18,6 +18,15 @@ const CategoryList = ({list = []}) => {
   });
 };
 
+const path = post => {
+  const _path = post.frontmatter.slug || post.fields.slug
+  const { language } = post.frontmatter
+  if (language !== 'ja') {
+    return [language, _path].join('')
+  }
+  return _path
+}
+
 const Post = ({amp, post}) => {
   const {title, thumbnail} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail || defaultImage;
@@ -25,7 +34,7 @@ const Post = ({amp, post}) => {
     <div className="col s12 m4" key={post.id}>
       <div className="card hoverable">
         <div className="card-image">
-          <Link to={post.frontmatter.slug || post.fields.slug}>
+          <Link to={path(post)}>
             <Img amp={amp} src={thumbnailUrl} alt={title} />
           </Link>
         </div>
@@ -45,7 +54,7 @@ const Post = ({amp, post}) => {
             </div>
           </div>
           <div className="post-title">
-            <Link to={post.frontmatter.slug || post.fields.slug}>
+            <Link to={path(post)}>
               {post.frontmatter.title}
             </Link>
           </div>

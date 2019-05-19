@@ -93,6 +93,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            language
             slug
             thumbnail
             templateKey
