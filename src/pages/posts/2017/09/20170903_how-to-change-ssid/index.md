@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 自分の名前を晒すのやめましょう。。 iPhoneのSSIDの変更のしかた
 slug: /2017/09/03/how-to-change-ssid
 createdAt: 2017-09-03 13:53:42

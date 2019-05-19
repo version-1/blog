@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: webpackでnormalize.cssを読み込む方法
 slug: /2017/10/24/webpack-normalize-css
 createdAt: 2017-10-24 12:08:38

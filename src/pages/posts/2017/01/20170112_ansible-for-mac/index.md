@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Ansible Install for Mac | Macのための Ansible Install
 slug: /2017/01/12/ansible-for-mac
 createdAt: 2017-01-12 00:21:21

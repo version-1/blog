@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Kotlinの基本文法について少しだけ（パッケージ・関数・変数の定義）
 slug: /2017/06/12/kotlin-syntax-alittle
 createdAt: 2017-06-12 22:09:19

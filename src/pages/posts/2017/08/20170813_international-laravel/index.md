@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Laravel5.4の多言語化
 slug: /2017/08/13/international-laravel
 createdAt: 2017-08-13 20:49:40

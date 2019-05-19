@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Docker, Gin, Gorm, DepでCRUDできるAPI作成
 slug: /2019/05/02/docker-gin-gorm-dep-crud
 createdAt: 2019-05-02 06:49:23

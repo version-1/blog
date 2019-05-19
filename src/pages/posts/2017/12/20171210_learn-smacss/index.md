@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CSSスタイルガイドのSMACSSを勉強してみたまとめ
 slug: /2017/12/10/learn-smacss
 createdAt: 2017-12-10 14:41:30

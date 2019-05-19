@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: ReactNativeで位置情報を取得する。
 slug: /2019/01/14/get-current-position-by-rn
 createdAt: 2019-01-14 08:41:11

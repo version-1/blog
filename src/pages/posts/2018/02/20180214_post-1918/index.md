@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: polymophicなテーブルを経由して、has_many thourghする。
 slug: /2018/02/14/post-1918
 createdAt: 2018-02-14 00:57:08

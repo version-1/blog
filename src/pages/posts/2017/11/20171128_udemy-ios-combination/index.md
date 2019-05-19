@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: UdemyでiOSアプリからログインしたら、コースが連携されていなかった話。
 slug: /2017/11/28/udemy-ios-combination
 createdAt: 2017-11-28 16:11:14

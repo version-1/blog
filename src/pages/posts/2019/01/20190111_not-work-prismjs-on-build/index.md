@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Gatsbyビルドでprismjsのsyntax hilightが効かなかった話
 slug: /2019/01/11/not-work-prismjs-on-build
 createdAt: 2019-01-11 11:12:15

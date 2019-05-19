@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: GatsbyサイトでGoogle Analyticsのトラッキングをする
 slug: /2019/03/22/gatsby-ga-tracking
 createdAt: 2019-03-22 21:59:11

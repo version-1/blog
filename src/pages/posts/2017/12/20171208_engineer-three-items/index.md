@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 疲れ目・肩こりエンジニアの三種の神器。机上ラック、アイマスク、ブルーライトカットメガネ
 slug: /2017/12/08/engineer-three-items
 createdAt: 2017-12-08 18:46:56

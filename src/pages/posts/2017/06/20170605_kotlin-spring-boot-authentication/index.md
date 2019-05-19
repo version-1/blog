@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Kotlin + Spring Boot でログイン認証を実装
 slug: /2017/06/05/kotlin-spring-boot-authentication
 createdAt: 2017-06-05 09:51:21

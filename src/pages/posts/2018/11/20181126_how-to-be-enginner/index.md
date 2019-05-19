@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランスエンジニアなるには？ソフトランディング戦略でいってみよう
 slug: /2018/11/26/how-to-be-enginner
 createdAt: 2018-11-26 10:25:07

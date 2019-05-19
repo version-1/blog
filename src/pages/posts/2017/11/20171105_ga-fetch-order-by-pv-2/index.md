@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Google AnalyticsからPV順に記事を取得するその② - サイドバーに表示-
 slug: /2017/11/05/ga-fetch-order-by-pv-2
 createdAt: 2017-11-05 23:16:05

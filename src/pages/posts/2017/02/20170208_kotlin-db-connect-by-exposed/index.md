@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: kotlin SQL Framework Exposed を使ってDB接続してみた
 slug: /2017/02/08/kotlin-db-connect-by-exposed
 createdAt: 2017-02-08 00:22:56

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランスの方や在宅作業の方におすすめ。一人Slack
 slug: /2017/10/23/self-slack
 createdAt: 2017-10-23 20:12:45

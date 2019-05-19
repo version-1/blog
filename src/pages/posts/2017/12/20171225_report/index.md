@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 活動報告始めます。
 slug: /2017/12/25/report
 createdAt: 2017-12-25 20:51:02

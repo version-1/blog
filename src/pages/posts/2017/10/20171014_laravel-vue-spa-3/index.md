@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Laravel5.4とVue.jsでSPAを作ってみる。③ -仮想通貨の価格を取得するページを作ってみる-
 slug: /2017/10/14/laravel-vue-spa-3
 createdAt: 2017-10-14 21:59:36

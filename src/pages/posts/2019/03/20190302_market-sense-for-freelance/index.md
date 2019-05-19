@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランスには「マーケット感覚」が必要だと思う
 slug: /2019/03/02/market-sense-for-freelance
 createdAt: 2019-03-02 21:20:17
