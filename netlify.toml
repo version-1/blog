@@ -6,7 +6,7 @@
   YARN_FLAGS = "--no-ignore-optional"
 
 [[headers]]
-  for = "/rss.xml"
+  for = "*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Credentials = "true"
