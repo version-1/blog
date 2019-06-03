@@ -22,7 +22,6 @@ export default class IndexPage extends React.PureComponent {
     const {data} = this.props;
     const context = this.props.pageContext;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
-    i18next.changeLanguage(context.language);
     return (
       <Layout {...context}>
         {this.popPosts.length > 0 && (

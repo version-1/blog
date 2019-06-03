@@ -93,7 +93,6 @@ export default class BlogPost extends React.PureComponent {
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
-    i18next.changeLanguage(context.language);
 
     return (
       <Layout {...context}>
