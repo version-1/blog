@@ -12,6 +12,7 @@ import CategoryList from 'components/molecules/CategoryList';
 import TagList from 'components/molecules/TagList';
 import RelatedPost from 'components/organisms/RelatedPost';
 import {insertInArticle} from 'lib/adsense';
+import i18next from 'lib/i18next';
 
 export const BlogPostTemplate = ({
   location,
@@ -92,6 +93,7 @@ export default class BlogPost extends React.PureComponent {
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
+    i18next.changeLanguage(context.language);
 
     return (
       <Layout {...context}>
