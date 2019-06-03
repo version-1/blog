@@ -10,12 +10,13 @@ import { tagPath } from 'lib/routes';
 class TagTemplate extends React.PureComponent {
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {tag, index, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
+    const {tag, index, layout} = context;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`tags.${tag}`);
 
     return (
-      <Layout layout={layout}>
+      <Layout {...context}>
         <Helmet title={`${heading}| ${title}`} />
         <section className="section">
           <div className="section-container">

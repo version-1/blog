@@ -5,6 +5,7 @@ import {postPath} from 'lib/routes';
 import Layout from 'components/layouts/Default';
 import Post from 'components/Post';
 import Pagination from 'components/Pagination';
+import i18next from 'lib/i18next';
 
 export default class IndexPage extends React.PureComponent {
   get popPosts() {
@@ -19,16 +20,17 @@ export default class IndexPage extends React.PureComponent {
 
   render() {
     const {data} = this.props;
-    const {layout} = this.props.pageContext;
+    const context = this.props.pageContext;
     const {edges: posts, totalCount} = data.allMarkdownRemark;
+    i18next.changeLanguage(context.language);
     return (
-      <Layout layout={layout}>
+      <Layout {...context}>
         {this.popPosts.length > 0 && (
           <section className="section">
             <div className="section-container">
               <div className="section-content">
                 <div className="section-title">
-                  <span className="title">人気記事</span>
+                  <span className="title">{i18next.t('labels.pop-posts')}</span>
                 </div>
                 <div className="section-list">
                   <div className="row">
@@ -46,7 +48,9 @@ export default class IndexPage extends React.PureComponent {
             <div className="section-content">
               <div className="section-title">
                 <div className="title-border" />
-                <span className="title">新着記事</span>
+                <span className="title">
+                  {i18next.t('labels.latest-posts')}
+                </span>
               </div>
               <div className="section-list">
                 <div className="row">
@@ -77,10 +81,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {
-        frontmatter: {
-          templateKey: {eq: "blog-post"},
-          language: { eq: $language }
-        }
+        frontmatter: {templateKey: {eq: "blog-post"}, language: {eq: $language}}
       }
       limit: 18
     ) {

@@ -25,7 +25,7 @@ const breadcrumbs = {
   },
   about: {
     path: aboutPath(),
-    label: 'プロフィール',
+    label: i18next.t(`about.profile`),
   },
   monthArchive: month => {
     return {

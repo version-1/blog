@@ -12,30 +12,14 @@ import Head from 'components/Head';
 import 'assets/stylesheets/index.sass';
 import {constants} from 'config/constants';
 
-const selectors = [
-  '.js-ga-click-levatech-freelance',
-  '.js-ga-click-it-propartners',
-  '.js-ga-click-potepan-freelance',
-  '.js-ga-click-book-marketing-sence',
-  '.js-ga-click-sns-twitter',
-  '.js-ga-click-sns-facebook',
-  '.js-ga-click-sns-google-plus',
-  '.js-ga-click-sns-reddit',
-  '.js-ga-click-sns-pocket',
-  '.js-ga-click-sns-hatebu',
-  '.js-ga-click-amazon',
-  '.js-ga-click-airtori',
-  '.js-ga-click-global-wifi',
-  '.adsense',
-];
 const notifier = slack(constants.slackWebhookUrl);
 
 export default class IndexLayout extends React.PureComponent {
   componentDidMount() {
     if (process.env.NODE_ENV === 'development') return;
-    batchEventRegister(window, selectors, 'click', {
+    batchEventRegister(window, constants.selectors, 'click', {
       afterCallback: (ga, ele, params) => {
-        const { eventCategory, eventAction, eventLabel } = params
+        const {eventCategory, eventAction, eventLabel} = params;
         notifier.send({
           channel: '#event',
           icon_emoji: ':ghost:',

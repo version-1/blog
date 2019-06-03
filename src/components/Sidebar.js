@@ -4,6 +4,7 @@ import profile from 'assets/images/profile.png';
 import {constants} from 'config/constants';
 import Img from 'components/atoms/Image';
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
+import i18next from 'lib/i18next';
 
 export default class Sidebar extends PureComponent {
   render() {
@@ -11,7 +12,7 @@ export default class Sidebar extends PureComponent {
     return (
       <div className="sidebar">
         <section className="section">
-          <h3>プロフィール</h3>
+          <h3>{i18next.t('labels.sidebar.profile-title')}</h3>
           <div className="self-introduction">
             <div className="profile-image">
               <Img
@@ -24,20 +25,17 @@ export default class Sidebar extends PureComponent {
               />
             </div>
             <div className="introduction">
+              <p>{i18next.t('labels.sidebar.profile-description')}</p>
               <p>
-                フリーランスのRails&Reactエンジニア
-                10月からフルリモートになりました。
-                プログラミング、旅行、フリーランスの働き方などに
-                ついてぼちぼち更新していきます。
-              </p>
-              <p>
-                プロフィールは<Link to="/about">こちら</Link>です。
+                <Link to="/about">
+                  {i18next.t('labels.sidebar.profile-link')}
+                </Link>
               </p>
             </div>
           </div>
         </section>
         <section className="section">
-          <h3>フリーランスに関する記事</h3>
+          <h3> {i18next.t('labels.sidebar.freelance-title')}</h3>
           {constants.recomended.map((post, index) => (
             <Link key={index} to={post.to}>
               <div className="flat-card">
