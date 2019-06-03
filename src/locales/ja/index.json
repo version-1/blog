@@ -3,6 +3,7 @@
     "profile": "プロフィール"
   },
   "labels": {
+    "articles": "記事一覧",
     "pop-posts": "人気記事",
     "latest-posts": "新着記事",
     "sidebar": {

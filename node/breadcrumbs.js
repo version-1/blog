@@ -7,30 +7,30 @@ const {
 } = require('../src/lib/routes');
 const i18next = require('../src/lib/i18next');
 
-const collections = () => ({
+const collections = language => ({
   top: {
-    path: rootPath(),
+    path: rootPath(language),
     label: 'Top',
   },
-  categories: category => {
+  categories: (category, language) => {
     return {
-      path: categoryPath(category),
+      path: categoryPath(category, language),
       label: i18next.t(`categories.${category}`),
     };
   },
-  tags: tag => {
+  tags: (tag, language) => {
     return {
       path: tagPath(tag),
       label: i18next.t(`tags.${tag}`),
     };
   },
   about: {
-    path: aboutPath(),
+    path: aboutPath(language),
     label: i18next.t(`about.profile`),
   },
-  monthArchive: month => {
+  monthArchive: (month, language) => {
     return {
-      path: monthArchivePath(month),
+      path: monthArchivePath(month, language),
       label: month,
     };
   },
@@ -38,7 +38,7 @@ const collections = () => ({
 
 const fetch = language => {
   i18next.changeLanguage(language);
-  return collections();
+  return collections(language);
 };
 
 module.exports = {

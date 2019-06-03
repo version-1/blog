@@ -4,11 +4,12 @@ import profile from 'assets/images/profile.png';
 import {constants} from 'config/constants';
 import Img from 'components/atoms/Image';
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
+import {aboutPath} from 'lib/routes';
 import i18next from 'lib/i18next';
 
 export default class Sidebar extends PureComponent {
   render() {
-    const {amp, archiveByMonth} = this.props;
+    const {language, amp, archiveByMonth} = this.props;
     return (
       <div className="sidebar">
         <section className="section">
@@ -27,7 +28,7 @@ export default class Sidebar extends PureComponent {
             <div className="introduction">
               <p>{i18next.t('labels.sidebar.profile-description')}</p>
               <p>
-                <Link to="/about">
+                <Link to={aboutPath(language)}>
                   {i18next.t('labels.sidebar.profile-link')}
                 </Link>
               </p>
@@ -50,7 +51,7 @@ export default class Sidebar extends PureComponent {
           ))}
         </section>
         <section className="section">
-          <ArchiveByMonth items={archiveByMonth} />
+          <ArchiveByMonth language={language} items={archiveByMonth} />
         </section>
       </div>
     );

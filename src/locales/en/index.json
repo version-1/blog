@@ -3,6 +3,7 @@
     "profile": "Profile"
   },
   "labels": {
+    "articles": "Articles",
     "pop-posts": "Popular Posts",
     "latest-posts": "Latest Posts",
     "sidebar": {

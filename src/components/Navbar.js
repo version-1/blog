@@ -5,15 +5,15 @@ import {rootPath, categoryPath, aboutPath} from 'lib/routes';
 import sidenavImage from 'assets/images/sidenav-image.jpg';
 import Img from 'components/atoms/Image';
 
-const menus = [
-  {to: rootPath(), text: 'Top'},
-  {to: aboutPath(), text: 'About'},
-  {to: categoryPath('freelance'), text: 'Freelance'},
-  {to: categoryPath('engineering'), text: 'Programming'},
-  {to: categoryPath('column'), text: 'Column'},
+const menus = language => [
+  {to: rootPath(language), text: 'Top'},
+  {to: aboutPath(language), text: 'About'},
+  {to: categoryPath('freelance', language), text: 'Freelance'},
+  {to: categoryPath('engineering', language), text: 'Programming'},
+  {to: categoryPath('column', language), text: 'Column'},
 ];
 
-const SideNav = ({amp, onClick}) => {
+const SideNav = ({amp, list, onClick}) => {
   return (
     <ul id="side-out" className="sidenav">
       <li>
@@ -24,7 +24,7 @@ const SideNav = ({amp, onClick}) => {
           <div className="sidenav-title">Menu</div>
         </div>
       </li>
-      {menus.map((menu, idx) => (
+      {list.map((menu, idx) => (
         <li className="nav-link-item" key={idx} onClick={onClick}>
           <Link to={menu.to}>{menu.text}</Link>
         </li>
@@ -33,10 +33,10 @@ const SideNav = ({amp, onClick}) => {
   );
 };
 
-const MenuList = ({menus}) => {
+const MenuList = ({list}) => {
   return (
     <ul className="nav-link-list">
-      {menus.map((menu, idx) => (
+      {list.map((menu, idx) => (
         <li className="nav-link-item" key={idx}>
           <Link to={menu.to}>{menu.text}</Link>
         </li>
@@ -56,7 +56,8 @@ const Navbar = class extends React.PureComponent {
   };
 
   render() {
-    const {amp} = this.props;
+    const {amp, language} = this.props;
+    const list = menus(language);
     return (
       <div>
         <div
@@ -73,13 +74,13 @@ const Navbar = class extends React.PureComponent {
             </div>
           )}
           <div className="brand-logo">
-            <Link to="/">So Far, So Good</Link>
+            <Link to={rootPath(language)}>So Far, So Good</Link>
           </div>
           <div className="nav-links hide-on-med-and-down">
-            <MenuList menus={menus} />
+            <MenuList list={list} />
           </div>
         </div>
-        <SideNav amp={amp} onClick={this.onClick} />
+        <SideNav list={list} amp={amp} onClick={this.onClick} />
       </div>
     );
   }
