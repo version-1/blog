@@ -11,6 +11,7 @@ import CategoryList from 'components/molecules/CategoryList';
 import SNSButtons from 'components/organisms/SNSButtons';
 import RelatedPost from 'components/organisms/RelatedPost';
 import {insertInArticle} from 'lib/adsense';
+import i18next from 'lib/i18next';
 
 export const BlogPostTemplate = ({
   location,
@@ -79,10 +80,11 @@ export default class BlogPost extends React.PureComponent {
     const {location} = this.props;
     const {allMarkdownRemark: related, markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {baseUrl, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
+    i18next.changeLanguage(context.language);
     return (
-      <Layout amp baseUrl={baseUrl} layout={layout}>
+      <Layout {...context}>
         <BlogPostTemplate
           post={post}
           related={related}
