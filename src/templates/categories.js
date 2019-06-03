@@ -48,7 +48,7 @@ class CategoryTemplate extends React.PureComponent {
 export default CategoryTemplate;
 
 export const categryPageQuery = graphql`
-  query CategoryPage($category: String, $skip: Int!, $limit: Int!) {
+  query CategoryPage($category: String, $language: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -58,7 +58,7 @@ export const categryPageQuery = graphql`
       limit: $limit
       skip: $skip
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {categories: {in: [$category]}}}
+      filter: {frontmatter: {categories: {in: [$category]}, language: {eq: $language}}}
     ) {
       totalCount
       edges {
