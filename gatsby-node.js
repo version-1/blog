@@ -17,6 +17,16 @@ const queries = require('./node/queries.js');
 const PER_PAGE = constants.per;
 const STATIC_PAGE_LIST = constants.pages;
 
+const genPath = edge => {
+  const {language, slug} = edge.node.frontmatter;
+  const _path = slug || edge.fields.slug;
+  debugger
+  if (language && language !== 'ja') {
+    return ['/', language, _path].join('');
+  }
+  return _path;
+};
+
 const withAMP = createPage => params => {
   const {path: _path, component, context = {}} = params;
   const ampPath = _path + '/amp';
@@ -94,8 +104,9 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     validateCategoryList(edge.node, categories);
     validateCategoryList(edge.node, tags);
     const relatedRatings = rating(posts, edge, pageviews);
+    const _path = genPath(edge)
     createPage({
-      path: slug || edge.node.fields.slug,
+      path: _path,
       categories: categories,
       component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
@@ -212,6 +223,8 @@ const collectCollection = posts => key => {
 const collectTags = posts => collectCollection(posts)('tags');
 const collectCategories = posts => collectCollection(posts)('categories');
 
+
+
 /* CreatePages
  *
  *
@@ -307,6 +320,7 @@ exports.createPages = async ({actions, graphql}) => {
     const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
     return {...acc, [key]: [...(acc[key] || []), item.node.id]};
   }, {});
+  const rows = []
 
   const context = {
     language: 'en',
@@ -318,6 +332,7 @@ exports.createPages = async ({actions, graphql}) => {
     component: path.resolve(`src/templates/index.js`),
     context,
   });
+  createPostShowPage(withAMP(createPage))(posts, rows)(context);
   result;
 };
 
