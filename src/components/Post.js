@@ -4,13 +4,16 @@ import Img from 'components/atoms/Image';
 import defaultImage from 'assets/images/default-image.jpg';
 import {meta} from 'config/constants';
 import i18next from 'lib/i18next';
-import {categoryPath} from 'lib/routes';
+import {categoryPath, postShowPath} from 'lib/routes';
 
-const CategoryList = ({list = []}) => {
+const CategoryList = ({language, list = []}) => {
   return (list || []).map((category, index) => {
     const name = i18next.t(`categories.${category}`);
     return (
-      <a key={category} href={categoryPath(category)} className="categories">
+      <a
+        key={category}
+        href={categoryPath(category, language)}
+        className="categories">
         {name}
         {index === list.length - 1 ? '' : ',  '}
       </a>
@@ -18,23 +21,15 @@ const CategoryList = ({list = []}) => {
   });
 };
 
-const path = post => {
-  const _path = post.frontmatter.slug || post.fields.slug
-  const { language } = post.frontmatter
-  if (language !== 'ja') {
-    return [language, _path].join('')
-  }
-  return _path
-}
-
 const Post = ({amp, post}) => {
-  const {title, thumbnail} = post.frontmatter;
+  const {categories, title, thumbnail, language, slug} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail || defaultImage;
+  const path = postShowPath(slug, language);
   return (
     <div className="col s12 m4" key={post.id}>
       <div className="card hoverable">
         <div className="card-image">
-          <Link to={path(post)}>
+          <Link to={path}>
             <Img amp={amp} src={thumbnailUrl} alt={title} />
           </Link>
         </div>
@@ -50,13 +45,11 @@ const Post = ({amp, post}) => {
             </div>
             <div className="categories">
               <i className="tiny material-icons">list</i>
-              <CategoryList list={post.frontmatter.categories} />
+              <CategoryList language={language} list={categories} />
             </div>
           </div>
           <div className="post-title">
-            <Link to={path(post)}>
-              {post.frontmatter.title}
-            </Link>
+            <Link to={path}>{post.frontmatter.title}</Link>
           </div>
           <div className="post-detail-footer">
             <div className="author">

@@ -9,6 +9,7 @@ import Layout from 'components/layouts/Default';
 import Content, {HTMLContent} from 'components/Content';
 import CategoryList from 'components/molecules/CategoryList';
 import SNSButtons from 'components/organisms/SNSButtons';
+import TagList from 'components/molecules/TagList';
 import RelatedPost from 'components/organisms/RelatedPost';
 import {insertInArticle} from 'lib/adsense';
 import i18next from 'lib/i18next';
@@ -21,7 +22,15 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  const {createdAt, updatedAt, title, thumbnail, categories} = post.frontmatter;
+  const {
+    createdAt,
+    updatedAt,
+    title,
+    thumbnail,
+    categories,
+    language,
+    tags,
+  } = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail;
   const url = location.href;
   const content = insertInArticle(true)(post.html);
@@ -51,13 +60,17 @@ export const BlogPostTemplate = ({
         <div className="post-meta-footer">
           <div className="categories">
             Category :
-            <CategoryList list={categories} />
+            <CategoryList language={language} list={categories} />
+          </div>
+          <div className="tags">
+            Tag :
+            <TagList language={language} list={tags} />
           </div>
           <div className="author">
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
-            <p>この記事が役に立ちましたらシェアをお願いします。</p>
+            <p>{i18next.t('labels/share')}</p>
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
@@ -82,7 +95,6 @@ export default class BlogPost extends React.PureComponent {
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
-    i18next.changeLanguage(context.language);
     return (
       <Layout {...context}>
         <BlogPostTemplate
@@ -101,8 +113,6 @@ export default class BlogPost extends React.PureComponent {
               <meta property="og:image" content={imageUrl} />
             </Helmet>
           }
-          title={post.frontmatter.title}
-          thumbnail={post.frontmatter.thumbnail}
         />
       </Layout>
     );
@@ -122,6 +132,7 @@ export const pageQuery = graphql`
       html
       excerpt(truncate: true, pruneLength: 300)
       frontmatter {
+        language
         title
         thumbnail
         categories
@@ -144,6 +155,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
+            language
             thumbnail
             templateKey
             categories

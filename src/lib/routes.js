@@ -14,6 +14,7 @@ const rootPath = language =>
   language === 'ja' ? routes.index : joinLangRoot(language, '');
 const aboutPath = language => buildPath(['about'], language);
 const postPath = language => buildPath([routes.post], language);
+const postShowPath = (slug, language) => joinLangRoot(language, slug);
 const categoryPath = (category, language) => {
   if (!category) return buildPath([routes.category], language);
   return buildPath([routes.category, category], language);
@@ -31,6 +32,7 @@ module.exports = {
   rootPath,
   buildPath,
   postPath,
+  postShowPath,
   categoryPath,
   tagPath,
   monthArchivePath,

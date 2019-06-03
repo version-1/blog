@@ -28,6 +28,7 @@ export const BlogPostTemplate = ({
     title,
     thumbnail,
     categories,
+    language,
     tags,
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
@@ -59,17 +60,17 @@ export const BlogPostTemplate = ({
         <div className="post-meta-footer">
           <div className="categories">
             Category :
-            <CategoryList list={categories} />
+            <CategoryList language={language} list={categories} />
           </div>
           <div className="tags">
             Tag :
-            <TagList list={tags} />
+            <TagList language={language} list={tags} />
           </div>
           <div className="author">
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
-            <p>この記事が役に立ちましたらシェアをお願いします。</p>
+            <p>{i18next.t('labels/share')}</p>
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
@@ -130,6 +131,7 @@ export const pageQuery = graphql`
       html
       excerpt(truncate: true, pruneLength: 300)
       frontmatter {
+        language
         title
         thumbnail
         categories
@@ -152,6 +154,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
+            language
             thumbnail
             templateKey
             categories
