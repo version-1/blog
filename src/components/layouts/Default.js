@@ -18,10 +18,10 @@ const Breadcrumbs = ({context}) => {
 
 class DefaultLayout extends React.PureComponent {
   render() {
-    const {amp, baseUrl, layout} = this.props;
+    const {language, amp, baseUrl, layout} = this.props;
     const {archiveByMonth, site, breadcrumbs = []} = layout;
     return (
-      <Layout amp={amp} baseUrl={baseUrl}>
+      <Layout language={language} amp={amp} baseUrl={baseUrl}>
         <div className="row site-container">
           <div className="row flex">
             <div className="col s12 m12 l8" style={{padding: 'unset'}}>

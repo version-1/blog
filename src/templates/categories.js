@@ -5,17 +5,18 @@ import i18next from 'lib/i18next';
 import Layout from 'components/layouts/Default';
 import Post from 'components/Post';
 import Pagination from 'components/Pagination';
-import { categoryPath } from 'lib/routes';
+import {categoryPath} from 'lib/routes';
 
 class CategoryTemplate extends React.PureComponent {
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {category, index, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
+    const {index, category} = context;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`categories.${category}`);
 
     return (
-      <Layout layout={layout}>
+      <Layout {...context}>
         <Helmet title={`${heading}| ${title}`} />
         <section className="section">
           <div className="section-container">
@@ -29,12 +30,13 @@ class CategoryTemplate extends React.PureComponent {
                   {posts.map(({node: post}) => (
                     <Post key={post.id} post={post} />
                   ))}
-                </div> </div>
-            <Pagination
-              index={index}
-              namespace={categoryPath(category)}
-              count={totalCount}
-            />
+                </div>
+              </div>
+              <Pagination
+                index={index}
+                namespace={categoryPath(category)}
+                count={totalCount}
+              />
             </div>
           </div>
         </section>

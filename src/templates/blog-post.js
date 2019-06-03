@@ -90,11 +90,11 @@ export default class BlogPost extends React.PureComponent {
     const {location} = this.props;
     const {allMarkdownRemark: related, markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {baseUrl, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
 
     return (
-      <Layout baseUrl={baseUrl} layout={layout}>
+      <Layout {...context}>
         <BlogPostTemplate
           post={post}
           related={related}
