@@ -29,12 +29,20 @@ class DefaultLayout extends React.PureComponent {
               <main className="main">{this.props.children}</main>
             </div>
             <div className="col s12 m12 l4 hide-on-med-and-down">
-              <Sidebar amp={amp} archiveByMonth={archiveByMonth} />
+              <Sidebar
+                language={language}
+                amp={amp}
+                archiveByMonth={archiveByMonth}
+              />
             </div>
           </div>
           <div className="row flex">
             <div className="col s12 m12 hide-on-large-only">
-              <Sidebar amp={amp} archiveByMonth={archiveByMonth} />
+              <Sidebar
+                language={language}
+                amp={amp}
+                archiveByMonth={archiveByMonth}
+              />
             </div>
           </div>
         </div>

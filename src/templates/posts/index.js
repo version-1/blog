@@ -4,6 +4,7 @@ import Layout from 'components/layouts/Default';
 import Post from 'components/Post';
 import Pagination from 'components/Pagination';
 import { postPath } from 'lib/routes';
+import i18next from 'lib/i18next';
 
 export default class PostsIndex extends PureComponent {
   render() {
@@ -16,7 +17,7 @@ export default class PostsIndex extends PureComponent {
             <div className="section-content">
               <div className="section-title">
                 <div className="title-border" />
-                <span className="title">記事一覧 { index } / { totalPages }</span>
+                <span className="title">{i18next.t('labels.articles')} { index } / { totalPages }</span>
               </div>
               <div className="section-list">
                 <div className="row">

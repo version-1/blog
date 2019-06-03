@@ -31,7 +31,7 @@ export default class IndexLayout extends React.PureComponent {
   }
 
   render() {
-    const {amp, baseUrl} = this.props;
+    const {language, amp, baseUrl} = this.props;
     const {children} = this.props;
     return (
       <StaticQuery
@@ -73,7 +73,7 @@ export default class IndexLayout extends React.PureComponent {
                 alt="header image"
               />
             </div>
-            <Navbar amp={amp} />
+            <Navbar language={language} amp={amp} />
             <div>{children}</div>
             <div className="footer">
               <span className="copyright">

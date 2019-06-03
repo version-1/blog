@@ -1,9 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 import i18next from 'lib/i18next';
+import {monthArchivePath} from 'lib/routes';
 
 const ARCHIVE_LIMIT = 12;
-const ArchiveByMonth = ({items}) => {
+const ArchiveByMonth = ({language, items}) => {
   if (!items) return <div />;
 
   const sortedKeys = Object.keys(items).sort((a, b) => {
@@ -21,7 +22,7 @@ const ArchiveByMonth = ({items}) => {
           if (!items[key]) return;
           return (
             <li key={key}>
-              <a href={`/${key}`}>
+              <a href={monthArchivePath(key, language)}>
                 {key} ({items[key].length})
               </a>
             </li>
