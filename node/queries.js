@@ -114,10 +114,12 @@ const staticPageQuery = `
 `;
 
 const categoryQuery = `
-  query CategoryPage($category: String) {
+  query CategoryPage($category: String, $language: String) {
     allMarkdownRemark(
       limit: 1000
-      filter: {frontmatter: {categories: {in: [$category]}}}
+      filter: {
+        frontmatter: {categories: {in: [$category]}, language: { eq: $language }}
+      }
     ) {
       totalCount
       edges {
@@ -130,10 +132,12 @@ const categoryQuery = `
 `;
 
 const tagQuery = `
-  query TagPage($tag: String) {
+  query TagPage($tag: String, $language: String) {
     allMarkdownRemark(
       limit: 1000
-      filter: {frontmatter: {tags: {in: [$tag]}}}
+      filter: {
+        frontmatter: {tags: {in: [$tag]}, language: { eq: $language }}
+      }
     ) {
       totalCount
       edges {

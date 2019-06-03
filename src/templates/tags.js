@@ -47,7 +47,7 @@ class TagTemplate extends React.PureComponent {
 export default TagTemplate;
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String, $skip: Int!, $limit: Int!) {
+  query TagPage($tag: String, $language: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -57,7 +57,7 @@ export const tagPageQuery = graphql`
       limit: $limit
       skip: $skip
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {tags: {in: [$tag]}}}
+      filter: {frontmatter: {tags: {in: [$tag]}, language: {eq: $language}}}
     ) {
       totalCount
       edges {

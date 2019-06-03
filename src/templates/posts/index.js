@@ -40,10 +40,10 @@ export default class PostsIndex extends PureComponent {
 }
 
 export const postsIndexQuery = graphql`
-  query postsIndexQuery($skip: Int!, $limit: Int!) {
+  query postsIndexQuery($language: String, $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+      filter: {frontmatter: {templateKey: {eq: "blog-post"}, language: {eq: $language}}}
       limit: $limit
       skip: $skip
     ) {
