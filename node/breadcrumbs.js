@@ -6,7 +6,8 @@ const {
   monthArchivePath,
 } = require('../src/lib/routes');
 const i18next = require('../src/lib/i18next');
-const breadcrumbs = {
+
+const collections = () => ({
   top: {
     path: rootPath(),
     label: 'Top',
@@ -33,8 +34,13 @@ const breadcrumbs = {
       label: month,
     };
   },
+});
+
+const fetch = language => {
+  i18next.changeLanguage(language);
+  return collections();
 };
 
 module.exports = {
-  breadcrumbs,
+  fetch,
 };

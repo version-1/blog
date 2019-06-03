@@ -8,7 +8,7 @@ const fs = require(`fs-extra`);
 const moment = require('moment');
 
 const {validateCategoryList, validateTagList} = require('./node/validation');
-const {breadcrumbs} = require('./node/breadcrumbs');
+const {fetch} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
 const {rating} = require('./node/related-post');
 const queries = require('./node/queries.js');
@@ -17,14 +17,17 @@ const queries = require('./node/queries.js');
 const PER_PAGE = constants.per;
 const STATIC_PAGE_LIST = constants.pages;
 
-const genPath = edge => {
+const genShowPath = edge => {
   const {language, slug} = edge.node.frontmatter;
   const _path = slug || edge.fields.slug;
-  debugger
+  return genPath(language, _path)
+};
+
+const genPath = (language, slug) => {
   if (language && language !== 'ja') {
-    return ['/', language, _path].join('');
+    return ['/', language, '/', slug].join('').replace(/\/\//g, '/');
   }
-  return _path;
+  return slug;
 };
 
 const withAMP = createPage => params => {
@@ -97,6 +100,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {tags, categories, slug, templateKey} = edge.node.frontmatter;
+    const breadcrumbs = fetch(context.language)
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.categories(categories[0]),
@@ -104,7 +108,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     validateCategoryList(edge.node, categories);
     validateCategoryList(edge.node, tags);
     const relatedRatings = rating(posts, edge, pageviews);
-    const _path = genPath(edge)
+    const _path = genShowPath(edge)
     createPage({
       path: _path,
       categories: categories,
@@ -137,6 +141,7 @@ const createCollectionShowPage = createPage => (
     routes[singuralizeKey],
     _.kebabCase(collection),
   ].join('/');
+  const breadcrumbs = fetch(context.language)
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[key](collection),
@@ -169,6 +174,7 @@ const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
     const _path = [routes.root, key].join('/');
     const totalCount = archives[key].length;
+    const breadcrumbs = fetch(context.language)
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.monthArchive(key),
@@ -188,12 +194,14 @@ const createMonthArchivePage = createPage => archives => context => {
 const createStaticPage = createPage => page => context => {
   const {id} = page.node;
   const {templateKey} = page.node.frontmatter;
+  const breadcrumbs = fetch(context.language)
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[templateKey],
   ];
+  const _path = genPath(context.language, templateKey)
   createPage({
-    path: '/' + templateKey,
+    path: _path,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
     context: {
       id,
@@ -249,6 +257,7 @@ exports.createPages = async ({actions, graphql}) => {
         return {...acc, [key]: [...(acc[key] || []), item.node.id]};
       }, {});
 
+      const breadcrumbs = fetch('ja')
       const context = {
         language: 'ja',
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
@@ -322,6 +331,7 @@ exports.createPages = async ({actions, graphql}) => {
   }, {});
   const rows = []
 
+  const breadcrumbs = fetch('en')
   const context = {
     language: 'en',
     layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
@@ -331,6 +341,12 @@ exports.createPages = async ({actions, graphql}) => {
     path: '/en',
     component: path.resolve(`src/templates/index.js`),
     context,
+  });
+  STATIC_PAGE_LIST.map(page => {
+    graphql(queries.staticPageQuery, {templateKey: page}).then(result => {
+      const [post] = result.data.allMarkdownRemark.edges;
+      createStaticPage(withAMP(createPage))(post)(context);
+    });
   });
   createPostShowPage(withAMP(createPage))(posts, rows)(context);
   result;
