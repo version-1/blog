@@ -20,7 +20,7 @@ const STATIC_PAGE_LIST = constants.pages;
 const genShowPath = edge => {
   const {language, slug} = edge.node.frontmatter;
   const _path = slug || edge.fields.slug;
-  return genPath(language, _path)
+  return genPath(language, _path);
 };
 
 const genPath = (language, slug) => {
@@ -100,7 +100,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {tags, categories, slug, templateKey} = edge.node.frontmatter;
-    const breadcrumbs = fetch(context.language)
+    const breadcrumbs = fetch(context.language);
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.categories(categories[0]),
@@ -108,7 +108,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     validateCategoryList(edge.node, categories);
     validateCategoryList(edge.node, tags);
     const relatedRatings = rating(posts, edge, pageviews);
-    const _path = genShowPath(edge)
+    const _path = genShowPath(edge);
     createPage({
       path: _path,
       categories: categories,
@@ -128,7 +128,12 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
 
 const createPostsIndexPage = createPage => totalCount => context => {
   const _path = [routes.root, routes.post].join('/');
-  buildPaginationPages(createPage)()(_path, 'posts/index', totalCount, context);
+  buildPaginationPages(createPage)()(
+    genPath(context.language, _path),
+    'posts/index',
+    totalCount,
+    context,
+  );
 };
 
 const createCollectionShowPage = createPage => (
@@ -141,19 +146,24 @@ const createCollectionShowPage = createPage => (
     routes[singuralizeKey],
     _.kebabCase(collection),
   ].join('/');
-  const breadcrumbs = fetch(context.language)
+  const breadcrumbs = fetch(context.language);
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[key](collection),
   ];
-  buildPaginationPages(createPage)()(_path, key, totalCount, {
-    [singuralizeKey]: collection,
-    ...context,
-    layout: {
-      ...context.layout,
-      breadcrumbs: _breadcrumbs,
+  buildPaginationPages(createPage)()(
+    genPath(context.language, _path),
+    key,
+    totalCount,
+    {
+      [singuralizeKey]: collection,
+      ...context,
+      layout: {
+        ...context.layout,
+        breadcrumbs: _breadcrumbs,
+      },
     },
-  });
+  );
 };
 
 const createCategoryShowPage = createPage => category => totalCount => context => {
@@ -174,32 +184,37 @@ const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
     const _path = [routes.root, key].join('/');
     const totalCount = archives[key].length;
-    const breadcrumbs = fetch(context.language)
+    const breadcrumbs = fetch(context.language);
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.monthArchive(key),
     ];
-    buildPaginationPages(createPage)()(_path, 'months', totalCount, {
-      month: key,
-      ids: archives[key],
-      ...context,
-      layout: {
-        ...context.layout,
-        breadcrumbs: _breadcrumbs,
+    buildPaginationPages(createPage)()(
+      genPath(context.language, _path),
+      'months',
+      totalCount,
+      {
+        month: key,
+        ids: archives[key],
+        ...context,
+        layout: {
+          ...context.layout,
+          breadcrumbs: _breadcrumbs,
+        },
       },
-    });
+    );
   });
 };
 
 const createStaticPage = createPage => page => context => {
   const {id} = page.node;
   const {templateKey} = page.node.frontmatter;
-  const breadcrumbs = fetch(context.language)
+  const breadcrumbs = fetch(context.language);
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[templateKey],
   ];
-  const _path = genPath(context.language, templateKey)
+  const _path = genPath(context.language, templateKey);
   createPage({
     path: _path,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
@@ -231,8 +246,6 @@ const collectCollection = posts => key => {
 const collectTags = posts => collectCollection(posts)('tags');
 const collectCategories = posts => collectCollection(posts)('categories');
 
-
-
 /* CreatePages
  *
  *
@@ -257,7 +270,7 @@ exports.createPages = async ({actions, graphql}) => {
         return {...acc, [key]: [...(acc[key] || []), item.node.id]};
       }, {});
 
-      const breadcrumbs = fetch('ja')
+      const breadcrumbs = fetch('ja');
       const context = {
         language: 'ja',
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
@@ -329,9 +342,9 @@ exports.createPages = async ({actions, graphql}) => {
     const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
     return {...acc, [key]: [...(acc[key] || []), item.node.id]};
   }, {});
-  const rows = []
+  const rows = [];
 
-  const breadcrumbs = fetch('en')
+  const breadcrumbs = fetch('en');
   const context = {
     language: 'en',
     layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
@@ -348,7 +361,21 @@ exports.createPages = async ({actions, graphql}) => {
       createStaticPage(withAMP(createPage))(post)(context);
     });
   });
+  createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context);
   createPostShowPage(withAMP(createPage))(posts, rows)(context);
+  createPostsIndexPage(createPage)(posts.length)(context);
+  categories.map(category => {
+    graphql(queries.categoryQuery, {category}).then(result => {
+      const posts = result.data.allMarkdownRemark.edges;
+      createCategoryShowPage(createPage)(category)(posts.length)(context);
+    });
+  });
+  tags.map(tag => {
+    graphql(queries.tagQuery, {tag}).then(result => {
+      const posts = result.data.allMarkdownRemark.edges;
+      createTagShowPage(createPage)(tag)(posts.length)(context);
+    });
+  });
   result;
 };
 
