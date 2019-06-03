@@ -15,13 +15,14 @@ import {insertInArticle} from 'lib/adsense';
 import i18next from 'lib/i18next';
 
 export const BlogPostTemplate = ({
+  amp,
   location,
   post,
   related,
   contentComponent,
   helmet,
 }) => {
-  const content = insertInArticle(false)(post.html);
+  const content = insertInArticle(amp)(post.html);
   const {
     createdAt,
     updatedAt,
@@ -40,7 +41,7 @@ export const BlogPostTemplate = ({
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
-          <Img src={thumbnailUrl} alt={title} />
+          <Img amp={amp} src={thumbnailUrl} alt={title} />
         </div>
         <div className="post-meta-header">
           <div className="timestamp">
@@ -56,7 +57,7 @@ export const BlogPostTemplate = ({
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp={false} />
+        <AdDoubleRect amp={amp} />
         <div className="post-meta-footer">
           <div className="categories">
             Category :
@@ -98,6 +99,7 @@ export default class BlogPost extends React.PureComponent {
     return (
       <Layout {...context}>
         <BlogPostTemplate
+          amp={context.amp}
           post={post}
           related={related}
           location={location}
