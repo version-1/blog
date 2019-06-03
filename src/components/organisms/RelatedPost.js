@@ -1,8 +1,11 @@
 import React from 'react';
 import {meta} from 'config/constants';
 
-const RelatedPost = ({related}) => {
-  const {edges: posts} = related;
+const RelatedPost = edges => {
+  if (edges) {
+    return <div />;
+  }
+  const {edges: posts} = edges.related;
   return (
     <div className="related-posts">
       <h2 className="related-post-title">関連記事</h2>

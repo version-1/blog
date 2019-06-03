@@ -17,6 +17,7 @@ const enIndexQuery = `
           }
           frontmatter {
             slug
+            language
             categories
             tags
             thumbnail
@@ -48,6 +49,7 @@ const jaIndexQuery = `
           }
           frontmatter {
             slug
+            language
             categories
             tags
             thumbnail
