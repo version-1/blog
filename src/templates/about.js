@@ -5,6 +5,7 @@ import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
 import Content, {HTMLContent} from 'components/Content';
+import i18next from 'lib/i18next';
 
 export const AboutTemplate = ({post, contentComponent, helmet}) => {
   const content = post.html;
@@ -53,6 +54,7 @@ export default class AboutPost extends React.PureComponent {
     const context = this.props.pageContext;
     const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
     const content = fluid && [meta.siteUrl, fluid.src].join('');
+    i18next.changeLanguage(context.language);
 
     return (
       <Layout {...context}>
