@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta, constants} = require('./config/constants');
+const {rootPath} = require('./src/lib/routes');
 const fs = require(`fs-extra`);
 const moment = require('moment');
 
@@ -251,17 +252,20 @@ const collectCategories = posts => collectCollection(posts)('categories');
  *
  */
 
+const mainQueries = [
+  {language: 'ja', query: queries.jaIndexQuery},
+  {language: 'en', query: queries.enIndexQuery},
+];
+
 exports.createPages = async ({actions, graphql}) => {
-  graphql(queries.jaIndexQuery)
-    .then(result => {
+  const {createPage} = actions;
+  return new Promise.all(
+    mainQueries.map(async item => {
+      const {language, query} = item;
+      const result = await graphql(query);
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()));
-        return Promise.reject(result.errors);
       }
-      return result;
-    })
-    .then(result => {
-      // Collect Data
       const posts = result.data.allMarkdownRemark.edges;
       const categories = collectCategories(posts);
       const tags = collectTags(posts).filter(tag => tag !== 'dummy');
@@ -269,46 +273,44 @@ exports.createPages = async ({actions, graphql}) => {
         const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
         return {...acc, [key]: [...(acc[key] || []), item.node.id]};
       }, {});
-
-      const breadcrumbs = fetch('ja');
-      const language = 'ja';
+      const breadcrumbs = fetch(language);
       const context = {
         language,
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
-      console.log('posts :', posts.length);
-      console.log('categories :', categories.length);
-      console.log(categories);
-      console.log('tags :', tags.length);
-      console.log(tags);
-      return {posts, tags, categories, context};
-    })
-    .then(async ({posts, tags, categories, context}) => {
-      const {createPage} = actions;
-      const pv = await fetchPv();
-      const {rows} = pv.reports[0].data;
-      const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
-      const {language} = context;
-      graphql(queries.popularPostQuery, {populars}).then(res => {
+
+      let rows = []
+      if (language === 'ja') {
+        const pv = await fetchPv();
+        rows = pv.reports[0].data.rows;
+        const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
+        const {language} = context;
+        graphql(queries.popularPostQuery, {populars}).then(res => {
+          createPage({
+            path: '/',
+            component: path.resolve(`src/templates/index.js`),
+            context: {
+              popPosts: res,
+              ...context,
+            },
+          });
+          // Create 404 Page
+          createPage({
+            path: '/404.html',
+            component: path.resolve(`src/templates/404.js`),
+            context: {
+              popPosts: res,
+              ...context,
+            },
+          });
+        });
+      } else {
         createPage({
-          path: '/',
+          path: rootPath(language),
           component: path.resolve(`src/templates/index.js`),
-          context: {
-            popPosts: res,
-            ...context,
-          },
+          context,
         });
-        // Create 404 Page
-        createPage({
-          path: '/404.html',
-          component: path.resolve(`src/templates/404.js`),
-          context: {
-            popPosts: res,
-            ...context,
-          },
-        });
-      });
-      // Create Pages
+      }
       STATIC_PAGE_LIST.map(page => {
         graphql(queries.staticPageQuery, {templateKey: page}).then(result => {
           const [post] = result.data.allMarkdownRemark.edges;
@@ -322,7 +324,6 @@ exports.createPages = async ({actions, graphql}) => {
       createPostsIndexPage(createPage)(posts.length)(context);
       categories.map(category => {
         graphql(queries.categoryQuery, {category, language}).then(result => {
-          debugger;
           const posts = result.data.allMarkdownRemark.edges;
           createCategoryShowPage(createPage)(category)(posts.length)(context);
         });
@@ -333,54 +334,9 @@ exports.createPages = async ({actions, graphql}) => {
           createTagShowPage(createPage)(tag)(posts.length)(context);
         });
       });
-    });
-  const result = await graphql(queries.enIndexQuery);
-  if (result.errors) {
-    result.errors.forEach(e => console.error(e.toString()));
-  }
-  const posts = result.data.allMarkdownRemark.edges;
-  const categories = collectCategories(posts);
-  const tags = collectTags(posts).filter(tag => tag !== 'dummy');
-  const archiveByMonth = posts.reduce((acc, item) => {
-    const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
-    return {...acc, [key]: [...(acc[key] || []), item.node.id]};
-  }, {});
-  const rows = [];
-
-  const breadcrumbs = fetch('en');
-  const language = 'en';
-  const context = {
-    language,
-    layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
-  };
-  const {createPage} = actions;
-  createPage({
-    path: '/en',
-    component: path.resolve(`src/templates/index.js`),
-    context,
-  });
-  STATIC_PAGE_LIST.map(page => {
-    graphql(queries.staticPageQuery, {templateKey: page}).then(result => {
-      const [post] = result.data.allMarkdownRemark.edges;
-      createStaticPage(withAMP(createPage))(post)(context);
-    });
-  });
-  createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context);
-  createPostShowPage(withAMP(createPage))(posts, rows)(context);
-  createPostsIndexPage(createPage)(posts.length)(context);
-  categories.map(category => {
-    graphql(queries.categoryQuery, {category, language}).then(result => {
-      const posts = result.data.allMarkdownRemark.edges;
-      createCategoryShowPage(createPage)(category)(posts.length)(context);
-    });
-  });
-  tags.map(tag => {
-    graphql(queries.tagQuery, {tag, language}).then(result => {
-      const posts = result.data.allMarkdownRemark.edges;
-      createTagShowPage(createPage)(tag)(posts.length)(context);
-    });
-  });
-  result;
+      return;
+    }),
+  );
 };
 
 exports.onCreateNode = ({node, actions, getNode}) => {
