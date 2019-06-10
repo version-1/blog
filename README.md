@@ -27,6 +27,8 @@ my blog
 
 #### SEO
 
+* [ ] reduce redirect page
+* [ ] stop use a tag and use Link tag
 * [ ] optimize pagespeed (gzip, browser cache etc...)
 
 #### functions
@@ -34,6 +36,7 @@ my blog
 * [ ] internationalize
 * [ ] tweet latest posts & picked posts
 * [ ] support pwa
+
 
 #### develop
 
