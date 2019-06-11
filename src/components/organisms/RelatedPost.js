@@ -1,5 +1,6 @@
 import React from 'react';
 import {meta} from 'config/constants';
+import {Link} from 'gatsby';
 
 const RelatedPost = edges => {
   if (edges) {
@@ -15,7 +16,7 @@ const RelatedPost = edges => {
           const url = meta.images.url + thumbnail;
           return (
             <div key={slug} className="col s12 m4">
-              <a href={slug}>
+              <Link to={slug}>
                 <div className="card related-post">
                   <div className="card-image related-img">
                     <img src={url} alt={title} />
@@ -24,7 +25,7 @@ const RelatedPost = edges => {
                     <h3>{title}</h3>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           );
         })}
