@@ -11,8 +11,7 @@ const CategoryList = ({language, list = []}) => {
     const name = i18next.t(`categories.${category}`);
     return (
       <Link
-        to={category}
-        href={categoryPath(category, language)}
+        to={categoryPath(category, language)}
         className="categories">
         {name}
         {index === list.length - 1 ? '' : ',  '}
