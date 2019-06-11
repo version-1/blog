@@ -1,9 +1,10 @@
 ---
 templateKey: about
+language: ja
 title: プロフィール
 thumbnail: /about/thumbnail.png
 createdAt: 2019-01-01 08:04:08
-updatedAt: 2019-01-01 23:59:08
+updatedAt: 2019-06-11 23:04:12
 tags:
   - dummy
 related:
