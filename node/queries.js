@@ -91,11 +91,14 @@ allMarkdownRemark(
    }`;
 
 const staticPageQuery = `
- query StaticPageQuery($templateKey: String) {
+ query StaticPageQuery($templateKey: String, $language: String) {
     allMarkdownRemark(
       limit: 1,
       filter: {
-        frontmatter: { templateKey: { eq: $templateKey }}
+        frontmatter: {
+          templateKey: { eq: $templateKey }
+          language: { eq: $language }
+        }
       }
     ) {
       edges {

@@ -312,7 +312,7 @@ exports.createPages = async ({actions, graphql}) => {
         });
       }
       STATIC_PAGE_LIST.map(page => {
-        graphql(queries.staticPageQuery, {templateKey: page}).then(result => {
+        graphql(queries.staticPageQuery, {templateKey: page, language}).then(result => {
           const [post] = result.data.allMarkdownRemark.edges;
           createStaticPage(withAMP(createPage))(post)(context);
         });
