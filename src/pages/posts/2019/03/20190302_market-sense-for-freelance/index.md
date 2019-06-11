@@ -4,10 +4,10 @@ language: ja
 title: フリーランスには「マーケット感覚」が必要だと思う
 slug: /2019/03/02/market-sense-for-freelance
 createdAt: 2019-03-02 21:20:17
-updatedAt: 2019-03-04 19:09:05
+updatedAt: 2019-06-11 21:47:14
 thumbnail: /2019/03/20190302_market-sense-for-freelance/thumbnail.jpg
 categories:
-  - engineering
+  - freelance
 tags:
   - freelance
   - opinion
