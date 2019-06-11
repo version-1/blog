@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import moment from 'moment';
 import i18next from 'lib/i18next';
 import {monthArchivePath} from 'lib/routes';
@@ -22,9 +23,9 @@ const ArchiveByMonth = ({language, items}) => {
           if (!items[key]) return;
           return (
             <li key={key}>
-              <a href={monthArchivePath(key, language)}>
+              <Link to={monthArchivePath(key, language)}>
                 {key} ({items[key].length})
-              </a>
+              </Link>
             </li>
           );
         })}

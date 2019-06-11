@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from 'components/layouts/Index';
 import Sidebar from 'components/Sidebar';
 
@@ -8,7 +9,7 @@ const Breadcrumbs = ({context}) => {
       {context.map((item, idx) => {
         return (
           <li className="breadcrumbs-item" key={idx}>
-            <a href={item.path}>{item.label}</a>
+            <Link to={item.path}>{item.label}</Link>
           </li>
         );
       })}

@@ -3,7 +3,7 @@ import {meta} from 'config/constants';
 import {Link} from 'gatsby';
 
 const RelatedPost = edges => {
-  if (edges) {
+  if (!edges) {
     return <div />;
   }
   const {edges: posts} = edges.related;
