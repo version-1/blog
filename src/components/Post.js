@@ -10,13 +10,13 @@ const CategoryList = ({language, list = []}) => {
   return (list || []).map((category, index) => {
     const name = i18next.t(`categories.${category}`);
     return (
-      <a
-        key={category}
+      <Link
+        to={category}
         href={categoryPath(category, language)}
         className="categories">
         {name}
         {index === list.length - 1 ? '' : ',  '}
-      </a>
+      </Link>
     );
   });
 };

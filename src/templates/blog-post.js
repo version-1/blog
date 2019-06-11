@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import PropTypes from 'prop-types'; import Helmet from 'react-helmet';
 import Img from 'components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
@@ -71,7 +70,7 @@ export const BlogPostTemplate = ({
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
-            <p>{i18next.t('labels/share')}</p>
+            <p>{i18next.t('labels.share')}</p>
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>

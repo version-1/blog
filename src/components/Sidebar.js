@@ -35,21 +35,25 @@ export default class Sidebar extends PureComponent {
             </div>
           </div>
         </section>
-        <section className="section">
-          <h3> {i18next.t('labels.sidebar.freelance-title')}</h3>
-          {constants.recomended.map((post, index) => (
-            <Link key={index} to={post.to}>
-              <div className="flat-card">
-                <div className="card-image">
-                  <Img amp={amp} src={post.thumbnail} alt={post.title} />
+        {language !== 'en' ? (
+          <section className="section">
+            <h3> {i18next.t('labels.sidebar.freelance-title')}</h3>
+            {constants.recomended.map((post, index) => (
+              <Link key={index} to={post.to}>
+                <div className="flat-card">
+                  <div className="card-image">
+                    <Img amp={amp} src={post.thumbnail} alt={post.title} />
+                  </div>
+                  <div className="card-content">
+                    <span>{post.title}</span>
+                  </div>
                 </div>
-                <div className="card-content">
-                  <span>{post.title}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </section>
+              </Link>
+            ))}
+          </section>
+        ) : (
+          <></>
+        )}
         <section className="section">
           <ArchiveByMonth language={language} items={archiveByMonth} />
         </section>
