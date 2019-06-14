@@ -4,7 +4,7 @@ language: ja
 title: Gin+Gorm+GraphQL(gqlgen)でCRUDできるAPIをつくってみた
 slug: /2019/05/13/gin-gorm-gqlgen-crud
 createdAt: 2019-05-13 03:56:07
-updatedAt: 2019-05-13 03:56:07
+updatedAt: 2019-06-14 17:32:07
 thumbnail: /2019/05/20190513_gin-gorm-gqlgen-crud/thumbnail.png
 categories:
   - engineering
@@ -299,7 +299,7 @@ scalar Time
 ```
 
 今回のCRUDを実装するための**schema.graphql**がこちらです。基本的な文法はgraphqlのスキーマの文法にそった形で
-定義をしていくのですが、全体の味方としてリソースに変更を加えるスキーマはMutationの構造体にそれ以外の参照系の処理はQuery
+定義をしていくのですが、全体の見方としてリソースに変更を加えるスキーマはMutationの構造体にそれ以外の参照系の処理はQuery
 に書いていきます。そしてそれぞのれメソッドで必要な型（User, Todo, NewUser)を別で定義していくという形です。
 
 これが出来上がると、先ほどのgqlgenコマンドを使ってコードを生成してresolverの実装に移ることができるようになります。
