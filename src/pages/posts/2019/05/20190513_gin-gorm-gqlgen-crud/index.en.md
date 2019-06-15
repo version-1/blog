@@ -3,8 +3,8 @@ templateKey: blog-post
 language: en
 title: Tried to Create Crud API Gin+Gorm+GraphQL(gqlgen)
 slug: /2019/05/13/gin-gorm-gqlgen-crud
-createdAt: 2019-05-13 03:56:07
-updatedAt: 2019-05-13 03:56:07
+createdAt: 2019-06-15 13:15:07
+updatedAt: 2019-06-15 13:15:07
 thumbnail: /2019/05/20190513_gin-gorm-gqlgen-crud/thumbnail.png
 categories:
   - engineering
