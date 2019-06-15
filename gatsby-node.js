@@ -259,7 +259,7 @@ const mainQueries = [
 
 exports.createPages = async ({actions, graphql}) => {
   const {createPage} = actions;
-  return new Promise.all(
+  return Promise.all(
     mainQueries.map(async item => {
       const {language, query} = item;
       const result = await graphql(query);
@@ -357,7 +357,6 @@ exports.onCreateWebpackConfig = ({stage, rules, loaders, plugins, actions}) => {
   actions.setWebpackConfig({
     node: {
       fs: 'empty',
-      console: true,
       net: 'empty',
       tls: 'empty',
     },

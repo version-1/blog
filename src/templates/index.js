@@ -33,8 +33,8 @@ export default class IndexPage extends React.PureComponent {
                 </div>
                 <div className="section-list">
                   <div className="row">
-                    {this.popPosts.map(({node: post}) => (
-                      <Post post={post} key={post.id} />
+                    {this.popPosts.map(({node: post}, index) => (
+                      <Post post={post} key={index} />
                     ))}
                   </div>
                 </div>
@@ -53,8 +53,8 @@ export default class IndexPage extends React.PureComponent {
               </div>
               <div className="section-list">
                 <div className="row">
-                  {posts.map(({node: post}) => (
-                    <Post post={post} key={post.id} />
+                  {posts.map(({node: post}, index) => (
+                    <Post post={post} key={index} />
                   ))}
                 </div>
               </div>
