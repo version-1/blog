@@ -7,7 +7,7 @@ import Pagination from 'components/Pagination';
 export default class MonthsIndex extends PureComponent {
   render() {
     const context = this.props.pageContext;
-    const {index, month, amp, totalPages, layout} = context;
+    const {index, month, amp, totalPages} = context;
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
     return (
       <Layout {...context}>
