@@ -3,7 +3,10 @@ const {routes} = require('../../config/constants');
 const joinLangRoot = (language, path) => ['/', language, path].join('');
 
 const buildPath = (paths, language = 'ja') => {
-  const path = [routes.index, ...paths].join('/').replace('//', '/');
+  const path = [routes.index, ...paths]
+    .join('/')
+    .replace('///', '/')
+    .replace('//', '/');
   if (!language || language === 'ja') {
     return path;
   }
