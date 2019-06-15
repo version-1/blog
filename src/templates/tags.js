@@ -11,7 +11,7 @@ class TagTemplate extends React.PureComponent {
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
     const context = this.props.pageContext;
-    const {tag, index, layout} = context;
+    const {tag, index} = context;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`tags.${tag}`);
 

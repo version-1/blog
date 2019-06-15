@@ -19,7 +19,6 @@ export default class IndexLayout extends React.PureComponent {
     if (process.env.NODE_ENV === 'development') return;
     batchEventRegister(window, constants.selectors, 'click', {
       afterCallback: (ga, ele, params) => {
-        const {eventCategory, eventAction, eventLabel} = params;
         notifier.send({
           channel: '#event',
           icon_emoji: ':ghost:',

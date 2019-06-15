@@ -20,7 +20,7 @@ const Breadcrumbs = ({context}) => {
 class DefaultLayout extends React.PureComponent {
   render() {
     const {language, amp, baseUrl, layout} = this.props;
-    const {archiveByMonth, site, breadcrumbs = []} = layout;
+    const {archiveByMonth, breadcrumbs = []} = layout;
     return (
       <Layout language={language} amp={amp} baseUrl={baseUrl}>
         <div className="row site-container">
