@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: WordPressプラグイン作り方。プラグイン開発の始め方
 slug: /2017/11/06/how-to-develop-wp-plugin
 createdAt: 2017-11-06 10:46:11

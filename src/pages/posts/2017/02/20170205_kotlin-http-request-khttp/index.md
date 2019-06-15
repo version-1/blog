@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Kotlinでhttpリクエストを投げてみる。 (khttp)
 slug: /2017/02/05/kotlin-http-request-khttp
 createdAt: 2017-02-05 22:48:17

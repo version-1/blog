@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: whyから始めよう
 slug: /2018/02/04/action-report-4
 createdAt: 2018-02-04 10:34:48

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 私的お気に入り名言集をあげてみたら未来予測系が多かった
 slug: /2017/10/18/expect-meigen
 createdAt: 2017-10-18 23:58:07

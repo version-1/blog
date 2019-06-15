@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Google Analyticsの情報で人気記事を表示するWordpressプラグインを作ってみた。Google Analytics POP Posts
 slug: /2017/11/17/google-analytics-pop-posts
 createdAt: 2017-11-17 19:08:16

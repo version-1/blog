@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: バンクーバー旅行で現地ミートアップに参加してきた話
 slug: /2019/04/19/went-to-local-meetup-in-vancouver
 createdAt: 2019-04-19 08:58:54

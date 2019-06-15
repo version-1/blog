@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Vagrant ssh の設定の変更
 slug: /2017/01/26/vagrant-ssh
 createdAt: 2017-01-26 23:19:36

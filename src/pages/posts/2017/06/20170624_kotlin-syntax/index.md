@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Kotlin文法-For,Ifなど制御構文編-
 slug: /2017/06/24/kotlin-syntax
 createdAt: 2017-06-24 11:32:23

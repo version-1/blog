@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: エンジニアの味方 - あずきのチカラ - 長時間のPCで疲れた目をリフレッシュ
 slug: /2017/01/31/azuki-power
 createdAt: 2017-01-31 22:48:25

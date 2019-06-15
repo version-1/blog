@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: やりたくないことリスト
 slug: /2018/01/16/action-report-2
 createdAt: 2018-01-16 09:19:56

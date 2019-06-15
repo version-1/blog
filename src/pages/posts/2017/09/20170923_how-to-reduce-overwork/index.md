@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 日本の残業代は安い？残業時間を減らす方法を考えてみた。
 slug: /2017/09/23/how-to-reduce-overwork
 createdAt: 2017-09-23 13:26:40

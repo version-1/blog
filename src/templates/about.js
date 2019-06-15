@@ -6,7 +6,6 @@ import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
 import Content, {HTMLContent} from 'components/Content';
 
-
 export const AboutTemplate = ({post, contentComponent, helmet}) => {
   const content = post.html;
   const {createdAt, updatedAt, title} = post.frontmatter;
@@ -44,19 +43,19 @@ AboutTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
+  helmet: PropTypes.object,
 };
 
 export default class AboutPost extends React.PureComponent {
   render() {
     const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {amp, baseUrl, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
     const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
     const content = fluid && [meta.siteUrl, fluid.src].join('');
 
     return (
-      <Layout amp={amp} baseUrl={baseUrl} layout={layout}>
+      <Layout {...context}>
         <AboutTemplate
           post={post}
           contentComponent={HTMLContent}

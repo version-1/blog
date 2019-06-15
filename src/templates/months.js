@@ -6,29 +6,28 @@ import Pagination from 'components/Pagination';
 
 export default class MonthsIndex extends PureComponent {
   render() {
-    const {index, month, amp, totalPages, layout} = this.props.pageContext;
-    const { edges: posts, totalCount } = this.props.data.allMarkdownRemark;
+    const context = this.props.pageContext;
+    const {index, month, amp, totalPages, layout} = context;
+    const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
     return (
-      <Layout layout={layout}>
+      <Layout {...context}>
         <section className="section">
           <div className="section-container">
             <div className="section-content">
               <div className="section-title">
                 <div className="title-border" />
-                <span className="title">記事一覧 { index } / { totalPages }</span>
+                <span className="title">
+                  記事一覧 {index} / {totalPages}
+                </span>
               </div>
               <div className="section-list">
                 <div className="row">
                   {posts.map(({node: post}) => (
-                    <Post key={post.id} post={post} amp={amp}/>
+                    <Post key={post.id} post={post} amp={amp} />
                   ))}
                 </div>
               </div>
-            <Pagination
-              index={index}
-              namespace={month}
-              count={totalCount}
-            />
+              <Pagination index={index} namespace={month} count={totalCount} />
             </div>
           </div>
         </section>
@@ -41,9 +40,7 @@ export const monthsIndexQuery = graphql`
   query monthsIndexQuery($ids: [String], $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {
-        id: {in: $ids}
-      }
+      filter: {id: {in: $ids}}
       limit: $limit
       skip: $skip
     ) {

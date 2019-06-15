@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: ReactのComponent, PureComponent, SFCComponentのレンダリングの挙動の違いをまとめてみる。
 slug: /2018/08/23/diffrence-between-react-components
 createdAt: 2018-08-23 09:28:55

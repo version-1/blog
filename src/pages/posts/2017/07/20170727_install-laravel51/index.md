@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Laravel5.1をMacにインストール。導入方法の解説。
 slug: /2017/07/27/install-laravel51
 createdAt: 2017-07-27 19:30:38

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 2018年やること・やらないことリスト -
 slug: /2018/01/01/action-report-1225
 createdAt: 2018-01-01 18:04:08

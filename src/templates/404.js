@@ -3,10 +3,10 @@ import Layout from 'components/layouts/Default.js';
 import Post from 'components/Post';
 
 const NotFoundPage = (props) => {
-  const {layout} = props.pageContext;
+  const context = props.pageContext;
   const {edges: posts} = props.pageContext.popPosts.data.allMarkdownRemark;
   return (
-    <Layout layout={layout}>
+    <Layout {...context}>
       <div className="not-found">
         <h1>404 NOT FOUND</h1>
         <p>お探しのページが見つかりません。</p>

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Amazon,楽天,7netで本を紹介できるヨメレバをcssカスタマイズ
 slug: /2017/12/03/yomereba
 createdAt: 2017-12-03 22:40:16

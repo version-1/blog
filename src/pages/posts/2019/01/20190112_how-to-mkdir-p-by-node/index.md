@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Nodejsでmkdir -pをする。再帰的にディレクトリを作成する。
 slug: /2019/01/12/how-to-mkdir-p-by-node
 createdAt: 2019-01-12 11:18:26

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。
 slug: /2018/12/03/freelance-agent-select
 createdAt: 2018-12-03 10:20:03

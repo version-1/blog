@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Kotlin + Spring boot で DBからデータ取得して画面に表示
 slug: /2017/02/13/kotlin-spring-boot
 createdAt: 2017-02-13 07:35:24

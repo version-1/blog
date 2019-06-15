@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 「多動力」を読んでみた感想
 slug: /2017/05/28/tado-ryoku
 createdAt: 2017-05-28 13:44:47

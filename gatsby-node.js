@@ -4,17 +4,32 @@ const webpack = require('webpack');
 const {createFilePath} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta, constants} = require('./config/constants');
+const {rootPath} = require('./src/lib/routes');
 const fs = require(`fs-extra`);
 const moment = require('moment');
 
 const {validateCategoryList, validateTagList} = require('./node/validation');
-const {breadcrumbs} = require('./node/breadcrumbs');
+const {fetch} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
 const {rating} = require('./node/related-post');
+const queries = require('./node/queries.js');
 
 // Constants
 const PER_PAGE = constants.per;
 const STATIC_PAGE_LIST = constants.pages;
+
+const genShowPath = edge => {
+  const {language, slug} = edge.node.frontmatter;
+  const _path = slug || edge.fields.slug;
+  return genPath(language, _path);
+};
+
+const genPath = (language, slug) => {
+  if (language && language !== 'ja') {
+    return ['/', language, '/', slug].join('').replace(/\/\//g, '/');
+  }
+  return slug;
+};
 
 const withAMP = createPage => params => {
   const {path: _path, component, context = {}} = params;
@@ -86,6 +101,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
   posts.forEach(edge => {
     const id = edge.node.id;
     const {tags, categories, slug, templateKey} = edge.node.frontmatter;
+    const breadcrumbs = fetch(context.language);
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.categories(categories[0]),
@@ -93,8 +109,9 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     validateCategoryList(edge.node, categories);
     validateCategoryList(edge.node, tags);
     const relatedRatings = rating(posts, edge, pageviews);
+    const _path = genShowPath(edge);
     createPage({
-      path: slug || edge.node.fields.slug,
+      path: _path,
       categories: categories,
       component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
@@ -112,7 +129,12 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
 
 const createPostsIndexPage = createPage => totalCount => context => {
   const _path = [routes.root, routes.post].join('/');
-  buildPaginationPages(createPage)()(_path, 'posts/index', totalCount, context);
+  buildPaginationPages(createPage)()(
+    genPath(context.language, _path),
+    'posts/index',
+    totalCount,
+    context,
+  );
 };
 
 const createCollectionShowPage = createPage => (
@@ -125,18 +147,24 @@ const createCollectionShowPage = createPage => (
     routes[singuralizeKey],
     _.kebabCase(collection),
   ].join('/');
+  const breadcrumbs = fetch(context.language);
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[key](collection),
   ];
-  buildPaginationPages(createPage)()(_path, key, totalCount, {
-    [singuralizeKey]: collection,
-    ...context,
-    layout: {
-      ...context.layout,
-      breadcrumbs: _breadcrumbs,
+  buildPaginationPages(createPage)()(
+    genPath(context.language, _path),
+    key,
+    totalCount,
+    {
+      [singuralizeKey]: collection,
+      ...context,
+      layout: {
+        ...context.layout,
+        breadcrumbs: _breadcrumbs,
+      },
     },
-  });
+  );
 };
 
 const createCategoryShowPage = createPage => category => totalCount => context => {
@@ -157,31 +185,39 @@ const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
     const _path = [routes.root, key].join('/');
     const totalCount = archives[key].length;
+    const breadcrumbs = fetch(context.language);
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.monthArchive(key),
     ];
-    buildPaginationPages(createPage)()(_path, 'months', totalCount, {
-      month: key,
-      ids: archives[key],
-      ...context,
-      layout: {
-        ...context.layout,
-        breadcrumbs: _breadcrumbs,
+    buildPaginationPages(createPage)()(
+      genPath(context.language, _path),
+      'months',
+      totalCount,
+      {
+        month: key,
+        ids: archives[key],
+        ...context,
+        layout: {
+          ...context.layout,
+          breadcrumbs: _breadcrumbs,
+        },
       },
-    });
+    );
   });
 };
 
 const createStaticPage = createPage => page => context => {
   const {id} = page.node;
   const {templateKey} = page.node.frontmatter;
+  const breadcrumbs = fetch(context.language);
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
     breadcrumbs[templateKey],
   ];
+  const _path = genPath(context.language, templateKey);
   createPage({
-    path: '/' + templateKey,
+    path: _path,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
     context: {
       id,
@@ -211,128 +247,25 @@ const collectCollection = posts => key => {
 const collectTags = posts => collectCollection(posts)('tags');
 const collectCategories = posts => collectCollection(posts)('categories');
 
-const queryIndex = `
-  {
-    allMarkdownRemark(
-      limit: 1000,
-      filter: {
-        frontmatter: { templateKey: { eq: "blog-post" }}
-      }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            categories
-            tags
-            thumbnail
-            templateKey
-            createdAt
-          }
-        }
-      }
-    }
-  }
-`;
+/* CreatePages
+ *
+ *
+ */
 
-const popularPostQuery = `query popularPostQuery($populars: [String]) {
-allMarkdownRemark(
-      filter: {
-        frontmatter: {slug: {in: $populars}}
-      }
-      limit: 6
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            templateKey
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
-          }
-        }
-      }
-    }
-   }`;
+const mainQueries = [
+  {language: 'ja', query: queries.jaIndexQuery},
+  {language: 'en', query: queries.enIndexQuery},
+];
 
-const staticPageQuery = `
- query StaticPageQuery($templateKey: String) {
-    allMarkdownRemark(
-      limit: 1,
-      filter: {
-        frontmatter: { templateKey: { eq: $templateKey }}
-      }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            templateKey
-          }
-        }
-      }
-    }
-  }
-`;
-
-const categoryQuery = `
-  query CategoryPage($category: String) {
-    allMarkdownRemark(
-      limit: 1000
-      filter: {frontmatter: {categories: {in: [$category]}}}
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-        }
-      }
-    }
-  }
-`;
-
-const tagQuery = `
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      limit: 1000
-      filter: {frontmatter: {tags: {in: [$tag]}}}
-    ) {
-      totalCount
-      edges {
-        node {
-          id
-        }
-      }
-    }
-  }
-`;
-
-exports.createPages = ({actions, graphql}) => {
-  return graphql(queryIndex)
-    .then(result => {
+exports.createPages = async ({actions, graphql}) => {
+  const {createPage} = actions;
+  return new Promise.all(
+    mainQueries.map(async item => {
+      const {language, query} = item;
+      const result = await graphql(query);
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()));
-        return Promise.reject(result.errors);
       }
-      return result;
-    })
-    .then(result => {
-      // Collect Data
       const posts = result.data.allMarkdownRemark.edges;
       const categories = collectCategories(posts);
       const tags = collectTags(posts).filter(tag => tag !== 'dummy');
@@ -340,44 +273,46 @@ exports.createPages = ({actions, graphql}) => {
         const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
         return {...acc, [key]: [...(acc[key] || []), item.node.id]};
       }, {});
-
+      const breadcrumbs = fetch(language);
       const context = {
+        language,
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
-      console.log('posts :', posts.length);
-      console.log('categories :', categories.length);
-      console.log(categories);
-      console.log('tags :', tags.length);
-      console.log(tags);
-      return {posts, tags, categories, context};
-    })
-    .then(async ({posts, tags, categories, context}) => {
-      const {createPage} = actions;
-      const pv = await fetchPv();
-      const {rows} = pv.reports[0].data;
-      const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
-      graphql(popularPostQuery, {populars}).then(res => {
+
+      let rows = []
+      if (language === 'ja') {
+        const pv = await fetchPv();
+        rows = pv.reports[0].data.rows;
+        const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
+        const {language} = context;
+        graphql(queries.popularPostQuery, {populars}).then(res => {
+          createPage({
+            path: '/',
+            component: path.resolve(`src/templates/index.js`),
+            context: {
+              popPosts: res,
+              ...context,
+            },
+          });
+          // Create 404 Page
+          createPage({
+            path: '/404.html',
+            component: path.resolve(`src/templates/404.js`),
+            context: {
+              popPosts: res,
+              ...context,
+            },
+          });
+        });
+      } else {
         createPage({
-          path: '/',
+          path: rootPath(language),
           component: path.resolve(`src/templates/index.js`),
-          context: {
-            popPosts: res,
-            ...context,
-          },
+          context,
         });
-        // Create 404 Page
-        createPage({
-          path: '/404.html',
-          component: path.resolve(`src/templates/404.js`),
-          context: {
-            popPosts: res,
-            ...context,
-          },
-        });
-      });
-      // Create Pages
+      }
       STATIC_PAGE_LIST.map(page => {
-        graphql(staticPageQuery, {templateKey: page}).then(result => {
+        graphql(queries.staticPageQuery, {templateKey: page, language}).then(result => {
           const [post] = result.data.allMarkdownRemark.edges;
           createStaticPage(withAMP(createPage))(post)(context);
         });
@@ -388,18 +323,20 @@ exports.createPages = ({actions, graphql}) => {
       createPostShowPage(withAMP(createPage))(posts, rows)(context);
       createPostsIndexPage(createPage)(posts.length)(context);
       categories.map(category => {
-        graphql(categoryQuery, {category}).then(result => {
+        graphql(queries.categoryQuery, {category, language}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
           createCategoryShowPage(createPage)(category)(posts.length)(context);
         });
       });
       tags.map(tag => {
-        graphql(tagQuery, {tag}).then(result => {
+        graphql(queries.tagQuery, {tag, language}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
           createTagShowPage(createPage)(tag)(posts.length)(context);
         });
       });
-    });
+      return;
+    }),
+  );
 };
 
 exports.onCreateNode = ({node, actions, getNode}) => {
@@ -422,7 +359,7 @@ exports.onCreateWebpackConfig = ({stage, rules, loaders, plugins, actions}) => {
       fs: 'empty',
       console: true,
       net: 'empty',
-      tls: 'empty'
+      tls: 'empty',
     },
     resolve: {
       alias: {
