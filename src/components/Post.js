@@ -10,9 +10,7 @@ const CategoryList = ({language, list = []}) => {
   return (list || []).map((category, index) => {
     const name = i18next.t(`categories.${category}`);
     return (
-      <Link
-        to={categoryPath(category, language)}
-        className="categories">
+      <Link to={categoryPath(category, language)} className="categories">
         {name}
         {index === list.length - 1 ? '' : ',  '}
       </Link>
@@ -24,6 +22,7 @@ const Post = ({amp, post}) => {
   const {categories, title, thumbnail, language, slug} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail || defaultImage;
   const path = postShowPath(slug, language);
+  const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;
   return (
     <div className="col s12 m4" key={post.id}>
       <div className="card hoverable">
@@ -48,15 +47,8 @@ const Post = ({amp, post}) => {
             </div>
           </div>
           <div className="post-title">
-            <Link to={path}>{post.frontmatter.title}</Link>
+            <Link to={path}>{_title}</Link>
           </div>
-          <div className="post-detail-footer">
-            <div className="author">
-              <i className="tiny material-icons">person</i>
-              {meta.author}
-            </div>
-          </div>
-          <div className="post-detail" />
         </div>
       </div>
     </div>
