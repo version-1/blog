@@ -4,19 +4,28 @@ const serialize = (params) => {
   return allMarkdownRemark.edges.map(edge => {
     const url =
       site.siteMetadata.siteUrl + edge.node.frontmatter.slug;
-    return Object.assign({}, edge.node.frontmatter, {
+    const result = Object.assign({}, edge.node.frontmatter, {
       description: edge.node.excerpt,
       date: edge.node.frontmatter.createdAt,
       url,
       guid: url,
       custom_elements: [{'content:encoded': edge.node.html}],
     });
+    return result
   });
 }
 
 const queries = language => {
   const array = '["' + language.join('","') + '" ]'
   return `{
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+        site_url: siteUrl
+      }
+    }
     allMarkdownRemark(
       limit: 1000,
       sort: { order: DESC, fields: [frontmatter___createdAt] },
