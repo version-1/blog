@@ -28,7 +28,7 @@ I will explain about entire flow. Next, I will talk about stack point I was work
 
 ## Technolodies I used
 
-Followings are technolody I used this time.
+Followings are technolodies I used this time,
 
 * Docker
 * Dep (package manager)
@@ -67,8 +67,6 @@ In this process, you can focus on writing logic and you don't need to write bori
 
 ## Entire Flow
 
-gqlgenのサンプルにあるのは、TodoリストでGetting Startを見ればするっと始めることができるのですが、
-そこから一歩進んでGormと一緒に使ったり、CRUDしたりするとなるとまた一工夫必要なので簡単な流れを書いていきます。
 The gqlgen sample in the document is baout Todo List. If you will read "Getting Start", you start it easily.
 But, I need to do something when you use it with Gorm or you develop CRUD. So, I will explain those way, So, I will explain those way.
 
@@ -202,11 +200,6 @@ type Todo struct {
 
 &nbsp;
 
-ここではモデルを構造体で定義しているのですが、Gormのドキュメントを見ればわかる通り
-モデル定義に埋め込みを使ってのように書く方がスマートかと思うのですが、
-この書き方だとコードを生成する時のコマンドでエラーがでてしまうので、一旦モデルのフィールドをベタ書きしています。
-(コードとかちゃんと読んだら打開策はあるのかも）
-
 Certainly I think it is preferd to wirte it with embed (please refer to Gorm documents)
 but errors occur when I excecuted. I wrote all attributes..(I would like to know better way..)
 
@@ -243,7 +236,7 @@ models:
     model: gin_graphql/internal/models.User
 ```
 
-### schemaを定義
+### Define Schema
 
 What I introduced until now is to prepare to develop in schema drriven, I'll to write the code and logic for api from now.
 
@@ -313,7 +306,6 @@ So you focus on writing logic between input and output.
 In resolver, write code to get data from database or create some records.
 You have to know that resolver is not overwritten when it is already exist.
 
-というわけでCRUDするresolverは下に貼っておきます。
 Following is resolver I wrote. I can't explain all because it is about gorm and bored for us.
 
 ```go
