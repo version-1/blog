@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CakePHP3 でJSONレスンポンスを返すAPIを作成
 slug: /2017/04/24/cakephp3-json-response
 createdAt: 2017-04-24 01:04:53

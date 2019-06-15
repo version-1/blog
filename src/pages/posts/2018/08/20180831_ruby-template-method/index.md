@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Rubyでデザインパターン。Template Methodパターン。Design Pattern in Ruby
 slug: /2018/08/31/ruby-template-method
 createdAt: 2018-08-31 12:29:41

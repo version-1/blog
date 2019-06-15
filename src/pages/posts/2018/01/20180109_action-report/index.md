@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 会社やめたら、会社に関する不満を考えなくなってきた
 slug: /2018/01/09/action-report
 createdAt: 2018-01-09 01:15:11

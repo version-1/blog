@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Android React Nativationでキーボードと一緒にタブバーも上がってしまう問題の対策
 slug: /2018/08/21/react-navigation-keyboard-move-tabbar-up
 createdAt: 2018-08-21 09:16:12

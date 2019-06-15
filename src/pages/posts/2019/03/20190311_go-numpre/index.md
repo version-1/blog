@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Go言語で数独（ナンプレ）を解くコードを書いてみた
 slug: /2019/03/11/go-numpre
 createdAt: 2019-03-11 10:34:23

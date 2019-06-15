@@ -1,4 +1,21 @@
 {
+  "about": {
+    "profile": "プロフィール"
+  },
+  "labels": {
+    "articles": "記事一覧",
+    "related-posts": "関連記事",
+    "pop-posts": "人気記事",
+    "latest-posts": "新着記事",
+    "share": "この記事が役に立ちましたらシェアをお願いします。",
+    "sidebar": {
+      "profile-title": "プロフィール",
+      "profile-description": "フリーランスのRails&Reactエンジニア10月からフルリモートになりました。プログラミング、旅行、フリーランスの働き方などについてぼちぼち更新していきます。",
+      "profile-link": "プロフィール",
+      "freelance-title": "フリーランスに関する記事",
+      "archive-by-month": "月別アーカイブ"
+    }
+  },
   "categories": {
     "freelance": "フリーランス",
     "engineering": "プログラミング",
@@ -40,6 +57,9 @@
     "gadget": "ガジェット",
     "git": "Git",
     "go": "GO",
+    "gin": "Gin",
+    "gqlgen": "gqlgen",
+    "gorm": "Gorm",
     "hello-world": "Hello World",
     "inkdrop": "Inkdrop",
     "javascript": "Javascript",

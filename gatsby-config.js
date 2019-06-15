@@ -1,4 +1,5 @@
 const {meta} = require('./config/constants');
+const { serialize, queries } = require('./node/rss');
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -128,42 +129,19 @@ module.exports = {
       `,
         feeds: [
           {
-            serialize: ({query: {site, allMarkdownRemark}}) => {
-              return allMarkdownRemark.edges.map(edge => {
-                const url =
-                  site.siteMetadata.siteUrl + edge.node.frontmatter.slug;
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.createdAt,
-                  url,
-                  guid: url,
-                  custom_elements: [{'content:encoded': edge.node.html}],
-                });
-              });
-            },
-            query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___createdAt] },
-                filter: {frontmatter: { templateKey: { eq: "blog-post" } }}
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    fields { slug }
-                    frontmatter {
-                      title
-                      slug
-                      createdAt(formatString: "MMM DD, YYYY")
-                    }
-                  }
-                }
-              }
-            }
-          `,
+            serialize,
+            query: queries(['ja', 'en']),
             output: '/rss.xml',
+          },
+          {
+            serialize,
+            query: queries(['ja']),
+            output: '/rss.ja.xml',
+          },
+          {
+            serialize,
+            query: queries(['en']),
+            output: '/rss.en.xml',
           },
         ],
       },

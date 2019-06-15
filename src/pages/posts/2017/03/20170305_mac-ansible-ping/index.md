@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: (Mac)Ansible を使ってみる
 slug: /2017/03/05/mac-ansible-ping
 createdAt: 2017-03-05 21:02:22

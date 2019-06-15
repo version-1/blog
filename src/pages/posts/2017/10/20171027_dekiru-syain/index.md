@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 書籍紹介。「できる社員」に感じる違和感について。「日本企業の風土組織改革」柴田 昌治
 slug: /2017/10/27/dekiru-syain
 createdAt: 2017-10-27 17:33:42

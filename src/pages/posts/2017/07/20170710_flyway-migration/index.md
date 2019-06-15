@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: データベースマイグレーションにFlyway使ってみた
 slug: /2017/07/10/flyway-migration
 createdAt: 2017-07-10 00:06:59

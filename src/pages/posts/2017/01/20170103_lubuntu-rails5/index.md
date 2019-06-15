@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: LubuntuにRails5 をインストール
 slug: /2017/01/03/lubuntu-rails5
 createdAt: 2017-01-03 15:47:17

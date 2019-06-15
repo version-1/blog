@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: DockerでRails + Nginx + Postgresの環境を構築する。その①
 slug: /2017/11/19/rails-nginx-postgres-on-docker-1
 createdAt: 2017-11-19 16:45:50

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: テレワークでも生産性向上!!ポモドーロテクニックのやり方
 slug: /2017/11/27/pomodoro-techinque
 createdAt: 2017-11-27 17:59:34

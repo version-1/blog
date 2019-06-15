@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: ReactNativeで電話番号フォームを実装する
 slug: /2018/03/25/implement-telephone-input
 createdAt: 2018-03-25 10:00:13

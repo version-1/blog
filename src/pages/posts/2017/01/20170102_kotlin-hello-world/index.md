@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: KotlinでHello world!!
 slug: /2017/01/02/kotlin-hello-world
 createdAt: 2017-01-02 11:01:49

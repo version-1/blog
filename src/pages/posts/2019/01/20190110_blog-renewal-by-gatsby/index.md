@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: WordpressブログをGatsby+Netlifyでリプレースした話。
 slug: /2019/01/10/blog-renewal-by-gatsby
 createdAt: 2019-01-10 12:26:52

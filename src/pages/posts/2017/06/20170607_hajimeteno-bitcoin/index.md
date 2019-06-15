@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: ビットコインって何？これからビットコインを勉強したい人にオススメする「初めてのビットコイン」
 slug: /2017/06/07/hajimeteno-bitcoin
 createdAt: 2017-06-07 00:03:16

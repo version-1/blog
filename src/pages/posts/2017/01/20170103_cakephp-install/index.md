@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CakePHPをインストール
 slug: /2017/01/03/cakephp-install
 createdAt: 2017-01-03 21:09:23

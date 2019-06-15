@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 学ぶことを学ぶ
 slug: /2018/01/23/action-report-3
 createdAt: 2018-01-23 09:23:51

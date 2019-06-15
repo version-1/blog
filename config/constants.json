@@ -115,6 +115,22 @@
       "wordpress",
       "work"
     ],
+    "selectors": [
+      ".js-ga-click-levatech-freelance",
+      ".js-ga-click-it-propartners",
+      ".js-ga-click-potepan-freelance",
+      ".js-ga-click-book-marketing-sence",
+      ".js-ga-click-sns-twitter",
+      ".js-ga-click-sns-facebook",
+      ".js-ga-click-sns-google-plus",
+      ".js-ga-click-sns-reddit",
+      ".js-ga-click-sns-pocket",
+      ".js-ga-click-sns-hatebu",
+      ".js-ga-click-amazon",
+      ".js-ga-click-airtori",
+      ".js-ga-click-global-wifi",
+      ".adsense"
+    ],
     "recomended": [
       {
         "title": "2018年。フリーランス一年やってみての振り返り。",

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: 勝手に大胆予想。次に流行る横文字は「イテレート」
 slug: /2017/09/22/iterate-is-next-word
 createdAt: 2017-09-22 11:08:53
