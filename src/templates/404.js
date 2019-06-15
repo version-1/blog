@@ -3,7 +3,7 @@ import Layout from 'components/layouts/Default.js';
 import Post from 'components/Post';
 
 const NotFoundPage = (props) => {
-  const context = this.props.pageContext;
+  const context = props.pageContext;
   const {edges: posts} = props.pageContext.popPosts.data.allMarkdownRemark;
   return (
     <Layout {...context}>
