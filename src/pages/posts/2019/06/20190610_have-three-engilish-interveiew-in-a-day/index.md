@@ -1,9 +1,10 @@
 ---
 templateKey: blog-post
+language: ja
 title: 6月の土曜日に3人と英語面接したエンジニアの話
 slug: /2019/06/10/have-three-engilish-interveiew-in-a-day
 createdAt: 2019-06-10 09:15:39
-updatedAt: 2019-06-10 12:26:10
+updatedAt: 2019-06-18 16:00:20
 thumbnail: /2019/06/20190610_have-three-engilish-interveiew-in-a-day/thumbnail.jpg
 categories:
   - engineering
