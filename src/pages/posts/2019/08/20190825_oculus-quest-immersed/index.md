@@ -4,8 +4,8 @@ language: ja
 title: Oculus Quest + Immersed VRでVR空間でプログラミング
 slug: /2019/08/25/oculus-quest-immersed
 createdAt: 2019-08-27 08:43:59
-updatedAt: 2019-08-27 08:44:25
-thumbnail: /2019/08/20190825_oculus-quest-immersed/thumbnail.jpg
+updatedAt: 2019-08-27 08:50:10
+thumbnail: /2019/08/20190825_oculus-quest-immersed/thumbnail.png
 categories:
   - engineering
 tags:
