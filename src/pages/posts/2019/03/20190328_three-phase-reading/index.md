@@ -4,7 +4,7 @@ language: ja
 title: 難解な本、分厚い本の読み方。本を三段階に分けてよむ。
 slug: /2019/03/28/three-phase-reading
 createdAt: 2019-03-30 10:40:16
-updatedAt: 2019-03-30 10:40:16
+updatedAt: 2019-09-22 21:04:48
 thumbnail: /2019/03/20190328_three-phase-reading/thumbnail.png
 categories:
   - column
@@ -104,3 +104,7 @@ tags:
 世の中にはたくさんの本がありますが、私たちの時間も限られているのでいかに効率よく情報を収集するのかというのは引き続き伸ばしていきたいですね。
 
 では。
+
+<div class="related-post">
+  <a href="/2019/09/22/summary-of-useful-books">引っ越しの荷物をまとめながら考えた読んでためになった本のリスト</a>
+</div>
