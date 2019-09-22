@@ -5,7 +5,7 @@ const readlineSync = require('readline-sync');
 const moment = require('moment');
 const config = require('../../config/constants');
 
-const {categories} = config.constants;
+const {categories, tags} = config.constants;
 const {postRoot} = config.meta;
 const templateKey = 'blog-post';
 const divider = '---';
@@ -34,6 +34,7 @@ const slugs = files.map(file => {
   const id = path.basename(file.replace(/\/index\.md$/, ''));
   return id.substring(9, id.length);
 });
+const language = readlineSync.question('language? (ja)-> ') || 'ja';
 
 const slug = readlineSync.question('slug? -> ');
 alertForRequired('slug', slug);
@@ -61,6 +62,19 @@ categoryList.forEach(category => {
   }
 });
 
+console.log('input tags');
+const _tags = readlineSync.question(
+  "input tags split by ',' \n -> ",
+);
+const tagList = _tags ? _tags.split(',').map(category => category.trim()) : ['dummy'];
+alertForRequired('tags', tagList);
+tagList.forEach(tag => {
+  if (!tags.includes(tag)) {
+    console.error(`${tag} is not exist in tag list`);
+    process.exit(1);
+  }
+});
+
 const timestamp = moment().format('YYYY-MM-DD HH:mm:ss');
 const time4path = moment(timestamp).format('YYYY/MM');
 const time4slug = moment(timestamp).format('YYYY/MM/DD');
@@ -74,6 +88,7 @@ console.log('');
 console.log('');
 console.log('=== please confirm your input');
 console.log(`path : ${postPath} `);
+console.log(`language : ${language} `);
 console.log(`templateKey : ${templateKey} `);
 console.log(`title : ${title} `);
 console.log(`slug : ${slugPath} `);
@@ -81,6 +96,8 @@ console.log(`createdAt : ${timestamp} `);
 console.log(`updatedAt : ${timestamp} `);
 console.log(`categories : `);
 categoryList.map(item => console.log(' - ', item));
+console.log(`tags : `);
+tagList.map(item => console.log(' - ', item));
 console.log('');
 const q = readlineSync.question('are you sure? ( y/n )');
 console.log('');
@@ -91,12 +108,14 @@ if (!(q === 'yes' || q === 'y')) {
 
 const postMeta = {
   templateKey,
+  language,
   title,
   slug: slugPath,
   createdAt: timestamp,
   updatedAt: timestamp,
   thumbnail,
   categories: categoryList,
+  tags: tagList
 };
 
 const data = [
