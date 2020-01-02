@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: プログラミングを始める前に知っておいて欲しいWebサイトの仕組み
 slug: /2017/11/07/web-structure
 createdAt: 2017-11-07 00:37:09

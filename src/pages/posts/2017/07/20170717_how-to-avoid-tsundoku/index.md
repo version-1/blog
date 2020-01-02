@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: せっかく買った本を読みきれない・途中飽きてしまう方にオススメ - つまみ読み
 slug: /2017/07/17/how-to-avoid-tsundoku
 createdAt: 2017-07-17 01:02:05

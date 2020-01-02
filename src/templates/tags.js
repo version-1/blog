@@ -1,21 +1,22 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
-import i18next from '../lib/i18next';
-import Layout from '../components/layouts/Default';
-import Post from '../components/Post';
-import Pagination from '../components/Pagination';
-import { tagPath } from '../lib/routes';
+import i18next from 'lib/i18next';
+import Layout from 'components/layouts/Default';
+import Post from 'components/Post';
+import Pagination from 'components/Pagination';
+import { tagPath } from 'lib/routes';
 
 class TagTemplate extends React.PureComponent {
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {tag, index, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
+    const {tag, index} = context;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`tags.${tag}`);
 
     return (
-      <Layout layout={layout}>
+      <Layout {...context}>
         <Helmet title={`${heading}| ${title}`} />
         <section className="section">
           <div className="section-container">
@@ -46,7 +47,7 @@ class TagTemplate extends React.PureComponent {
 export default TagTemplate;
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String, $skip: Int!, $limit: Int!) {
+  query TagPage($tag: String, $language: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -56,7 +57,7 @@ export const tagPageQuery = graphql`
       limit: $limit
       skip: $skip
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {tags: {in: [$tag]}}}
+      filter: {frontmatter: {tags: {in: [$tag]}, language: {eq: $language}}}
     ) {
       totalCount
       edges {

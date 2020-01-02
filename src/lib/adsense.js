@@ -1,4 +1,4 @@
-import {isStrictProduction} from '../lib/env';
+import {isStrictProduction} from 'lib/env';
 
 const ampResponsive = `
 <amp-ad

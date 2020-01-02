@@ -1,32 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import Img from '../components/atoms/Image';
+import PropTypes from 'prop-types'; import Helmet from 'react-helmet';
+import Img from 'components/atoms/Image';
 import {graphql} from 'gatsby';
-import {meta} from '../../config/constants';
-import Layout from '../components/layouts/Default';
-import Content, {HTMLContent} from '../components/Content';
-import {AdDoubleRect} from '../components/organisms/Adsence';
-import SNSButtons from '../components/organisms/SNSButtons';
-import CategoryList from '../components/molecules/CategoryList';
-import TagList from '../components/molecules/TagList';
-import RelatedPost from '../components/organisms/RelatedPost';
-import {insertInArticle} from '../lib/adsense';
+import {meta} from 'config/constants';
+import Layout from 'components/layouts/Default';
+import Content, {HTMLContent} from 'components/Content';
+import {AdDoubleRect} from 'components/organisms/Adsence';
+import SNSButtons from 'components/organisms/SNSButtons';
+import CategoryList from 'components/molecules/CategoryList';
+import TagList from 'components/molecules/TagList';
+import RelatedPost from 'components/organisms/RelatedPost';
+import {insertInArticle} from 'lib/adsense';
+import i18next from 'lib/i18next';
 
 export const BlogPostTemplate = ({
+  amp,
   location,
   post,
   related,
   contentComponent,
   helmet,
 }) => {
-  const content = insertInArticle(false)(post.html);
+  const content = insertInArticle(amp)(post.html);
   const {
     createdAt,
     updatedAt,
     title,
     thumbnail,
     categories,
+    language,
     tags,
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
@@ -38,7 +40,7 @@ export const BlogPostTemplate = ({
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
-          <Img src={thumbnailUrl} alt={title} />
+          <Img amp={amp} src={thumbnailUrl} alt={title} />
         </div>
         <div className="post-meta-header">
           <div className="timestamp">
@@ -54,21 +56,21 @@ export const BlogPostTemplate = ({
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp={false} />
+        <AdDoubleRect amp={amp} />
         <div className="post-meta-footer">
           <div className="categories">
             Category :
-            <CategoryList list={categories} />
+            <CategoryList language={language} list={categories} />
           </div>
           <div className="tags">
             Tag :
-            <TagList list={tags} />
+            <TagList language={language} list={tags} />
           </div>
           <div className="author">
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
-            <p>この記事が役に立ちましたらシェアをお願いします。</p>
+            <p>{i18next.t('labels.share')}</p>
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
@@ -90,12 +92,13 @@ export default class BlogPost extends React.PureComponent {
     const {location} = this.props;
     const {allMarkdownRemark: related, markdownRemark: post} = this.props.data;
     const description = post.excerpt;
-    const {baseUrl, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
 
     return (
-      <Layout baseUrl={baseUrl} layout={layout}>
+      <Layout {...context}>
         <BlogPostTemplate
+          amp={context.amp}
           post={post}
           related={related}
           location={location}
@@ -129,6 +132,7 @@ export const pageQuery = graphql`
       html
       excerpt(truncate: true, pruneLength: 300)
       frontmatter {
+        language
         title
         thumbnail
         categories
@@ -151,6 +155,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
+            language
             thumbnail
             templateKey
             categories

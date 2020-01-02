@@ -1,9 +1,10 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランスエンジニアなるには？ソフトランディング戦略でいってみよう
 slug: /2018/11/26/how-to-be-enginner
 createdAt: 2018-11-26 10:25:07
-updatedAt: 2018-11-26 10:25:07
+updatedAt: 2019-03-04 19:24:58
 thumbnail: /2018/11/20181126_how-to-be-enginner/thumbnail.jpg
 categories:
   - freelance
@@ -126,7 +127,7 @@ related:
 
 &nbsp;
 
-<a href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" target="_blank" rel="nofollow noopener">
+<a class="js-ga-click-levatech-freelance" id="levatec-1" href="https://px.a8.net/svt/ejp?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" target="_blank" rel="nofollow noopener">
 <img src="https://www24.a8.net/svt/bgt?aid=180228793939&amp;wid=004&amp;eno=01&amp;mid=s00000011866011005000&amp;mc=1" alt="" width="350" height="240" border="0" /></a>
 <img src="https://www18.a8.net/0.gif?a8mat=2ZAXFD+FJ244Q+2JK4+1TIR4H" alt="" width="1" height="1" border="0" />
 

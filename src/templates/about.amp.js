@@ -1,4 +1,4 @@
-import AboutPost from './about';
+import AboutPost from 'templates/about';
 import {graphql} from 'gatsby';
 export const pageQuery = graphql`
   query AboutAMPPostByID($id: String!) {

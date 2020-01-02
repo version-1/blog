@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: OmniAuthで認証後のコールバックにパラメータを渡す方法
 slug: /2018/07/01/omniauth-callback-pass-params
 createdAt: 2018-07-01 16:24:45

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Vagrant コマンドまとめ（前半戦) | vagrant command line interface
 slug: /2017/03/05/vagrant-commands-summary
 createdAt: 2017-03-05 14:03:12

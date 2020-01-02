@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: dockerコンテナのDBにホストから接続する方法
 slug: /2017/11/29/connect-db-container
 createdAt: 2017-11-29 23:07:19

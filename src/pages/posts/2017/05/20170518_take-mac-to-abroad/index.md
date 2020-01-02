@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Macは海外で使える？海外にPCを持っていくときの素朴な疑問
 slug: /2017/05/18/take-mac-to-abroad
 createdAt: 2017-05-18 07:47:37

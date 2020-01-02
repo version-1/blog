@@ -1,9 +1,10 @@
 ---
 templateKey: blog-post
+language: ja
 title: Gatsbyビルドでprismjsのsyntax hilightが効かなかった話
 slug: /2019/01/11/not-work-prismjs-on-build
 createdAt: 2019-01-11 11:12:15
-updatedAt: 2019-01-11 11:12:15
+updatedAt: 2019-05-07 12:40:38
 thumbnail: /2019/01/20190111_not-work-prismjs-on-build/thumbnail.png
 categories:
   - engineering
@@ -21,7 +22,7 @@ related:
 最近、当サイトをGatsby+Netlifyでリプレースしたのですが、
 
 
-[WordpressブログをGatsby+Netlifyでリプレースした話。](http://localhost:8000/2019/01/10/blog-renewal-by-gatsby)
+[WordpressブログをGatsby+Netlifyでリプレースした話。](/2019/01/10/blog-renewal-by-gatsby)
 
 もともとのWordpressから記事を移行しもろもろレイアウト変えたりの実装
 を終えていざNetlifyにデプロイしてみたところ、
