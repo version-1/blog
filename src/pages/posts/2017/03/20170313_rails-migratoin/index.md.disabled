@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
 language: ja
-title: Rails migratoinコマンドまとめ
+title: Rails migrationコマンドまとめ
 slug: /2017/03/13/rails-migratoin
 createdAt: 2017-03-13 23:21:52
-updatedAt: 2018-08-26 12:14:47
+updatedAt: 2020-01-02 08:50:04
 thumbnail: /2017/03/20170313_rails-migratoin/thumbnail.png
 categories:
   - engineering

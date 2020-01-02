@@ -4,7 +4,7 @@ language: ja
 title: ReactNative+Jestでスナップショットテスト
 slug: /2018/05/20/rn-jest-snapshot-test
 createdAt: 2018-05-20 22:27:28
-updatedAt: 2018-11-08 18:34:01
+updatedAt: 2020-01-02 08:50:04
 thumbnail: /2018/05/20180520_rn-jest-snapshot-test/thumbnail.png
 categories:
   - engineering
