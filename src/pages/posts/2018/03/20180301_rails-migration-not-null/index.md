@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Rails5.1すでに存在するカラムをmigrationでnot nullにする
 slug: /2018/03/01/rails-migration-not-null
 createdAt: 2018-03-01 22:03:57

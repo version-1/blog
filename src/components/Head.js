@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import Helmet from 'react-helmet';
-import favicon from '../assets/images/favicon.ico';
-import { meta } from '../../config/constants';
-import { isStrictProduction } from '../lib/env'
+import favicon from 'assets/images/favicon.ico';
+import { meta } from 'config/constants';
+import { isStrictProduction } from 'lib/env'
 
 export default class Meta extends PureComponent {
   render() {

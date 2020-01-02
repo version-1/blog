@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Railsの便利メソッドをlodashでやると
 slug: /2018/06/11/lodash-instead-of-rails
 createdAt: 2018-06-11 23:29:59

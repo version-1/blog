@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Rails で Ajaxかどうかを見分ける方法 ( Ajaxで .html.erbが読み込まれるのを防ぐ）
 slug: /2017/05/11/how-to-check-if-ajax
 createdAt: 2017-05-11 00:34:36

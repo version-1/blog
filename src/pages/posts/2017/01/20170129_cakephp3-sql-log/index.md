@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CakePHP3でSQLをログに吐き出す方法
 slug: /2017/01/29/cakephp3-sql-log
 createdAt: 2017-01-29 14:27:43

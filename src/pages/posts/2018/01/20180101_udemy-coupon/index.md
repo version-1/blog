@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Udemyでクーポンを利用して、気になるコースをお得に利用する方法
 slug: /2018/01/01/udemy-coupon
 createdAt: 2018-01-01 13:11:24

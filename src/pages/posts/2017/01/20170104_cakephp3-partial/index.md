@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: CakePHP3 テンプレートを共通化。CakePHP部分テンプレート
 slug: /2017/01/04/cakephp3-partial
 createdAt: 2017-01-04 23:47:57

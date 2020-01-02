@@ -1,6 +1,6 @@
 import React from 'react';
-import Img from '../../../components/atoms/Image';
-import pocketIcon from '../../../assets/images/pocket-icon-color.svg';
+import Img from 'components/atoms/Image';
+import pocketIcon from 'assets/images/pocket-icon-color.svg';
 const defaultSize = 45;
 
 const PocketButton = ({amp, url, title, size = defaultSize}) => {

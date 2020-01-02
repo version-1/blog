@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: エンジニアを助けるノート(メモ帳)アプリ Boostnote が快適
 slug: /2017/02/08/bootsnote
 createdAt: 2017-02-08 23:04:35

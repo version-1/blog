@@ -1,21 +1,22 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
-import i18next from '../lib/i18next';
-import Layout from '../components/layouts/Default';
-import Post from '../components/Post';
-import Pagination from '../components/Pagination';
-import { categoryPath } from '../lib/routes';
+import i18next from 'lib/i18next';
+import Layout from 'components/layouts/Default';
+import Post from 'components/Post';
+import Pagination from 'components/Pagination';
+import {categoryPath} from 'lib/routes';
 
 class CategoryTemplate extends React.PureComponent {
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {category, index, layout} = this.props.pageContext;
+    const context = this.props.pageContext;
+    const {index, category} = context;
     const {title} = this.props.data.site.siteMetadata;
     const heading = i18next.t(`categories.${category}`);
 
     return (
-      <Layout layout={layout}>
+      <Layout {...context}>
         <Helmet title={`${heading}| ${title}`} />
         <section className="section">
           <div className="section-container">
@@ -29,12 +30,13 @@ class CategoryTemplate extends React.PureComponent {
                   {posts.map(({node: post}) => (
                     <Post key={post.id} post={post} />
                   ))}
-                </div> </div>
-            <Pagination
-              index={index}
-              namespace={categoryPath(category)}
-              count={totalCount}
-            />
+                </div>
+              </div>
+              <Pagination
+                index={index}
+                namespace={categoryPath(category)}
+                count={totalCount}
+              />
             </div>
           </div>
         </section>
@@ -46,7 +48,7 @@ class CategoryTemplate extends React.PureComponent {
 export default CategoryTemplate;
 
 export const categryPageQuery = graphql`
-  query CategoryPage($category: String, $skip: Int!, $limit: Int!) {
+  query CategoryPage($category: String, $language: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -56,7 +58,7 @@ export const categryPageQuery = graphql`
       limit: $limit
       skip: $skip
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {categories: {in: [$category]}}}
+      filter: {frontmatter: {categories: {in: [$category]}, language: {eq: $language}}}
     ) {
       totalCount
       edges {

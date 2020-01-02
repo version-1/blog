@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: フリーランスは相対取引が自由に働ける道？
 slug: /2018/03/22/trade-of-market-and-direct
 createdAt: 2018-03-22 22:59:16

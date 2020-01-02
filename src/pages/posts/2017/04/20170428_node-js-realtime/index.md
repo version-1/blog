@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+language: ja
 title: Node.js ビットコインの価格をBitFlyer APIを使ってリアルタイムにDBに保存する。
 slug: /2017/04/28/node-js-realtime
 createdAt: 2017-04-28 23:16:17
