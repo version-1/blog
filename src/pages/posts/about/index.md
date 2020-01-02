@@ -4,7 +4,7 @@ language: ja
 title: プロフィール
 thumbnail: /about/thumbnail.png
 createdAt: 2019-01-01 08:04:08
-updatedAt: 2019-06-11 23:04:12
+updatedAt: 2020-01-02 06:16:17
 tags:
   - dummy
 related:
@@ -45,7 +45,7 @@ Rails + React（Redux)メインで自社サービスの開発のお手伝いさ�
 </tr>
 <tr>
   <th>そのほか</th>
-  <td><strong>React Native</strong>, VBA, Git</td>
+  <td><strong>React Native, Circle CI</strong>, VBA, Git</td>
 </tr>
 </tbody>
 </table>
@@ -73,6 +73,15 @@ GatsbyはReactベースの静的サイト構築ライブラリでGatsbyで実装
 Netlifyを利用して配信しています。当サイトの設計・デザイン・コーディング・実装を私自身で担当しています。
 
 使用技術: React, Gatsby, Sass, Netlify, CloudFlare, AWS S3
+
+### マークダウンメモアプリ Papyrus
+
+裏紙のような気軽にマークダウンで書いたり捨てたりできるメモアプリを開発しています。
+現在ベータ版公開中です。
+
+<a href="http://papyrus-app.org/">PaPyrus</a>
+
+使用技術: React, Electron, Go, Next.js
 
 ### Reactで実装したスネークゲーム
 
