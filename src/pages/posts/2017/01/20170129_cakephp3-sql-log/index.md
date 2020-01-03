@@ -4,8 +4,8 @@ language: ja
 title: CakePHP3でSQLをログに吐き出す方法
 slug: /2017/01/29/cakephp3-sql-log
 createdAt: 2017-01-29 14:27:43
-updatedAt: 2018-08-26 12:39:39
-thumbnail: /2017/01/20170129_cakephp3-sql-log/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/01/20170129_cakephp3-sql-log/thumbnail.png
 categories:
   - engineering
 tags:
