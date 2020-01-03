@@ -4,14 +4,14 @@ language: ja
 title: ReactのComponent, PureComponent, SFCComponentのレンダリングの挙動の違いをまとめてみる。
 slug: /2018/08/23/diffrence-between-react-components
 createdAt: 2018-08-23 09:28:55
-updatedAt: 2018-09-02 13:09:21
+updatedAt: 2020-01-02 19:58:35
 thumbnail: /2018/08/20180823_diffrence-between-react-components/thumbnail.png
 categories:
   - engineering
   - react
 tags:
   - react
-  - javacript
+  - javascript
   - frontend
 related:
   - dummy

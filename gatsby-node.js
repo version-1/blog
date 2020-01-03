@@ -279,30 +279,27 @@ exports.createPages = async ({actions, graphql}) => {
         layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
       };
 
-      let rows = []
+      let rows = [];
+      let popPosts = null;
       if (language === 'ja') {
         const pv = await fetchPv();
         rows = pv.reports[0].data.rows;
         const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
-        const {language} = context;
-        graphql(queries.popularPostQuery, {populars}).then(res => {
-          createPage({
-            path: '/',
-            component: path.resolve(`src/templates/index.js`),
-            context: {
-              popPosts: res,
-              ...context,
-            },
-          });
-          // Create 404 Page
-          createPage({
-            path: '/404.html',
-            component: path.resolve(`src/templates/404.js`),
-            context: {
-              popPosts: res,
-              ...context,
-            },
-          });
+        popPosts = await graphql(queries.popularPostQuery, {populars});
+        const _context = {
+          popPosts,
+          ...context,
+        };
+        createPage({
+          path: '/',
+          component: path.resolve(`src/templates/index.js`),
+          context: _context,
+        });
+        // Create 404 Page
+        createPage({
+          path: '/404.html',
+          component: path.resolve(`src/templates/404.js`),
+          context: _context,
         });
       } else {
         createPage({
@@ -311,27 +308,36 @@ exports.createPages = async ({actions, graphql}) => {
           context,
         });
       }
+      // Show Pages
       STATIC_PAGE_LIST.map(page => {
-        graphql(queries.staticPageQuery, {templateKey: page, language}).then(result => {
-          const [post] = result.data.allMarkdownRemark.edges;
-          createStaticPage(withAMP(createPage))(post)(context);
-        });
+        graphql(queries.staticPageQuery, {templateKey: page, language}).then(
+          result => {
+            const [post] = result.data.allMarkdownRemark.edges;
+            createStaticPage(withAMP(createPage))(post)(context);
+          },
+        );
       });
-      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(
-        context,
-      );
       createPostShowPage(withAMP(createPage))(posts, rows)(context);
-      createPostsIndexPage(createPage)(posts.length)(context);
+
+      // Index Pages
+      const _context = {
+        popPosts,
+        ...context,
+      };
+      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(
+        _context,
+      );
+      createPostsIndexPage(createPage)(posts.length)(_context);
       categories.map(category => {
         graphql(queries.categoryQuery, {category, language}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
-          createCategoryShowPage(createPage)(category)(posts.length)(context);
+          createCategoryShowPage(createPage)(category)(posts.length)(_context);
         });
       });
       tags.map(tag => {
         graphql(queries.tagQuery, {tag, language}).then(result => {
           const posts = result.data.allMarkdownRemark.edges;
-          createTagShowPage(createPage)(tag)(posts.length)(context);
+          createTagShowPage(createPage)(tag)(posts.length)(_context);
         });
       });
       return;
