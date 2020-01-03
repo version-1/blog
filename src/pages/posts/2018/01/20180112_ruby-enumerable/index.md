@@ -4,8 +4,8 @@ language: ja
 title: rubyのEnumerableクラスの抽出メソッドまとめ、map、find、reject、select
 slug: /2018/01/12/ruby-enumerable
 createdAt: 2018-01-12 15:35:22
-updatedAt: 2018-08-26 00:57:02
-thumbnail: /2018/01/20180112_ruby-enumerable/thumbnail.jpg
+updatedAt: 2020-01-03 11:26:42
+thumbnail: /2018/01/20180112_ruby-enumerable/thumbnail.png
 categories:
   - engineering
   - rails

@@ -4,8 +4,8 @@ language: ja
 title: Reactでスネークゲーム作ってみた。
 slug: /2018/06/27/react-snake-game-3
 createdAt: 2018-06-27 09:08:48
-updatedAt: 2018-09-02 13:09:21
-thumbnail: /2018/06/20180627_react-snake-game-3/thumbnail.jpg
+updatedAt: 2020-01-03 11:26:42
+thumbnail: /2018/06/20180627_react-snake-game-3/thumbnail.png
 categories:
   - engineering
   - react

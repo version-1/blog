@@ -4,8 +4,8 @@ language: ja
 title: Rails+Devise+LetterOpenerでシードを行う際に、メールがタブで開かれないようにする
 slug: /2018/01/17/rails-letter-opener-seed
 createdAt: 2018-01-17 08:46:26
-updatedAt: 2018-09-02 13:09:21
-thumbnail: /2018/01/20180117_rails-letter-opener-seed/thumbnail.jpg
+updatedAt: 2020-01-03 11:26:42
+thumbnail: /2018/01/20180117_rails-letter-opener-seed/thumbnail.png
 categories:
   - engineering
   - rails
