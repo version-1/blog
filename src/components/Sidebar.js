@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
-import profile from 'assets/images/profile.png';
+import profile from 'assets/images/profile-small.png';
 import Img from 'components/atoms/Image';
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
 import {aboutPath} from 'lib/routes';

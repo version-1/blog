@@ -4,8 +4,8 @@ language: ja
 title: 個人的RubyMineからAtomに切り替えた人おすすめパッケージ
 slug: /2017/04/30/advice-for-rubymine-to-atom
 createdAt: 2017-04-30 12:16:19
-updatedAt: 2018-01-30 23:21:32
-thumbnail: /2017/04/20170430_advice-for-rubymine-to-atom/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/04/20170430_advice-for-rubymine-to-atom/thumbnail.png
 categories:
   - engineering
   - for-beginner

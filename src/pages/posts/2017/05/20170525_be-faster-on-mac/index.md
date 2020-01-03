@@ -4,8 +4,8 @@ language: ja
 title: Mac の簡単設定で作業を高速化。カーソルとポインタのスピードをあげて作業高速化
 slug: /2017/05/25/be-faster-on-mac
 createdAt: 2017-05-25 14:19:14
-updatedAt: 2017-12-22 22:53:28
-thumbnail: /2017/05/20170525_be-faster-on-mac/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/05/20170525_be-faster-on-mac/thumbnail.png
 categories:
   - column
 tags:
