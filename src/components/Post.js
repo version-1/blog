@@ -3,23 +3,10 @@ import {Link} from 'gatsby';
 import Img from 'components/atoms/Image';
 import defaultImage from 'assets/images/default-image.jpg';
 import {meta} from 'config/constants';
-import i18next from 'lib/i18next';
-import {categoryPath, postShowPath} from 'lib/routes';
-
-const CategoryList = ({language, list = []}) => {
-  return (list || []).map((category, index) => {
-    const name = i18next.t(`categories.${category}`);
-    return (
-      <Link to={categoryPath(category, language)} className="categories">
-        {name}
-        {index === list.length - 1 ? '' : ',  '}
-      </Link>
-    );
-  });
-};
+import {postShowPath} from 'lib/routes';
 
 const Post = ({amp, post}) => {
-  const {categories, title, thumbnail, language, slug} = post.frontmatter;
+  const {title, thumbnail, language, slug} = post.frontmatter;
   const thumbnailUrl = meta.images.url + thumbnail || defaultImage;
   const path = postShowPath(slug, language);
   const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;

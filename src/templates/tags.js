@@ -3,42 +3,32 @@ import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
 import i18next from 'lib/i18next';
 import Layout from 'components/layouts/Default';
-import Post from 'components/Post';
-import Pagination from 'components/Pagination';
-import { tagPath } from 'lib/routes';
+import PostList from 'components/organisms/PostList';
+import {tagPath} from 'lib/routes';
 
 class TagTemplate extends React.PureComponent {
+  get pagenationNamespace() {
+    return tagPath(this.props.pageContext.tag);
+  }
+
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
     const context = this.props.pageContext;
-    const {tag, index} = context;
+    const {index, tag} = context;
     const {title} = this.props.data.site.siteMetadata;
-    const heading = i18next.t(`tags.${tag}`);
+    const label = `tags.${tag}`;
+    const heading = i18next.t(label);
 
     return (
       <Layout {...context}>
         <Helmet title={`${heading}| ${title}`} />
-        <section className="section">
-          <div className="section-container">
-            <div className="section-content">
-              <div className="section-title">
-                <div className="title-border" />
-                <span className="title">{heading}</span>
-              </div>
-              <div className="section-list">
-                <div className="row">
-                  {posts.map(({node: post}) => (
-                    <Post key={post.id} post={post} />
-                  ))}
-                </div> </div>
-            <Pagination
-              index={index}
-              namespace={tagPath(tag)}
-              count={totalCount}
-            />
-            </div>
-          </div>
-        </section>
+        <PostList
+          pageIndex={index}
+          titleLabel={label}
+          posts={posts}
+          pagenationNamespace={this.pagenationNamespace}
+          pagenationTotalCount={totalCount}
+        />
       </Layout>
     );
   }
