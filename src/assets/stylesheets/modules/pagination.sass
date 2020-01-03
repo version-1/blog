@@ -10,16 +10,22 @@
     background-color: $co-orange
 
 .pagination-page-link-anker
+  display: block
   color: $co-purewhite
   cursor: pointer
+  padding: 4px 10px
+  @media #{$medium-and-down}
+    padding: 2px 8px
 .pagination-page-link
   background: $co-gray
+  margin-right: 16px
   display: flex
   align-items: center
-  padding: 4px 10px
-  margin-right: 16px
+  transition: .3s
+  &:hover
+    transform: scale(1.1)
+    opacity: .6
   @media #{$medium-and-down}
     font-size: 12px
-    padding: 2px 8px
     margin-right: 8px
 
