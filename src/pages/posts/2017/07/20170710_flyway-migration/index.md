@@ -4,8 +4,8 @@ language: ja
 title: データベースマイグレーションにFlyway使ってみた
 slug: /2017/07/10/flyway-migration
 createdAt: 2017-07-10 00:06:59
-updatedAt: 2018-08-26 11:51:03
-thumbnail: /2017/07/20170710_flyway-migration/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/07/20170710_flyway-migration/thumbnail.png
 categories:
   - engineering
 tags:

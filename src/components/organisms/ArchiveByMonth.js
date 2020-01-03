@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import moment from 'moment';
-import i18next from 'lib/i18next';
 import {monthArchivePath} from 'lib/routes';
+import Title from 'components/molecules/Title';
 
 const ARCHIVE_LIMIT = 12;
 const ArchiveByMonth = ({language, items}) => {
@@ -17,7 +17,7 @@ const ArchiveByMonth = ({language, items}) => {
   });
   return (
     <div className="archive-by-month">
-      <h3>{i18next.t('labels.sidebar.archive-by-month')}</h3>
+      <Title color="skyblue" label="labels.sidebar.archive-by-month" />
       <ul className="archive-by-month-body">
         {sortedKeys.slice(0, ARCHIVE_LIMIT).map(key => {
           if (!items[key]) return <></>;

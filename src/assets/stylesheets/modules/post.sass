@@ -1,12 +1,12 @@
 .post
   h1
     line-height: 1.25
-  padding: 10px 30px
   font-size: 16px
   max-width: 800px
-  width: 100vw
+  width: 796px
   @media #{$medium-and-down}
-    padding: 30px
+    width: 100%
+    padding: 16px
   .post-body
     margin-bottom: 50px
   .post-meta-header
@@ -31,13 +31,14 @@
       align-items: center
       margin: 10px 0
     .category, .tag
+      padding: 0 4px
       margin-left: 10px
-      color: grey
-      border: 2px solid grey
+      color: $co-gray
+      border: 1.5px solid $co-gray
       border-radius: 6px
       &:hover
         color: white
-        background: grey
+        background: $co-gray
   .adsense
     width: 100%
     .ad-in-article-mock, .ad-rect-mock
@@ -120,6 +121,7 @@
     width: 100%
   .thumbnail
     width: 100%
+    padding: 20px 80px
     img
       width: 100%
   video
@@ -127,8 +129,6 @@
     max-height: 500px
     @media #{$medium-and-down}
       width: 100%
-  p
-    font-weight: 100
   table
     width: 100%
     display: table

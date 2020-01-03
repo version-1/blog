@@ -4,8 +4,8 @@ language: ja
 title: GitHub Pagesが便利。簡単にwebアプリのデモを公開するならオススメ
 slug: /2017/10/02/github-pages
 createdAt: 2017-10-02 19:44:09
-updatedAt: 2018-10-19 23:42:49
-thumbnail: /2017/10/20171002_github-pages/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/10/20171002_github-pages/thumbnail.png
 categories:
   - engineering
   - for-beginner

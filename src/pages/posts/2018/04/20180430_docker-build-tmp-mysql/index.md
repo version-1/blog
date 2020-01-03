@@ -4,8 +4,8 @@ language: ja
 title: Dockerで使い捨てできるMysqlコンテナを構築
 slug: /2018/04/30/docker-build-tmp-mysql
 createdAt: 2018-04-30 10:30:54
-updatedAt: 2018-09-02 13:09:21
-thumbnail: /2018/04/20180430_docker-build-tmp-mysql/thumbnail.jpg
+updatedAt: 2020-01-03 11:26:42
+thumbnail: /2018/04/20180430_docker-build-tmp-mysql/thumbnail.png
 categories:
   - engineering
 tags:

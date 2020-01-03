@@ -4,8 +4,8 @@ language: ja
 title: 「多動力」を読んでみた感想
 slug: /2017/05/28/tado-ryoku
 createdAt: 2017-05-28 13:44:47
-updatedAt: 2017-12-22 22:53:22
-thumbnail: /2017/05/20170528_tado-ryoku/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/05/20170528_tado-ryoku/thumbnail.png
 categories:
   - column
 tags:

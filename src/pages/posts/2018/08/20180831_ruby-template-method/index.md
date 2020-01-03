@@ -4,8 +4,8 @@ language: ja
 title: Rubyでデザインパターン。Template Methodパターン。Design Pattern in Ruby
 slug: /2018/08/31/ruby-template-method
 createdAt: 2018-08-31 12:29:41
-updatedAt: 2018-09-02 13:09:21
-thumbnail: /2018/08/20180831_ruby-template-method/thumbnail.jpg
+updatedAt: 2020-01-03 11:26:42
+thumbnail: /2018/08/20180831_ruby-template-method/thumbnail.png
 categories:
   - engineering
   - rails
