@@ -13,11 +13,11 @@ const className = classes => {
 const PageLink = ({content, link, isDisabled, isActive}) => (
   <li
     className={className({
-      'wave-effect': true,
+      'pagination-page-link': true,
       disabled: isDisabled,
       active: isActive,
     })}>
-    <Link to={link}>{content}</Link>
+    <Link className="pagination-page-link-anker" to={link}>{content}</Link>
   </li>
 );
 

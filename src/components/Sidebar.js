@@ -1,11 +1,11 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
-import profile from 'assets/images/profile.png';
-import {constants} from 'config/constants';
+import profile from 'assets/images/profile-small.png';
 import Img from 'components/atoms/Image';
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
 import {aboutPath} from 'lib/routes';
 import i18next from 'lib/i18next';
+import Title from 'components/molecules/Title';
 
 export default class Sidebar extends PureComponent {
   render() {
@@ -13,7 +13,7 @@ export default class Sidebar extends PureComponent {
     return (
       <div className="sidebar">
         <section className="section">
-          <h3>{i18next.t('labels.sidebar.profile-title')}</h3>
+          <Title color="skyblue" label="labels.sidebar.profile-title" />
           <div className="self-introduction">
             <div className="profile-image">
               <Img
@@ -26,7 +26,7 @@ export default class Sidebar extends PureComponent {
               />
             </div>
             <div className="introduction">
-              <p>{i18next.t('labels.sidebar.profile-description')}</p>
+              {i18next.t('labels.sidebar.profile-description')}
               <p>
                 <Link to={aboutPath(language)}>
                   {i18next.t('labels.sidebar.profile-link')}
@@ -35,25 +35,6 @@ export default class Sidebar extends PureComponent {
             </div>
           </div>
         </section>
-        {language !== 'en' ? (
-          <section className="section">
-            <h3> {i18next.t('labels.sidebar.freelance-title')}</h3>
-            {constants.recomended.map((post, index) => (
-              <Link key={index} to={post.to}>
-                <div className="flat-card">
-                  <div className="card-image">
-                    <Img amp={amp} src={post.thumbnail} alt={post.title} />
-                  </div>
-                  <div className="card-content">
-                    <span>{post.title}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </section>
-        ) : (
-          <></>
-        )}
         <section className="section">
           <ArchiveByMonth language={language} items={archiveByMonth} />
         </section>

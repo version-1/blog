@@ -4,8 +4,8 @@ language: ja
 title: Rubyのループ ( while, times ,for , each , step, upto などなど)
 slug: /2017/01/24/ruby-loop
 createdAt: 2017-01-24 23:00:46
-updatedAt: 2018-08-26 12:41:41
-thumbnail: /2017/01/20170124_ruby-loop/thumbnail.jpg
+updatedAt: 2020-01-03 02:34:05
+thumbnail: /2017/01/20170124_ruby-loop/thumbnail.png
 categories:
   - engineering
   - for-beginner

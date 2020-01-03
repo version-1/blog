@@ -62,12 +62,11 @@ const jaIndexQuery = `
   }
 `;
 
-const popularPostQuery = `query popularPostQuery($populars: [String]) {
+const fetchBySlug = `query popularPostQuery($targets: [String]) {
 allMarkdownRemark(
       filter: {
-        frontmatter: {slug: {in: $populars}}
+        frontmatter: {slug: {in: $targets}}
       }
-      limit: 6
     ) {
       totalCount
       edges {
@@ -156,7 +155,7 @@ const tagQuery = `
 module.exports = {
   jaIndexQuery,
   enIndexQuery,
-  popularPostQuery,
+  fetchBySlug,
   staticPageQuery,
   categoryQuery,
   tagQuery

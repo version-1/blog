@@ -1,32 +1,17 @@
 import React from 'react';
 import Layout from 'components/layouts/Default.js';
-import Post from 'components/Post';
+import PostList from 'components/organisms/PostList';
 
-const NotFoundPage = (props) => {
+const NotFoundPage = props => {
   const context = props.pageContext;
-  const {edges: posts} = props.pageContext.popPosts.data.allMarkdownRemark;
+  const posts = context.pickup ? context.pickup.data.allMarkdownRemark.edges : [];
   return (
     <Layout {...context}>
       <div className="not-found">
         <h1>404 NOT FOUND</h1>
         <p>お探しのページが見つかりません。</p>
       </div>
-      <section className="section">
-        <div className="section-container">
-          <div className="section-content">
-            <div className="section-title">
-              <span className="title">人気記事</span>
-            </div>
-            <div className="section-list">
-              <div className="row">
-                {posts.map(({node: post}) => (
-                  <Post post={post} key={post.id} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PostList titleLabel="labels.pickup" posts={posts} />
     </Layout>
   );
 };

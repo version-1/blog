@@ -4,7 +4,7 @@ language: ja
 title: Laravel5.4とVue.jsでSPAを作ってみる。③ -仮想通貨の価格を取得するページを作ってみる-
 slug: /2017/10/14/laravel-vue-spa-3
 createdAt: 2017-10-14 21:59:36
-updatedAt: 2018-08-26 11:34:20
+updatedAt: 2020-01-02 19:10:47
 thumbnail: /2017/10/20171014_laravel-vue-spa-3/thumbnail.jpg
 categories:
   - engineering
@@ -39,7 +39,7 @@ related:
 
 出来上がったものはこちらです。
 
-<video src="https://statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.mp4" controls/>
+<video src="https://statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.mp4" controls ></video>
 
 コインチェックのAPIを利用して、
 実に14種類の仮想通貨のレートを確認できるようにしています。
@@ -49,7 +49,6 @@ related:
 2. 1.のそれぞれの仮想通貨に関して価格を取得
 です。
 
-<div class="adsense-double-rect"></div>
 <h2 class="chapter">同サーバDB内の仮想通貨の一覧を取得</h2>
 
 マイグレーションを書いてDB

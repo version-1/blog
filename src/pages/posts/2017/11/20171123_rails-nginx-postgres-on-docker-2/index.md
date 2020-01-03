@@ -4,8 +4,8 @@ language: ja
 title: DockerでRails + Nginx + Postgresの環境を構築する。その②
 slug: /2017/11/23/rails-nginx-postgres-on-docker-2
 createdAt: 2017-11-23 14:34:17
-updatedAt: 2018-08-26 01:09:02
-thumbnail: /2017/11/20171123_rails-nginx-postgres-on-docker-2/thumbnail.jpg
+updatedAt: 2020-01-03 11:26:42
+thumbnail: /2017/11/20171123_rails-nginx-postgres-on-docker-2/thumbnail.png
 categories:
   - engineering
   - rails

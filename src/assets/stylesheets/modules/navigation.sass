@@ -1,15 +1,19 @@
+.navigation-container
+  background-color: #fdfdfd
+  margin-bottom: 50px
+  box-shadow: 0px 0px 1px 1px #00000010;
 .navigation
+  max-width: $content-width
+  margin: auto
   display: flex
+  align-items: center
   z-index: 1
   justify-content: space-between
-  height: 300px
-  background-color: transparent
   color: $co-black
   @media #{$medium-and-down}
     align-items: center
     justify-content: flex-start
     flex-direction: column
-    height: 150px
   .menu
     position: absolute
     left: 18px
@@ -21,11 +25,14 @@
     display: flex
     font-weight: bold
     padding: 30px
+    padding-left: 0px
     font-size: 20px
     @media #{$medium-and-down}
       padding: 20px
     a
-      color: white
+      color: $co-black
+      &:hover
+        opacity: 0.5
   .nav-links
     @media #{$medium-and-down}
       display: flex
@@ -39,14 +46,14 @@
         display: block
         padding: 10px
         letter-spacing: .05rem
-        font-size: 1.4rem
-        color: white
-        font-weight: 500
+        font-size: 16px
+        color: $co-black
+        transition: .3s
         @media #{$medium-and-down}
           font-size: 12px
       a:hover
-        color: $co-bague
-        font-weight: bold
+        color: $co-lightgreen
+        transform: scale(1.1)
 .sidenav
   .sidenav-title
     color: white
