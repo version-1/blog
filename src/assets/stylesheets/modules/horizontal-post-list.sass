@@ -1,0 +1,52 @@
+.horizontal-post-list-container
+  margin: 50px 0px
+.horizontal-post-list-content
+  .section-title
+    .square
+      color: $co-gray
+      font-size: 18px
+    .square-orange
+      color: $co-orange
+    .square-green
+      color: $co-lightgreen
+    .title
+      font-size: 18px
+      padding: 6px
+      font-weight: 500
+      color: $co-black
+  .post-list
+    width: $content-width
+    overflow: scroll
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+    .row
+      display: flex
+      flex-wrap: nowrap
+      @media #{$medium-and-down}
+        margin-left: unset
+        margin-right: unset
+    .card
+      height: 260px
+      margin: 1.5rem 0;
+      background: $co-purewhite
+      cursor: pointer
+      @media #{$medium-and-down}
+        margin: 10px
+      .card-image img
+        width: 100%
+        box-shadow: 0px 2px 1px 0px #d3d3d34a
+        object-fit: cover
+        @media #{$small-and-down}
+          height: auto
+    .card-container
+      width: 200px
+      min-width: 200px
+      padding: 6px
+    .card-content
+      padding: 4px 0px
+      .post-title
+        font-weight: 500
+        font-size: 12px
+        padding: 4px 8px

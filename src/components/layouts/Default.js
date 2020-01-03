@@ -2,8 +2,7 @@ import React from 'react';
 import {Link} from 'gatsby';
 import Layout from 'components/layouts/Index';
 import Sidebar from 'components/Sidebar';
-import Title from 'components/molecules/Title';
-import Post from 'components/Post';
+import HorizontalPostList from 'components/organisms/HorizontalPostList';
 
 const Breadcrumbs = ({context}) => {
   return (
@@ -28,24 +27,7 @@ class DefaultLayout extends React.PureComponent {
       <Layout language={language} amp={amp} baseUrl={baseUrl}>
         <main className="row container">
           <Breadcrumbs context={breadcrumbs} />
-          {posts.length > 0 ? (
-            <section className="section pickup-list">
-              <div className="section-container">
-                <div className="section-content">
-                  <Title label="labels.pick-up" />
-                  <div className="section-list">
-                    <div className="row">
-                      {posts.map(({node: post}, index) => (
-                        <Post post={post} key={index} />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          ) : (
-            <></>
-          )}
+          <HorizontalPostList titleLabel="labels.pickup" posts={posts} />
           <section className="flex">
             <div className="col s12 m12 l8">
               <div className="main">{this.props.children}</div>
