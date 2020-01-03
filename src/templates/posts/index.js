@@ -1,36 +1,27 @@
 import React, {PureComponent} from 'react';
 import {graphql} from 'gatsby';
 import Layout from 'components/layouts/Default';
-import Post from 'components/Post';
-import Pagination from 'components/Pagination';
 import {postPath} from 'lib/routes';
+import PostList from 'components/organisms/PostList';
 import Title from 'components/molecules/Title';
 
+const pagenationNamespace = postPath()
+
 export default class PostsIndex extends PureComponent {
+
   render() {
     const {index, amp, layout} = this.props.pageContext;
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
     return (
       <Layout layout={layout}>
-        <section className="section">
-          <div className="section-container post-list">
-            <div className="section-content">
-              <Title label="labels.articles" />
-              <div className="section-list">
-                <div className="row">
-                  {posts.map(({node: post}) => (
-                    <Post key={post.id} post={post} amp={amp} />
-                  ))}
-                </div>
-              </div>
-              <Pagination
-                index={index}
-                namespace={postPath()}
-                count={totalCount}
-              />
-            </div>
-          </div>
-        </section>
+        <PostList
+          amp={amp}
+          pageIndex={index}
+          titleLabel="labels.articles"
+          posts={posts}
+          pagenationNamespace={pagenationNamespace}
+          pagenationTotalCount={totalCount}
+        />
       </Layout>
     );
   }
