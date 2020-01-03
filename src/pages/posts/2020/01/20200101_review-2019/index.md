@@ -4,8 +4,8 @@ language: ja
 title: 2019年。フリーランス二年目の振り返り
 slug: /2020/01/01/review-2019
 createdAt: 2020-01-01 23:59:45
-updatedAt: 2020-01-02 06:16:17
-thumbnail: /2020/01/20200101_review-2019/thumbnail.png
+updatedAt: 2020-01-03 00:17:46
+thumbnail: /2020/01/20200101_review-2019/thumbnail-half.png
 categories:
   - freelance
   - engineering
