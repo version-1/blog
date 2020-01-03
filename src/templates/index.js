@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import {graphql} from 'gatsby';
 import {postPath} from 'lib/routes';
 import Layout from 'components/layouts/Default';
-import Post from 'components/Post';
-import Pagination from 'components/Pagination';
-import i18next from 'lib/i18next';
+import PostList from 'components/organisms/PostList';
 
 export default class IndexPage extends React.PureComponent {
   get popPosts() {
@@ -24,44 +22,12 @@ export default class IndexPage extends React.PureComponent {
     const {edges: posts, totalCount} = data.allMarkdownRemark;
     return (
       <Layout {...context}>
-        {this.popPosts.length > 0 && (
-          <section className="section">
-            <div className="section-container">
-              <div className="section-content">
-                <div className="section-title">
-                  <span className="title">{i18next.t('labels.pop-posts')}</span>
-                </div>
-                <div className="section-list">
-                  <div className="row">
-                    {this.popPosts.map(({node: post}, index) => (
-                      <Post post={post} key={index} />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-        <section className="section">
-          <div className="section-container">
-            <div className="section-content">
-              <div className="section-title">
-                <div className="title-border" />
-                <span className="title">
-                  {i18next.t('labels.latest-posts')}
-                </span>
-              </div>
-              <div className="section-list">
-                <div className="row">
-                  {posts.map(({node: post}, index) => (
-                    <Post post={post} key={index} />
-                  ))}
-                </div>
-              </div>
-              <Pagination namespace={postPath()} count={totalCount} />
-            </div>
-          </div>
-        </section>
+        <PostList
+          titleLabel="labels.latest-posts"
+          posts={posts}
+          pagenationNamespace={postPath()}
+          pagenationTotalCount={totalCount}
+        />
       </Layout>
     );
   }

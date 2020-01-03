@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'gatsby';
 import profile from 'assets/images/profile.png';
-import {constants} from 'config/constants';
 import Img from 'components/atoms/Image';
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
 import {aboutPath} from 'lib/routes';
@@ -35,25 +34,6 @@ export default class Sidebar extends PureComponent {
             </div>
           </div>
         </section>
-        {language !== 'en' ? (
-          <section className="section">
-            <h3> {i18next.t('labels.sidebar.freelance-title')}</h3>
-            {constants.recomended.map((post, index) => (
-              <Link key={index} to={post.to}>
-                <div className="flat-card">
-                  <div className="card-image">
-                    <Img amp={amp} src={post.thumbnail} alt={post.title} />
-                  </div>
-                  <div className="card-content">
-                    <span>{post.title}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </section>
-        ) : (
-          <></>
-        )}
         <section className="section">
           <ArchiveByMonth language={language} items={archiveByMonth} />
         </section>

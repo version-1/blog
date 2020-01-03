@@ -3,43 +3,32 @@ import Helmet from 'react-helmet';
 import {graphql} from 'gatsby';
 import i18next from 'lib/i18next';
 import Layout from 'components/layouts/Default';
-import Post from 'components/Post';
-import Pagination from 'components/Pagination';
+import PostList from 'components/organisms/PostList';
 import {categoryPath} from 'lib/routes';
 
 class CategoryTemplate extends React.PureComponent {
+  get pagenationNamespace () {
+    return categoryPath(this.props.pageContext.category)
+  }
+
   render() {
     const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
     const context = this.props.pageContext;
     const {index, category} = context;
     const {title} = this.props.data.site.siteMetadata;
-    const heading = i18next.t(`categories.${category}`);
+    const label = `categories.${category}`;
+    const heading = i18next.t(label)
 
     return (
       <Layout {...context}>
         <Helmet title={`${heading}| ${title}`} />
-        <section className="section">
-          <div className="section-container">
-            <div className="section-content">
-              <div className="section-title">
-                <div className="title-border" />
-                <span className="title">{heading}</span>
-              </div>
-              <div className="section-list">
-                <div className="row">
-                  {posts.map(({node: post}) => (
-                    <Post key={post.id} post={post} />
-                  ))}
-                </div>
-              </div>
-              <Pagination
-                index={index}
-                namespace={categoryPath(category)}
-                count={totalCount}
-              />
-            </div>
-          </div>
-        </section>
+        <PostList
+          pageIndex={index}
+          titleLabel={label}
+          posts={posts}
+          pagenationNamespace={this.pagenationNamespace}
+          pagenationTotalCount={totalCount}
+        />
       </Layout>
     );
   }
@@ -48,7 +37,12 @@ class CategoryTemplate extends React.PureComponent {
 export default CategoryTemplate;
 
 export const categryPageQuery = graphql`
-  query CategoryPage($category: String, $language: String, $skip: Int!, $limit: Int!) {
+  query CategoryPage(
+    $category: String
+    $language: String
+    $skip: Int!
+    $limit: Int!
+  ) {
     site {
       siteMetadata {
         title
@@ -58,7 +52,9 @@ export const categryPageQuery = graphql`
       limit: $limit
       skip: $skip
       sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {categories: {in: [$category]}, language: {eq: $language}}}
+      filter: {
+        frontmatter: {categories: {in: [$category]}, language: {eq: $language}}
+      }
     ) {
       totalCount
       edges {

@@ -1,10 +1,8 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import {rootPath, categoryPath, aboutPath} from 'lib/routes';
-import Img from 'components/atoms/Image';
 
 const menus = language => [
-  {to: rootPath(language), text: 'Top'},
   {to: aboutPath(language), text: 'About'},
   {to: categoryPath('freelance', language), text: 'Freelance'},
   {to: categoryPath('engineering', language), text: 'Programming'},
@@ -28,7 +26,7 @@ const Navbar = class extends React.PureComponent {
     const {amp, language} = this.props;
     const list = menus(language);
     return (
-      <div>
+      <div className="navigation-container">
         <div
           className="navigation"
           role="navigation"

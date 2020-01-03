@@ -1,10 +1,13 @@
+.navigation-container
+  background-color: #fdfdfd
+  margin-bottom: 50px
+  box-shadow: 0px 0px 1px 1px #00000010;
 .navigation
   max-width: $content-width
   margin: auto
   display: flex
   z-index: 1
   justify-content: space-between
-  background-color: transparent
   color: $co-black
   @media #{$medium-and-down}
     align-items: center
@@ -27,6 +30,8 @@
       padding: 20px
     a
       color: $co-black
+      &:hover
+        opacity: 0.5
   .nav-links
     @media #{$medium-and-down}
       display: flex
@@ -40,14 +45,12 @@
         display: block
         padding: 10px
         letter-spacing: .05rem
-        font-size: 1.4rem
+        font-size: 16px
         color: $co-black
-        font-weight: 500
         @media #{$medium-and-down}
           font-size: 12px
       a:hover
-        color: $co-bague
-        font-weight: bold
+        opacity: 0.5
 .sidenav
   .sidenav-title
     color: white
