@@ -11,13 +11,15 @@ const PostList = props => {
     <div className="horizontal-post-list-container">
       <div className="horizontal-post-list">
         <div className="horizontal-post-list-content">
-          <Title title={title} label={titleLabel} />
+          {title && titleLabel ? (
+            <Title title={title} label={titleLabel} />
+          ) : (
+            <></>
+          )}
           <div className="post-list">
-            <div className="row">
-              {posts.map(({node: post}, index) => (
-                <Post post={post} key={index} />
-              ))}
-            </div>
+            {posts.map(({node: post}, index) => (
+              <Post post={post} key={index} />
+            ))}
           </div>
         </div>
       </div>

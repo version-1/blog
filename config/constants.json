@@ -136,23 +136,7 @@
       ".js-ga-click-global-wifi",
       ".adsense"
     ],
-    "recomended": [
-      {
-        "title": "2018年。フリーランス一年やってみての振り返り。",
-        "to": "/2019/01/16/look-back-2018",
-        "thumbnail": "https://statics.ver-1-0.net/uploads/2019/01/20190116_look-back-2018/thumbnail.jpg"
-      },
-      {
-        "title": "フリーランスエンジニアなるには？ソフトランディング戦略でいってみよう",
-        "to": "/2018/11/26/how-to-be-enginner",
-        "thumbnail": "https://statics.ver-1-0.net/uploads/2018/11/20181126_how-to-be-enginner/thumbnail.jpg"
-      },
-      {
-        "title": "フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。",
-        "to": "/2018/12/03/freelance-agent-select",
-        "thumbnail": "https://statics.ver-1-0.net/uploads/2018/12/20181203_freelance-agent-select/thumbnail.jpg"
-      }
-    ],
+    "pickup": ["/2020/01/01/review-2019", "/2019/12/06/how-to-create-logo-for-private-project", "/2019/10/26/move-to-canada-to-find-job"],
     "pages": ["about"]
   }
 }

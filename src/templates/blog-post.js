@@ -9,7 +9,7 @@ import {AdDoubleRect} from 'components/organisms/Adsence';
 import SNSButtons from 'components/organisms/SNSButtons';
 import CategoryList from 'components/molecules/CategoryList';
 import TagList from 'components/molecules/TagList';
-import RelatedPost from 'components/organisms/RelatedPost';
+import BottomPostList from 'components/organisms/BottomPostList';
 import {insertInArticle} from 'lib/adsense';
 import i18next from 'lib/i18next';
 
@@ -17,6 +17,7 @@ export const BlogPostTemplate = ({
   amp,
   location,
   post,
+  pickup,
   related,
   contentComponent,
   helmet,
@@ -75,7 +76,8 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </article>
-      <RelatedPost related={related} />
+      <BottomPostList label="labels.related-posts" posts={related} />
+      <BottomPostList label="labels.pickup" posts={pickup} />
     </section>
   );
 };
@@ -94,6 +96,7 @@ export default class BlogPost extends React.PureComponent {
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
+    const pickup = context.pickup.data.allMarkdownRemark
 
     return (
       <Layout {...context}>
@@ -101,6 +104,7 @@ export default class BlogPost extends React.PureComponent {
           amp={context.amp}
           post={post}
           related={related}
+          pickup={pickup}
           location={location}
           contentComponent={HTMLContent}
           helmet={
