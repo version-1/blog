@@ -96,7 +96,7 @@ export default class BlogPost extends React.PureComponent {
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
-    const pickup = context.pickup.data.allMarkdownRemark
+    const pickup = context.pickup ? context.pickup.data.allMarkdownRemark : {}
 
     return (
       <Layout {...context}>

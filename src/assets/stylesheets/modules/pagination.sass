@@ -3,6 +3,9 @@
   display: flex
   justify-content: center
   text-align: center
+  @media #{$medium-and-down}
+    margin: 0
+    padding: 0
   li.active
     background-color: $co-orange
 
@@ -15,3 +18,8 @@
   align-items: center
   padding: 4px 10px
   margin-right: 16px
+  @media #{$medium-and-down}
+    font-size: 12px
+    padding: 2px 8px
+    margin-right: 8px
+
