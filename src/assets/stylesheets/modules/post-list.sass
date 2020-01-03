@@ -5,19 +5,6 @@
     width: 100%
 .post-list
   width: 100%
-  .section-title
-    .square
-      color: $co-gray
-      font-size: 18px
-    .square-orange
-      color: $co-orange
-    .square-green
-      color: $co-lightgreen
-    .title
-      font-size: 18px
-      padding: 6px
-      font-weight: 500
-      color: $co-black
   .section-list
     .row
       display: flex
@@ -48,11 +35,6 @@
         height: 100%
         box-shadow: 0px 2px 1px 0px #d3d3d34a
         object-fit: cover
-  .pagination
-    text-align: center
-    li.active
-      background-color: $co-orange
-      border-radius: 6px
 .card-content
   padding: 10px 0
   .post-detail-header
@@ -81,11 +63,31 @@
         opacity: .6
   .timestamp
     font-size: 10px
-.not-found
-  padding: 200px 0
-  h1
-    font-size: 4rem
-    text-align: center
-  p
-    text-align: center
 
+.section-title
+  display: flex
+  align-items: center
+  @media #{$medium-and-down}
+    padding: 16px
+  .square
+    display: block
+    background-color: $co-gray
+    height: 18px
+    width: 18px
+    margin-right: 2px
+  .square-black
+    background-color: $co-black
+  .square-orange
+    background-color: $co-orange
+  .square-green
+    background-color: $co-lightgreen
+  .square-blue
+    background-color: #8ea2ef
+  .square-skyblue
+    background-color: #95c9d6
+
+  .title
+    font-size: 18px
+    padding: 6px
+    font-weight: 500
+    color: $co-black

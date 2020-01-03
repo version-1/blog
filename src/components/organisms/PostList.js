@@ -18,7 +18,7 @@ const PostList = props => {
       <div className="post-list">
         <div className="post-list-content">
           {title || titleLabel ? (
-            <Title title={title} label={titleLabel} />
+            <Title color="green" title={title} label={titleLabel} />
           ) : (
             <></>
           )}
