@@ -1,6 +1,8 @@
 .sidebar
   padding: 20px
   padding-left: 40px
+  @media #{$medium-and-down}
+    padding: 10px
   h3
     background: $co-black
     color: white
@@ -30,6 +32,9 @@
   .archive-by-month-body
     margin: 50px 0px
     padding: 0
+    @media #{$medium-and-down}
+      margin: 20px 0
+      padding: 10px
 
 .flat-card
   display: flex

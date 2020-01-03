@@ -280,14 +280,15 @@ exports.createPages = async ({actions, graphql}) => {
       };
 
       let rows = [];
-      let popPosts = null;
+      let pickup = null;
       if (language === 'ja') {
         const pv = await fetchPv();
         rows = pv.reports[0].data.rows;
         const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
-        popPosts = await graphql(queries.popularPostQuery, {populars});
+        const targets = _.uniq(_.concat(constants.pickup, populars));
+        pickup = await graphql(queries.fetchBySlug, {targets});
         const _context = {
-          popPosts,
+          pickup,
           ...context,
         };
         createPage({
@@ -317,11 +318,15 @@ exports.createPages = async ({actions, graphql}) => {
           },
         );
       });
-      createPostShowPage(withAMP(createPage))(posts, rows)(context);
+      createPostShowPage(withAMP(createPage))(posts, rows)({
+        pickupDisabled: true,
+        pickup,
+        ...context,
+      });
 
       // Index Pages
       const _context = {
-        popPosts,
+        pickup,
         ...context,
       };
       createMonthArchivePage(createPage)(context.layout.archiveByMonth)(
