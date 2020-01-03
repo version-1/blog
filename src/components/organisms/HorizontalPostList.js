@@ -11,8 +11,8 @@ const PostList = props => {
     <div className="horizontal-post-list-container">
       <div className="horizontal-post-list">
         <div className="horizontal-post-list-content">
-          {title && titleLabel ? (
-            <Title title={title} label={titleLabel} />
+          {title || titleLabel ? (
+            <Title color="green" title={title} label={titleLabel} />
           ) : (
             <></>
           )}

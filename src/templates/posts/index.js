@@ -3,7 +3,6 @@ import {graphql} from 'gatsby';
 import Layout from 'components/layouts/Default';
 import {postPath} from 'lib/routes';
 import PostList from 'components/organisms/PostList';
-import Title from 'components/molecules/Title';
 
 const pagenationNamespace = postPath()
 
