@@ -1,22 +1,18 @@
 .main
   .section
     .section-title
-      height: 40px
-      .title
-        font-size: 20px
-        font-weight: 500
+      .square
+        color: $co-gray
+        font-size: 18px
+      .square-orange
         color: $co-orange
-        position: relative
-        padding: 0.5em 0
-        margin-left: 30px
-        &:after
-          content: ''
-          display: block
-          height: 6px
-          border-radius: 6px
-          background: -moz-linear-gradient(to right, #e87e3f, #ffff98)
-          background: -webkit-linear-gradient(to right, #e87e3f, #ffff98)
-          background: linear-gradient(to right, #e87e3f, #ffff98)
+      .square-green
+        color: $co-lightgreen
+      .title
+        font-size: 18px
+        padding: 6px
+        font-weight: 500
+        color: $co-black
     .section-list
       .row
         display: flex
@@ -24,22 +20,23 @@
         @media #{$medium-and-down}
           margin-left: unset
           margin-right: unset
-      .row .col
-        float: unset
+      .card-container
+        width: 32%
+        padding: .5%
+        @media #{$medium-and-down}
+          width: 100%
+          padding: 16px;
       .card
-        height: 95%
+        height: 380px
         margin: 1.5rem 0;
-        border-radius: 6px
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 0px -1px rgba(0, 0, 0, 0.12), 0 0px 3px 0 rgba(0, 0, 0, 0.2)
-        &:hover
-          box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19)
+        background: $co-purewhite
+        cursor: pointer
         @media #{$medium-and-down}
           margin: 10px
         .card-image img
-          border-radius: 6px 6px 0px 0px
+          width: 100%
           box-shadow: 0px 2px 1px 0px #d3d3d34a
           object-fit: cover
-          height: 176.25px
           @media #{$small-and-down}
             height: auto
     .pagination
@@ -58,53 +55,19 @@
         align-items: center
         justify-content: flex-end
         color: grey
-      .categories
-        padding-top: 5px
-        color: grey
-        font-weight: 500
+      .timestamp-icon
         font-size: 12px
-        display: flex
-        flex-wrap: wrap
-        align-items: center
-        justify-content: flex-start
-        a:hover
-          color: $co-black
-          font-weight: 700
-        i
-          display: block
-          margin-right: 5px
-      .tags
-        padding-top: 5px
-        color: grey
-        font-weight: 500
-        font-size: 12px
-        display: flex
-        flex-wrap: wrap
-        align-items: center
-        justify-content: flex-start
-        a:hover
-          color: $co-black
-          font-weight: 700
-        i
-          display: block
-          margin-right: 5px
-    .post-detail-footer
-      font-size: 12px
-      padding: 5px 10px
-      .author
-        display: flex
-        align-items: center
-        color: grey
-        position: absolute
-        bottom: 5px
+        margin-right: 2px
+
     .post-title
-      padding: 0 10px
+      padding: 8px 16px
       font-weight: 700
       font-size: 16px
       margin-bottom: 10px
       line-height: 1.25
       a
         color: $co-black
+        text-decoration: none
         &:hover
           opacity: .6
     .timestamp

@@ -1,15 +1,15 @@
 .navigation
+  max-width: $content-width
+  margin: auto
   display: flex
   z-index: 1
   justify-content: space-between
-  height: 300px
   background-color: transparent
   color: $co-black
   @media #{$medium-and-down}
     align-items: center
     justify-content: flex-start
     flex-direction: column
-    height: 150px
   .menu
     position: absolute
     left: 18px
@@ -21,11 +21,12 @@
     display: flex
     font-weight: bold
     padding: 30px
+    padding-left: 0px
     font-size: 20px
     @media #{$medium-and-down}
       padding: 20px
     a
-      color: white
+      color: $co-black
   .nav-links
     @media #{$medium-and-down}
       display: flex
@@ -40,7 +41,7 @@
         padding: 10px
         letter-spacing: .05rem
         font-size: 1.4rem
-        color: white
+        color: $co-black
         font-weight: 500
         @media #{$medium-and-down}
           font-size: 12px

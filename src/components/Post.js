@@ -24,8 +24,8 @@ const Post = ({amp, post}) => {
   const path = postShowPath(slug, language);
   const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;
   return (
-    <div className="col s12 m4" key={post.id}>
-      <div className="card hoverable">
+    <div className="card-container" key={post.id}>
+      <div className="card">
         <div className="card-image">
           <Link to={path}>
             <Img amp={amp} src={thumbnailUrl} alt={title} />
@@ -34,16 +34,12 @@ const Post = ({amp, post}) => {
         <div className="card-content">
           <div className="post-detail-header">
             <div className="created-at">
-              <i className="tiny material-icons">create</i>
+              <i className="timestamp-icon tiny material-icons">create</i>
               <span className="timestamp">{post.frontmatter.createdAt}</span>
             </div>
             <div className="updated-at">
-              <i className="tiny material-icons">autorenew</i>
+              <i className="timestamp-icon material-icons">autorenew</i>
               <span className="timestamp">{post.frontmatter.updatedAt}</span>
-            </div>
-            <div className="categories">
-              <i className="tiny material-icons">list</i>
-              <CategoryList language={language} list={categories} />
             </div>
           </div>
           <div className="post-title">
