@@ -1,9 +1,9 @@
 const {meta} = require('./config/constants');
-const { serialize, queries } = require('./node/rss');
+const {serialize, queries} = require('./node/rss');
 
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -55,7 +55,7 @@ module.exports = {
               noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
             },
           },
-          'gatsby-remark-prismjs'
+          'gatsby-remark-prismjs',
         ],
       },
     },
@@ -66,38 +66,10 @@ module.exports = {
         printAll: true,
         develop: false,
         ignore: ['node_modules/prismjs/'],
-        whitelistPatternsChildren: [/^post/, /^sns-buttons/]
-      }
+        whitelistPatternsChildren: [/^post/, /^sns-buttons/],
+      },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
-    {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        fonts: ['material icons', 'roboto:300,400,500,700'],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: meta.sitemap,
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-
-          allSitePage {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-      }`,
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
