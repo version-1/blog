@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Img from 'components/atoms/Image';
+import Img from 'gatsby-image';
 import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
@@ -28,22 +28,20 @@ export const BlogPostTemplate = ({
     createdAt,
     updatedAt,
     title,
-    thumbnail,
     categories,
     language,
     tags,
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
-  const thumbnailUrl = meta.images.url + thumbnail;
   const url = location.href;
+
   return (
     <section className="section">
       {helmet || ''}
       <article className="post">
-        {' '}
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
-          <Img amp={amp} src={thumbnailUrl} alt={title} />
+          <Img fluid={post.thumbnail.childImageSharp.fluid} alt={title} />
         </div>
         <div className="post-meta-header">
           <div className="timestamp">
@@ -145,6 +143,13 @@ export const pageQuery = graphql`
       id
       html
       excerpt(truncate: true, pruneLength: 300)
+      thumbnail {
+        childImageSharp {
+          fluid(maxWidth: 796) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       frontmatter {
         language
         title
