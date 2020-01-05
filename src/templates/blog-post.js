@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Img from 'gatsby-image';
+import Image from 'components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
@@ -31,8 +31,10 @@ export const BlogPostTemplate = ({
     categories,
     language,
     tags,
+    thumbnail
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
+  const thumbnailUrl = meta.images.url + thumbnail;
   const url = location.href;
 
   return (
@@ -41,7 +43,12 @@ export const BlogPostTemplate = ({
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
-          <Img fluid={post.thumbnail.childImageSharp.fluid} alt={title} />
+          <Image
+            amp={amp}
+            fluid={post.thumbnail.childImageSharp.fluid}
+            src={thumbnailUrl}
+            alt={title}
+          />
         </div>
         <div className="post-meta-header">
           <div className="timestamp">
@@ -96,7 +103,13 @@ export default class BlogPost extends React.PureComponent {
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
-    const {language, amp, baseUrl, layout, pickupDisabled} = this.props.pageContext;
+    const {
+      language,
+      amp,
+      baseUrl,
+      layout,
+      pickupDisabled,
+    } = this.props.pageContext;
     const pickup = this.props.data.pickup.nodes;
     const related = this.props.data.related.nodes;
 

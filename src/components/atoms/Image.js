@@ -10,7 +10,8 @@ const defaults = {
 };
 export default class Image extends React.PureComponent {
   render() {
-    if (this.props.amp) {
+    const {amp, gatsbyImage, gatsbyType} = this.props;
+    if (amp) {
       return (
         <amp-img
           width={this.props.width || defaults.image.width}
@@ -23,8 +24,13 @@ export default class Image extends React.PureComponent {
       );
     }
 
-    if (this.props.gatsbyImage) {
-      return <Img fluid={this.props.fluid} alt={this.props.title} />;
+    if (gatsbyImage) {
+      if (gatsbyType === 'fluid') {
+        return <Img fluid={this.props.fluid} alt={this.props.alt} />;
+      }
+      if (gatsbyType === 'fixed') {
+        return <Img fluid={this.props.fixed} alt={this.props.alt} />;
+      }
     }
     return <img alt={this.props.alt} {...this.props} />;
   }
