@@ -12,7 +12,7 @@ export const AboutTemplate = ({post, contentComponent, helmet}) => {
   const PostContent = contentComponent || Content;
   return (
     <section className="section">
-      {helmet || ''}{' '}
+      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">

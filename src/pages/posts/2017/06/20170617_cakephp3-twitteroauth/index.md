@@ -4,8 +4,8 @@ language: ja
 title: CakePHP3 twitteroauthを使って、tweetする( composer install )
 slug: /2017/06/17/cakephp3-twitteroauth
 createdAt: 2017-06-17 11:52:07
-updatedAt: 2018-08-26 11:55:55
-thumbnail: /2017/06/20170617_cakephp3-twitteroauth/thumbnail.jpg
+updatedAt: 2020-01-05 12:33:00
+thumbnail: /2017/06/20170617_cakephp3-twitteroauth/thumbnail.png
 categories:
   - engineering
 tags:

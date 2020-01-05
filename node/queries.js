@@ -9,21 +9,21 @@ const enIndexQuery = `
         }
       }
     ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            language
-            categories
-            tags
-            thumbnail
-            templateKey
-            createdAt
-          }
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
         }
       }
     }
@@ -41,21 +41,21 @@ const jaIndexQuery = `
         }
       }
     ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            slug
-            language
-            categories
-            tags
-            thumbnail
-            templateKey
-            createdAt
-          }
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
         }
       }
     }
@@ -69,21 +69,21 @@ allMarkdownRemark(
       }
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            templateKey
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
-          }
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
         }
       }
     }
@@ -100,15 +100,21 @@ const staticPageQuery = `
         }
       }
     ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            templateKey
-          }
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
         }
       }
     }
@@ -124,10 +130,8 @@ const categoryQuery = `
       }
     ) {
       totalCount
-      edges {
-        node {
-          id
-        }
+      nodes {
+        id
       }
     }
   }
@@ -142,10 +146,8 @@ const tagQuery = `
       }
     ) {
       totalCount
-      edges {
-        node {
-          id
-        }
+      nodes {
+        id
       }
     }
   }
