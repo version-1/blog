@@ -1,11 +1,32 @@
 import React, {PureComponent} from 'react';
-import {Link} from 'gatsby';
+import {useStaticQuery, graphql, Link} from 'gatsby';
+import Img from 'gatsby-image';
 import profile from 'assets/images/profile-small.png';
-import Img from 'components/atoms/Image';
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
 import {aboutPath} from 'lib/routes';
 import i18next from 'lib/i18next';
 import Title from 'components/molecules/Title';
+
+const Profile = ({ amp  }) => {
+  const data = useStaticQuery(graphql`
+    {
+      profile: file(relativePath: {eq: "profile.png"}) {
+        childImageSharp {
+          fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+        }
+      }
+    }
+  `);
+
+  return (
+    <Img
+      fixed={data.profile.childImageSharp.fixed}
+      alt="profile"
+    />
+  );
+};
 
 export default class Sidebar extends PureComponent {
   render() {
@@ -16,7 +37,7 @@ export default class Sidebar extends PureComponent {
           <Title color="skyblue" label="labels.sidebar.profile-title" />
           <div className="self-introduction">
             <div className="profile-image">
-              <Img
+              <Profile
                 amp={amp}
                 width="100"
                 height="100"

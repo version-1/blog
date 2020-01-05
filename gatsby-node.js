@@ -1,7 +1,10 @@
 const _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
-const {createFilePath} = require('gatsby-source-filesystem');
+const {
+  createFilePath,
+  createRemoteFileNode,
+} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta, constants} = require('./config/constants');
 const {rootPath} = require('./src/lib/routes');
@@ -350,12 +353,43 @@ exports.createPages = async ({actions, graphql}) => {
   );
 };
 
-exports.onCreateNode = ({node, actions, getNode}) => {
-  const {createNodeField} = actions;
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  createTypes(`
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      thumbnail: String
+    }
+  `)
+}
+
+exports.onCreateNode = async ({
+  node,
+  actions,
+  store,
+  cache,
+  createNodeId,
+  getNode,
+}) => {
+  const {createNode, createNodeField} = actions;
   fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({node, getNode});
+    // const thumbnailUrl =  meta.images.url + node.thumbnail
+    // const fileNode = await createRemoteFileNode({
+    //   url: thumbnailUrl,
+    //   parentNodeId: node.id,
+    //   store,
+    //   cache,
+    //   createNode,
+    //   createNodeId
+    // });
+    // if (fileNode) {
+    //   node.thumbnail___NODE = fileNode
+    // }
     createNodeField({
       name: `slug`,
       node,
