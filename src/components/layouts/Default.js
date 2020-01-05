@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'gatsby';
 import Layout from 'components/layouts/Index';
 import Sidebar from 'components/Sidebar';
-import HorizontalPostList from 'components/organisms/HorizontalPostList';
+import PickupList from 'components/organisms/PickupList';
 
 const Breadcrumbs = ({context}) => {
   return (
@@ -20,15 +20,13 @@ const Breadcrumbs = ({context}) => {
 
 class DefaultLayout extends React.PureComponent {
   render() {
-    const {pickup, pickupDisabled, language, amp, baseUrl, layout} = this.props;
+    const {pickupDisabled, pickup, language, amp, baseUrl, layout} = this.props;
     const {archiveByMonth, breadcrumbs = []} = layout;
-    const posts =
-      pickup && !pickupDisabled ? pickup.data.allMarkdownRemark.edges : [];
     return (
       <Layout language={language} amp={amp} baseUrl={baseUrl}>
         <main className="row container">
           <Breadcrumbs context={breadcrumbs} />
-          <HorizontalPostList titleLabel="labels.pickup" posts={posts} />
+          {!pickupDisabled && <PickupList amp={amp} posts={pickup} />}
           <section className="flex">
             <div className="main">{this.props.children}</div>
             <div className="hide-on-med-and-down">

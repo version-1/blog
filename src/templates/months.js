@@ -5,12 +5,25 @@ import PostList from 'components/organisms/PostList';
 
 export default class MonthsIndex extends PureComponent {
   render() {
-    const context = this.props.pageContext;
-    const {index, month, amp, totalPages} = context;
-    const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const title = `記事一覧 ${index} / ${totalPages}`
+    const {
+      index,
+      month,
+      totalPages,
+      language,
+      amp,
+      baseUrl,
+      layout,
+    } = this.props.pageContext;
+    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
+    const {nodes: pickup} = this.props.data.pickup;
+    const title = `記事一覧 ${index} / ${totalPages}`;
     return (
-      <Layout {...context}>
+      <Layout
+        amp={amp}
+        baseUrl={baseUrl}
+        pickup={pickup}
+        language={language}
+        layout={layout}>
         <PostList
           amp={amp}
           title={title}
@@ -25,7 +38,7 @@ export default class MonthsIndex extends PureComponent {
 }
 
 export const monthsIndexQuery = graphql`
-  query monthsIndexQuery($ids: [String], $skip: Int!, $limit: Int!) {
+  query monthsIndexQuery($ids: [String], $skip: Int!, $pickup: [String], $limit: Int!) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___createdAt], order: DESC}
       filter: {id: {in: $ids}}
@@ -33,19 +46,54 @@ export const monthsIndexQuery = graphql`
       skip: $skip
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 796) {
+              ...GatsbyImageSharpFluid
+            }
           }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
+        }
+      }
+    }
+    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+      totalCount
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 796) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }

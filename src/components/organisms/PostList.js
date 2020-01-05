@@ -24,7 +24,7 @@ const PostList = props => {
           )}
           <div className="section-list">
             <div className="row">
-              {posts.map(({node: post}, index) => (
+              {posts.map((post, index) => (
                 <Post post={post} key={index} amp={amp} />
               ))}
             </div>

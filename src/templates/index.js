@@ -6,22 +6,18 @@ import Layout from 'components/layouts/Default';
 import PostList from 'components/organisms/PostList';
 
 export default class IndexPage extends React.PureComponent {
-  get popPosts() {
-    if (!this.props.pageContext.popPosts) {
-      return [];
-    }
-    const {
-      edges: popPosts,
-    } = this.props.pageContext.popPosts.data.allMarkdownRemark;
-    return popPosts;
-  }
-
   render() {
     const {data} = this.props;
-    const context = this.props.pageContext;
-    const {edges: posts, totalCount} = data.allMarkdownRemark;
+    const {nodes: posts, totalCount} = data.allMarkdownRemark;
+    const pickup = data.pickup.nodes;
+    const {language, amp, baseUrl, layout} = this.props.pageContext;
     return (
-      <Layout {...context}>
+      <Layout
+        amp={amp}
+        baseUrl={baseUrl}
+        pickup={pickup}
+        language={language}
+        layout={layout}>
         <PostList
           titleLabel="labels.latest-posts"
           posts={posts}
@@ -42,7 +38,34 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery($language: String!) {
+  query IndexQuery($language: String!, $pickup: [String]) {
+    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+      totalCount
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 796) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {
@@ -51,21 +74,26 @@ export const pageQuery = graphql`
       limit: 18
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            language
-            slug
-            thumbnail
-            templateKey
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 796) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }

@@ -17,7 +17,7 @@ const PostList = props => {
             <></>
           )}
           <div className="post-list">
-            {posts.map(({node: post}, index) => (
+            {posts.map((post, index) => (
               <Post post={post} key={index} />
             ))}
           </div>
