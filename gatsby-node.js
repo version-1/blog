@@ -115,7 +115,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     const _path = genShowPath(edge);
     createPage({
       path: _path,
-      categories: categories,
+      categories,
       component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
         id,
