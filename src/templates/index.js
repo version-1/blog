@@ -9,13 +9,14 @@ export default class IndexPage extends React.PureComponent {
   render() {
     const {data} = this.props;
     const {nodes: posts, totalCount} = data.allMarkdownRemark;
-    const pickup = data.pickup.nodes;
-    const {language, amp, baseUrl, layout} = this.props.pageContext;
+    // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
+    const {pickup, language, amp, baseUrl, layout} = this.props.pageContext;
+    const pickupList = pickup ? data.pickup.nodes: [];
     return (
       <Layout
         amp={amp}
         baseUrl={baseUrl}
-        pickup={pickup}
+        pickup={pickupList}
         language={language}
         layout={layout}>
         <PostList
@@ -39,7 +40,13 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery($language: String!, $pickup: [String]) {
-    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+    pickup: allMarkdownRemark(filter: {
+      frontmatter: {
+        templateKey: {eq: "blog-post"},
+        language: {eq: $language},
+        slug: {in: $pickup},
+        }
+      }) {
       totalCount
       nodes {
         id
