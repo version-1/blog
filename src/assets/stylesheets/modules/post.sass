@@ -120,8 +120,12 @@
     height: 100%
     width: 100%
   .thumbnail
+    margin: auto
     width: 100%
-    padding: 20px 80px
+    max-width: 640px
+    padding: 20px
+    @media #{$medium-and-down}
+      padding: 0
     img
       width: 100%
   video

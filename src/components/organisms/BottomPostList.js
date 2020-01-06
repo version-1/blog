@@ -13,13 +13,12 @@ const BottomPostList = props => {
   }
 
   const _title = title || i18next.t(label)
-  const {edges: _posts} = posts;
   return (
     <div className="bottom-posts">
       <h2 className="bottom-post-title">
         {_title}
       </h2>
-      <HorizontalPostList posts={_posts} />
+      <HorizontalPostList posts={posts} />
     </div>
   );
 };

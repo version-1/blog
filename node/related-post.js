@@ -3,19 +3,20 @@ const moment = require('moment');
 // tagsが一致     + 1
 // あとはpv順
 const rating = (posts, post, pageviews) => {
-  const {categories, tags, slug, createdAt} = post.node.frontmatter;
+  const {categories, tags, slug, createdAt} = post.frontmatter;
   const ratings = posts.reduce((acc, _post) => {
     let rate = 0;
-    if (slug === _post.node.frontmatter.slug) {
+    if (slug === _post.frontmatter.slug) {
       return acc;
     }
-    _post.node.frontmatter.categories.forEach(category => {
+
+    _post.frontmatter.categories.forEach(category => {
       if (categories.includes(category)) {
         rate = rate + 3;
       }
     });
 
-    _post.node.frontmatter.tags.forEach(tag => {
+    _post.frontmatter.tags.forEach(tag => {
       if (tags.includes(tag)) {
         rate = rate + 1;
       }
@@ -30,8 +31,8 @@ const rating = (posts, post, pageviews) => {
       {
         rate,
         pv: Number(pv),
-        createdAt: _post.node.frontmatter.createdAt,
-        slug: _post.node.frontmatter.slug,
+        createdAt: _post.frontmatter.createdAt,
+        slug: _post.frontmatter.slug,
       },
     ];
   }, []);

@@ -7,10 +7,9 @@ import PostList from 'components/organisms/PostList';
 const pagenationNamespace = postPath()
 
 export default class PostsIndex extends PureComponent {
-
   render() {
     const {index, amp, layout} = this.props.pageContext;
-    const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
+    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
     return (
       <Layout layout={layout}>
         <PostList
@@ -37,19 +36,27 @@ export const postsIndexQuery = graphql`
       skip: $skip
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 640) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }

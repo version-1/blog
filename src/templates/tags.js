@@ -12,15 +12,26 @@ class TagTemplate extends React.PureComponent {
   }
 
   render() {
-    const {edges: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const context = this.props.pageContext;
-    const {index, tag} = context;
+    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
+    const {nodes: pickup} = this.props.data.pickup;
+    const {
+      index,
+      tag,
+      language,
+      amp,
+      baseUrl,
+      layout,
+    } = this.props.pageContext;
     const {title} = this.props.data.site.siteMetadata;
     const label = `tags.${tag}`;
     const heading = i18next.t(label);
-
     return (
-      <Layout {...context}>
+      <Layout
+        amp={amp}
+        baseUrl={baseUrl}
+        pickup={pickup}
+        language={language}
+        layout={layout}>
         <Helmet title={`${heading}| ${title}`} />
         <PostList
           pageIndex={index}
@@ -37,7 +48,13 @@ class TagTemplate extends React.PureComponent {
 export default TagTemplate;
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String, $language: String, $skip: Int!, $limit: Int!) {
+  query TagPage(
+    $tag: String
+    $language: String
+    $pickup: [String]
+    $skip: Int!
+    $limit: Int!
+  ) {
     site {
       siteMetadata {
         title
@@ -50,20 +67,54 @@ export const tagPageQuery = graphql`
       filter: {frontmatter: {tags: {in: [$tag]}, language: {eq: $language}}}
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 796) {
+              ...GatsbyImageSharpFluid
+            }
           }
-          frontmatter {
-            title
-            slug
-            thumbnail
-            categories
-            tags
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
+        }
+      }
+    }
+    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+      totalCount
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
