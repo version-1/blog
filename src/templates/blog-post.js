@@ -158,7 +158,7 @@ export const pageQuery = graphql`
       excerpt(truncate: true, pruneLength: 300)
       thumbnail {
         childImageSharp {
-          fluid(maxWidth: 796) {
+          fluid(maxWidth: 640) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -193,7 +193,7 @@ export const pageQuery = graphql`
         }
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 796) {
+            fluid(maxWidth: 200) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -223,7 +223,7 @@ export const pageQuery = graphql`
         }
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 796) {
+            fluid(maxWidth: 200) {
               ...GatsbyImageSharpFluid
             }
           }
