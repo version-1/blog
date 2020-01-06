@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from 'gatsby-image';
 import Title from 'components/molecules/Title';
 import Post from 'components/Post';
 
@@ -18,7 +19,16 @@ const PostList = props => {
           )}
           <div className="post-list">
             {posts.map((post, index) => (
-              <Post post={post} key={index} />
+              <Post
+                thumbnail={
+                  <Img
+                    fixed={post.thumbnail.childImageSharp.fixed}
+                    alt={post.frontmatter.title}
+                  />
+                }
+                post={post}
+                key={index}
+              />
             ))}
           </div>
         </div>

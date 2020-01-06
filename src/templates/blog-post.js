@@ -193,8 +193,8 @@ export const pageQuery = graphql`
         }
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -223,8 +223,8 @@ export const pageQuery = graphql`
         }
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

@@ -54,7 +54,7 @@ export const postsIndexQuery = graphql`
         }
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 796) {
+            fluid(maxWidth: 640) {
               ...GatsbyImageSharpFluid
             }
           }

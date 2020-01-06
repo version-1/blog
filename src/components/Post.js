@@ -3,7 +3,7 @@ import {useStaticQuery, Link} from 'gatsby';
 import Img from 'gatsby-image';
 import {postShowPath} from 'lib/routes';
 
-const Post = ({amp, post}) => {
+const Post = ({amp, thumbnail, post}) => {
   const data = useStaticQuery(graphql`
     {
       defaultImage: file(relativePath: {eq: "default-image.jpg"}) {
@@ -18,7 +18,9 @@ const Post = ({amp, post}) => {
   const defaultImage = data.defaultImage.childImageSharp.fluid;
 
   const {title, language, slug} = post.frontmatter;
-  const {fluid = defaultImage} = post.thumbnail ? post.thumbnail.childImageSharp || {} : {};
+  const {fluid = defaultImage} = post.thumbnail
+    ? post.thumbnail.childImageSharp || {}
+    : {};
   const path = postShowPath(slug, language);
   const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;
   return (
@@ -26,7 +28,7 @@ const Post = ({amp, post}) => {
       <div className="card">
         <div className="card-image">
           <Link to={path}>
-            <Img fluid={fluid} alt={title} />
+            {thumbnail || <Img fluid={fluid} alt={title} />}
           </Link>
         </div>
         <div className="card-content">
