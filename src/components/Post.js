@@ -18,7 +18,7 @@ const Post = ({amp, post}) => {
   const defaultImage = data.defaultImage.childImageSharp.fluid;
 
   const {title, language, slug} = post.frontmatter;
-  const {fluid = defaultImage} = post.thumbnail.childImageSharp || {};
+  const {fluid = defaultImage} = post.thumbnail ? post.thumbnail.childImageSharp || {} : {};
   const path = postShowPath(slug, language);
   const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;
   return (

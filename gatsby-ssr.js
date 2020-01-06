@@ -42,8 +42,8 @@ export const onPreRenderHTML = params => {
   if (!isAMP(pathname)) return;
   const heads = getHeadComponents();
   const titleComponent = heads.find(component => {
-    return component[0] && component[0].type === 'title';
-  })[0];
+    return component && component.type === 'title';
+  });
   const styles = heads.reduce((str, x) => {
     if (x.type === 'style') {
       str += x.props.dangerouslySetInnerHTML.__html.replace(/!important/g, '');
