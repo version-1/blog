@@ -74,7 +74,7 @@ module.exports = {
         printAll: true,
         develop: false,
         ignore: ['node_modules/prismjs/'],
-        whitelistPatternsChildren: [/^post/, /^sns-buttons/],
+        whitelistPatternsChildren: [/^post/, /^sns-buttons/, /^section-title/],
       },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array

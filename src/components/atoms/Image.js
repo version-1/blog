@@ -29,7 +29,7 @@ export default class Image extends React.PureComponent {
         return <Img fluid={this.props.fluid} alt={this.props.alt} />;
       }
       if (gatsbyType === 'fixed') {
-        return <Img fluid={this.props.fixed} alt={this.props.alt} />;
+        return <Img fixed={this.props.fixed} alt={this.props.alt} />;
       }
     }
     return <img alt={this.props.alt} {...this.props} />;
