@@ -19,26 +19,3 @@ my blog
 * prismjs
 * prettier
 
-
-
-# Todo
-
-### Todo
-
-#### SEO
-
-* [ ] reduce redirect page
-* [ ] stop use a tag and use Link tag
-* [ ] optimize pagespeed (gzip, browser cache etc...)
-
-#### functions
-
-* [ ] internationalize
-* [ ] tweet latest posts & picked posts
-* [ ] support pwa
-
-
-#### develop
-
-* [ ] install eslint
-* [ ] install typescript
