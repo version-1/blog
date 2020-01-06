@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types'; import Helmet from 'react-helmet';
-import Img from 'components/atoms/Image';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Image from 'components/atoms/Image';
 import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
@@ -27,21 +28,27 @@ export const BlogPostTemplate = ({
     createdAt,
     updatedAt,
     title,
-    thumbnail,
     categories,
     language,
     tags,
+    thumbnail
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
   const thumbnailUrl = meta.images.url + thumbnail;
   const url = location.href;
+
   return (
     <section className="section">
       {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
-          <Img amp={amp} src={thumbnailUrl} alt={title} />
+          <Image
+            amp={amp}
+            fluid={post.thumbnail.childImageSharp.fluid}
+            src={thumbnailUrl}
+            alt={title}
+          />
         </div>
         <div className="post-meta-header">
           <div className="timestamp">
@@ -92,14 +99,28 @@ BlogPostTemplate.propTypes = {
 export default class BlogPost extends React.PureComponent {
   render() {
     const {location} = this.props;
-    const {allMarkdownRemark: related, markdownRemark: post} = this.props.data;
+    const {markdownRemark: post} = this.props.data;
     const description = post.excerpt;
     const context = this.props.pageContext;
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
-    const pickup = context.pickup ? context.pickup.data.allMarkdownRemark : {}
+    const {
+      language,
+      amp,
+      baseUrl,
+      layout,
+      pickupDisabled,
+    } = this.props.pageContext;
+    const pickup = this.props.data.pickup.nodes;
+    const related = this.props.data.related.nodes;
 
     return (
-      <Layout {...context}>
+      <Layout
+        amp={amp}
+        baseUrl={baseUrl}
+        pickup={pickup}
+        pickupDisabled={pickupDisabled}
+        language={language}
+        layout={layout}>
         <BlogPostTemplate
           amp={context.amp}
           post={post}
@@ -130,11 +151,18 @@ BlogPost.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!, $related: [String]) {
+  query BlogPostByID($id: String!, $pickup: [String], $related: [String]) {
     markdownRemark(id: {eq: $id}) {
       id
       html
       excerpt(truncate: true, pruneLength: 300)
+      thumbnail {
+        childImageSharp {
+          fluid(maxWidth: 640) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       frontmatter {
         language
         title
@@ -145,27 +173,59 @@ export const pageQuery = graphql`
         updatedAt(formatString: "MMM DD, YYYY")
       }
     }
-    allMarkdownRemark(
+    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+      totalCount
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    related: allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {frontmatter: {slug: {in: $related}}}
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            slug
-            language
-            thumbnail
-            templateKey
-            categories
-            tags
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }

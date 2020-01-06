@@ -6,22 +6,19 @@ import Layout from 'components/layouts/Default';
 import PostList from 'components/organisms/PostList';
 
 export default class IndexPage extends React.PureComponent {
-  get popPosts() {
-    if (!this.props.pageContext.popPosts) {
-      return [];
-    }
-    const {
-      edges: popPosts,
-    } = this.props.pageContext.popPosts.data.allMarkdownRemark;
-    return popPosts;
-  }
-
   render() {
     const {data} = this.props;
-    const context = this.props.pageContext;
-    const {edges: posts, totalCount} = data.allMarkdownRemark;
+    const {nodes: posts, totalCount} = data.allMarkdownRemark;
+    // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
+    const {pickup, language, amp, baseUrl, layout} = this.props.pageContext;
+    const pickupList = pickup ? data.pickup.nodes: [];
     return (
-      <Layout {...context}>
+      <Layout
+        amp={amp}
+        baseUrl={baseUrl}
+        pickup={pickupList}
+        language={language}
+        layout={layout}>
         <PostList
           titleLabel="labels.latest-posts"
           posts={posts}
@@ -42,7 +39,40 @@ IndexPage.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery($language: String!) {
+  query IndexQuery($language: String!, $pickup: [String]) {
+    pickup: allMarkdownRemark(filter: {
+      frontmatter: {
+        templateKey: {eq: "blog-post"},
+        language: {eq: $language},
+        slug: {in: $pickup},
+        }
+      }) {
+      totalCount
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          tags
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
       filter: {
@@ -51,21 +81,26 @@ export const pageQuery = graphql`
       limit: 18
     ) {
       totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            language
-            slug
-            thumbnail
-            templateKey
-            categories
-            createdAt(formatString: "MMM DD, YYYY")
-            updatedAt(formatString: "MMM DD, YYYY")
+      nodes {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          language
+          slug
+          thumbnail
+          templateKey
+          categories
+          createdAt(formatString: "MMM DD, YYYY")
+          updatedAt(formatString: "MMM DD, YYYY")
+        }
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 796) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }

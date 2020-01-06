@@ -1,7 +1,10 @@
 const _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
-const {createFilePath} = require('gatsby-source-filesystem');
+const {
+  createFilePath,
+  createRemoteFileNode,
+} = require('gatsby-source-filesystem');
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta, constants} = require('./config/constants');
 const {rootPath} = require('./src/lib/routes');
@@ -19,7 +22,7 @@ const PER_PAGE = constants.per;
 const STATIC_PAGE_LIST = constants.pages;
 
 const genShowPath = edge => {
-  const {language, slug} = edge.node.frontmatter;
+  const {language, slug} = edge.frontmatter;
   const _path = slug || edge.fields.slug;
   return genPath(language, _path);
 };
@@ -99,20 +102,20 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
 
 const createPostShowPage = createPage => (posts, pageviews) => context => {
   posts.forEach(edge => {
-    const id = edge.node.id;
-    const {tags, categories, slug, templateKey} = edge.node.frontmatter;
+    const id = edge.id;
+    const {tags, categories, slug, templateKey} = edge.frontmatter;
     const breadcrumbs = fetch(context.language);
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
       breadcrumbs.categories(categories[0]),
     ];
-    validateCategoryList(edge.node, categories);
-    validateCategoryList(edge.node, tags);
+    validateCategoryList(edge, categories);
+    validateCategoryList(edge, tags);
     const relatedRatings = rating(posts, edge, pageviews);
     const _path = genShowPath(edge);
     createPage({
       path: _path,
-      categories: categories,
+      categories,
       component: path.resolve(`src/templates/${String(templateKey)}.js`),
       context: {
         id,
@@ -208,8 +211,8 @@ const createMonthArchivePage = createPage => archives => context => {
 };
 
 const createStaticPage = createPage => page => context => {
-  const {id} = page.node;
-  const {templateKey} = page.node.frontmatter;
+  const {id} = page;
+  const {templateKey} = page.frontmatter;
   const breadcrumbs = fetch(context.language);
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
@@ -234,9 +237,9 @@ const collectCollection = posts => key => {
   return _.uniq(
     _.compact(
       _.flatten(
-        posts.map(edge => {
-          if (_.get(edge, `node.frontmatter.${key}`)) {
-            return edge.node.frontmatter[key];
+        posts.map(post => {
+          if (_.get(post, `frontmatter.${key}`)) {
+            return post.frontmatter[key];
           }
         }),
       ),
@@ -266,12 +269,12 @@ exports.createPages = async ({actions, graphql}) => {
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()));
       }
-      const posts = result.data.allMarkdownRemark.edges;
+      const posts = result.data.allMarkdownRemark.nodes;
       const categories = collectCategories(posts);
       const tags = collectTags(posts).filter(tag => tag !== 'dummy');
       const archiveByMonth = posts.reduce((acc, item) => {
-        const key = moment(item.node.frontmatter.createdAt).format('YYYY/MM');
-        return {...acc, [key]: [...(acc[key] || []), item.node.id]};
+        const key = moment(item.frontmatter.createdAt).format('YYYY/MM');
+        return {...acc, [key]: [...(acc[key] || []), item.id]};
       }, {});
       const breadcrumbs = fetch(language);
       const context = {
@@ -280,13 +283,12 @@ exports.createPages = async ({actions, graphql}) => {
       };
 
       let rows = [];
-      let pickup = null;
+      let pickup = [];
       if (language === 'ja') {
         const pv = await fetchPv();
         rows = pv.reports[0].data.rows;
         const populars = rows.slice(0, 6).map(row => row.dimensions[0]);
-        const targets = _.uniq(_.concat(constants.pickup, populars));
-        pickup = await graphql(queries.fetchBySlug, {targets});
+        pickup = _.uniq(_.concat(constants.pickup, populars));
         const _context = {
           pickup,
           ...context,
@@ -313,7 +315,7 @@ exports.createPages = async ({actions, graphql}) => {
       STATIC_PAGE_LIST.map(page => {
         graphql(queries.staticPageQuery, {templateKey: page, language}).then(
           result => {
-            const [post] = result.data.allMarkdownRemark.edges;
+            const [post] = result.data.allMarkdownRemark.nodes;
             createStaticPage(withAMP(createPage))(post)(context);
           },
         );
@@ -335,13 +337,13 @@ exports.createPages = async ({actions, graphql}) => {
       createPostsIndexPage(createPage)(posts.length)(_context);
       categories.map(category => {
         graphql(queries.categoryQuery, {category, language}).then(result => {
-          const posts = result.data.allMarkdownRemark.edges;
+          const posts = result.data.allMarkdownRemark.nodes;
           createCategoryShowPage(createPage)(category)(posts.length)(_context);
         });
       });
       tags.map(tag => {
         graphql(queries.tagQuery, {tag, language}).then(result => {
-          const posts = result.data.allMarkdownRemark.edges;
+          const posts = result.data.allMarkdownRemark.nodes;
           createTagShowPage(createPage)(tag)(posts.length)(_context);
         });
       });
@@ -350,12 +352,37 @@ exports.createPages = async ({actions, graphql}) => {
   );
 };
 
-exports.onCreateNode = ({node, actions, getNode}) => {
-  const {createNodeField} = actions;
+exports.onCreateNode = async ({
+  node,
+  actions,
+  store,
+  cache,
+  createNodeId,
+  getNode,
+}) => {
+  const {createNode, createNodeField} = actions;
   fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({node, getNode});
+    if (node.frontmatter.templateKey === 'blog-post') {
+      const thumbnailUrl = meta.images.url + node.frontmatter.thumbnail;
+      try {
+        const fileNode = await createRemoteFileNode({
+          url: thumbnailUrl,
+          parentNodeId: node.id,
+          store,
+          cache,
+          createNode,
+          createNodeId,
+        });
+        if (fileNode) {
+          node.thumbnail___NODE = fileNode.id;
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
     createNodeField({
       name: `slug`,
       node,

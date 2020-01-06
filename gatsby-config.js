@@ -20,6 +20,14 @@ module.exports = {
         path: `${__dirname}/src/pages`,
         name: 'pages',
         ignore: [`**/\.*`, '**/*.png, **/*.jpg'],
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: 'images',
+        ignore: [`**/\.*`],
       },
     },
     'gatsby-plugin-sharp',
