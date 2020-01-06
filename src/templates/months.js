@@ -17,6 +17,7 @@ export default class MonthsIndex extends PureComponent {
     const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
     const {nodes: pickup} = this.props.data.pickup;
     const title = `記事一覧 ${index} / ${totalPages}`;
+
     return (
       <Layout
         amp={amp}
@@ -38,7 +39,12 @@ export default class MonthsIndex extends PureComponent {
 }
 
 export const monthsIndexQuery = graphql`
-  query monthsIndexQuery($ids: [String], $skip: Int!, $pickup: [String], $limit: Int!) {
+  query monthsIndexQuery(
+    $ids: [String]
+    $skip: Int!
+    $pickup: [String]
+    $limit: Int!
+  ) {
     allMarkdownRemark(
       sort: {fields: [frontmatter___createdAt], order: DESC}
       filter: {id: {in: $ids}}
@@ -91,8 +97,8 @@ export const monthsIndexQuery = graphql`
         }
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 796) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 190) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
