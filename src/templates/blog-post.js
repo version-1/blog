@@ -45,6 +45,8 @@ export const BlogPostTemplate = ({
         <div className="thumbnail">
           <Image
             amp={amp}
+            gatsbyImage
+            gatsbyType="fluid"
             fluid={post.thumbnail.childImageSharp.fluid}
             src={thumbnailUrl}
             alt={title}
