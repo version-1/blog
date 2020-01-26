@@ -4,7 +4,7 @@ language: ja
 title: デザイン実務経験ゼロのエンジニアが個人サービスでのアイコンの作り方を考える
 slug: /2019/12/06/how-to-create-logo-for-private-project
 createdAt: 2019-12-06 17:49:48
-updatedAt: 2019-12-08 10:09:34
+updatedAt: 2020-01-25 21:10:47
 thumbnail: /2019/12/20191206_how-to-create-logo-for-private-project/thumbnail.png
 categories:
   - design
@@ -55,7 +55,7 @@ tags:
 
 という問題に頭を抱えていました。
 
-ブログの下書きのようなものはEvernoteやInkdrop, Boostnoteなどなど世にある油臭なメモアプリで十分対応できるのですが、
+ブログの下書きのようなものはEvernoteやInkdrop, Boostnoteなどなど世にある優秀なメモアプリで十分対応できるのですが、
 
 * その日のタスクリストを書き連ねる
 * 長いコマンドをコピペしてのこしておく
