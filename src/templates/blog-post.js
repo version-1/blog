@@ -31,7 +31,7 @@ export const BlogPostTemplate = ({
     categories,
     language,
     tags,
-    thumbnail
+    thumbnail,
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
   const thumbnailUrl = meta.images.url + thumbnail;
@@ -43,14 +43,18 @@ export const BlogPostTemplate = ({
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="thumbnail">
-          <Image
-            amp={amp}
-            gatsbyImage
-            gatsbyType="fluid"
-            fluid={post.thumbnail.childImageSharp.fluid}
-            src={thumbnailUrl}
-            alt={title}
-          />
+          {!!post.thumbnail ? (
+            <Image
+              amp={amp}
+              gatsbyImage
+              gatsbyType="fluid"
+              fluid={post.thumbnail.childImageSharp.fluid}
+              src={thumbnailUrl}
+              alt={title}
+            />
+          ) : (
+            ''
+          )}
         </div>
         <div className="post-meta-header">
           <div className="timestamp">
