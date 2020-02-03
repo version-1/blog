@@ -1,7 +1,8 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import Image from 'components/atoms/Image';
 import Title from 'components/molecules/Title';
 import Post from 'components/Post';
+import {meta} from 'config/constants';
 
 const PostList = props => {
   const {title, titleLabel, posts} = props;
@@ -18,18 +19,24 @@ const PostList = props => {
             <></>
           )}
           <div className="post-list">
-            {posts.map((post, index) => (
-              <Post
-                thumbnail={
-                  <Img
-                    fixed={post.thumbnail.childImageSharp.fixed}
-                    alt={post.frontmatter.title}
-                  />
-                }
-                post={post}
-                key={index}
-              />
-            ))}
+            {posts.map((post, index) => {
+              const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail;
+              return (
+                <Post
+                  thumbnail={
+                    <Image
+                      gatsbyImage
+                      gatsbyType="fluid"
+                      fixed={post.thumbnail.childImageSharp.fixed}
+                      src={thumbnailUrl}
+                      alt={title}
+                    />
+                  }
+                  post={post}
+                  key={index}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
