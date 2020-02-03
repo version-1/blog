@@ -10,12 +10,14 @@ const {routes, meta, constants} = require('./config/constants');
 const {rootPath} = require('./src/lib/routes');
 const fs = require(`fs-extra`);
 const moment = require('moment');
-
 const {validateCategoryList, validateTagList} = require('./node/validation');
 const {fetch} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
 const {rating} = require('./node/related-post');
 const queries = require('./node/queries.js');
+
+const isProduction = process.env.NODE_ENV === 'production'
+const dummyThumbnail = meta.images.url + '/others/dummy/thumbnail.png'
 
 // Constants
 const PER_PAGE = constants.per;
@@ -366,16 +368,16 @@ exports.onCreateNode = async ({
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({node, getNode});
     if (node.frontmatter.templateKey === 'blog-post') {
-      const thumbnailUrl = meta.images.url + node.frontmatter.thumbnail;
+      const thumbnailUrl = isProduction ? meta.images.url + node.frontmatter.thumbnail : dummyThumbnail;
       try {
         const fileNode = await createRemoteFileNode({
-          url: thumbnailUrl,
-          parentNodeId: node.id,
-          store,
-          cache,
-          createNode,
-          createNodeId,
-        });
+            url: thumbnailUrl,
+            parentNodeId: node.id,
+            store,
+            cache,
+            createNode,
+            createNodeId,
+          });
         if (fileNode) {
           node.thumbnail___NODE = fileNode.id;
         }
