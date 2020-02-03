@@ -1,26 +1,12 @@
 import React from 'react';
-import {useStaticQuery, Link} from 'gatsby';
-import Img from 'gatsby-image';
+import {Link} from 'gatsby';
+import Image from 'components/atoms/Image';
 import {postShowPath} from 'lib/routes';
+import {meta} from 'config/constants';
 
 const Post = ({amp, thumbnail, post}) => {
-  const data = useStaticQuery(graphql`
-    {
-      defaultImage: file(relativePath: {eq: "default-image.jpg"}) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-  const defaultImage = data.defaultImage.childImageSharp.fluid;
-
   const {title, language, slug} = post.frontmatter;
-  const {fluid = defaultImage} = post.thumbnail
-    ? post.thumbnail.childImageSharp || {}
-    : {};
+  const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail;
   const path = postShowPath(slug, language);
   const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;
   return (
@@ -28,7 +14,15 @@ const Post = ({amp, thumbnail, post}) => {
       <div className="card">
         <div className="card-image">
           <Link to={path}>
-            {thumbnail || <Img fluid={fluid} alt={title} />}
+            {thumbnail || (
+              <Image
+                gatsbyImage
+                gatsbyType="fluid"
+                fluid={post.thumbnail.childImageSharp.fluid}
+                src={thumbnailUrl}
+                alt={title}
+              />
+            )}
           </Link>
         </div>
         <div className="card-content">

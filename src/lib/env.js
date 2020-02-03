@@ -9,4 +9,3 @@ export const isProduction = isEnv('production')
 export const isStrictProduction = isProduction && isProductionHost
 export const isDevelopment = isEnv('development')
 
-
