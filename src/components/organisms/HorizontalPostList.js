@@ -26,7 +26,7 @@ const PostList = props => {
                   thumbnail={
                     <Image
                       gatsbyImage
-                      gatsbyType="fluid"
+                      gatsbyType="fixed"
                       fixed={post.thumbnail.childImageSharp.fixed}
                       src={thumbnailUrl}
                       alt={title}
