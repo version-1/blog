@@ -267,7 +267,7 @@ https://reactnavigation.org/docs/en/stack-navigator.html#navigationoptions-for-s
 
 ### タブバー
 
-![React Navigation Sample](https://statics.ver-1-0.net/uploads/2019/01/20190119_summary-of-react-navigation/react-navigation-sample.gif)
+![React Navigation Sample](https://statics.ver-1-0.xyz/uploads/2019/01/20190119_summary-of-react-navigation/react-navigation-sample.gif)
 
 
 アプリなどだとこのgifのようなタブバーを設置することがあると思うのですが、それもReactNavigationを使って実現可能です。

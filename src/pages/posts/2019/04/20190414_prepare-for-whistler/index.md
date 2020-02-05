@@ -37,7 +37,7 @@ tags:
 
 スキーリゾートなので、山の麓のリフト乗り場にはホテルやレストラン、ショップ、スーバーなどの施設がそろい大変すごしやすい環境ができています。
 
-![ウィスラーの街並み](https://statics.ver-1-0.net/uploads/2019/04/20190414_prepare-for-whistler/whisler-town.jpg)
+![ウィスラーの街並み](https://statics.ver-1-0.xyz/uploads/2019/04/20190414_prepare-for-whistler/whisler-town.jpg)
 
 
 
@@ -59,7 +59,7 @@ tags:
 
 荷物の受け取りや入国審査などなどあるのでなんだかなんだスカイリンクの受付についたのでが10時半頃という感じでした。手続きが終わってバス出発までは一時間ほどあったので空港にあった**Tim Horton(ティムホートン）**（カナダに全土に展開しているファーストフードチェーンでドーナッツが有名らしいです。）で朝食がてら時間をつぶしていました。
 
-![Tim Horton](https://statics.ver-1-0.net/uploads/2019/04/20190414_prepare-for-whistler/tim-horton.jpg)
+![Tim Horton](https://statics.ver-1-0.xyz/uploads/2019/04/20190414_prepare-for-whistler/tim-horton.jpg)
 
 リンク先には申し込みの方法やバスの時刻表・料金など結構細かく説明がかかれているのでバス予約を検討している方はこちらを参照していただけると良いと思います。
 
@@ -84,7 +84,7 @@ tags:
 
 リフト券の引き換えはウィスラー山に上がるゴンドラ乗り場の隣にあります。メールで送られてきたチケットとパスポートを見せるとリフト券と交換してもらえます。
 
-![ウィスラー山のゴンドラ乗り場](https://statics.ver-1-0.net/uploads/2019/04/20190414_prepare-for-whistler/whistler-lift.jpg)
+![ウィスラー山のゴンドラ乗り場](https://statics.ver-1-0.xyz/uploads/2019/04/20190414_prepare-for-whistler/whistler-lift.jpg)
 
 
 リフト券ICカードのようなもので、リフトに乗るときに機械にかざすだけでリフトに乗ることができます。日本の一部のスキー場のようにわざわざ係員に見せる必要がなく便利です。

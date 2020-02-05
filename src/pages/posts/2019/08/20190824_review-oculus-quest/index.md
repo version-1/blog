@@ -45,13 +45,13 @@ Oculusから出ているゴーグルには他にもRift, Goなどなどの製品
 
  というわけで、
 
- ![oculus 箱](https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/oculus_box.jpg)
+ ![oculus 箱](https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/oculus_box.jpg)
 
  無事クエストさんが届きました。
 
  箱のふたをあけるとこんな感じ
 
- ![oculus 開けた時](https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/oculus_open.jpg)
+ ![oculus 開けた時](https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/oculus_open.jpg)
 
 
  でして、同梱物は
@@ -149,7 +149,7 @@ Beat Saberなどのようなガンガン体を動かすゲームだと結構体�
 
 #### Beat Saber
 
-![Beat Saber Title](https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/beat-saber-title.png)
+![Beat Saber Title](https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/beat-saber-title.png)
 
 Beat Saberは、Questを買ったら遊ぶべきゲームタイトル！みたいなやつにはほとんど入っています。
 というか、最初からデモからインストールされているので、プレイする人は多くいるんじゃないかと思います。
@@ -164,21 +164,21 @@ Beat Saberは、Questを買ったら遊ぶべきゲームタイトル！みた�
 実際にプレイしている感じはこんな感じです。
 
 
-<video src="https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/beat-saber-play.mp4" controls></video>
+<video src="https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/beat-saber-play.mp4" controls></video>
 
 #### Creed Rise To Glory
 
-![creed rise to glory title](https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/creed-title.png)
+![creed rise to glory title](https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/creed-title.png)
 
 こちらはロッキーの続編映画「クリード チャンプをつぐ男」を元にしたボクシングゲームです。
 パンチはもちろん、スウェーなどの動きもQuestの6DoFの機能を最大限に生かして再現したゲームになっています。
 
 リングにいる相手選手やバトルの映像はかなり迫力があり、
-![creed battle](https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/creed-battle.png)
+![creed battle](https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/creed-battle.png)
 
 画像のようなヤバイ肉体の人が目の前にいたらゾッとするななんて思わせるほど臨場感がありました。
 
-![creed enemy](https://statics.ver-1-0.net/uploads/2019/08/20190824_review-oculus-quest/creed-enemy.png)
+![creed enemy](https://statics.ver-1-0.xyz/uploads/2019/08/20190824_review-oculus-quest/creed-enemy.png)
 
 
 

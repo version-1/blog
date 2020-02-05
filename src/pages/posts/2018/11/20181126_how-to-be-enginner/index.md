@@ -29,7 +29,7 @@ related:
 
 &nbsp;
 <h2>ソフトランディング（やわらかな着地）戦略とは？</h2>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/11/20181126_how-to-be-enginner/luggage-1799224_640.jpg" alt="luggage-1799224_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2018/11/20181126_how-to-be-enginner/luggage-1799224_640.jpg" alt="luggage-1799224_640.jpg"/>
 
 &nbsp;
 
@@ -53,7 +53,7 @@ related:
 
 &nbsp;
 <h2>エージェントを使用するか？知り合いつたいか？</h2>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/11/20181126_how-to-be-enginner/figures-1372458_640.jpg" alt="figures-1372458_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2018/11/20181126_how-to-be-enginner/figures-1372458_640.jpg" alt="figures-1372458_640.jpg"/>
 
 フリーランスエンジニアになる文脈でエージェントに紹介してもらうのか、知り合いに紹介してもらうのかといった話はありますが、<strong>個人的にもともとベンチャー、スタートアップでバリバリ仕事していてい知り合いがたくさんいるとかでなければエージェントを利用してスタートをするのが得策です。</strong>
 
@@ -71,7 +71,7 @@ related:
 
 
 <h2>参画案件の成長性って関係あるの？</h2>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/11/20181126_how-to-be-enginner/question-mark-2123967_640.jpg" alt="question-mark-2123967_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2018/11/20181126_how-to-be-enginner/question-mark-2123967_640.jpg" alt="question-mark-2123967_640.jpg"/>
 
 こういう話をしていると
 
@@ -89,7 +89,7 @@ related:
 
 &nbsp;
 <h2>常駐型案件に入ったあとは？</h2>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2018/11/20181126_how-to-be-enginner/binoculars-1209011_640.jpg" alt="binoculars-1209011_640.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2018/11/20181126_how-to-be-enginner/binoculars-1209011_640.jpg" alt="binoculars-1209011_640.jpg"/>
 
 ここまでの戦略を実践して、常駐型案件に入った後の話ですが最初の案件で徐々にリズムが掴めてきたらだんだんと<strong>自分のやりたい方に近づけるためのアクションをとれると良いのでしょうか？</strong>
 

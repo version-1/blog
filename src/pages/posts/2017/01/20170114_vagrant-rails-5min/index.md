@@ -47,12 +47,12 @@ Rails5環境を構築できるかと思います。
 <h4>Downloadをクリック</h4>
 
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/01/20170114_vagrant-rails-5min/vagrant-top.png" alt="vagrant-top"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/01/20170114_vagrant-rails-5min/vagrant-top.png" alt="vagrant-top"/>
 
 <h4>Macのリンクを選択</h4>
 
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/01/20170114_vagrant-rails-5min/download-vagrant.png" alt="download-vagrant.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/01/20170114_vagrant-rails-5min/download-vagrant.png" alt="download-vagrant.png"/>
 
 <h4>ターミナルでインストールされたか確認</h4>
 

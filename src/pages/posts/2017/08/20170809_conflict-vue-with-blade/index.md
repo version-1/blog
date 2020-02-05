@@ -50,7 +50,7 @@ JqueryでなくAngular, React, Vueらへん
 以下、Googleトレンドで他ライブラリとの
 検索の割合調べてみた画像。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/08/20170809_conflict-vue-with-blade/javascript-library.png" alt="javascript-library.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/08/20170809_conflict-vue-with-blade/javascript-library.png" alt="javascript-library.png"/>
 
 &nbsp;
 

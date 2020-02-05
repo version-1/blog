@@ -58,7 +58,7 @@ tags:
 日本人のワークエンゲージメントの平均が2.8~2.9前後で今回の調査における会社員の平均値は2.40だそうで、それに比べてフリーランスのエンゲージメントは4.0と
 欧米諸国にひけを取らない数字であったようです。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2019/03/20190326_freelance-white-paper-2019/global-diagram-uwec.png" alt="エンゲージメントの比較" />
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190326_freelance-white-paper-2019/global-diagram-uwec.png" alt="エンゲージメントの比較" />
 
 引用: https://hp3.jp/wp-content/uploads/2018/05/08JSUC.pdf
 
@@ -68,7 +68,7 @@ tags:
 
 白書は前半部分で正社員とフリーランスに関する比較を行なっていましたが、後半部分ではフリーランスの課題についても触れています。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2019/03/20190326_freelance-white-paper-2019/freelance-problem.png" alt="フリーランスの課題" />
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190326_freelance-white-paper-2019/freelance-problem.png" alt="フリーランスの課題" />
 
 引用: [フリーランス白書 2019](https://blog.freelance-jp.org/wp-content/uploads/2019/03/freelancehakusho2019_suvey20190306.pdf)
 
@@ -151,8 +151,8 @@ tags:
 
 ### 会社員とフリーランスの意識の差について
 
-<a href="https://statics.ver-1-0.net/uploads/2019/03/20190326_freelance-white-paper-2019/compare-about-skill.png">
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2019/03/20190326_freelance-white-paper-2019/compare-about-skill.png" alt="スキルに関する意識調査の比較" />
+<a href="https://statics.ver-1-0.xyz/uploads/2019/03/20190326_freelance-white-paper-2019/compare-about-skill.png">
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190326_freelance-white-paper-2019/compare-about-skill.png" alt="スキルに関する意識調査の比較" />
 </a>
 
 引用: [フリーランス白書 2019](https://blog.freelance-jp.org/wp-content/uploads/2019/03/freelancehakusho2019_suvey20190306.pdf)
@@ -198,7 +198,7 @@ tags:
 
 ### 自己責任論について
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2019/03/20190326_freelance-white-paper-2019/self-responsibility.png" alt="自己責任論" />
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190326_freelance-white-paper-2019/self-responsibility.png" alt="自己責任論" />
 
 引用: [フリーランス白書 2019](https://blog.freelance-jp.org/wp-content/uploads/2019/03/freelancehakusho2019_suvey20190306.pdf)
 

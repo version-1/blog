@@ -9,14 +9,14 @@
   "meta": {
     "author": "version1",
     "siteUrl": "https://ver-1-0.net",
-    "logo": "https://statics.ver-1-0.net/uploads/others/logo.png",
+    "logo": "https://statics.ver-1-0.xyz/uploads/others/logo.png",
     "hostname": "ver-1-0.net",
     "title": "So Far, So Tech",
     "description": "フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。",
     "sitemap": "/sitemap.xml",
     "trackingId": "UA-71833989-5",
     "images": {
-      "url": "https://statics.ver-1-0.net/uploads"
+      "url": "https://statics.ver-1-0.xyz/uploads"
     },
     "postRoot": "/Users/admin/React/ver-1-0.net-static/src/pages/posts"
   },

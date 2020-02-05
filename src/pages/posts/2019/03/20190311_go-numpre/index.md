@@ -58,15 +58,15 @@ related:
 
 はじめは下の画像のようになっており
 
-<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2019/03/20190311_go-numpre/question.png" alt="ナンプレ問題" />
+<img class="post-image half-width" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190311_go-numpre/question.png" alt="ナンプレ問題" />
 
 全部時終わると以下のようになります。
 
-<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2019/03/20190311_go-numpre/answer.png" alt="ナンプレ回答" />
+<img class="post-image half-width" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190311_go-numpre/answer.png" alt="ナンプレ回答" />
 
 そして、こちらが実際に数独を解いている様子。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2019/03/20190311_go-numpre/numpre.gif" alt="ナンプレ" />
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2019/03/20190311_go-numpre/numpre.gif" alt="ナンプレ" />
 
 今回はこのようにコードをGo言語で書いたのでそれの解説をしていきます。
 
