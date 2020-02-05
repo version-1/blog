@@ -229,7 +229,7 @@ c7a0a8cfabe5        version1/sample     "rails server -b 0..."   8 seconds ago  
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-13.24.29.png" alt="Screen-Shot-2017-11-23-at-13.24.29.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-13.24.29.png" alt="Screen-Shot-2017-11-23-at-13.24.29.png"/>
 
 &nbsp;
 <h2 class="chapter">少し開発してみる</h2>
@@ -280,7 +280,7 @@ http://localhostに接続すれば。
 
 ユーザ管理画面が表示されます。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-14.07.19.png" alt="Screen-Shot-2017-11-23-at-14.07.19.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171123_rails-nginx-postgres-on-docker-2/Screen-Shot-2017-11-23-at-14.07.19.png" alt="Screen-Shot-2017-11-23-at-14.07.19.png"/>
 
 構築は以上です。
 

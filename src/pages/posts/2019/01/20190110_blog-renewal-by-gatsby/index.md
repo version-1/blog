@@ -182,7 +182,7 @@ Gatsbyという記事を採用する以上ここの大変さはある程度し�
 
 自分で実装してnetlifyにあげた時にこれだけのAMPエラーが見えた時はさすがに心が折れかけました。
 
-![AMPエラー](https://statics.ver-1-0.net/uploads/2019/01/20190110_blog-renewal-by-gatsby/amperror.png)
+![AMPエラー](https://statics.ver-1-0.xyz/uploads/2019/01/20190110_blog-renewal-by-gatsby/amperror.png)
 
 gatsbyでのAMP対応は大変だった分学びも多かった気がするので別途記事にするかもしれません。
 

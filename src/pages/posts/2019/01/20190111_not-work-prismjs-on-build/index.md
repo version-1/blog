@@ -63,7 +63,7 @@ gatsby-config内にpurgecssといういかにもcssをいじっているそう�
 原因が判明した後にビルドの出力をみてみると、こんな感じで結果を出力してくれてました。
 （purgeしたら75%もサイズが小さくなってますね。）
 
-<image class="post-image" src="https://statics.ver-1-0.net/uploads/2019/01/20190111_not-work-prismjs-on-build/purge-result.png" alt="perge result" />
+<image class="post-image" src="https://statics.ver-1-0.xyz/uploads/2019/01/20190111_not-work-prismjs-on-build/purge-result.png" alt="perge result" />
 
 さらに良く調べてGatsbyのプラグインのページでドキュメントを確認すると、
 purgeした結果を出力できるようです。

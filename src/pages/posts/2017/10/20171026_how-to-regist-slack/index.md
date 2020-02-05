@@ -47,14 +47,14 @@ related:
 
 <a href="https://slack.com/" target="_blank">Where work happens | Slack</a>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image1.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image1.png" alt="slack"/>
 
 最初に、「GET STARTED」をクリック
 
 ### ワークスペースを作成
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image2.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image2.png" alt="slack"/>
 
 次ページ画面上部のStart with a workspaceから
 「create a new workspace」を選択。
@@ -66,7 +66,7 @@ related:
 
 ### メールアドレス入力
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image3.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image3.png" alt="slack"/>
 
 次の画面で任意のメールアドレスを入力します。
 
@@ -74,14 +74,14 @@ related:
 
 ### 認証コード入力
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image4.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image4.png" alt="slack"/>
 
 少し待つと先の画面で入力したアドレス宛に
 認証コードが送られてくるのでそちらを入力します。
 
 ### 名前入力
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image5.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image5.png" alt="slack"/>
 
 認証コードが正常に入力できたら、名前の入力が求められます。
 別に本名を入れろとかそういうことでないので
@@ -89,7 +89,7 @@ related:
 
 ### チーム情報入力
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image6.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image6.png" alt="slack"/>
 
 次にチームの情報について入力を求められますが、
 こちら特に必須じゃないのでそのままボタンを押して次に進んで大丈夫です。
@@ -97,7 +97,7 @@ related:
 
 ### グループ名入力
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image7.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image7.png" alt="slack"/>
 
 グループ名を聞かれます。
 自分の好きなグループ名を入力してください。
@@ -107,7 +107,7 @@ related:
 
 ### ワークスペース名入力
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image8.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image8.png" alt="slack"/>
 
 ワークスペース名を聞かれます。
 ワークスペース自体のURLに使われるので、すでに使われてしまっている
@@ -116,7 +116,7 @@ related:
 
 ### メンバーを招待
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image9.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image9.png" alt="slack"/>
 
 最後、
 インビテーションを送るか聞かれますが、
@@ -126,7 +126,7 @@ related:
 
 ### 登録完了
 &nbsp;
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image10.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image10.png" alt="slack"/>
 
 これで見事登録完了です。
 自分専用のスペースとして、好きなだけメッセージを送ってください。
@@ -138,7 +138,7 @@ related:
 
 <a href="https://slack.com/pricing" target="_blank">Pricing | Slack</a>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171026_how-to-regist-slack/image11.png" alt="slack"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171026_how-to-regist-slack/image11.png" alt="slack"/>
 
 最初に登録した時点ではフリープランなので無料で利用できます。
 Standard Planでは、ユーザ一人に対して月850円程度ですね。

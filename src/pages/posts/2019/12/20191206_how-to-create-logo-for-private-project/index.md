@@ -31,7 +31,7 @@ tags:
 という個人アプリを開発しています。
 
 <a href="https://papyrus-app.org/">
-  <img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/wallpaper.png" alt="papyrus" width="400px" />
+  <img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/wallpaper.png" alt="papyrus" width="400px" />
 </a>
 
 こちらのアプリを作るまでにもいくつか自分でサービスを作って公開してみたことがあるのですが、
@@ -86,7 +86,7 @@ tags:
 PaPyrusはデザインも実装も自分でやっているのですが、もちろんアイコンも自分がデザインしました。
 そんなPaPyrusのアイコンはこちらです。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon.png" width="300" alt="papyrus icon"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon.png" width="300" alt="papyrus icon"/>
 
 どうですかね？
 
@@ -138,7 +138,7 @@ Evertnoteのように、「象+紙」みたいにモチーフを複数決めて�
 スケッチなんて、高校の時の美術の時間にやった時以来くらいなので何から初めてよいのかわからなかったのですが、
 ものは試しようなのでとりあえず、スケッチってどんなものだっけという感じで定番の手のスケッチを書いてみました。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-sketch.png" width="300" alt="手のスケッチ"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-sketch.png" width="300" alt="手のスケッチ"/>
 
 
 スケッチのやり方なんてわからないので文明の利器に頼って、Youtubeでスケッチのやり方をみたりしながらスケッチしてみました。
@@ -160,7 +160,7 @@ Evertnoteのように、「象+紙」みたいにモチーフを複数決めて�
 
 ある程度経験値が溜まったところでいよいよ前工程で選んだ「紙」を書いてみようといことで書いてみました。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-1.png" width="300" alt="アイコンのスケッチ"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-1.png" width="300" alt="アイコンのスケッチ"/>
 
 
 どうでしょう？紙感を出すためにちょっと巻いてみました。
@@ -169,7 +169,7 @@ Evertnoteのように、「象+紙」みたいにモチーフを複数決めて�
 
 ちなみに、最初に紙を書いた時に自分の下手さに辟易して途中でやめてしまったものがこちらです。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-2.png" width="300" alt="アイコンの失敗スケッチ"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-2.png" width="300" alt="アイコンの失敗スケッチ"/>
 
 なんですかねこれ笑。紙感より春巻き感の方が強く出てしまっています。
 まぁこんな感じで失敗もしつつ、工程を楽しんでやれると良いかと思います。笑
@@ -182,7 +182,7 @@ Evertnoteのように、「象+紙」みたいにモチーフを複数決めて�
 
 最初の案がこちらです。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-icon-1.png" width="300" alt="アイコンのドラフト"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-icon-1.png" width="300" alt="アイコンのドラフト"/>
 
 これは色ついてしまっているのですが、最初は線だけ書く感じで抽象化されたものを書いてその後に必要な色を足していきました。
 抽象化する時には巻いている感じを強くデフォルメして書いていきました。
@@ -190,7 +190,7 @@ Evertnoteのように、「象+紙」みたいにモチーフを複数決めて�
 これでアイコンのイメージはだいぶかたまってきたのですが、色の感じがアーティスティックすぎたので、
 Papyrusのイメージカラーを使ってまとめていきました。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-icon-2.png" width="300" alt="アイコンのドラフト"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-icon-2.png" width="300" alt="アイコンのドラフト"/>
 
 ここまでで大分イメージついてきたのですが、線がずれていたりするので微修正はイラレでやっていくことにしました。
 
@@ -198,7 +198,7 @@ Papyrusのイメージカラーを使ってまとめていきました。
 
 前段階できっちりアイコンとして使えるものができてしまえばそのままで良いのですが、僕の場合はイラレで清書しました。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon-list.png" width="300" alt="アイコンの清書"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon-list.png" width="300" alt="アイコンの清書"/>
 
 これが最終的に清書したものです。
 
@@ -212,7 +212,7 @@ Papyrusのイメージカラーを使ってまとめていきました。
 清書がおわったら気に入ったアイコンを書き出して完了です。
 最後にスケッチしたものと最終版を並べて載せておきます。
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/before-after.png" width="300" alt="アイコンの比較"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/before-after.png" width="300" alt="アイコンの比較"/>
 
 スケッチしたものと最終的なアイコンのところで大分イメージが変わっていますが、元のスケッチをやっておくと
 抽象化やデフォルメをする時のアイデアの土台や出発地点が明確になるので一度試してみていただけると良いと思います。

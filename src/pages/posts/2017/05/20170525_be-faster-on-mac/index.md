@@ -49,7 +49,7 @@ related:
 
 ※音は出ませんので安心してご視聴ください。
 
-<video poster="https://statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.png" src="https://statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.mp4" controls></video>
+<video poster="https://statics.ver-1-0.xyz/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.png" src="https://statics.ver-1-0.xyz/uploads/2017/05/20170525_be-faster-on-mac/quicker-cursor.mp4" controls></video>
 
 &nbsp;
 
@@ -60,7 +60,7 @@ related:
 
 写真のように軌跡の速さをMAXにします。
 
-<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/05/20170525_be-faster-on-mac/スクリーンショット-2017-05-25-10.53.04-1024x791.png" alt="スクリーンショット-2017-05-25-10.53.04-1024x791.png"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.xyz/uploads/2017/05/20170525_be-faster-on-mac/スクリーンショット-2017-05-25-10.53.04-1024x791.png" alt="スクリーンショット-2017-05-25-10.53.04-1024x791.png"/>
 
 スピードを最大にすると、マウスポインタが軽くなった感じになります。
 （最初慣れないと行き過ぎてしまうのですが。。）

@@ -35,7 +35,7 @@ related:
 
 <a href="https://codepen.io/">https://codepen.io/</a>
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/codepen.png" alt="codepen"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/09/20170902_codepen/codepen.png" alt="codepen"/>
 
 <h2 class="chapter"> 気に入ったデザインを探して参考にしてみる</h2>
 
@@ -55,7 +55,7 @@ related:
 ズラってイケてるデザインが
 出てきます。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170902_codepen/codepen-search-result.png" alt="CodePen Search Result"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/09/20170902_codepen/codepen-search-result.png" alt="CodePen Search Result"/>
 
 &nbsp;
 

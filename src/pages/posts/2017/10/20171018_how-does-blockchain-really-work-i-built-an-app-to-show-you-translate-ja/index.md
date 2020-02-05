@@ -24,7 +24,7 @@ related:
 一緒に公開しており、
 Awesome!と思ったので和訳します。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/twittercard.png" alt="twittercard"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/twittercard.png" alt="twittercard"/>
 
 原文はコチラ
 <a href="https://medium.freecodecamp.org/how-does-blockchain-really-work-i-built-an-app-to-show-you-6b70cd4caf7d">How does blockchain really work? I built an app to show you.</a>
@@ -65,7 +65,7 @@ Awesome!と思ったので和訳します。
 
 私が作ったブラウザで使えるバージョンはここです。
 <a href="http://blockchaindemo.io/">browser-based version of this here.</a>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/how-blockchain-works.png" alt="how blockchain-works"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/how-blockchain-works.png" alt="how blockchain-works"/>
 
 
 <h3 class="section">コマンドラインインターフェースバージョンをインストールする</h3>
@@ -104,7 +104,7 @@ bc
 打ち込みます。
 下のように見えるはずです。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/block-on-the-blockchain.png" alt="block on the blockchain"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171018_how-does-blockchain-really-work-i-built-an-app-to-show-you-translate-ja/block-on-the-blockchain.png" alt="block on the blockchain"/>
 
 <ul>
  	<li>Index (Block#) : それがどのブロックか（ジェネシスブロックのindexは0)</li>

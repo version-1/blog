@@ -46,7 +46,7 @@ NSLocationAlwaysUsageDescriptionをさらに追加します。
 キーの追加はXcodeから可能で、./ios下のXXXX.xcodeprojを開いて
 'Capabilites'tabから設定できます。
 
-![xcode tab](https://statics.ver-1-0.net/uploads/2019/01/20190114_get-current-position-by-rn/xcode.png)
+![xcode tab](https://statics.ver-1-0.xyz/uploads/2019/01/20190114_get-current-position-by-rn/xcode.png)
 
 画像だとPrivacy - Location When In Use Usage DescriptionとPrivacy - Location Always Usage Descriptionというのがそれです。
 

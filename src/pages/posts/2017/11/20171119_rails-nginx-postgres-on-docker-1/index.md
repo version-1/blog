@@ -46,7 +46,7 @@ PC上にコンテナという仮想のサーバを作成して、
 <h2 class="chapter">Dockerの基本的な仕組み -Virtual Machineとの違い-</h2>
 下に図を貼りつけましたが、
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171119_rails-nginx-postgres-on-docker-1/CompareVMtoDoc-1.jpg" alt="CompareVMtoDoc-1.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171119_rails-nginx-postgres-on-docker-1/CompareVMtoDoc-1.jpg" alt="CompareVMtoDoc-1.jpg"/>
 
 <strong>「DockerはVirtual Boxなどの仮想マシンとどう違うの？」</strong>
 というように比較して語られることが多いです。
@@ -163,7 +163,7 @@ For more examples and ideas, visit:
 実行結果を補足するために
 以下に図を用意しました。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171119_rails-nginx-postgres-on-docker-1/Docker-1.png" alt="Docker-1.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171119_rails-nginx-postgres-on-docker-1/Docker-1.png" alt="Docker-1.png"/>
 
 Dockerはクライアントーサーバ型のアーキテクチャになっており、
 インストールした直後から起動している

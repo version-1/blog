@@ -44,7 +44,7 @@ Internet Explorer
 日本のシェアをみてみると、
 Chrome, Safari, IEの順で利用されているようですね。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171107_web-structure-browser/StatCounter-browser-JP-monthly-201610-201710-bar-1024x576.png" alt="StatCounter-browser-JP-monthly-201610-201710-bar-1024x576.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171107_web-structure-browser/StatCounter-browser-JP-monthly-201610-201710-bar-1024x576.png" alt="StatCounter-browser-JP-monthly-201610-201710-bar-1024x576.png"/>
 
 &nbsp;
 
@@ -81,7 +81,7 @@ Chrome, Safari, IEの順で利用されているようですね。
 新たなウィンドウかタブが表示され、不等号などで区切られた
 ファイルが表示されそれがHTMLファイルになります。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171107_web-structure-browser/Screen-Shot-2017-11-07-at-21.54.07.png" alt="Screen-Shot-2017-11-07-at-21.54.07.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171107_web-structure-browser/Screen-Shot-2017-11-07-at-21.54.07.png" alt="Screen-Shot-2017-11-07-at-21.54.07.png"/>
 
 この一見読みづらい構文で書かれたものが、
 HTMLファイルでそれらを見やすいように整形して
