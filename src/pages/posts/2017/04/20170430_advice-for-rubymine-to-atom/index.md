@@ -74,7 +74,7 @@ Console ( コード書きながらrails実行したりするので )
 インストールの仕方は簡単 Command + ,で　設定を開いて[ Install ] を選択
 Linter で検索して、出てきたものをクリックです。
 
-<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-29-22.59.17-1024x900.png" alt="スクリーンショット-2017-04-29-22.59.17-1024x900.png"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-29-22.59.17-1024x900.png" alt="スクリーンショット-2017-04-29-22.59.17-1024x900.png"/>
 
 &nbsp;
 
@@ -98,7 +98,7 @@ linter-php
 <h2 class="chapter">パッケージ管理 <a href="https://atom.io/packages/project-manager">Project-Manger</a></h2>
 &nbsp;
 
-<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-12.11.34-897x1024.png" alt="スクリーンショット-2017-04-30-12.11.34-897x1024.png"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-12.11.34-897x1024.png" alt="スクリーンショット-2017-04-30-12.11.34-897x1024.png"/>
 
 &nbsp;
 
@@ -122,7 +122,7 @@ project-manager というものです。
 ② ディレクトリを開いたら
 「Packages」 -> 「Project Manager」 -> 「Save Project」
 
-<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-11.58.58-1024x491.png" alt="スクリーンショット-2017-04-30-11.58.58-1024x491.png"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-11.58.58-1024x491.png" alt="スクリーンショット-2017-04-30-11.58.58-1024x491.png"/>
 
 ③ 別のプロジェクトを開きたいときは Cmd + Ctrl + P
 でプロジェクトの一覧を表示して選択。
@@ -152,7 +152,7 @@ Atom でこれをやるなら
 &nbsp;
 
 <h2 class="chapter">Console <a href="https://atom.io/packages/platformio-ide-terminal">Platoform-Ide-Terminal</a></h2>
-<img class="post-image almost-width" src="https://statics.ver-1-0.net/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-12.07.08-1024x625.png" alt="スクリーンショット-2017-04-30-12.07.08-1024x625.png"/>
+<img class="post-image almost-width" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170430_advice-for-rubymine-to-atom/スクリーンショット-2017-04-30-12.07.08-1024x625.png" alt="スクリーンショット-2017-04-30-12.07.08-1024x625.png"/>
 
 &nbsp;
 

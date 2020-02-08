@@ -39,7 +39,7 @@ related:
 
 出来上がったものはこちらです。
 
-<video src="https://statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.mp4" controls ></video>
+<video src="https://statics.ver-1-0.xyz/uploads/2017/10/20171014_laravel-vue-spa-3/spa-sample-step2.mp4" controls ></video>
 
 コインチェックのAPIを利用して、
 実に14種類の仮想通貨のレートを確認できるようにしています。
@@ -196,7 +196,7 @@ export default {
 ここまででとりあえず、仮想通貨の一覧を取得はできて、
 Ajax通信も使えています。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171014_laravel-vue-spa-3/demo.png" alt="demo"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171014_laravel-vue-spa-3/demo.png" alt="demo"/>
 
 が、ここまでだとリアルタイムに価格を表示していく！！
 というSPAの面白さみたいなものがないので、

@@ -36,7 +36,7 @@ Besides, actually I am developing an memo application. The name is "Papyrus".
 It is released as beta version.
 
 <a href="https://papyrus-app.org/">
-  <img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/wallpaper.png" alt="papyrus" width="400px" />
+  <img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/wallpaper.png" alt="papyrus" width="400px" />
 </a>
 
 I already have released my some applications until now, but I couldn't make my application's logos be cool.
@@ -80,7 +80,7 @@ I designed and implemented in PaPyrus by myself and of course, I designed icon a
 
 This is the icon:
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon.png" width="300" alt="papyrus icon"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon.png" width="300" alt="papyrus icon"/>
 
 How do you think about this icon?
 
@@ -130,7 +130,7 @@ As he said, I have made not good icon by starting from using Illustlator...
 Then, I thought I started from sketching, but I have never doing since I was high school student.
 However, You can't tell unless you try. I tried to draw my hand.
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-sketch.png" width="300" alt="手のスケッチ"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-sketch.png" width="300" alt="手のスケッチ"/>
 
 I have no idea about sketching so I sketched while I watching a vide on YouToube.
 
@@ -146,7 +146,7 @@ Certainly, you can't draw in detail while you are sketching if you originally re
 
 After I understand this point, I did trace some icons and sketching in order to understand how cool icon is drawn.
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-1.png" width="300" alt="アイコンのスケッチ"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-1.png" width="300" alt="アイコンのスケッチ"/>
 
 How about? I rolled the paper because I wanted to express the texture of paper.
 Now, it seems like harder for a paper, but this goal is not to sketch it well so it's OK.
@@ -154,7 +154,7 @@ For me, this sketch was enough and  I maked icon base on this sketch.
 
 Besides, Following is too terrible sketch to continue..
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-2.png" width="300" alt="„Ç¢„Ç§„Ç≥„É≥„ÅÆÂ§±Êïó„Çπ„Ç±„ÉÉ„ÉÅ"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-draft-2.png" width="300" alt="„Ç¢„Ç§„Ç≥„É≥„ÅÆÂ§±Êïó„Çπ„Ç±„ÉÉ„ÉÅ"/>
 
 What is this? This is like spring roll. I was not going to draw it!
 Anyway, let's enjoy the process with failure.
@@ -167,7 +167,7 @@ Until this, I sketch it with [Procreate](https://procreate.art/) so I keep on il
 
 First, this is a first idea.
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-icon-1.png" width="300" alt="アイコンのドラフト"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/procreate-icon-1.png" width="300" alt="アイコンのドラフト"/>
 
 This image is colored but I recommend you draw only outline of then abstracted icon with lines and add colors to it after that.
 I emphasized the looks rolling up the paper while I was abstracting.
@@ -180,7 +180,7 @@ That was why I gave it finishing touch by using Papyrus's imaging color.
 If you can make icon you are satisfied, you can skip this process.
 However, I needed to organize it with Illustlator.
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon-list.png" width="300" alt="アイコンの清書"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/icon-list.png" width="300" alt="アイコンの清書"/>
 
 This is final version.
 
@@ -193,7 +193,7 @@ Finally, I picked up upper left one. I liked black one though, it's far from app
 When you finished, export your favourite icon.
 As for now, I show you icons of before and after.
 
-<img src="https://statics.ver-1-0.net/uploads/2019/12/20191206_how-to-create-logo-for-private-project/before-after.png" width="300" alt="アイコンの比較"/>
+<img src="https://statics.ver-1-0.xyz/uploads/2019/12/20191206_how-to-create-logo-for-private-project/before-after.png" width="300" alt="アイコンの比較"/>
 
 Final version was daramaticaly changed from the original version I sketched thouhgh, you would be able to clear
 your image about icon if you sketched before that.

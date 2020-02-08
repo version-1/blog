@@ -54,7 +54,7 @@ Immersed自体はアメリカのベンチャーらしいのですが、会社の
 
 ## Immersedを試してみる
 
-<video src="https://statics.ver-1-0.net/uploads/2019/08/20190825_oculus-quest-immersed/immersed.mp4" controls></video>
+<video src="https://statics.ver-1-0.xyz/uploads/2019/08/20190825_oculus-quest-immersed/immersed.mp4" controls></video>
 
 セットアップの仕方やインストールの仕方など細々した話はあると思いますが、まずこの動画をみてもらえるとImmersedをより
 リアルにわかってもらえるかと思います。
@@ -68,13 +68,13 @@ Immersed自体はアメリカのベンチャーらしいのですが、会社の
 ここで、強調しておきたい一つ目が**仮想オフィスの部屋や背景をメニュー画面から変更**をすることができます。
 
 こんな感じで雲の上で作業しても良いし
- ![immersed start](https://statics.ver-1-0.net/uploads/2019/08/20190825_oculus-quest-immersed/Immersed-sky.jpg)
+ ![immersed start](https://statics.ver-1-0.xyz/uploads/2019/08/20190825_oculus-quest-immersed/Immersed-sky.jpg)
 
 &nbsp;
 
 こんな感じで緑豊かな草原のど真ん中で作業しても良いし、宇宙船のような中で作業するもよしです。
 
- ![immersed glass](https://statics.ver-1-0.net/uploads/2019/08/20190825_oculus-quest-immersed/Immersed-glass.jpg)
+ ![immersed glass](https://statics.ver-1-0.xyz/uploads/2019/08/20190825_oculus-quest-immersed/Immersed-glass.jpg)
 
 &nbsp;
 

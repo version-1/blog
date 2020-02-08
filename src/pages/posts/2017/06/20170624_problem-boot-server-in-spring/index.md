@@ -29,7 +29,7 @@ Kotlin+SpringBootを
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/06/20170624_problem-boot-server-in-spring/springboot.png" alt="springboot-tweet"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/06/20170624_problem-boot-server-in-spring/springboot.png" alt="springboot-tweet"/>
 
 &nbsp;
 

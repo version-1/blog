@@ -69,7 +69,7 @@ JSONレスポンスを返却するAPIを開発してみました。
 
 まずは楽曲の一覧を通常通り画面で表示させますと
 以下の通りになります。
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/04/20170424_cakephp3-json-response/スクリーンショット-2017-04-24-0.02.48-1024x450.png" alt="スクリーンショット-2017-04-24-0.02.48-1024x450.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170424_cakephp3-json-response/スクリーンショット-2017-04-24-0.02.48-1024x450.png" alt="スクリーンショット-2017-04-24-0.02.48-1024x450.png"/>
 
 &nbsp;
 

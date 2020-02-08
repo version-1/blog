@@ -38,7 +38,7 @@ related:
 日本人が大好き九份。
 スマホじゃ綺麗に取るのは難しいですね。。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171121_uber-taiwan/s_IMG_3133.jpg" alt="s_IMG_3133.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171121_uber-taiwan/s_IMG_3133.jpg" alt="s_IMG_3133.jpg"/>
 
 &nbsp;
 <h3><strong>中正記念堂。</strong></h3>
@@ -48,7 +48,7 @@ related:
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171121_uber-taiwan/s_IMG_3167.jpg" alt="s_IMG_3167.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171121_uber-taiwan/s_IMG_3167.jpg" alt="s_IMG_3167.jpg"/>
 
 &nbsp;
 <h3><strong>行天宮</strong></h3>
@@ -62,7 +62,7 @@ related:
 
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171121_uber-taiwan/s_IMG_3180.jpg" alt="s_IMG_3180.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171121_uber-taiwan/s_IMG_3180.jpg" alt="s_IMG_3180.jpg"/>
 
 &nbsp;
 
@@ -70,7 +70,7 @@ related:
 故宮博物院やら夜市なども行ってきました。
 下は小籠包
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171121_uber-taiwan/s_IMG_3192.jpg" alt="s_IMG_3192.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171121_uber-taiwan/s_IMG_3192.jpg" alt="s_IMG_3192.jpg"/>
 
 &nbsp;
 
@@ -78,7 +78,7 @@ related:
 個人的にこれか夜市で食べた鶏排（ジーパイ)が
 一番おいしかったです。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171121_uber-taiwan/s_IMG_3195.jpg" alt="s_IMG_3195.jpg"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171121_uber-taiwan/s_IMG_3195.jpg" alt="s_IMG_3195.jpg"/>
 
 &nbsp;
 

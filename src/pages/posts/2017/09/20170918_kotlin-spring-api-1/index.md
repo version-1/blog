@@ -112,7 +112,7 @@ VALUES( 1 , '多動力' ,'堀江貴文', '9784344031159', 1 , NOW() , NOW()),
 イメージが湧きづらい人用に
 一覧ページも作成しました。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/books.png" alt="books"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/09/20170918_kotlin-spring-api-1/books.png" alt="books"/>
 
 ↑この一覧がJSON形式で取得できれば成功です。
 
@@ -125,7 +125,7 @@ VALUES( 1 , '多動力' ,'堀江貴文', '9784344031159', 1 , NOW() , NOW()),
 
 はじめに、ファイル構成を
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/dir-structure.png" alt="Directory Structure"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/09/20170918_kotlin-spring-api-1/dir-structure.png" alt="Directory Structure"/>
 
 このように
 以前のKotlinシリーズでもおなじみの
@@ -181,13 +181,13 @@ http://localhost:8080/api/books
 
 にアクセスすると
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/browser1.png" alt="browser1"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/09/20170918_kotlin-spring-api-1/browser1.png" alt="browser1"/>
 
 本の一覧が
 
 http://localhost:8080/api/books/1にアクセスすると
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/09/20170918_kotlin-spring-api-1/browser2.png" alt="browser2"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/09/20170918_kotlin-spring-api-1/browser2.png" alt="browser2"/>
 
 &nbsp;
 

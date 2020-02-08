@@ -35,7 +35,7 @@ related:
 
 &nbsp;
 <h2 class="chapter">オンライン学習サービスUdemyとは</h2>
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171112_e-learning-udemy/Udemy-Top.png" alt="Udemy-Top.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171112_e-learning-udemy/Udemy-Top.png" alt="Udemy-Top.png"/>
 
 &nbsp;
 

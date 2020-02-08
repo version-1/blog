@@ -52,7 +52,7 @@ Slack,AtomなどもこのElectronで作られていて、
 
 これがelectronのサイトです。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/04/20170409_electron-calculator-1/electron-site.png" alt="electron-site.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170409_electron-calculator-1/electron-site.png" alt="electron-site.png"/>
 引用元: https://electron.atom.io/
 
 はい、英語です。
@@ -249,7 +249,7 @@ electron .
 ```
 &nbsp;
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/04/20170409_electron-calculator-1/electron-helloworld.png" alt="electron hello world"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170409_electron-calculator-1/electron-helloworld.png" alt="electron hello world"/>
 
 **無事起動できました！！**
 
