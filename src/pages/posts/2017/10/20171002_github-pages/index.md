@@ -58,20 +58,20 @@ GitPushしたあとにRepositoryで設定を行うと
 1.適当なwebページ用のリポジトリを作成
 (もちろんPush )
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171002_github-pages/setting1.png" alt="setting"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171002_github-pages/setting1.png" alt="setting"/>
 
 
 2.リポジトリの「Settings」のページに
 行き、Sourceのところでmaster branchを選択する。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171002_github-pages/setting2.png" alt="setting"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171002_github-pages/setting2.png" alt="setting"/>
 
 
 3.master branch を選択しSAVEを押した所で、
 「 Your site is published at {url}」
 のように表示されたらOK。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/10/20171002_github-pages/setting3.png" alt="setting"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/10/20171002_github-pages/setting3.png" alt="setting"/>
 
 
 ページが作成されるまで、一定の時間がかかるので、しばらく待ってからアクセスすると

@@ -52,7 +52,7 @@ ElectronはこのIPC通信というものでデータのやりとりを
 
 画面はこんな感じ
 
-<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2017/04/20170410_electron-calculator-2/calculator.png" alt="calculator"/>
+<img class="post-image half-width" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170410_electron-calculator-2/calculator.png" alt="calculator"/>
 
 &nbsp;
 
@@ -62,7 +62,7 @@ ElectronはこのIPC通信というものでデータのやりとりを
 
 今回のディレクトリ構成は以下の通り
 
-<img class="post-image half-width" src="https://statics.ver-1-0.net/uploads/2017/04/20170410_electron-calculator-2/dir-structure.png" alt="directory structure"/>
+<img class="post-image half-width" src="https://statics.ver-1-0.xyz/uploads/2017/04/20170410_electron-calculator-2/dir-structure.png" alt="directory structure"/>
 
 ※今回はjqueryも使用しています。
 

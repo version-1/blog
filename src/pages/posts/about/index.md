@@ -87,7 +87,7 @@ Netlifyを利用して配信しています。当サイトの設計・デザイ�
 
 お遊びがてらReactで作成したスネークゲームです。自分でプレイしても結構楽しめたので趣味でつくりましたが結構満足感のある作品です。
 
-<video poster="https://statics.ver-1-0.net/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.net/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
+<video poster="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
 
 実物は<a href="https://version-1.github.io/react-snake-game/">こちら</a>です
 

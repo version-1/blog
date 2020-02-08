@@ -85,7 +85,7 @@ Technology: React, Electron, Go, Next.js
 
 Snake Game implemented by React. Following video is it.
 
-<video poster="https://statics.ver-1-0.net/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.net/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
+<video poster="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
 
 Site is <a href="https://version-1.github.io/react-snake-game/">HERE</a>
 

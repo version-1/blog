@@ -25,7 +25,7 @@ related:
 <h2>サーバ</h2>
 についてのお話です。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171110_web-structure-about-server/Screen-Shot-2017-11-09-at-21.32.15.png" alt="Screen-Shot-2017-11-09-at-21.32.15.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171110_web-structure-about-server/Screen-Shot-2017-11-09-at-21.32.15.png" alt="Screen-Shot-2017-11-09-at-21.32.15.png"/>
 
 &nbsp;
 
@@ -103,7 +103,7 @@ OSの中に、
 WebサーバであるApacheやNginxがあり、
 その中にデータベースとアプリケーションがあります。
 
-<img class="post-image" src="https://statics.ver-1-0.net/uploads/2017/11/20171110_web-structure-about-server/サーバーの構造.png" alt="サーバーの構造.png"/>
+<img class="post-image" src="https://statics.ver-1-0.xyz/uploads/2017/11/20171110_web-structure-about-server/サーバーの構造.png" alt="サーバーの構造.png"/>
 
 &nbsp;
 

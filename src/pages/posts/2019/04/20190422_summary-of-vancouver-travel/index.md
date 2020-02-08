@@ -88,7 +88,7 @@ Uberが使えないようです。。**
 
 現地に到着して気づいたのですが、バンクーバー市内はバスが結構便利でこのような
 
-![コンパスカード](https://statics.ver-1-0.net/uploads/2019/04/20190422_summary-of-vancouver-travel/compass-card.jpg)
+![コンパスカード](https://statics.ver-1-0.xyz/uploads/2019/04/20190422_summary-of-vancouver-travel/compass-card.jpg)
 
 パスモのような**コンパスカード**と呼ばれるカードにクレカでお金をチャージしておけば料金などを気にせず乗ることができます。
 詳しいバスの乗り方や料金などはググってもらえればわかると思うのですが、Googleマップをみると最寄りのバス停に何分あとにバスが来るやバスの現在位置などが
@@ -99,7 +99,7 @@ Uberが使えないようです。。**
 
 ## ウィスラー最高
 
-![ウィスラースノボー](https://statics.ver-1-0.net/uploads/2019/04/20190422_summary-of-vancouver-travel/whistler.jpg)
+![ウィスラースノボー](https://statics.ver-1-0.xyz/uploads/2019/04/20190422_summary-of-vancouver-travel/whistler.jpg)
 
 ウィスラーは、ホテルも文句なしレストランやスーパーなどなども充実していて本当に過ごしやすかったです。
 
@@ -124,10 +124,10 @@ Uberが使えないようです。。**
 
 パフォーマンス中の写真
 
-![Teppan Village Performance](https://statics.ver-1-0.net/uploads/2019/04/20190422_summary-of-vancouver-travel/teppan-fire.jpg)
+![Teppan Village Performance](https://statics.ver-1-0.xyz/uploads/2019/04/20190422_summary-of-vancouver-travel/teppan-fire.jpg)
 
 ロブスターとステーキ
-![ロブスターとステーキ](https://statics.ver-1-0.net/uploads/2019/04/20190422_summary-of-vancouver-travel/robster.jpg)
+![ロブスターとステーキ](https://statics.ver-1-0.xyz/uploads/2019/04/20190422_summary-of-vancouver-travel/robster.jpg)
 
 
 日系なので半分くらいが日本人の店員さんとシェフなので、英語が苦手だったりする人でも楽しめます。
@@ -140,7 +140,7 @@ Uberが使えないようです。。**
 
 こんな感じで生牡蠣が楽しめます。フィッシュ＆チップスとワインで最高でした。店内もおしゃれで店員さんも親切でした。
 
-![Fanny Bay Oyster Bar & Shellfish Market](https://statics.ver-1-0.net/uploads/2019/04/20190422_summary-of-vancouver-travel/oystar.jpg)
+![Fanny Bay Oyster Bar & Shellfish Market](https://statics.ver-1-0.xyz/uploads/2019/04/20190422_summary-of-vancouver-travel/oystar.jpg)
 
 
 ## 旅行の計画にミートアップを挟むのオススメ
@@ -156,7 +156,7 @@ Uberが使えないようです。。**
 
 ## ボックスラクロス観戦おすすめ
 
-![lacrosse](https://statics.ver-1-0.net/uploads/2019/04/20190422_summary-of-vancouver-travel/lacrosse.png)
+![lacrosse](https://statics.ver-1-0.xyz/uploads/2019/04/20190422_summary-of-vancouver-travel/lacrosse.png)
 
 カナダではボックスラクロスと言って、日本やアメリカでポピュラーなラクロスとはちょっと違うホッケーのコートを使った室内のラクロスが盛んなのですが、
 **バンクーバーではボックスラクロスの観戦ができます。**チケットの買い方などなど詳細はまた別で記事にしようかなとは思うのですが、**ボックスラクロス自体スピード感があるし、
