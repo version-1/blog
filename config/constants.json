@@ -22,7 +22,6 @@
   },
   "constants": {
     "per": 18,
-    "slackWebhookUrl": "https://hooks.slack.com/services/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",
     "categories": [
       "column",
       "cryptocurrency-blockchain",
