@@ -70,7 +70,7 @@ export const BlogPostTemplate = ({
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp={amp} />
+        {/* <AdDoubleRect amp={amp} /> */}
         <div className="post-meta-footer">
           <div className="categories">
             Category :
