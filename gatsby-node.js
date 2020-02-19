@@ -281,7 +281,12 @@ exports.createPages = async ({actions, graphql}) => {
       const breadcrumbs = fetch(language);
       const context = {
         language,
-        layout: {archiveByMonth, breadcrumbs: [breadcrumbs.top]},
+        layout: {
+          archiveByMonth,
+          breadcrumbs: [breadcrumbs.top],
+          categories,
+          tags
+        },
       };
 
       let rows = [];
