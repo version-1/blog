@@ -6,7 +6,7 @@ import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
 import Content, {HTMLContent} from 'components/Content';
-import {AdDoubleRect} from 'components/organisms/Adsence';
+// import {AdDoubleRect} from 'components/organisms/Adsence';
 import SNSButtons from 'components/organisms/SNSButtons';
 import CategoryList from 'components/molecules/CategoryList';
 import TagList from 'components/molecules/TagList';
@@ -70,7 +70,7 @@ export const BlogPostTemplate = ({
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp={amp} />
+        {/* <AdDoubleRect amp={amp} /> */}
         <div className="post-meta-footer">
           <div className="categories">
             Category :

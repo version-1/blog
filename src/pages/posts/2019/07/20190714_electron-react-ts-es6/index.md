@@ -4,14 +4,14 @@ language: ja
 title: ElectronでReact+TypeScript+ES6開発環境を整えてみた
 slug: /2019/07/14/electron-react-ts-es6
 createdAt: 2019-07-14 16:28:08
-updatedAt: 2019-07-21 16:13:20
+updatedAt: 2020-02-19 02:24:08
 thumbnail: /2019/07/20190714_electron-react-ts-es6/thumbnail.png
 categories:
   - engineering
 tags:
   - react
   - webpack
-  - typescrpt
+  - typescript
   - electron
 
 ---

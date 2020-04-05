@@ -7,12 +7,13 @@ import Navbar from 'components/Navbar';
 import Head from 'components/Head';
 import 'assets/stylesheets/index.sass';
 import {constants} from 'config/constants';
+import {isDevelopment, env} from 'lib/env';
 
-const notifier = slack(constants.slackWebhookUrl);
+const notifier = slack(env.slackWebhookUrl);
 
 export default class IndexLayout extends React.PureComponent {
   componentDidMount() {
-    if (process.env.NODE_ENV === 'development') return;
+    if (isDevelopment) return;
     batchEventRegister(window, constants.selectors, 'click', {
       afterCallback: (ga, ele, params) => {
         notifier.send({
