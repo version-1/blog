@@ -95,7 +95,12 @@ export const categryPageQuery = graphql`
         }
       }
     }
-    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+    pickup: allMarkdownRemark(filter: {
+        frontmatter: {
+          slug: {in: $pickup},
+          language: {eq: $language},
+        }
+      }) {
       totalCount
       nodes {
         id
