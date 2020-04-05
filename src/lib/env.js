@@ -9,3 +9,9 @@ export const isProduction = isEnv('production')
 export const isStrictProduction = isProduction && isProductionHost
 export const isDevelopment = isEnv('development')
 
+const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL
+
+export const env = {
+  slackWebhookUrl
+}
+

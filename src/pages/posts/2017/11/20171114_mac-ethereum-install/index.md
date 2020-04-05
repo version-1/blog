@@ -4,14 +4,14 @@ language: ja
 title: Macにイーサリアムをインスールして、送金してみる（テストネットワーク）
 slug: /2017/11/14/mac-ethereum-install
 createdAt: 2017-11-14 08:00:21
-updatedAt: 2018-08-26 11:20:41
+updatedAt: 2020-02-19 02:24:08
 thumbnail: /2017/11/20171114_mac-ethereum-install/thumbnail.png
 categories:
   - cryptocurrency-blockchain
   - engineering
 tags:
   - mac
-  - ethrereum
+  - ethereum
   - blockchain
 related:
   - dummy
