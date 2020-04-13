@@ -11,6 +11,7 @@ export default class IndexPage extends React.PureComponent {
     const {nodes: posts, totalCount} = data.allMarkdownRemark;
     // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
     const {pickup, language, amp, baseUrl, layout} = this.props.pageContext;
+    debugger
     const pickupList = pickup ? data.pickup.nodes: [];
     return (
       <Layout

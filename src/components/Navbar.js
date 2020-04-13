@@ -41,7 +41,7 @@ const Navbar = class extends React.PureComponent {
             </div>
           )}
           <div className="brand-logo">
-            <Link to={rootPath(language)}>So Far, So Good</Link>
+            <Link to={rootPath(language)}>So Far, So Tech</Link>
           </div>
           <div className="nav-links hide-on-med-and-down">
             <MenuList list={list} />
