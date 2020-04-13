@@ -4,8 +4,8 @@ language: ja
 title: COVID-19とランジェリーのプレゼント
 slug: /2020/04/13/corona-and-lingerie
 createdAt: 2020-04-13 15:39:36
-updatedAt: 2020-04-13 16:16:59
-thumbnail: /2020/04/20200413_corona-and-lingerie/thumbnail.png
+updatedAt: 2020-04-13 16:40:40
+thumbnail: /2020/04/20200413_corona-and-lingerie/thumbnail.jpg
 categories:
   - column
   - freelance
