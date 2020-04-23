@@ -6,7 +6,7 @@ import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
 import Content, {HTMLContent} from 'components/Content';
-// import {AdDoubleRect} from 'components/organisms/Adsence';
+import {AdDoubleRect} from 'components/organisms/Adsence';
 import SNSButtons from 'components/organisms/SNSButtons';
 import CategoryList from 'components/molecules/CategoryList';
 import TagList from 'components/molecules/TagList';
@@ -70,7 +70,7 @@ export const BlogPostTemplate = ({
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        {/* <AdDoubleRect amp={amp} /> */}
+        <AdDoubleRect amp={amp} />
         <div className="post-meta-footer">
           <div className="categories">
             Category :
@@ -157,7 +157,7 @@ BlogPost.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!, $pickup: [String], $related: [String]) {
+  query BlogPostByID($id: String!, $language: String!, $pickup: [String], $related: [String]) {
     markdownRemark(id: {eq: $id}) {
       id
       html
@@ -179,7 +179,14 @@ export const pageQuery = graphql`
         updatedAt(formatString: "MMM DD, YYYY")
       }
     }
-    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+    pickup: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          language: {eq: $language },
+          slug: {in: $pickup}
+        }
+      }
+    ) {
       totalCount
       nodes {
         id
@@ -208,7 +215,12 @@ export const pageQuery = graphql`
     }
     related: allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___createdAt]}
-      filter: {frontmatter: {slug: {in: $related}}}
+      filter: {
+        frontmatter: {
+          language: { eq: $language },
+          slug: {in: $related}
+        }
+      }
     ) {
       totalCount
       nodes {
