@@ -7,12 +7,15 @@ import { isStrictProduction } from 'lib/env'
 export default class Meta extends PureComponent {
   render() {
     const {amp, baseUrl, siteTitle, description} = this.props;
+    const amphtml = baseUrl + '/amp';
+
     return (
       <Helmet>
         <html lang="en" />
         <title>{siteTitle}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={baseUrl} />
+        { amp && <link rel="amphtml" href={amphtml} /> }
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={meta.siteUrl} />
