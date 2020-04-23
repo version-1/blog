@@ -124,7 +124,7 @@ export const replaceRenderer = params => {
   if (!pathname || !isAMP(pathname)) return;
   const bodyHTML = renderToString(bodyComponent);
   const dom = parse(bodyHTML);
-  console.log('===========>replaceRenderHTML', pathname);
+  // console.log('===========>replaceRenderHTML', pathname);
   const _dom = ampify(dom);
   const html = serialize(_dom);
   const _html = html.replace(/xmlns=\".*xhtml\"/, '');
