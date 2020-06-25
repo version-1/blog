@@ -18,7 +18,6 @@ class TagTemplate extends React.PureComponent {
       index,
       tag,
       language,
-      amp,
       baseUrl,
       layout,
     } = this.props.pageContext;
@@ -27,7 +26,6 @@ class TagTemplate extends React.PureComponent {
     const heading = i18next.t(label);
     return (
       <Layout
-        amp={amp}
         baseUrl={baseUrl}
         pickup={pickup}
         language={language}

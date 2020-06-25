@@ -6,7 +6,6 @@ my blog
 
 ## Feature
 
-* support amp page on all articles's page(scratch)
 * show related posts on each article
 * show popular page rankings base on Google Analitics
 

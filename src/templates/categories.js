@@ -18,7 +18,6 @@ class CategoryTemplate extends React.PureComponent {
       index,
       category,
       language,
-      amp,
       baseUrl,
       layout,
     } = this.props.pageContext;
@@ -28,7 +27,6 @@ class CategoryTemplate extends React.PureComponent {
 
     return (
       <Layout
-        amp={amp}
         baseUrl={baseUrl}
         pickup={pickup}
         language={language}

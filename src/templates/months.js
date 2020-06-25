@@ -10,7 +10,6 @@ export default class MonthsIndex extends PureComponent {
       month,
       totalPages,
       language,
-      amp,
       baseUrl,
       layout,
     } = this.props.pageContext;
@@ -20,13 +19,11 @@ export default class MonthsIndex extends PureComponent {
 
     return (
       <Layout
-        amp={amp}
         baseUrl={baseUrl}
         pickup={pickup}
         language={language}
         layout={layout}>
         <PostList
-          amp={amp}
           title={title}
           pageIndex={index}
           posts={posts}
