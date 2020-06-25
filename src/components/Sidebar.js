@@ -7,7 +7,7 @@ import {tagPath, categoryPath, aboutPath} from 'lib/routes';
 import i18next from 'lib/i18next';
 import Title from 'components/molecules/Title';
 
-const Profile = ({amp}) => {
+const Profile = () => {
   const data = useStaticQuery(graphql`
     {
       profile: file(relativePath: {eq: "profile.png"}) {
@@ -37,7 +37,6 @@ export default class Sidebar extends PureComponent {
   render() {
     const {
       language,
-      amp,
       layout: {archiveByMonth, tags},
     } = this.props;
     return (
@@ -47,7 +46,6 @@ export default class Sidebar extends PureComponent {
           <div className="self-introduction">
             <div className="profile-image">
               <Profile
-                amp={amp}
                 width="100"
                 height="100"
                 layout="fixed"

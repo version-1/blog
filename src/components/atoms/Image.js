@@ -11,19 +11,7 @@ const defaults = {
 };
 export default class Image extends React.PureComponent {
   render() {
-    const {amp, gatsbyImage, gatsbyType} = this.props;
-    if (amp) {
-      return (
-        <amp-img
-          width={this.props.width || defaults.image.width}
-          height={this.props.height || defaults.image.height}
-          layout={this.props.layout || defaults.image.layout}
-          src={this.props.src}
-          alt={this.props.alt}
-          className={this.props.className}
-        />
-      );
-    }
+    const {gatsbyImage, gatsbyType} = this.props;
 
     if (gatsbyImage) {
       if (!isProduction) {

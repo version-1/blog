@@ -36,29 +36,14 @@ const genPath = (language, slug) => {
   return slug;
 };
 
-const withAMP = createPage => params => {
+const create = createPage => params => {
   const {path: _path, component, context = {}} = params;
-  const ampPath = _path + '/amp';
   const template = path.parse(component);
-  const ampTemplate = component.replace(
-    template.base,
-    [template.name, '.amp', template.ext].join(''),
-  );
   const baseUrl = [meta.siteUrl, _path].join('');
   createPage({
     ...params,
     context: {
       ...context,
-      baseUrl,
-    },
-  });
-  createPage({
-    ...params,
-    path: ampPath,
-    component: ampTemplate,
-    context: {
-      ...context,
-      amp: true,
       baseUrl,
     },
   });
@@ -323,11 +308,11 @@ exports.createPages = async ({actions, graphql}) => {
         graphql(queries.staticPageQuery, {templateKey: page, language}).then(
           result => {
             const [post] = result.data.allMarkdownRemark.nodes;
-            createStaticPage(withAMP(createPage))(post)(context);
+            createStaticPage(create(createPage))(post)(context);
           },
         );
       });
-      createPostShowPage(withAMP(createPage))(posts, rows)({
+      createPostShowPage(create(createPage))(posts, rows)({
         pickupDisabled: true,
         pickup,
         ...context,

@@ -12,7 +12,7 @@ import {
 import HatenaButton from 'components/atoms/buttons/HatenaButton';
 import PocketButton from 'components/atoms/buttons/PocketButton';
 
-const SnsButtons = ({type, amp, url, title}) => {
+const SnsButtons = ({type, url, title}) => {
   return (
     <div className={`sns-buttons ${type}`}>
       <div className="js-ga-click-sns-twitter">
@@ -36,10 +36,10 @@ const SnsButtons = ({type, amp, url, title}) => {
         </RedditShareButton>
       </div>
       <div className="js-ga-click-sns-pocket">
-        <PocketButton amp={amp} url={url} title={title} />
+        <PocketButton url={url} title={title} />
       </div>
       <div className="js-ga-click-sns-hatebu">
-        <HatenaButton amp={amp} url={url} title={title} size={80} />
+        <HatenaButton url={url} title={title} size={80} />
       </div>
     </div>
   );
