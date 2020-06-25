@@ -5,7 +5,6 @@ import Pagination from 'components/Pagination';
 
 const PostList = props => {
   const {
-    amp,
     title,
     titleLabel,
     posts,
@@ -25,7 +24,7 @@ const PostList = props => {
           <div className="section-list">
             <div className="row">
               {posts.map((post, index) => (
-                <Post post={post} key={index} amp={amp} />
+                <Post post={post} key={index} />
               ))}
             </div>
           </div>

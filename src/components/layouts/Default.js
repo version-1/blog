@@ -20,20 +20,19 @@ const Breadcrumbs = ({context}) => {
 
 class DefaultLayout extends React.PureComponent {
   render() {
-    const {pickupDisabled, pickup, language, amp, baseUrl, layout} = this.props;
+    const {pickupDisabled, pickup, language, baseUrl, layout} = this.props;
     const {archiveByMonth, breadcrumbs = []} = layout;
     return (
-      <Layout language={language} amp={amp} baseUrl={baseUrl}>
+      <Layout language={language} baseUrl={baseUrl}>
         <main className="row container">
           <Breadcrumbs context={breadcrumbs} />
-          {!pickupDisabled && <PickupList amp={amp} posts={pickup} />}
+          {!pickupDisabled && <PickupList posts={pickup} />}
           <section className="flex">
             <div className="main">{this.props.children}</div>
             <div className="hide-on-med-and-down">
               <Sidebar
                 layout={layout}
                 language={language}
-                amp={amp}
                 archiveByMonth={archiveByMonth}
               />
             </div>
@@ -43,7 +42,6 @@ class DefaultLayout extends React.PureComponent {
               <Sidebar
                 layout={layout}
                 language={language}
-                amp={amp}
               />
             </div>
           </div>

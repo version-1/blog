@@ -4,7 +4,7 @@ import Image from 'components/atoms/Image';
 import {postShowPath} from 'lib/routes';
 import {meta} from 'config/constants';
 
-const Post = ({amp, thumbnail, post}) => {
+const Post = ({thumbnail, post}) => {
   const {title, language, slug} = post.frontmatter;
   const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail;
   const path = postShowPath(slug, language);

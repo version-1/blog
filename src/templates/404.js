@@ -4,11 +4,10 @@ import {graphql} from 'gatsby';
 import PostList from 'components/organisms/PostList';
 
 const NotFoundPage = props => {
-  const {pickup, language, amp, baseUrl, layout} = props.pageContext;
+  const {pickup, language, baseUrl, layout} = props.pageContext;
   const pickupList = pickup ? props.data.pickup.nodes : [];
   return (
     <Layout
-      amp={amp}
       baseUrl={baseUrl}
       pickup={pickupList}
       language={language}

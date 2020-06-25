@@ -6,16 +6,13 @@ import {graphql} from 'gatsby';
 import {meta} from 'config/constants';
 import Layout from 'components/layouts/Default';
 import Content, {HTMLContent} from 'components/Content';
-import {AdDoubleRect} from 'components/organisms/Adsence';
 import SNSButtons from 'components/organisms/SNSButtons';
 import CategoryList from 'components/molecules/CategoryList';
 import TagList from 'components/molecules/TagList';
 import BottomPostList from 'components/organisms/BottomPostList';
-import {insertInArticle} from 'lib/adsense';
 import i18next from 'lib/i18next';
 
 export const BlogPostTemplate = ({
-  amp,
   location,
   post,
   pickup,
@@ -23,7 +20,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   helmet,
 }) => {
-  const content = insertInArticle(amp)(post.html);
+  const content = post.html;
   const {
     createdAt,
     updatedAt,
@@ -45,7 +42,6 @@ export const BlogPostTemplate = ({
         <div className="thumbnail">
           {!!post.thumbnail ? (
             <Image
-              amp={amp}
               gatsbyImage
               gatsbyType="fluid"
               fluid={post.thumbnail.childImageSharp.fluid}
@@ -70,7 +66,6 @@ export const BlogPostTemplate = ({
           <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
-        <AdDoubleRect amp={amp} />
         <div className="post-meta-footer">
           <div className="categories">
             Category :
@@ -111,7 +106,6 @@ export default class BlogPost extends React.PureComponent {
     const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
     const {
       language,
-      amp,
       baseUrl,
       layout,
       pickupDisabled,
@@ -121,14 +115,12 @@ export default class BlogPost extends React.PureComponent {
 
     return (
       <Layout
-        amp={amp}
         baseUrl={baseUrl}
         pickup={pickup}
         pickupDisabled={pickupDisabled}
         language={language}
         layout={layout}>
         <BlogPostTemplate
-          amp={context.amp}
           post={post}
           related={related}
           pickup={pickup}

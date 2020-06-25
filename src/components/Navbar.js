@@ -23,7 +23,7 @@ const MenuList = ({list}) => {
 
 const Navbar = class extends React.PureComponent {
   render() {
-    const {amp, language} = this.props;
+    const {language} = this.props;
     const list = menus(language);
     return (
       <div className="navigation-container">
@@ -31,7 +31,6 @@ const Navbar = class extends React.PureComponent {
           className="navigation"
           role="navigation"
           aria-label="main-navigation">
-          {!amp && (
             <div
               className="menu hide-on-large-only sidenav-trigger"
               data-target="side-out">
@@ -39,7 +38,6 @@ const Navbar = class extends React.PureComponent {
                 <i className="material-icons menu-icon">menu</i>
               </a>
             </div>
-          )}
           <div className="brand-logo">
             <Link to={rootPath(language)}>So Far, So Tech</Link>
           </div>

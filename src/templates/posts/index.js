@@ -8,12 +8,11 @@ const pagenationNamespace = postPath()
 
 export default class PostsIndex extends PureComponent {
   render() {
-    const {index, amp, layout} = this.props.pageContext;
+    const {index, layout} = this.props.pageContext;
     const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
     return (
       <Layout layout={layout}>
         <PostList
-          amp={amp}
           pageIndex={index}
           titleLabel="labels.articles"
           posts={posts}
