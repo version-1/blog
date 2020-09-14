@@ -4,6 +4,7 @@ import {graphql} from 'gatsby';
 import {postPath} from 'lib/routes';
 import Layout from 'components/layouts/Default';
 import PostList from 'components/organisms/PostList';
+import { constants } from 'config/constants'
 
 export default class IndexPage extends React.PureComponent {
   render() {
@@ -77,7 +78,7 @@ export const pageQuery = graphql`
       filter: {
         frontmatter: {templateKey: {eq: "blog-post"}, language: {eq: $language}}
       }
-      limit: 18
+      limit: 9
     ) {
       totalCount
       nodes {

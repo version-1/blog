@@ -39,19 +39,6 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
-        <div className="thumbnail">
-          {!!post.thumbnail ? (
-            <Image
-              gatsbyImage
-              gatsbyType="fluid"
-              fluid={post.thumbnail.childImageSharp.fluid}
-              src={thumbnailUrl}
-              alt={title}
-            />
-          ) : (
-            ''
-          )}
-        </div>
         <div className="post-meta-header">
           <div className="timestamp">
             <div className="created-at">
@@ -63,7 +50,6 @@ export const BlogPostTemplate = ({
               {updatedAt}
             </div>
           </div>
-          <SNSButtons type="post-header" url={url} title={title} />
         </div>
         <PostContent className="post-body" content={content} />
         <div className="post-meta-footer">
