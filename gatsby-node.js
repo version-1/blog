@@ -8,9 +8,8 @@ const {
 const {fmImagesToRelative} = require('gatsby-remark-relative-images');
 const {routes, meta, constants} = require('./config/constants');
 const {rootPath} = require('./src/lib/routes');
-const fs = require(`fs-extra`);
 const moment = require('moment');
-const {validateCategoryList, validateTagList} = require('./node/validation');
+const {validateCategoryList} = require('./node/validation');
 const {fetch} = require('./node/breadcrumbs');
 const {fetchPv} = require('./node/pageview');
 const {rating} = require('./node/related-post');
@@ -266,6 +265,7 @@ exports.createPages = async ({actions, graphql}) => {
       const breadcrumbs = fetch(language);
       const context = {
         language,
+        limit: PER_PAGE,
         layout: {
           archiveByMonth,
           breadcrumbs: [breadcrumbs.top],
