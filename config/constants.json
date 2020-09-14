@@ -21,7 +21,7 @@
     "postRoot": "/Users/admin/React/ver-1-0.net-static/src/pages/posts"
   },
   "constants": {
-    "per": 18,
+    "per": 9,
     "categories": [
       "column",
       "cryptocurrency-blockchain",

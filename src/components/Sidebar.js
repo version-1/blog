@@ -84,25 +84,6 @@ export default class Sidebar extends PureComponent {
           </div>
         </section>
         <section className="section">
-          <Title color="skyblue" label="labels.sidebar.tags" />
-          <div className="sidebar-tags">
-            <ul className="sidebar-tags-list">
-              {tags.map(tag => {
-                const key = `tags.${tag}`;
-                return (
-                  <li key={key} className="sidebar-tags-item">
-                    <Link
-                      className="sidebar-tags-item-link"
-                      to={tagPath(tag, language)}>
-                      {i18next.t(key)}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
-        <section className="section">
           <ArchiveByMonth language={language} items={archiveByMonth} />
         </section>
       </div>
