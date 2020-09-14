@@ -29,7 +29,7 @@
     "i18next": "^12.1.0",
     "lodash": "^4.17.19",
     "lodash-webpack-plugin": "^0.11.4",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.13.1",
     "paginate": "^0.2.0",
     "parcel-bundler": "^1.9.4",
     "prismjs": "^1.21.0",
