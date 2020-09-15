@@ -27,8 +27,11 @@ const DefaultLayout = ({
   baseUrl,
   layout
 }) => {
-  const { smartphone } = useDeviceType();
+  const { ready, smartphone } = useDeviceType();
   const { archiveByMonth, breadcrumbs = [] } = layout;
+  if (!ready) {
+    return null;
+  }
   return (
     <Layout language={language} baseUrl={baseUrl}>
       <main className="row container">
@@ -36,18 +39,22 @@ const DefaultLayout = ({
         {!pickupDisabled && !smartphone && <PickupList posts={pickup} />}
         <section className="flex">
           <div className="main">{children}</div>
-          <div className="hide-on-med-and-down">
-            <Sidebar
-              layout={layout}
-              language={language}
-              archiveByMonth={archiveByMonth}
-            />
-          </div>
+          {smartphone && (
+            <div className="hide-on-med-and-down">
+              <Sidebar
+                layout={layout}
+                language={language}
+                archiveByMonth={archiveByMonth}
+              />
+            </div>
+          )}
         </section>
         <div className="flex">
-          <div className="hide-on-large-only">
-            <Sidebar layout={layout} language={language} />
-          </div>
+          {smartphone && (
+            <div className="hide-on-large-only">
+              <Sidebar layout={layout} language={language} />
+            </div>
+          )}
         </div>
       </main>
     </Layout>
