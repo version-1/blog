@@ -8,20 +8,32 @@ import Breadcrumbs from "components/molecules/Breadcrumbs";
 
 const DefaultLayout = ({ children }) => {
   const context = useContext(PageContext);
-  const { path, pickup, pickupDisabled, language, baseUrl, layout } = context;
+  const {
+    path,
+    pickup,
+    pickupDisabled,
+    sidebarDisabled,
+    language,
+    baseUrl,
+    layout
+  } = context;
   const { ready, smartphone } = useDeviceType();
   const { archiveByMonth = {}, breadcrumbs = [] } = layout;
   if (!ready) {
     return null;
   }
+
+  const containerClass = sidebarDisabled
+    ? "row container container-narrow"
+    : "row container";
   return (
     <Layout language={language} baseUrl={baseUrl}>
-      <main className="row container">
+      <main className={containerClass}>
         <Breadcrumbs currentPath={path} context={breadcrumbs} />
         {!pickupDisabled && !smartphone && <PickupList posts={pickup} />}
         <section className="flex">
           <div className="main">{children}</div>
-          {!smartphone && (
+          {!smartphone && !sidebarDisabled && (
             <div className="hide-on-med-and-down">
               <Sidebar
                 layout={layout}
