@@ -55,4 +55,4 @@ const DefaultLayout = ({ children }) => {
   );
 };
 
-export default React.memo(DefaultLayout, []);
+export default React.memo(DefaultLayout);
