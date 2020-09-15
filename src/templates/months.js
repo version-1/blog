@@ -1,28 +1,22 @@
-import React, {PureComponent} from 'react';
-import {graphql} from 'gatsby';
-import Layout from 'components/layouts/Default';
-import PostList from 'components/organisms/PostList';
+import React, { useMemo } from "react";
+import { graphql } from "gatsby";
+import Layout from "components/layouts/Default";
+import { PageContext } from "context";
+import PostList from "components/organisms/PostList";
 
-export default class MonthsIndex extends PureComponent {
-  render() {
-    const {
-      index,
-      month,
-      totalPages,
-      language,
-      baseUrl,
-      layout,
-    } = this.props.pageContext;
-    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {nodes: pickup} = this.props.data.pickup;
-    const title = `記事一覧 ${index} / ${totalPages}`;
+const MonthsIndex = ({ path, data, pageContext }) => {
+  const { index, month, totalPages } = pageContext;
+  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const { nodes: pickup } = data.pickup;
+  const context = useMemo(
+    () => ({ ...pageContext, sidebarDisabled: true, pickup, path }),
+    [pageContext, path, pickup]
+  );
+  const title = `記事一覧 ${index} / ${totalPages}`;
 
-    return (
-      <Layout
-        baseUrl={baseUrl}
-        pickup={pickup}
-        language={language}
-        layout={layout}>
+  return (
+    <PageContext.Provider value={context}>
+      <Layout>
         <PostList
           title={title}
           pageIndex={index}
@@ -31,9 +25,11 @@ export default class MonthsIndex extends PureComponent {
           pagenationTotalCount={totalCount}
         />
       </Layout>
-    );
-  }
-}
+    </PageContext.Provider>
+  );
+};
+
+export default MonthsIndex;
 
 export const monthsIndexQuery = graphql`
   query monthsIndexQuery(
@@ -43,8 +39,8 @@ export const monthsIndexQuery = graphql`
     $limit: Int!
   ) {
     allMarkdownRemark(
-      sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {id: {in: $ids}}
+      sort: { fields: [frontmatter___createdAt], order: DESC }
+      filter: { id: { in: $ids } }
       limit: $limit
       skip: $skip
     ) {
@@ -74,7 +70,9 @@ export const monthsIndexQuery = graphql`
         }
       }
     }
-    pickup: allMarkdownRemark(filter: {frontmatter: {slug: {in: $pickup}}}) {
+    pickup: allMarkdownRemark(
+      filter: { frontmatter: { slug: { in: $pickup } } }
+    ) {
       totalCount
       nodes {
         id

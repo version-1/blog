@@ -1,17 +1,22 @@
-import React, {PureComponent} from 'react';
-import {graphql} from 'gatsby';
-import Layout from 'components/layouts/Default';
-import {postPath} from 'lib/routes';
-import PostList from 'components/organisms/PostList';
+import React, { useMemo } from "react";
+import { graphql } from "gatsby";
+import Layout from "components/layouts/Default";
+import { postPath } from "lib/routes";
+import { PageContext } from "context";
+import PostList from "components/organisms/PostList";
 
-const pagenationNamespace = postPath()
+const pagenationNamespace = postPath();
 
-export default class PostsIndex extends PureComponent {
-  render() {
-    const {index, layout} = this.props.pageContext;
-    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
-    return (
-      <Layout layout={layout}>
+const PostsIndex = ({ data, path, pageContext }) => {
+  const { index } = pageContext;
+  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const context = useMemo(() => ({ ...pageContext, pickup: [], path }), [
+    pageContext,
+    path
+  ]);
+  return (
+    <PageContext.Provider value={context}>
+      <Layout>
         <PostList
           pageIndex={index}
           titleLabel="labels.articles"
@@ -20,16 +25,21 @@ export default class PostsIndex extends PureComponent {
           pagenationTotalCount={totalCount}
         />
       </Layout>
-    );
-  }
-}
+    </PageContext.Provider>
+  );
+};
+
+export default PostsIndex
 
 export const postsIndexQuery = graphql`
   query postsIndexQuery($language: String, $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: {fields: [frontmatter___createdAt], order: DESC}
+      sort: { fields: [frontmatter___createdAt], order: DESC }
       filter: {
-        frontmatter: {templateKey: {eq: "blog-post"}, language: {eq: $language}}
+        frontmatter: {
+          templateKey: { eq: "blog-post" }
+          language: { eq: $language }
+        }
       }
       limit: $limit
       skip: $skip
