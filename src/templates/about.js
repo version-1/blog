@@ -1,18 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import {graphql} from 'gatsby';
-import {meta} from 'config/constants';
-import Layout from 'components/layouts/Default';
-import Content, {HTMLContent} from 'components/Content';
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import { meta } from "config/constants";
+import { PageContext } from "context";
+import Layout from "components/layouts/Default";
+import Content, { HTMLContent } from "components/Content";
 
-export const AboutTemplate = ({post, contentComponent, helmet}) => {
+export const AboutTemplate = ({ post, contentComponent, helmet }) => {
   const content = post.html;
-  const {createdAt, updatedAt, title} = post.frontmatter;
+  const { createdAt, updatedAt, title } = post.frontmatter;
   const PostContent = contentComponent || Content;
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet || ""}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">
@@ -43,19 +44,22 @@ AboutTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 };
 
-export default class AboutPost extends React.PureComponent {
-  render() {
-    const {markdownRemark: post} = this.props.data;
-    const description = post.excerpt;
-    const context = this.props.pageContext;
-    const {fluid} = post.frontmatter.thumbnail.childImageSharp || {};
-    const content = fluid && [meta.siteUrl, fluid.src].join('');
+export const AboutPost = ({ data, pageContext, path }) => {
+  const { markdownRemark: post } = data;
+  const description = post.excerpt;
+  const { fluid } = post.frontmatter.thumbnail.childImageSharp || {};
+  const content = fluid && [meta.siteUrl, fluid.src].join("");
+  const context = useMemo(
+    () => ({ ...pageContext, sidebarDisabled: true, path }),
+    [pageContext, path]
+  );
 
-    return (
-      <Layout {...context}>
+  return (
+    <PageContext.Provider value={context}>
+      <Layout>
         <AboutTemplate
           post={post}
           contentComponent={HTMLContent}
@@ -69,19 +73,20 @@ export default class AboutPost extends React.PureComponent {
           }
         />
       </Layout>
-    );
-  }
-}
+    </PageContext.Provider>
+  );
+};
 
 AboutPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 };
+export default AboutPost
 
 export const pageQuery = graphql`
   query AboutPostByID($id: String!) {
-    markdownRemark(id: {eq: $id}) {
+    markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(truncate: true, pruneLength: 300)

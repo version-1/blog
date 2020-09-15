@@ -1,47 +1,39 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import {graphql} from 'gatsby';
-import i18next from 'lib/i18next';
-import Layout from 'components/layouts/Default';
-import PostList from 'components/organisms/PostList';
-import {tagPath} from 'lib/routes';
+import React, { useMemo } from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import { PageContext } from "context";
+import i18next from "lib/i18next";
+import Layout from "components/layouts/Default";
+import PostList from "components/organisms/PostList";
+import { tagPath } from "lib/routes";
 
-class TagTemplate extends React.PureComponent {
-  get pagenationNamespace() {
-    return tagPath(this.props.pageContext.tag);
-  }
-
-  render() {
-    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {nodes: pickup} = this.props.data.pickup;
-    const {
-      index,
-      tag,
-      language,
-      baseUrl,
-      layout,
-    } = this.props.pageContext;
-    const {title} = this.props.data.site.siteMetadata;
-    const label = `tags.${tag}`;
-    const heading = i18next.t(label);
-    return (
-      <Layout
-        baseUrl={baseUrl}
-        pickup={pickup}
-        language={language}
-        layout={layout}>
+const TagTemplate = ({ data, path, pageContext }) => {
+  const { title } = data.site.siteMetadata;
+  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const { pagenationNamespace } = tagPath(pageContext.tag);
+  const { nodes: pickup } = data.pickup;
+  const { index, tag } = pageContext;
+  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
+    pageContext,
+    path
+  ]);
+  const label = `tags.${tag}`;
+  const heading = i18next.t(label);
+  return (
+    <PageContext.Provider value={context}>
+      <Layout>
         <Helmet title={`${heading}| ${title}`} />
         <PostList
           pageIndex={index}
           titleLabel={label}
           posts={posts}
-          pagenationNamespace={this.pagenationNamespace}
+          pagenationNamespace={pagenationNamespace}
           pagenationTotalCount={totalCount}
         />
       </Layout>
-    );
-  }
-}
+    </PageContext.Provider>
+  );
+};
 
 export default TagTemplate;
 
@@ -61,8 +53,10 @@ export const tagPageQuery = graphql`
     allMarkdownRemark(
       limit: $limit
       skip: $skip
-      sort: {fields: [frontmatter___createdAt], order: DESC}
-      filter: {frontmatter: {tags: {in: [$tag]}, language: {eq: $language}}}
+      sort: { fields: [frontmatter___createdAt], order: DESC }
+      filter: {
+        frontmatter: { tags: { in: [$tag] }, language: { eq: $language } }
+      }
     ) {
       totalCount
       nodes {
@@ -90,12 +84,11 @@ export const tagPageQuery = graphql`
         }
       }
     }
-    pickup: allMarkdownRemark(filter: {
-        frontmatter: {
-          slug: {in: $pickup},
-          language: {eq: $language}
-        }
-      }) {
+    pickup: allMarkdownRemark(
+      filter: {
+        frontmatter: { slug: { in: $pickup }, language: { eq: $language } }
+      }
+    ) {
       totalCount
       nodes {
         id

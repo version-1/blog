@@ -1,23 +1,25 @@
-import React from 'react';
-import Layout from 'components/layouts/Default.js';
-import {graphql} from 'gatsby';
-import PostList from 'components/organisms/PostList';
+import React, { useMemo } from "react";
+import { graphql } from "gatsby";
+import { PageContext } from "context";
+import Layout from "components/layouts/Default.js";
+import PostList from "components/organisms/PostList";
 
-const NotFoundPage = props => {
-  const {pickup, language, baseUrl, layout} = props.pageContext;
-  const pickupList = pickup ? props.data.pickup.nodes : [];
+const NotFoundPage = ({ data, path, pageContext }) => {
+  const pickup = pageContext.pickup ? data.pickup.nodes : [];
+  const context = useMemo(
+    () => ({ ...pageContext, pickupDisabled: true, sidebarDisabled: true, pickup, path }),
+    [pageContext, path, pickup]
+  );
   return (
-    <Layout
-      baseUrl={baseUrl}
-      pickup={pickupList}
-      language={language}
-      layout={layout}>
-      <div className="not-found">
-        <h1>404 NOT FOUND</h1>
-        <p>お探しのページが見つかりません。</p>
-      </div>
-      <PostList titleLabel="labels.pickup" posts={pickupList} />
-    </Layout>
+    <PageContext.Provider value={context}>
+      <Layout>
+        <div className="not-found">
+          <h1>404 NOT FOUND</h1>
+          <p>お探しのページが見つかりません。</p>
+        </div>
+        <PostList titleLabel="labels.pickup" posts={pickup} />
+      </Layout>
+    </PageContext.Provider>
   );
 };
 
@@ -28,9 +30,9 @@ export const pageQuery = graphql`
     pickup: allMarkdownRemark(
       filter: {
         frontmatter: {
-          templateKey: {eq: "blog-post"}
-          language: {eq: $language}
-          slug: {in: $pickup}
+          templateKey: { eq: "blog-post" }
+          language: { eq: $language }
+          slug: { in: $pickup }
         }
       }
     ) {

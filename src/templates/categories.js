@@ -1,48 +1,44 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import {graphql} from 'gatsby';
-import i18next from 'lib/i18next';
-import Layout from 'components/layouts/Default';
-import PostList from 'components/organisms/PostList';
-import {categoryPath} from 'lib/routes';
+import React, { useMemo } from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import i18next from "lib/i18next";
+import Layout from "components/layouts/Default";
+import PostList from "components/organisms/PostList";
+import { PageContext } from "context";
+import { categoryPath } from "lib/routes";
 
-class CategoryTemplate extends React.PureComponent {
-  get pagenationNamespace () {
-    return categoryPath(this.props.pageContext.category)
-  }
+const CategoryTemplate = ({ data, path, pageContext }) => {
+  const { title } = data.site.siteMetadata;
+  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const { category, index } = pageContext
+  const pickup = pageContext.pickup ? data.pickup.nodes : [];
+  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
+    pageContext,
+    path,
+    pickup
+  ]);
+  const pagenationNamespace = useMemo(
+    () => categoryPath(pageContext.category),
+    []
+  );
+  const label = `categories.${category}`;
+  const heading = i18next.t(label);
 
-  render() {
-    const {nodes: posts, totalCount} = this.props.data.allMarkdownRemark;
-    const {nodes: pickup} = this.props.data.pickup;
-    const {
-      index,
-      category,
-      language,
-      baseUrl,
-      layout,
-    } = this.props.pageContext;
-    const {title} = this.props.data.site.siteMetadata;
-    const label = `categories.${category}`;
-    const heading = i18next.t(label)
-
-    return (
-      <Layout
-        baseUrl={baseUrl}
-        pickup={pickup}
-        language={language}
-        layout={layout}>
+  return (
+    <PageContext.Provider value={context}>
+      <Layout>
         <Helmet title={`${heading}| ${title}`} />
         <PostList
           pageIndex={index}
           titleLabel={label}
           posts={posts}
-          pagenationNamespace={this.pagenationNamespace}
+          pagenationNamespace={pagenationNamespace}
           pagenationTotalCount={totalCount}
         />
       </Layout>
-    );
-  }
-}
+    </PageContext.Provider>
+  );
+};
 
 export default CategoryTemplate;
 
@@ -62,9 +58,12 @@ export const categryPageQuery = graphql`
     allMarkdownRemark(
       limit: $limit
       skip: $skip
-      sort: {fields: [frontmatter___createdAt], order: DESC}
+      sort: { fields: [frontmatter___createdAt], order: DESC }
       filter: {
-        frontmatter: {categories: {in: [$category]}, language: {eq: $language}}
+        frontmatter: {
+          categories: { in: [$category] }
+          language: { eq: $language }
+        }
       }
     ) {
       totalCount
@@ -93,12 +92,11 @@ export const categryPageQuery = graphql`
         }
       }
     }
-    pickup: allMarkdownRemark(filter: {
-        frontmatter: {
-          slug: {in: $pickup},
-          language: {eq: $language},
-        }
-      }) {
+    pickup: allMarkdownRemark(
+      filter: {
+        frontmatter: { slug: { in: $pickup }, language: { eq: $language } }
+      }
+    ) {
       totalCount
       nodes {
         id
