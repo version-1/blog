@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import Image from 'components/atoms/Image';
-import {graphql} from 'gatsby';
-import {meta} from 'config/constants';
-import Layout from 'components/layouts/Default';
-import Content, {HTMLContent} from 'components/Content';
-import SNSButtons from 'components/organisms/SNSButtons';
-import CategoryList from 'components/molecules/CategoryList';
-import TagList from 'components/molecules/TagList';
-import BottomPostList from 'components/organisms/BottomPostList';
-import i18next from 'lib/i18next';
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import { meta } from "config/constants";
+import { PageContext } from "context";
+import Layout from "components/layouts/Default";
+import Content, { HTMLContent } from "components/Content";
+import SNSButtons from "components/organisms/SNSButtons";
+import CategoryList from "components/molecules/CategoryList";
+import TagList from "components/molecules/TagList";
+import BottomPostList from "components/organisms/BottomPostList";
+import i18next from "lib/i18next";
 
 export const BlogPostTemplate = ({
   location,
@@ -18,7 +18,7 @@ export const BlogPostTemplate = ({
   pickup,
   related,
   contentComponent,
-  helmet,
+  helmet
 }) => {
   const content = post.html;
   const {
@@ -27,16 +27,14 @@ export const BlogPostTemplate = ({
     title,
     categories,
     language,
-    tags,
-    thumbnail,
+    tags
   } = post.frontmatter;
   const PostContent = contentComponent || Content;
-  const thumbnailUrl = meta.images.url + thumbnail;
   const url = location.href;
 
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet || ""}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">
@@ -65,7 +63,7 @@ export const BlogPostTemplate = ({
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
-            <p>{i18next.t('labels.share')}</p>
+            <p>{i18next.t("labels.share")}</p>
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
@@ -80,32 +78,23 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 };
 
-export default class BlogPost extends React.PureComponent {
-  render() {
-    const {location} = this.props;
-    const {markdownRemark: post} = this.props.data;
-    const description = post.excerpt;
-    const context = this.props.pageContext;
-    const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('');
-    const {
-      language,
-      baseUrl,
-      layout,
-      pickupDisabled,
-    } = this.props.pageContext;
-    const pickup = this.props.data.pickup.nodes;
-    const related = this.props.data.related.nodes;
+const BlogPost = ({ location, data, pageContext, path }) => {
+  const { markdownRemark: post } = data;
+  const description = post.excerpt;
+  const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join("");
+  const pickup = data.pickup.nodes;
+  const related = data.related.nodes;
+  const context = useMemo(
+    () => ({ ...pageContext, sidebarDisabled: true, pickup, path }),
+    [pageContext, path, pickup]
+  );
 
-    return (
-      <Layout
-        baseUrl={baseUrl}
-        pickup={pickup}
-        pickupDisabled={pickupDisabled}
-        language={language}
-        layout={layout}>
+  return (
+    <PageContext.Provider value={context}>
+      <Layout>
         <BlogPostTemplate
           post={post}
           related={related}
@@ -124,19 +113,26 @@ export default class BlogPost extends React.PureComponent {
           }
         />
       </Layout>
-    );
-  }
-}
+    </PageContext.Provider>
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 };
 
+export default BlogPost;
+
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!, $language: String!, $pickup: [String], $related: [String]) {
-    markdownRemark(id: {eq: $id}) {
+  query BlogPostByID(
+    $id: String!
+    $language: String!
+    $pickup: [String]
+    $related: [String]
+  ) {
+    markdownRemark(id: { eq: $id }) {
       id
       html
       excerpt(truncate: true, pruneLength: 300)
@@ -159,10 +155,7 @@ export const pageQuery = graphql`
     }
     pickup: allMarkdownRemark(
       filter: {
-        frontmatter: {
-          language: {eq: $language },
-          slug: {in: $pickup}
-        }
+        frontmatter: { language: { eq: $language }, slug: { in: $pickup } }
       }
     ) {
       totalCount
@@ -192,12 +185,9 @@ export const pageQuery = graphql`
       }
     }
     related: allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___createdAt]}
+      sort: { order: DESC, fields: [frontmatter___createdAt] }
       filter: {
-        frontmatter: {
-          language: { eq: $language },
-          slug: {in: $related}
-        }
+        frontmatter: { language: { eq: $language }, slug: { in: $related } }
       }
     ) {
       totalCount
