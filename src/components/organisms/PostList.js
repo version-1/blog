@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from 'components/molecules/Title';
-import Post from 'components/Post';
+import Post from 'components/organisms/posts/Default';
 import Pagination from 'components/Pagination';
 
 const PostList = props => {

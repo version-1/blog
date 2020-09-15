@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'components/atoms/Image';
 import Title from 'components/molecules/Title';
-import Post from 'components/Post';
+import Post from 'components/organisms/posts/Default';
 import {meta} from 'config/constants';
 
 const PostList = props => {
