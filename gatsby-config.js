@@ -68,16 +68,16 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-purgecss', // must be after other CSS plugins
-    //   options: {
-    //     printRejected: true,
-    //     printAll: true,
-    //     develop: false,
-    //     ignore: ['node_modules/prismjs/'],
-    //     whitelistPatternsChildren: [/^post/, /^sns-buttons/, /^section-title/],
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-purgecss', // must be after other CSS plugins
+      options: {
+        printRejected: true,
+        printAll: true,
+        develop: false,
+        ignore: ['node_modules/prismjs/'],
+        whitelistPatternsChildren: [/^post/, /^sns-buttons/, /^section-title/],
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
       resolve: `gatsby-plugin-google-analytics`,
