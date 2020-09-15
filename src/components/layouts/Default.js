@@ -39,7 +39,7 @@ const DefaultLayout = ({
         {!pickupDisabled && !smartphone && <PickupList posts={pickup} />}
         <section className="flex">
           <div className="main">{children}</div>
-          {smartphone && (
+          {!smartphone && (
             <div className="hide-on-med-and-down">
               <Sidebar
                 layout={layout}
@@ -50,7 +50,7 @@ const DefaultLayout = ({
           )}
         </section>
         <div className="flex">
-          {!smartphone && (
+          {smartphone && (
             <div className="hide-on-large-only">
               <Sidebar layout={layout} language={language} />
             </div>
