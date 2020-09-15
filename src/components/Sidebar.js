@@ -1,16 +1,17 @@
-import React, {PureComponent} from 'react';
-import {useStaticQuery, graphql, Link} from 'gatsby';
-import Img from 'gatsby-image';
-import profile from 'assets/images/profile-small.png';
-import ArchiveByMonth from 'components/organisms/ArchiveByMonth';
-import {tagPath, categoryPath, aboutPath} from 'lib/routes';
-import i18next from 'lib/i18next';
-import Title from 'components/molecules/Title';
+import React, { PureComponent } from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import profile from "assets/images/profile-small.png";
+import ArchiveByMonth from "components/organisms/ArchiveByMonth";
+import { tagPath, categoryPath, aboutPath } from "lib/routes";
+import i18next from "lib/i18next";
+import TagCloud from 'components/molecules/TagCloud';
+import Title from "components/molecules/Title";
 
 const Profile = () => {
   const data = useStaticQuery(graphql`
     {
-      profile: file(relativePath: {eq: "profile.png"}) {
+      profile: file(relativePath: { eq: "profile.png" }) {
         childImageSharp {
           fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
@@ -24,20 +25,20 @@ const Profile = () => {
 };
 
 const displayCategories = language => [
-  categoryPath('engineering', language),
-  categoryPath('react', language),
-  categoryPath('freelance', language),
-  tagPath('gadget', language),
-  tagPath('english', language),
-  categoryPath('design', language),
-  categoryPath('column', language),
+  categoryPath("engineering", language),
+  categoryPath("react", language),
+  categoryPath("freelance", language),
+  tagPath("gadget", language),
+  tagPath("english", language),
+  categoryPath("design", language),
+  categoryPath("column", language)
 ];
 
 export default class Sidebar extends PureComponent {
   render() {
     const {
       language,
-      layout: {archiveByMonth, tags},
+      layout: { archiveByMonth, tags }
     } = this.props;
     return (
       <div className="sidebar">
@@ -54,10 +55,10 @@ export default class Sidebar extends PureComponent {
               />
             </div>
             <div className="introduction">
-              {i18next.t('labels.sidebar.profile-description')}
+              {i18next.t("labels.sidebar.profile-description")}
               <p>
                 <Link to={aboutPath(language)}>
-                  {i18next.t('labels.sidebar.profile-link')}
+                  {i18next.t("labels.sidebar.profile-link")}
                 </Link>
               </p>
             </div>
@@ -68,13 +69,14 @@ export default class Sidebar extends PureComponent {
           <div className="sidebar-categories">
             <ul className="sidebar-categories-list">
               {displayCategories(language).map(category => {
-                const key = category.replace(/\//g, '.').slice(1);
-                const _key = language === 'ja' ? key : key.replace('en.', '')
+                const key = category.replace(/\//g, ".").slice(1);
+                const _key = language === "ja" ? key : key.replace("en.", "");
                 return (
                   <li key={_key} className="sidebar-categories-item">
                     <Link
                       className="sidebar-categories-item-link"
-                      to={category}>
+                      to={category}
+                    >
                       {i18next.t(_key)}
                     </Link>
                   </li>
@@ -82,6 +84,10 @@ export default class Sidebar extends PureComponent {
               })}
             </ul>
           </div>
+        </section>
+        <section className="section">
+          <Title color="skyblue" label="labels.sidebar.tags" />
+          <TagCloud language={language} tags={tags} />
         </section>
         <section className="section">
           <ArchiveByMonth language={language} items={archiveByMonth} />
