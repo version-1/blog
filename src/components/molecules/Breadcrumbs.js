@@ -15,4 +15,4 @@ const Breadcrumbs = ({ context }) => {
   );
 };
 
-export default React.memo(Breadcrumbs, []);
+export default React.memo(Breadcrumbs);

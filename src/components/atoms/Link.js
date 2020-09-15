@@ -9,4 +9,4 @@ const LinkComponent = ({ children, ...rest }) => {
   return <Link {...rest}>{children}</Link>;
 };
 
-export default React.memo(LinkComponent, []);
+export default React.memo(LinkComponent);
