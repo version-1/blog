@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
