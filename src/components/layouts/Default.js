@@ -50,7 +50,7 @@ const DefaultLayout = ({
           )}
         </section>
         <div className="flex">
-          {smartphone && (
+          {!smartphone && (
             <div className="hide-on-large-only">
               <Sidebar layout={layout} language={language} />
             </div>
