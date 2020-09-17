@@ -111,18 +111,28 @@ module.exports = {
         feeds: [
           {
             serialize,
-            query: queries(['ja', 'en']),
+            query: queries(['ja', 'en'], 1000),
             output: '/rss.xml',
           },
           {
             serialize,
-            query: queries(['ja']),
+            query: queries(['ja'], 1000),
             output: '/rss.ja.xml',
           },
           {
             serialize,
-            query: queries(['en']),
+            query: queries(['en'], 1000),
             output: '/rss.en.xml',
+          },
+          {
+            serialize,
+            query: queries(['ja']),
+            output: '/latest.ja.xml',
+          },
+          {
+            serialize,
+            query: queries(['en']),
+            output: '/latest.en.xml',
           },
         ],
       },
