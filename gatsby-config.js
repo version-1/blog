@@ -68,16 +68,16 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-purgecss', // must be after other CSS plugins
-    //   options: {
-    //     printRejected: true,
-    //     printAll: true,
-    //     develop: false,
-    //     ignore: ['node_modules/prismjs/'],
-    //     whitelistPatternsChildren: [/^post/, /^sns-buttons/, /^section-title/],
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-purgecss', // must be after other CSS plugins
+      options: {
+        printRejected: true,
+        printAll: true,
+        develop: false,
+        ignore: ['node_modules/prismjs/'],
+        whitelistPatternsChildren: [/^post/, /^sns-buttons/, /^section-title/],
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -111,18 +111,28 @@ module.exports = {
         feeds: [
           {
             serialize,
-            query: queries(['ja', 'en']),
+            query: queries(['ja', 'en'], 1000),
             output: '/rss.xml',
           },
           {
             serialize,
-            query: queries(['ja']),
+            query: queries(['ja'], 1000),
             output: '/rss.ja.xml',
           },
           {
             serialize,
-            query: queries(['en']),
+            query: queries(['en'], 1000),
             output: '/rss.en.xml',
+          },
+          {
+            serialize,
+            query: queries(['ja']),
+            output: '/latest.ja.xml',
+          },
+          {
+            serialize,
+            query: queries(['en']),
+            output: '/latest.en.xml',
           },
         ],
       },

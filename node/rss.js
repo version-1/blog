@@ -22,7 +22,7 @@ const serialize = params => {
   });
 };
 
-const queries = language => {
+const queries = (language, limit = 10) => {
   const array = '["' + language.join('","') + '" ]';
   return `{
     site {
@@ -34,7 +34,7 @@ const queries = language => {
       }
     }
     allMarkdownRemark(
-      limit: 1000,
+      limit: ${limit},
       sort: { order: DESC, fields: [frontmatter___createdAt] },
       filter: {
         frontmatter: {
