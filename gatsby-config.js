@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: meta.siteUrl,
     title: meta.title,
     description: meta.description,
+    imageBaseUrl: meta.images.url
   },
   plugins: [
     'gatsby-plugin-react-helmet',
