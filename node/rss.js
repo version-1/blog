@@ -1,22 +1,26 @@
 const serialize = params => {
   const {
-    query: {site, allMarkdownRemark},
+    query: { site, allMarkdownRemark }
   } = params;
   return allMarkdownRemark.edges.map(edge => {
-    const {language} = edge.node.frontmatter;
+    const { language, thumbnail } = edge.node.frontmatter;
+    const {
+      siteMetadata: { siteUrl, imageBaseUrl }
+    } = site;
     const url =
-      language === 'ja'
-        ? site.siteMetadata.siteUrl + edge.node.frontmatter.slug
-        : [
-            site.siteMetadata.siteUrl,
-            '/' + language + edge.node.frontmatter.slug,
-          ].join('');
+      language === "ja"
+        ? siteUrl + edge.node.frontmatter.slug
+        : [siteUrl, "/" + language + edge.node.frontmatter.slug].join("");
     const result = Object.assign({}, edge.node.frontmatter, {
       description: edge.node.excerpt,
       date: edge.node.frontmatter.createdAt,
       url,
       guid: url,
-      custom_elements: [{'content:encoded': edge.node.html}],
+      custom_elements: [
+        { "content:encoded": edge.node.html },
+        { thumbnailUrl: imageBaseUrl + thumbnail },
+        { language }
+      ]
     });
     return result;
   });
@@ -31,6 +35,7 @@ const queries = (language, limit = 10) => {
         description
         siteUrl
         site_url: siteUrl
+        imageBaseUrl
       }
     }
     allMarkdownRemark(
@@ -52,6 +57,7 @@ const queries = (language, limit = 10) => {
             title
             language
             slug
+            thumbnail
             createdAt(formatString: "MMM DD, YYYY")
           }
         }
@@ -62,5 +68,5 @@ const queries = (language, limit = 10) => {
 
 module.exports = {
   serialize,
-  queries,
+  queries
 };
