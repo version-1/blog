@@ -105,7 +105,7 @@ npm install -D webpack-cli
 ```
 
 
-次の二つはdeprecate and removed
+次の二つはdeprecated and removed
 
 ```
 * NoErrorsPlugin
