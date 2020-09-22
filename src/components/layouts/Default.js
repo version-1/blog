@@ -1,10 +1,19 @@
 import React, { useContext } from "react";
 import { PageContext } from "context";
+import Link from "atoms/Link";
 import Layout from "components/layouts/Index";
 import Sidebar from "components/Sidebar";
 import PickupList from "components/organisms/PickupList";
 import { useDeviceType } from "hooks/useDeviceType";
 import Breadcrumbs from "components/molecules/Breadcrumbs";
+
+const ToggleLink = ({ active, className, to, children }) => {
+  if (active) {
+    return <span className={className}>{children}</span>
+  }
+  return <Link className={className} to={to}>{children}</Link>
+}
+
 
 const DefaultLayout = ({ children }) => {
   const context = useContext(PageContext);
@@ -29,7 +38,18 @@ const DefaultLayout = ({ children }) => {
   return (
     <Layout language={language} baseUrl={baseUrl}>
       <main className={containerClass}>
-        <Breadcrumbs currentPath={path} context={breadcrumbs} />
+        <div className="content-header flex">
+          <Breadcrumbs currentPath={path} context={breadcrumbs} />
+          <div className="toggle-lang">
+            <ToggleLink className="toggle-lang-label" to="/" active={language === 'ja'}>
+              JA
+            </ToggleLink>
+            <span className="toggle-lang-separator">|</span>
+            <ToggleLink className="toggle-lang-label" to="/en" active={language === 'en'}>
+              EN
+            </ToggleLink>
+          </div>
+        </div>
         {!pickupDisabled && !smartphone && <PickupList posts={pickup} />}
         <section className="flex">
           <div className="main">{children}</div>

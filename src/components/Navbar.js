@@ -22,35 +22,33 @@ const MenuList = ({ list }) => {
   );
 };
 
-const Navbar = class extends React.PureComponent {
-  render() {
-    const { language } = this.props;
-    const list = menus(language);
-    return (
-      <div className="navigation-container">
+const Navbar = ({ language }) => {
+  const list = menus(language);
+
+  return (
+    <div className="navigation-container">
+      <div
+        className="navigation"
+        role="navigation"
+        aria-label="main-navigation"
+      >
         <div
-          className="navigation"
-          role="navigation"
-          aria-label="main-navigation"
+          className="menu hide-on-large-only sidenav-trigger"
+          data-target="side-out"
         >
-          <div
-            className="menu hide-on-large-only sidenav-trigger"
-            data-target="side-out"
-          >
-            <a href="#!">
-              <i className="material-icons menu-icon">menu</i>
-            </a>
-          </div>
-          <div className="brand-logo">
-            <Link to={rootPath(language)}>So Far, So Tech</Link>
-          </div>
-          <div className="nav-links hide-on-med-and-down">
-            <MenuList list={list} />
-          </div>
+          <a href="#!">
+            <i className="material-icons menu-icon">menu</i>
+          </a>
+        </div>
+        <div className="brand-logo">
+          <Link to={rootPath(language)}>So Far, So Tech</Link>
+        </div>
+        <div className="nav-links hide-on-med-and-down">
+          <MenuList list={list} />
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 };
 
-export default Navbar;
+export default React.memo(Navbar);
