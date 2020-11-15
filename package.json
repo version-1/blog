@@ -12,25 +12,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
     "react-share": "^2.4.0",
-    "uuid": "^3.2.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "clean": "rimraf .cache public",
-    "build": "yarn run clean && gatsby build",
-    "build:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby build",
-    "develop": "yarn run clean && gatsby develop",
-    "develop:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby develop",
-    "serve": "gatsby serve",
-    "generate": "node scripts/generator/index.js",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
+    "uuid": "^3.2.1",
     "gatsby": "^2.24.60",
     "gatsby-image": "^2.4.18",
     "gatsby-plugin-canonical-urls": "^2.1.18",
@@ -51,7 +33,25 @@
     "gatsby-remark-relative-images": "^0.2.0",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.45",
-    "gatsby-transformer-sharp": "^2.3.7",
+    "gatsby-transformer-sharp": "^2.3.7"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "clean": "rimraf .cache public",
+    "build": "yarn run clean && gatsby build",
+    "build:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby build",
+    "develop": "yarn run clean && gatsby develop",
+    "develop:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby develop",
+    "serve": "gatsby serve",
+    "generate": "node scripts/generator/index.js",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
     "googleapis": "^36.0.0",
     "lodash-webpack-plugin": "^0.11.4",
     "prop-types": "^15.6.0",
