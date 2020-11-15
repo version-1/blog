@@ -15,17 +15,15 @@ const MonthsIndex = ({ path, data, pageContext }) => {
   const title = `記事一覧 ${index} / ${totalPages}`
 
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <PostList
-          title={title}
-          pageIndex={index}
-          posts={posts}
-          pagenationNamespace={month}
-          pagenationTotalCount={totalCount}
-        />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <PostList
+        title={title}
+        pageIndex={index}
+        posts={posts}
+        pagenationNamespace={month}
+        pagenationTotalCount={totalCount}
+      />
+    </Layout>
   )
 }
 

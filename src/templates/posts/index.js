@@ -2,7 +2,6 @@ import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import { postPath } from 'lib/routes'
-import { PageContext } from 'context'
 import PostList from 'components/organisms/PostList'
 
 const pagenationNamespace = postPath()
@@ -15,17 +14,15 @@ const PostsIndex = ({ data, path, pageContext }) => {
     path,
   ])
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <PostList
-          pageIndex={index}
-          titleLabel="labels.articles"
-          posts={posts}
-          pagenationNamespace={pagenationNamespace}
-          pagenationTotalCount={totalCount}
-        />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <PostList
+        pageIndex={index}
+        titleLabel="labels.articles"
+        posts={posts}
+        pagenationNamespace={pagenationNamespace}
+        pagenationTotalCount={totalCount}
+      />
+    </Layout>
   )
 }
 

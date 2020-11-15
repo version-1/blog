@@ -38,12 +38,10 @@ const genPath = (language, slug) => {
 const create = createPage => params => {
   const { path: _path, component, context = {} } = params
   const template = path.parse(component)
-  const baseUrl = [meta.siteUrl, _path].join('')
   createPage({
     ...params,
     context: {
       ...context,
-      baseUrl,
     },
   })
 }
@@ -99,6 +97,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     validateCategoryList(edge, tags)
     const relatedRatings = rating(posts, edge, pageviews)
     const _path = genShowPath(edge)
+    const baseUrl = [meta.siteUrl, slug].join('')
     createPage({
       path: _path,
       categories,
@@ -109,6 +108,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
         related: relatedRatings.slice(0, 6).map(r => r.slug),
         layout: {
           ...context.layout,
+          baseUrl,
           breadcrumbs: _breadcrumbs,
         },
       },
