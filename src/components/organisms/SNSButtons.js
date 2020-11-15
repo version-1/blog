@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   FacebookShareButton,
   GooglePlusShareButton,
@@ -8,11 +8,11 @@ import {
   GooglePlusIcon,
   TwitterIcon,
   RedditIcon,
-} from 'react-share';
-import HatenaButton from 'components/atoms/buttons/HatenaButton';
-import PocketButton from 'components/atoms/buttons/PocketButton';
+} from 'react-share'
+import HatenaButton from 'components/atoms/buttons/HatenaButton'
+import PocketButton from 'components/atoms/buttons/PocketButton'
 
-const SnsButtons = ({type, url, title}) => {
+const SnsButtons = ({ type, url, title }) => {
   return (
     <div className={`sns-buttons ${type}`}>
       <div className="js-ga-click-sns-twitter">
@@ -42,7 +42,7 @@ const SnsButtons = ({type, url, title}) => {
         <HatenaButton url={url} title={title} size={80} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SnsButtons;
+export default SnsButtons

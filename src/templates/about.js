@@ -1,19 +1,19 @@
-import React, { useMemo } from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import { meta } from "config/constants";
-import { PageContext } from "context";
-import Layout from "components/layouts/Default";
-import Content, { HTMLContent } from "components/Content";
+import React, { useMemo } from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import { meta } from 'config/constants'
+import { PageContext } from 'context'
+import Layout from 'components/layouts/Default'
+import Content, { HTMLContent } from 'components/Content'
 
 export const AboutTemplate = ({ post, contentComponent, helmet }) => {
-  const content = post.html;
-  const { createdAt, updatedAt, title } = post.frontmatter;
-  const PostContent = contentComponent || Content;
+  const content = post.html
+  const { createdAt, updatedAt, title } = post.frontmatter
+  const PostContent = contentComponent || Content
   return (
     <section className="section">
-      {helmet || ""}
+      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">
@@ -37,25 +37,25 @@ export const AboutTemplate = ({ post, contentComponent, helmet }) => {
         <div className="related-posts" />
       </article>
     </section>
-  );
-};
+  )
+}
 
 AboutTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
-};
+  helmet: PropTypes.object,
+}
 
 export const AboutPost = ({ data, pageContext, path }) => {
-  const { markdownRemark: post } = data;
-  const description = post.excerpt;
-  const { fluid } = post.frontmatter.thumbnail.childImageSharp || {};
-  const content = fluid && [meta.siteUrl, fluid.src].join("");
+  const { markdownRemark: post } = data
+  const description = post.excerpt
+  const { fluid } = post.frontmatter.thumbnail.childImageSharp || {}
+  const content = fluid && [meta.siteUrl, fluid.src].join('')
   const context = useMemo(
     () => ({ ...pageContext, sidebarDisabled: true, path }),
     [pageContext, path]
-  );
+  )
 
   return (
     <PageContext.Provider value={context}>
@@ -74,14 +74,14 @@ export const AboutPost = ({ data, pageContext, path }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
 AboutPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-};
+    markdownRemark: PropTypes.object,
+  }),
+}
 export default AboutPost
 
 export const pageQuery = graphql`
@@ -98,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -1,20 +1,20 @@
-import React, { useMemo } from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import { postPath } from "lib/routes";
-import { PageContext } from "context";
-import Layout from "components/layouts/Default";
-import PostList from "components/organisms/PostList";
+import React, { useMemo } from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import { postPath } from 'lib/routes'
+import { PageContext } from 'context'
+import Layout from 'components/layouts/Default'
+import PostList from 'components/organisms/PostList'
 
 export const IndexPage = ({ data, path, pageContext }) => {
-  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const { nodes: posts, totalCount } = data.allMarkdownRemark
   // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
-  const pickup = pageContext.pickup ? data.pickup.nodes : [];
+  const pickup = pageContext.pickup ? data.pickup.nodes : []
   const context = useMemo(() => ({ ...pageContext, pickup, path }), [
     pageContext,
     path,
-    pickup
-  ]);
+    pickup,
+  ])
   return (
     <PageContext.Provider value={context}>
       <Layout>
@@ -26,18 +26,18 @@ export const IndexPage = ({ data, path, pageContext }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
-};
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
 export const pageQuery = graphql`
   query IndexQuery($language: String!, $pickup: [String]) {
@@ -112,4 +112,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

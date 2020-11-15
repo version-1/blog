@@ -1,13 +1,13 @@
-import React from 'react';
-import Image from 'components/atoms/Image';
-import Title from 'components/molecules/Title';
-import Post from 'components/organisms/posts/Default';
-import {meta} from 'config/constants';
+import React from 'react'
+import Image from 'components/atoms/Image'
+import Title from 'components/molecules/Title'
+import Post from 'components/organisms/posts/Default'
+import { meta } from 'config/constants'
 
 const PostList = props => {
-  const {title, titleLabel, posts} = props;
+  const { title, titleLabel, posts } = props
   if (!posts || posts.length <= 0) {
-    return <></>;
+    return <></>
   }
   return (
     <div className="horizontal-post-list-container">
@@ -20,7 +20,7 @@ const PostList = props => {
           )}
           <div className="post-list">
             {posts.map((post, index) => {
-              const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail;
+              const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail
               return (
                 <Post
                   thumbnail={
@@ -35,13 +35,13 @@ const PostList = props => {
                   post={post}
                   key={index}
                 />
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default React.memo(PostList);
+export default React.memo(PostList)

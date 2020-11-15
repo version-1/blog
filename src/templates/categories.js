@@ -1,28 +1,28 @@
-import React, { useMemo } from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import i18next from "lib/i18next";
-import Layout from "components/layouts/Default";
-import PostList from "components/organisms/PostList";
-import { PageContext } from "context";
-import { categoryPath } from "lib/routes";
+import React, { useMemo } from 'react'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import i18next from 'lib/i18next'
+import Layout from 'components/layouts/Default'
+import PostList from 'components/organisms/PostList'
+import { PageContext } from 'context'
+import { categoryPath } from 'lib/routes'
 
 const CategoryTemplate = ({ data, path, pageContext }) => {
-  const { title } = data.site.siteMetadata;
-  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const { title } = data.site.siteMetadata
+  const { nodes: posts, totalCount } = data.allMarkdownRemark
   const { category, index } = pageContext
-  const pickup = pageContext.pickup ? data.pickup.nodes : [];
+  const pickup = pageContext.pickup ? data.pickup.nodes : []
   const context = useMemo(() => ({ ...pageContext, pickup, path }), [
     pageContext,
     path,
-    pickup
-  ]);
+    pickup,
+  ])
   const pagenationNamespace = useMemo(
     () => categoryPath(pageContext.category),
     []
-  );
-  const label = `categories.${category}`;
-  const heading = i18next.t(label);
+  )
+  const label = `categories.${category}`
+  const heading = i18next.t(label)
 
   return (
     <PageContext.Provider value={context}>
@@ -37,10 +37,10 @@ const CategoryTemplate = ({ data, path, pageContext }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
-export default CategoryTemplate;
+export default CategoryTemplate
 
 export const categryPageQuery = graphql`
   query CategoryPage(
@@ -124,4 +124,4 @@ export const categryPageQuery = graphql`
       }
     }
   }
-`;
+`

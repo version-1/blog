@@ -1,15 +1,21 @@
-import React, { useMemo } from "react";
-import { graphql } from "gatsby";
-import { PageContext } from "context";
-import Layout from "components/layouts/Default.js";
-import PostList from "components/organisms/PostList";
+import React, { useMemo } from 'react'
+import { graphql } from 'gatsby'
+import { PageContext } from 'context'
+import Layout from 'components/layouts/Default.js'
+import PostList from 'components/organisms/PostList'
 
 const NotFoundPage = ({ data, path, pageContext }) => {
-  const pickup = pageContext.pickup ? data.pickup.nodes : [];
+  const pickup = pageContext.pickup ? data.pickup.nodes : []
   const context = useMemo(
-    () => ({ ...pageContext, pickupDisabled: true, sidebarDisabled: true, pickup, path }),
+    () => ({
+      ...pageContext,
+      pickupDisabled: true,
+      sidebarDisabled: true,
+      pickup,
+      path,
+    }),
     [pageContext, path, pickup]
-  );
+  )
   return (
     <PageContext.Provider value={context}>
       <Layout>
@@ -20,10 +26,10 @@ const NotFoundPage = ({ data, path, pageContext }) => {
         <PostList titleLabel="labels.pickup" posts={pickup} />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage
 
 export const pageQuery = graphql`
   query NotFoundPageQuery($language: String!, $pickup: [String]) {
@@ -63,4 +69,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

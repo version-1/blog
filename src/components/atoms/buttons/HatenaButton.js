@@ -1,9 +1,9 @@
-import React from 'react';
-import Img from 'components/atoms/Image';
+import React from 'react'
+import Img from 'components/atoms/Image'
 
-const defaultSize = 40;
-const HatenaButton = ({url, title, size = defaultSize}) => {
-  const imageSize = size / 2;
+const defaultSize = 40
+const HatenaButton = ({ url, title, size = defaultSize }) => {
+  const imageSize = size / 2
   return (
     <>
       <a
@@ -12,7 +12,8 @@ const HatenaButton = ({url, title, size = defaultSize}) => {
         data-hatena-bookmark-layout="touch-counter"
         data-hatena-bookmark-width={size}
         data-hatena-bookmark-height={size}
-        title="このエントリーをはてなブックマークに追加">
+        title="このエントリーをはてなブックマークに追加"
+      >
         <Img
           src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
           alt="このエントリーをはてなブックマークに追加"
@@ -22,7 +23,7 @@ const HatenaButton = ({url, title, size = defaultSize}) => {
         />
       </a>
     </>
-  );
-};
+  )
+}
 
-export default HatenaButton;
+export default HatenaButton
