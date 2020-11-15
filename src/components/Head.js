@@ -12,7 +12,7 @@ export default class Meta extends PureComponent {
         <html lang="en" />
         <title>{siteTitle}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={baseUrl} />
+        { baseUrl && <link rel="canonical" href={baseUrl} /> }
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={meta.siteUrl} />
