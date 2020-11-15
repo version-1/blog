@@ -1,8 +1,8 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Navbar from "components/Navbar";
-import Head from "components/Head";
-import "assets/stylesheets/index.sass";
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import Navbar from 'components/Navbar'
+import Head from 'components/Head'
+import 'assets/stylesheets/index.sass'
 
 const IndexLayout = ({ language, baseUrl, children }) => {
   return (
@@ -34,7 +34,7 @@ const IndexLayout = ({ language, baseUrl, children }) => {
         </div>
       )}
     />
-  );
-};
+  )
+}
 
 export default IndexLayout

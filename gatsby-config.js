@@ -1,16 +1,16 @@
-const {meta} = require('./config/constants');
-const {serialize, queries} = require('./node/rss');
+const { meta } = require('./config/constants')
+const { serialize, queries } = require('./node/rss')
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 module.exports = {
   siteMetadata: {
     siteUrl: meta.siteUrl,
     title: meta.title,
     description: meta.description,
-    imageBaseUrl: meta.images.url
+    imageBaseUrl: meta.images.url,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -22,7 +22,7 @@ module.exports = {
         path: `${__dirname}/src/pages`,
         name: 'pages',
         ignore: [`**/\.*`, '**/*.png, **/*.jpg'],
-      }
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -91,7 +91,7 @@ module.exports = {
       options: {
         host: meta.siteUrl,
         sitemap: [meta.siteUrl, meta.sitemap].join(''),
-        policy: [{userAgent: '*', allow: '/'}],
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -139,4 +139,4 @@ module.exports = {
       },
     },
   ],
-};
+}

@@ -1,14 +1,14 @@
-import React from 'react';
-import {Link} from 'gatsby';
-import Image from 'components/atoms/Image';
-import {postShowPath} from 'lib/routes';
-import {meta} from 'config/constants';
+import React from 'react'
+import { Link } from 'gatsby'
+import Image from 'components/atoms/Image'
+import { postShowPath } from 'lib/routes'
+import { meta } from 'config/constants'
 
-const Post = ({thumbnail, post}) => {
-  const {title, language, slug} = post.frontmatter;
-  const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail;
-  const path = postShowPath(slug, language);
-  const _title = title.length > 45 ? title.slice(0, 45) + '...' : title;
+const Post = ({ thumbnail, post }) => {
+  const { title, language, slug } = post.frontmatter
+  const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail
+  const path = postShowPath(slug, language)
+  const _title = title.length > 45 ? title.slice(0, 45) + '...' : title
   return (
     <div className="card-container" key={post.id}>
       <div className="card horizontal">
@@ -42,7 +42,7 @@ const Post = ({thumbnail, post}) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

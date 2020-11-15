@@ -1,18 +1,18 @@
-import React, { useMemo } from "react";
-import { graphql } from "gatsby";
-import Layout from "components/layouts/Default";
-import { PageContext } from "context";
-import PostList from "components/organisms/PostList";
+import React, { useMemo } from 'react'
+import { graphql } from 'gatsby'
+import Layout from 'components/layouts/Default'
+import { PageContext } from 'context'
+import PostList from 'components/organisms/PostList'
 
 const MonthsIndex = ({ path, data, pageContext }) => {
-  const { index, month, totalPages } = pageContext;
-  const { nodes: posts, totalCount } = data.allMarkdownRemark;
-  const { nodes: pickup } = data.pickup;
+  const { index, month, totalPages } = pageContext
+  const { nodes: posts, totalCount } = data.allMarkdownRemark
+  const { nodes: pickup } = data.pickup
   const context = useMemo(
     () => ({ ...pageContext, sidebarDisabled: true, pickup, path }),
     [pageContext, path, pickup]
-  );
-  const title = `記事一覧 ${index} / ${totalPages}`;
+  )
+  const title = `記事一覧 ${index} / ${totalPages}`
 
   return (
     <PageContext.Provider value={context}>
@@ -26,10 +26,10 @@ const MonthsIndex = ({ path, data, pageContext }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
-export default MonthsIndex;
+export default MonthsIndex
 
 export const monthsIndexQuery = graphql`
   query monthsIndexQuery(
@@ -100,4 +100,4 @@ export const monthsIndexQuery = graphql`
       }
     }
   }
-`;
+`

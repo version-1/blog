@@ -1,24 +1,24 @@
-import React, { useMemo } from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import { PageContext } from "context";
-import i18next from "lib/i18next";
-import Layout from "components/layouts/Default";
-import PostList from "components/organisms/PostList";
-import { tagPath } from "lib/routes";
+import React, { useMemo } from 'react'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import { PageContext } from 'context'
+import i18next from 'lib/i18next'
+import Layout from 'components/layouts/Default'
+import PostList from 'components/organisms/PostList'
+import { tagPath } from 'lib/routes'
 
 const TagTemplate = ({ data, path, pageContext }) => {
-  const { title } = data.site.siteMetadata;
-  const { nodes: posts, totalCount } = data.allMarkdownRemark;
-  const { pagenationNamespace } = tagPath(pageContext.tag);
-  const { nodes: pickup } = data.pickup;
-  const { index, tag } = pageContext;
+  const { title } = data.site.siteMetadata
+  const { nodes: posts, totalCount } = data.allMarkdownRemark
+  const { pagenationNamespace } = tagPath(pageContext.tag)
+  const { nodes: pickup } = data.pickup
+  const { index, tag } = pageContext
   const context = useMemo(() => ({ ...pageContext, pickup, path }), [
     pageContext,
-    path
-  ]);
-  const label = `tags.${tag}`;
-  const heading = i18next.t(label);
+    path,
+  ])
+  const label = `tags.${tag}`
+  const heading = i18next.t(label)
   return (
     <PageContext.Provider value={context}>
       <Layout>
@@ -32,10 +32,10 @@ const TagTemplate = ({ data, path, pageContext }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
-export default TagTemplate;
+export default TagTemplate
 
 export const tagPageQuery = graphql`
   query TagPage(
@@ -116,4 +116,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`;
+`
