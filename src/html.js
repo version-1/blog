@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class HTML extends React.Component {
   render() {
@@ -12,10 +12,20 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no"
           />
-          <link href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:300,400,500,700&display=swap" rel="preload" as="style"  />
-          <link href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:300,400,500,700&display=swap" rel="stylesheet"  />
+          <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:300,400,500,700&display=swap"
+            rel="preload"
+            as="style"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+          />
           {this.props.headComponents}
-          <meta name="google-site-verification" content="mN3TrsL3SnQcbq7drmA9PzgYHNMPPBFLgsaW4_nvwg4" />
+          <meta
+            name="google-site-verification"
+            content="mN3TrsL3SnQcbq7drmA9PzgYHNMPPBFLgsaW4_nvwg4"
+          />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}

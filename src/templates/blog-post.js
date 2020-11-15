@@ -1,16 +1,16 @@
-import React, { useMemo } from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import { meta } from "config/constants";
-import { PageContext } from "context";
-import Layout from "components/layouts/Default";
-import Content, { HTMLContent } from "components/Content";
-import SNSButtons from "components/organisms/SNSButtons";
-import CategoryList from "components/molecules/CategoryList";
-import TagList from "components/molecules/TagList";
-import BottomPostList from "components/organisms/BottomPostList";
-import i18next from "lib/i18next";
+import React, { useMemo } from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import { meta } from 'config/constants'
+import { PageContext } from 'context'
+import Layout from 'components/layouts/Default'
+import Content, { HTMLContent } from 'components/Content'
+import SNSButtons from 'components/organisms/SNSButtons'
+import CategoryList from 'components/molecules/CategoryList'
+import TagList from 'components/molecules/TagList'
+import BottomPostList from 'components/organisms/BottomPostList'
+import i18next from 'lib/i18next'
 
 export const BlogPostTemplate = ({
   location,
@@ -18,23 +18,23 @@ export const BlogPostTemplate = ({
   pickup,
   related,
   contentComponent,
-  helmet
+  helmet,
 }) => {
-  const content = post.html;
+  const content = post.html
   const {
     createdAt,
     updatedAt,
     title,
     categories,
     language,
-    tags
-  } = post.frontmatter;
-  const PostContent = contentComponent || Content;
-  const url = location.href;
+    tags,
+  } = post.frontmatter
+  const PostContent = contentComponent || Content
+  const url = location.href
 
   return (
     <section className="section">
-      {helmet || ""}
+      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">
@@ -63,7 +63,7 @@ export const BlogPostTemplate = ({
             Written By : <a href="#!">{meta.author}</a>
           </div>
           <div className="sns-share-footer">
-            <p>{i18next.t("labels.share")}</p>
+            <p>{i18next.t('labels.share')}</p>
             <SNSButtons type="post-footer" url={url} title={title} />
           </div>
         </div>
@@ -71,26 +71,28 @@ export const BlogPostTemplate = ({
       <BottomPostList label="labels.related-posts" posts={related} />
       <BottomPostList label="labels.pickup" posts={pickup} />
     </section>
-  );
-};
+  )
+}
 
 BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object
-};
+  helmet: PropTypes.object,
+}
 
 const BlogPost = ({ location, data, pageContext, path }) => {
-  const { markdownRemark: post } = data;
-  const description = post.excerpt;
-  const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join("");
-  const pickup = data.pickup.nodes;
-  const related = data.related.nodes;
+  const { markdownRemark: post } = data
+  const description = post.excerpt
+  const baseUrl = [meta.siteUrl, path]
+  const imageUrl = [baseUrl, post.thumbnail.childImageSharp.fluid.src].join('')
+  const url = [meta.siteUrl, path].join('')
+  const pickup = data.pickup.nodes
+  const related = data.related.nodes
   const context = useMemo(
     () => ({ ...pageContext, sidebarDisabled: true, pickup, path }),
     [pageContext, path, pickup]
-  );
+  )
 
   return (
     <PageContext.Provider value={context}>
@@ -106,7 +108,7 @@ const BlogPost = ({ location, data, pageContext, path }) => {
               <title>{`${post.frontmatter.title}`}</title>
               <meta name="description" content={description} />
               <meta property="og:title" content={post.frontmatter.title} />
-              <meta property="og:url" content={location.href} />
+              <meta property="og:url" content={url} />
               <meta property="og:description" content={description} />
               <meta property="og:image" content={imageUrl} />
             </Helmet>
@@ -114,16 +116,16 @@ const BlogPost = ({ location, data, pageContext, path }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-};
+    markdownRemark: PropTypes.object,
+  }),
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID(
@@ -147,6 +149,7 @@ export const pageQuery = graphql`
         language
         title
         thumbnail
+        canonical
         categories
         tags
         createdAt(formatString: "MMM DD, YYYY")
@@ -169,6 +172,7 @@ export const pageQuery = graphql`
           language
           slug
           thumbnail
+          canonical
           templateKey
           categories
           tags
@@ -217,4 +221,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

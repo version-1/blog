@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "atoms/Link";
+import React from 'react'
+import Link from 'atoms/Link'
 
 const Breadcrumbs = ({ context }) => {
   return (
@@ -9,10 +9,10 @@ const Breadcrumbs = ({ context }) => {
           <li className="breadcrumbs-item" key={idx}>
             <Link to={item.path}>{item.label}</Link>
           </li>
-        );
+        )
       })}
     </ul>
-  );
-};
+  )
+}
 
-export default React.memo(Breadcrumbs);
+export default React.memo(Breadcrumbs)

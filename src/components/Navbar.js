@@ -1,14 +1,14 @@
-import React from "react";
-import Link from "atoms/Link";
-import { rootPath, categoryPath, aboutPath } from "lib/routes";
+import React from 'react'
+import Link from 'atoms/Link'
+import { rootPath, categoryPath, aboutPath } from 'lib/routes'
 
 const menus = language => [
-  { to: rootPath(language), text: "Top" },
-  { to: aboutPath(language), text: "About" },
-  { to: categoryPath("freelance", language), text: "Freelance" },
-  { to: categoryPath("engineering", language), text: "Programming" },
-  { to: categoryPath("column", language), text: "Column" }
-];
+  { to: rootPath(language), text: 'Top' },
+  { to: aboutPath(language), text: 'About' },
+  { to: categoryPath('freelance', language), text: 'Freelance' },
+  { to: categoryPath('engineering', language), text: 'Programming' },
+  { to: categoryPath('column', language), text: 'Column' },
+]
 
 const MenuList = ({ list }) => {
   return (
@@ -19,11 +19,11 @@ const MenuList = ({ list }) => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
 const Navbar = ({ language }) => {
-  const list = menus(language);
+  const list = menus(language)
 
   return (
     <div className="navigation-container">
@@ -48,7 +48,7 @@ const Navbar = ({ language }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default React.memo(Navbar);
+export default React.memo(Navbar)
