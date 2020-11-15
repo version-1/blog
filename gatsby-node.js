@@ -358,6 +358,8 @@ exports.onCreateNode = async ({
       const thumbnailUrl = isProduction
         ? meta.images.url + node.frontmatter.thumbnail
         : dummyThumbnail
+      // set canonical field
+      node.frontmatter.canonical = node.frontmatter.canonical || ''
       try {
         const fileNode = await createRemoteFileNode({
           url: thumbnailUrl,

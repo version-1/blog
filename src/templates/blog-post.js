@@ -148,6 +148,7 @@ export const pageQuery = graphql`
         language
         title
         thumbnail
+        canonical
         categories
         tags
         createdAt(formatString: "MMM DD, YYYY")
@@ -170,6 +171,7 @@ export const pageQuery = graphql`
           language
           slug
           thumbnail
+          canonical
           templateKey
           categories
           tags
