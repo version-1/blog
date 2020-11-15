@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'components/atoms/Image'
 import Title from 'components/molecules/Title'
 import Post from 'components/organisms/posts/Default'
 import { meta } from 'config/constants'
 
 const PostList = props => {
-  const { title, titleLabel, posts } = props
+  const { title, titleLabel, posts, defaultHorizontalSlide = 15 } = props
+  const listRef = useRef()
+
+  useEffect(() => {
+    listRef.current.scrollTo({ top: 0, left: defaultHorizontalSlide, behavior: 'smooth' })
+  }, [])
+
   if (!posts || posts.length <= 0) {
     return <></>
   }
+
   return (
     <div className="horizontal-post-list-container">
       <div className="horizontal-post-list">
@@ -18,7 +25,7 @@ const PostList = props => {
           ) : (
             <></>
           )}
-          <div className="post-list">
+          <div ref={listRef} className="post-list">
             {posts.map((post, index) => {
               const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail
               return (

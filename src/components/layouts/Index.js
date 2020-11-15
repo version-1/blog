@@ -20,6 +20,7 @@ const IndexLayout = ({ language, baseUrl, children }) => {
       render={data => (
         <div>
           <Head
+            lang={language}
             baseUrl={baseUrl}
             siteTitle={data.site.siteMetadata.title}
             description={data.site.siteMetadata.description}

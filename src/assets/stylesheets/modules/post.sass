@@ -2,7 +2,7 @@
   line-height: 2rem
   font-size: 1rem
   max-width: 800px
-  width: 796px
+  width: $content-narrow-width
   @media #{$medium-and-down}
     width: 100%
     padding: 16px
@@ -43,7 +43,7 @@
   a
     overflow-wrap: break-word
   h1
-    font-size: 2rem
+    font-size: 1.5rem
     line-height: 3rem
     padding: 30px 0
     border-bottom: 5px double lightgrey
@@ -52,10 +52,11 @@
     margin: 0
     margin-top: 50px
     margin-bottom: 10px
-    padding: 5px 15px
+    padding: 5px 0px
     padding-bottom: 0.7em
-    font-size: 1.8rem
+    font-size: 1.35rem
     font-weight: 600
+    letter-spacing: .2rem
     border-bottom: 1px solid #ececec
   h3
     margin: 0
@@ -63,7 +64,8 @@
     margin-bottom: 10px
     padding: 10px 0
     font-weight: 600
-    font-size: 1.4rem
+    font-size: 1.1rem
+    letter-spacing: .1rem
     &:before
       content: '#'
       margin-right: 10px
@@ -84,6 +86,8 @@
       font-weight: 100
   h5
     font-size: 0.6rem
+  p
+    letter-spacing: 0.03rem
   img
     width: 75%
     display: flex
