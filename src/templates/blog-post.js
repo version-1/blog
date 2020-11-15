@@ -84,7 +84,8 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ location, data, pageContext, path }) => {
   const { markdownRemark: post } = data
   const description = post.excerpt
-  const imageUrl = [meta.images.url, post.frontmatter.thumbnail].join('')
+  const baseUrl = location.href
+  const imageUrl = [baseUrl, post.thumbnail.childImageSharp.fluid.src].join('')
   const pickup = data.pickup.nodes
   const related = data.related.nodes
   const context = useMemo(
@@ -106,7 +107,7 @@ const BlogPost = ({ location, data, pageContext, path }) => {
               <title>{`${post.frontmatter.title}`}</title>
               <meta name="description" content={description} />
               <meta property="og:title" content={post.frontmatter.title} />
-              <meta property="og:url" content={location.href} />
+              <meta property="og:url" content={baseUrl} />
               <meta property="og:description" content={description} />
               <meta property="og:image" content={imageUrl} />
             </Helmet>
