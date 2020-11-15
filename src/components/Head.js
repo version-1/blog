@@ -3,29 +3,70 @@ import Helmet from 'react-helmet'
 import favicon from 'assets/images/favicon.ico'
 import { meta } from 'config/constants'
 
-export default class Meta extends PureComponent {
+export default class Head extends PureComponent {
   render() {
-    const { baseUrl, siteTitle, description } = this.props
+    const {
+      lang = 'en',
+      baseUrl,
+      siteTitle,
+      description,
+      image,
+      metaTag
+    } = this.props
 
     return (
-      <Helmet>
-        <html lang="en" />
-        <title>{siteTitle}</title>
-        <meta name="description" content={description} />
-        {baseUrl && <link rel="canonical" href={baseUrl} />}
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={meta.siteUrl} />
-        <meta property="og:title" content={siteTitle} />
-        <meta property="og:site_name" content={siteTitle} />
-        <meta property="og:image" content={meta.logo} />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-        <meta property="og:locale" content="ja_JP" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:domain" content="ver-1-0.net" />
-        <meta name="twitter:creator" content="@version1_2017" />
-        <meta name="twitter:site" content="@version1_2017" />
+      <Helmet
+        htmlAttribtues={{
+          lang
+        }}
+        title={siteTitle}
+        meta={[
+          {
+            name: `description`,
+            content: description
+          },
+          {
+            property: `canonical`,
+            content: baseUrl
+          },
+          {
+            property: `og:description`,
+            content: description
+          },
+          {
+            property: `og:type`,
+            content: `website`
+          },
+          {
+            property: `og:image`,
+            content: image || meta.logo
+          },
+          {
+            property: `og:locale`,
+            content: 'ja_JP'
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`
+          },
+          {
+            name: `twitter:creator`,
+            content: `@version1_2017`
+          },
+          {
+            name: `og:title`,
+            content: siteTitle
+          },
+          {
+            name: `og:site_name`,
+            content: siteTitle
+          },
+          {
+            name: `twitter:domain`,
+            content: 'ver-1-0.net'
+          }
+        ].concat(metaTag || [])}
+      >
         <link rel="shortcut icon" href={favicon} />
       </Helmet>
     )
