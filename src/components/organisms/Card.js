@@ -1,14 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const Card = props => {
-  const {
-    className,
-    imageClassName,
-    url,
-    title
-  } = props
-  const _className = 'card ' + className;
-  const _imageClassName = 'card-image ' + imageClassName;
+  const { className, imageClassName, url, title } = props
+  const _className = 'card ' + className
+  const _imageClassName = 'card-image ' + imageClassName
   return (
     <div className={_className}>
       <div className={_imageClassName}>
@@ -18,7 +13,7 @@ const Card = props => {
         <h3>{title}</h3>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default React.memo(Card)

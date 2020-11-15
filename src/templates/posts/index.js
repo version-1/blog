@@ -1,19 +1,19 @@
-import React, { useMemo } from "react";
-import { graphql } from "gatsby";
-import Layout from "components/layouts/Default";
-import { postPath } from "lib/routes";
-import { PageContext } from "context";
-import PostList from "components/organisms/PostList";
+import React, { useMemo } from 'react'
+import { graphql } from 'gatsby'
+import Layout from 'components/layouts/Default'
+import { postPath } from 'lib/routes'
+import { PageContext } from 'context'
+import PostList from 'components/organisms/PostList'
 
-const pagenationNamespace = postPath();
+const pagenationNamespace = postPath()
 
 const PostsIndex = ({ data, path, pageContext }) => {
-  const { index } = pageContext;
-  const { nodes: posts, totalCount } = data.allMarkdownRemark;
+  const { index } = pageContext
+  const { nodes: posts, totalCount } = data.allMarkdownRemark
   const context = useMemo(() => ({ ...pageContext, pickup: [], path }), [
     pageContext,
-    path
-  ]);
+    path,
+  ])
   return (
     <PageContext.Provider value={context}>
       <Layout>
@@ -26,8 +26,8 @@ const PostsIndex = ({ data, path, pageContext }) => {
         />
       </Layout>
     </PageContext.Provider>
-  );
-};
+  )
+}
 
 export default PostsIndex
 
@@ -71,4 +71,4 @@ export const postsIndexQuery = graphql`
       }
     }
   }
-`;
+`

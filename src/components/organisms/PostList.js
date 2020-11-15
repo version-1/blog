@@ -1,7 +1,7 @@
-import React from 'react';
-import Title from 'components/molecules/Title';
-import Post from 'components/organisms/posts/Default';
-import Pagination from 'components/Pagination';
+import React from 'react'
+import Title from 'components/molecules/Title'
+import Post from 'components/organisms/posts/Default'
+import Pagination from 'components/Pagination'
 
 const PostList = props => {
   const {
@@ -11,7 +11,7 @@ const PostList = props => {
     pagenationNamespace,
     pagenationTotalCount,
     pageIndex,
-  } = props;
+  } = props
   return (
     <div className="post-list-container">
       <div className="post-list">
@@ -40,7 +40,7 @@ const PostList = props => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default React.memo(PostList);
+export default React.memo(PostList)
