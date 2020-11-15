@@ -5,11 +5,11 @@ import { meta } from 'config/constants'
 
 export default class Meta extends PureComponent {
   render() {
-    const { baseUrl, siteTitle, description } = this.props
+    const { lang = 'en', baseUrl, siteTitle, description } = this.props
 
     return (
       <Helmet>
-        <html lang="en" />
+        <html lang={lang} />
         <title>{siteTitle}</title>
         <meta name="description" content={description} />
         {baseUrl && <link rel="canonical" href={baseUrl} />}

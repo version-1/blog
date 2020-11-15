@@ -83,10 +83,11 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ location, data, pageContext, path }) => {
   const { markdownRemark: post } = data
+  const { canonical, slug, title, thumbnail } = post.frontmatter
   const description = post.excerpt
-  const baseUrl = meta.siteUrl
-  const imageUrl = [baseUrl, post.thumbnail.childImageSharp.fluid.src].join('')
+  const imageUrl = [meta.images.url, thumbnail].join('')
   const url = [meta.siteUrl, path].join('')
+  const _canonical = canonical || [meta.siteUrl, slug].join('')
   const pickup = data.pickup.nodes
   const related = data.related.nodes
   const context = useMemo(
@@ -104,9 +105,10 @@ const BlogPost = ({ location, data, pageContext, path }) => {
         contentComponent={HTMLContent}
         helmet={
           <Helmet titleTemplate={`%s | ${meta.title}`}>
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{title}`}</title>
             <meta name="description" content={description} />
-            <meta property="og:title" content={post.frontmatter.title} />
+            <meta name="canonical" content={_canonical} />
+            <meta property="og:title" content={title} />
             <meta property="og:url" content={url} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={imageUrl} />
@@ -145,6 +147,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         language
+        slug
         title
         thumbnail
         canonical
