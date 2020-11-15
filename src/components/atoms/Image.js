@@ -6,8 +6,8 @@ const defaults = {
   image: {
     width: 640,
     height: 475,
-    layout: 'responsive'
-  }
+    layout: 'responsive',
+  },
 }
 export default class Image extends React.PureComponent {
   render() {

@@ -17,15 +17,13 @@ const NotFoundPage = ({ data, path, pageContext }) => {
     [pageContext, path, pickup]
   )
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <div className="not-found">
-          <h1>404 NOT FOUND</h1>
-          <p>お探しのページが見つかりません。</p>
-        </div>
-        <PostList titleLabel="labels.pickup" posts={pickup} />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <div className="not-found">
+        <h1>404 NOT FOUND</h1>
+        <p>お探しのページが見つかりません。</p>
+      </div>
+      <PostList titleLabel="labels.pickup" posts={pickup} />
+    </Layout>
   )
 }
 

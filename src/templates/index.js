@@ -16,16 +16,14 @@ export const IndexPage = ({ data, path, pageContext }) => {
     pickup,
   ])
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <PostList
-          titleLabel="labels.latest-posts"
-          posts={posts}
-          pagenationNamespace={postPath()}
-          pagenationTotalCount={totalCount}
-        />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <PostList
+        titleLabel="labels.latest-posts"
+        posts={posts}
+        pagenationNamespace={postPath()}
+        pagenationTotalCount={totalCount}
+      />
+    </Layout>
   )
 }
 

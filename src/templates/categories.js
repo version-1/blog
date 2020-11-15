@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import i18next from 'lib/i18next'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
-import { PageContext } from 'context'
 import { categoryPath } from 'lib/routes'
 
 const CategoryTemplate = ({ data, path, pageContext }) => {
@@ -25,18 +24,16 @@ const CategoryTemplate = ({ data, path, pageContext }) => {
   const heading = i18next.t(label)
 
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <Helmet title={`${heading}| ${title}`} />
-        <PostList
-          pageIndex={index}
-          titleLabel={label}
-          posts={posts}
-          pagenationNamespace={pagenationNamespace}
-          pagenationTotalCount={totalCount}
-        />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <Helmet title={`${heading}| ${title}`} />
+      <PostList
+        pageIndex={index}
+        titleLabel={label}
+        posts={posts}
+        pagenationNamespace={pagenationNamespace}
+        pagenationTotalCount={totalCount}
+      />
+    </Layout>
   )
 }
 

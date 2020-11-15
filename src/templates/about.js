@@ -58,22 +58,20 @@ export const AboutPost = ({ data, pageContext, path }) => {
   )
 
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <AboutTemplate
-          post={post}
-          contentComponent={HTMLContent}
-          helmet={
-            <Helmet titleTemplate="%s | Blog">
-              <title>{`${post.frontmatter.title}`}</title>
-              <meta name="description" content={description} />
-              <meta property="og:description" content={description} />
-              <meta property="og:image" content={content} />
-            </Helmet>
-          }
-        />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <AboutTemplate
+        post={post}
+        contentComponent={HTMLContent}
+        helmet={
+          <Helmet titleTemplate="%s | Blog">
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta name="description" content={description} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={content} />
+          </Helmet>
+        }
+      />
+    </Layout>
   )
 }
 

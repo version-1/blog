@@ -20,18 +20,16 @@ const TagTemplate = ({ data, path, pageContext }) => {
   const label = `tags.${tag}`
   const heading = i18next.t(label)
   return (
-    <PageContext.Provider value={context}>
-      <Layout>
-        <Helmet title={`${heading}| ${title}`} />
-        <PostList
-          pageIndex={index}
-          titleLabel={label}
-          posts={posts}
-          pagenationNamespace={pagenationNamespace}
-          pagenationTotalCount={totalCount}
-        />
-      </Layout>
-    </PageContext.Provider>
+    <Layout context={context}>
+      <Helmet title={`${heading}| ${title}`} />
+      <PostList
+        pageIndex={index}
+        titleLabel={label}
+        posts={posts}
+        pagenationNamespace={pagenationNamespace}
+        pagenationTotalCount={totalCount}
+      />
+    </Layout>
   )
 }
 

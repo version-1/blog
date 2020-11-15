@@ -18,8 +18,7 @@ const ToggleLink = ({ active, className, to, children }) => {
   )
 }
 
-const DefaultLayout = ({ children }) => {
-  const context = useContext(PageContext)
+const DefaultLayout = ({ children, context }) => {
   const {
     path,
     pickup,
