@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
-import { PageContext } from 'context'
 import PostList from 'components/organisms/PostList'
 
 const MonthsIndex = ({ path, data, pageContext }) => {
@@ -9,7 +8,7 @@ const MonthsIndex = ({ path, data, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   const { nodes: pickup } = data.pickup
   const context = useMemo(
-    () => ({ ...pageContext, sidebarDisabled: true, pickup, path }),
+    () => ({ ...pageContext, sidebarDisabled: false, pickup, path }),
     [pageContext, path, pickup]
   )
   const title = `記事一覧 ${index} / ${totalPages}`

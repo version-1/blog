@@ -1,19 +1,16 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { meta } from 'config/constants'
-import { PageContext } from 'context'
 import Layout from 'components/layouts/Default'
 import Content, { HTMLContent } from 'components/Content'
 
-export const AboutTemplate = ({ post, contentComponent, helmet }) => {
+export const AboutTemplate = ({ post, contentComponent }) => {
   const content = post.html
   const { createdAt, updatedAt, title } = post.frontmatter
   const PostContent = contentComponent || Content
   return (
     <section className="section">
-      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">
@@ -44,14 +41,11 @@ AboutTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 }
 
 export const AboutPost = ({ data, pageContext, path }) => {
   const { markdownRemark: post } = data
-  const description = post.excerpt
-  const { fluid } = post.frontmatter.thumbnail.childImageSharp || {}
-  const content = fluid && [meta.siteUrl, fluid.src].join('')
   const context = useMemo(
     () => ({ ...pageContext, sidebarDisabled: true, path }),
     [pageContext, path]
@@ -59,26 +53,15 @@ export const AboutPost = ({ data, pageContext, path }) => {
 
   return (
     <Layout context={context}>
-      <AboutTemplate
-        post={post}
-        contentComponent={HTMLContent}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={description} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={content} />
-          </Helmet>
-        }
-      />
+      <AboutTemplate post={post} contentComponent={HTMLContent} />
     </Layout>
   )
 }
 
 AboutPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 export default AboutPost
 

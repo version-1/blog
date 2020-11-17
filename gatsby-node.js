@@ -3,7 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const {
   createFilePath,
-  createRemoteFileNode,
+  createRemoteFileNode
 } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 const { routes, meta, constants } = require('./config/constants')
@@ -14,6 +14,7 @@ const { fetch } = require('./node/breadcrumbs')
 const { fetchPv } = require('./node/pageview')
 const { rating } = require('./node/related-post')
 const queries = require('./node/queries.js')
+const i18next = require('./src/lib/i18next')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const dummyThumbnail = meta.images.url + '/others/dummy/thumbnail.png'
@@ -41,8 +42,8 @@ const create = createPage => params => {
   createPage({
     ...params,
     context: {
-      ...context,
-    },
+      ...context
+    }
   })
 }
 
@@ -58,18 +59,11 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
       currentPageIndex === 0
         ? namespace
         : [namespace, currentPageIndex + 1].join('/')
+    const titleSuffix = currentPageIndex
+      ? `${currentPageIndex} / ${totalPages}`
+      : ''
     const skip = currentPageIndex * limit
-    const params = {
-      path: _path,
-      component: path.resolve(`src/templates/${templates}.js`),
-      context: {
-        ...context,
-        limit,
-        skip,
-        index: currentPageIndex + 1,
-        totalPages,
-      },
-    }
+    const url = [meta.siteUrl, _path].join('')
     createPage({
       path: _path,
       component: path.resolve(`src/templates/${templates}.js`),
@@ -79,25 +73,40 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
         skip,
         index: currentPageIndex + 1,
         totalPages,
-      },
+        meta: {
+          ...context.meta,
+          title: context.meta.title ? `${context.meta.title} ${titleSuffix}` : '',
+          url
+        }
+      }
     })
   })
 }
 
 const createPostShowPage = createPage => (posts, pageviews) => context => {
   posts.forEach(edge => {
-    const id = edge.id
-    const { tags, categories, slug, templateKey } = edge.frontmatter
+    const { id, excerpt } = edge
+    const {
+      title,
+      canonical,
+      tags,
+      categories,
+      slug,
+      thumbnail,
+      templateKey
+    } = edge.frontmatter
     const breadcrumbs = fetch(context.language)
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
-      breadcrumbs.categories(categories[0]),
+      breadcrumbs.categories(categories[0])
     ]
     validateCategoryList(edge, categories)
     validateCategoryList(edge, tags)
     const relatedRatings = rating(posts, edge, pageviews)
     const _path = genShowPath(edge)
     const baseUrl = [meta.siteUrl, slug].join('')
+    const url = [meta.siteUrl, _path].join('')
+    const image = [meta.images.url, thumbnail].join('')
     createPage({
       path: _path,
       categories,
@@ -106,12 +115,19 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
         id,
         ...context,
         related: relatedRatings.slice(0, 6).map(r => r.slug),
+        meta: {
+          title,
+          description: excerpt,
+          url,
+          canonical: canonical || baseUrl,
+          image
+        },
         layout: {
           ...context.layout,
           baseUrl,
-          breadcrumbs: _breadcrumbs,
-        },
-      },
+          breadcrumbs: _breadcrumbs
+        }
+      }
     })
   })
 }
@@ -122,7 +138,7 @@ const createPostsIndexPage = createPage => totalCount => context => {
     genPath(context.language, _path),
     'posts/index',
     totalCount,
-    context
+    { ...context, meta: {} }
   )
 }
 
@@ -134,26 +150,29 @@ const createCollectionShowPage = createPage => (
   const _path = [
     routes.root,
     routes[singuralizeKey],
-    _.kebabCase(collection),
+    _.kebabCase(collection)
   ].join('/')
   const breadcrumbs = fetch(context.language)
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
-    breadcrumbs[key](collection),
+    breadcrumbs[key](collection)
   ]
-  buildPaginationPages(createPage)()(
-    genPath(context.language, _path),
-    key,
-    totalCount,
-    {
-      [singuralizeKey]: collection,
-      ...context,
-      layout: {
-        ...context.layout,
-        breadcrumbs: _breadcrumbs,
-      },
-    }
-  )
+  const heading = i18next.t(`${key}.${collection}`)
+  const path = genPath(context.language, _path)
+  const url = [meta.siteUrl, path].join('')
+  buildPaginationPages(createPage)()(path, key, totalCount, {
+    [singuralizeKey]: collection,
+    ...context,
+    layout: {
+      ...context.layout,
+      breadcrumbs: _breadcrumbs
+    },
+    meta: {
+      title: heading,
+      url
+    },
+    heading
+  })
 }
 
 const createCategoryShowPage = createPage => category => totalCount => context => {
@@ -172,36 +191,37 @@ const createTagShowPage = createPage => tag => totalCount => context => {
 
 const createMonthArchivePage = createPage => archives => context => {
   Object.keys(archives).forEach(key => {
-    const _path = [routes.root, key].join('/')
+    const _path = genPath(context.language, [routes.root, key].join('/'))
     const totalCount = archives[key].length
     const breadcrumbs = fetch(context.language)
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
-      breadcrumbs.monthArchive(key),
+      breadcrumbs.monthArchive(key)
     ]
-    buildPaginationPages(createPage)()(
-      genPath(context.language, _path),
-      'months',
-      totalCount,
-      {
-        month: key,
-        ids: archives[key],
-        ...context,
-        layout: {
-          ...context.layout,
-          breadcrumbs: _breadcrumbs,
-        },
+    const url = [meta.siteUrl, _path].join('')
+    buildPaginationPages(createPage)()(_path, 'months', totalCount, {
+      month: key,
+      ids: archives[key],
+      ...context,
+      layout: {
+        ...context.layout,
+        breadcrumbs: _breadcrumbs
+      },
+      meta: {
+        title: key,
+        url
       }
-    )
+    })
   })
 }
 
 const createStaticPage = createPage => page => context => {
-  const { id } = page
-  const { templateKey } = page.frontmatter
+  const { id, excerpt } = page
+  const { title, canonical, templateKey } = page.frontmatter
   const breadcrumbs = fetch(context.language)
   const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs[templateKey]]
   const _path = genPath(context.language, templateKey)
+  const url = [meta.siteUrl, _path].join('/')
   createPage({
     path: _path,
     component: path.resolve(`src/templates/${String(templateKey)}.js`),
@@ -210,9 +230,15 @@ const createStaticPage = createPage => page => context => {
       ...context,
       layout: {
         ...context.layout,
-        breadcrumbs: _breadcrumbs,
+        breadcrumbs: _breadcrumbs
       },
-    },
+      meta: {
+        title,
+        description: excerpt,
+        canonical,
+        url
+      }
+    }
   })
 }
 
@@ -240,7 +266,7 @@ const collectCategories = posts => collectCollection(posts)('categories')
 
 const mainQueries = [
   { language: 'ja', query: queries.jaIndexQuery },
-  { language: 'en', query: queries.enIndexQuery },
+  { language: 'en', query: queries.enIndexQuery }
 ]
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -267,8 +293,8 @@ exports.createPages = async ({ actions, graphql }) => {
           archiveByMonth,
           breadcrumbs: [breadcrumbs.top],
           categories,
-          tags,
-        },
+          tags
+        }
       }
 
       let rows = []
@@ -280,24 +306,24 @@ exports.createPages = async ({ actions, graphql }) => {
         pickup = _.uniq(_.concat(constants.pickup, populars))
         const _context = {
           pickup,
-          ...context,
+          ...context
         }
         createPage({
           path: '/',
           component: path.resolve(`src/templates/index.js`),
-          context: _context,
+          context: _context
         })
         // Create 404 Page
         createPage({
           path: '/404.html',
           component: path.resolve(`src/templates/404.js`),
-          context: _context,
+          context: _context
         })
       } else {
         createPage({
           path: rootPath(language),
           component: path.resolve(`src/templates/index.js`),
-          context,
+          context
         })
       }
       // Show Pages
@@ -312,13 +338,13 @@ exports.createPages = async ({ actions, graphql }) => {
       createPostShowPage(create(createPage))(posts, rows)({
         pickupDisabled: true,
         pickup,
-        ...context,
+        ...context
       })
 
       // Index Pages
       const _context = {
         pickup,
-        ...context,
+        ...context
       }
       createMonthArchivePage(createPage)(context.layout.archiveByMonth)(
         _context
@@ -347,7 +373,7 @@ exports.onCreateNode = async ({
   store,
   cache,
   createNodeId,
-  getNode,
+  getNode
 }) => {
   const { createNode, createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
@@ -367,7 +393,7 @@ exports.onCreateNode = async ({
           store,
           cache,
           createNode,
-          createNodeId,
+          createNodeId
         })
         if (fileNode) {
           node.thumbnail___NODE = fileNode.id
@@ -379,7 +405,7 @@ exports.onCreateNode = async ({
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }
@@ -389,13 +415,13 @@ exports.onCreateWebpackConfig = ({
   rules,
   loaders,
   plugins,
-  actions,
+  actions
 }) => {
   actions.setWebpackConfig({
     node: {
       fs: 'empty',
       net: 'empty',
-      tls: 'empty',
+      tls: 'empty'
     },
     resolve: {
       alias: {
@@ -410,8 +436,8 @@ exports.onCreateWebpackConfig = ({
         lib: path.resolve(__dirname, 'src/lib'),
         pages: path.resolve(__dirname, 'src/pages'),
         templates: path.resolve(__dirname, 'src/templates'),
-        locales: path.resolve(__dirname, 'src/locales'),
-      },
-    },
+        locales: path.resolve(__dirname, 'src/locales')
+      }
+    }
   })
 }

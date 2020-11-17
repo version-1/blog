@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
-import { PageContext } from 'context'
 import Layout from 'components/layouts/Default.js'
 import PostList from 'components/organisms/PostList'
 
@@ -12,7 +11,7 @@ const NotFoundPage = ({ data, path, pageContext }) => {
       pickupDisabled: true,
       sidebarDisabled: true,
       pickup,
-      path,
+      path
     }),
     [pageContext, path, pickup]
   )

@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
-import { PageContext } from 'context'
+import React from 'react'
 import Link from 'atoms/Link'
-import Layout from 'components/layouts/Index'
 import Sidebar from 'components/Sidebar'
+import Head from 'components/Head'
+import Navbar from 'components/Navbar'
 import PickupList from 'components/organisms/PickupList'
 import { useDeviceType } from 'hooks/useDeviceType'
 import Breadcrumbs from 'components/molecules/Breadcrumbs'
+import 'assets/stylesheets/index.sass'
 
 const ToggleLink = ({ active, className, to, children }) => {
   if (active) {
@@ -27,18 +28,18 @@ const DefaultLayout = ({ children, context }) => {
     language,
     baseUrl,
     layout,
+    meta
   } = context
-  const { ready, smartphone } = useDeviceType()
+  const { smartphone } = useDeviceType()
   const { archiveByMonth = {}, breadcrumbs = [] } = layout
-  if (!ready) {
-    return null
-  }
-
   const containerClass = sidebarDisabled
     ? 'row container container-narrow'
     : 'row container'
+  debugger
   return (
-    <Layout language={language} baseUrl={baseUrl}>
+    <div>
+      <Head lang={language} baseUrl={baseUrl} meta={meta} />
+      <Navbar language={language} />
       <main className={containerClass}>
         <div className="content-header flex">
           <Breadcrumbs currentPath={path} context={breadcrumbs} />
@@ -81,7 +82,12 @@ const DefaultLayout = ({ children, context }) => {
           )}
         </div>
       </main>
-    </Layout>
+      <div className="footer">
+        <span className="copyright">
+          Copyright © 2018 So Far , So Tech All Rights Reserved.
+        </span>
+      </div>
+    </div>
   )
 }
 
