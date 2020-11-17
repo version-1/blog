@@ -14,11 +14,13 @@ const enIndexQuery = `
         fields {
           slug
         }
+        excerpt(truncate: true, pruneLength: 300)
         frontmatter {
           title
           language
           slug
           thumbnail
+          canonical
           templateKey
           categories
           tags
@@ -46,12 +48,14 @@ const jaIndexQuery = `
         fields {
           slug
         }
+        excerpt(truncate: true, pruneLength: 300)
         frontmatter {
           title
           language
           slug
           thumbnail
           templateKey
+          canonical
           categories
           tags
           createdAt(formatString: "MMM DD, YYYY")
@@ -63,7 +67,7 @@ const jaIndexQuery = `
 `;
 
 const fetchBySlug = `query popularPostQuery($targets: [String]) {
-allMarkdownRemark(
+    allMarkdownRemark(
       filter: {
         frontmatter: {slug: {in: $targets}}
       }
@@ -74,8 +78,10 @@ allMarkdownRemark(
         fields {
           slug
         }
+        excerpt(truncate: true, pruneLength: 300)
         frontmatter {
           title
+          canonical
           language
           slug
           thumbnail
@@ -105,10 +111,12 @@ const staticPageQuery = `
         fields {
           slug
         }
+        excerpt(truncate: true, pruneLength: 300)
         frontmatter {
           title
           language
           slug
+          canonical
           thumbnail
           templateKey
           categories
@@ -132,6 +140,7 @@ const categoryQuery = `
       totalCount
       nodes {
         id
+        excerpt(truncate: true, pruneLength: 300)
       }
     }
   }
@@ -148,6 +157,7 @@ const tagQuery = `
       totalCount
       nodes {
         id
+        excerpt(truncate: true, pruneLength: 300)
       }
     }
   }

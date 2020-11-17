@@ -1,9 +1,7 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import { meta } from 'config/constants'
-import { PageContext } from 'context'
 import Layout from 'components/layouts/Default'
 import Content, { HTMLContent } from 'components/Content'
 import SNSButtons from 'components/organisms/SNSButtons'
@@ -17,8 +15,7 @@ export const BlogPostTemplate = ({
   post,
   pickup,
   related,
-  contentComponent,
-  helmet,
+  contentComponent
 }) => {
   const content = post.html
   const {
@@ -27,14 +24,13 @@ export const BlogPostTemplate = ({
     title,
     categories,
     language,
-    tags,
+    tags
   } = post.frontmatter
   const PostContent = contentComponent || Content
   const url = location.href
 
   return (
     <section className="section">
-      {helmet || ''}
       <article className="post">
         <h1 className="post-title">{title}</h1>
         <div className="post-meta-header">
@@ -78,16 +74,11 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 }
 
 const BlogPost = ({ location, data, pageContext, path }) => {
   const { markdownRemark: post } = data
-  const { canonical, slug, title, thumbnail } = post.frontmatter
-  const description = post.excerpt
-  const imageUrl = [meta.images.url, thumbnail].join('')
-  const url = [meta.siteUrl, path].join('')
-  const _canonical = canonical || [meta.siteUrl, slug].join('')
   const pickup = data.pickup.nodes
   const related = data.related.nodes
   const context = useMemo(
@@ -103,17 +94,6 @@ const BlogPost = ({ location, data, pageContext, path }) => {
         pickup={pickup}
         location={location}
         contentComponent={HTMLContent}
-        helmet={
-          <Helmet titleTemplate={`%s | ${meta.title}`}>
-            <title>{title}`}</title>
-            <meta name="description" content={description} />
-            <meta name="canonical" content={_canonical} />
-            <meta property="og:title" content={title} />
-            <meta property="og:url" content={url} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={imageUrl} />
-          </Helmet>
-        }
       />
     </Layout>
   )
@@ -121,8 +101,8 @@ const BlogPost = ({ location, data, pageContext, path }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 
 export default BlogPost

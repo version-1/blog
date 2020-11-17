@@ -10,7 +10,7 @@ const PostList = props => {
 
   useEffect(() => {
     listRef.current.scrollTo({ top: 0, left: defaultHorizontalSlide, behavior: 'smooth' })
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!posts || posts.length <= 0) {
     return <></>

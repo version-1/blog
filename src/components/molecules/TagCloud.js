@@ -56,7 +56,7 @@ const TagCloud = ({ language, tags }) => {
         })}
       </ul>
       {filteredTags.length > count && (
-        <p className="tagcloud-more" onClick={onMore}>{`>> ${rest} more`}</p>
+        <p className="tagcloud-more" onClick={onMore}>{`>> ${rest} more`}</p> // eslint-disable-line
       )}
     </div>
   )

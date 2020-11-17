@@ -2,13 +2,6 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { isProduction } from 'lib/env'
 
-const defaults = {
-  image: {
-    width: 640,
-    height: 475,
-    layout: 'responsive',
-  },
-}
 export default class Image extends React.PureComponent {
   render() {
     const { gatsbyImage, gatsbyType } = this.props

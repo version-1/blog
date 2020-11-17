@@ -2,7 +2,6 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { postPath } from 'lib/routes'
-import { PageContext } from 'context'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 
@@ -13,7 +12,7 @@ export const IndexPage = ({ data, path, pageContext }) => {
   const context = useMemo(() => ({ ...pageContext, pickup, path }), [
     pageContext,
     path,
-    pickup,
+    pickup
   ])
   return (
     <Layout context={context}>
@@ -32,9 +31,9 @@ export default IndexPage
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+      edges: PropTypes.array
+    })
+  })
 }
 
 export const pageQuery = graphql`
