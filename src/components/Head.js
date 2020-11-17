@@ -28,7 +28,7 @@ const Head = ({ lang = 'en', baseUrl, meta = {} }) => {
       <meta property="og:site_name" content={siteMeta.title} />
       <meta property="og:image" content={thumbnail} />
       <meta property="og:locale" content={locale[lang]} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:domain" content="ver-1-0.net" />
       <meta name="twitter:creator" content="@version1_2017" />
       <meta name="twitter:site" content="@version1_2017" />
