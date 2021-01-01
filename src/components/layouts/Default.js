@@ -35,7 +35,6 @@ const DefaultLayout = ({ children, context }) => {
   const containerClass = sidebarDisabled
     ? 'row container container-narrow'
     : 'row container'
-  debugger
   return (
     <div>
       <Head lang={language} baseUrl={baseUrl} meta={meta} />
