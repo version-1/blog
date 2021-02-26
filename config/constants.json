@@ -18,7 +18,7 @@
     "images": {
       "url": "https://statics.ver-1-0.xyz/uploads"
     },
-    "postRoot": "/Users/admin/Projects/React/ver-1-0.net-static/src/pages/posts"
+    "postRoot": "/Users/admin/Projects/Private/blog/src/pages/posts"
   },
   "constants": {
     "per": 9,
@@ -59,6 +59,7 @@
       "editor",
       "essay",
       "ethereum",
+      "egg-cutter",
       "freelance",
       "frontend",
       "flyway",
