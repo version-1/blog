@@ -7,7 +7,7 @@
     "i18next": "^12.1.0",
     "lodash": "^4.17.19",
     "paginate": "^0.2.0",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
