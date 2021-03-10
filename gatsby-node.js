@@ -83,7 +83,28 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
   })
 }
 
-const createPostShowPage = createPage => (posts, pageviews) => context => {
+const genAlternate = (paths, orgLanguage, slug) => {
+  return Object.keys(paths).reduce((acc, key) => {
+    if (orgLanguage === key) {
+      return acc
+    }
+    if (!paths[key][slug]) {
+      return acc
+    }
+
+    return {...acc, [key]: genPath(key, slug) }
+  }, {})
+}
+
+const genSlugMap = (posts) => posts.reduce((acc, item) => {
+  const { frontmatter: { slug, language }} = item
+  return {
+    ...acc,
+    [language]: {...acc[language], [slug]: true }
+  }
+}, { ja: {}, en: {} })
+
+const createPostShowPage = createPage => (posts, pageviews, slugMap) => context => {
   posts.forEach(edge => {
     const { id, excerpt } = edge
     const {
@@ -98,7 +119,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     const breadcrumbs = fetch(context.language)
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
-      breadcrumbs.categories(categories[0])
+      breadcrumbs.categories(categories[0], context.language)
     ]
     validateCategoryList(edge, categories)
     validateCategoryList(edge, tags)
@@ -106,6 +127,7 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
     const _path = genShowPath(edge)
     const baseUrl = [meta.siteUrl, slug].join('')
     const url = [meta.siteUrl, _path].join('')
+    const alternate = genAlternate(slugMap, context.language, slug)
     const image = [meta.images.url, thumbnail].join('')
     createPage({
       path: _path,
@@ -119,7 +141,8 @@ const createPostShowPage = createPage => (posts, pageviews) => context => {
           title,
           description: excerpt,
           url,
-          canonical: canonical || baseUrl,
+          canonical,
+          alternate,
           image
         },
         layout: {
@@ -155,7 +178,7 @@ const createCollectionShowPage = createPage => (
   const breadcrumbs = fetch(context.language)
   const _breadcrumbs = [
     ...context.layout.breadcrumbs,
-    breadcrumbs[key](collection)
+    breadcrumbs[key](collection, context.language)
   ]
   const heading = i18next.t(`${key}.${collection}`)
   const path = genPath(context.language, _path)
@@ -196,7 +219,7 @@ const createMonthArchivePage = createPage => archives => context => {
     const breadcrumbs = fetch(context.language)
     const _breadcrumbs = [
       ...context.layout.breadcrumbs,
-      breadcrumbs.monthArchive(key)
+      breadcrumbs.monthArchive(key, context.language)
     ]
     const url = [meta.siteUrl, _path].join('')
     buildPaginationPages(createPage)()(_path, 'months', totalCount, {
@@ -271,6 +294,9 @@ const mainQueries = [
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
+  const allSlugs = await graphql(queries.slugListQuery)
+  const slugMap = genSlugMap(allSlugs.data.allMarkdownRemark.nodes)
+
   return Promise.all(
     mainQueries.map(async item => {
       const { language, query } = item
@@ -335,7 +361,7 @@ exports.createPages = async ({ actions, graphql }) => {
           }
         )
       })
-      createPostShowPage(create(createPage))(posts, rows)({
+      createPostShowPage(create(createPage))(posts, rows, slugMap)({
         pickupDisabled: true,
         pickup,
         ...context
