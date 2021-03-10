@@ -35,6 +35,7 @@ const DefaultLayout = ({ children, context }) => {
   const containerClass = sidebarDisabled
     ? 'row container container-narrow'
     : 'row container'
+
   return (
     <div>
       <Head lang={language} baseUrl={baseUrl} meta={meta} />
@@ -45,7 +46,7 @@ const DefaultLayout = ({ children, context }) => {
           <div className="toggle-lang">
             <ToggleLink
               className="toggle-lang-label"
-              to="/"
+              to={ meta?.alternate?.ja || "/" }
               active={language === 'ja'}
             >
               JA
@@ -53,7 +54,7 @@ const DefaultLayout = ({ children, context }) => {
             <span className="toggle-lang-separator">|</span>
             <ToggleLink
               className="toggle-lang-label"
-              to="/en"
+              to={ meta?.alternate?.en || "/en" }
               active={language === 'en'}
             >
               EN
