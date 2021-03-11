@@ -136,7 +136,7 @@
       ".js-ga-click-global-wifi",
       ".adsense"
     ],
-    "pickup": ["/2020/01/01/review-2019", "/2019/12/06/how-to-create-logo-for-private-project", "/2019/10/26/move-to-canada-to-find-job"],
+    "pickup": ["/2020/01/01/review-2020", "/2019/09/24/get-start-circle-ci-confg-2-1", "/2019/05/13/gin-gorm-gqlgen-crud"],
     "pages": ["about"]
   }
 }

@@ -329,7 +329,7 @@ exports.createPages = async ({ actions, graphql }) => {
         const pv = await fetchPv()
         rows = pv.reports[0].data.rows
         const populars = rows.slice(0, 6).map(row => row.dimensions[0])
-        pickup = _.uniq(_.concat(constants.pickup, populars))
+        pickup = [...new Set([...constants.pickup, ...populars])].slice(0, 7)
         const _context = {
           pickup,
           ...context
