@@ -43,28 +43,7 @@ export const postsIndexQuery = graphql`
     ) {
       totalCount
       nodes {
-        id
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          language
-          slug
-          thumbnail
-          templateKey
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 640) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        ...postField
       }
     }
   }

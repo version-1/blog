@@ -1,5 +1,7 @@
-const { meta } = require('./config/constants')
+const constants = require('./config/constants')
 const { serialize, queries } = require('./node/rss')
+
+const { meta } = constants
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
@@ -33,6 +35,7 @@ module.exports = {
         ignore: [`**/\.*`]
       }
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

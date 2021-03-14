@@ -115,27 +115,7 @@ export const pageQuery = graphql`
     $related: [String]
   ) {
     markdownRemark(id: { eq: $id }) {
-      id
-      html
-      excerpt(truncate: true, pruneLength: 300)
-      thumbnail {
-        childImageSharp {
-          fluid(maxWidth: 640) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      frontmatter {
-        language
-        slug
-        title
-        thumbnail
-        canonical
-        categories
-        tags
-        createdAt(formatString: "MMM DD, YYYY")
-        updatedAt(formatString: "MMM DD, YYYY")
-      }
+      ...postFieldDetail
     }
     pickup: allMarkdownRemark(
       filter: {
@@ -144,29 +124,7 @@ export const pageQuery = graphql`
     ) {
       totalCount
       nodes {
-        id
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          language
-          slug
-          thumbnail
-          canonical
-          templateKey
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
-        thumbnail {
-          childImageSharp {
-            fixed(width: 190) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
+        ...postField
       }
     }
     related: allMarkdownRemark(
@@ -177,28 +135,7 @@ export const pageQuery = graphql`
     ) {
       totalCount
       nodes {
-        id
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          language
-          slug
-          thumbnail
-          templateKey
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
-        thumbnail {
-          childImageSharp {
-            fixed(width: 190) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
+        ...postField
       }
     }
   }
