@@ -3,38 +3,46 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   RedditShareButton,
+  PocketShareButton,
+  HatenaShareButton,
+  HatenaIcon,
+  PocketIcon,
   FacebookIcon,
   TwitterIcon,
   RedditIcon
 } from 'react-share'
-import HatenaButton from 'components/atoms/buttons/HatenaButton'
-import PocketButton from 'components/atoms/buttons/PocketButton'
 
-const SnsButtons = ({ type, url, title }) => {
+const SIZE = 28
+
+const SnsButtons = ({ type, url, title }: any) => {
   return (
-    <div className={`sns-buttons ${type}`}>
-      <div className="js-ga-click-sns-twitter">
+    <ul className={`sns-buttons ${type}`}>
+      <li className="js-ga-click-sns-twitter">
         <TwitterShareButton url={url}>
-          <TwitterIcon size={40} round />
+          <TwitterIcon size={SIZE} round />
         </TwitterShareButton>
-      </div>
-      <div className="js-ga-click-sns-facebook">
+      </li>
+      <li className="js-ga-click-sns-facebook">
         <FacebookShareButton url={url}>
-          <FacebookIcon size={40} round />
+          <FacebookIcon size={SIZE} round />
         </FacebookShareButton>
-      </div>
-      <div className="js-ga-click-sns-reddit">
+      </li>
+      <li className="js-ga-click-sns-reddit">
         <RedditShareButton url={url}>
-          <RedditIcon size={40} round />
+          <RedditIcon size={SIZE} round />
         </RedditShareButton>
-      </div>
-      <div className="js-ga-click-sns-pocket">
-        <PocketButton url={url} title={title} />
-      </div>
-      <div className="js-ga-click-sns-hatebu">
-        <HatenaButton url={url} title={title} size={80} />
-      </div>
-    </div>
+      </li>
+      <li className="js-ga-click-sns-pocket">
+        <PocketShareButton url={url}>
+          <PocketIcon size={SIZE} round />
+        </PocketShareButton>
+      </li>
+      <li className="js-ga-click-sns-hatebu">
+        <HatenaShareButton url={url}>
+          <HatenaIcon size={SIZE} round />
+        </HatenaShareButton>
+      </li>
+    </ul>
   )
 }
 
