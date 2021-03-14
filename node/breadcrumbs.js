@@ -20,7 +20,7 @@ const collections = language => ({
   },
   tags: (tag, language) => {
     return {
-      path: tagPath(tag),
+      path: tagPath(tag, language),
       label: i18next.t(`tags.${tag}`),
     };
   },
