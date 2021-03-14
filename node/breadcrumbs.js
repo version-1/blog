@@ -37,7 +37,7 @@ const collections = language => ({
 });
 
 const fetch = language => {
-  i18next.changeLanguage(language);
+  i18next.default?.changeLanguage(language);
   return collections(language);
 };
 
