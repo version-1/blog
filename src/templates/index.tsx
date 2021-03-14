@@ -1,11 +1,16 @@
 import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { postPath } from 'lib/routes'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 
-const IndexPage = ({ data, path, pageContext }) => {
+interface Props {
+  data: any
+  path: string
+  pageContext: any
+}
+
+const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
   const pickup = pageContext.pickup ? data.pickup.nodes : []
@@ -27,14 +32,6 @@ const IndexPage = ({ data, path, pageContext }) => {
 }
 
 export default IndexPage
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
-}
 
 export const pageQuery = graphql`
   query IndexQuery($language: String!, $pickup: [String]) {

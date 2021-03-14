@@ -7,6 +7,7 @@ export const postField = graphql`
       slug
       thumbnail
       templateKey
+      tags
       categories
       createdAt(formatString: "MMM DD, YYYY")
       updatedAt(formatString: "MMM DD, YYYY")

@@ -66,7 +66,7 @@ const buildPaginationPages = createPage => (limit = PER_PAGE) => (
     const url = [meta.siteUrl, _path].join('')
     createPage({
       path: _path,
-      component: path.resolve(`src/templates/${templates}.js`),
+      component: path.resolve(`src/templates/${templates}.tsx`),
       context: {
         ...context,
         limit,
@@ -132,7 +132,7 @@ const createPostShowPage = createPage => (posts, pageviews, slugMap) => context 
     createPage({
       path: _path,
       categories,
-      component: path.resolve(`src/templates/${String(templateKey)}.js`),
+      component: path.resolve(`src/templates/${String(templateKey)}.tsx`),
       context: {
         id,
         ...context,
@@ -247,7 +247,7 @@ const createStaticPage = createPage => page => context => {
   const url = [meta.siteUrl, _path].join('/')
   createPage({
     path: _path,
-    component: path.resolve(`src/templates/${String(templateKey)}.js`),
+    component: path.resolve(`src/templates/${String(templateKey)}.tsx`),
     context: {
       id,
       ...context,
@@ -336,19 +336,19 @@ exports.createPages = async ({ actions, graphql }) => {
         }
         createPage({
           path: '/',
-          component: path.resolve(`src/templates/index.js`),
+          component: path.resolve(`src/templates/index.tsx`),
           context: _context
         })
         // Create 404 Page
         createPage({
           path: '/404.html',
-          component: path.resolve(`src/templates/404.js`),
+          component: path.resolve(`src/templates/404.tsx`),
           context: _context
         })
       } else {
         createPage({
           path: rootPath(language),
-          component: path.resolve(`src/templates/index.js`),
+          component: path.resolve(`src/templates/index.tsx`),
           context
         })
       }

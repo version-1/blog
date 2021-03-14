@@ -8,7 +8,7 @@ import { useDeviceType } from 'hooks/useDeviceType'
 import Breadcrumbs from 'components/molecules/Breadcrumbs'
 import 'assets/stylesheets/index.sass'
 
-const ToggleLink = ({ active, className, to, children }) => {
+const ToggleLink: React.FC = ({ active, className, to, children }) => {
   if (active) {
     return <span className={className}>{children}</span>
   }
@@ -19,7 +19,7 @@ const ToggleLink = ({ active, className, to, children }) => {
   )
 }
 
-const DefaultLayout = ({ children, context }) => {
+const DefaultLayout: React.FC<any> = ({ children, context }) => {
   const {
     path,
     pickup,

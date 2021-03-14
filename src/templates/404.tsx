@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default.js'
+import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 
 const NotFoundPage = ({ data, path, pageContext }) => {
