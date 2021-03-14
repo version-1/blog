@@ -7,24 +7,30 @@ const locale = {
   en: 'en_US'
 }
 
-const Head = ({ lang = 'en', meta = {} }) => {
+const Head: React.FC = ({ lang = 'en', meta = {} }) => {
   const { canonical, alternate } = meta
-  const _title = meta.title ? `%s | ${siteMeta.title}`.replace('%s', meta.title) : siteMeta.title
+  const _title = meta.title
+    ? `%s | ${siteMeta.title}`.replace('%s', meta.title)
+    : siteMeta.title
   const _description = meta.description || siteMeta.description
   const _url = meta.url || siteMeta.siteUrl
   const thumbnail = meta.image || siteMeta.logo
 
   return (
-    <Helmet
-      htmlAttributes={{ lang }}
-    >
+    <Helmet htmlAttributes={{ lang }}>
       <title>{_title}</title>
       {canonical && <link rel="canonical" href={canonical} />}
-      {
-        alternate && Object.keys(alternate).map(key => {
-          return <link key={key} rel="alternate" href={siteMeta.siteUrl + alternate[key]} hreflang={key} />
-        })
-      }
+      {alternate &&
+        Object.keys(alternate).map((key) => {
+          return (
+            <link
+              key={key}
+              rel="alternate"
+              href={siteMeta.siteUrl + alternate[key]}
+              hreflang={key}
+            />
+          )
+        })}
       <meta name="description" content={_description} />
       <meta property="og:description" content={_description} />
       <meta property="og:type" content="website" />
