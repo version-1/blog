@@ -1,11 +1,9 @@
 import React from 'react'
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
   TwitterShareButton,
   RedditShareButton,
   FacebookIcon,
-  GooglePlusIcon,
   TwitterIcon,
   RedditIcon
 } from 'react-share'
