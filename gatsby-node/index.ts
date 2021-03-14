@@ -173,7 +173,7 @@ const createPostShowPage = (createPage: CreatePage) => (
 const createPostsIndexPage = (createPage: CreatePage) => (
   totalCount: number
 ) => (context: any) => {
-  const _path = [routes.root, routes.post].join('/')
+  const _path = ['', routes.post].join('/')
   buildPaginationPages(createPage)()(
     genPath(context.language, _path),
     'posts/index',
