@@ -14,7 +14,7 @@ related:
 
 ## Introduction
 
-I am a Freelance Engineer.
+I am a Freelance Developer.
 
 Mainly, I am developing with React, React Native and Ruby on Rails.
 I help my clients which have their web servie to develop their application.
