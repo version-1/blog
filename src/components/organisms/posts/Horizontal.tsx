@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Image from 'components/atoms/Image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { postShowPath } from 'lib/routes'
 import { meta } from 'config/constants'
 
-const Post = ({ thumbnail, post }) => {
-  const { title, language, slug } = post.frontmatter
-  const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail
+const Horizontal = ({ post }: any) => {
+  const { thumbnail, title, language, slug } = post.frontmatter
+  const thumbnailUrl = meta.images.url + thumbnail
+  const image = getImage(post.thumbnail)
   const path = postShowPath(slug, language)
   const _title = title.length > 45 ? title.slice(0, 45) + '...' : title
   return (
@@ -14,14 +15,8 @@ const Post = ({ thumbnail, post }) => {
       <div className="card horizontal">
         <div className="card-image">
           <Link to={path}>
-            {thumbnail || (
-              <Image
-                gatsbyImage
-                gatsbyType="fluid"
-                fluid={post.thumbnail.childImageSharp.fluid}
-                src={thumbnailUrl}
-                alt={title}
-              />
+            {<img src={thumbnailUrl} alt={_title} /> || (
+              <GatsbyImage image={image} alt={_title} />
             )}
           </Link>
         </div>
@@ -45,4 +40,4 @@ const Post = ({ thumbnail, post }) => {
   )
 }
 
-export default Post
+export default Horizontal
