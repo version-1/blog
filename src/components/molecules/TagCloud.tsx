@@ -1,19 +1,19 @@
 import React, { useState, useMemo, useCallback } from 'react'
 import Link from 'atoms/Link'
-import i18next from 'lib/i18next'
+import { instance as i18next } from 'lib/i18next'
 import { tagPath } from 'lib/routes'
 
 const defaultCount = 24
 const delta = 8
 
-const TagCloud = ({ language, tags }) => {
+const TagCloud = ({ language, tags }: any) => {
   const [count, setCount] = useState(defaultCount)
   const [value, setValue] = useState('')
   const onMore = useCallback(() => {
-    setCount(count => count + delta)
+    setCount((count) => count + delta)
   }, [setCount])
   const onChangeText = useCallback(
-    e => {
+    (e) => {
       setValue(e.target.value)
     },
     [setValue]
@@ -21,7 +21,7 @@ const TagCloud = ({ language, tags }) => {
 
   const rest = useMemo(() => tags.length - count, [tags, count])
 
-  const filteredTags = tags.filter(tag => {
+  const filteredTags = tags.filter((tag: string) => {
     if (!value) {
       return true
     }
@@ -41,7 +41,7 @@ const TagCloud = ({ language, tags }) => {
         />
       </div>
       <ul className="tagcloud-tags-list">
-        {filteredTags.slice(0, count).map(tag => {
+        {filteredTags.slice(0, count).map((tag: string) => {
           const key = `tags.${tag}`
           return (
             <li key={key} className="tagcloud-tags-item">

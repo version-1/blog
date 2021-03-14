@@ -1,8 +1,8 @@
 import React from 'react'
-import i18next from 'lib/i18next'
+import { instance as i18next } from 'lib/i18next'
 import HorizontalPostList from 'components/organisms/HorizontalPostList'
 
-const BottomPostList = props => {
+const BottomPostList = (props: any) => {
   const { posts, label, title } = props
   if (!posts || posts.length <= 0) {
     return <div />

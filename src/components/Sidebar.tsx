@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import profile from 'assets/images/profile-small.png'
 import ArchiveByMonth from 'components/organisms/ArchiveByMonth'
 import { tagPath, categoryPath, aboutPath } from 'lib/routes'
-import i18next from 'lib/i18next'
+import { instance as i18next } from 'lib/i18next'
 import TagCloud from 'components/molecules/TagCloud'
 import Title from 'components/molecules/Title'
 
@@ -24,7 +24,7 @@ const Profile = () => {
   return <Img fixed={data.profile.childImageSharp.fixed} alt="profile" />
 }
 
-const displayCategories = language => [
+const displayCategories = (language: Lang) => [
   categoryPath('engineering', language),
   categoryPath('react', language),
   categoryPath('freelance', language),
@@ -40,6 +40,9 @@ export default class Sidebar extends PureComponent {
       language,
       layout: { archiveByMonth, tags },
     } = this.props
+
+    console.log(i18next)
+    console.log(i18next.t('labels.article'))
     return (
       <div className="sidebar">
         <section className="section">

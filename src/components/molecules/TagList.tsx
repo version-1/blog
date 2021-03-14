@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import i18next from 'lib/i18next'
+import { instance as i18next } from 'lib/i18next'
 import { tagPath } from 'lib/routes'
-const TagList = ({ language, list, delimiter }) => {
-  return list.map((tag, index) => {
+
+const TagList = ({ language, list }: any) => {
+  return list.map((tag: string) => {
     const name = i18next.t(`tags.${tag}`)
     return (
       <Link key={tag} to={tagPath(tag, language)} className="tag btn-flat">
