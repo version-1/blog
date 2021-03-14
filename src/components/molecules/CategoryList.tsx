@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import i18next from 'lib/i18next'
+import { instance as i18next } from 'lib/i18next'
 import { categoryPath } from 'lib/routes'
-const CategoryList = ({ language, list, delimiter }) => {
-  return list.map((category, index) => {
+
+const CategoryList = ({ language, list }: any) => {
+  return list.map((category: any, index: number) => {
     const name = i18next.t(`categories.${category}`)
     return (
       <Link

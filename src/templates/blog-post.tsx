@@ -8,7 +8,7 @@ import SNSButtons from 'components/organisms/SNSButtons'
 import CategoryList from 'components/molecules/CategoryList'
 import TagList from 'components/molecules/TagList'
 import BottomPostList from 'components/organisms/BottomPostList'
-import i18next from 'lib/i18next'
+import { instance as i18next } from 'lib/i18next'
 
 const BlogPostTemplate = ({
   location,
@@ -16,7 +16,7 @@ const BlogPostTemplate = ({
   pickup,
   related,
   contentComponent
-}) => {
+}: any) => {
   const content = post.html
   const {
     createdAt,
@@ -97,12 +97,6 @@ const BlogPost = ({ location, data, pageContext, path }) => {
       />
     </Layout>
   )
-}
-
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
 }
 
 export default BlogPost

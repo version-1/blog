@@ -1,8 +1,8 @@
 import React from 'react'
-import i18next from 'lib/i18next'
+import { instance } from 'lib/i18next'
 
-const Title = props => {
-  const title = props.title || i18next.t(props.label)
+const Title = (props: any) => {
+  const title = props.title || instance.t(props.label)
   const className = 'square square-' + props.color
   return (
     <div className="section-title">

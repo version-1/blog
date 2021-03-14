@@ -1,17 +1,17 @@
-const i18next = require('i18next')
-const enLocales = require('../locales/en/index')
-const jaLocales = require('../locales/ja/index')
+import i18next from 'i18next'
+import enLocales from '../locales/en'
+import jaLocales from '../locales/ja'
 
-i18next.default?.init({
+i18next.init({
   fallbackLng: 'ja',
   resources: {
     en: {
-      translation: enLocales,
+      translation: enLocales.module,
     },
     ja: {
-      translation: jaLocales,
+      translation: jaLocales.module,
     },
-  },
+  }
 })
 
-module.exports = i18next
+export const instance = i18next
