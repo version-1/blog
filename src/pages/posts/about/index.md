@@ -14,18 +14,20 @@ related:
 
 ## 自己紹介・経歴
 
-Rails + React（Redux)メインで自社サービスの開発のお手伝いさせて頂いている
-フリーランスのWebエンジニア(React Nativeもやっていますが）です。
+Rails + React（Redux)メインで自社サービスの開発のお手伝いさせて頂いているバンクーバ在住のフリーランスのWebエンジニアです。
 
-今のメインはRails + Reactでやらせてもらっていますが、色々な技術に興味があり他の技術の仕事でも喜んでやります。
-サーバサイド+フロントサイド（時にはインフラ）問はず、持っている知識をフルに使ってプロダクトを開発・改善していくのが好きです。
-一機能を分業してつくるというよりきは機能単位でバックからフロントからアプリの実装までを一貫して担当できます。
+直近のプロジェクトでは、
 
-会社員時代にはエンジニアとして技術力を磨きつつも、仕事で縁あってインドネシアやモンゴル、アメリカなどそれぞれの期間は短いですが
-色々な国に出向き各国の雰囲気を味わってきました。英語のドキュメントなどはあまり抵抗なく読むことができます。
+- SaaSの自社開発開発企業さんでのリードエンジニアとして開発サポート
+- フロントエンドの技術顧問
+- Gatsby.jsでのWordpressサイトのリプレイス
 
-エンジニアの経歴としては、SIer時代を含めて5年程度あります。
+といったお仕事を担当させて頂いています。
 
+チケットを払い出してもらったものを順番に実装していくというよりは、プロジェクトに必要そうな基盤を整えたり、
+手動で行っている作業を自動化したりという形で自発的に仕事をするのように心がけています。
+
+また、一エンジニアとして働く傍らMENTAというサービスを利用してプログラミングを教えたり、プログラミング学習教材サービスのTechpitさんの教材の執筆を行っていたりします。
 
 ### 技術スタック
 
@@ -33,19 +35,19 @@ Rails + React（Redux)メインで自社サービスの開発のお手伝いさ�
 <tbody>
 <tr>
   <th>サーバサイド</th>
-  <td><strong>Ruby, Ruby on Rails, Node, Express</strong>, Laravel</td>
+  <td><strong>Ruby, Ruby on Rails, Node, Express</strong>, Go, Gin</td>
 </tr>
 <tr>
   <th>フロントエンド</th>
-  <td><strong>React,Redux, Vue, Vuex</strong>, Webapck, JQuery</td>
+  <td><strong>React, React Hooks, Next.js, Redux, TypeScript, </strong> BEM, SMACCSS, Styled Components, CSS Module, Vue, Vuex, Webapck</td>
 </tr>
 <tr>
   <th>インフラ・データベース</th>
-  <td><strong>MySQL, PostgresSQL, Linux, Docker</strong>, Nginx, Kuberenetes, Ansible, Apache</td>
+  <td>AWS EC2/RDS/Cloud Front/S3/Route53/Cloud Watch, MySQL, PostgresSQL, Linux, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase</td>
 </tr>
 <tr>
   <th>そのほか</th>
-  <td><strong>React Native, Circle CI</strong>, VBA, Git</td>
+  <td>React Native, Circle CI, Github Action, Git</td>
 </tr>
 </tbody>
 </table>
@@ -53,11 +55,13 @@ Rails + React（Redux)メインで自社サービスの開発のお手伝いさ�
 
 ### その他スキル
 
-* ゼロからFirebaseのRealtime Databaseを用いたチャット機能の実装経験（バック&フロント実装)
-* CtoCサービス各種機能実装経験あり（管理画面、口コミ機能、取引機能等）
+* Circle CI, Expo, Capistrano を使用したパイプラインの実装
+* FirebaseのRealtime Databaseを用いたチャット機能の実装（バック&フロント実装)
+* C to C サービス各種機能実装経験あり（管理画面、口コミ機能、取引機能等）
 * Rails + MySQL + Vue で実装されたシステムの開発環境docker化
+* React Native でのスクラッチでのアプリ開発・リリース
+* 決済サービスの実装
 * コードレビュー可能
-* 自動デプロイツールの実装（gradle)
 * オフショアでの開発経験あり。
 * 英語ドキュメントが読める。
 * チームリーダの経験あり。仕様策定、作業分割、作業分担、コードレビュー等を担当。
@@ -74,42 +78,50 @@ Netlifyを利用して配信しています。当サイトの設計・デザイ�
 
 使用技術: React, Gatsby, Sass, Netlify, CloudFlare, AWS S3
 
+### ポートフォリオ
+
+<a href="https://portfolio.ver-1-0.net/">ポートフォリオ</a>
+
+Gatsby.jsで実装したチャットアプリ風ポートフォリオサイトです。
+これまでの経歴やそれぞれの成果物を載せています。
+
+
 ### マークダウンメモアプリ Papyrus
 
 裏紙のような気軽にマークダウンで書いたり捨てたりできるメモアプリを開発しています。
 現在ベータ版公開中です。
 
-<a href="http://papyrus-app.org/">PaPyrus</a>
+<a href="https://papyrus-app.org/">PaPyrus</a>
 
 使用技術: React, Electron, Go, Next.js
 
-### Reactで実装したスネークゲーム
+### スネークゲーム 🐍 を作って学ぶ React Hooks API での状態管理
 
-お遊びがてらReactで作成したスネークゲームです。自分でプレイしても結構楽しめたので趣味でつくりましたが結構満足感のある作品です。
+Techpitさんからオンライン教材として、スネークゲームを作りながらReact Hooks APIの使い方を学べる教材を執筆・リリースさせて頂きました。
 
-<video poster="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
-
-実物は<a href="https://version-1.github.io/react-snake-game/">こちら</a>です
-
-git リポジトリはこちら
-https://github.com/version-1/react-snake-game
+<a href="https://www.techpit.jp/courses/127">Techpit | スネークゲーム 🐍 を作って学ぶ React Hooks API での状態管理</a>
 
 
-### npm パッケージ | react-native-various-form
+執筆に関する記事はこちらになります。
 
-https://github.com/version-1/react-native-various-form
+<a href="/2020/11/14/publish-snake-game-material">Techpit さんからReact Hooksに関する教材を執筆・リリースしました</a>
 
-npmパッケージです。
+### プログラミング学習メンタリングサービス
 
-ちょっとまだまだ改良は必要なのですが、
-ReactNativeのjsxでフォームのバリデーションをするライブラリになってます。
-必要なバリデータが足りていなかったり、フィールドのコンポーネントもパッケージに含まれていて
-フォームに必要なやつのデパート状態になっているのでそれぞれ用途にわけて分割はしたいとおもっています。（いつか
+<a href="https://menta.work/user/13371">MENTA プロフィール</a>
+
+スキルシェアサービスであるMENTA上でフロントエンドエンジニアを目指す方向けのプランを提供しています。
+
+2020/12/31 現在全体の上位 1 % にラインクインしている金バッジメンターとして<strong> 20 ~ 30名ほど </strong> の生徒さんの学習をお手伝いさせて頂いています。
 
 
 ## お仕事の募集
 
-現在週2日~できる開発の仕事を募集しております。
+- 現在週3日 ~ できる開発の仕事
+- フロントエンド周りの設計アドバイス、エンジニア育成等の技術顧問
+
+を募集しております。
+
 ご興味のある方はTwitterのDMよりご連絡ください。
 
 Twitterアカウント

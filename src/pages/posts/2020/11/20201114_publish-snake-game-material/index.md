@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 language: ja
-title: React Hooksに関する教材を執筆・リリースしました
+title: Techpit さんから React Hooks に関する教材を執筆・リリースしました
 slug: /2020/11/14/publish-snake-game-material
 createdAt: 2020-11-14 22:21:30
 updatedAt: 2020-11-14 22:21:30
