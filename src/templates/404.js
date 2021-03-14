@@ -10,10 +10,10 @@ const NotFoundPage = ({ data, path, pageContext }) => {
       ...pageContext,
       pickupDisabled: true,
       sidebarDisabled: true,
-      pickup,
+      pickup: pageContext.pickup,
       path
     }),
-    [pageContext, path, pickup]
+    [pageContext, path]
   )
   return (
     <Layout context={context}>

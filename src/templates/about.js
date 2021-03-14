@@ -5,7 +5,7 @@ import { meta } from 'config/constants'
 import Layout from 'components/layouts/Default'
 import Content, { HTMLContent } from 'components/Content'
 
-export const AboutTemplate = ({ post, contentComponent }) => {
+const AboutTemplate = ({ post, contentComponent }) => {
   const content = post.html
   const { createdAt, updatedAt, title } = post.frontmatter
   const PostContent = contentComponent || Content
@@ -44,7 +44,7 @@ AboutTemplate.propTypes = {
   helmet: PropTypes.object
 }
 
-export const AboutPost = ({ data, pageContext, path }) => {
+const AboutPost = ({ data, pageContext, path }) => {
   const { markdownRemark: post } = data
   const context = useMemo(
     () => ({ ...pageContext, sidebarDisabled: true, path }),

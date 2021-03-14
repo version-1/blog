@@ -10,7 +10,7 @@ import TagList from 'components/molecules/TagList'
 import BottomPostList from 'components/organisms/BottomPostList'
 import i18next from 'lib/i18next'
 
-export const BlogPostTemplate = ({
+const BlogPostTemplate = ({
   location,
   post,
   pickup,

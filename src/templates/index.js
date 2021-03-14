@@ -5,7 +5,7 @@ import { postPath } from 'lib/routes'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 
-export const IndexPage = ({ data, path, pageContext }) => {
+const IndexPage = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
   const pickup = pageContext.pickup ? data.pickup.nodes : []
