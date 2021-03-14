@@ -376,32 +376,29 @@ exports.onCreateNode = async ({
   getNode
 }) => {
   const { createNode, createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    if (node.frontmatter.templateKey === 'blog-post') {
-      const thumbnailUrl = isProduction
+  // fmImagesToRelative(node) // convert image paths for gatsby images
+  //
+  if (
+    node.internal.type === "MarkdownRemark" &&
+    node.frontmatter.featuredImgUrl !== null
+  ) {
+     const thumbnailUrl = isProduction
         ? meta.images.url + node.frontmatter.thumbnail
         : dummyThumbnail
-      // set canonical field
-      node.frontmatter.canonical = node.frontmatter.canonical || ''
-      try {
-        const fileNode = await createRemoteFileNode({
-          url: thumbnailUrl,
-          parentNodeId: node.id,
-          store,
-          cache,
-          createNode,
-          createNodeId
-        })
-        if (fileNode) {
-          node.thumbnail___NODE = fileNode.id
-        }
-      } catch (e) {
-        console.error(e)
-      }
+
+    let fileNode = await createRemoteFileNode({
+      url: thumbnailUrl, // string that points to the URL of the image
+      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+      createNode, // helper function in gatsby-node to generate the node
+      createNodeId, // helper function in gatsby-node to generate the node id
+      cache, // Gatsby's cache
+      store, // Gatsby's Redux store
+    })
+    // if the file was created, attach the new node to the parent node
+    if (fileNode) {
+      node.thumbnail___NODE = fileNode.id
     }
+    const value = createFilePath({node, getNode});
     createNodeField({
       name: `slug`,
       node,
@@ -420,8 +417,6 @@ exports.onCreateWebpackConfig = ({
   actions.setWebpackConfig({
     node: {
       fs: 'empty',
-      net: 'empty',
-      tls: 'empty'
     },
     resolve: {
       alias: {

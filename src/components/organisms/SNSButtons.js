@@ -7,7 +7,7 @@ import {
   FacebookIcon,
   GooglePlusIcon,
   TwitterIcon,
-  RedditIcon,
+  RedditIcon
 } from 'react-share'
 import HatenaButton from 'components/atoms/buttons/HatenaButton'
 import PocketButton from 'components/atoms/buttons/PocketButton'
@@ -24,11 +24,6 @@ const SnsButtons = ({ type, url, title }) => {
         <FacebookShareButton url={url}>
           <FacebookIcon size={40} round />
         </FacebookShareButton>
-      </div>
-      <div className="js-ga-click-sns-google-plus">
-        <GooglePlusShareButton url={url}>
-          <GooglePlusIcon size={40} round />
-        </GooglePlusShareButton>
       </div>
       <div className="js-ga-click-sns-reddit">
         <RedditShareButton url={url}>
