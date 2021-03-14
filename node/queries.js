@@ -1,3 +1,25 @@
+const slugListQuery = `
+  {
+    allMarkdownRemark(
+      limit: 1000,
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "blog-post" },
+        }
+      }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          title
+          slug
+          language
+        }
+      }
+    }
+  }
+`;
+
 const enIndexQuery = `
   {
     allMarkdownRemark(
@@ -165,6 +187,7 @@ const tagQuery = `
 
 
 module.exports = {
+  slugListQuery,
   jaIndexQuery,
   enIndexQuery,
   fetchBySlug,
