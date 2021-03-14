@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { postShowPath } from 'lib/routes'
 import { meta } from 'config/constants'
 
-const Post = ({ post }) => {
+const Post = ({ post }: any) => {
   const { thumbnail, title, language, slug } = post.frontmatter
   const thumbnailUrl = meta.images.url + thumbnail
   const image = getImage(post.thumbnail)

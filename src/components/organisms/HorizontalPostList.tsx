@@ -1,15 +1,19 @@
 import React, { useEffect, useRef } from 'react'
-import Image from 'components/atoms/Image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Title from 'components/molecules/Title'
 import Post from 'components/organisms/posts/Default'
 import { meta } from 'config/constants'
 
-const PostList = props => {
+const PostList = (props: any) => {
   const { title, titleLabel, posts, defaultHorizontalSlide = 15 } = props
   const listRef = useRef()
 
   useEffect(() => {
-    listRef.current.scrollTo({ top: 0, left: defaultHorizontalSlide, behavior: 'smooth' })
+    listRef.current.scrollTo({
+      top: 0,
+      left: defaultHorizontalSlide,
+      behavior: 'smooth'
+    })
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!posts || posts.length <= 0) {
@@ -26,18 +30,15 @@ const PostList = props => {
             <></>
           )}
           <div ref={listRef} className="post-list">
-            {posts.map((post, index) => {
+            {posts.map((post: any, index: number) => {
               const thumbnailUrl = meta.images.url + post.frontmatter.thumbnail
+              const image = getImage(post.thumbnail)
               return (
                 <Post
                   thumbnail={
-                    <Image
-                      gatsbyImage
-                      gatsbyType="fixed"
-                      fixed={post.thumbnail.childImageSharp.fixed}
-                      src={thumbnailUrl}
-                      alt={title}
-                    />
+                    <img src={thumbnailUrl} alt={title} /> || (
+                      <GatsbyImage image={image} alt={title} />
+                    )
                   }
                   post={post}
                   key={index}
