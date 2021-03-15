@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react'
+import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
 import { postPath } from 'lib/routes'
 import Layout from 'components/layouts/Default'
@@ -9,6 +10,21 @@ interface Props {
   path: string
   pageContext: any
 }
+
+const styles = new Styles({
+  console: `
+    background: rgba(19, 11, 51, 0.6);
+    border-radius: 8px;
+    min-height: 380px;
+    width: 640px;
+
+    .header {
+      background: rgba(19, 11, 51, 0.6);
+      border-radius: 8px;
+      height: 64px;
+    }
+  `
+}).style
 
 const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
@@ -21,12 +37,11 @@ const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
   ])
   return (
     <Layout context={context}>
-      <PostList
-        titleLabel="labels.latest-posts"
-        posts={posts}
-        pagenationNamespace={postPath()}
-        pagenationTotalCount={totalCount}
-      />
+      <div css={styles.console}>
+        <div className="header">
+        </div>
+      </div>
+      <PostList posts={posts} />
     </Layout>
   )
 }
