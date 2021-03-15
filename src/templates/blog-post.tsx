@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { meta } from 'config/constants'
 import Layout from 'components/layouts/Default'
@@ -68,13 +67,6 @@ const BlogPostTemplate = ({
       <BottomPostList label="labels.pickup" posts={pickup} />
     </section>
   )
-}
-
-BlogPostTemplate.propTypes = {
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object
 }
 
 const BlogPost = ({ location, data, pageContext, path }) => {

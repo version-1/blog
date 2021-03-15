@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-twitter',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-webpack-bundle-analyser-v2',
     'gatsby-plugin-sass',
