@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { meta } from 'config/constants'
 import Layout from 'components/layouts/Default'
@@ -37,13 +36,6 @@ const AboutTemplate = ({ post, contentComponent }) => {
   )
 }
 
-AboutTemplate.propTypes = {
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object
-}
-
 const AboutPost = ({ data, pageContext, path }) => {
   const { markdownRemark: post } = data
   const context = useMemo(
@@ -58,11 +50,6 @@ const AboutPost = ({ data, pageContext, path }) => {
   )
 }
 
-AboutPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-}
 export default AboutPost
 
 export const pageQuery = graphql`
