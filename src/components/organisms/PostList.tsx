@@ -3,36 +3,28 @@ import Title from 'components/molecules/Title'
 import Post from 'components/organisms/posts/Default'
 import Pagination from 'components/Pagination'
 
-const PostList = props => {
+const PostList = ({ posts, pagination = {} }: any) => {
   const {
-    title,
-    titleLabel,
-    posts,
-    pagenationNamespace,
-    pagenationTotalCount,
-    pageIndex,
-  } = props
+    index,
+    totalCount,
+    namespace
+  } = pagination
   return (
     <div className="post-list-container">
       <div className="post-list">
         <div className="post-list-content">
-          {title || titleLabel ? (
-            <Title color="green" title={title} label={titleLabel} />
-          ) : (
-            <></>
-          )}
           <div className="section-list">
             <div className="row">
-              {posts.map((post, index) => (
-                <Post post={post} key={index} />
+              {posts.map((post: any) => (
+                <Post post={post} key={post.id} />
               ))}
             </div>
           </div>
-          {pagenationTotalCount && pagenationNamespace ? (
+          {totalCount && namespace ? (
             <Pagination
-              index={pageIndex}
-              namespace={pagenationNamespace}
-              count={pagenationTotalCount}
+              index={index}
+              namespace={namespace}
+              count={totalCount}
             />
           ) : (
             <></>

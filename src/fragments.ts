@@ -16,6 +16,7 @@ export const postField = graphql`
   fragment thumbnailData on File {
       childImageSharp {
         gatsbyImageData(
+          width: 160
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
