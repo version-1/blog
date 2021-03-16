@@ -2,7 +2,7 @@ import React, { SyntheticEvent, useState } from 'react'
 import Link from 'atoms/Link'
 import { rootPath, categoryPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
-import Icon from 'components/atoms/Icon'
+import SearchField from 'molecules/SearchField.tsx'
 
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
@@ -20,7 +20,8 @@ const styles = new Styles({
   content: `
     display: flex;
     align-items: center;
-    max-width: 892px;
+    max-width: 1000px;
+    margin: auto;
   `,
   menu: `
     display: flex;
@@ -39,22 +40,6 @@ const styles = new Styles({
     justify-content: space-between;
     align-items: center;
   `,
-  search: `
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 8px;
-    padding: 8px;
-    height: 32px;
-
-    input {
-      border: 0;
-    }
-
-    input:focus {
-      outline: 0;
-    }
-  `
 }).style
 
 const MenuList = ({ list }) => {
@@ -75,11 +60,6 @@ interface Props {
 
 const Navbar: React.VFC<Props> = ({ language }) => {
   const list = menus(language)
-  const [value, setValue] = useState('')
-
-  const onChangeText = (e: SyntheticEvent<HTMLInputElement>) => {
-    setValue((e.target as HTMLInputElement).value)
-  }
 
   return (
     <header css={styles.container}>
@@ -91,10 +71,7 @@ const Navbar: React.VFC<Props> = ({ language }) => {
           <div className="nav-links hide-on-med-and-down">
             <MenuList list={list} />
           </div>
-          <div css={styles.search}>
-            <Icon icon="search" />
-            <input type="text" value={value} onChange={onChangeText} />
-          </div>
+          <SearchField />
         </nav>
       </div>
     </header>

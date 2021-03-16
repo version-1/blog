@@ -16,6 +16,21 @@
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "src/*": ["src/*"],
+      "components/*": ["src/components/*"],
+      "lib/*": ["src/lib/*"],
+      "locales/*": ["src/locales/*"],
+      "atoms/*": ["src/components/atoms/*"],
+      "molecules/*": ["src/components/molecules/*"],
+      "organisms/*": ["src/components/organisms/*"],
+      "templates/*": ["src/components/templates/*"],
+      "constants/*": ["src/constants/*"],
+      "context/*": ["src/context/*"],
+      "models/*": ["src/models/*"],
+      "assets/*": ["src/assets/*"],
+      "pages/*": ["src/pages/*"]
+    }
   }
 }
