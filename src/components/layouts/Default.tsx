@@ -7,6 +7,7 @@ import { useDeviceType } from 'hooks/useDeviceType'
 import Breadcrumbs from 'components/molecules/Breadcrumbs'
 import { Global, css } from '@emotion/react'
 import Styles from 'lib/styles'
+import Console from 'components/organisms/Console'
 
 const ToggleLink: React.FC = ({ active, className, to, children }) => {
   if (active) {
@@ -45,6 +46,11 @@ const global = css`
     margin: 0;
   }
 
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
   ul > li {
     list-style-type: none;
   }
@@ -65,7 +71,8 @@ const styles = new Styles({
   content: `
     max-width: 1000px;
     margin: auto;
-    margin-top: 128px;
+    margin-top: 64px;
+    display: flex;
   `
 }).style
 
@@ -91,7 +98,11 @@ const DefaultLayout: React.FC<any> = ({ children, context }) => {
       <Head lang={language} baseUrl={baseUrl} meta={meta} />
       <Global styles={global} />
       <Navbar language={language} />
-      <main css={styles.content} className={containerClass}>{children}</main>
+      <Console context={context} path={path} />
+      <main css={styles.content} className={containerClass}>
+        <div>{children}</div>
+        <Sidebar language={language} layout={layout} />
+      </main>
       <div className="footer">
         <span className="copyright">
           Copyright © 2018 So Far , So Tech All Rights Reserved.

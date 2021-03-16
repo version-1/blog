@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Styles from 'lib/styles'
 import { StaticImage } from 'gatsby-plugin-image'
-import ArchiveByMonth from 'components/organisms/ArchiveByMonth'
-import { tagPath, categoryPath, aboutPath } from 'lib/routes'
+import { aboutPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
-import TagCloud from 'components/molecules/TagCloud'
 import Title from 'components/molecules/Title'
 
 const Profile = () => {
@@ -19,15 +18,26 @@ const Profile = () => {
   )
 }
 
-const displayCategories = (language: Lang) => [
-  categoryPath('engineering', language),
-  categoryPath('react', language),
-  categoryPath('freelance', language),
-  tagPath('gadget', language),
-  tagPath('english', language),
-  categoryPath('design', language),
-  categoryPath('column', language)
-]
+const styles = new Styles({
+  container: `
+    padding-left: 32px;
+  `,
+  section: `
+    background: linear-gradient(90deg, rgba(242, 242, 242, 0.95) 0%, rgba(255, 255, 255, 0.7885) 100%);
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
+    margin-bottom: 16px;
+  `,
+  header: `
+    padding: 16px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 69.95%, rgba(255, 255, 255, 0.6) 100%);
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
+  `,
+  body: `
+    padding: 16px;
+  `
+}).style
 
 const Sidebar = (props: any) => {
   const {
@@ -36,10 +46,12 @@ const Sidebar = (props: any) => {
   } = props
 
   return (
-    <div className="sidebar">
-      <section className="section">
-        <Title color="skyblue" label="labels.sidebar.profile-title" />
-        <div className="self-introduction">
+    <div css={styles.container}>
+      <section css={styles.section}>
+        <div css={styles.header}>
+          <Title color="skyblue" label="labels.sidebar.profile-title" />
+        </div>
+        <div css={styles.body}>
           <div className="profile-image">
             <Profile />
           </div>
@@ -53,31 +65,14 @@ const Sidebar = (props: any) => {
           </div>
         </div>
       </section>
-      <section className="section">
-        <Title color="skyblue" label="labels.sidebar.categories" />
-        <div className="sidebar-categories">
-          <ul className="sidebar-categories-list">
-            {displayCategories(language).map((category) => {
-              const key = category.replace(/\//g, '.').slice(1)
-              const _key = language === 'ja' ? key : key.replace('en.', '')
-              return (
-                <li key={_key} className="sidebar-categories-item">
-                  <Link className="sidebar-categories-item-link" to={category}>
-                    {i18next.t(_key)}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      </section>
-      <section className="section">
-        <Title color="skyblue" label="labels.sidebar.tags" />
-        <TagCloud language={language} tags={tags} />
-      </section>
-      <section className="section">
-        <ArchiveByMonth language={language} items={archiveByMonth} />
-      </section>
+      {language === 'ja' && (
+        <section css={styles.section}>
+          <div css={styles.header}>
+            <Title color="skyblue" label="labels.sidebar.promotion" />
+          </div>
+          <div css={styles.body}></div>
+        </section>
+      )}
     </div>
   )
 }

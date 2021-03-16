@@ -21,10 +21,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "clean": "rimraf .cache public",
+    "clean": "gatsby clean",
     "build": "yarn run clean && gatsby build",
     "build:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby build",
-    "develop": "yarn run clean && gatsby develop",
+    "develop": "gatsby develop",
     "develop:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby develop",
     "serve": "gatsby serve",
     "generate": "node scripts/generator/index.js",

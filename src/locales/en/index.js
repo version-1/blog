@@ -11,6 +11,7 @@ exports.module = {
     pickup: 'Pick Up',
     sidebar: {
       'profile-title': 'Profile',
+      promotion: 'Promotion',
       categories: 'Categories',
       tags: 'Tags',
       'profile-description':
