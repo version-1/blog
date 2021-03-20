@@ -12,6 +12,24 @@ exports.module = {
     sidebar: {
       'profile-title': 'プロフィール',
       categories: 'カテゴリ',
+      promotion: 'プロモーション',
+      promotions: {
+        menta: {
+          title: 'MENTA',
+          description:
+            'MENTAでフロントエンドエンジニアを目指す方向けのサービスを提供しています。HTML/CSS, JS, Reactを学習できるコースを用意しています。詳細はこちらのリンク先でご確認下さい'
+        },
+        techpit: {
+          title: 'スネークゲームを作って学ぶReact Hooks APIでの状態管理 | Techpit',
+          description:
+            'オンラインプログラミング学習サービスTechpitさんでReact Hooks APIに関する教材を執筆・リリースさせて頂きました。スネークゲームを作りながらHooksを学べる教材になっています。'
+        },
+        'egg-cutter': {
+          title: 'Egg Cutter | オンライン mp3 分割サービス',
+          description:
+            'ブラウザ上で音声を気軽に分割できるサービスです。英単語帳CD の分割にも使える便利なサービスになっているかと思います！'
+        }
+      },
       tags: 'タグ',
       'profile-description':
         'フリーランスのRails&Reactエンジニア10月からフルリモートになりました。プログラミング、旅行、フリーランスの働き方などについてぼちぼち更新していきます。',
@@ -55,7 +73,7 @@ exports.module = {
     'design-pattern': 'デザインパターン',
     docker: 'Docker',
     english: '英語',
-    "egg-cutter": 'Egg Cutter',
+    'egg-cutter': 'Egg Cutter',
     exposed: 'Exposed',
     electron: 'Electron',
     editor: 'エディタ',
