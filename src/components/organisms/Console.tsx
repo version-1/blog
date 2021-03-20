@@ -8,6 +8,7 @@ const styles = new Styles({
   container: `
     max-width: 1000px;
     margin: auto;
+    margin-top: 64px;
   `,
   content: `
     background: rgba(19, 11, 51, 0.6);
