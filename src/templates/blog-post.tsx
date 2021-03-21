@@ -4,15 +4,14 @@ import Styles from 'lib/styles'
 import { truncate } from 'lib/stringUtils'
 import { postShowPath, categoryPath, aboutPath, tagPath } from 'lib/routes'
 import Layout from 'components/layouts/Default'
-import ProfileIcon from 'components/atoms/ProfileIcon'
 import Icon from 'components/atoms/Icon'
 import { HTMLContent } from 'components/Content'
 import SNSButtons from 'components/organisms/SNSButtons'
 import BottomPostList from 'components/organisms/BottomPostList'
 import { instance as i18next } from 'lib/i18next'
 import { colors } from 'constants/index'
-import ProfileSNSLinks from 'components/molecules/ProfileSNSLinks'
 import Promotion from 'components/organisms/Promotion'
+import Profile from 'components/organisms/Profile'
 import SearchCard from 'components/organisms/SearchCard'
 import ArticleIndex from 'components/organisms/ArticleIndex'
 import Bar from 'components/atoms/Bar'
@@ -66,6 +65,7 @@ const styles = new Styles({
     }
   `,
   postFooter: `
+    margin-bottom: 32px;
   `,
   share: `
     flex: 1;
@@ -142,13 +142,14 @@ const styles = new Styles({
     .left > a,
     .right > a {
       color: ${colors.primaryColor};
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    a > p {
+      padding: 8px;
     }
   `,
   promotion: `
@@ -229,39 +230,24 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
                 <label css={styles.shareLabel}>
                   {i18next.t('labels.share')}
                 </label>
-                <SNSButtons url={url} title={title} size={24} />
+                <SNSButtons url={url} title={title} size={28} />
               </p>
             </div>
-            <div css={styles.profile}>
-              <div className="left">
-                <ProfileIcon />
-              </div>
-              <div className="right">
-                <div className="header">
-                  <h4>Jiro</h4>
-                  <ProfileSNSLinks />
-                </div>
-                <div>
-                  <p>{i18next.t('profile.description')}</p>
-                </div>
-              </div>
-            </div>
           </div>
-          <Bar />
           <div css={styles.paging}>
             <div className="left">
               {previous && (
                 <Link to={postShowPath(previous!.frontmatter.slug, language)}>
-                  <Icon icon="back" color={colors.primaryColor} />
-                  <p>{truncate(previous!.frontmatter.title, 20)}</p>
+                  <Icon icon="back" size={24} color={colors.primaryColor} />
+                  <p>{truncate(previous!.frontmatter.title, 40)}</p>
                 </Link>
               )}
             </div>
             <div className="right">
               {next && (
                 <Link to={postShowPath(next!.frontmatter.slug, language)}>
-                  <p>{truncate(next!.frontmatter.title, 20)}</p>
-                  <Icon icon="forward" color={colors.primaryColor} />
+                  <p>{truncate(next!.frontmatter.title, 40)}</p>
+                  <Icon icon="forward" size={24} color={colors.primaryColor} />
                 </Link>
               )}
             </div>
@@ -270,6 +256,9 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
       </section>
       <BottomPostList label="labels.related-posts" posts={related} />
       <SearchCard />
+      <div css={styles.promotion}>
+        <Profile language={language} />
+      </div>
       {language === 'ja' && (
         <div css={styles.promotion}>
           <Promotion />
