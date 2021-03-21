@@ -12,6 +12,8 @@ import BottomPostList from 'components/organisms/BottomPostList'
 import { instance as i18next } from 'lib/i18next'
 import { colors } from 'constants/index'
 import ProfileSNSLinks from 'components/molecules/ProfileSNSLinks'
+import Promotion from 'components/organisms/Promotion'
+import SearchCard from 'components/organisms/SearchCard'
 
 const styles = new Styles({
   container: `
@@ -152,6 +154,10 @@ const styles = new Styles({
       align-items: center;
       justify-content: space-between;
     }
+  `,
+  promotion: `
+    width: 496px;
+    margin: auto;
   `
 }).style
 
@@ -214,56 +220,62 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
   const url = location.href
 
   return (
-    <section css={styles.container} className="section">
-      <article css={styles.content} className="post">
-        <Header post={post} />
-        <div css={styles.bar} />
-        <HTMLContent className="post-body" content={content} />
-        <div css={styles.bar} />
-        <div css={styles.postFooter} className="post-meta-footer">
-          <div css={styles.share} className="sns-share-footer">
-            <p>
-              <label css={styles.shareLabel}>{i18next.t('labels.share')}</label>
-              <SNSButtons url={url} title={title} size={24} />
-            </p>
+    <div css={styles.container}>
+      <section className="section">
+        <article css={styles.content} className="post">
+          <Header post={post} />
+          <div css={styles.bar} />
+          <HTMLContent className="post-body" content={content} />
+          <div css={styles.bar} />
+          <div css={styles.postFooter} className="post-meta-footer">
+            <div css={styles.share} className="sns-share-footer">
+              <p>
+                <label css={styles.shareLabel}>
+                  {i18next.t('labels.share')}
+                </label>
+                <SNSButtons url={url} title={title} size={24} />
+              </p>
+            </div>
+            <div css={styles.profile}>
+              <div className="left">
+                <ProfileIcon />
+              </div>
+              <div className="right">
+                <div className="header">
+                  <h4>Jiro</h4>
+                  <ProfileSNSLinks />
+                </div>
+                <div>
+                  <p>{i18next.t('profile.description')}</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div css={styles.profile}>
+          <div css={styles.bar} />
+          <div css={styles.paging}>
             <div className="left">
-              <ProfileIcon />
+              {previous && (
+                <Link to={postShowPath(previous!.frontmatter.slug, language)}>
+                  <Icon icon="back" color={colors.primaryColor} />
+                  <p>{truncate(previous!.frontmatter.title, 20)}</p>
+                </Link>
+              )}
             </div>
             <div className="right">
-              <div className="header">
-                <h4>Jiro</h4>
-                <ProfileSNSLinks />
-              </div>
-              <div>
-                <p>{i18next.t('profile.description')}</p>
-              </div>
+              {next && (
+                <Link to={postShowPath(next!.frontmatter.slug, language)}>
+                  <p>{truncate(next!.frontmatter.title, 20)}</p>
+                  <Icon icon="forward" color={colors.primaryColor} />
+                </Link>
+              )}
             </div>
           </div>
-        </div>
-        <div css={styles.bar} />
-        <div css={styles.paging}>
-          <div className="left">
-            {previous && (
-              <Link to={postShowPath(previous!.frontmatter.slug, language)}>
-                <Icon icon="back" color={colors.primaryColor} />
-                <p>{truncate(previous!.frontmatter.title, 20)}</p>
-              </Link>
-            )}
-          </div>
-          <div className="right">
-            {next && (
-              <Link to={postShowPath(next!.frontmatter.slug, language)}>
-                <p>{truncate(next!.frontmatter.title, 20)}</p>
-                <Icon icon="forward" color={colors.primaryColor}/>
-              </Link>
-            )}
-          </div>
-        </div>
-      </article>
+        </article>
+      </section>
       <BottomPostList label="labels.related-posts" posts={related} />
-    </section>
+      <SearchCard />
+      {language === 'ja' && <div css={styles.promotion}><Promotion /></div>}
+    </div>
   )
 }
 
@@ -287,7 +299,6 @@ const BlogPost = ({ location, data, pageContext, path }) => {
     () => ({ ...pageContext, sidebarDisabled: true, pickup, path }),
     [pageContext, path, pickup]
   )
-  console.log(pageContext)
 
   return (
     <Layout noconsole sidebar={<Index />} context={context}>
