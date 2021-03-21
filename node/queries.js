@@ -1,3 +1,16 @@
+const frontmatter = `frontmatter {
+            title
+            language
+            slug
+            thumbnail
+            canonical
+            templateKey
+            categories
+            tags
+            createdAt(formatString: "MMM DD, YYYY")
+            updatedAt(formatString: "MMM DD, YYYY")
+          }`
+
 const slugListQuery = `
   {
     allMarkdownRemark(
@@ -18,7 +31,7 @@ const slugListQuery = `
       }
     }
   }
-`;
+`
 
 const enIndexQuery = `
   {
@@ -31,28 +44,35 @@ const enIndexQuery = `
         }
       }
     ) {
+      edges {
+        next {
+          id
+          ${frontmatter}
+        }
+        node {
+          id
+          fields {
+            slug
+          }
+          excerpt(truncate: true, pruneLength: 300)
+          ${frontmatter}
+        }
+        previous {
+          id
+          ${frontmatter}
+        }
+      }
       nodes {
         id
         fields {
           slug
         }
         excerpt(truncate: true, pruneLength: 300)
-        frontmatter {
-          title
-          language
-          slug
-          thumbnail
-          canonical
-          templateKey
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
+        ${frontmatter}
       }
     }
   }
-`;
+`
 
 const jaIndexQuery = `
   {
@@ -65,28 +85,35 @@ const jaIndexQuery = `
         }
       }
     ) {
+      edges {
+        next {
+          id
+          ${frontmatter}
+        }
+        node {
+          id
+          fields {
+            slug
+          }
+          excerpt(truncate: true, pruneLength: 300)
+          ${frontmatter}
+        }
+        previous {
+          id
+          ${frontmatter}
+        }
+      }
       nodes {
         id
         fields {
           slug
         }
         excerpt(truncate: true, pruneLength: 300)
-        frontmatter {
-          title
-          language
-          slug
-          thumbnail
-          templateKey
-          canonical
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
+        ${frontmatter}
       }
     }
   }
-`;
+`
 
 const fetchBySlug = `query popularPostQuery($targets: [String]) {
     allMarkdownRemark(
@@ -101,21 +128,10 @@ const fetchBySlug = `query popularPostQuery($targets: [String]) {
           slug
         }
         excerpt(truncate: true, pruneLength: 300)
-        frontmatter {
-          title
-          canonical
-          language
-          slug
-          thumbnail
-          templateKey
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
+        ${frontmatter}
       }
     }
-   }`;
+   }`
 
 const staticPageQuery = `
  query StaticPageQuery($templateKey: String, $language: String) {
@@ -134,22 +150,11 @@ const staticPageQuery = `
           slug
         }
         excerpt(truncate: true, pruneLength: 300)
-        frontmatter {
-          title
-          language
-          slug
-          canonical
-          thumbnail
-          templateKey
-          categories
-          tags
-          createdAt(formatString: "MMM DD, YYYY")
-          updatedAt(formatString: "MMM DD, YYYY")
-        }
+        ${frontmatter}
       }
     }
   }
-`;
+`
 
 const categoryQuery = `
   query CategoryPage($category: String, $language: String) {
@@ -166,7 +171,7 @@ const categoryQuery = `
       }
     }
   }
-`;
+`
 
 const tagQuery = `
   query TagPage($tag: String, $language: String) {
@@ -183,8 +188,7 @@ const tagQuery = `
       }
     }
   }
-`;
-
+`
 
 module.exports = {
   slugListQuery,

@@ -5,19 +5,14 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 import { aboutPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
 import Title from 'components/molecules/Title'
-import Icon from 'components/atoms/Icon'
 import { colors } from 'constants/index'
-
-const imagePath = '../assets/images'
+import ProfileIcon from 'components/atoms/ProfileIcon'
+import ProfileSNSLinks from 'components/molecules/ProfileSNSLinks'
 
 const styles = new Styles({
   container: `
     padding-left: 32px;
     color: inherit;
-  `,
-  profileImage: `
-    border-radius: 16px;
-    color: ${colors.fontColor};
   `,
   profileTitle: `
     display: flex;
@@ -101,20 +96,6 @@ const styles = new Styles({
   `
 }).style
 
-const Profile = () => {
-  return (
-    <StaticImage
-      css={styles.profileImage}
-      src={`${imagePath}/profile.png`}
-      alt="profile"
-      width={32}
-      height={32}
-      quality={90}
-      layout="fixed"
-    />
-  )
-}
-
 interface Props {
   language: Lang
   layout: LayoutContext
@@ -138,19 +119,6 @@ const promotions = [
     description: i18next.t('labels.sidebar.promotions.egg-cutter.description'),
     thumbnail: 'eggCutter',
     link: 'https://egg-cutter.net'
-  }
-]
-
-const links = [
-  {
-    icon: 'github',
-    iconColor: '#333',
-    href: 'https://github.com/version-1'
-  },
-  {
-    icon: 'twitter',
-    iconColor: '#1DA1F2',
-    href: 'https://twitter.com/version1_2017'
   }
 ]
 
@@ -183,26 +151,16 @@ const Sidebar = ({ language }: Props) => {
           <div className="profile-image">
             <Link to={aboutPath(language)}>
               <div css={styles.profileTitle}>
-                <Profile />
+                <ProfileIcon />
                 Jiro
               </div>
             </Link>
           </div>
           <div css={styles.profileDescription} className="introduction">
-            {i18next.t('labels.sidebar.profile-description')}
+            {i18next.t('profile.description')}
           </div>
           <div css={styles.profileFooter}>
-            <ul css={styles.profileIcons}>
-              {links.map((link: any) => {
-                return (
-                  <li>
-                    <a href={link.href}>
-                      <Icon icon={link.icon} color={link.iconColor} size={24} />
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
+            <ProfileSNSLinks />
           </div>
         </div>
       </section>

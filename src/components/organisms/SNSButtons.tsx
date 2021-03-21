@@ -11,35 +11,42 @@ import {
   TwitterIcon,
   RedditIcon
 } from 'react-share'
+import Styles from 'lib/styles'
 
-const SIZE = 28
+const SIZE = 24
 
-const SnsButtons = ({ type, url, title }: any) => {
+const styles = new Styles({
+  container: `
+    display: flex;
+  `
+}).style
+
+const SnsButtons = ({ type, url, size = SIZE }: any) => {
   return (
-    <ul className={`sns-buttons ${type}`}>
+    <ul css={styles.container} >
       <li className="js-ga-click-sns-twitter">
         <TwitterShareButton url={url}>
-          <TwitterIcon size={SIZE} round />
+          <TwitterIcon size={size} round />
         </TwitterShareButton>
       </li>
       <li className="js-ga-click-sns-facebook">
         <FacebookShareButton url={url}>
-          <FacebookIcon size={SIZE} round />
+          <FacebookIcon size={size} round />
         </FacebookShareButton>
       </li>
       <li className="js-ga-click-sns-reddit">
         <RedditShareButton url={url}>
-          <RedditIcon size={SIZE} round />
+          <RedditIcon size={size} round />
         </RedditShareButton>
       </li>
       <li className="js-ga-click-sns-pocket">
         <PocketShareButton url={url}>
-          <PocketIcon size={SIZE} round />
+          <PocketIcon size={size} round />
         </PocketShareButton>
       </li>
       <li className="js-ga-click-sns-hatebu">
         <HatenaShareButton url={url}>
-          <HatenaIcon size={SIZE} round />
+          <HatenaIcon size={size} round />
         </HatenaShareButton>
       </li>
     </ul>

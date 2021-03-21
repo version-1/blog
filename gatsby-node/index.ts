@@ -113,12 +113,19 @@ const genSlugMap = (posts: any) =>
     { ja: {}, en: {} }
   )
 
+interface Edges {
+  next: any
+  node: any
+  previous: any
+}
+
 const createPostShowPage = (createPage: CreatePage) => (
   posts: any[],
+  edges: Edges[],
   pageviews: any[],
   slugMap: any[]
 ) => (context: any) => {
-  posts.forEach((edge) => {
+  edges.forEach(({ next, node: edge, previous }: Edges) => {
     const { id, excerpt } = edge
     const {
       title,
@@ -137,11 +144,13 @@ const createPostShowPage = (createPage: CreatePage) => (
     validateCategoryList(edge, categories)
     validateCategoryList(edge, tags)
     const relatedRatings = rating(posts, edge, pageviews)
+
     const _path = genShowPath(edge)
     const baseUrl = [meta.siteUrl, slug].join('')
     const url = [meta.siteUrl, _path].join('')
     const alternate = genAlternate(slugMap, context.language, slug)
     const image = [meta.images.url, thumbnail].join('')
+
     createPage({
       path: _path,
       categories,
@@ -162,6 +171,8 @@ const createPostShowPage = (createPage: CreatePage) => (
         },
         layout: {
           ...context.layout,
+          next,
+          previous,
           baseUrl,
           breadcrumbs: _breadcrumbs
         }
@@ -331,6 +342,7 @@ export const createPages = async ({ actions, graphql }: any) => {
         result.errors.forEach((e: Error) => console.error(e.toString()))
       }
       const posts = result.data.allMarkdownRemark.nodes
+      const edges = result.data.allMarkdownRemark.edges
       const categories = collectCategories(posts)
       const tags = collectTags(posts).filter((tag: any) => tag !== 'dummy')
       const archiveByMonth = posts.reduce((acc: any, item: any) => {
@@ -387,7 +399,7 @@ export const createPages = async ({ actions, graphql }: any) => {
           }
         )
       })
-      createPostShowPage(create(createPage))(posts, rows, slugMap)({
+      createPostShowPage(create(createPage))(posts, edges, rows, slugMap)({
         pickupDisabled: true,
         pickup,
         ...context
