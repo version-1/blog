@@ -12,6 +12,9 @@ exports.module = {
   about: {
     profile: 'Profile'
   },
+  messages: {
+    'search-posts': 'Are you lookging for a post? Let\'s search'
+  },
   labels: {
     articles: 'Articles',
     'related-posts': 'Related Posts',
@@ -19,6 +22,7 @@ exports.module = {
     share: 'Share :',
     'latest-posts': 'Latest Posts',
     pickup: 'Pick Up',
+    'search-posts': 'Search Posts',
     sidebar: {
       'profile-title': 'Profile',
       promotion: 'Promotion',

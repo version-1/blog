@@ -11,11 +11,16 @@ exports.module = {
     profile: 'プロフィール',
     description: ''
   },
+  messages: {
+    'search-posts': '気になるサイト内の記事を検索する'
+  },
   labels: {
     articles: '記事一覧',
     'related-posts': '関連記事',
     'pop-posts': '人気記事',
     'latest-posts': '新着記事',
+    search: '検索',
+    'search-posts': '記事検索',
     pickup: 'Pick Up',
     share: 'シェア :',
     sidebar: {
