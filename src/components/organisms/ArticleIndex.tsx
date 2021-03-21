@@ -19,21 +19,26 @@ const styles = new Styles({
     position: sticky;
     top: 0;
   `,
-  h2: `
-    font-weight: bold;
+  label: `
+    cursor: pointer;
     display: block;
     margin-bottom: 8px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  `,
+  h2: `
+    font-weight: bold;
   `,
   h3: `
     display: block;
-    margin-bottom: 8px;
     padding-left: 16px;
     font-size: 12px;
     color: #333;
   `,
   h4: `
-    display: block;
-    margin-bottom: 8px;
     padding-left: 16px;
     font-size: 12px;
     color: #666;
@@ -52,7 +57,18 @@ const ArticleIndex: React.VFC<Props> = ({ headings }) => {
           const labelStyle = styles[`h${heading.depth}` as keyof typeof styles]
           return (
             <li key={heading.value}>
-              <span css={labelStyle} onClick={() => {}}>
+              <span
+                css={[styles.label, labelStyle]}
+                onClick={() => {
+                  const target = document.getElementById(heading.value)
+                  if (!target) {
+                    return
+                  }
+                  target.scrollIntoView({
+                    behavior: 'smooth'
+                  })
+                }}
+              >
                 {heading.value}
               </span>
             </li>
