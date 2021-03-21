@@ -6,28 +6,32 @@ import { aboutPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
 import Title from 'components/molecules/Title'
 import Icon from 'components/atoms/Icon'
+import { colors } from 'constants/index'
 
 const imagePath = '../assets/images'
 
 const styles = new Styles({
   container: `
     padding-left: 32px;
+    color: inherit;
   `,
   profileImage: `
     border-radius: 16px;
+    color: ${colors.fontColor};
   `,
   profileTitle: `
     display: flex;
     align-items: center;
     margin-bottom: 8px;
     padding: 0 16px;
+    color: ${colors.fontColor};
 
     .gatsby-image-wrapper {
       margin-right: 32px;
     }
 
-    a {
-       color: inherit;
+    &:hover {
+      opacity: 0.6;
     }
   `,
   profileDescription: `

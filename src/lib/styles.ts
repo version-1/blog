@@ -14,6 +14,11 @@ export default class Style {
     return this._data
   }
 
+  get hoge () {
+    return this._data
+  }
+
+
   addStyle(key: string, cb: (styles: any) => any) {
     this._data[key] = cb(this._data)
     return this
