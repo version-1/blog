@@ -32,6 +32,12 @@ const styles = new Styles({
     p {
       padding: 8px 0;
     }
+
+    video,
+    img {
+      margin: 16px 0px;
+      max-width: 100%;
+    }
   `
 }).style
 

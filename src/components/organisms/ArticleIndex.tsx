@@ -15,6 +15,7 @@ const styles = new Styles({
     margin-left: 32px;
     border-radius: 8px;
     margin-top: 256px;
+    overflow: scroll;
     height: 100%;
     position: sticky;
     top: 0;
@@ -46,6 +47,7 @@ const styles = new Styles({
 }).style
 
 const ArticleIndex: React.VFC<Props> = ({ headings }) => {
+  const list = headings.filter((heading: Heading) => heading.depth <= 3)
   return (
     <div css={styles.container}>
       <div>
@@ -53,7 +55,7 @@ const ArticleIndex: React.VFC<Props> = ({ headings }) => {
       </div>
       <Bar />
       <ul>
-        {headings.map((heading: Heading) => {
+        {list.map((heading: Heading) => {
           const labelStyle = styles[`h${heading.depth}` as keyof typeof styles]
           return (
             <li key={heading.value}>
