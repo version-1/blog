@@ -1,9 +1,17 @@
-import { IoSearch, IoLogoGithub, IoLogoTwitter } from 'react-icons/io5'
+import {
+  IoSearch,
+  IoChevronBack,
+  IoChevronForward,
+  IoLogoGithub,
+  IoLogoTwitter
+} from 'react-icons/io5'
 
 const icons = Object.freeze({
   search: IoSearch,
   github: IoLogoGithub,
-  twitter: IoLogoTwitter
+  twitter: IoLogoTwitter,
+  forward: IoChevronForward,
+  back: IoChevronBack
 })
 
 const Icon = ({ icon, ...rest }: any) => {

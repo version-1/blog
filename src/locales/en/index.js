@@ -1,4 +1,14 @@
 exports.module = {
+  profile: {
+    sidebar: {
+      description:
+        "Hi, thank you for visiting my blog. I'm a full stack web developer. React/Ruby on Rails/Go"
+    },
+    author: {
+      description:
+        "Hi, thank you for visiting my blog. I'm a full stack web developer. React/Ruby on Rails/Go"
+    }
+  },
   about: {
     profile: 'Profile'
   },
@@ -6,7 +16,7 @@ exports.module = {
     articles: 'Articles',
     'related-posts': 'Related Posts',
     'pop-posts': 'Popular Posts',
-    share: 'Please share if this article is helpful.',
+    share: 'Share :',
     'latest-posts': 'Latest Posts',
     pickup: 'Pick Up',
     sidebar: {
@@ -54,7 +64,7 @@ exports.module = {
     docker: 'Docker',
     english: 'English',
     exposed: 'Exposed',
-    "egg-cutter": 'Egg Cutter',
+    'egg-cutter': 'Egg Cutter',
     editor: 'Editor',
     ethereum: 'Etherium',
     freelance: 'Freelance',

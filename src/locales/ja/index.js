@@ -1,6 +1,15 @@
 exports.module = {
+  profile: {
+    description:
+      'バンクーバー在住のエンジニアです。React, Ruby on Rails などでお仕事しています。',
+    author: {
+      description:
+        'バンクーバー在住のエンジニアです。React, Ruby on Rails などでお仕事しています。'
+    }
+  },
   about: {
-    profile: 'プロフィール'
+    profile: 'プロフィール',
+    description: ''
   },
   labels: {
     articles: '記事一覧',
@@ -8,7 +17,7 @@ exports.module = {
     'pop-posts': '人気記事',
     'latest-posts': '新着記事',
     pickup: 'Pick Up',
-    share: 'この記事が役に立ちましたらシェアをお願いします。',
+    share: 'シェア :',
     sidebar: {
       'profile-title': 'プロフィール',
       categories: 'カテゴリ',
@@ -20,7 +29,8 @@ exports.module = {
             'MENTAでフロントエンドエンジニアを目指す方向けのサービスを提供しています。HTML/CSS, JS, Reactを学習できるコースを用意しています。詳細はこちらのリンク先でご確認下さい'
         },
         techpit: {
-          title: 'スネークゲームを作って学ぶReact Hooks APIでの状態管理 | Techpit',
+          title:
+            'スネークゲームを作って学ぶReact Hooks APIでの状態管理 | Techpit',
           description:
             'オンラインプログラミング学習サービスTechpitさんでReact Hooks APIに関する教材を執筆・リリースさせて頂きました。スネークゲームを作りながらHooksを学べる教材になっています。'
         },

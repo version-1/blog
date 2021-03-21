@@ -80,7 +80,14 @@ const styles = new Styles({
   `
 }).style
 
-const DefaultLayout: React.FC<any> = ({ children, context }) => {
+interface Props {
+  context: PageContext
+  sidebar?: JSX.Element
+  noconsole?: boolean
+  children: JSX.Element | JSX.Element[]
+}
+
+const DefaultLayout: React.FC<Props> = ({ children, context, noconsole, sidebar }) => {
   const {
     path,
     pickup,
@@ -91,8 +98,6 @@ const DefaultLayout: React.FC<any> = ({ children, context }) => {
     layout,
     meta
   } = context
-  const { smartphone } = useDeviceType()
-  const { archiveByMonth = {}, breadcrumbs = [] } = layout
   const containerClass = sidebarDisabled
     ? 'row container container-narrow'
     : 'row container'
@@ -101,12 +106,12 @@ const DefaultLayout: React.FC<any> = ({ children, context }) => {
       <Head lang={language} baseUrl={baseUrl} meta={meta} />
       <Global styles={global} />
       <Navbar language={language} />
-      <Console context={context} path={path} />
+      {noconsole || <Console context={context} path={path} />}
       <main css={styles.content} className={containerClass}>
         <div>{children}</div>
-        <Sidebar language={language} layout={layout} />
+        { sidebar || <Sidebar language={language} layout={layout} /> }
       </main>
-      <Footer lang={language}/>
+      <Footer lang={language} />
     </>
   )
 }
