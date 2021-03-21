@@ -19,6 +19,12 @@ interface Bredcrumb {
   label: string
 }
 
+interface Heading {
+  id: null | string
+  value: string
+  depth: number
+}
+
 interface Post {
   id: string
   exerpt?: string

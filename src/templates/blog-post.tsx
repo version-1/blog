@@ -14,6 +14,8 @@ import { colors } from 'constants/index'
 import ProfileSNSLinks from 'components/molecules/ProfileSNSLinks'
 import Promotion from 'components/organisms/Promotion'
 import SearchCard from 'components/organisms/SearchCard'
+import ArticleIndex from 'components/organisms/ArticleIndex'
+import Bar from 'components/atoms/Bar'
 
 const styles = new Styles({
   container: `
@@ -62,12 +64,6 @@ const styles = new Styles({
     a {
       color: #ffffff80;
     }
-  `,
-  bar: `
-    margin-bottom: 32px;
-    height: 4px;
-    border-radius: 4px;
-    background: ${colors.primaryColor};
   `,
   postFooter: `
   `,
@@ -224,9 +220,9 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
       <section className="section">
         <article css={styles.content} className="post">
           <Header post={post} />
-          <div css={styles.bar} />
+          <Bar />
           <HTMLContent className="post-body" content={content} />
-          <div css={styles.bar} />
+          <Bar />
           <div css={styles.postFooter} className="post-meta-footer">
             <div css={styles.share} className="sns-share-footer">
               <p>
@@ -251,7 +247,7 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
               </div>
             </div>
           </div>
-          <div css={styles.bar} />
+          <Bar />
           <div css={styles.paging}>
             <div className="left">
               {previous && (
@@ -274,19 +270,11 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
       </section>
       <BottomPostList label="labels.related-posts" posts={related} />
       <SearchCard />
-      {language === 'ja' && <div css={styles.promotion}><Promotion /></div>}
-    </div>
-  )
-}
-
-const Index = () => {
-  return (
-    <div>
-      <div>
-        <h3>Index</h3>
-      </div>
-      <div></div>
-      <div></div>
+      {language === 'ja' && (
+        <div css={styles.promotion}>
+          <Promotion />
+        </div>
+      )}
     </div>
   )
 }
@@ -301,7 +289,7 @@ const BlogPost = ({ location, data, pageContext, path }) => {
   )
 
   return (
-    <Layout noconsole sidebar={<Index />} context={context}>
+    <Layout noconsole sidebar={<ArticleIndex {...post} />} context={context}>
       <BlogPostTemplate
         post={post}
         related={related}

@@ -1,6 +1,10 @@
 import { css } from '@emotion/react'
 
 export default class Style {
+  static css (cssStyle: string) {
+    return css(cssStyle)
+  }
+
   private _data: { [key: string]: any }
   constructor(props: any) {
     let obj: any = {}

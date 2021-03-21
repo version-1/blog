@@ -8,7 +8,7 @@ const styles = new Styles({
     border-radius: 36px;
     width: 100%;
     padding: 8px 16px;
-    margin: 8px;
+    margin: 0 8px;
 
     &:focus {
       outline: none;
