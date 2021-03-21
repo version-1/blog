@@ -8,6 +8,8 @@ import Breadcrumbs from 'components/molecules/Breadcrumbs'
 import { Global, css } from '@emotion/react'
 import Styles from 'lib/styles'
 import Console from 'components/organisms/Console'
+import Footer from 'components/organisms/Footer'
+import { colors } from 'constants/index'
 
 const ToggleLink: React.FC = ({ active, className, to, children }) => {
   if (active) {
@@ -31,6 +33,7 @@ const global = css`
 
   html {
     font-size: 14px;
+    color: ${colors.fontColor};
   }
 
   body {
@@ -63,6 +66,7 @@ const global = css`
   h2,
   h3,
   h4 {
+    color: ${colors.fontColor};
     margin: 0;
   }
 `
@@ -92,7 +96,6 @@ const DefaultLayout: React.FC<any> = ({ children, context }) => {
   const containerClass = sidebarDisabled
     ? 'row container container-narrow'
     : 'row container'
-
   return (
     <>
       <Head lang={language} baseUrl={baseUrl} meta={meta} />
@@ -103,11 +106,7 @@ const DefaultLayout: React.FC<any> = ({ children, context }) => {
         <div>{children}</div>
         <Sidebar language={language} layout={layout} />
       </main>
-      <div className="footer">
-        <span className="copyright">
-          Copyright © 2018 So Far , So Tech All Rights Reserved.
-        </span>
-      </div>
+      <Footer lang={language}/>
     </>
   )
 }

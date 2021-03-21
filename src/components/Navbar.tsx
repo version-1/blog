@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react'
+import React from 'react'
 import Link from 'atoms/Link'
 import { rootPath, categoryPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
