@@ -40,6 +40,11 @@ export const postField = graphql`
     id
     html
     excerpt(truncate: true, pruneLength: 300)
+    headings {
+      depth
+      id
+      value
+    }
     fields {
       slug
     }
