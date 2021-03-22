@@ -5,6 +5,7 @@ import { truncate } from 'lib/stringUtils'
 import { postShowPath, categoryPath, aboutPath, tagPath } from 'lib/routes'
 import Layout from 'components/layouts/Default'
 import Icon from 'components/atoms/Icon'
+import Bar from 'components/atoms/Bar'
 import { HTMLContent } from 'components/Content'
 import SNSButtons from 'components/organisms/SNSButtons'
 import BottomPostList from 'components/organisms/BottomPostList'
@@ -14,7 +15,8 @@ import Promotion from 'components/organisms/Promotion'
 import Profile from 'components/organisms/Profile'
 import SearchCard from 'components/organisms/SearchCard'
 import ArticleIndex from 'components/organisms/ArticleIndex'
-import Bar from 'components/atoms/Bar'
+import Breadcrumbs from 'components/molecules/Breadcrumbs'
+
 
 const styles = new Styles({
   container: `
@@ -279,6 +281,7 @@ const BlogPost = ({ location, data, pageContext, path }) => {
 
   return (
     <Layout noconsole sidebar={<ArticleIndex {...post} />} context={context}>
+      <Breadcrumbs context={pageContext.layout.breadcrumbs} />
       <BlogPostTemplate
         post={post}
         related={related}

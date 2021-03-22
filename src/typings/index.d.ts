@@ -14,7 +14,7 @@ interface Frontmatter {
   updatedAt: string
 }
 
-interface Bredcrumb {
+interface Breadcrumb {
   path: string
   label: string
 }
