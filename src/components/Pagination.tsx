@@ -58,9 +58,11 @@ const Pagination: React.VFC<Props> = ({ index, namespace, count, per }) => {
         <span>{pageCount}</span>
       </li>
       <li>
-        <Link to={link(pageIndex + 1)}>
-          <Icon icon="forwardFill" color={colors.fontColor} size={28} />
-        </Link>
+        {pageIndex !== pageCount && (
+          <Link to={link(pageIndex + 1)}>
+            <Icon icon="forwardFill" color={colors.fontColor} size={28} />
+          </Link>
+        )}
       </li>
     </ul>
   )
