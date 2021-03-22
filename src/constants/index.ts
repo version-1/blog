@@ -1,6 +1,7 @@
 export const colors = {
   fontColor: "#222",
-  primaryColor: "#362A65"
+  primaryColor: "#362A65",
+  link: '#0066C5'
 }
 
 export const imagePath = `../../assets/images`

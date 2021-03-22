@@ -59,6 +59,7 @@ const global = css`
   }
 
   a {
+    color: ${colors.link};
     text-decoration: none;
   }
 

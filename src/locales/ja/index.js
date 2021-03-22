@@ -54,14 +54,15 @@ exports.module = {
     }
   },
   categories: {
-    freelance: 'フリーランス',
-    engineering: 'プログラミング',
-    design: 'デザイン',
+    freelance: 'Freelance',
+    career: 'Career',
+    engineering: 'Engineering',
+    design: 'Design',
+    column: 'Column',
     'for-beginner': '初心者向け',
     rails: 'Ruby On Rails',
     react: 'React',
     travel: '旅行',
-    column: 'コラム',
     'cryptocurrency-blockchain': '仮想通貨・ブロックチェーン'
   },
   tags: {

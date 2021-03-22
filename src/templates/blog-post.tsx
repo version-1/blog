@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { Link, graphql } from 'gatsby'
 import Styles from 'lib/styles'
 import { truncate } from 'lib/stringUtils'
-import { postShowPath, categoryPath, aboutPath, tagPath } from 'lib/routes'
+import { postShowPath, } from 'lib/routes'
 import Layout from 'components/layouts/Default'
 import Icon from 'components/atoms/Icon'
 import Bar from 'components/atoms/Bar'
@@ -16,6 +16,7 @@ import Profile from 'components/organisms/Profile'
 import SearchCard from 'components/organisms/SearchCard'
 import ArticleIndex from 'components/organisms/ArticleIndex'
 import Breadcrumbs from 'components/molecules/Breadcrumbs'
+import Header from 'components/organisms/ArticleHeader'
 
 
 const styles = new Styles({
@@ -29,42 +30,6 @@ const styles = new Styles({
     border-radius: 8px;
     padding: 32px 32px;
     margin-bottom: 64px;
-  `,
-  header: `
-  `,
-  timestamp: `
-    font-size: 10px;
-    color: #00000050;
-  `,
-  title: `
-    font-size: 24px;
-    margin-bottom: 16px;
-  `,
-  categories: `
-    display: flex;
-    margin-bottom: 8px;
-    li {
-      display: block;
-      font-size: 10px;
-      margin-right: 8px;
-      color: 10px;
-    }
-  `,
-  tags: `
-    display: flex;
-    margin-bottom: 8px;
-
-    li {
-      display: block;
-      font-size: 10px;
-      padding: 2px 8px;
-      border-radius: 16px;
-      background: ${colors.primaryColor};
-    }
-
-    a {
-      color: #ffffff80;
-    }
   `,
   postFooter: `
     margin-bottom: 32px;
@@ -159,46 +124,6 @@ const styles = new Styles({
     margin: auto;
   `
 }).style
-
-interface HeaderProps {
-  post: any
-}
-
-const Header: React.FC<HeaderProps> = ({ post }) => {
-  const { createdAt, title, categories, language, tags } = post.frontmatter
-  return (
-    <div css={styles.header}>
-      <div css={styles.timestamp}>{createdAt}</div>
-      <h1 css={styles.title} className="post-title">
-        {title}
-      </h1>
-      <div css={styles.meta}>
-        <ul css={styles.categories}>
-          {categories.map((item: string) => {
-            return (
-              <li>
-                <Link to={categoryPath(item, language)}>
-                  {i18next.t(`categories.${item}`)}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-        <ul css={styles.tags}>
-          {tags.map((item: string) => {
-            return (
-              <li>
-                <Link to={tagPath(item, language)}>
-                  {i18next.t(`tags.${item}`)}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    </div>
-  )
-}
 
 interface TemplateProps {
   location: Location
