@@ -68,8 +68,7 @@ const styles = new Styles({
     }
 
     a:hover {
-      color: #22222290;
-      font-weight: bold;
+      color: #222222;
     }
 
     li {
