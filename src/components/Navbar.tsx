@@ -7,9 +7,6 @@ import SearchField from 'molecules/SearchField.tsx'
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
   { to: aboutPath(language), text: 'About' },
-  { to: categoryPath('engineering', language), text: 'Programming' },
-  { to: categoryPath('freelance', language), text: 'Career' },
-  { to: categoryPath('column', language), text: 'Column' },
   { to: '', text: 'Contact' }
 ]
 
@@ -37,9 +34,10 @@ const styles = new Styles({
   navigation: `
     width: 100%;
     display: flex;
+    padding-left: 32px;
     justify-content: space-between;
     align-items: center;
-  `,
+  `
 }).style
 
 const MenuList = ({ list }) => {
