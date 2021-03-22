@@ -5,7 +5,7 @@ import PostList from 'components/organisms/PostList'
 
 const styles = new Styles({
   container: `
-    h2 {
+    h3 {
       text-align: center;
       margin-bottom: 32px;
     }
@@ -27,7 +27,7 @@ const BottomPostList = (props: any) => {
   const _title = title || i18next.t(label)
   return (
     <div css={styles.container} className="bottom-posts">
-      <h2 className="bottom-post-title">{_title}</h2>
+      <h3 className="bottom-post-title">{_title}</h3>
       <PostList posts={posts} />
     </div>
   )
