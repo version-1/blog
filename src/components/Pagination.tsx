@@ -35,7 +35,6 @@ interface Props {
 
 const Pagination: React.VFC<Props> = ({ index, namespace, count, per }) => {
   const perPage = per || PER_PAGE
-  console.log(count, perPage)
   const pageCount = Math.ceil(count / perPage)
   const pageIndex = index || 1
 
