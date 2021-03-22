@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Styles from 'lib/styles'
-import { categoryPath } from 'lib/routes'
+import { categoryPath, tagPath } from 'lib/routes'
 import SearchField from 'components/molecules/SearchField'
 
 const styles = new Styles({
@@ -70,10 +70,17 @@ const styles = new Styles({
   category: `
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 8px;
+
     li {
       padding-bottom: 2px;
       margin-right: 4px;
       border-bottom: 1px solid #BCFF9C;
+    }
+
+    li.active {
+      font-weight: bold;
+      border-bottom: 2px solid #BCFF9C;
     }
 
     li > a {
@@ -87,6 +94,11 @@ const styles = new Styles({
       margin-right: 4px;
       padding-bottom: 2px;
       border-bottom: 1px solid #B2FFFA;
+    }
+
+    li.active {
+      font-weight: bold;
+      border-bottom: 2px solid #B2FFFA;
     }
 
     li > a {
@@ -103,7 +115,7 @@ const menu = (language: Lang) => [
   { to: '/', label: 'New' },
   { to: '/popular', label: 'Popular' },
   { to: '/pickup', label: 'Pickup' },
-  { to: categoryPath('/categories/pickup', language), label: 'Programming' }
+  { to: categoryPath('engineering', language), label: 'Programming' }
 ]
 
 interface Props {
@@ -115,6 +127,8 @@ const Console: React.FC<Props> = ({ path, context }) => {
   const { language } = context
   const { categories, tags } = context.layout
   const _menu = menu(language)
+
+  console.log(path)
 
   return (
     <div css={styles.container}>
@@ -141,9 +155,11 @@ const Console: React.FC<Props> = ({ path, context }) => {
             <p>$ category</p>
             <ul css={styles.category}>
               {categories.map((category: string) => {
+                const to = categoryPath(category, language)
+                const active = to === path
                 return (
-                  <li key={category}>
-                    <Link to={category}>/{category}</Link>
+                  <li key={category} className={`${active && `active`}`}>
+                    <Link to={to}>/{category}</Link>
                   </li>
                 )
               })}
@@ -151,9 +167,11 @@ const Console: React.FC<Props> = ({ path, context }) => {
             <p>$ tag</p>
             <ul css={styles.tag}>
               {tags.slice(0, 20).map((tag: string) => {
+                const to = tagPath(tag, language)
+                const active = to === path
                 return (
-                  <li key={tag}>
-                    <Link to={tag}>#{tag}</Link>
+                  <li key={tag} className={`${active && `active`}`}>
+                    <Link to={to}>#{tag}</Link>
                   </li>
                 )
               })}
