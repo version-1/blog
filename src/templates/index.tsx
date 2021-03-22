@@ -29,7 +29,6 @@ const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
   ])
   const { limit } = pageContext
   const namespace = postPath(context.language)
-  debugger
 
   return (
     <Layout context={context}>

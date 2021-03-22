@@ -10,7 +10,6 @@ const styles = new Styles({
 }).style
 
 const ProfileIcon = (props: any) => {
-  console.log(imagePath)
   return (
     <StaticImage
       css={styles.container}
