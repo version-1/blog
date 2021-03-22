@@ -14,7 +14,7 @@ const styles = new Styles({
     border: 1px solid #00004020;
 
     input {
-      margin-left; 16px;
+      margin-left: 8px;
       border: 0;
     }
 

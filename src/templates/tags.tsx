@@ -1,14 +1,28 @@
 import React, { useMemo } from 'react'
+import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 import { tagPath } from 'lib/routes'
 
-const TagTemplate = ({ data, path, pageContext }) => {
+const styles = new Styles({
+  postList: `
+    margin-top: -128px;
+    margin-left: 16px;
+  `
+}).style
+
+interface Props {
+  data: any
+  path: string
+  pageContext: PageContext
+}
+
+const TagTemplate: React.VFC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
-  const { pagenationNamespace } = tagPath(pageContext.tag)
+  const namespace = tagPath(pageContext.tag!, pageContext.language)
   const { nodes: pickup } = data.pickup
-  const { index, heading } = pageContext
+  const { index, limit } = pageContext
   const context = useMemo(() => ({ ...pageContext, pickup, path }), [
     pageContext,
     path,
@@ -16,13 +30,17 @@ const TagTemplate = ({ data, path, pageContext }) => {
   ])
   return (
     <Layout context={context}>
-      <PostList
-        pageIndex={index}
-        titleLabel={heading}
-        posts={posts}
-        pagenationNamespace={pagenationNamespace}
-        pagenationTotalCount={totalCount}
-      />
+      <div css={styles.postList}>
+        <PostList
+          posts={posts}
+          pagination={{
+            index: Number(index),
+            namespace,
+            totalCount,
+            per: limit!
+          }}
+        />
+      </div>
     </Layout>
   )
 }

@@ -1,76 +1,70 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
-import compact from 'lodash/compact'
+import Styles from 'lib/styles'
+import Icon from 'components/atoms/Icon'
+import { colors } from 'constants/index'
 
-const PER_PAGE = 18
+const PER_PAGE = 6
 
-const className = classes => {
-  return compact(
-    Object.keys(classes).map(key => {
-      return classes[key] ? key : null
-    })
-  ).join(' ')
+const styles = new Styles({
+  container: `
+    display: flex;
+    margin: 32px auto;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+  `,
+  pageIndex: `
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+
+    span {
+      display: block
+      flex: 1;
+    }
+  `
+}).style
+
+interface Props {
+  index: number
+  namespace: string
+  count: number
+  per?: number
 }
 
-const PageLink = ({ content, link, isDisabled, isActive }) => (
-  <li
-    className={className({
-      'pagination-page-link': true,
-      disabled: isDisabled,
-      active: isActive,
-    })}
-  >
-    <Link className="pagination-page-link-anker" to={link}>
-      {content}
-    </Link>
-  </li>
-)
+const Pagination: React.VFC<Props> = ({ index, namespace, count, per }) => {
+  const perPage = per || PER_PAGE
+  console.log(count, perPage)
+  const pageCount = Math.ceil(count / perPage)
+  const pageIndex = index || 1
 
-export default class Pagination extends PureComponent {
-  get perPage() {
-    return this.props.per || PER_PAGE
-  }
-
-  get pageCount() {
-    const { count } = this.props
-    return Math.ceil(count / this.perPage)
-  }
-
-  get pageIndex() {
-    return this.props.index || 1
-  }
-
-  isActive(page) {
-    return page === this.pageIndex
-  }
-
-  link(page) {
-    const { namespace } = this.props
-    if (!page || page === 0) return namespace + '/'
+  const link = (page: number) => {
+    if (!page || page <= 0) return namespace + '/'
     if (page === 1) return namespace
     return `${namespace}/${page}`
   }
-
-  render() {
-    return (
-      <ul className="pagination">
-        <PageLink
-          link={this.link()}
-          content={<i className="material-icons">chevron_left</i>}
-        />
-        {Array.from({ length: this.pageCount }).map((dummy, index) => (
-          <PageLink
-            key={index}
-            link={this.link(index + 1)}
-            content={index + 1}
-            isActive={this.isActive(index + 1)}
-          />
-        ))}
-        <PageLink
-          link={this.link(this.pageCount)}
-          content={<i className="material-icons">chevron_right</i>}
-        />
-      </ul>
-    )
-  }
+  return (
+    <ul css={styles.container} className="pagination">
+      <li>
+        {index > 1 && (
+          <Link to={link(pageIndex - 1)}>
+            <Icon icon="backFill" color={colors.fontColor} size={28} />
+          </Link>
+        )}
+      </li>
+      <li css={styles.pageIndex}>
+        <span>{pageIndex}</span>
+        <span>/</span>
+        <span>{pageCount}</span>
+      </li>
+      <li>
+        <Link to={link(pageIndex + 1)}>
+          <Icon icon="forwardFill" color={colors.fontColor} size={28} />
+        </Link>
+      </li>
+    </ul>
+  )
 }
+
+export default Pagination

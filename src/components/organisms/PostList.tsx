@@ -1,13 +1,18 @@
 import React from 'react'
-import Title from 'components/molecules/Title'
 import Post from 'components/organisms/posts/Default'
 import Pagination from 'components/Pagination'
 
-const PostList = ({ posts, pagination = {} }: any) => {
+interface Props {
+  posts: Post[]
+  pagination?: IPagination
+}
+
+const PostList: React.VFC<Props> = ({ posts, pagination = {} }: any) => {
   const {
     index,
     totalCount,
-    namespace
+    namespace,
+    per
   } = pagination
   return (
     <div className="post-list-container">
@@ -25,6 +30,7 @@ const PostList = ({ posts, pagination = {} }: any) => {
               index={index}
               namespace={namespace}
               count={totalCount}
+              per={per}
             />
           ) : (
             <></>

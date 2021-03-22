@@ -1,27 +1,45 @@
 import React, { useMemo } from 'react'
+import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import { postPath } from 'lib/routes'
 import PostList from 'components/organisms/PostList'
 
-const pagenationNamespace = postPath()
+const styles = new Styles({
+  postList: `
+    margin-top: -128px;
+    margin-left: 16px;
+  `
+}).style
 
-const PostsIndex = ({ data, path, pageContext }) => {
-  const { index } = pageContext
+interface Props {
+  data: any
+  path: string
+  pageContext: PageContext
+}
+
+const PostsIndex: React.VFC<Props> = ({ data, path, pageContext }) => {
+  const { index, limit } = pageContext
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   const context = useMemo(() => ({ ...pageContext, pickup: [], path }), [
     pageContext,
-    path,
+    path
   ])
+
+  const namespace = postPath(context.language)
   return (
     <Layout context={context}>
-      <PostList
-        pageIndex={index}
-        titleLabel="labels.articles"
-        posts={posts}
-        pagenationNamespace={pagenationNamespace}
-        pagenationTotalCount={totalCount}
-      />
+      <div css={styles.postList}>
+        <PostList
+          posts={posts}
+          pagination={{
+            index: Number(index),
+            namespace,
+            totalCount,
+            per: limit!
+          }}
+        />
+      </div>
     </Layout>
   )
 }

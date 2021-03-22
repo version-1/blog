@@ -3,6 +3,7 @@ import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
+import { postPath } from 'lib/routes'
 
 interface Props {
   data: any
@@ -18,7 +19,7 @@ const styles = new Styles({
 }).style
 
 const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
-  const { nodes: posts } = data.allMarkdownRemark
+  const { nodes: posts, totalCount } = data.allMarkdownRemark
   // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
   const pickup = pageContext.pickup ? data.pickup.nodes : []
   const context = useMemo(() => ({ ...pageContext, pickup, path }), [
@@ -26,11 +27,22 @@ const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
     path,
     pickup
   ])
+  const { limit } = pageContext
+  const namespace = postPath(context.language)
+  debugger
 
   return (
     <Layout context={context}>
       <div css={styles.postList}>
-        <PostList posts={posts} />
+        <PostList
+          posts={posts}
+          pagination={{
+            index: 1,
+            namespace,
+            totalCount,
+            per: limit!
+          }}
+        />
       </div>
     </Layout>
   )

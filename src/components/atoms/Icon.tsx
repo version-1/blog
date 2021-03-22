@@ -3,7 +3,9 @@ import {
   IoChevronBack,
   IoChevronForward,
   IoLogoGithub,
-  IoLogoTwitter
+  IoLogoTwitter,
+  IoCaretBackCircle,
+  IoCaretForwardCircle
 } from 'react-icons/io5'
 
 const icons = Object.freeze({
@@ -11,7 +13,9 @@ const icons = Object.freeze({
   github: IoLogoGithub,
   twitter: IoLogoTwitter,
   forward: IoChevronForward,
-  back: IoChevronBack
+  back: IoChevronBack,
+  forwardFill: IoCaretForwardCircle,
+  backFill: IoCaretBackCircle,
 })
 
 interface Props {
