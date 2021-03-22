@@ -69,32 +69,36 @@ const styles = new Styles({
 
 interface HeaderProps {
   post: Post
+  meta: any
 }
 
 const langs = ['JA', 'EN']
 
-const Header: React.FC<HeaderProps> = ({ post }) => {
+const Header: React.FC<HeaderProps> = ({ post, meta }) => {
   const { createdAt, title, categories, language, tags } = post.frontmatter
+  const hasAlternate = meta.alternate && Object.keys(meta.alternate).length > 0
 
   return (
     <div css={styles.header}>
       <div css={styles.nav}>
-        <ul css={styles.languages}>
-          {langs.map((item: string, index: number) => {
-            return (
-              <React.Fragment key={index}>
-                <li>
-                  {item.toLowerCase() === language ? (
-                    item
-                  ) : (
-                    <Link to="">{item}</Link>
-                  )}
-                </li>
-                {langs.length !== index + 1 && <li>|</li>}
-              </React.Fragment>
-            )
-          })}
-        </ul>
+        {hasAlternate && (
+          <ul css={styles.languages}>
+            {langs.map((item: string, index: number) => {
+              return (
+                <React.Fragment key={index}>
+                  <li>
+                    {item.toLowerCase() === language ? (
+                      item
+                    ) : (
+                      <Link to={meta.alternate[item.toLowerCase()]}>{item}</Link>
+                    )}
+                  </li>
+                  {langs.length !== index + 1 && <li>|</li>}
+                </React.Fragment>
+              )
+            })}
+          </ul>
+        )}
       </div>
       <div css={styles.aside}>
         <Category category={categories[0]} language={language} />

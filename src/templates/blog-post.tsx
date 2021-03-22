@@ -130,13 +130,15 @@ interface TemplateProps {
   post: any
   related: any
   layout: LayoutContext
+  meta: any
 }
 
 const BlogPostTemplate: React.VFC<TemplateProps> = ({
   location,
   post,
   related,
-  layout
+  layout,
+  meta
 }) => {
   const content = post.html
   const { title, language } = post.frontmatter
@@ -147,7 +149,7 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
     <div css={styles.container}>
       <section className="section">
         <article css={styles.content} className="post">
-          <Header post={post} />
+          <Header meta={meta} post={post} />
           <Bar />
           <HTMLContent className="post-body" content={content} />
           <Bar />
@@ -208,9 +210,9 @@ const BlogPost = ({ location, data, pageContext, path }) => {
     <Layout noconsole sidebar={<ArticleIndex {...post} />} context={context}>
       <Breadcrumbs context={pageContext.layout.breadcrumbs} />
       <BlogPostTemplate
+        {...context}
         post={post}
         related={related}
-        layout={context.layout}
         pickup={pickup}
         location={location}
       />
