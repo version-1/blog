@@ -14,7 +14,13 @@ const icons = Object.freeze({
   back: IoChevronBack
 })
 
-const Icon = ({ icon, ...rest }: any) => {
+interface Props {
+  icon: keyof typeof icons
+  color?: string
+  size?: string | number
+}
+
+const Icon = ({ icon, ...rest }: Props) => {
   const Component = icons[icon as keyof typeof icons]
 
   return <Component {...rest} />
