@@ -1,27 +1,43 @@
 import React, { useMemo } from 'react'
+import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 
-const MonthsIndex = ({ path, data, pageContext }) => {
-  const { index, month, totalPages } = pageContext
+const styles = new Styles({
+  postList: `
+    margin-top: -128px;
+    margin-left: 16px;
+  `
+}).style
+
+interface Props {
+  data: any
+  path: string
+  pageContext: PageContext
+}
+
+const MonthsIndex: React.VFC<Props> = ({ path, data, pageContext }) => {
+  const { index, month, limit } = pageContext
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   const { nodes: pickup } = data.pickup
   const context = useMemo(
     () => ({ ...pageContext, sidebarDisabled: false, pickup, path }),
     [pageContext, path, pickup]
   )
-  const title = `記事一覧 ${index} / ${totalPages}`
-
   return (
     <Layout context={context}>
-      <PostList
-        title={title}
-        pageIndex={index}
-        posts={posts}
-        pagenationNamespace={month}
-        pagenationTotalCount={totalCount}
-      />
+      <div css={styles.postList}>
+        <PostList
+          posts={posts}
+          pagination={{
+            index: Number(index),
+            namespace: month!,
+            totalCount,
+            per: limit!
+          }}
+        />
+      </div>
     </Layout>
   )
 }

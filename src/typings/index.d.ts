@@ -46,6 +46,13 @@ interface LayoutContext {
 }
 
 interface PageContext {
+  index?: string
+  limit?: number
+  heading?: string
+  category?: string
+  tag?: string
+  month?: string
+  totalPages?: number
   language: Lang
   pickup: any[]
   pickupDisabled: boolean
@@ -57,3 +64,11 @@ interface PageContext {
   next?: any
   previous?: any
 }
+
+interface IPagination {
+  index: number
+  totalCount: number
+  namespace: string
+  per: number
+}
+

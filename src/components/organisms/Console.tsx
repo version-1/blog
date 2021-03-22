@@ -122,7 +122,7 @@ const Console: React.FC<Props> = ({ path, context }) => {
         <div css={styles.header}>
           <ul>
             {_menu.map((item: any) => (
-              <li css={styles.menuItem}>
+              <li key={item.to} css={styles.menuItem}>
                 <Link to={item.to}>{item.label}</Link>
                 <div
                   className={
