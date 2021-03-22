@@ -90,7 +90,9 @@ const Header: React.FC<HeaderProps> = ({ post, meta }) => {
                     {item.toLowerCase() === language ? (
                       item
                     ) : (
-                      <Link to={meta.alternate[item.toLowerCase()]}>{item}</Link>
+                      <Link to={meta.alternate[item.toLowerCase()]}>
+                        {item}
+                      </Link>
                     )}
                   </li>
                   {langs.length !== index + 1 && <li>|</li>}
@@ -101,7 +103,9 @@ const Header: React.FC<HeaderProps> = ({ post, meta }) => {
         )}
       </div>
       <div css={styles.aside}>
-        <Category category={categories[0]} language={language} />
+        {categories && (
+          <Category category={categories[0]} language={language} />
+        )}
         <div css={styles.timestamp}>{createdAt}</div>
       </div>
       <h1 css={styles.title} className="post-title">

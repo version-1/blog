@@ -220,7 +220,7 @@ const Console: React.FC<Props> = ({ path, context }) => {
           <div css={styles.links}>
             <p>
               $ Hi there, thank you for visiting my blog. 👍 <br />
-              Select collections following links!!
+              Select collections following links🍻!!
             </p>
             <p>$ pages</p>
             <ul css={styles.pages}>
