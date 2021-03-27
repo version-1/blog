@@ -20,6 +20,8 @@ export const rootPath = (language: Lang) =>
   language === 'ja' ? routes.index : joinLangRoot(language, '')
 export const aboutPath = (language: Lang) => buildPath(['about'], language)
 export const postPath = (language: Lang) => buildPath([routes.post], language)
+export const popularsPath = (language: Lang) => buildPath([routes.populars], language)
+export const pickupsPath = (language: Lang) => buildPath([routes.pickups], language)
 export const postShowPath = (slug: string, language: Lang) => buildPath([slug], language)
 export const categoryPath = (category: string, language: Lang) => {
   if (!category) return buildPath([routes.category], language)

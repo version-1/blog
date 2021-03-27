@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Styles from 'lib/styles'
-import { categoryPath, tagPath } from 'lib/routes'
-import SearchField from 'components/molecules/SearchField'
+import { rootPath, categoryPath, tagPath, pickupsPath, popularsPath } from 'lib/routes'
 
 const styles = new Styles({
   container: `
@@ -184,9 +183,9 @@ const styles = new Styles({
 }).style
 
 const menu = (language: Lang) => [
-  { to: '/', label: 'New' },
-  { to: '/popular', label: 'Popular' },
-  { to: '/pickup', label: 'Pickup' },
+  { to: rootPath(language), label: 'New' },
+  { to: popularsPath(language), label: 'Popular' },
+  { to: pickupsPath(language), label: 'Pickup' },
   { to: categoryPath('engineering', language), label: 'Programming' }
 ]
 
