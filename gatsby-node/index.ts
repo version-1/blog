@@ -21,8 +21,9 @@ import { createPostsIndexPage } from '../gatsby-node/posts'
 import { createCategoryShowPage } from '../gatsby-node/categories/show'
 import { createTagShowPage } from '../gatsby-node/tags'
 import { createMonthArchivePage } from '../gatsby-node/months'
+import { createPickupIndexPage } from '../gatsby-node/pickups/index'
 
-const { meta, constants } = config
+const { routes, meta, constants } = config
 
 const isProduction = process.env.NODE_ENV === 'production'
 const dummyThumbnail = meta.images.url + '/others/dummy/thumbnail.png'
@@ -110,11 +111,11 @@ export const createPages = async ({ actions, graphql }: any) => {
 
       let rows = []
       let pickup = []
+      const pv = await fetchPv()
+      rows = pv.reports[0].data.rows
+      const populars = rows.slice(0, 30).map((row: any) => row.dimensions[0])
       if (language === 'ja') {
-        const pv = await fetchPv()
-        rows = pv.reports[0].data.rows
-        const populars = rows.slice(0, 6).map((row: any) => row.dimensions[0])
-        pickup = [...new Set([...constants.pickup, ...populars])].slice(0, 7)
+        pickup = [...new Set([...constants.pickup, ...populars])].slice(0, 10)
         const _context = {
           pickup,
           ...context
@@ -152,27 +153,24 @@ export const createPages = async ({ actions, graphql }: any) => {
         ...context
       })
 
+      createPickupIndexPage(createPage)('/' + routes.pickups, pickup)(context)
+      createPickupIndexPage(createPage)('/' + routes.populars, populars)(context)
+
       // Index Pages
-      const _context = {
-        pickup,
-        ...context
-      }
-      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(
-        _context
-      )
-      createPostsIndexPage(createPage)(posts.length)(_context)
+      createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context)
+      createPostsIndexPage(createPage)(posts.length)(context)
       categories.map((category: any) => {
         graphql(queries.categoryQuery, { category, language }).then(
           (result: any) => {
             const posts = result.data.allMarkdownRemark.nodes
-            createCategoryShowPage(createPage)(category)(posts.length)(_context)
+            createCategoryShowPage(createPage)(category)(posts.length)(context)
           }
         )
       })
       tags.map((tag: any) => {
         graphql(queries.tagQuery, { tag, language }).then((result: any) => {
           const posts = result.data.allMarkdownRemark.nodes
-          createTagShowPage(createPage)(tag)(posts.length)(_context)
+          createTagShowPage(createPage)(tag)(posts.length)(context)
         })
       })
       return

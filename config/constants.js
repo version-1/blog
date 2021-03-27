@@ -5,7 +5,9 @@ module.exports = {
     about: 'about',
     post: 'posts',
     category: 'categories',
-    tag: 'tags'
+    tag: 'tags',
+    populars: 'populars',
+    pickups: 'pickups'
   },
   meta: {
     author: 'version1',

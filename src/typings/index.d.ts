@@ -58,7 +58,7 @@ interface PageContext {
   pickupDisabled: boolean
   sidebarDisabled: boolean
   baseUrl: string
-  path: string
+  basePath: string
   layout: LayoutContext
   meta: any
   next?: any
