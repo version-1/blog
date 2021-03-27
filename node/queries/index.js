@@ -191,6 +191,9 @@ const tagQuery = `
 `
 
 module.exports = {
+  fragments: {
+    frontmatter
+  },
   slugListQuery,
   jaIndexQuery,
   enIndexQuery,
