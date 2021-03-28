@@ -9,6 +9,9 @@ module.exports = {
     populars: 'populars',
     pickups: 'pickups'
   },
+  search: {
+    index: 'my-blog-posts',
+  },
   meta: {
     author: 'version1',
     siteUrl: 'https://ver-1-0.net',

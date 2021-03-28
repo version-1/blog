@@ -37,6 +37,7 @@ exports.onCreateWebpackConfig = ({
         lib: path.resolve(__dirname, 'src/lib'),
         pages: path.resolve(__dirname, 'src/pages'),
         templates: path.resolve(__dirname, 'src/templates'),
+        services: path.resolve(__dirname, 'src/services'),
         locales: path.resolve(__dirname, 'src/locales')
       }
     }

@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'atoms/Link'
-import { rootPath, categoryPath, aboutPath } from 'lib/routes'
+import { rootPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
-import SearchField from 'molecules/SearchField.tsx'
+import SearchForm from 'organisms/SearchForm'
+import SearchField from 'molecules/SearchField'
+import Modal from 'components/organisms/Modal'
 
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
@@ -40,10 +42,10 @@ const styles = new Styles({
   `
 }).style
 
-const MenuList = ({ list }) => {
+const MenuList = ({ list }: any) => {
   return (
     <ul css={styles.menu} className="nav-link-list">
-      {list.map((menu, idx) => (
+      {list.map((menu: { text: string; to: string }, idx: number) => (
         <li className="nav-link-item" key={idx}>
           <Link to={menu.to}>{menu.text}</Link>
         </li>
@@ -58,6 +60,12 @@ interface Props {
 
 const Navbar: React.VFC<Props> = ({ language }) => {
   const list = menus(language)
+  const onShow = () => {
+    Modal.show({
+      header: <></>,
+      content: <SearchForm />
+    })
+  }
 
   return (
     <header css={styles.container}>
@@ -69,7 +77,7 @@ const Navbar: React.VFC<Props> = ({ language }) => {
           <div className="nav-links hide-on-med-and-down">
             <MenuList list={list} />
           </div>
-          <SearchField />
+          <SearchField onFocus={onShow} />
         </nav>
       </div>
     </header>
