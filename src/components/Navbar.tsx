@@ -1,14 +1,15 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import Link from 'atoms/Link'
 import { rootPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
 import { showForm } from 'organisms/SearchForm'
 import Icon from 'atoms/Icon'
+import { colors } from 'constants/index'
 
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
-  { to: aboutPath(language), text: 'About' },
-  { to: '', text: 'Contact' }
+  { to: aboutPath(language), text: 'About' }
 ]
 
 const styles = new Styles({
@@ -31,6 +32,7 @@ const styles = new Styles({
 
     a {
       color: #48434F;
+      font-size: 14px;
     }
   `,
   navigation: `
@@ -45,6 +47,25 @@ const styles = new Styles({
   `,
   icon: `
     cursor: pointer;
+    position: relative;
+    top: 2px;
+  `,
+  select: `
+    background: transparent;
+    border: 0;
+    color: ${colors.fontColor};
+
+    &:focus {
+      outline: none;
+    }
+  `,
+  right: `
+    display: flex;
+    align-items: center;
+
+    li {
+      margin-right: 16px;
+    }
   `
 }).style
 
@@ -67,6 +88,14 @@ interface Props {
 const Navbar: React.VFC<Props> = ({ language }) => {
   const list = menus(language)
 
+  const onChangeLanguage = (e: any) => {
+    const lan = e.target.value
+    if (lan === language) {
+      return
+    }
+    navigate(rootPath(lan))
+  }
+
   return (
     <header css={styles.container}>
       <div css={styles.content}>
@@ -77,12 +106,31 @@ const Navbar: React.VFC<Props> = ({ language }) => {
           <div className="nav-links hide-on-med-and-down">
             <MenuList list={list} />
           </div>
-          <Icon
-            css={styles.icon}
-            color="#00004050"
-            icon="search"
-            onClick={showForm}
-          />
+          <ul css={styles.right}>
+            <li>
+              <Icon
+                css={styles.icon}
+                color="#00004050"
+                icon="search"
+                onClick={showForm}
+              />
+            </li>
+            <li>
+              <a href="">
+                <Icon css={styles.icon} color="#00004050" icon="mail" />
+              </a>
+            </li>
+            <li>
+              <select css={styles.select} onChange={onChangeLanguage}>
+                <option value="en" selected={language === 'en'}>
+                  English
+                </option>
+                <option value="ja" selected={language === 'ja'}>
+                  日本語
+                </option>
+              </select>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
