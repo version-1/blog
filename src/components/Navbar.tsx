@@ -2,9 +2,8 @@ import React from 'react'
 import Link from 'atoms/Link'
 import { rootPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
-import SearchForm from 'organisms/SearchForm'
+import { showForm } from 'organisms/SearchForm'
 import SearchField from 'molecules/SearchField'
-import Modal from 'components/organisms/Modal'
 
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
@@ -39,6 +38,9 @@ const styles = new Styles({
     padding-left: 32px;
     justify-content: space-between;
     align-items: center;
+  `,
+  modalTitle:`
+    padding: 32px;
   `
 }).style
 
@@ -61,10 +63,7 @@ interface Props {
 const Navbar: React.VFC<Props> = ({ language }) => {
   const list = menus(language)
   const onShow = () => {
-    Modal.show({
-      header: <></>,
-      content: <SearchForm />
-    })
+    showForm()
   }
 
   return (
