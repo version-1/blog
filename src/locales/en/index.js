@@ -1,9 +1,7 @@
 exports.module = {
   profile: {
-    sidebar: {
-      description:
-        "Hi, thank you for visiting my blog. I'm a full stack web developer. React/Ruby on Rails/Go"
-    },
+    description:
+      "Hi, thank you for visiting my blog. I'm a full stack web developer. React/Ruby on Rails/Go",
     author: {
       description:
         "Hi, thank you for visiting my blog. I'm a full stack web developer. React/Ruby on Rails/Go"
@@ -13,7 +11,7 @@ exports.module = {
     profile: 'Profile'
   },
   messages: {
-    'search-posts': 'Are you lookging for a post? Let\'s search'
+    'search-posts': "Are you lookging for a post? Let's search"
   },
   labels: {
     articles: 'Articles',

@@ -19,6 +19,7 @@ const global = css`
   }
 
   html {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Arial, "メイリオ", Meiryo, sans-serif;
     font-size: 14px;
     color: ${colors.fontColor};
   }
@@ -36,8 +37,7 @@ const global = css`
     margin: 0;
   }
 
-  ul {
-    padding: 0;
+  ul { padding: 0;
     margin: 0;
   }
 
