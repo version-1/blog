@@ -62,7 +62,9 @@ const ArticleIndex: React.VFC<Props> = ({ headings }) => {
               <span
                 css={[styles.label, labelStyle]}
                 onClick={() => {
-                  const target = document.getElementById(heading.value)
+                  const selector = heading.value.replace(/[\.\(\)\?':@]/g, '').replace(/ /g, '-')
+                  console.log(selector)
+                  const target = document.getElementById(selector)
                   if (!target) {
                     return
                   }
