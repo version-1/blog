@@ -15,6 +15,7 @@ exports.module = {
     'search-posts': '気になるサイト内の記事を検索する'
   },
   labels: {
+    404: 'お探しのページが見つかりません。',
     articles: '記事一覧',
     'related-posts': '関連記事',
     'pop-posts': '人気記事',

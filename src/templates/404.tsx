@@ -2,6 +2,18 @@ import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
+import Styles from 'lib/styles'
+import { instance as i18next } from 'lib/i18next'
+
+const styles = new Styles({
+  container: `
+    padding: 32px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    margin-top: -128px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+  `
+}).style
 
 const NotFoundPage = ({ data, path, pageContext }) => {
   const pickup = pageContext.pickup ? data.pickup.nodes : []
@@ -17,9 +29,9 @@ const NotFoundPage = ({ data, path, pageContext }) => {
   )
   return (
     <Layout context={context}>
-      <div className="not-found">
+      <div css={styles.container} className="not-found">
         <h1>404 NOT FOUND</h1>
-        <p>お探しのページが見つかりません。</p>
+        <p>{i18next.t('labels.404')}</p>
       </div>
       <PostList titleLabel="labels.pickup" posts={pickup} />
     </Layout>
