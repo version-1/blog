@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Styles from 'lib/styles'
-import { rootPath, categoryPath, tagPath, pickupsPath, popularsPath } from 'lib/routes'
+import {
+  rootPath,
+  categoryPath,
+  tagPath,
+  pickupsPath,
+  popularsPath
+} from 'lib/routes'
 
 const styles = new Styles({
   container: `
@@ -183,10 +189,14 @@ const styles = new Styles({
 }).style
 
 const menu = (language: Lang) => [
-  { to: rootPath(language), label: 'New' },
-  { to: popularsPath(language), label: 'Popular' },
-  { to: pickupsPath(language), label: 'Pickup' },
-  { to: categoryPath('engineering', language), label: 'Programming' }
+  { to: rootPath(language), label: 'New', disabled: false },
+  { to: popularsPath(language), label: 'Popular', disabled: false },
+  { to: pickupsPath(language), label: 'Pickup', disabled: language === 'en' },
+  {
+    to: categoryPath('engineering', language),
+    label: 'Programming',
+    disabled: false
+  }
 ]
 
 interface Props {
@@ -223,15 +233,20 @@ const Console: React.FC<Props> = ({ path, context }) => {
             </p>
             <p>$ pages</p>
             <ul css={styles.pages}>
-              {_menu.map((item: any) => (
-                <li
-                  key={item.to}
-                  css={styles.menuItem}
-                  className={`${path === item.to && 'active'}`}
-                >
-                  <Link to={item.to}>{item.label}</Link>
-                </li>
-              ))}
+              {_menu.map((item: any) => {
+                if (item.disabled) {
+                  return null
+                }
+                return (
+                  <li
+                    key={item.to}
+                    css={styles.menuItem}
+                    className={`${path === item.to && 'active'}`}
+                  >
+                    <Link to={item.to}>{item.label}</Link>
+                  </li>
+                )
+              })}
             </ul>
             <p>$ category</p>
             <ul css={styles.category}>
