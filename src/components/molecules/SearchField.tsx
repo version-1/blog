@@ -29,8 +29,9 @@ const styles = new Styles({
 }).style
 
 interface Props {
-  onChange?: (text: value) => void
-  onSearch?: (text: value) => void
+  onChange?: (text: string) => void
+  onSearch?: (text: string) => void
+  [key: string]: any
 }
 
 const SearchField: React.VFC<Props> = ({ onChange, onSearch, ...rest }) => {

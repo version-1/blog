@@ -1,25 +1,62 @@
-const { fragments } = require('./index')
+const i18next = require('i18next')
+const enLocales = require('../../src/locales/en')
+const jaLocales = require('../../src/locales/ja')
+
+i18next.init({
+  fallbackLng: 'ja',
+  resources: {
+    en: {
+      translation: enLocales.module
+    },
+    ja: {
+      translation: jaLocales.module
+    }
+  }
+})
+
 const indexName = `my-blog-posts`
 const pageQuery = `{
-  pages: allMarkdownRemark() {
+  pages: allMarkdownRemark {
     edges {
       node {
         id
         excerpt(pruneLength: 30000)
-        fields {
-          slug
+        frontmatter {
+            title
+            language
+            slug
+            thumbnail
+            canonical
+            templateKey
+            categories
+            tags
+            createdAt
+            updatedAt
         }
-        ${fragments.frontmatter}
-      }
     }
   }
 }`
-function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+
+function pageToAlgoliaRecord({ node: { id, frontmatter, ...rest } }) {
+  const { language } = frontmatter
+  i18next.changeLanguage(language)
+
+  const categoryLabels = frontmatter.categories.map((item) => {
+    i18next.t(`categories.${item}`)
+  })
+  const tagLabels = frontmatter.categories.map((item) => {
+    i18next.t(`tags.${item}`)
+  })
+
   return {
-    objectID: id,
-    ...frontmatter,
-    ...fields,
-    ...rest,
+    id,
+    title: frontmatter,
+    frontmatter: {
+      ...frontmatter,
+      categoryLabels,
+      tagLabels
+    },
+    ...rest
   }
 }
 const queries = [
@@ -27,7 +64,7 @@ const queries = [
     query: pageQuery,
     transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
     indexName,
-    settings: { attributesToSnippet: [`excerpt:20`] },
-  },
+    settings: { attributesToSnippet: [`excerpt:20`] }
+  }
 ]
 module.exports = queries
