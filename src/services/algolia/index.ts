@@ -9,5 +9,6 @@ const client = algoliasearch(
 const index = client.initIndex(constants.search.index)
 
 export const search = (query: string) => {
-  return index.search(query, {})
+  return index.search(query, {
+  })
 }
