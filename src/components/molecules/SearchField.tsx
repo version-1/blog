@@ -14,6 +14,7 @@ const styles = new Styles({
     border: 1px solid #00004020;
 
     input {
+      width: 100%;
       margin-left: 8px;
       border: 0;
     }
@@ -34,7 +35,12 @@ interface Props {
   [key: string]: any
 }
 
-const SearchField: React.VFC<Props> = ({ onChange, onSearch, ...rest }) => {
+const SearchField: React.VFC<Props> = ({
+  onChange,
+  onSearch,
+  containerStyle,
+  ...rest
+}) => {
   const [text, setText] = useState('')
 
   const onChangeText = (e: SyntheticEvent<HTMLInputElement>) => {
@@ -46,7 +52,7 @@ const SearchField: React.VFC<Props> = ({ onChange, onSearch, ...rest }) => {
   }
 
   return (
-    <div css={styles.container}>
+    <div css={[styles.container, containerStyle && containerStyle]}>
       <Icon color="#00004020" icon="search" />
       <input {...rest} type="text" value={text} onChange={onChangeText} />
     </div>

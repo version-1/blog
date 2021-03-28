@@ -42,6 +42,7 @@ interface ContentProps {
   header?: JSX.Element
   content?: JSX.Element
   footer?: JSX.Element
+  containerStyle?: any
 }
 
 interface StaticMethods {
@@ -54,6 +55,7 @@ const Modal: React.FC<any> & StaticMethods = () => {
   const [contents, setContents] = useState<JSX.Element[]>([])
   const [header, setHeader] = useState<JSX.Element>()
   const [footer, setFooter] = useState<JSX.Element>()
+  const [containerStyle, setContainerStyle] = useState<JSX.Element>()
   const [content] = contents
 
   useEffect(() => {
@@ -61,10 +63,16 @@ const Modal: React.FC<any> & StaticMethods = () => {
       if (!props) {
         return
       }
-      const { header: h, content: c, footer: f } = props
+      const {
+        header: h,
+        content: c,
+        footer: f,
+        containerStyle: _containerStyle
+      } = props
       h && setHeader(h)
       c && setContents([...contents, c])
       f && setFooter(f)
+      _containerStyle && setContainerStyle(_containerStyle)
       setShow(true)
     }
 
@@ -76,10 +84,10 @@ const Modal: React.FC<any> & StaticMethods = () => {
 
   return (
     <>
-      <div css={[style.container, show || style.hidden]}>
+      <div css={[style.container, containerStyle, show || style.hidden]}>
         <div css={style.header}>{header}</div>
         <div css={style.content}>{content}</div>
-        <div css={style.footer}>{footer}</div>
+        {footer && <div css={style.footer}>{footer}</div>}
       </div>
       <div
         css={[style.overlay, show || style.hidden]}

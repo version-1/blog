@@ -2,6 +2,7 @@
 templateKey: about
 language: ja
 title: プロフィール
+slug: /about
 thumbnail: /about/thumbnail.png
 createdAt: 2019-01-01 08:04:08
 updatedAt: 2020-01-02 06:16:17

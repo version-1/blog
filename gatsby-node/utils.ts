@@ -2,6 +2,7 @@ import compact from 'lodash/compact'
 import uniq from 'lodash/uniq'
 import get from 'lodash/get'
 import flatten from 'lodash/flatten'
+import kebabCase from 'lodash/kebabCase'
 import path from 'path'
 import config from '../config/constants'
 import { instance as i18next } from '../src/lib/i18next'
@@ -85,7 +86,7 @@ export const createCollectionShowPage = (createPage: CreatePage) => (
   const _path = [
     '',
     routes[singuralizeKey as keyof typeof routes],
-    _.kebabCase(collection)
+    kebabCase(collection)
   ].join('/')
   const breadcrumbs: any = fetch(context.language)
   const _breadcrumbs = [
