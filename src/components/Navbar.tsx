@@ -3,7 +3,7 @@ import Link from 'atoms/Link'
 import { rootPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
 import { showForm } from 'organisms/SearchForm'
-import SearchField from 'molecules/SearchField'
+import Icon from 'atoms/Icon'
 
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
@@ -13,6 +13,7 @@ const menus = (language: Lang) => [
 
 const styles = new Styles({
   container: `
+    padding: 8px 0px;
     background: linear-gradient(180deg, rgba(251, 251, 251, 0.9) 0%, rgba(251, 251, 251, 0.792) 100%);
   `,
   content: `
@@ -39,8 +40,11 @@ const styles = new Styles({
     justify-content: space-between;
     align-items: center;
   `,
-  modalTitle:`
+  modalTitle: `
     padding: 32px;
+  `,
+  icon: `
+    cursor: pointer;
   `
 }).style
 
@@ -62,9 +66,6 @@ interface Props {
 
 const Navbar: React.VFC<Props> = ({ language }) => {
   const list = menus(language)
-  const onShow = () => {
-    showForm()
-  }
 
   return (
     <header css={styles.container}>
@@ -76,7 +77,12 @@ const Navbar: React.VFC<Props> = ({ language }) => {
           <div className="nav-links hide-on-med-and-down">
             <MenuList list={list} />
           </div>
-          <SearchField onFocus={onShow} />
+          <Icon
+            css={styles.icon}
+            color="#00004050"
+            icon="search"
+            onClick={showForm}
+          />
         </nav>
       </div>
     </header>
