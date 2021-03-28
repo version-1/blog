@@ -21,6 +21,7 @@ const styles = new Styles({
     height: 48px;
     margin: 16px 0;
     padding: 16px;
+    border: 1px solid #f5f5f5;
   `,
   header: `
     background: white;
@@ -33,6 +34,7 @@ const styles = new Styles({
   empty: `
     background: white;
     border-radius: 8px;
+    border-radius: 8px;;
     display: flex;
     height: 200px;
     align-items: center;
@@ -48,6 +50,7 @@ const styles = new Styles({
   card: `
     background: white;
     border-radius: 8px;;
+    border: 1px solid #f1f1f1;
     display: block;
     padding: 16px;
     color: ${colors.fontColor};

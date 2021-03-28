@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Styles from 'lib/styles'
 import { instance as i18next } from 'lib/i18next'
-import { colors } from 'constants/index'
 import SearchField from 'components/molecules/SearchField'
-import Button from 'components/atoms/Button'
+import { showForm } from './SearchForm'
 
 const styles = new Styles({
   container: `
@@ -39,10 +37,7 @@ const SearchCard = () => {
       <div css={styles.body}>
         <p>{i18next.t('messages.search-posts')}</p>
         <div css={styles.search}>
-          <SearchField />
-        </div>
-        <div css={styles.button}>
-          <Button variant="primary">{i18next.t('labels.search')}</Button>
+          <SearchField  onFocus={showForm}/>
         </div>
       </div>
     </div>
