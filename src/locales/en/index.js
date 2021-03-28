@@ -14,6 +14,7 @@ exports.module = {
     'search-posts': "Are you lookging for a post? Let's search"
   },
   labels: {
+    404: 'Oops, the page is missing.',
     articles: 'Articles',
     'related-posts': 'Related Posts',
     'pop-posts': 'Popular Posts',
