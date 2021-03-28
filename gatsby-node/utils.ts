@@ -1,4 +1,7 @@
-import _ from 'lodash'
+import compact from 'lodash/compact'
+import uniq from 'lodash/uniq'
+import get from 'lodash/get'
+import flatten from 'lodash/flatten'
 import path from 'path'
 import config from '../config/constants'
 import { instance as i18next } from '../src/lib/i18next'
@@ -108,11 +111,11 @@ export const createCollectionShowPage = (createPage: CreatePage) => (
 }
 
 const collectCollection = (posts: any) => (key: string) => {
-  return _.uniq(
-    _.compact(
-      _.flatten(
+  return uniq(
+    compact(
+      flatten(
         posts.map((post: any) => {
-          if (_.get(post, `frontmatter.${key}`)) {
+          if (get(post, `frontmatter.${key}`)) {
             return post.frontmatter[key]
           }
         })

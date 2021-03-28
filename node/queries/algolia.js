@@ -33,24 +33,28 @@ const pageQuery = `{
             createdAt
             updatedAt
         }
+      }
     }
   }
 }`
 
-function pageToAlgoliaRecord({ node: { id, frontmatter, ...rest } }) {
-  const { language } = frontmatter
+function pageToAlgoliaRecord({ node: { id, excerpt, frontmatter, ...rest } }) {
+  const { language, categories, tags } = frontmatter
   i18next.changeLanguage(language)
 
-  const categoryLabels = frontmatter.categories.map((item) => {
-    i18next.t(`categories.${item}`)
+  const categoryLabels = (categories || []).map((item) => {
+    return i18next.t(`categories.${item}`)
   })
-  const tagLabels = frontmatter.categories.map((item) => {
-    i18next.t(`tags.${item}`)
+  const tagLabels = (tags || []).map((item) => {
+    return i18next.t(`tags.${item}`)
   })
 
   return {
     id,
-    title: frontmatter,
+    ObjectID: id,
+    title: frontmatter.title,
+    language,
+    excerpt,
     frontmatter: {
       ...frontmatter,
       categoryLabels,
