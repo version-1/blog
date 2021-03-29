@@ -22,6 +22,7 @@ module.exports = {
       'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。',
     sitemap: '/sitemap.xml',
     trackingId: 'UA-71833989-5',
+    inquiry: 'https://forms.gle/Efmkr3UyawetjrjM6',
     images: {
       url: 'https://statics.ver-1-0.xyz/uploads'
     },

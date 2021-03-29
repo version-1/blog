@@ -36,7 +36,7 @@ exports.module = {
   },
   categories: {
     freelance: 'Freelance',
-    engineering: 'Programming',
+    engineering: 'Engineering',
     design: 'Design',
     'for-beginner': 'For Beginner',
     rails: 'Ruby On Rails',

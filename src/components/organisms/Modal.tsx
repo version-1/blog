@@ -4,7 +4,7 @@ import Styles from 'lib/styles'
 
 const style = new Styles({
   header: `
-    height: 60px;
+    // height: 60px;
   `,
   content: ``,
   footer: `
@@ -67,10 +67,12 @@ const Modal: React.FC<any> & StaticMethods = () => {
         footer: f,
         containerStyle: _containerStyle
       } = props
+
       h && setHeader(h)
       c && setContents([...contents, c])
       f && setFooter(f)
       _containerStyle && setContainerStyle(_containerStyle)
+
       setShow(true)
     }
 

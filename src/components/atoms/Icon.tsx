@@ -6,11 +6,15 @@ import {
   IoLogoTwitter,
   IoCaretBackCircle,
   IoCaretForwardCircle,
-  IoMail
+  IoMail,
+  IoMenu,
+  IoClose
 } from 'react-icons/io5'
 
 const icons = Object.freeze({
+  close: IoClose,
   mail: IoMail,
+  menu: IoMenu,
   search: IoSearch,
   github: IoLogoGithub,
   twitter: IoLogoTwitter,
