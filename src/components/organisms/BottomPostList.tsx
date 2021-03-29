@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from 'lib/styles'
 import { instance as i18next } from 'lib/i18next'
 import PostList from 'components/organisms/PostList'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
@@ -14,6 +15,10 @@ const styles = new Styles({
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    ${mq.md} {
+      padding: 8px;
     }
   `,
 }).style

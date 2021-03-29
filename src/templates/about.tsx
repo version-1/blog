@@ -12,18 +12,28 @@ import SearchCard from 'components/organisms/SearchCard'
 import ArticleIndex from 'components/organisms/ArticleIndex'
 import Header from 'components/organisms/ArticleHeader'
 import Promotion from 'components/organisms/Promotion'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
     max-width: 672px;
     padding: 32px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.56) 100%);
+
+    ${mq.md} {
+      padding: 8px;
+      width: 100%:
+    }
   `,
   content: `
     background: white;
     border-radius: 8px;
     padding: 32px 32px;
     margin-bottom: 64px;
+    ${mq.md} {
+      padding: 16px;
+      width: 100%:
+    }
   `,
   postFooter: `
     margin-bottom: 32px;
@@ -46,6 +56,11 @@ const styles = new Styles({
   shareLabel: `
     margin: auto 0;
     margin-right: 16px;
+  `,
+  index: `
+    ${mq.md} {
+      display: none;
+    }
   `,
   profile: `
     flex: 1;
@@ -116,6 +131,12 @@ const styles = new Styles({
   promotion: `
     width: 496px;
     margin: auto;
+
+    ${mq.md} {
+      width: 100%;
+      margin: 0;
+      padding: 8px;
+    }
   `
 }).style
 
@@ -164,7 +185,15 @@ const AboutPost = ({ location, data, pageContext, path }: any) => {
   )
 
   return (
-    <Layout noconsole context={context} sidebar={<ArticleIndex {...post} />}>
+    <Layout
+      noconsole
+      context={context}
+      sidebar={
+        <div css={styles.index}>
+          <ArticleIndex {...post} />
+        </div>
+      }
+    >
       <AboutTemplate {...context} post={post} location={location} />
     </Layout>
   )

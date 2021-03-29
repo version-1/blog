@@ -16,7 +16,6 @@ const styles = new Styles({
     border-radius: 8px;
     margin-top: 256px;
     overflow: scroll;
-    height: 100%;
     position: sticky;
     top: 0;
   `,

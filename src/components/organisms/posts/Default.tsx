@@ -6,6 +6,7 @@ import { meta } from 'config/constants'
 import { instance as i18next } from 'lib/i18next'
 import Styles from 'lib/styles'
 import { tagPath, postShowPath } from 'lib/routes'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
@@ -16,6 +17,9 @@ const styles = new Styles({
     margin-bottom: 16px;
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
+    ${mq.md} {
+      width: 100%;
+    }
   `,
   header: `
     padding: 16px;
@@ -48,9 +52,16 @@ const styles = new Styles({
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
     border-radius: 8px 0px 0px 8px;
     width: 302px;
+    ${mq.md} {
+      width: 100%;
+    }
   `,
   right: `
     margin: auto;
+
+    ${mq.md} {
+      display: none;
+    }
   `,
   footer: `
     padding: 16px;

@@ -13,11 +13,6 @@ const style = new Styles({
   container: `
     opacity: 1;
     background: ${colors.white};
-    // position: absolute;
-    // min-height: 400px;
-    // height: auto;
-    // top: 15%;
-    // left: 20%;
     position: fixed;
     top: 10%;
     left: 20%;

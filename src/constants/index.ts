@@ -19,3 +19,18 @@ export const profileSnsLinks = [
     href: 'https://twitter.com/version1_2017'
   }
 ]
+
+const breakpoitns = {
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200
+}
+
+export const mq = Object.freeze({
+  sm: `@media (max-width: ${breakpoitns.sm}px)`,
+  md: `@media (max-width: ${breakpoitns.md}px)`,
+  lg: `@media (max-width: ${breakpoitns.lg}px)`,
+  xl: `@media (max-width: ${breakpoitns.xl}px)`
+})
+
