@@ -1,6 +1,5 @@
 import React from 'react'
-import { navigate } from 'gatsby'
-import Link from 'atoms/Link'
+import { navigate, Link } from 'gatsby'
 import { rootPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
 import { showForm } from 'organisms/SearchForm'

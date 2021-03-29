@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react'
-import Link from 'atoms/Link'
+import { Link } from 'gatsby'
 import { instance as i18next } from 'lib/i18next'
 import { tagPath } from 'lib/routes'
 

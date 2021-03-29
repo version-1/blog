@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'atoms/Link'
+import { Link } from 'gatsby'
 import Styles from 'lib/styles'
 import Icon from 'components/atoms/Icon'
 
