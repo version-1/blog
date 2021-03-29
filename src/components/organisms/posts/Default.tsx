@@ -104,37 +104,44 @@ const Post: React.VFC<any> = ({ post }) => {
   const path = postShowPath(slug, language)
 
   return (
-    <Link to={path}>
-      <div css={styles.container}>
-        <div css={styles.left}>
-          <div css={styles.header}>
-            <Category category={category} language={language} />
-            <h2>{title}</h2>
-            <aside>{createdAt}</aside>
+    <div>
+      <Link to={path}>
+        <div css={styles.container}>
+          <div css={styles.left}>
+            <div css={styles.header}>
+              <Category category={category} language={language} />
+              <h2>{title}</h2>
+              <aside>{createdAt}</aside>
+            </div>
+            <div css={styles.footer}>
+              <ul css={styles.tags}>
+                {tags.map((item: string) => {
+                  return (
+                    <li css={styles.tags} key={item}>
+                      <Link to={tagPath(item, language)}>{`#${i18next.t(
+                        `tags.${item}`
+                      )}`}</Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
-          <div css={styles.footer}>
-            <ul css={styles.tags}>
-              {tags.map((item: string) => {
-                return (
-                  <li css={styles.tags} key={item}>
-                    <Link to={tagPath(item, language)}>{`#${i18next.t(
-                      `tags.${item}`
-                    )}`}</Link>
-                  </li>
-                )
-              })}
-            </ul>
+          <div css={styles.right}>
+            {image ? (
+              <GatsbyImage
+                width={160}
+                height={160}
+                image={image!}
+                alt={title}
+              />
+            ) : (
+              <img width={160} height={160} src={thumbnailUrl} alt={title} />
+            )}
           </div>
         </div>
-        <div css={styles.right}>
-          {image ? (
-            <GatsbyImage width={160} height={160} image={image!} alt={title} />
-          ) : (
-            <img width={160} height={160} src={thumbnailUrl} alt={title} />
-          )}
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

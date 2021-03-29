@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const LinkComponent = ({ children, ...rest }) => {
+const LinkComponent = ({ children, ...rest }: any) => {
   const path =
     typeof window === 'undefined' ? undefined : window.location.pathname
   if (!rest.to && path === rest.to) {
