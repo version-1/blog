@@ -1,6 +1,7 @@
 const i18next = require('i18next')
 const enLocales = require('../../src/locales/en')
 const jaLocales = require('../../src/locales/ja')
+const constants = require('../../config/constants')
 
 i18next.init({
   fallbackLng: 'ja',
@@ -14,7 +15,8 @@ i18next.init({
   }
 })
 
-const indexName = `my-blog-posts`
+const indexKey = process.env.CONTEXT === 'prodcution' ? 'production' : 'development'
+const indexName = constants.search.index[indexKey]
 const pageQuery = `{
   pages: allMarkdownRemark {
     edges {
@@ -37,6 +39,8 @@ const pageQuery = `{
     }
   }
 }`
+
+console.log('INDEX_NAME', indexName)
 
 function pageToAlgoliaRecord({ node: { id, excerpt, frontmatter, ...rest } }) {
   const { language, categories, tags } = frontmatter
