@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'atoms/Link'
 import Styles from 'lib/styles'
 import { rootPath, categoryPath, aboutPath } from 'lib/routes'
+import constants from 'config/constants'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
@@ -23,6 +25,14 @@ const styles = new Styles({
     a {
       color: inherit;
     }
+
+    ${mq.md} {
+      display: block;
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
   `
 }).hoge
 
@@ -42,7 +52,7 @@ const menus = (language: Lang) => [
   { to: categoryPath('engineering', language), label: 'Programming' },
   { to: categoryPath('freelance', language), label: 'Career' },
   { to: categoryPath('column', language), label: 'Column' },
-  { to: '', label: 'Contact' }
+  { to: constants.meta.inquiry, label: 'Contact' }
 ]
 
 const Footer: React.FC<Props> = ({ lang }) => {

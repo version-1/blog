@@ -4,8 +4,10 @@ import Link from 'atoms/Link'
 import { rootPath, aboutPath } from 'lib/routes'
 import Styles from 'lib/styles'
 import { showForm } from 'organisms/SearchForm'
+import { showForm as showMenu } from 'organisms/Menu'
 import Icon from 'atoms/Icon'
-import { colors } from 'constants/index'
+import { mq } from 'constants/index'
+import constants from 'config/constants'
 
 const menus = (language: Lang) => [
   { to: rootPath(language), text: 'Top' },
@@ -41,6 +43,10 @@ const styles = new Styles({
     padding-left: 32px;
     justify-content: space-between;
     align-items: center;
+
+    ${mq.md} {
+      justify-content: flex-end;
+    }
   `,
   modalTitle: `
     padding: 32px;
@@ -53,7 +59,7 @@ const styles = new Styles({
   select: `
     background: transparent;
     border: 0;
-    color: ${colors.fontColor};
+    color: #00004080;
 
     &:focus {
       outline: none;
@@ -65,6 +71,17 @@ const styles = new Styles({
 
     li {
       margin-right: 16px;
+    }
+  `,
+  hamburger: `
+    display: none;
+    ${mq.md} {
+      display: block;
+    }
+  `,
+  menuList: `
+    ${mq.md} {
+      display: none;
     }
   `
 }).style
@@ -96,6 +113,10 @@ const Navbar: React.VFC<Props> = ({ language }) => {
     navigate(rootPath(lan))
   }
 
+  const onClickMenu = () => {
+    showMenu(language)
+  }
+
   return (
     <header css={styles.container}>
       <div css={styles.content}>
@@ -103,23 +124,10 @@ const Navbar: React.VFC<Props> = ({ language }) => {
           <Link to={rootPath(language)}>Ver.1.0</Link>
         </div>
         <nav className="navigation" role="navigation" css={styles.navigation}>
-          <div className="nav-links hide-on-med-and-down">
+          <div css={styles.menuList}>
             <MenuList list={list} />
           </div>
           <ul css={styles.right}>
-            <li>
-              <Icon
-                css={styles.icon}
-                color="#00004050"
-                icon="search"
-                onClick={showForm}
-              />
-            </li>
-            <li>
-              <a href="">
-                <Icon css={styles.icon} color="#00004050" icon="mail" />
-              </a>
-            </li>
             <li>
               <select css={styles.select} onChange={onChangeLanguage}>
                 <option value="en" selected={language === 'en'}>
@@ -129,6 +137,27 @@ const Navbar: React.VFC<Props> = ({ language }) => {
                   日本語
                 </option>
               </select>
+            </li>
+            <li>
+              <Icon
+                css={styles.icon}
+                color="#00004080"
+                icon="search"
+                onClick={showForm}
+              />
+            </li>
+            <li>
+              <a href={constants.meta.inquiry}>
+                <Icon css={styles.icon} color="#00004080" icon="mail" />
+              </a>
+            </li>
+            <li css={styles.hamburger}>
+              <Icon
+                css={styles.icon}
+                color="#00004080"
+                icon="menu"
+                onClick={onClickMenu}
+              />
             </li>
           </ul>
         </nav>
