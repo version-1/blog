@@ -8,6 +8,7 @@ import { search } from 'services/algolia'
 import Styles from 'lib/styles'
 import throttle from 'lodash/throttle'
 import { colors } from 'constants/index'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   modalContainer: `
@@ -16,6 +17,13 @@ const styles = new Styles({
     max-height: 80vh;
     overflow: scroll;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    ${mq.md} {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
   `,
   field: `
     height: 48px;

@@ -3,6 +3,7 @@ import Styles from 'lib/styles'
 import { instance as i18next } from 'lib/i18next'
 import SearchField from 'components/molecules/SearchField'
 import { showForm } from './SearchForm'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
@@ -19,6 +20,11 @@ const styles = new Styles({
     p {
       text-align: center;
     }
+
+    ${mq.md} {
+      padding: 8px;
+      margin: 16px 8px;
+    }
   `,
   button: `
     width: 200px;
@@ -27,6 +33,10 @@ const styles = new Styles({
   search: `
     width: 300px;
     margin: auto;
+
+    ${mq.md} {
+      width: 100%;
+    }
   `
 }).style
 

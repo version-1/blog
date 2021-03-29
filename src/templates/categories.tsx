@@ -4,11 +4,17 @@ import { graphql } from 'gatsby'
 import Layout from 'components/layouts/Default'
 import PostList from 'components/organisms/PostList'
 import { categoryPath } from 'lib/routes'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   postList: `
     margin-top: -128px;
     margin-left: 16px;
+
+    ${mq.md} {
+      margin-top: 0;
+      margin: 0px 8px;
+    }
   `
 }).style
 

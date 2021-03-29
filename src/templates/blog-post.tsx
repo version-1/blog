@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { Link, graphql } from 'gatsby'
 import Styles from 'lib/styles'
 import { truncate } from 'lib/stringUtils'
-import { postShowPath, } from 'lib/routes'
+import { postShowPath } from 'lib/routes'
 import Layout from 'components/layouts/Default'
 import Icon from 'components/atoms/Icon'
 import Bar from 'components/atoms/Bar'
@@ -17,19 +17,28 @@ import SearchCard from 'components/organisms/SearchCard'
 import ArticleIndex from 'components/organisms/ArticleIndex'
 import Breadcrumbs from 'components/molecules/Breadcrumbs'
 import Header from 'components/organisms/ArticleHeader'
-
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
     max-width: 672px;
     padding: 32px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.56) 100%);
+
+    ${mq.md} {
+      padding: 0;
+      width: 100%:
+    }
   `,
   content: `
     background: white;
     border-radius: 8px;
     padding: 32px 32px;
     margin-bottom: 64px;
+    ${mq.md} {
+      padding: 16px;
+      width: 100%:
+    }
   `,
   postFooter: `
     margin-bottom: 32px;
@@ -90,6 +99,11 @@ const styles = new Styles({
       padding: 4px;
     }
   `,
+  index: `
+    ${mq.md} {
+      display: none;
+    }
+  `,
   paging: `
     display: flex;
     justify-content: space-between;
@@ -122,6 +136,16 @@ const styles = new Styles({
   promotion: `
     width: 496px;
     margin: auto;
+    ${mq.md} {
+      width: 100%;
+      margin: 0;
+      padding: 8px;
+    }
+  `,
+  breadcrumbs: `
+    ${mq.md} {
+      padding: 0 16px;
+    }
   `
 }).style
 
@@ -207,8 +231,18 @@ const BlogPost = ({ location, data, pageContext, path }) => {
   )
 
   return (
-    <Layout noconsole sidebar={<ArticleIndex {...post} />} context={context}>
-      <Breadcrumbs context={pageContext.layout.breadcrumbs} />
+    <Layout
+      noconsole
+      sidebar={
+        <div css={styles.index}>
+          <ArticleIndex {...post} />
+        </div>
+      }
+      context={context}
+    >
+      <div css={styles.breadcrumbs}>
+        <Breadcrumbs context={pageContext.layout.breadcrumbs} />
+      </div>
       <BlogPostTemplate
         {...context}
         post={post}
