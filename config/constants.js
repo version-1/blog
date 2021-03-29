@@ -10,7 +10,10 @@ module.exports = {
     pickups: 'pickups'
   },
   search: {
-    index: 'my-blog-posts',
+    index: {
+      development: 'my-blog-posts-development',
+      production: 'my-blog-posts',
+    }
   },
   meta: {
     author: 'version1',

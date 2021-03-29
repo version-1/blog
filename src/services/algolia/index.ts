@@ -6,7 +6,10 @@ const client = algoliasearch(
   process.env.GATSBY_ALGOLIA_SEARCH_KEY!
 )
 
-const index = client.initIndex(constants.search.index)
+const indexKey = process.env.CONTEXT === 'prodcution' ? 'production' : 'development'
+const indexName = constants.search.index[indexKey]
+
+const index = client.initIndex(indexName)
 
 export const search = (query: string) => {
   return index.search(query, {
