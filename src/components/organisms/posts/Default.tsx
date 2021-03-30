@@ -69,9 +69,9 @@ const styles = new Styles({
   tags: `
     display: flex;
     flex-wrap: wrap;
+    color: #22222280;
 
     a {
-      color: #22222280;
       font-size: 12px;
       font-style: italic;
       font-weight: normal;
@@ -103,45 +103,40 @@ const Post: React.VFC<any> = ({ post }) => {
   const image = getImage(post.thumbnail)
   const path = postShowPath(slug, language)
 
+  // FIXME: https://github.com/version-1/blog/issues/78
   return (
-    <div>
-      <Link to={path}>
-        <div css={styles.container}>
-          <div css={styles.left}>
-            <div css={styles.header}>
-              <Category category={category} language={language} />
-              <h2>{title}</h2>
-              <aside>{createdAt}</aside>
-            </div>
-            <div css={styles.footer}>
-              <ul css={styles.tags}>
-                {tags.map((item: string) => {
-                  return (
-                    <li css={styles.tags} key={item}>
-                      <Link to={tagPath(item, language)}>{`#${i18next.t(
-                        `tags.${item}`
-                      )}`}</Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
+    <Link to={path}>
+      <div css={styles.container}>
+        <div css={styles.left}>
+          <div css={styles.header}>
+            <Category category={category} language={language} />
+            <h2>{title}</h2>
+            <aside>{createdAt}</aside>
           </div>
-          <div css={styles.right}>
-            {image ? (
-              <GatsbyImage
-                width={160}
-                height={160}
-                image={image!}
-                alt={title}
-              />
-            ) : (
-              <img width={160} height={160} src={thumbnailUrl} alt={title} />
-            )}
+          <div css={styles.footer}>
+            <ul css={styles.tags}>
+              {tags.map((item: string) => {
+                return (
+                  <li css={styles.tags} key={item}>
+                    {/* <Link to={tagPath(item, language)}>{`#${i18next.t(
+                      `tags.${item}`
+                      )}`}</Link> */}
+                    {`#${i18next.t(`tags.${item}`)}`}
+                  </li>
+                )
+              })}
+            </ul>
           </div>
         </div>
-      </Link>
-    </div>
+        <div css={styles.right}>
+          {image ? (
+            <GatsbyImage width={160} height={160} image={image!} alt={title} />
+          ) : (
+            <img width={160} height={160} src={thumbnailUrl} alt={title} />
+          )}
+        </div>
+      </div>
+    </Link>
   )
 }
 
