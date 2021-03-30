@@ -1,3 +1,4 @@
+const POST_LIMIT = 10 // 1000
 const frontmatter = `frontmatter {
             title
             language
@@ -14,7 +15,7 @@ const frontmatter = `frontmatter {
 const slugListQuery = `
   {
     allMarkdownRemark(
-      limit: 1000,
+      limit: ${POST_LIMIT},
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" },
@@ -36,7 +37,7 @@ const slugListQuery = `
 const enIndexQuery = `
   {
     allMarkdownRemark(
-      limit: 1000,
+      limit: ${POST_LIMIT},
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" },
@@ -77,7 +78,7 @@ const enIndexQuery = `
 const jaIndexQuery = `
   {
     allMarkdownRemark(
-      limit: 1000,
+      limit: ${POST_LIMIT},
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" },
