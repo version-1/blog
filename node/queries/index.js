@@ -1,4 +1,4 @@
-const POST_LIMIT = 10 // 1000
+const POST_LIMIT = 1000
 const frontmatter = `frontmatter {
             title
             language

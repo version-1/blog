@@ -51,6 +51,8 @@ const styles = new Styles({
     border-radius: 8px;
     display: flex;
     align-items: center;
+
+    color: ${colors.fontColor};
   `,
   cardLeft: `
     padding: 8px;
@@ -82,7 +84,6 @@ const styles = new Styles({
 
 interface Props {
   language: Lang
-
 }
 
 const Promotion: React.VFC<Props> = () => {
@@ -114,21 +115,23 @@ const Promotion: React.VFC<Props> = () => {
           {promotions.map((promotion: any) => {
             const image = getImage(data[promotion.thumbnail].gatsbyImageData)
             return (
-              <div css={styles.card} key={promotion.title}>
-                <div css={styles.cardLeft}>
-                  <div css={styles.cardTitle}>
-                    <h3>{promotion.title}</h3>
+              <a key={promotion.title} href={promotion.link}>
+                <div css={styles.card} >
+                  <div css={styles.cardLeft}>
+                    <div css={styles.cardTitle}>
+                      <h3>{promotion.title}</h3>
+                    </div>
+                    <div>
+                      <p>{promotion.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p>{promotion.description}</p>
+                  <div css={styles.cardRight}>
+                    <div css={styles.cardImage}>
+                      <GatsbyImage image={image} alt={promotion.title} />
+                    </div>
                   </div>
                 </div>
-                <div css={styles.cardRight}>
-                  <div css={styles.cardImage}>
-                    <GatsbyImage image={image} alt={promotion.title} />
-                  </div>
-                </div>
-              </div>
+              </a>
             )
           })}
         </ul>
