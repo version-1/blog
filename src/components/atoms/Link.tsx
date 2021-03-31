@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const LinkComponent = ({ children, ...rest }: any) => {
+const LinkComponent = ({ children, to }: any) => {
   const path =
     typeof window === 'undefined' ? undefined : window.location.pathname
-  if (!rest.to && path === rest.to) {
+  if (!to && path === to) {
     return <a href={path}>{children}</a>
   }
-  return <Link {...rest}>{children}</Link>
+  return <Link to={to}>{children}</Link>
 }
 
 export default React.memo(LinkComponent)

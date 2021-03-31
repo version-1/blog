@@ -39,7 +39,7 @@ const SearchField: React.VFC<Props> = ({
   onChange,
   onSearch,
   containerStyle,
-  ...rest
+  onFocus
 }) => {
   const [text, setText] = useState('')
 
@@ -54,7 +54,12 @@ const SearchField: React.VFC<Props> = ({
   return (
     <div css={[styles.container, containerStyle && containerStyle]}>
       <Icon color="#00004020" icon="search" />
-      <input {...rest} type="text" value={text} onChange={onChangeText} />
+      <input
+        type="text"
+        value={text}
+        onFocus={onFocus}
+        onChange={onChangeText}
+      />
     </div>
   )
 }
