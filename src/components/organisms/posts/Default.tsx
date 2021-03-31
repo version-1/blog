@@ -103,7 +103,6 @@ const Post: React.VFC<any> = ({ post }) => {
   const image = getImage(post.thumbnail)
   const path = postShowPath(slug, language)
 
-  // FIXME: https://github.com/version-1/blog/issues/78
   return (
     <Link to={path}>
       <div css={styles.container}>
@@ -118,10 +117,9 @@ const Post: React.VFC<any> = ({ post }) => {
               {tags.map((item: string) => {
                 return (
                   <li css={styles.tags} key={item}>
-                    {/* <Link to={tagPath(item, language)}>{`#${i18next.t(
+                    <Link to={tagPath(item, language)}>{`#${i18next.t(
                       `tags.${item}`
-                      )}`}</Link> */}
-                    {`#${i18next.t(`tags.${item}`)}`}
+                    )}`}</Link>
                   </li>
                 )
               })}

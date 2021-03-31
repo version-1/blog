@@ -40,17 +40,13 @@ interface Props {
 }
 
 const Category: React.VFC<Props> = ({ style, category, language }) => {
-  // FIXME: https://github.com/version-1/blog/issues/78
   return (
     <p css={[styles.container, style && Styles.css(style)]}>
-      {/* <Link to={categoryPath(category, language)}>
+      <Link to={categoryPath(category, language)}>
         <span className={`category category-${category}`}>
           {i18next.t(`categories.${category}`)}
         </span>
-        </Link>AA */}
-      <span className={`category category-${category}`}>
-        {i18next.t(`categories.${category}`)}
-      </span>
+      </Link>
     </p>
   )
 }
