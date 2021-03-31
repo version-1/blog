@@ -18,6 +18,7 @@ import ArticleIndex from 'components/organisms/ArticleIndex'
 import Breadcrumbs from 'components/molecules/Breadcrumbs'
 import Header from 'components/organisms/ArticleHeader'
 import { mq } from 'constants/index'
+import 'prismjs/themes/prism-tomorrow.css'
 
 const styles = new Styles({
   container: `

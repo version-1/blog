@@ -1,4 +1,3 @@
-require('prismjs/themes/prism-tomorrow.css')
 const i18next = require('./src/lib/i18next')
 
 exports.wrapPageElement = ({ element, props }) => {
