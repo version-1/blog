@@ -1,10 +1,10 @@
 exports.module = {
   profile: {
     description:
-      'バンクーバー在住のエンジニアです。React, Ruby on Rails などでお仕事しています。',
+       'バンクーバー在住のフルスタックエンジニアです。React, Ruby on Rails, Go などでお仕事しています。職場がトロントなので日本、トロント、バンクーバーの三つの時天空を操って生活しています。',
     author: {
       description:
-        'バンクーバー在住のエンジニアです。React, Ruby on Rails などでお仕事しています。'
+        'バンクーバー在住のフルスタックエンジニアです。React, Ruby on Rails, Go などでお仕事しています。職場がトロントなので日本、トロント、バンクーバーの三つの時天空を操って生活しています。'
     }
   },
   about: {

@@ -32,7 +32,9 @@ const styles = new Styles({
 
     h2 {
       line-height: 1.2;
-      font-size: 18px;
+      letter-spacing: 0.8px;
+      margin-top: 4px;
+      font-size: 14px;
     }
 
     p {
@@ -62,17 +64,22 @@ const styles = new Styles({
     ${mq.md} {
       display: none;
     }
+
+    img {
+      border-radius: 8px;
+    }
   `,
   footer: `
     padding: 16px;
   `,
   tags: `
     display: flex;
-    flex-wrap: wrap;
+    align-items: baseline;
     color: #22222280;
+    font-size: 12px;
 
     a {
-      font-size: 12px;
+      color: #22222280;
       font-style: italic;
       font-weight: normal;
       transition: all 0.3s linear;
@@ -114,7 +121,7 @@ const Post: React.VFC<any> = ({ post }) => {
           </div>
           <div css={styles.footer}>
             <ul css={styles.tags}>
-              {tags.map((item: string) => {
+              {tags.slice(0, 3).map((item: string) => {
                 return (
                   <li css={styles.tags} key={item}>
                     <Link to={tagPath(item, language)}>{`#${i18next.t(
@@ -123,12 +130,14 @@ const Post: React.VFC<any> = ({ post }) => {
                   </li>
                 )
               })}
+              {/* TODO impl tool tip */}
+              {tags.length > 3 && <li> + {tags.length - 3}</li>}
             </ul>
           </div>
         </div>
         <div css={styles.right}>
           {image ? (
-            <GatsbyImage width={160} height={160} image={image!} alt={title} />
+            <GatsbyImage image={image!} alt={title} />
           ) : (
             <img width={160} height={160} src={thumbnailUrl} alt={title} />
           )}
