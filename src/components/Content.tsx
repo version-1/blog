@@ -29,6 +29,16 @@ const styles = new Styles({
       margin-bottom: 32px;
     }
 
+    h3 {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    h4 {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
     p {
       padding: 8px 0;
     }
@@ -37,6 +47,28 @@ const styles = new Styles({
     img {
       margin: 16px 0px;
       max-width: 100%;
+    }
+
+    table {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      width: 100%;
+      overflow: scroll;
+      text-align: left;
+    }
+
+    th {
+      white-space: nowrap;
+      padding: 4px;
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+
+    td {
+      padding: 4px;
+      text-align: left;
+      padding: 4px;
+      border-bottom: 1px solid #ccc;
     }
   `
 }).style

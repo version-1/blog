@@ -8,8 +8,13 @@ const PER_PAGE = 6
 
 const styles = new Styles({
   container: `
+     background: #CCCCCC30;
+     border-radius: 32px;
+     padding: 4px;
+  `,
+  content: `
     display: flex;
-    margin: 32px auto;
+    margin: 4px auto;
     width: 300px;
     justify-content: space-between;
     align-items: center;
@@ -38,33 +43,39 @@ const Pagination: React.VFC<Props> = ({ index, namespace, count, per }) => {
   const pageCount = Math.ceil(count / perPage)
   const pageIndex = index || 1
 
+  if (pageCount <= 1) {
+    return null
+  }
+
   const link = (page: number) => {
     if (!page || page <= 0) return namespace + '/'
     if (page === 1) return namespace
     return `${namespace}/${page}`
   }
   return (
-    <ul css={styles.container} className="pagination">
-      <li>
-        {index > 1 && (
-          <Link to={link(pageIndex - 1)}>
-            <Icon icon="backFill" color={colors.fontColor} size={28} />
-          </Link>
-        )}
-      </li>
-      <li css={styles.pageIndex}>
-        <span>{pageIndex}</span>
-        <span>/</span>
-        <span>{pageCount}</span>
-      </li>
-      <li>
-        {pageIndex !== pageCount && (
-          <Link to={link(pageIndex + 1)}>
-            <Icon icon="forwardFill" color={colors.fontColor} size={28} />
-          </Link>
-        )}
-      </li>
-    </ul>
+    <div css={styles.container}>
+      <ul css={styles.content} className="pagination">
+        <li>
+          {index > 1 && (
+            <Link to={link(pageIndex - 1)}>
+              <Icon icon="backFill" color={colors.fontColor} size={28} />
+            </Link>
+          )}
+        </li>
+        <li css={styles.pageIndex}>
+          <span>{pageIndex}</span>
+          <span>/</span>
+          <span>{pageCount}</span>
+        </li>
+        <li>
+          {pageIndex !== pageCount && (
+            <Link to={link(pageIndex + 1)}>
+              <Icon icon="forwardFill" color={colors.fontColor} size={28} />
+            </Link>
+          )}
+        </li>
+      </ul>
+    </div>
   )
 }
 
