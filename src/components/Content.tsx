@@ -70,6 +70,46 @@ const styles = new Styles({
       padding: 4px;
       border-bottom: 1px solid #ccc;
     }
+
+    .related-post:before {
+      margin-top: 16px;
+      border-radius: 8px 8px 0px 0px;
+      background: #3fb4e461;
+      padding: 0px 16px;
+      font-size: 12px;
+      color: white;
+      content: 'Pick!';
+      display: block;
+    }
+
+    .related-post ul {
+      background: #87ceeb30;
+      padding: 16px;
+      border-radius: 0px 0px 8px 8px;
+      margin: 0;
+      margin-bottom: 16px;
+    }
+
+    .related-post li {
+      list-style-type: none;
+      color: #0066C5;
+      padding-left: 16px;
+      font-size: 12px;
+    }
+
+    .related-post li:before {
+      font-size: 6px;
+      position: relative;
+      bottom: 2px;
+      margin-right: 16px;
+      margin-left: -8px;
+      content: '■';
+      color: #0066C5;
+    }
+
+    .related-post li a {
+      color: #0066C5;
+    }
   `
 }).style
 

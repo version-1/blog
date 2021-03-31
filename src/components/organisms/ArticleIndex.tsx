@@ -47,6 +47,9 @@ const styles = new Styles({
 
 const ArticleIndex: React.VFC<Props> = ({ headings }) => {
   const list = headings.filter((heading: Heading) => heading.depth <= 3)
+  if (list.length <= 0) {
+    return null
+  }
   return (
     <div css={styles.container}>
       <div>
@@ -61,7 +64,9 @@ const ArticleIndex: React.VFC<Props> = ({ headings }) => {
               <span
                 css={[styles.label, labelStyle]}
                 onClick={() => {
-                  const selector = heading.value.replace(/[\.\(\)\?':@]/g, '').replace(/ /g, '-')
+                  const selector = heading.value
+                    .replace(/[\.\(\)\?':@]/g, '')
+                    .replace(/ /g, '-')
                   console.log(selector)
                   const target = document.getElementById(selector)
                   if (!target) {
