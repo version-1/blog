@@ -20,10 +20,10 @@ exports.onCreateWebpackConfig = ({
   actions
 }) => {
   actions.setWebpackConfig({
-    node: {
-      fs: 'empty'
-    },
     resolve: {
+      fallback: {
+        fs: false
+      },
       alias: {
         config: path.resolve(__dirname, 'config'),
         assets: path.resolve(__dirname, 'src/assets'),

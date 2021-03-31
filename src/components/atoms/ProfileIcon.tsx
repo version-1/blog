@@ -1,5 +1,5 @@
 import {  StaticImage } from 'gatsby-plugin-image'
-import { colors, imagePath } from 'constants/index'
+import { colors } from 'constants/index'
 import Styles from 'lib/styles'
 
 const styles = new Styles({
@@ -9,7 +9,7 @@ const styles = new Styles({
   `,
 }).style
 
-const ProfileIcon = (props: any) => {
+const ProfileIcon = () => {
   return (
     <StaticImage
       css={styles.container}
@@ -19,7 +19,6 @@ const ProfileIcon = (props: any) => {
       height={32}
       quality={90}
       layout="fixed"
-      {...props}
     />
   )
 }
