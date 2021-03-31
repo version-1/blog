@@ -4,7 +4,6 @@ import Styles from 'lib/styles'
 import Category from 'components/atoms/Category'
 import { tagPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
-import { colors } from 'constants/index'
 
 const styles = new Styles({
   header: `
@@ -114,6 +113,9 @@ const Header: React.FC<HeaderProps> = ({ post, meta }) => {
       <div css={styles.meta}>
         <ul css={styles.tags}>
           {tags.map((item: string) => {
+            if (item === 'dummy') {
+              return null
+            }
             return (
               <li>
                 <Link to={tagPath(item, language)}>

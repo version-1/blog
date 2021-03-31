@@ -56,6 +56,7 @@ const styles = new Styles({
     width: 302px;
     ${mq.md} {
       width: 100%;
+      border-radius: 8px;
     }
   `,
   right: `

@@ -14,10 +14,14 @@ const styles = new Styles({
     margin: 64px auto;
 
     h2 {
+      font-size: 14px;
+      letter-spacing: 0.8px;
       text-align: center;
       margin-bottom: 16px;
     }
+
     p {
+      font-size: 12px;
       text-align: center;
     }
 

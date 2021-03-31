@@ -54,7 +54,7 @@ const styles = new Styles({
     padding: 16px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 69.95%, rgba(255, 255, 255, 0.6) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
   `,
   body: `
     padding: 16px;

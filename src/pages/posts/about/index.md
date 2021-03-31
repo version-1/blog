@@ -32,26 +32,22 @@ Rails + React（Redux)メインで自社サービスの開発のお手伝いさ�
 
 ### 技術スタック
 
-<table>
-<tbody>
-<tr>
-  <th>サーバサイド</th>
-  <td><strong>Ruby, Ruby on Rails, Node, Express</strong>, Go, Gin</td>
-</tr>
-<tr>
-  <th>フロントエンド</th>
-  <td><strong>React, React Hooks, Next.js, Redux, TypeScript, </strong> BEM, SMACCSS, Styled Components, CSS Module, Vue, Vuex, Webapck</td>
-</tr>
-<tr>
-  <th>インフラ・データベース</th>
-  <td>AWS EC2/RDS/Cloud Front/S3/Route53/Cloud Watch, MySQL, PostgresSQL, Linux, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase</td>
-</tr>
-<tr>
-  <th>そのほか</th>
-  <td>React Native, Circle CI, Github Action, Git</td>
-</tr>
-</tbody>
-</table>
+#### サーバサイド
+
+<strong>Ruby, Ruby on Rails, Node, Express</strong>, Go, Gin
+
+
+#### フロントエンド
+
+<strong>React, React Hooks, Next.js, Redux, TypeScript, </strong> BEM, SMACCSS, Styled Components, CSS Module, Vue, Vuex, Webapck
+
+#### インフラ・データベース
+
+AWS EC2/RDS/Cloud Front/S3/Route53/Cloud Watch, MySQL, PostgresSQL, Linux, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase
+
+#### そのほか
+
+React Native, Circle CI, Github Action, Git
 
 
 ### その他スキル
