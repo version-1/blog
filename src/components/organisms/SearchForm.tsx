@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useEffect, useState, useCallback, useMemo } from 'react'
 import { Link } from 'gatsby'
 import { postShowPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
@@ -121,6 +121,7 @@ export const showForm = () =>
     containerStyle: styles.modalContainer
   })
 
+const inputRef = React.createRef()
 const SearchForm = () => {
   const [, setQuery] = useState('')
   const [result, setResult] = useState<any>()
@@ -142,7 +143,11 @@ const SearchForm = () => {
 
   return (
     <div css={styles.container}>
-      <SearchField containerStyle={styles.field} onChange={onChangeThrottled} />
+      <SearchField
+        initialFocus
+        containerStyle={styles.field}
+        onChange={onChangeThrottled}
+      />
       <ul css={styles.list}>
         {result && result.hits.length > 0 ? (
           result.hits.map((article: any) => {
