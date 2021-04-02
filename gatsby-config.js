@@ -19,7 +19,6 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-webpack-bundle-analyser-v2',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
