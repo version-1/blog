@@ -86,10 +86,10 @@ tags:
 フリーランスとしても直接仕事が取れるようになり、だんだんと短歌も上がりこんな感じでリモートしながら働けるようになりました。
 
 <div class="related-post">
-<ul>
-  <li><a href="/2018/10/14/full-remote-engineer">フルリモートエンジニアになったので、これまでの経緯をまとめてみた。</a></li>
-  <li><a href="/2019/02/04/summary-of-gadget-on-the-desk">リモートワークするエンジニアがデスク周りを充実させるために購入したものまとめ</a></li>
-</ul>
+  <ul>
+    <li><a href="/2018/10/14/full-remote-engineer">フルリモートエンジニアになったので、これまでの経緯をまとめてみた。</a></li>
+    <li><a href="/2019/02/04/summary-of-gadget-on-the-desk">リモートワークするエンジニアがデスク周りを充実させるために購入したものまとめ</a></li>
+  </ul>
 </div>
 
 

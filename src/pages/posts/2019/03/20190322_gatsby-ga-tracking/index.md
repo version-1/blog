@@ -20,7 +20,9 @@ related:
 そろそろ3ヶ月ほどにもなろうかというところです。
 
 <div class="related-post">
-  <a href="/2019/01/10/blog-renewal-by-gatsby">WordpressブログをGatsby+Netlifyでリプレースした話。</a>
+  <ul>
+    <li><a href="/2019/01/10/blog-renewal-by-gatsby">WordpressブログをGatsby+Netlifyでリプレースした話。</a></li>
+  </ul>
 </div>
 
 そんなこんなでブログを初めてGoogle Analyticsを自分のサイトにいれているとページごとPV

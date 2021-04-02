@@ -1,5 +1,4 @@
-import React, { useMemo } from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react'
 import Styles from 'lib/styles'
 import Bar from 'components/atoms/Bar'
 

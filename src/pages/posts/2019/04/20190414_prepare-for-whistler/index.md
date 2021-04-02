@@ -19,8 +19,12 @@ tags:
 カナダに行くのが初めてという方はこちらの記事も参考にしてみてください。
 
 <div class="related-post">
-<a href="/2019/04/11/checklist-for-first-time-canada-travel">初のカナダ旅行に行く前の個人的な趣味も入ったチェックリスト</a>
- </div>
+  <ul>
+    <li>
+      <a href="/2019/04/11/checklist-for-first-time-canada-travel">初のカナダ旅行に行く前の個人的な趣味も入ったチェックリスト</a>
+    </li>
+  </ul>
+</div>
 
 
 <div class="adsense"></div>

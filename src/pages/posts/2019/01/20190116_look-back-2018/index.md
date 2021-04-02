@@ -36,7 +36,11 @@ related:
 
 
 <div class="related-post">
- <a href="https://ver-1-0.net/2018/11/26/how-to-be-enginner">フリーランスエンジニアなるには？ソフトランディング戦略でいってみよう</a>
+  <ul>
+    <li>
+      <a href="https://ver-1-0.net/2018/11/26/how-to-be-enginner">フリーランスエンジニアなるには？ソフトランディング戦略でいってみよう</a>
+    </li>
+  </ul>
 </div>
 
 
@@ -126,5 +130,9 @@ React, React Native, Expressあたりの仕事を行うにあたって英語の�
 では。
 
 <div class="related-post">
- <a href="https://ver-1-0.net/2018/12/03/freelance-agent-select" >フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。</a>
+  <ul>
+    <li>
+      <a href="https://ver-1-0.net/2018/12/03/freelance-agent-select" >フリーランスエンジニアが初めに選ぶオススメのフリーランスエージェント3選。</a>
+    </li>
+  </ul>
 </div>
