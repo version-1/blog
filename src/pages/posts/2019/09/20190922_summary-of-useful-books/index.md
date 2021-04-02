@@ -30,7 +30,11 @@ tags:
 紹介できればと思っています。
 
 <div class="related-post">
-  <a href="/2019/03/28/three-phase-reading">難解な本、分厚い本の読み方。本を三段階に分けてよむ。</a>
+  <ul>
+    <li>
+      <a href="/2019/03/28/three-phase-reading">難解な本、分厚い本の読み方。本を三段階に分けてよむ。</a>
+    </li>
+  </ul>
 </div>
 
 ## 早速本の紹介

@@ -25,7 +25,11 @@ related:
 前回の記事はこちらです。
 
 <div class="related-post">
-  <a href="/2019/01/21/get-start-go">Go言語の文法を勉強して印象にのこったところまとめ。</a>
+  <ul>
+    <li>
+      <a href="/2019/01/21/get-start-go">Go言語の文法を勉強して印象にのこったところまとめ。</a>
+    </li>
+  </ul>
 </div>
 
 <div class="adsense"></div>

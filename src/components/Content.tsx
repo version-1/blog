@@ -58,7 +58,6 @@ const styles = new Styles({
     }
 
     th {
-      white-space: nowrap;
       padding: 4px;
       border-bottom: 1px solid #ccc;
       border-right: 1px solid #ccc;
@@ -84,8 +83,9 @@ const styles = new Styles({
 
     .related-post ul {
       background: #87ceeb30;
-      padding: 16px;
       border-radius: 0px 0px 8px 8px;
+      padding: 16px;
+      padding-bottom: 8px;
       margin: 0;
       margin-bottom: 16px;
     }

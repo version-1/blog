@@ -23,7 +23,11 @@ related:
 （というか別に休日もPCの前にいることが多いです。）
 
 <div class="related-post">
-  <a href="/2018/10/14/full-remote-engineer">フルリモートエンジニアになったので、これまでの経緯をまとめてみた。</a>
+  <ul>
+    <li>
+      <a href="/2018/10/14/full-remote-engineer">フルリモートエンジニアになったので、これまでの経緯をまとめてみた。</a>
+    </li>
+  </ul>
 </div>
 
 &nbsp;
