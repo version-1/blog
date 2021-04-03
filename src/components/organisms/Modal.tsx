@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { colors } from 'constants/index'
 import Styles from 'lib/styles'
 
 const style = new Styles({
   header: `
-    // height: 60px;
   `,
   content: ``,
   footer: `
@@ -48,11 +47,20 @@ interface StaticMethods {
   hide: () => void
 }
 
+export const context = createContext<any>({
+  state: {
+    show: false,
+    contents: [] as JSX.Element[],
+    header: <></>,
+    footer: <></>
+  }
+})
+
 const Modal: React.FC<any> & StaticMethods = () => {
   const [show, setShow] = useState(false)
   const [contents, setContents] = useState<JSX.Element[]>([])
-  const [header, setHeader] = useState<JSX.Element>()
-  const [footer, setFooter] = useState<JSX.Element>()
+  const [header, setHeader] = useState<JSX.Element | undefined>()
+  const [footer, setFooter] = useState<JSX.Element | undefined>()
   const [containerStyle, setContainerStyle] = useState<JSX.Element>()
   const [content] = contents
 
@@ -84,6 +92,19 @@ const Modal: React.FC<any> & StaticMethods = () => {
 
   return (
     <>
+      <context.Provider value={{
+          state: {
+            show,
+            contents,
+            header,
+            footer
+          },
+          actions: {
+            show: Modal.show,
+            hide: Modal.hide
+          }
+        }}
+      >
       <div css={[style.container, containerStyle, show || style.hidden]}>
         <div css={style.header}>{header}</div>
         <div css={style.content}>{content}</div>
@@ -93,6 +114,7 @@ const Modal: React.FC<any> & StaticMethods = () => {
         css={[style.overlay, show || style.hidden]}
         onClick={() => setShow(false)}
       ></div>
+        </context.Provider>
     </>
   )
 }

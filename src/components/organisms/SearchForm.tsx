@@ -1,10 +1,12 @@
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useContext, useState, useCallback, useMemo } from 'react'
+import { context as modalContext } from 'organisms/Modal'
 import { Link } from 'gatsby'
 import { postShowPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
 import SearchField from 'molecules/SearchField'
 import Modal from 'components/organisms/Modal'
 import Category from 'atoms/Category'
+import Icon from 'atoms/Icon'
 import { search } from 'services/algolia'
 import Styles from 'lib/styles'
 import throttle from 'lodash/throttle'
@@ -29,15 +31,18 @@ const styles = new Styles({
   `,
   field: `
     height: 48px;
-    margin: 16px 0;
+    margin-bottom: 16px;
     padding: 16px;
     border: 1px solid #f5f5f5;
     box-shadow: 0 0 10px 0px #5a4e7920;
   `,
   header: `
-    padding: 16px 32px;
+    padding: 8px;
     padding-bottom: 16px;
     font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   `,
   container: `
     padding: 16px;
@@ -114,12 +119,23 @@ const styles = new Styles({
     li:before {
       content: '#';
     }
+  `,
+  close: `
+    margin-right: 8px;
+    cursor: pointer;
   `
 }).style
 
-const Header = () => (
-  <h2 css={styles.header}>{i18next.t('labels.search-posts')}</h2>
-)
+const Header = () => {
+  const { actions } = useContext(modalContext)
+
+  return <div css={styles.header}>
+    <h2 css={styles.header}>{i18next.t('labels.search-posts')}</h2>
+    <div css={styles.close}>
+      <Icon icon="close" onClick={actions.hide} />
+    </div>
+  </div>
+}
 
 export const showForm = () =>
   Modal.show({
@@ -174,7 +190,10 @@ const SearchForm = () => {
                         {categories.map((category: string) => {
                           return (
                             <li className="category" key={category}>
-                              <Category category={category} language={language} />
+                              <Category
+                                category={category}
+                                language={language}
+                              />
                             </li>
                           )
                         })}

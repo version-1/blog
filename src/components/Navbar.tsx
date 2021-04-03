@@ -53,8 +53,6 @@ const styles = new Styles({
   `,
   icon: `
     cursor: pointer;
-    position: relative;
-    top: 2px;
   `,
   select: `
     background: transparent;
@@ -122,7 +120,9 @@ const Navbar: React.VFC<Props> = ({ language }) => {
     <header css={styles.container}>
       <div css={styles.content}>
         <div className="brand-logo">
-          <Link to={rootPath(language)}><LogoIcon /></Link>
+          <Link to={rootPath(language)}>
+            <LogoIcon />
+          </Link>
         </div>
         <nav className="navigation" role="navigation" css={styles.navigation}>
           <div css={styles.menuList}>
@@ -130,27 +130,33 @@ const Navbar: React.VFC<Props> = ({ language }) => {
           </div>
           <ul css={styles.right}>
             <li>
-              <select css={styles.select} onChange={onChangeLanguage}>
-                <option value="en" selected={language === 'en'}>
+              <select css={styles.select} defaultValue={language} onChange={onChangeLanguage}>
+                <option value="en">
                   English
                 </option>
-                <option value="ja" selected={language === 'ja'}>
+                <option value="ja">
                   日本語
                 </option>
               </select>
             </li>
             <li>
-              <Icon
-                css={styles.icon}
-                size={18}
-                color="#00004080"
-                icon="search"
-                onClick={showForm}
-              />
+              <span css={styles.icon}>
+                <Icon
+                  size={18}
+                  color="#00004080"
+                  icon="search"
+                  onClick={showForm}
+                />
+              </span>
             </li>
             <li>
               <a href={constants.meta.inquiry}>
-                <Icon css={styles.icon} size={18} color="#00004080" icon="mail" />
+                <Icon
+                  css={styles.icon}
+                  size={18}
+                  color="#00004080"
+                  icon="mail"
+                />
               </a>
             </li>
             <li css={styles.hamburger}>

@@ -63,7 +63,7 @@ const Footer: React.FC<Props> = ({ lang }) => {
         <ul css={styles.navigation}>
           {list.map((menu: { to: string; label: string }) => {
             return (
-              <li>
+              <li key={menu.to}>
                 <Link to={menu.to}>{menu.label}</Link>
               </li>
             )
