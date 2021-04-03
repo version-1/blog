@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Styles from 'lib/styles'
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
-import { aboutPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
 import Title from 'components/molecules/Title'
 import { colors } from 'constants/index'
@@ -93,7 +92,7 @@ const Promotion: React.VFC<Props> = () => {
         menta: imageSharp(original: { src: { regex: "/menta-main/" } }) {
           gatsbyImageData(height: 80, quality: 90)
         }
-        techpit: imageSharp(original: { src: { regex: "/no-image/" } }) {
+        techpit: imageSharp(original: { src: { regex: "/snake-game/" } }) {
           gatsbyImageData(height: 80, quality: 90)
         }
         eggCutter: imageSharp(
