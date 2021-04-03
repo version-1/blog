@@ -2,6 +2,7 @@
 templateKey: about
 language: en
 title: Profile
+slug: /about
 thumbnail: /about/thumbnail.png
 createdAt: 2019-01-01 08:04:08
 updatedAt: 2019-01-01 23:59:08
@@ -14,7 +15,7 @@ related:
 
 ## Introduction
 
-I am a Freelance Engineer.
+I am a Freelance Developer.
 
 Mainly, I am developing with React, React Native and Ruby on Rails.
 I help my clients which have their web servie to develop their application.
@@ -28,27 +29,21 @@ When  I did full-time work, I have worked as a leader of small team and worked w
 
 ### Technolody
 
-<table>
-<tbody>
-<tr>
-  <th>Server Side</th>
-  <td><strong>Ruby, Ruby on Rails, Node, Express</strong>, Laravel</td>
-</tr>
-<tr>
-  <th>Front End</th>
-  <td><strong>React,React Native, Redux, Vue, Vuex</strong>, Webapck, JQuery</td>
-</tr>
-<tr>
-  <th>Infra・DB</th>
-  <td><strong>MySQL, PostgresSQL, Linux, Docker</strong>, Nginx, Kuberenetes, Ansible, Apache</td>
-</tr>
-<tr>
-  <th>Others</th>
-  <td>VBA, Git</td>
-</tr>
-</tbody>
-</table>
+#### Server Side
 
+<strong>Ruby, Ruby on Rails, Node, Express</strong>, Laravel
+
+#### Front End
+
+<strong>React,React Native, Redux, Vue, Vuex</strong>
+
+#### Infra・DB
+
+AWS EC2/RDS/Cloud Front/S3/Route53/Cloud Watch, MySQL, PostgresSQL, Linux, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase
+
+#### Others
+
+React Native, Circle CI, Github Action, Git
 
 ### Accomplishments
 
@@ -85,7 +80,7 @@ Technology: React, Electron, Go, Next.js
 
 Snake Game implemented by React. Following video is it.
 
-<video poster="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
+<video width="300px" poster="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
 
 Site is <a href="https://version-1.github.io/react-snake-game/">HERE</a>
 

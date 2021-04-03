@@ -26,10 +26,10 @@ electronはその時以来になります。
 
 
 <div class="related-post">
-<ul>
-  <li><a href="/2017/04/09/electron-calculator-1" >Electron の勉強がてら電卓を作ってみた~その① - インストール編 -~</a></li>
-  <li><a href="/2017/04/10/electron-calculator-2" >Electron の勉強がてら電卓を作ってみた~その② - 実装編- ~</a></li>
-</ul>
+  <ul>
+    <li><a href="/2017/04/09/electron-calculator-1" >Electron の勉強がてら電卓を作ってみた~その① - インストール編 -~</a></li>
+    <li><a href="/2017/04/10/electron-calculator-2" >Electron の勉強がてら電卓を作ってみた~その② - 実装編- ~</a></li>
+  </ul>
 </div>
 
 今みるとこの記事2017年とかに書いてるんですね。二年前とかなのでそこまで昔ではないのかもしれませんが、個人的にはこの間に

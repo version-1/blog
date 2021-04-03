@@ -20,10 +20,10 @@ tags:
 
 
 <div class="related-post">
-<ul>
-  <li><a href="/2019/01/21/get-start-go">Go言語の文法を勉強して印象にのこったところまとめ。</a></li>
-  <li><a href="/2019/03/11/go-numpre">Go言語で数独（ナンプレ）を解くコードを書いてみた</a></li>
-</ul>
+  <ul>
+    <li><a href="/2019/01/21/get-start-go">Go言語の文法を勉強して印象にのこったところまとめ。</a></li>
+    <li><a href="/2019/03/11/go-numpre">Go言語で数独（ナンプレ）を解くコードを書いてみた</a></li>
+  </ul>
 </div>
 
 <div class="adsense"></div>

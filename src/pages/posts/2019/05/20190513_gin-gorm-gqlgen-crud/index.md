@@ -30,7 +30,9 @@ CRUDできるAPIを作ってみました。
 そこらへんの情報ものせていければ。
 
 <div class="related-post">
-<a href="/2019/05/02/docker-gin-gorm-dep-crud">Docker, Gin, Gorm, DepでCRUDできるAPI作成</a>
+  <ul>
+    <li><a href="/2019/05/02/docker-gin-gorm-dep-crud">Docker, Gin, Gorm, DepでCRUDできるAPI作成</a></li>
+  </ul>
 </div>
 
 <div class="adsense"></div>
@@ -52,7 +54,7 @@ CRUDできるAPIを作ってみました。
 gqlgenはgraphQLのサーバライブラリです。goのgraphQLサーバ用のライブラリは[graphql-go/graphql](https://github.com/graphql-go/graphql)
 などもあるのですが、スキーマドリブンで開発が進められそうな[99designs/gqlgen](https://github.com/99designs/gqlgen)を使ってみました。
 
-graphql-goの方はinterface{}が大量にでてきて、せっかくの型情報が有効に使わず微妙なので使うのはやめておきました。
+graphql-goの方はinterface{}が大量にでてきて、せっかくの型情報が有効に使えず微妙なので使うのはやめておきました。
 gqlgenを使うと
 
 1. schemaを定義
@@ -206,7 +208,7 @@ type Todo struct {
 &nbsp;
 
 ここではモデルを構造体で定義しているのですが、Gormのドキュメントを見ればわかる通り
-モデル定義に埋め込みを使ってのように書く方がスマートかと思うのですが、
+モデル定義に埋め込みを使って書く方がスマートかと思うのですが、
 この書き方だとコードを生成する時のコマンドでエラーがでてしまうので、一旦モデルのフィールドをベタ書きしています。
 (コードとかちゃんと読んだら打開策はあるのかも）
 
