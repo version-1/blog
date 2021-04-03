@@ -12,6 +12,7 @@ import Styles from 'lib/styles'
 import throttle from 'lodash/throttle'
 import { colors } from 'constants/index'
 import { mq } from 'constants/index'
+import { AlgoriaIcon } from 'components/atoms/SpecialIcon'
 
 const styles = new Styles({
   modalContainer: `
@@ -123,23 +124,39 @@ const styles = new Styles({
   close: `
     margin-right: 8px;
     cursor: pointer;
+  `,
+  footer: `
+    padding: 0px 16px;
+    display: flex;
+    justify-content: flex-end;
   `
 }).style
 
 const Header = () => {
   const { actions } = useContext(modalContext)
 
-  return <div css={styles.header}>
-    <h2 css={styles.header}>{i18next.t('labels.search-posts')}</h2>
-    <div css={styles.close}>
-      <Icon icon="close" onClick={actions.hide} />
+  return (
+    <div css={styles.header}>
+      <h2 css={styles.header}>{i18next.t('labels.search-posts')}</h2>
+      <div css={styles.close}>
+        <Icon icon="close" onClick={actions.hide} />
+      </div>
     </div>
-  </div>
+  )
+}
+
+const Footer = () => {
+  return (
+    <div css={styles.footer}>
+      <AlgoriaIcon />
+    </div>
+  )
 }
 
 export const showForm = () =>
   Modal.show({
     header: <Header />,
+    footer: <Footer />,
     content: <SearchForm />,
     containerStyle: styles.modalContainer
   })
