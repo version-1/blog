@@ -71,7 +71,9 @@ const styles = new Styles({
     margin: auto;
 
     .gatsby-image-wrapper {
+      border-radius: 8px;
       height: 100%;
+      overflow: hidden;
     }
 
     img {
@@ -115,7 +117,7 @@ const Promotion: React.VFC<Props> = () => {
             const image = getImage(data[promotion.thumbnail].gatsbyImageData)
             return (
               <a key={promotion.title} href={promotion.link}>
-                <div css={styles.card} >
+                <div css={styles.card}>
                   <div css={styles.cardLeft}>
                     <div css={styles.cardTitle}>
                       <h3>{promotion.title}</h3>
@@ -126,7 +128,11 @@ const Promotion: React.VFC<Props> = () => {
                   </div>
                   <div css={styles.cardRight}>
                     <div css={styles.cardImage}>
-                      <GatsbyImage image={image} alt={promotion.title} />
+                      <GatsbyImage
+                        placeholder="tracedSVG"
+                        image={image!}
+                        alt={promotion.title}
+                      />
                     </div>
                   </div>
                 </div>

@@ -5,6 +5,7 @@ import Styles from 'lib/styles'
 const styles = new Styles({
   container: `
     color: ${colors.fontColor};
+    border-radius: 16px;
 
     img {
       border-radius: 16px;
@@ -29,9 +30,9 @@ export const ProfileIcon = () => {
 export const LogoIcon = () => {
   return (
     <StaticImage
-      css={styles.container}
       src={`../../assets/images/logo.png`}
-      alt="profile"
+      placeholder="blurred"
+      alt="logo"
       width={32}
       height={32}
       quality={90}

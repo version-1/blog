@@ -32,4 +32,4 @@ const PostList: React.VFC<Props> = ({ posts, pagination = {} }: any) => {
   )
 }
 
-export default React.memo(PostList)
+export default React.memo(PostList, () => true)
