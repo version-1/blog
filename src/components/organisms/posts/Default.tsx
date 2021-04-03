@@ -146,7 +146,7 @@ const Post: React.VFC<any> = ({ post }) => {
         </div>
         <div css={styles.right}>
           {image ? (
-            <GatsbyImage image={image!} alt={title} />
+            <GatsbyImage placeholder="tracedSVG" image={image!} alt={title} />
           ) : (
             <img width={160} height={160} src={thumbnailUrl} alt={title} />
           )}
