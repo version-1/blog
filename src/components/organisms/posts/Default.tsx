@@ -56,6 +56,10 @@ const styles = new Styles({
       position: absolute;
       bottom: 16px;
     }
+
+    ${mq.md} {
+      width: 100%;
+    }
   `,
   left: `
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
@@ -64,6 +68,7 @@ const styles = new Styles({
     width: 302px;
     ${mq.md} {
       width: 100%;
+      min-width: 100%;
       border-radius: 8px;
     }
   `,
@@ -146,7 +151,7 @@ const Post: React.VFC<any> = ({ post }) => {
         </div>
         <div css={styles.right}>
           {image ? (
-            <GatsbyImage placeholder="tracedSVG" image={image!} alt={title} />
+            <GatsbyImage placeholder="none" image={image!} alt={title} />
           ) : (
             <img width={160} height={160} src={thumbnailUrl} alt={title} />
           )}

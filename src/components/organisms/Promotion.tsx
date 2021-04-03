@@ -129,7 +129,7 @@ const Promotion: React.VFC<Props> = () => {
                   <div css={styles.cardRight}>
                     <div css={styles.cardImage}>
                       <GatsbyImage
-                        placeholder="tracedSVG"
+                        placeholder="none"
                         image={image!}
                         alt={promotion.title}
                       />
