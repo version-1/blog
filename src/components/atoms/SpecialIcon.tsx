@@ -18,6 +18,7 @@ export const ProfileIcon = () => {
     <StaticImage
       css={styles.container}
       src={`../../assets/images/profile.png`}
+      placeholder="none"
       alt="profile"
       width={32}
       height={32}
@@ -31,7 +32,7 @@ export const LogoIcon = () => {
   return (
     <StaticImage
       src={`../../assets/images/logo.png`}
-      placeholder="blurred"
+      placeholder="none"
       alt="logo"
       width={32}
       height={32}
