@@ -5,7 +5,7 @@ import { aboutPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
 import Title from 'components/molecules/Title'
 import { colors } from 'constants/index'
-import ProfileIcon from 'components/atoms/ProfileIcon'
+import { ProfileIcon } from 'components/atoms/SpecialIcon'
 import ProfileSNSLinks from 'components/molecules/ProfileSNSLinks'
 
 const styles = new Styles({

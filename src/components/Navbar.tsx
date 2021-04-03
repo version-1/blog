@@ -5,6 +5,7 @@ import Styles from 'lib/styles'
 import { showForm } from 'organisms/SearchForm'
 import { showForm as showMenu } from 'organisms/Menu'
 import Icon from 'atoms/Icon'
+import { LogoIcon } from 'atoms/SpecialIcon'
 import { mq } from 'constants/index'
 import constants from 'config/constants'
 
@@ -79,6 +80,7 @@ const styles = new Styles({
     }
   `,
   menuList: `
+    margin-left: 32px;
     ${mq.md} {
       display: none;
     }
@@ -120,7 +122,7 @@ const Navbar: React.VFC<Props> = ({ language }) => {
     <header css={styles.container}>
       <div css={styles.content}>
         <div className="brand-logo">
-          <Link to={rootPath(language)}>Ver.1.0</Link>
+          <Link to={rootPath(language)}><LogoIcon /></Link>
         </div>
         <nav className="navigation" role="navigation" css={styles.navigation}>
           <div css={styles.menuList}>
@@ -140,6 +142,7 @@ const Navbar: React.VFC<Props> = ({ language }) => {
             <li>
               <Icon
                 css={styles.icon}
+                size={18}
                 color="#00004080"
                 icon="search"
                 onClick={showForm}
@@ -147,12 +150,13 @@ const Navbar: React.VFC<Props> = ({ language }) => {
             </li>
             <li>
               <a href={constants.meta.inquiry}>
-                <Icon css={styles.icon} color="#00004080" icon="mail" />
+                <Icon css={styles.icon} size={18} color="#00004080" icon="mail" />
               </a>
             </li>
             <li css={styles.hamburger}>
               <Icon
                 css={styles.icon}
+                size={24}
                 color="#00004080"
                 icon="menu"
                 onClick={onClickMenu}

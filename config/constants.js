@@ -16,11 +16,11 @@ module.exports = {
     }
   },
   meta: {
-    author: 'version1',
+    author: 'Jiro',
     siteUrl: 'https://ver-1-0.net',
-    logo: 'https://statics.ver-1-0.xyz/uploads/others/logo.png',
+    logo: 'https://statics.ver-1-0.xyz/uploads/others/default-thumbnail.png',
     hostname: 'ver-1-0.net',
-    title: 'So Far, So Tech',
+    title: 'Ver.1.0',
     description:
       'フリーランスエンジニアのブログです。フリーランス、プログラミング、旅行について「ブログ書け、コード書け」というテーマでやらせてもらってます。',
     sitemap: '/sitemap.xml',
