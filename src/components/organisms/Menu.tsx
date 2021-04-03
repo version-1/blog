@@ -18,6 +18,7 @@ const styles = new Styles({
       top: 0;
       left: 0;
       width: 100%;
+      max-height: initial;
       height: 100vh;
     }
   `,
@@ -28,6 +29,7 @@ const styles = new Styles({
     border-bottom: 1px solid #f0f0f0;
     display: flex;
     justify-content: flex-end;
+
     ${mq.md} {
       margin-bottom: 0;
     }

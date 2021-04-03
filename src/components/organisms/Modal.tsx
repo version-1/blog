@@ -87,6 +87,9 @@ const Modal: React.FC<any> & StaticMethods = () => {
     Modal.hide = () => {
       setShow(false)
       setContents(contents.slice(0, -1))
+      setHeader(<></>)
+      setFooter(<></>)
+      setContainerStyle(undefined)
     }
   }, [])
 
