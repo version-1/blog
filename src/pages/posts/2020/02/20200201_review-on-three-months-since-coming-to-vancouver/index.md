@@ -116,7 +116,11 @@ tags:
 その時の記事はこちらです。
 
 <div class="related-post">
-  <a href="/2019/12/06/how-to-create-logo-for-private-project">デザイン実務経験ゼロのエンジニアが個人サービスでのアイコンの作り方を考える</a>
+  <ul>
+    <li>
+      <a href="/2019/12/06/how-to-create-logo-for-private-project">デザイン実務経験ゼロのエンジニアが個人サービスでのアイコンの作り方を考える</a>
+    </li>
+  </ul>
 </div>
 
 公開当初は結構な人が読んでくれたみたいで来年もまたやってみたいなと思います。

@@ -106,5 +106,7 @@ tags:
 では。
 
 <div class="related-post">
-  <a href="/2019/09/22/summary-of-useful-books">引っ越しの荷物をまとめながら考えた読んでためになった本のリスト</a>
+  <ul>
+    <li><a href="/2019/09/22/summary-of-useful-books">引っ越しの荷物をまとめながら考えた読んでためになった本のリスト</a></li>
+  </ul>
 </div>

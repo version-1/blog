@@ -160,7 +160,9 @@ tags:
 調査の一部でフリーランスと会社員のスキルに対する意識比較に関する図があるのですが、個人的に以下のような記事を書いている手前なかなか面白い結果でした。
 
 <div class="related-post">
-<a href="/2019/03/02/market-sense-for-freelance">フリーランスには「マーケット感覚」が必要だと思う</a>
+  <ul>
+     <li><a href="/2019/03/02/market-sense-for-freelance">フリーランスには「マーケット感覚」が必要だと思う</a></li>
+  </ul>
 </div>
 
 

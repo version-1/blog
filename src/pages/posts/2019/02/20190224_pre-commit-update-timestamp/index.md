@@ -21,7 +21,11 @@ WordpressはDBを使っているから当たり前といえば当たり前なの
 これがベストかと言われるとちょっとわからないのですが、gitのフックを使ってやるのがいいんじゃないかなと考えて仕組みを作ってみたのでその手順をまとめておきます。
 
 <div class="related-post">
-  <a href="/2019/01/10/blog-renewal-by-gatsby">WordpressブログをGatsby+Netlifyでリプレースした話。</a>
+  <ul>
+    <li>
+      <a href="/2019/01/10/blog-renewal-by-gatsby">WordpressブログをGatsby+Netlifyでリプレースした話。</a>
+    </li>
+  </ul>
 </div>
 
 ## Gitのフック

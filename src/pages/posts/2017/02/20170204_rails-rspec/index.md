@@ -80,14 +80,16 @@ rails generate rspec:install
 ```
 
 テストの実行方法は以下です。
+
 ```bash
 # モジュール単位
 bundle exec rspec spec/[ models / helpers / controller / .. ]
 
 # ファイル単位
 bundle exec rspec spec/helpers/homes_helper_rspec.rb
-</code></pre class="ruby">
+```
 テストコードは以下の通り
+
 ```ruby
 require 'rails_helper'
 include(HomesHelper)
@@ -117,9 +119,6 @@ RSpec.describe HomesHelper, type: :helper do
 end
 
 ```
-&nbsp;
-
-&nbsp;
 
 it から end までがテストの一単位ですね。
 実行してみます。
