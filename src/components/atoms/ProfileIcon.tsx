@@ -4,8 +4,11 @@ import Styles from 'lib/styles'
 
 const styles = new Styles({
   container: `
-    border-radius: 16px;
     color: ${colors.fontColor};
+
+    img {
+      border-radius: 16px;
+    }
   `,
 }).style
 
