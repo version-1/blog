@@ -9,6 +9,11 @@ import { tagPath, postShowPath } from 'lib/routes'
 import { mq } from 'constants/index'
 
 const styles = new Styles({
+  link: `
+    ${mq.md} {
+      width: 100%;
+    }
+  `,
   container: `
     display: flex;
     border-radius: 8px;
@@ -25,7 +30,7 @@ const styles = new Styles({
     padding: 16px;
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
-    border-radius: 8px 0px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
     height: 70%;
     position: relative;
     color: black;
@@ -35,6 +40,9 @@ const styles = new Styles({
       letter-spacing: 0.8px;
       margin-top: 4px;
       font-size: 14px;
+      ${mq.md} {
+        font-size: 16px;
+      }
     }
 
     p {
@@ -112,7 +120,7 @@ const Post: React.VFC<any> = ({ post }) => {
   const path = postShowPath(slug, language)
 
   return (
-    <Link to={path}>
+    <Link css={styles.link} to={path}>
       <div css={styles.container}>
         <div css={styles.left}>
           <div css={styles.header}>

@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Styles from 'lib/styles'
 import Icon from 'components/atoms/Icon'
 import { colors } from 'constants/index'
+import { mq } from 'constants/index'
 
 const PER_PAGE = 6
 
@@ -11,6 +12,10 @@ const styles = new Styles({
      background: #CCCCCC30;
      border-radius: 32px;
      padding: 4px;
+     ${mq.md} {
+       margin-top: 16px;
+       margin-bottom: 32px;
+     }
   `,
   content: `
     display: flex;

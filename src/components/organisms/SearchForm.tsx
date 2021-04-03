@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react'
+import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'gatsby'
 import { postShowPath } from 'lib/routes'
 import { instance as i18next } from 'lib/i18next'
 import SearchField from 'molecules/SearchField'
 import Modal from 'components/organisms/Modal'
+import Category from 'atoms/Category'
 import { search } from 'services/algolia'
 import Styles from 'lib/styles'
 import throttle from 'lodash/throttle'
@@ -16,13 +17,14 @@ const styles = new Styles({
     min-height: auto;
     max-height: 80vh;
     overflow: scroll;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 100%);
 
     ${mq.md} {
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
+      max-height: 100vh;
     }
   `,
   field: `
@@ -30,17 +32,19 @@ const styles = new Styles({
     margin: 16px 0;
     padding: 16px;
     border: 1px solid #f5f5f5;
+    box-shadow: 0 0 10px 0px #5a4e7920;
   `,
   header: `
-    background: white;
     padding: 16px 32px;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
   `,
   container: `
     padding: 16px;
   `,
   empty: `
     background: white;
+    box-shadow: 0 0 10px 0px #5a4e7920;
     border-radius: 8px;
     border-radius: 8px;;
     display: flex;
@@ -57,6 +61,7 @@ const styles = new Styles({
   `,
   card: `
     background: white;
+    box-shadow: 0 0 10px 0px #5a4e7920;
     border-radius: 8px;;
     border: 1px solid #f1f1f1;
     display: block;
@@ -82,6 +87,7 @@ const styles = new Styles({
   `,
   category: `
     display: flex;
+    align-items: baseline;
 
     li {
       margin-right: 4px;
@@ -96,7 +102,8 @@ const styles = new Styles({
   `,
   tag: `
     display: flex;
-    margin-left: 8px;
+    align-items: baseline;
+    font-size: 10px;
     font-weight: normal;
     font-style: italic;
 
@@ -121,7 +128,6 @@ export const showForm = () =>
     containerStyle: styles.modalContainer
   })
 
-const inputRef = React.createRef()
 const SearchForm = () => {
   const [, setQuery] = useState('')
   const [result, setResult] = useState<any>()
@@ -155,7 +161,7 @@ const SearchForm = () => {
               title,
               excerpt,
               language,
-              frontmatter: { categoryLabels, createdAt, slug, tagLabels }
+              frontmatter: { categories, createdAt, slug, tagLabels }
             } = article
             return (
               <li key={article.id}>
@@ -163,28 +169,28 @@ const SearchForm = () => {
                   <p>{createdAt.slice(0, 10)}</p>
                   <h2>{title}</h2>
                   <p className="footer">
-                    {categoryLabels.length && (
+                    {categories?.length && (
                       <ul css={styles.category}>
-                        {categoryLabels.map((label: string) => {
+                        {categories.map((category: string) => {
                           return (
-                            <li className="category" key={label}>
-                              {label}
+                            <li className="category" key={category}>
+                              <Category category={category} language={language} />
                             </li>
                           )
                         })}
                       </ul>
                     )}
-                    <ul css={styles.tag}>
-                      {tagLabels.map((label: string) => {
-                        return (
-                          <li className="tag" key={label}>
-                            {label}
-                          </li>
-                        )
-                      })}
-                    </ul>
                   </p>
                   <p className="body">{excerpt.slice(0, 200) + '...'}</p>
+                  <ul css={styles.tag}>
+                    {tagLabels.map((label: string) => {
+                      return (
+                        <li className="tag" key={label}>
+                          {label}
+                        </li>
+                      )
+                    })}
+                  </ul>
                 </Link>
               </li>
             )
