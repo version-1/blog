@@ -110,6 +110,14 @@ const styles = new Styles({
     .related-post li a {
       color: #0066C5;
     }
+
+    p > code.language-text {
+      font-size: 12px;
+      color: #ff4545 !important;
+      background: #f5f5f5 !important;
+      padding: 2px 4px !important;
+      border: 1px solid lightgray;
+    }
   `
 }).style
 
