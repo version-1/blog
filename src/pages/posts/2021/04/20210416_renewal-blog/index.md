@@ -42,7 +42,7 @@ tags:
 
 ちなみに以前はこういった形でした。
 
-![前のバージョンのブログ](https://statics.ver-1-0.xyz/uploads/2021/04/20210416_renewal/blog-v1.0.png)
+![前のバージョンのブログ](https://statics.ver-1-0.xyz/uploads/2021/04/20210416_renewal-blog/blog-v1.0.png)
 
 自分のブログはこれで大体4代目くらいになります。初代はWordpressで作っていたのですが、ページ読み込みの重さや改めてPHPを書く辛さなどなど
 から2年ほど前に一年発起し、Wordpress => Gatsbyのリプレイスを行いました。
@@ -54,7 +54,7 @@ tags:
 
 ## 全体の構成
 
-![インフラ構成](https://statics.ver-1-0.xyz/uploads/2021/04/20210416_renewal/infra-sturcture.png)
+![インフラ構成](https://statics.ver-1-0.xyz/uploads/2021/04/20210416_renewal-blog/infra-sturcture.png)
 
 Netlifyに移行した時からこちらのような構成だったので構成自体には特に変わりはありません。
 
@@ -319,7 +319,7 @@ Glassmorphism ポイ透け感を入れたサイトにしました。実際に動
 サムネイルなどは表示しないようにしました。これは自分でもモバイルで色々な技術系記事をみるのですが、サムネイルがクリックの決め手になることが少ないので
 まぁ特になくても影響ないとい判断でサムネイルは表示しないシンプルな画面にしました。
 
-![モバイルのトップ画面](https://statics.ver-1-0.xyz/uploads/2021/04/20210416_renewal/mobile-top.png)
+![モバイルのトップ画面](https://statics.ver-1-0.xyz/uploads/2021/04/20210416_renewal-blog/mobile-top.png)
 
 結果的に元々黄色スコアだったものが緑まで改善されたのと、だいぶ見やすくなったというのがあるのでやってみて成功でした。
 
