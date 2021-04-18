@@ -5,16 +5,17 @@ import Pagination from 'components/Pagination'
 interface Props {
   posts: Post[]
   pagination?: IPagination
+  rowStyle?: any
 }
 
-const PostList: React.VFC<Props> = ({ posts, pagination = {} }: any) => {
+const PostList: React.VFC<Props> = ({ posts, pagination = {}, rowStyle }: any) => {
   const { index, totalCount, namespace, per } = pagination
   return (
     <div className="post-list-container">
       <ul className="section-list">
         {posts.map((post: any) => (
           <li key={post.id}>
-            <Post post={post} />
+            <Post containerStyle={rowStyle} post={post} />
           </li>
         ))}
       </ul>
