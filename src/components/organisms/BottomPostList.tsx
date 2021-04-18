@@ -21,6 +21,10 @@ const styles = new Styles({
       padding: 8px;
     }
   `,
+  postContainerStyle: `
+    margin: auto;
+    margin-bottom: 16px;
+  `
 }).style
 
 const BottomPostList = (props: any) => {
@@ -33,7 +37,7 @@ const BottomPostList = (props: any) => {
   return (
     <div css={styles.container} className="bottom-posts">
       <h3 className="bottom-post-title">{_title}</h3>
-      <PostList posts={posts} />
+      <PostList rowStyle={styles.postContainerStyle} posts={posts} />
     </div>
   )
 }

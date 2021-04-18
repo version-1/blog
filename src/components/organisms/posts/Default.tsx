@@ -109,7 +109,7 @@ const styles = new Styles({
   `
 }).style
 
-const Post: React.VFC<any> = ({ post }) => {
+const Post: React.VFC<any> = ({ post, containerStyle }) => {
   const {
     thumbnail,
     title,
@@ -126,7 +126,7 @@ const Post: React.VFC<any> = ({ post }) => {
 
   return (
     <Link css={styles.link} to={path}>
-      <div css={styles.container}>
+      <div css={[styles.container, containerStyle]}>
         <div css={styles.left}>
           <div css={styles.header}>
             <Category category={category} language={language} />
