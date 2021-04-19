@@ -26,6 +26,7 @@ const styles = new Styles({
   `,
   tags: `
     display: flex;
+    align-items: center;
     margin-bottom: 8px;
 
     li {
