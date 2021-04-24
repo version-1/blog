@@ -14,7 +14,7 @@ const styles = new Styles({
     margin-left: 32px;
     border-radius: 8px;
     margin-top: 256px;
-    max-height: 60vh;
+    max-height: 75vh;
     overflow: scroll;
     position: sticky;
     top: 0;

@@ -10,6 +10,7 @@ canonical: https://note.com/version1/n/n10fcc3df7a5c
 categories:
   - column
 tags:
+  - product
   - egg-cutter
 ---
 
