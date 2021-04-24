@@ -16,6 +16,19 @@ related:
   - dummy
 ---
 
+
+改めてアルゴリズムを勉強したり、英語のリソースを漁ってみるとかなりシンプルな解法があったのでそちらを紹介します。
+コードはこちらです。ざっくり100行くらいでほとんどの数独の問題が解けるはずです。
+
+[https://github.com/version-1/go-numpre](https://github.com/version-1/go-numpre)
+
+再帰を使って実装しているのですが、再帰を使うと本当信じられないほど短いコードで実装できますね。
+実装にあたってはこちらの動画を参考にしました。
+
+[Python Sudoku Solver - Computerphile](https://www.youtube.com/watch?v=G_UYXzGuqvM&t=451s)
+
+## ↓↓↓ 以下元の古い記事
+
 最近Goの勉強をしており（とはいえ割とマイペースではありますが）これらの記事をあげたりしているのですが、
 
 <div class="related-post">
