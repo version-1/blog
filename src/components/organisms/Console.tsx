@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Link } from 'gatsby'
 import Styles from 'lib/styles'
 import {
@@ -32,7 +32,7 @@ const styles = new Styles({
     a {
       display: block;
       color: white;
-    }
+    } 
 
     .underline {
       margin-top: 8px;
@@ -89,10 +89,12 @@ const styles = new Styles({
       background: red;
       color: red;
     }
+
     li:nth-child(2) {
       background: orange;
       color: orange;
     }
+
     li:nth-child(3) {
       background: green;
       color: green;
@@ -108,7 +110,6 @@ const styles = new Styles({
     width: 300px;
   `,
   body: `
-
   `,
   menuItem: `
     &:hover .underline {
@@ -138,6 +139,7 @@ const styles = new Styles({
   tag: `
     display: flex;
     flex-wrap: wrap;
+
     li {
       margin-right: 4px;
       padding-bottom: 2px;
@@ -204,10 +206,29 @@ interface Props {
   context: any
 }
 
+const pickTags = {
+  ja: ['work', 'career', 'product', 'go', 'javascript', 'ruby', 'react', 'rails', 'ci', 'css', 'design', 'gatsby', 'docker', 'test', 'canada', 'essay', 'lifehack', 'freelance', 'frontend', 'serverside'],
+  en: []
+}
+
+const getTagList = (tags: string[], language: Lang) => {
+  const tagMap = tags.reduce((acc: { [key: string]: boolean }, item: string) => ({ ...acc, [item]: true }), {})
+  pickTags[language].forEach((tag: string) => {
+    if (!tagMap[tag as string]) {
+      throw new Error(`${tag} tag is not found`)
+    }
+    delete tagMap[tag]
+  })
+
+  return [...pickTags[language], ...Object.keys(tagMap)].slice(0, 24)
+}
+
 const Console: React.FC<Props> = ({ path, context }) => {
   const { language } = context
   const { categories, tags } = context.layout
   const _menu = menu(language)
+
+  const tagList = useMemo(() => getTagList(tags, language), [tags])
 
   return (
     <div css={styles.container}>
@@ -262,7 +283,7 @@ const Console: React.FC<Props> = ({ path, context }) => {
             </ul>
             <p>$ tag</p>
             <ul css={styles.tag}>
-              {tags.slice(0, 20).map((tag: string) => {
+              {tagList.map((tag: string) => {
                 const to = tagPath(tag, language)
                 const active = to === path
                 return (

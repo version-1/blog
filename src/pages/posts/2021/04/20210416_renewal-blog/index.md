@@ -9,8 +9,11 @@ thumbnail: /2021/04/20210416_renewal-blog/thumbnail.png
 categories:
   - engineering
 tags:
+  - product
   - gatsby
   - react
+  - design
+  - javascript
 ---
 
 ここしばらく就活をしていてバタバタしていたのですが、無事オファーを頂き仕事も開始して落ち着いて来たので、
