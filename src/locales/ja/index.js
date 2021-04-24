@@ -137,7 +137,7 @@ exports.module = {
     php: 'PHP',
     phpunit: 'PHPUnit',
     plugin: 'プラグイン',
-    product: 'つくってみた',
+    product: 'Product',
     postgress: 'PostgresSQL',
     pomodoro: 'ポモドーロ',
     react: 'React',
