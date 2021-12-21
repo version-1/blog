@@ -70,6 +70,10 @@ const styles = new Styles({
       border-bottom: 1px solid #ccc;
     }
 
+    aside {
+      font-size: 10px;
+    }
+
     .related-post:before {
       margin-top: 16px;
       border-radius: 8px 8px 0px 0px;
