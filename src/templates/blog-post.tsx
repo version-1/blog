@@ -22,13 +22,15 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 const styles = new Styles({
   container: `
-    max-width: 672px;
+    max-width: 960px;
+    min-width: 960px;
     padding: 32px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.56) 100%);
 
     ${mq.md} {
       padding: 0;
-      width: 100%:
+      width: 100%;
+      min-width: 100%;
     }
   `,
   content: `

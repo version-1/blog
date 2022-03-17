@@ -65,7 +65,7 @@ const global = css`
 
 const styles = new Styles({
   main: `
-    max-width: 1000px;
+    max-width: 1296px;
     margin: auto;
     margin-top: 64px;
     display: flex;

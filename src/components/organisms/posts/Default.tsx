@@ -17,12 +17,12 @@ const styles = new Styles({
   container: `
     display: flex;
     border-radius: 8px;
-    height: 184px;
-    width: 494px;
+    width: 896px;
     margin-bottom: 16px;
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
     ${mq.md} {
+      height: 240px;
       width: 100%;
     }
   `,
@@ -36,10 +36,10 @@ const styles = new Styles({
     color: black;
 
     h2 {
-      line-height: 1.2;
+      line-height: 1.4;
       letter-spacing: 0.8px;
-      margin-top: 4px;
-      font-size: 14px;
+      margin-top: 16px;
+      font-size: 18px;
       ${mq.md} {
         font-size: 16px;
       }
@@ -47,12 +47,12 @@ const styles = new Styles({
 
     p {
       font-weight: bold;
-      font-size: 10px;
+      font-size: 14px;
     }
 
     aside {
       color: background: #6F6F6F;
-      font-size: 10px;
+      font-size: 14px;
       position: absolute;
       bottom: 16px;
     }
@@ -65,7 +65,7 @@ const styles = new Styles({
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
     border-radius: 8px 0px 0px 8px;
-    width: 302px;
+    width: 550px;
     ${mq.md} {
       width: 100%;
       min-width: 100%;
@@ -80,7 +80,7 @@ const styles = new Styles({
     }
 
     img {
-      border-radius: 8px;
+      border-radius: 0px 8px 8px 0px;
     }
   `,
   footer: `
@@ -153,7 +153,7 @@ const Post: React.VFC<any> = ({ post, containerStyle }) => {
           {image ? (
             <GatsbyImage placeholder="none" image={image!} alt={title} />
           ) : (
-            <img width={160} height={160} src={thumbnailUrl} alt={title} />
+            <img width={280} height={280} src={thumbnailUrl} alt={title} />
           )}
         </div>
       </div>
