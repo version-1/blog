@@ -22,7 +22,7 @@ const styles = new Styles({
   content: `
     display: flex;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1296px;
     margin: auto;
   `,
   menu: `

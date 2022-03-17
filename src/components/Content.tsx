@@ -1,11 +1,16 @@
 import React from 'react'
 import Styles from 'lib/styles'
+import { mq } from 'constants/index'
 
 const styles = new Styles({
   container: `
     margin-bottom: 64px;
     line-height: 180%;
     letter-spacing: 0.2px;
+    font-size: 16px;
+    ${mq.md} {
+      font-size: 14px;
+    }
 
     ul {
       padding-left: 16px;

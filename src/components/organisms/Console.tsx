@@ -11,15 +11,19 @@ import {
 
 const styles = new Styles({
   container: `
-    max-width: 1000px;
+    max-width: 1296px;
     margin: auto;
     margin-top: 64px;
+
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.8px;
   `,
   content: `
     background: rgba(19, 11, 51, 0.6);
     border-radius: 8px;
-    min-height: 380px;
-    width: 640px;
+    min-height: 480px;
+    width: 960px;
   `,
   header: `
     background: rgba(19, 11, 51, 0.6);
@@ -32,7 +36,7 @@ const styles = new Styles({
     a {
       display: block;
       color: white;
-    } 
+    }
 
     .underline {
       margin-top: 8px;

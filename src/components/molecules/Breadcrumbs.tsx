@@ -12,7 +12,7 @@ const styles = new Styles({
     display: flex;
     align-items: center;
     color: white;
-    font-size: 10px;
+    font-size: 16px;
     margin-bottom: 16px;
 
     li {
