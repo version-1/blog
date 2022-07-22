@@ -15,7 +15,7 @@ GEM
     nokogiri (1.9.1)
       mini_portile2 (~> 2.4.0)
     thread_safe (0.3.6)
-    tzinfo (1.2.5)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
 
 PLATFORMS
