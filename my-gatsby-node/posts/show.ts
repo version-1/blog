@@ -10,7 +10,7 @@ const { meta } = config
 
 const genShowPath = (edge: any) => {
   const { language, slug } = edge.frontmatter
-  const _path = slug || edge.fields.slug
+  const _path = slug
   return genPath(language, _path)
 }
 

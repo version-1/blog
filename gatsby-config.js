@@ -18,7 +18,7 @@ module.exports = {
     'gatsby-plugin-twitter',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-webpack-bundle-analyser-v2',
+    // 'gatsby-plugin-webpack-bundle-analyser-v2', // TODO:
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -112,10 +112,8 @@ module.exports = {
             }
           }
           allSitePage {
-            edges {
-              node {
-                path
-              }
+            nodes {
+              path
             }
           }
       }`
@@ -140,26 +138,31 @@ module.exports = {
           {
             serialize,
             query: queries(['ja', 'en'], 1000),
+            title: 'rss all',
             output: '/rss.xml'
           },
           {
             serialize,
             query: queries(['ja'], 1000),
+            title: 'rss ja',
             output: '/rss.ja.xml'
           },
           {
             serialize,
             query: queries(['en'], 1000),
+            title: 'rss en',
             output: '/rss.en.xml'
           },
           {
             serialize,
             query: queries(['ja']),
+            title: 'rss latest ja',
             output: '/latest.ja.xml'
           },
           {
             serialize,
             query: queries(['en']),
+            title: 'rss latest en',
             output: '/latest.en.xml'
           }
         ]

@@ -52,9 +52,6 @@ const enIndexQuery = `
         }
         node {
           id
-          fields {
-            slug
-          }
           excerpt(truncate: true, pruneLength: 300)
           ${frontmatter}
         }
@@ -65,9 +62,6 @@ const enIndexQuery = `
       }
       nodes {
         id
-        fields {
-          slug
-        }
         excerpt(truncate: true, pruneLength: 300)
         ${frontmatter}
       }
@@ -93,9 +87,6 @@ const jaIndexQuery = `
         }
         node {
           id
-          fields {
-            slug
-          }
           excerpt(truncate: true, pruneLength: 300)
           ${frontmatter}
         }
@@ -106,9 +97,6 @@ const jaIndexQuery = `
       }
       nodes {
         id
-        fields {
-          slug
-        }
         excerpt(truncate: true, pruneLength: 300)
         ${frontmatter}
       }
@@ -125,9 +113,6 @@ const fetchBySlug = `query popularPostQuery($targets: [String]) {
       totalCount
       nodes {
         id
-        fields {
-          slug
-        }
         excerpt(truncate: true, pruneLength: 300)
         ${frontmatter}
       }
@@ -147,9 +132,6 @@ const staticPageQuery = `
     ) {
       nodes {
         id
-        fields {
-          slug
-        }
         excerpt(truncate: true, pruneLength: 300)
         ${frontmatter}
       }
