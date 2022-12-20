@@ -27,10 +27,10 @@ interface Props {
 const PostsIndex: React.VFC<Props> = ({ data, path, pageContext }) => {
   const { index, limit } = pageContext
   const { nodes: posts, totalCount } = data.allMarkdownRemark
-  const context = useMemo(() => ({ ...pageContext, pickup: [], path }), [
-    pageContext,
-    path
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup: [], path }),
+    [pageContext, path]
+  )
 
   const namespace = postPath(context.language)
   return (
@@ -55,7 +55,7 @@ export default PostsIndex
 export const postsIndexQuery = graphql`
   query postsIndexQuery($language: String, $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___createdAt], order: DESC }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" }

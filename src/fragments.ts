@@ -25,9 +25,6 @@ export const postField = graphql`
 
   fragment postField on MarkdownRemark {
     id
-    fields {
-      slug
-    }
     frontmatter {
       ...indexFrontmatter
     }
@@ -44,9 +41,6 @@ export const postField = graphql`
       depth
       id
       value
-    }
-    fields {
-      slug
     }
     frontmatter {
       ...indexFrontmatter

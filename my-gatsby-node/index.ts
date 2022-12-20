@@ -6,7 +6,7 @@ import { rootPath } from '../src/lib/routes'
 import { fetch } from '../node/breadcrumbs'
 import { fetchPv } from '../node/pageview'
 import queries from '../node/queries'
-import { Lang, CreatePage } from '../gatsby-node/index.d'
+import { Lang, CreatePage } from '../my-gatsby-node/index.d'
 import {
   PER_PAGE,
   STATIC_PAGE_LIST,
@@ -14,13 +14,13 @@ import {
   genSlugMap,
   collectTags,
   collectCategories
-} from '../gatsby-node/utils'
-import { createPostShowPage } from '../gatsby-node/posts/show'
-import { createPostsIndexPage } from '../gatsby-node/posts'
-import { createCategoryShowPage } from '../gatsby-node/categories/show'
-import { createTagShowPage } from '../gatsby-node/tags'
-import { createMonthArchivePage } from '../gatsby-node/months'
-import { createPickupIndexPage } from '../gatsby-node/pickups/index'
+} from '../my-gatsby-node/utils'
+import { createPostShowPage } from '../my-gatsby-node/posts/show'
+import { createPostsIndexPage } from '../my-gatsby-node/posts'
+import { createCategoryShowPage } from '../my-gatsby-node/categories/show'
+import { createTagShowPage } from '../my-gatsby-node/tags'
+import { createMonthArchivePage } from '../my-gatsby-node/months'
+import { createPickupIndexPage } from '../my-gatsby-node/pickups/index'
 
 const { routes, meta, constants } = config
 
@@ -200,9 +200,7 @@ export const onCreateNode = async ({
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
       createNode, // helper function in gatsby-node to generate the node
       createNodeId, // helper function in gatsby-node to generate the node id
-      cache, // Gatsby's cache
-      store, // Gatsby's Redux store
-      reporter: {}
+      cache, // Gatsby's cache,
     })
     // if the file was created, attach the new node to the parent node
     if (fileNode) {

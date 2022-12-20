@@ -40,7 +40,7 @@ const queries = (language, limit = 10) => {
     }
     allMarkdownRemark(
       limit: ${limit},
-      sort: { order: DESC, fields: [frontmatter___createdAt] },
+      sort: { frontmatter: { createdAt: DESC } },
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" }
@@ -52,7 +52,6 @@ const queries = (language, limit = 10) => {
         node {
           excerpt
           html
-          fields { slug }
           frontmatter {
             title
             language

@@ -52,7 +52,7 @@ export const monthsIndexQuery = graphql`
     $limit: Int!
   ) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___createdAt], order: DESC }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: { id: { in: $ids } }
       limit: $limit
       skip: $skip
