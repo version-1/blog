@@ -6,7 +6,7 @@ import kebabCase from 'lodash/kebabCase'
 import path from 'path'
 import config from '../config/constants'
 import { instance as i18next } from '../src/lib/i18next'
-import { Lang, CreatePage } from '../gatsby-node/index.d'
+import { Lang, CreatePage } from '../my-gatsby-node/index.d'
 import { fetch } from '../node/breadcrumbs'
 
 const { routes, meta, constants } = config

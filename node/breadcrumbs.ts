@@ -6,7 +6,7 @@ import {
   monthArchivePath,
 } from '../src/lib/routes'
 import { instance } from '../src/lib/i18next'
-import { Lang } from 'gatsby-node/index.d'
+import { Lang } from 'my-gatsby-node/index.d'
 
 const collections = (language: Lang) => ({
   top: {

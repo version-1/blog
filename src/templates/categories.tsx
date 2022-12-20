@@ -28,11 +28,10 @@ const CategoryTemplate: React.VFC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   const { index, category, language, limit } = pageContext
   const pickup = pageContext.pickup ? data.pickup.nodes : []
-  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
-    pageContext,
-    path,
-    pickup
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup, path }),
+    [pageContext, path, pickup]
+  )
   const namespace = useMemo(() => categoryPath(category!, language), [category])
   return (
     <Layout context={context}>
@@ -69,7 +68,7 @@ export const categryPageQuery = graphql`
     allMarkdownRemark(
       limit: $limit
       skip: $skip
-      sort: { fields: [frontmatter___createdAt], order: DESC }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: {
           categories: { in: [$category] }

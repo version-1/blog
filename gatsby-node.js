@@ -8,7 +8,7 @@ require('ts-node').register({
 })
 
 const path = require('path')
-const gatsbyNode = require('./gatsby-node/index')
+const gatsbyNode = require('./my-gatsby-node/index')
 exports.createPages = gatsbyNode.createPages
 
 exports.onCreateNode = gatsbyNode.onCreateNode
