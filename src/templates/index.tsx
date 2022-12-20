@@ -28,11 +28,10 @@ const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
   const pickup = pageContext.pickup ? data.pickup.nodes : []
-  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
-    pageContext,
-    path,
-    pickup
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup, path }),
+    [pageContext, path, pickup]
+  )
   const { limit } = pageContext
   const namespace = postPath(context.language)
 
@@ -72,7 +71,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___createdAt] }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" }

@@ -29,11 +29,10 @@ const TagTemplate: React.VFC<Props> = ({ data, path, pageContext }) => {
   const namespace = tagPath(pageContext.tag!, pageContext.language)
   const { nodes: pickup } = data.pickup
   const { index, limit } = pageContext
-  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
-    pageContext,
-    path,
-    pickup
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup, path }),
+    [pageContext, path, pickup]
+  )
   return (
     <Layout context={context}>
       <div css={styles.postList}>
@@ -69,7 +68,7 @@ export const tagPageQuery = graphql`
     allMarkdownRemark(
       limit: $limit
       skip: $skip
-      sort: { fields: [frontmatter___createdAt], order: DESC }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: { tags: { in: [$tag] }, language: { eq: $language } }
       }

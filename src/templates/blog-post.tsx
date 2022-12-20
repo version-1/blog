@@ -280,7 +280,7 @@ export const pageQuery = graphql`
       }
     }
     related: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___createdAt] }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: { language: { eq: $language }, slug: { in: $related } }
       }
