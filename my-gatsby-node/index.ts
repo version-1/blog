@@ -37,34 +37,36 @@ const create = (createPage: CreatePage) => (params: any) => {
   })
 }
 
-const createStaticPage = (createPage: CreatePage) => (page: any) => (
-  context: any
-) => {
-  const { id, excerpt } = page
-  const { title, canonical, templateKey } = page.frontmatter
-  const breadcrumbs: any = fetch(context.language)
-  const _breadcrumbs = [...context.layout.breadcrumbs, breadcrumbs[templateKey]]
-  const _path = genPath(context.language, templateKey)
-  const url = [meta.siteUrl, _path].join('/')
-  createPage({
-    path: _path,
-    component: path.resolve(`src/templates/${String(templateKey)}.tsx`),
-    context: {
-      id,
-      ...context,
-      layout: {
-        ...context.layout,
-        breadcrumbs: _breadcrumbs
-      },
-      meta: {
-        title,
-        description: excerpt,
-        canonical,
-        url
+const createStaticPage =
+  (createPage: CreatePage) => (page: any) => (context: any) => {
+    const { id, excerpt } = page
+    const { title, canonical, templateKey } = page.frontmatter
+    const breadcrumbs: any = fetch(context.language)
+    const _breadcrumbs = [
+      ...context.layout.breadcrumbs,
+      breadcrumbs[templateKey]
+    ]
+    const _path = genPath(context.language, templateKey)
+    const url = [meta.siteUrl, _path].join('/')
+    createPage({
+      path: _path,
+      component: path.resolve(`src/templates/${String(templateKey)}.tsx`),
+      context: {
+        id,
+        ...context,
+        layout: {
+          ...context.layout,
+          breadcrumbs: _breadcrumbs
+        },
+        meta: {
+          title,
+          description: excerpt,
+          canonical,
+          url
+        }
       }
-    }
-  })
-}
+    })
+  }
 
 /* CreatePages
  *
@@ -81,7 +83,7 @@ export const createPages = async ({ actions, graphql }: any) => {
   const allSlugs = await graphql(queries.slugListQuery)
   const slugMap = genSlugMap(allSlugs.data.allMarkdownRemark.nodes)
 
-  return Promise.all(
+  return await Promise.all(
     mainQueries.map(async (item: { language: Lang; query: string }) => {
       const { language, query } = item
       const result = await graphql(query)
@@ -138,14 +140,16 @@ export const createPages = async ({ actions, graphql }: any) => {
         })
       }
       // Show Pages
-      STATIC_PAGE_LIST.map((page) => {
-        graphql(queries.staticPageQuery, { templateKey: page, language }).then(
-          (result: any) => {
-            const [post] = result.data.allMarkdownRemark.nodes
-            createStaticPage(create(createPage))(post)(context)
-          }
-        )
-      })
+      await Promise.all(
+        STATIC_PAGE_LIST.map(async (page) => {
+          const result = await graphql(queries.staticPageQuery, {
+            templateKey: page,
+            language
+          })
+          const [post] = result.data.allMarkdownRemark.nodes
+          createStaticPage(create(createPage))(post)(context)
+        })
+      )
       createPostShowPage(create(createPage))(posts, edges, rows, slugMap)({
         pickupDisabled: true,
         pickup,
@@ -153,25 +157,30 @@ export const createPages = async ({ actions, graphql }: any) => {
       })
 
       createPickupIndexPage(createPage)('/' + routes.pickups, pickup)(context)
-      createPickupIndexPage(createPage)('/' + routes.populars, populars)(context)
+      createPickupIndexPage(createPage)('/' + routes.populars, populars)(
+        context
+      )
 
       // Index Pages
       createMonthArchivePage(createPage)(context.layout.archiveByMonth)(context)
       createPostsIndexPage(createPage)(posts.length)(context)
-      categories.map((category: any) => {
-        graphql(queries.categoryQuery, { category, language }).then(
-          (result: any) => {
-            const posts = result.data.allMarkdownRemark.nodes
-            createCategoryShowPage(createPage)(category)(posts.length)(context)
-          }
-        )
-      })
-      tags.map((tag: any) => {
-        graphql(queries.tagQuery, { tag, language }).then((result: any) => {
+      await Promise.all(
+        categories.map(async (category: any) => {
+          const result = await graphql(queries.categoryQuery, {
+            category,
+            language
+          })
+          const posts = result.data.allMarkdownRemark.nodes
+          createCategoryShowPage(createPage)(category)(posts.length)(context)
+        })
+      )
+      await Promise.all(
+        tags.map(async (tag: any) => {
+          const result = await graphql(queries.tagQuery, { tag, language })
           const posts = result.data.allMarkdownRemark.nodes
           createTagShowPage(createPage)(tag)(posts.length)(context)
         })
-      })
+      )
       return
     })
   )
@@ -200,7 +209,7 @@ export const onCreateNode = async ({
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
       createNode, // helper function in gatsby-node to generate the node
       createNodeId, // helper function in gatsby-node to generate the node id
-      cache, // Gatsby's cache,
+      cache // Gatsby's cache,
     })
     // if the file was created, attach the new node to the parent node
     if (fileNode) {
