@@ -1,24 +1,16 @@
-require('ts-node').register({
-  compilerOptions: {
-    module: 'commonjs',
-    target: 'esnext',
-    esModuleInterop: true,
-    resolveJsonModule: true,
-  }
-})
+import path from 'path'
+import * as gatsbyNode from './my-gatsby-node/index'
 
-const path = require('path')
-const gatsbyNode = require('./my-gatsby-node/index')
-exports.createPages = gatsbyNode.createPages
+export const createPages = gatsbyNode.createPages
 
-exports.onCreateNode = gatsbyNode.onCreateNode
-exports.onCreateWebpackConfig = ({
+export const onCreateNode = gatsbyNode.onCreateNode
+export const onCreateWebpackConfig = ({
   stage,
   rules,
   loaders,
   plugins,
   actions
-}) => {
+}: any) => {
   actions.setWebpackConfig({
     resolve: {
       fallback: {
