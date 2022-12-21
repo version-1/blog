@@ -1,5 +1,6 @@
-const constants = require('./config/constants')
-const { serialize, queries } = require('./node/rss')
+import type { GatsbyConfig } from 'gatsby'
+import constants from './config/constants'
+import { serialize, queries } from './node/rss'
 
 const { meta } = constants
 
@@ -7,7 +8,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 })
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: meta.siteUrl,
     title: meta.title,
@@ -176,5 +177,8 @@ module.exports = {
         queries: require('./node/queries/algolia')
       }
     }
-  ]
+  ],
+  graphqlTypegen: true
 }
+
+export default config
