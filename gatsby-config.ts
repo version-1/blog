@@ -23,7 +23,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/contents`,
         name: 'pages',
         ignore: [`**/\.*`, '**/*.png, **/*.jpg']
       }
