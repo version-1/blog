@@ -15,7 +15,7 @@ i18next.init({
   }
 })
 
-const indexKey = process.env.CONTEXT === 'prodcution' ? 'production' : 'development'
+const indexKey = process.env.CONTEXT === 'production' ? 'production' : 'development'
 const indexName = constants.search.index[indexKey]
 const pageQuery = `{
   pages: allMarkdownRemark {
