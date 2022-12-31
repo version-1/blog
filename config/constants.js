@@ -29,7 +29,7 @@ module.exports = {
     images: {
       url: 'https://statics.ver-1-0.xyz/uploads'
     },
-    postRoot: '/Users/admin/Projects/Private/blog/src/pages/posts'
+    postRoot: '/Users/admin/Projects/Private/blog/src/contents/posts'
   },
   constants: {
     per: 9,
