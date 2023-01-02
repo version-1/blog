@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 language: ja
-title: 2023年。ふりかえり
+title: 2022年。ふりかえり
 slug: /2022/12/31/recap-2022
 createdAt: 2022-12-31 08:22:25
 updatedAt: 2022-12-31 08:22:25
