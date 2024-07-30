@@ -3,9 +3,9 @@
 **※WARNING※**
 
 This code base was ported to a private repository and outdated.
-The site is running on updated codebase of the destination.
+The site is running on an updated destination codebase.
 
 
-https://ver-1-0.net/
+site: https://ver-1-0.net/
 
-My blog built in Gatsby + Netlify.
+My blog built with Gatsby + Netlify.
