@@ -1,0 +1,32 @@
+
+.main {
+    max-width: 1296px;
+    margin: auto;
+    margin-top: 64px;
+    display: flex;
+
+    @media (max-width: 768px) {
+      margin-top: 32px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+}
+
+.content {
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.consoleContainer {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+
+.skelton {
+  height: 100vh;
+  width: 100%;
+}

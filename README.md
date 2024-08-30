@@ -1,11 +1,6 @@
 # ver-1-0.net
 
-**※WARNING※**
+https://ver-1-0.net/
 
-This code base was ported to a private repository and outdated.
-The site is running on an updated destination codebase.
+My blog built in Gatsby + Netlify.
 
-
-site: https://ver-1-0.net/
-
-My blog built with Gatsby + Netlify.

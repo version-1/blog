@@ -1,8 +1,16 @@
-import { css } from '@emotion/react'
+import { css } from '@emotion/css'
 
 export default class Style {
   static css(cssStyle: string) {
     return css(cssStyle)
+  }
+
+  static join(...styles: string[]) {
+    return styles.join(' ')
+  }
+
+  static switch(flags: Record<string, boolean>) {
+    return Object.keys(flags).filter((key) => flags[key]).join(' ')
   }
 
   private _data: { [key: string]: any }
@@ -16,10 +24,6 @@ export default class Style {
   }
 
   get style() {
-    return this._data
-  }
-
-  get hoge() {
     return this._data
   }
 

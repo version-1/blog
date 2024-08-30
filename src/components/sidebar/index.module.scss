@@ -1,0 +1,9 @@
+.container {
+  padding-left: 32px;
+  color: inherit;
+
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
+}
+

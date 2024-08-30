@@ -1,8 +1,7 @@
 import type { GatsbyConfig } from 'gatsby'
-import constants from './config/constants'
-import { serialize, queries } from './node/rss'
-
-const { meta } = constants
+import { meta } from './src/configs/constants'
+import { serialize, blogQueries } from './src/configs/rss'
+import { queries as algoliaQueries } from './src/configs/algolia'
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
@@ -12,19 +11,20 @@ const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: meta.siteUrl,
     title: meta.title,
+    author: '@version1_2017',
     description: meta.description,
     imageBaseUrl: meta.images.url
   },
   plugins: [
-    'gatsby-plugin-twitter',
     'gatsby-plugin-emotion',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-webpack-bundle-analyser-v2', // TODO:
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/contents`,
-        name: 'pages',
+        name: 'blog-pages',
         ignore: [`**/\.*`, '**/*.png, **/*.jpg']
       }
     },
@@ -43,12 +43,6 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          // {
-          //   resolve: 'gatsby-remark-relative-images',
-          //   options: {
-          //     name: 'uploads',
-          //   },
-          // },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -70,7 +64,12 @@ const config: GatsbyConfig = {
               noIframeBorder: true //Optional: Disable insertion of <style> border: 0
             }
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '>',
+            }
+          },
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
@@ -88,10 +87,13 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: meta.trackingId
-      }
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-56G6NL8JWS"
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -104,7 +106,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: meta.sitemap,
+        output: '/',
+        entryLimit: 30,
         query: `
         {
           site {
@@ -112,7 +115,7 @@ const config: GatsbyConfig = {
               siteUrl
             }
           }
-          allSitePage {
+          allSitePage(filter: {path: {glob: "!/lab/private/**"}}) {
             nodes {
               path
             }
@@ -138,43 +141,49 @@ const config: GatsbyConfig = {
         feeds: [
           {
             serialize,
-            query: queries(['ja', 'en'], 1000),
+            query: blogQueries(['ja', 'en'], 1000),
             title: 'rss all',
             output: '/rss.xml'
           },
           {
             serialize,
-            query: queries(['ja'], 1000),
+            query: blogQueries(['ja'], 1000),
             title: 'rss ja',
             output: '/rss.ja.xml'
           },
           {
             serialize,
-            query: queries(['en'], 1000),
+            query: blogQueries(['en'], 1000),
             title: 'rss en',
             output: '/rss.en.xml'
           },
           {
             serialize,
-            query: queries(['ja']),
+            query: blogQueries(['ja']),
             title: 'rss latest ja',
             output: '/latest.ja.xml'
           },
           {
             serialize,
-            query: queries(['en']),
+            query: blogQueries(['en']),
             title: 'rss latest en',
             output: '/latest.en.xml'
-          }
+          },
         ]
       }
     },
+    // {
+    //   resolve: `gatsby-plugin-algolia`,
+    //   options: {
+    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
+    //     queries: algoliaQueries,
+    //   }
+    // },
     {
-      resolve: `gatsby-plugin-algolia`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require('./node/queries/algolia')
+        "icon": "src/assets/images/logo.png"
       }
     }
   ],

@@ -9,6 +9,11 @@ export const imagePath = `../../assets/images`
 
 export const profileSnsLinks = [
   {
+    icon: 'youtube',
+    iconColor: '#FF0000',
+    href: 'https://www.youtube.com/@jiro.version1'
+  },
+  {
     icon: 'github',
     iconColor: '#333',
     href: 'https://github.com/version-1'

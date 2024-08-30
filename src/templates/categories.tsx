@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import PostList from 'components/organisms/PostList'
-import { categoryPath } from 'lib/routes'
+import Layout from 'components/layouts/default'
+import PostList from 'components/shared/organisms/postList'
+import { blog } from 'lib/routes'
 import { mq } from 'constants/index'
 
 const styles = new Styles({
@@ -32,10 +32,13 @@ const CategoryTemplate: React.VFC<Props> = ({ data, path, pageContext }) => {
     () => ({ ...pageContext, pickup, path }),
     [pageContext, path, pickup]
   )
-  const namespace = useMemo(() => categoryPath(category!, language), [category])
+  const namespace = useMemo(
+    () => blog.categoryPath(category!, language),
+    [category]
+  )
   return (
     <Layout context={context}>
-      <div css={styles.postList}>
+      <div className={styles.postList}>
         <PostList
           posts={posts}
           pagination={{

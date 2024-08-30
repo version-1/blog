@@ -28,6 +28,7 @@ export const postField = graphql`
     frontmatter {
       ...indexFrontmatter
     }
+    excerpt(truncate: true, pruneLength: 200)
     thumbnail {
       ...thumbnailData
     }

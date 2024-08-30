@@ -18,20 +18,13 @@
     "noEmit": true,
     "skipLibCheck": true,
     "paths": {
-      "src/*": ["src/*"],
-      "components/*": ["src/components/*"],
       "lib/*": ["src/lib/*"],
-      "locales/*": ["src/locales/*"],
-      "atoms/*": ["src/components/atoms/*"],
-      "molecules/*": ["src/components/molecules/*"],
-      "organisms/*": ["src/components/organisms/*"],
-      "templates/*": ["src/components/templates/*"],
-      "constants/*": ["src/constants/*"],
-      "services/*": ["src/services/*"],
-      "context/*": ["src/context/*"],
-      "models/*": ["src/models/*"],
       "assets/*": ["src/assets/*"],
-      "pages/*": ["src/pages/*"]
+      "configs/*": ["src/configs/*"],
+      "constants/*": ["src/constants/*"],
+      "templates/*": ["src/templates/*"],
+      "components/*": ["src/components/*"],
+      "services/*": ["src/services/*"],
     }
   }
 }
