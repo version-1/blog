@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import PostList from 'components/organisms/PostList'
+import Layout from 'components/layouts/default'
+import PostList from 'components/shared/organisms/postList'
 
 const styles = new Styles({
   postList: `
@@ -27,7 +27,7 @@ const MonthsIndex: React.VFC<Props> = ({ path, data, pageContext }) => {
   )
   return (
     <Layout context={context}>
-      <div css={styles.postList}>
+      <div className={styles.postList}>
         <PostList
           posts={posts}
           pagination={{

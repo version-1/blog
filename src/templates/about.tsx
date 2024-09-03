@@ -1,18 +1,17 @@
 import React, { useMemo } from 'react'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import { HTMLContent } from 'components/Content'
+import Layout from 'components/layouts/default'
+import { HTMLContent } from 'components/content'
 import Styles from 'lib/styles'
 import { instance as i18next } from 'lib/i18next'
-import { colors } from 'constants/index'
-import Bar from 'components/atoms/Bar'
-import SNSButtons from 'components/organisms/SNSButtons'
-import Profile from 'components/organisms/Profile'
-import SearchCard from 'components/organisms/SearchCard'
-import ArticleIndex from 'components/organisms/ArticleIndex'
-import Header from 'components/organisms/ArticleHeader'
-import Promotion from 'components/organisms/Promotion'
-import { mq } from 'constants/index'
+import Bar from 'components/shared/atoms/bar'
+import SNSButtons from 'components/shared/organisms/sns'
+import Profile from 'components/shared/organisms/profile'
+import SearchCard from 'components/shared/organisms/searchCard'
+import ArticleIndex from 'components/shared/organisms/article'
+import Header from 'components/shared/organisms/article/header'
+import Promotion from 'components/shared/organisms/promotion'
+import { mq, colors } from 'constants/index'
 
 const styles = new Styles({
   container: `
@@ -145,17 +144,17 @@ const AboutTemplate = ({ location, post, meta, language }: any) => {
   const url = location.href
 
   return (
-    <div css={styles.container}>
+    <div className={styles.container}>
       <section className="section">
-        <article css={styles.content} className="post">
+        <article className={[styles.content, "post"].join(' ')}>
           <Header meta={meta} post={post} />
           <Bar />
           <HTMLContent className="post-body" content={content} />
           <Bar />
-          <div css={styles.postFooter} className="post-meta-footer">
-            <div css={styles.share} className="sns-share-footer">
+          <div className={[styles.postFooter, "post-meta-footer"].join(' ')}>
+            <div className={[styles.share, "sns-share-footer"].join(' ')}>
               <p>
-                <label css={styles.shareLabel}>
+                <label className={styles.shareLabel}>
                   {i18next.t('labels.share')}
                 </label>
                 <SNSButtons url={url} size={28} />
@@ -165,11 +164,11 @@ const AboutTemplate = ({ location, post, meta, language }: any) => {
         </article>
       </section>
       <SearchCard />
-      <div css={styles.promotion}>
+      <div className={styles.promotion}>
         <Profile language={language} />
       </div>
       {language === 'ja' && (
-        <div css={styles.promotion}>
+        <div className={styles.promotion}>
           <Promotion language={language} />
         </div>
       )}
@@ -189,7 +188,7 @@ const AboutPost = ({ location, data, pageContext, path }: any) => {
       noconsole
       context={context}
       sidebar={
-        <div css={styles.index}>
+        <div className={styles.index}>
           <ArticleIndex {...post} />
         </div>
       }

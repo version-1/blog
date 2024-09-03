@@ -70,6 +70,7 @@ exports.module = {
     exposed: 'Exposed',
     'egg-cutter': 'Egg Cutter',
     editor: 'Editor',
+    electron: 'Electron',
     ethereum: 'Etherium',
     freelance: 'Freelance',
     frontend: 'Frontend',
@@ -105,6 +106,7 @@ exports.module = {
     oop: 'OOP',
     phantomjs: 'PhatomJS',
     php: 'PHP',
+    programming: 'Programming',
     phpunit: 'PHPUnit',
     plugin: 'Plugin',
     product: 'Product',
@@ -134,6 +136,6 @@ exports.module = {
     'web-structure': 'Web Structure',
     webpack: 'Webpack',
     wordpress: 'Wordpress',
-    work: 'Work'
+    work: 'Work',
   }
 }

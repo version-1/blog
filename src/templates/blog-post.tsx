@@ -2,22 +2,21 @@ import React, { useMemo } from 'react'
 import { Link, graphql } from 'gatsby'
 import Styles from 'lib/styles'
 import { truncate } from 'lib/stringUtils'
-import { postShowPath } from 'lib/routes'
-import Layout from 'components/layouts/Default'
-import Icon from 'components/atoms/Icon'
-import Bar from 'components/atoms/Bar'
-import { HTMLContent } from 'components/Content'
-import SNSButtons from 'components/organisms/SNSButtons'
-import BottomPostList from 'components/organisms/BottomPostList'
+import { blog } from 'lib/routes'
+import Layout from 'components/layouts/default'
+import Icon from 'components/shared/atoms/icon'
+import Bar from 'components/shared/atoms/bar'
+import { HTMLContent } from 'components/content'
+import SNSButtons from 'components/shared/organisms/sns'
+import BottomPostList from 'components/shared/organisms/bottomPostList'
 import { instance as i18next } from 'lib/i18next'
-import { colors } from 'constants/index'
-import Promotion from 'components/organisms/Promotion'
-import Profile from 'components/organisms/Profile'
-import SearchCard from 'components/organisms/SearchCard'
-import ArticleIndex from 'components/organisms/ArticleIndex'
-import Breadcrumbs from 'components/molecules/Breadcrumbs'
-import Header from 'components/organisms/ArticleHeader'
-import { mq } from 'constants/index'
+import { mq, colors } from 'constants/index'
+import Promotion from 'components/shared/organisms/promotion'
+import Profile from 'components/shared/organisms/profile'
+import SearchCard from 'components/shared/organisms/searchCard'
+import ArticleIndex from 'components/shared/organisms/article'
+import Header from 'components/shared/organisms/article/header'
+import Breadcrumbs from 'components/shared/molecules/breadcrumbs'
 import 'prismjs/themes/prism-tomorrow.css'
 
 const styles = new Styles({
@@ -173,27 +172,27 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
   const url = location.href
 
   return (
-    <div css={styles.container}>
+    <div className={styles.container}>
       <section className="section">
-        <article css={styles.content} className="post">
+        <article className={[styles.content, "post"].join(' ')}>
           <Header meta={meta} post={post} />
           <Bar />
           <HTMLContent className="post-body" content={content} />
           <Bar />
-          <div css={styles.postFooter} className="post-meta-footer">
-            <div css={styles.share} className="sns-share-footer">
+          <div className={[styles.postFooter, "post-meta-footer"].join(' ')}>
+            <div className={[styles.share, "sns-share-footer"].join(' ')}>
               <p>
-                <label css={styles.shareLabel}>
+                <label className={styles.shareLabel}>
                   {i18next.t('labels.share')}
                 </label>
                 <SNSButtons url={url} title={title} size={28} />
               </p>
             </div>
           </div>
-          <div css={styles.paging}>
+          <div className={styles.paging}>
             <div className="left">
               {previous && (
-                <Link to={postShowPath(previous!.frontmatter.slug, language)}>
+                <Link to={blog.postShowPath(previous!.frontmatter.slug, language)}>
                   <Icon icon="back" size={24} color={colors.primaryColor} />
                   <p>{truncate(previous!.frontmatter.title, 40)}</p>
                 </Link>
@@ -201,7 +200,7 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
             </div>
             <div className="right">
               {next && (
-                <Link to={postShowPath(next!.frontmatter.slug, language)}>
+                <Link to={blog.postShowPath(next!.frontmatter.slug, language)}>
                   <p>{truncate(next!.frontmatter.title, 40)}</p>
                   <Icon icon="forward" size={24} color={colors.primaryColor} />
                 </Link>
@@ -212,11 +211,11 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
       </section>
       <BottomPostList label="labels.related-posts" posts={related} />
       <SearchCard />
-      <div css={styles.promotion}>
+      <div className={styles.promotion}>
         <Profile language={language} />
       </div>
       {language === 'ja' && (
-        <div css={styles.promotion}>
+        <div className={styles.promotion}>
           <Promotion />
         </div>
       )}
@@ -237,13 +236,13 @@ const BlogPost = ({ location, data, pageContext, path }) => {
     <Layout
       noconsole
       sidebar={
-        <div css={styles.index}>
+        <div className={styles.index}>
           <ArticleIndex {...post} />
         </div>
       }
       context={context}
     >
-      <div css={styles.breadcrumbs}>
+      <div className={styles.breadcrumbs}>
         <Breadcrumbs context={pageContext.layout.breadcrumbs} />
       </div>
       <BlogPostTemplate

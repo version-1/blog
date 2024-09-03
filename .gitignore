@@ -3,8 +3,13 @@
 node_modules
 .cache/
 # Build directory
-public/
+public/*
 static/admin/*.bundle.*
 .DS_Store
 .env.*
 yarn-error.log
+
+
+
+# Local Netlify folder
+.netlify
