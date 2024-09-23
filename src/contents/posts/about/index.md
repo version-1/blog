@@ -15,65 +15,71 @@ related:
 
 ## 自己紹介・経歴
 
-Rails + React（Redux)メインで自社サービスの開発のお手伝いさせて頂いているバンクーバ在住のフリーランスのWebエンジニアです。
+10年ほどWebエンジニアとして活動しているバンクーバ在住のエンジニアです。
 
-直近のプロジェクトでは、
 
-- SaaSの自社開発開発企業さんでのリードエンジニアとして開発サポート
-- フロントエンドの技術顧問
-- Gatsby.jsでのWordpressサイトのリプレイス
+#### 経歴
 
-といったお仕事を担当させて頂いています。
+**2021年3月 ~ 2024年2月**
 
-チケットを払い出してもらったものを順番に実装していくというよりは、プロジェクトに必要そうな基盤を整えたり、
-手動で行っている作業を自動化したりという形で自発的に仕事をするのように心がけています。
+トロントの会社でフルタイムのフルスタックエンジニアとして GraphQL + Go のバックエンドを開発するプロジェクトに参画。
 
-また、一エンジニアとして働く傍らMENTAというサービスを利用してプログラミングを教えたり、プログラミング学習教材サービスのTechpitさんの教材の執筆を行っていたりします。
+**2017 年 11月 〜 2020 年 12月**
+
+Rails/Reactを専門とするフリーランスのエンジニアとして独立。
+- CtoC ECサービス
+- 業務自動化SaaSサービス
+- 動画・画像共有サービス
+- フロントエンドの技術アドバイザー
+等の案件・役割を担当。
+
+**2016 年 9月 〜 2017 年 10月**
+
+事業会社のリードエンジニアとして、社内基幹システム及びWeb予約管理システムの設計・開発・保守、オフショア開発管理を担当。
+
+**2014 年 4月 〜 2016 年 9月**
+
+金融系SIerで金融系システムの保守及びJavaでのルーティング管理パッケージシステムの設計開発やライブラリ管理及び管理の自動化に従事。
+
 
 ### 技術スタック
 
 #### サーバサイド
 
-<strong>Ruby, Ruby on Rails, Node, Express</strong>, Go, Gin
+<strong>Go, Ruby on Rails</strong>, Node, Express, Nest.js, GraphQL, REST API
 
 
 #### フロントエンド
 
-<strong>React, React Hooks, Next.js, Redux, TypeScript, </strong> BEM, SMACCSS, Styled Components, CSS Module, Vue, Vuex, Webapck
+<strong>React, Next.js, TypeScript</strong>, Gatsby.js
 
 #### インフラ・データベース
 
-AWS EC2/RDS/Cloud Front/S3/Route53/Cloud Watch, MySQL, PostgresSQL, Linux, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase
+AWS(EC2/RDS/Cloud Front/S3/Route53/Cloud Watch), MySQL, PostgresSQL, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase
 
 #### そのほか
 
 React Native, Circle CI, Github Action, Git
 
-
 ### その他スキル
 
+* Ruby で実装された簡易テンプレートモジュールのGoへの移植
 * Circle CI, Expo, Capistrano を使用したパイプラインの実装
-* FirebaseのRealtime Databaseを用いたチャット機能の実装（バック&フロント実装)
+* Firebaseを用いたチャット機能の実装（バック&フロント実装)
 * C to C サービス各種機能実装経験あり（管理画面、口コミ機能、取引機能等）
-* Rails + MySQL + Vue で実装されたシステムの開発環境docker化
 * React Native でのスクラッチでのアプリ開発・リリース
+* 開発環境docker化
 * 決済サービスの実装
 * コードレビュー可能
-* オフショアでの開発経験あり。
 * 英語ドキュメントが読める。
 * チームリーダの経験あり。仕様策定、作業分割、作業分担、コードレビュー等を担当。
 
 ## 成果物・実績
 
-
 ### 当ブログ
 
 当ブログはGatsby + Netlifyで実装しています。
-
-GatsbyはReactベースの静的サイト構築ライブラリでGatsbyで実装したサイトを
-Netlifyを利用して配信しています。当サイトの設計・デザイン・コーディング・実装を私自身で担当しています。
-
-使用技術: React, Gatsby, Sass, Netlify, CloudFlare, AWS S3
+設計・デザイン・コーディング・実装を私自身で担当しています。
 
 ### ポートフォリオ
 
@@ -83,36 +89,28 @@ Gatsby.jsで実装したチャットアプリ風ポートフォリオサイト�
 これまでの経歴やそれぞれの成果物を載せています。
 
 
-### マークダウンメモアプリ Papyrus
+### オンライン教材執筆
 
-裏紙のような気軽にマークダウンで書いたり捨てたりできるメモアプリを開発しています。
-現在ベータ版公開中です。
+Techpitさんからオンライン教材として、下記教材をリリースさせて頂いています。
 
-<a href="https://papyrus-app.org/">PaPyrus</a>
-
-使用技術: React, Electron, Go, Next.js
-
-### スネークゲーム 🐍 を作って学ぶ React Hooks API での状態管理
-
-Techpitさんからオンライン教材として、スネークゲームを作りながらReact Hooks APIの使い方を学べる教材を執筆・リリースさせて頂きました。
-
-<a href="https://www.techpit.jp/courses/127">Techpit | スネークゲーム 🐍 を作って学ぶ React Hooks API での状態管理</a>
-
-
-執筆に関する記事はこちらになります。
-
-<a href="/2020/11/14/publish-snake-game-material">Techpit さんからReact Hooksに関する教材を執筆・リリースしました</a>
+<ul>
+  <li>
+    <a href="https://www.techpit.jp/courses/276">Reactの状態管理の全体像を学ぼう</a>
+  </li>
+  <li>
+    <a href="https://www.techpit.jp/courses/127">Techpit | スネークゲーム 🐍 を作って学ぶ React Hooks API での状態管理</a>
+  </li>
+</ul>
 
 ### プログラミング学習メンタリングサービス
 
 <a href="https://menta.work/user/13371">MENTA プロフィール</a>
 
 スキルシェアサービスであるMENTA上でフロントエンドエンジニアを目指す方向けのプランを提供しています。
+累計200人以上の方の大小様々な相談に乗らせて頂きました。継続的なコースを契約いただいた方でも10名以上の方が実際に未経験からエンジニア職への転職を成功させています。
 
-2020/12/31 現在全体の上位 1 % にラインクインしている金バッジメンターとして<strong> 20 ~ 30名ほど </strong> の生徒さんの学習をお手伝いさせて頂いています。
 
-
-## お仕事の募集
+## お仕事の依頼について
 
 - 現在週3日 ~ できる開発の仕事
 - フロントエンド周りの設計アドバイス、エンジニア育成等の技術顧問

@@ -15,7 +15,7 @@ import { mq, colors } from 'constants/index'
 
 const styles = new Styles({
   container: `
-    max-width: 672px;
+    max-width: var(--content-width);
     padding: 32px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.56) 100%);
 

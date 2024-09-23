@@ -1,7 +1,6 @@
 import type { GatsbyConfig } from 'gatsby'
 import { meta } from './src/configs/constants'
 import { serialize, blogQueries } from './src/configs/rss'
-import { queries as algoliaQueries } from './src/configs/algolia'
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`

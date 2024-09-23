@@ -15,10 +15,7 @@ related:
 
 ## Introduction
 
-I am a Freelance Developer.
-
-Mainly, I am developing with React, React Native and Ruby on Rails.
-I help my clients which have their web servie to develop their application.
+I am a 10 years-experience Software Developer, specializing in Go, Ruby on Rails, React.
 
 I have been working as a web engineer for about 5 years and I'm involved in a many kinds of Projects.
 I am interested in many kinds of technolody so I am happy to do even works I' am not familier with.
@@ -31,22 +28,23 @@ When  I did full-time work, I have worked as a leader of small team and worked w
 
 #### Server Side
 
-<strong>Ruby, Ruby on Rails, Node, Express</strong>, Laravel
+<strong>Go, Ruby, Ruby on Rails</strong>, Node, Express
 
 #### Front End
 
-<strong>React,React Native, Redux, Vue, Vuex</strong>
+<strong>React, TypeScript, Next.js, Gatsby.js</strong>, React Native
 
 #### Infra・DB
 
-AWS EC2/RDS/Cloud Front/S3/Route53/Cloud Watch, MySQL, PostgresSQL, Linux, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase
+AWS(EC2/RDS/Cloud Front/S3/Route53/Cloud Watch), MySQL, PostgresSQL, Docker, Redis, Nginx, Elastic Search, Kuberenetes, Firebase
 
 #### Others
 
-React Native, Circle CI, Github Action, Git
+Circle CI, Github Action, Git
 
 ### Accomplishments
 
+* Ported template module built with Ruby on Rails to Go
 * Implemented Chat Fucntion with Firebase Realtime Database and React(also Vue.js) from scratch
 * Developed functions realted to CtoC service (functions for admin, fucions fo trade and review etc...）
 * Dockernized development environment (Rails + Sidekiq + MySQL + Vue)
@@ -57,44 +55,33 @@ React Native, Circle CI, Github Action, Git
 
 ## Works
 
-
 ### Blog
 
-This blog is implemented by Gatsby and Netlify.
+This blog is built using Gatsby and hosted on Netlify. I personally designed the UI and implemented the site myself.
 
-Gatsby is library for building static site and I am hosting that code on the Netlify.
-I designed UI and wrote code and wrote articles by myself.
+### Portfolio Site
 
-Technology: React, Gatsby, Sass, Netlify, CloudFlare, AWS S3
+<a href="https://portfolio.ver-1-0.net/">https://portfolio.ver-1-0.net</a>
 
-### Markdown Memo Application Papyrus
+My portfolio website is built with Gatsby and hosted on Netlify.
 
-I am developing markdown memo application as if you use flyer.
-This is on beta release.
+### Online Learning Materials
 
-<a href="http://papyrus-app.org/">PaPyrus</a>
+Publised some online materilas about React on Techpit.
 
-Technology: React, Electron, Go, Next.js
+<ul>
+  <li>
+    <a href="https://www.techpit.jp/courses/276">Learn outline of React state manangement</a>
+  </li>
+  <li>
+    <a href="https://www.techpit.jp/courses/127">Learn React state management by developing a Snake game</a>
+  </li>
+</ul>
 
-### React Snake Game
+## Online Programming Coaching
 
-Snake Game implemented by React. Following video is it.
-
-<video width="300px" poster="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.png" src="https://statics.ver-1-0.xyz/uploads/2018/06/20180627_react-snake-game-3/snake.mp4" controls></video>
-
-Site is <a href="https://version-1.github.io/react-snake-game/">HERE</a>
-
-repository
-https://github.com/version-1/react-snake-game
-
-
-### npm package | react-native-various-form
-
-https://github.com/version-1/react-native-various-form
-
-npm library.
-
-This pakckage help you to impement form with validate. This provides that form and some components.
+Provide coaching service for frontend develpoment to beginners.
+Created and promoted programming lessons on an online platform, achieving recognition as a top 1% instructor on the platform.
 
 ## SNS
 

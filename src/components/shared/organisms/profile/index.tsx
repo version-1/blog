@@ -23,8 +23,10 @@ const Profile = ({ language }: Props) => {
         <div className="profile-image">
           <Link to={blog.aboutPath(language)}>
             <div className={styles.profileTitle}>
-              <ProfileIcon />
-              Jiro
+              <ProfileIcon className={styles.avatar} />
+              <span className={styles.name}>
+                Jiro
+              </span>
             </div>
           </Link>
         </div>
