@@ -17,7 +17,7 @@ import SearchCard from 'components/shared/organisms/searchCard'
 import ArticleIndex from 'components/shared/organisms/article'
 import Header from 'components/shared/organisms/article/header'
 import Breadcrumbs from 'components/shared/molecules/breadcrumbs'
-import 'prismjs/themes/prism-tomorrow.css'
+import 'prism-themes/themes/prism-vsc-dark-plus.css'
 
 const styles = new Styles({
   container: `

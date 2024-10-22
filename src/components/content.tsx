@@ -5,7 +5,7 @@ import { mq } from 'constants/index'
 const styles = new Styles({
   container: `
     margin-bottom: 64px;
-    line-height: 180%;
+    line-height: 1.9;
     letter-spacing: 0.2px;
     font-size: 16px;
     ${mq.md} {
@@ -29,23 +29,49 @@ const styles = new Styles({
       margin-bottom: 32px;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding-bottom: 8px;
+    }
+
     h2 {
-      margin-top: 32px;
+      margin-top: 2.3rem;
       margin-bottom: 32px;
+      border-bottom: 1px solid #d7d6e1;
     }
 
     h3 {
-      margin-top: 16px;
+      width: 80%;
+      margin-top: 2rem;
       margin-bottom: 16px;
+      border-bottom: 1px solid #d7d6e1;
     }
 
     h4 {
-      margin-top: 8px;
+      width: 80%;
+      margin-top: 1.5rem;
       margin-bottom: 8px;
+      border-bottom: 1px solid #d7d6e1;
+    }
+
+    h5 {
+      width: 60%;
+      margin-top: 1rem;
+      border-bottom: 1px solid #d7d6e1;
+    }
+
+    h6 {
+      width: 60%;
+      border-bottom: 1px solid #d7d6e1;
     }
 
     p {
       padding: 8px 0;
+      margin-top: 1.5rem;
     }
 
     video,
