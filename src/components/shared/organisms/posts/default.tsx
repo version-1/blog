@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { meta } from 'configs/constants'
 import { instance as i18next } from 'lib/i18next'
 import Styles from 'lib/styles'
 import { blog } from 'lib/routes'
@@ -17,7 +15,7 @@ const styles = new Styles({
   container: `
     display: flex;
     border-radius: 8px;
-    width: 896px;
+    width: 720px;
     margin-bottom: 16px;
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
@@ -61,26 +59,16 @@ const styles = new Styles({
       width: 100%;
     }
   `,
-  left: `
+  content: `
     background: linear-gradient(90deg, rgba(242, 242, 242, 0.54) 0%, rgba(255, 255, 255, 0.156) 100%);
     box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.01);
-    border-radius: 8px 0px 0px 8px;
-    width: 550px;
+    border-radius: 8px 8px 0px 8px;
+    width: 100%;
+    height: 200px;
     ${mq.md} {
-      width: 100%;
+      height: auto;
       min-width: 100%;
       border-radius: 8px;
-    }
-  `,
-  right: `
-    margin: auto;
-
-    ${mq.md} {
-      display: none;
-    }
-
-    img {
-      border-radius: 0px 8px 8px 0px;
     }
   `,
   footer: `
@@ -109,25 +97,21 @@ const styles = new Styles({
   `
 }).style
 
-const Post: React.VFC<any> = ({ post, containerStyle }) => {
-  const {
-    thumbnail,
-    title,
-    language,
-    slug,
-    tags,
-    categories,
-    createdAt
-  } = post.frontmatter
+type Post = {
+  post: any
+  containerStyle?: string
+}
+
+const Post = ({ post, containerStyle }: Props) => {
+  const { title, language, slug, tags, categories, createdAt } =
+    post.frontmatter
   const [category] = categories
-  const thumbnailUrl = meta.images.url + (thumbnail || '')
-  const image = getImage(post.thumbnail)
   const path = blog.postShowPath(slug, language)
 
   return (
     <Link className={styles.link} to={path}>
       <div className={[styles.container, containerStyle].join(' ')}>
-        <div className={styles.left}>
+        <div className={styles.content}>
           <div className={styles.header}>
             <Category category={category} language={language} />
             <h2>{title}</h2>
@@ -147,13 +131,6 @@ const Post: React.VFC<any> = ({ post, containerStyle }) => {
               {tags.length > 3 && <li> + {tags.length - 3}</li>}
             </ul>
           </div>
-        </div>
-        <div className={styles.right}>
-          {image ? (
-            <GatsbyImage placeholder="none" image={image!} alt={title} />
-          ) : (
-            <img width={280} height={280} src={thumbnailUrl} alt={title} />
-          )}
         </div>
       </div>
     </Link>

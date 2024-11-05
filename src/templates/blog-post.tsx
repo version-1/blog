@@ -159,13 +159,13 @@ interface TemplateProps {
   meta: any
 }
 
-const BlogPostTemplate: React.VFC<TemplateProps> = ({
+const BlogPostTemplate = ({
   location,
   post,
   related,
   layout,
   meta
-}) => {
+}: TemplateProps) => {
   const content = post.html
   const { title, language } = post.frontmatter
   const { next, previous } = layout
@@ -174,13 +174,13 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
   return (
     <div className={styles.container}>
       <section className="section">
-        <article className={[styles.content, "post"].join(' ')}>
+        <article className={[styles.content, 'post'].join(' ')}>
           <Header meta={meta} post={post} />
           <Bar />
           <HTMLContent className="post-body" content={content} />
           <Bar />
-          <div className={[styles.postFooter, "post-meta-footer"].join(' ')}>
-            <div className={[styles.share, "sns-share-footer"].join(' ')}>
+          <div className={[styles.postFooter, 'post-meta-footer'].join(' ')}>
+            <div className={[styles.share, 'sns-share-footer'].join(' ')}>
               <p>
                 <label className={styles.shareLabel}>
                   {i18next.t('labels.share')}
@@ -192,7 +192,9 @@ const BlogPostTemplate: React.VFC<TemplateProps> = ({
           <div className={styles.paging}>
             <div className="left">
               {previous && (
-                <Link to={blog.postShowPath(previous!.frontmatter.slug, language)}>
+                <Link
+                  to={blog.postShowPath(previous!.frontmatter.slug, language)}
+                >
                   <Icon icon="back" size={24} color={colors.primaryColor} />
                   <p>{truncate(previous!.frontmatter.title, 40)}</p>
                 </Link>

@@ -1,12 +1,10 @@
 import path from 'path'
 import { createPages as createBlogPages } from './src/node/pages/blog'
-import { onCreateNode as onCreateBlogNode } from './src/node/pages/callbacks'
 
 export const createPages = async (params: any) => {
   await createBlogPages(params)
 }
 //
-export const onCreateNode = onCreateBlogNode
 export const onCreateWebpackConfig = ({ actions }: any) => {
   actions.setWebpackConfig({
     resolve: {

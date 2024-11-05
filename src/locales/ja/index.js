@@ -1,7 +1,7 @@
 exports.module = {
   profile: {
     description:
-       'バンクーバー在住のフルスタックエンジニアです。React, Ruby on Rails, Go などでお仕事しています。職場がトロントなので日本、トロント、バンクーバーの三つの時天空を操って生活しています。',
+      'バンクーバー在住のフルスタックエンジニアです。React, Ruby on Rails, Go などでお仕事しています。職場がトロントなので日本、トロント、バンクーバーの三つの時天空を操って生活しています。',
     author: {
       description:
         'バンクーバー在住のフルスタックエンジニアです。React, Ruby on Rails, Go などでお仕事しています。職場がトロントなので日本、トロント、バンクーバーの三つの時天空を操って生活しています。'
@@ -164,6 +164,7 @@ exports.module = {
     vue: 'Vue',
     vuex: 'Vuex',
     'web-structure': 'Webサイトの仕組み',
+    vim: 'Vim',
     webpack: 'Webpack',
     wordpress: 'Wordpress',
     work: '仕事'

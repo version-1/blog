@@ -19,7 +19,7 @@ const Head: React.FC = ({ lang = 'en', meta = {} }: Props) => {
     : siteMeta.title
   const _description = meta.description || siteMeta.description
   const _url = meta.url || siteMeta.siteUrl
-  const thumbnail = meta.image || siteMeta.logo
+  const thumbnail = siteMeta.logo
 
   return (
     <Helmet htmlAttributes={{ lang }}>

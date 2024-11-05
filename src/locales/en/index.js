@@ -133,9 +133,10 @@ exports.module = {
     vr: 'VR',
     vue: 'Vue',
     vuex: 'Vuex',
+    vim: 'Vim',
     'web-structure': 'Web Structure',
     webpack: 'Webpack',
     wordpress: 'Wordpress',
-    work: 'Work',
+    work: 'Work'
   }
 }

@@ -16,8 +16,10 @@ const styles = new Styles({
   postList: `
     margin-top: -128px;
     margin-left: 16px;
+    width: 896px;
 
     ${mq.md} {
+      width: auto;
       margin-top: 0;
       margin: 0px 8px;
     }
