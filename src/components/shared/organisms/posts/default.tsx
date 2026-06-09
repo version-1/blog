@@ -7,10 +7,9 @@ import { mq } from 'constants/index'
 import Category from '../../atoms/category'
 
 const styles = new Styles({
-  link: `
-    ${mq.md} {
-      width: 100%;
-    }
+  titleLink: `
+    color: inherit;
+    display: block;
   `,
   container: `
     display: flex;
@@ -109,31 +108,33 @@ const Post = ({ post, containerStyle }: Props) => {
   const path = blog.postShowPath(slug, language)
 
   return (
-    <Link className={styles.link} to={path}>
-      <div className={[styles.container, containerStyle].join(' ')}>
-        <div className={styles.content}>
-          <div className={styles.header}>
-            <Category category={category} language={language} />
-            <h2>{title}</h2>
-            <aside>{createdAt}</aside>
-          </div>
-          <div className={styles.footer}>
-            <ul className={styles.tags}>
-              {tags.slice(0, 3).map((item: string) => {
-                return (
-                  <li className={styles.tags} key={item}>
-                    <Link to={blog.tagPath(item, language)}>{`#${i18next.t(
-                      `tags.${item}`
-                    )}`}</Link>
-                  </li>
-                )
-              })}
-              {tags.length > 3 && <li> + {tags.length - 3}</li>}
-            </ul>
-          </div>
+    <div className={[styles.container, containerStyle].join(' ')}>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <Category category={category} language={language} />
+          <h2>
+            <Link className={styles.titleLink} to={path}>
+              {title}
+            </Link>
+          </h2>
+          <aside>{createdAt}</aside>
+        </div>
+        <div className={styles.footer}>
+          <ul className={styles.tags}>
+            {tags.slice(0, 3).map((item: string) => {
+              return (
+                <li className={styles.tags} key={item}>
+                  <Link to={blog.tagPath(item, language)}>{`#${i18next.t(
+                    `tags.${item}`
+                  )}`}</Link>
+                </li>
+              )
+            })}
+            {tags.length > 3 && <li> + {tags.length - 3}</li>}
+          </ul>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 

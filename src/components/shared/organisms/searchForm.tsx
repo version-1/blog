@@ -76,6 +76,11 @@ const styles = new Styles({
       font-size: 14px;
     }
 
+    h2 a {
+      color: inherit;
+      display: block;
+    }
+
     .body {
       margin: 8px 0;
     }
@@ -196,12 +201,13 @@ const SearchForm = () => {
             } = article
             return (
               <li key={article.id}>
-                <Link
-                  className={styles.card}
-                  to={blog.postShowPath(slug, language)}
-                >
+                <div className={styles.card}>
                   <p>{createdAt.slice(0, 10)}</p>
-                  <h2>{title}</h2>
+                  <h2>
+                    <Link to={blog.postShowPath(slug, language)}>
+                      {title}
+                    </Link>
+                  </h2>
                   <p className="footer">
                     {categories?.length && (
                       <ul className={styles.category}>
@@ -228,7 +234,7 @@ const SearchForm = () => {
                       )
                     })}
                   </ul>
-                </Link>
+                </div>
               </li>
             )
           })
