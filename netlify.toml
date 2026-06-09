@@ -2,6 +2,12 @@
   publish = "public"
   command = "npm run build"
 
+[[redirects]]
+  from = "/blog/*"
+  to = "/:splat"
+  status = 200
+  force = true
+
 [[headers]]
   for = "*"
   [headers.values]

@@ -1,6 +1,7 @@
 # AGENTS.md instructions for /Users/admin/Projects/Private/blog
 
 特に指示がない限りは、日本語での受け答えをお願いします。
+ドキュメントは日本語で書いてください。
 
 # 開発スタイル
 

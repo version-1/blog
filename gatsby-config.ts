@@ -7,7 +7,6 @@ require('dotenv').config({
 })
 
 const config: GatsbyConfig = {
-  pathPrefix: '/blog',
   siteMetadata: {
     siteUrl: meta.siteUrl,
     title: meta.title,
