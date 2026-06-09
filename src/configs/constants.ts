@@ -17,7 +17,7 @@ export const search = {
 
 export const meta = {
   author: 'Jiro',
-  siteUrl: 'https://ver-1-0.net',
+  siteUrl: 'https://ver-1-0.net/blog',
   logo: 'https://statics.ver-1-0.xyz/uploads/others/default-thumbnail.png',
   hostname: 'ver-1-0.net',
   title: 'Ver.1.0 Blog',
