@@ -21,3 +21,7 @@ When previewing the production build locally, use:
 ```sh
 npm run serve
 ```
+
+Gatsby's build summary still prints page paths without the prefix, such as `/` and `/about/`. That output is a route summary, not the final hosted URL. Check generated HTML or run `npm run serve` to verify that links and assets are emitted with `/blog/`.
+
+GitHub's default branch is `main`. If local Git metadata points `origin/HEAD` at `origin/master`, prefer GitHub's default branch when opening pull requests for this repository.
