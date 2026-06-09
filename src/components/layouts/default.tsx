@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { mq } from 'constants/index'
+import React from 'react'
 import Sidebar from '../sidebar'
 import Head from '../head'
 import Navbar from '../navbar'
@@ -38,33 +37,22 @@ const DefaultLayout: React.FC<Props> = ({
 
 const Content = ({ children, context, noconsole, sidebar }: Props) => {
   const { path, sidebarDisabled, language, layout } = context
-  const [ready, setReady] = useState(false)
   const containerClass = sidebarDisabled
     ? 'row container container-narrow'
     : 'row container'
-
-  useEffect(() => {
-    setReady(true)
-  }, [])
 
   return (
     <>
       <GlobalStyle name="blog" />
       <Navbar language={language} />
-      {ready ? (
-        <>
-          <Modal />
-          <div className={styles.consoleContainer}>
-            {noconsole || <Console context={context} path={path} />}
-          </div>
-          <main className={[styles.main, containerClass].join(' ')}>
-            <div className={styles.content}>{ready ? children : null}</div>
-            {sidebar || <Sidebar language={language} layout={layout} />}
-          </main>
-        </>
-      ) : (
-        <div className={styles.skelton} />
-      )}
+      <Modal />
+      <div className={styles.consoleContainer}>
+        {noconsole || <Console context={context} path={path} />}
+      </div>
+      <main className={[styles.main, containerClass].join(' ')}>
+        <div className={styles.content}>{children}</div>
+        {sidebar || <Sidebar language={language} layout={layout} />}
+      </main>
       <Footer lang={language} />
     </>
   )
