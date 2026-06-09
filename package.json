@@ -21,7 +21,7 @@
     "react-icons": "^4.2.0",
     "react-share": "^4.4.0",
     "sass": "^1.75.0",
-    "uuid": "^9.0.0"
+    "uuid": "^14.0.0"
   },
   "keywords": [
     "gatsby"
