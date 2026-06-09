@@ -54,7 +54,7 @@ const monthArchivePath = (month: string, language: Lang) => {
 }
 
 export const blog = {
-  basePath: '/',
+  basePath: '/blog/',
   rootPath,
   aboutPath,
   postPath,
@@ -65,4 +65,3 @@ export const blog = {
   tagPath,
   monthArchivePath
 }
-
