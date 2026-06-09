@@ -2,22 +2,26 @@
 
 https://ver-1-0.net/
 
-My blog built in Gatsby + Netlify.
+Gatsby + Netlify で構築している個人ブログです。
 
 ## Path prefix
 
-This site is built for hosting under `/blog/`.
+このサイトは `/blog/` 配下でホスティングする前提でビルドします。
 
-Gatsby uses `pathPrefix: '/blog'` in `gatsby-config.ts`, and the app route metadata exposes `blog.basePath` as `/blog/` from `src/lib/routes.ts`.
+Gatsby 側では `gatsby-config.ts` の `pathPrefix: '/blog'` を使います。アプリ内の route metadata では、`src/lib/routes.ts` の `blog.basePath` を `/blog/` として公開しています。
 
-Use the normal build script so generated links and assets include the prefix:
+リンクやアセットに prefix を含めるため、通常のビルドには次の script を使います。
 
 ```sh
 npm run build
 ```
 
-When previewing the production build locally, use:
+production build をローカルで確認するときは次の script を使います。
 
 ```sh
 npm run serve
 ```
+
+Gatsby の build summary には、`/` や `/about/` のように prefix なしの page path が表示されます。これは route summary であり、最終的なホスティング URL ではありません。生成後の HTML を確認するか、`npm run serve` で起動して、リンクやアセットが `/blog/` 付きで出力されていることを確認してください。
+
+GitHub 上の default branch は `main` です。ローカルの Git metadata で `origin/HEAD` が `origin/master` を指していても、このリポジトリで Pull Request を作るときは GitHub の default branch である `main` を base にしてください。
