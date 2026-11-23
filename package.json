@@ -32,7 +32,7 @@
     "build": "gatsby clean && gatsby build --prefix-paths",
     "build:inspect": "npm run clean && node --inspect-brk node_modules/.bin/gatsby build --prefix-paths",
     "develop": "gatsby develop -H 0.0.0.0",
-    "develop:inspect": "yarn run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby develop",
+    "develop:inspect": "npm run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby develop",
     "serve": "gatsby serve --prefix-paths -H 0.0.0.0",
     "generate": "node scripts/generator/index.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
