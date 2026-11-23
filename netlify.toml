@@ -2,6 +2,9 @@
   publish = "public"
   command = "npm run build"
 
+[build.environment]
+  NPM_VERSION = "11.19.0"
+
 [[headers]]
   for = "*"
   [headers.values]
