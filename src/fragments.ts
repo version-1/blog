@@ -2,38 +2,22 @@ import { graphql } from 'gatsby'
 
 export const postField = graphql`
   fragment indexFrontmatter on MarkdownRemarkFrontmatter {
-      title
-      language
-      slug
-      thumbnail
-      templateKey
-      tags
-      categories
-      createdAt(formatString: "MMM DD, YYYY")
-      updatedAt(formatString: "MMM DD, YYYY")
-  }
-
-  fragment thumbnailData on File {
-      childImageSharp {
-        gatsbyImageData(
-          width: 160
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
-      }
+    title
+    language
+    slug
+    templateKey
+    tags
+    categories
+    createdAt(formatString: "MMM DD, YYYY")
+    updatedAt(formatString: "MMM DD, YYYY")
   }
 
   fragment postField on MarkdownRemark {
     id
-    fields {
-      slug
-    }
     frontmatter {
       ...indexFrontmatter
     }
-    thumbnail {
-      ...thumbnailData
-    }
+    excerpt(truncate: true, pruneLength: 200)
   }
 
   fragment postFieldDetail on MarkdownRemark {
@@ -45,14 +29,8 @@ export const postField = graphql`
       id
       value
     }
-    fields {
-      slug
-    }
     frontmatter {
       ...indexFrontmatter
-    }
-    thumbnail {
-      ...thumbnailData
     }
   }
 `

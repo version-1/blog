@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react'
 import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import PostList from 'components/organisms/PostList'
-import { tagPath } from 'lib/routes'
+import Layout from 'components/layouts/default'
+import PostList from 'components/shared/organisms/postList'
 import { mq } from 'constants/index'
+import { blog } from 'lib/routes'
 
 const styles = new Styles({
   postList: `
@@ -26,17 +26,16 @@ interface Props {
 
 const TagTemplate: React.VFC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
-  const namespace = tagPath(pageContext.tag!, pageContext.language)
+  const namespace = blog.tagPath(pageContext.tag!, pageContext.language)
   const { nodes: pickup } = data.pickup
   const { index, limit } = pageContext
-  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
-    pageContext,
-    path,
-    pickup
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup, path }),
+    [pageContext, path, pickup]
+  )
   return (
     <Layout context={context}>
-      <div css={styles.postList}>
+      <div className={styles.postList}>
         <PostList
           posts={posts}
           pagination={{
@@ -69,7 +68,7 @@ export const tagPageQuery = graphql`
     allMarkdownRemark(
       limit: $limit
       skip: $skip
-      sort: { fields: [frontmatter___createdAt], order: DESC }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: { tags: { in: [$tag] }, language: { eq: $language } }
       }

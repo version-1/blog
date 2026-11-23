@@ -1,5 +1,4 @@
 import React from 'react'
-import favicon from 'assets/images/favicon.ico'
 
 export default class HTML extends React.Component {
   render() {
@@ -21,7 +20,6 @@ export default class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:300,400,500,700&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href={favicon} />
           <meta
             name="google-site-verification"
             content="mN3TrsL3SnQcbq7drmA9PzgYHNMPPBFLgsaW4_nvwg4"

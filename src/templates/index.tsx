@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react'
 import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import PostList from 'components/organisms/PostList'
-import { postPath } from 'lib/routes'
+import Layout from 'components/layouts/default'
+import PostList from 'components/shared/organisms/postList'
 import { mq } from 'constants/index'
+import { blog } from 'lib/routes'
 
 interface Props {
   data: any
@@ -16,8 +16,10 @@ const styles = new Styles({
   postList: `
     margin-top: -128px;
     margin-left: 16px;
+    width: 896px;
 
     ${mq.md} {
+      width: auto;
       margin-top: 0;
       margin: 0px 8px;
     }
@@ -28,17 +30,16 @@ const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
   const { nodes: posts, totalCount } = data.allMarkdownRemark
   // ピックアプのslugが空の場合にすべての記事を抽出してしまうので, this.props.pickupで分岐
   const pickup = pageContext.pickup ? data.pickup.nodes : []
-  const context = useMemo(() => ({ ...pageContext, pickup, path }), [
-    pageContext,
-    path,
-    pickup
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup, path }),
+    [pageContext, path, pickup]
+  )
   const { limit } = pageContext
-  const namespace = postPath(context.language)
+  const namespace = blog.postPath(context.language)
 
   return (
     <Layout context={context}>
-      <div css={styles.postList}>
+      <div className={styles.postList}>
         <PostList
           posts={posts}
           pagination={{
@@ -72,7 +73,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___createdAt] }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" }

@@ -1,9 +1,29 @@
 [build]
   publish = "public"
   command = "npm run build"
+
 [build.environment]
-  YARN_VERSION = "1.9.4"
-  YARN_FLAGS = "--no-ignore-optional"
+  NPM_VERSION = "11.19.0"
+
+[[redirects]]
+  from = "/blog/static/*"
+  to = "/static/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/blog/icons/*"
+  to = "/icons/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/blog/favicon-32x32.png"
+  to = "/favicon-32x32.png"
+  status = 200
+
+[[redirects]]
+  from = "/blog/manifest.webmanifest"
+  to = "/manifest.webmanifest"
+  status = 200
 
 [[headers]]
   for = "*"
@@ -12,4 +32,3 @@
     Access-Control-Allow-Credentials = "true"
     Access-Control-Allow-Methods = "GET, OPTIONS"
     Access-Control-Allow-Headers = "Access-Control-Allow-Origin, Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
-

@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import PostList from 'components/organisms/PostList'
+import Layout from 'components/layouts/default'
+import PostList from 'components/shared/organisms/postList'
 
 interface Props {
   data: any
@@ -24,9 +24,10 @@ const IndexPage: React.FC<Props> = ({ data, path, pageContext }) => {
     path,
   ])
   const { limit, index } = pageContext
+
   return (
     <Layout context={context}>
-      <div css={styles.postList}>
+      <div className={styles.postList}>
         <PostList
           posts={posts}
           pagination={{

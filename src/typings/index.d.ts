@@ -72,3 +72,6 @@ interface IPagination {
   per: number
 }
 
+
+declare module "*.sass"
+declare module "*.scss"

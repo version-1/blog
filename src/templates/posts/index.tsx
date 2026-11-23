@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import Styles from 'lib/styles'
 import { graphql } from 'gatsby'
-import Layout from 'components/layouts/Default'
-import { postPath } from 'lib/routes'
-import PostList from 'components/organisms/PostList'
+import Layout from 'components/layouts/default'
+import { blog } from 'lib/routes'
+import PostList from 'components/shared/organisms/postList'
 import { mq } from 'constants/index'
 
 const styles = new Styles({
@@ -27,15 +27,15 @@ interface Props {
 const PostsIndex: React.VFC<Props> = ({ data, path, pageContext }) => {
   const { index, limit } = pageContext
   const { nodes: posts, totalCount } = data.allMarkdownRemark
-  const context = useMemo(() => ({ ...pageContext, pickup: [], path }), [
-    pageContext,
-    path
-  ])
+  const context = useMemo(
+    () => ({ ...pageContext, pickup: [], path }),
+    [pageContext, path]
+  )
 
-  const namespace = postPath(context.language)
+  const namespace = blog.postPath(context.language)
   return (
     <Layout context={context}>
-      <div css={styles.postList}>
+      <div className={styles.postList}>
         <PostList
           posts={posts}
           pagination={{
@@ -55,7 +55,7 @@ export default PostsIndex
 export const postsIndexQuery = graphql`
   query postsIndexQuery($language: String, $skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___createdAt], order: DESC }
+      sort: { frontmatter: { createdAt: DESC } }
       filter: {
         frontmatter: {
           templateKey: { eq: "blog-post" }
