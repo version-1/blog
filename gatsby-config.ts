@@ -172,14 +172,6 @@ const config: GatsbyConfig = {
         ]
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-algolia`,
-    //   options: {
-    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
-    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
-    //     queries: algoliaQueries,
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
