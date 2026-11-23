@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Title from '../molecules/title'
 import Post from '../organisms/posts/default'
 import { meta } from 'configs/constants'
 
 const PostList = (props: any) => {
   const { title, titleLabel, posts, defaultHorizontalSlide = 15 } = props
-  const listRef = useRef()
+  const listRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    listRef.current.scrollTo({
+    listRef.current?.scrollTo({
       top: 0,
       left: defaultHorizontalSlide,
       behavior: 'smooth'
@@ -32,14 +31,9 @@ const PostList = (props: any) => {
           <div ref={listRef} className="post-list">
             {posts.map((post: any, index: number) => {
               const thumbnailUrl = meta.images.url + (post.frontmatter.thumbnail || '')
-              const image = getImage(post.thumbnail)
               return (
                 <Post
-                  thumbnail={
-                    <img src={thumbnailUrl} alt={title} /> || (
-                      <GatsbyImage image={image} alt={title} />
-                    )
-                  }
+                  thumbnail={<img src={thumbnailUrl} alt={title} />}
                   post={post}
                   key={index}
                 />
