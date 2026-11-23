@@ -18,4 +18,15 @@ npm run serve
 
 ローカルでは `http://localhost:9000/blog/` で確認できます。
 
+## 記事の生成
+
+Node.js 24 を使用し、リポジトリのルートで次を実行します。
+
+```sh
+npm ci --prefix scripts/post-generator
+npm run generate
+```
+
+対話形式で言語、slug、タイトル、カテゴリ、タグを入力します。確認で `y` または `yes` を入力すると、ローカルの日付を使って `src/contents/posts/YYYY/MM/YYYYMMDD_<slug>/index.md` を生成します。
+
 GitHub 上の default branch は `main` です。ローカルの Git metadata で `origin/HEAD` が `origin/master` を指していても、このリポジトリで Pull Request を作るときは GitHub の default branch である `main` を base にしてください。
