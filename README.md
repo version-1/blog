@@ -8,7 +8,7 @@ Gatsby + Netlify で構築している個人ブログです。
 
 アプリ内の route metadata では、`src/lib/routes.ts` の `blog.basePath` を `/blog/` として公開しています。
 
-Gatsby の `pathPrefix` は使いません。Netlify では `publish = "public"` のまま配信するため、`pathPrefix` を付けると HTML が `/blog/static/...` や `/blog/page-data/...` を参照し、実体のある `public/static/...` や `public/page-data/...` とずれて画像や JavaScript が 404 になります。
+現行の本番ビルドは Gatsby の `pathPrefix` を使い、アセット参照に `/blog/` を付けます。公開ディレクトリ `public` 内の配置とずれるため、リポジトリの Netlify 設定どおりに配信すると画像や JavaScript が 404 になります。依存関係の更新順、ビルドの再現手順と既知の失敗は [依存関係の棚卸しとビルド基準](docs/dependency-baseline.md) を参照してください。
 
 通常のビルドには次の script を使います。
 
