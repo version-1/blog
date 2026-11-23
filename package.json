@@ -30,14 +30,16 @@
     "develop:inspect": "npm run clean && node --inspect-brk --no-lazy node_modules/.bin/gatsby develop",
     "serve": "gatsby serve --prefix-paths -H 0.0.0.0",
     "generate": "node scripts/post-generator/index.js",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier --trailing-comma es5 --write \"{gatsby-*.{js,ts},src/**/*.{js,jsx,ts,tsx}}\" \"!src/gatsby-types.d.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.14.0",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^24.19.2",
+    "@types/react": "^18.3.31",
     "@types/react-helmet": "^6.1.11",
-    "babel-preset-gatsby": "^3.16.0",
     "gatsby": "^5.16.1",
     "gatsby-plugin-canonical-urls": "^5.16.0",
     "gatsby-plugin-emotion": "^8.16.0",
@@ -58,12 +60,9 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-remark": "^6.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2",
+    "prettier": "^3.10.1",
     "sass-loader": "^16.0.8",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.2.3"
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "gatsby-plugin-sass": {
