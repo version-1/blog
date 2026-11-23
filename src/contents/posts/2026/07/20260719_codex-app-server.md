@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 language: ja
-title: "Codex App Server ハンズオン- JSON-RPC で Codex を操作する"
+title: "Codex App Server の使い方｜JSON-RPCでCodexを操作するハンズオン"
 slug: /2026/07/19/codex-app-server
 createdAt: 2026-07-19 00:00:00
 updatedAt: 2026-07-19 00:00:00
