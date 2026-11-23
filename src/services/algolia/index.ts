@@ -1,4 +1,4 @@
-import algoliasearch from 'algoliasearch'
+import { algoliasearch } from 'algoliasearch'
 import { search as searchIndexNames } from 'configs/constants'
 
 const client = algoliasearch(
@@ -9,10 +9,5 @@ const client = algoliasearch(
 const indexKey = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const indexName = searchIndexNames.index[indexKey]
 
-const index = client.initIndex(indexName)
-
-export const search = (query: string) => {
-  console.log('index name =========', process.env.NODE_ENV, indexName)
-  return index.search(query, {
-  })
-}
+export const search = (query: string) =>
+  client.searchSingleIndex({ indexName, searchParams: { query } })

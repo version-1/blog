@@ -4,14 +4,11 @@
   "version": "2.0.0",
   "author": "jjoo",
   "dependencies": {
-    "@stripe/react-stripe-js": "^1.16.4",
-    "@stripe/stripe-js": "^1.46.0",
-    "algoliasearch": "^4.8.6",
+    "algoliasearch": "^5.65.0",
     "gatsby-plugin-manifest": "^5.16.0",
     "gatsby-plugin-sass": "^6.16.0",
     "i18next": "^23.16.8",
-    "lodash": "^4.17.21",
-    "paginate": "^0.2.0",
+    "lodash": "^4.18.1",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.30.0",
     "react": "^18.3.1",
@@ -19,8 +16,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "5.4.0",
     "react-share": "^5.3.0",
-    "sass": "^1.108.2",
-    "uuid": "^9.0.0"
+    "sass": "^1.108.2"
   },
   "keywords": [
     "gatsby"
@@ -43,7 +39,6 @@
     "@types/react-helmet": "^6.1.11",
     "babel-preset-gatsby": "^3.16.0",
     "gatsby": "^5.16.1",
-    "gatsby-plugin-algolia": "^1.0.2",
     "gatsby-plugin-canonical-urls": "^5.16.0",
     "gatsby-plugin-emotion": "^8.16.0",
     "gatsby-plugin-feed": "^5.16.0",
@@ -63,8 +58,6 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-remark": "^6.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "googleapis": "^109.0.1",
-    "lodash-webpack-plugin": "^0.11.6",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
